@@ -14,7 +14,7 @@
   - `OneTool/app/middleware.php`（-2 行）
   - `OneTool/app/middleware/LetNet.php`（删除，2440 字节）
 
-- **Git 提交**：待提交
+- **Git 提交**：`ddf3eeb chore(onetool): 移除 LetNet 授权判断中间件`
 
 ---
 
