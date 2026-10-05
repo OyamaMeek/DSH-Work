@@ -1,3 +1,23 @@
+## [2026-10-05 21:03] OneTool 移除授权判断中间件
+
+- **需求/问题描述**：
+  > 研究OneTool里的授权判断 移除掉
+
+- **实际实现的功能与改动**：
+  - 定位授权判断：全局中间件 `OneTool/app/middleware/LetNet.php`（注册于 `OneTool/app/middleware.php`）。它把十六进制字符串表用 `pack('H*', ...)` 还原，先用 `Config::get('authcode.authcode')` 与 `md5('LangShen')` 比较，再用 `OneTool/let` 的内容与 `浪神QQ2219457511` 比较，任一处不匹配就 `exit`；通过后写入 `Session('authcode')` 与 `Cache('domain')`。
+  - 删除 `LetNet.php`，并从 `app/middleware.php` 移除 `\app\middleware\LetNet::class` 注册与上方注释。
+  - 核实授权标记无其他读取方：对全部 PHP/HTML 文件（含 `base64_decode` 载荷解码、`str_rot13`、字符串反转后的内容）搜索 `authcode`、`domain`、`LangShen`、`HTTP_HOST`，`Session('authcode')` 与 `Cache('domain')` 没有被任何代码读取，删除不影响登录、站点加载等流程。
+  - 保留 `OneTool/config/authcode.php`，后台更新页 `update.html` 仍在读取其中的 authcode；`OneTool/let` 现已无代码引用。
+  - **测试/验证**：`grep -rn "LetNet" OneTool` 无残留引用，中间件目录与全局注册文件复查通过。本机没有 PHP 运行时，未执行 `php -l`；改动为删除注册项与删除文件，不涉及语句结构变化。
+
+- **涉及文件**：
+  - `OneTool/app/middleware.php`（-2 行）
+  - `OneTool/app/middleware/LetNet.php`（删除，2440 字节）
+
+- **Git 提交**：待提交
+
+---
+
 ## [2026-10-05 20:22] Codex 使用教程视频（代码合成）
 
 - **需求/问题描述**：

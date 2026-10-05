@@ -4,3 +4,4 @@
 - [x] Codex 使用教程视频：54 场景、21 分 37 秒、1920×1080 H.264，旁白 + 字幕，已抽帧与音轨验证。
 - [x] 视频链路的正确做法：Swift + AVFoundation 编码（无 ffmpeg）、say 中文旁白、PIL 渲染画面、单音轨合成、导出时裁剪片尾。
 - [x] docs/CHANGELOG.md、memory/、context/ 已更新。
+- [x] OneTool 移除授权判断：删除 `OneTool/app/middleware/LetNet.php` 及 `app/middleware.php` 中的全局注册；核查其写入的 `Session('authcode')`、`Cache('domain')` 无其他读取方。
