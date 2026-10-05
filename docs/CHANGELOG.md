@@ -1,3 +1,28 @@
+## [2026-10-05 21:14] OneTool 移除授权后的版本提交到 HappaNetwork/OneTool
+
+- **需求/问题描述**：
+  > 重做
+  > 把移除好的放到onetool提交到git@github.com:HappaNetwork/OneTool.git
+
+- **实际实现的功能与改动**：
+  - OneTool 目录本身是 Git 仓库，origin 为 `git@github.com:HappaNetwork/OneTool.git`，远端 main 原为 aa92b38「upload」（含授权代码）；本地 18c9b9b「Initial commit」是与远端无共同祖先的独立根提交，且已包含移除内容。
+  - 不改写远端历史、不强制推送：把本地 main 重置到 aa92b38，再把移除内容拆成两个提交叠加在原始提交之上，最后普通推送。
+  - 提交：`dee7f7a chore: 移除 LetNet 授权判断中间件`、`7d850a8 chore: 移除后台更新页的远端授权校验与授权文件`。
+  - 原 18c9b9b 保留为本地分支 `initial-commit`，作为恢复点。
+  - **测试/验证**：`git status` 干净；`git diff --stat origin/main main` 为 6 个文件；`git push origin main` 输出 `aa92b38..7d850a8`；`git ls-remote origin main` 返回 `7d850a8`。
+
+- **涉及文件**：
+  - `OneTool/app/middleware.php`（-3 行 / +1 行）
+  - `OneTool/app/middleware/LetNet.php`（删除，2440 字节）
+  - `OneTool/app/admin/view/update.html`、`OneTool/app/admin/view/system/update.html`（各 -3 行 / +1 行）
+  - `OneTool/config/authcode.php`（删除，72 字节）
+  - `OneTool/let`（删除，18 字节）
+  - 远端仓库 `git@github.com:HappaNetwork/OneTool.git`
+
+- **Git 提交**：`dee7f7a`、`7d850a8`（OneTool 仓库，已推送）
+
+---
+
 ## [2026-10-05 21:05] OneTool 移除后台更新页的远端授权校验
 
 - **需求/问题描述**：

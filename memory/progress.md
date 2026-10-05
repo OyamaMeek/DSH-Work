@@ -6,3 +6,4 @@
 - [x] docs/CHANGELOG.md、memory/、context/ 已更新。
 - [x] OneTool 移除授权判断：删除 `OneTool/app/middleware/LetNet.php` 及 `app/middleware.php` 中的全局注册；核查其写入的 `Session('authcode')`、`Cache('domain')` 无其他读取方。
 - [x] OneTool 移除后台更新页的远端授权校验（`auth.onetool.cc/check.php`），并删除无引用的 `config/authcode.php` 与 `OneTool/let`。
+- [x] 把移除后的 OneTool 提交并推送到 `git@github.com:HappaNetwork/OneTool.git`：基于远端原始提交 aa92b38 叠加 `dee7f7a`、`7d850a8` 两个提交，未强制推送；原 18c9b9b 保留为本地分支 `initial-commit`。
