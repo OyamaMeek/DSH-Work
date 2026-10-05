@@ -1,0 +1,217 @@
+{
+  "code": "CX-13",
+  "category": "codex",
+  "fileTitle": "Codex安全企业",
+  "deck": "Codex 安全与企业：把权限、审计和责任说清楚",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex 安全与企业：把权限、审计和责任说清楚",
+      "subtitle": "零基础进阶 · 从最小权限到企业治理基线",
+      "kicker": "Vibe Coding 学习系列 · CX-13"
+    },
+    {
+      "layout": "section",
+      "title": "目录：分类、限制、记录、复核、响应",
+      "subtitle": "安全模型 → 审批与沙盒 → Rules 与 Hooks → 企业基线"
+    },
+    {
+      "layout": "bullets",
+      "title": "安全不是单个开关",
+      "bullets": [
+        "它是一套分类、限制、记录的流程",
+        "让人在关键点确认：审批、Review、PR 合并",
+        "任何一层都可能出问题，不能只说大家小心",
+        "最小权限放在前面，团队要的是可持续协作",
+        "把风险放到不同控制点上，而不是关到最死"
+      ],
+      "notes": "六条链路：输入层、上下文层、决策层、执行层、审查层、治理层。"
+    },
+    {
+      "layout": "cards",
+      "title": "四个必须先懂的词",
+      "cards": [
+        {
+          "title": "Least privilege",
+          "desc": "最小权限：sandbox、approval、Connector scope、MCP 限制"
+        },
+        {
+          "title": "Defense in depth",
+          "desc": "多层防护：AGENTS.md、Settings、Rules、Review、CI"
+        },
+        {
+          "title": "Blast radius",
+          "desc": "误操作影响范围：workspace、repo、组织账号、生产系统"
+        },
+        {
+          "title": "Audit trail",
+          "desc": "可追踪记录：线程、PR、CI、Hook 与 MCP 服务日志"
+        }
+      ],
+      "notes": "安全不是单个开关，而是分类、限制、记录、复核、响应的流程。"
+    },
+    {
+      "layout": "table",
+      "title": "风险分级：先判断，再决定动作",
+      "headers": [
+        "级别",
+        "判断",
+        "处理"
+      ],
+      "rows": [
+        [
+          "低",
+          "只读公开文档、改非关键文档",
+          "普通 Review"
+        ],
+        [
+          "中",
+          "改业务代码、跑测试、读内部文档",
+          "workspace-write + Review + 测试"
+        ],
+        [
+          "高",
+          "改权限、依赖、部署、数据库",
+          "计划、审批、worktree、PR review"
+        ],
+        [
+          "极高",
+          "生产写入、secret、自动合并",
+          "专门审批、审计、事故预案"
+        ]
+      ],
+      "notes": "高风险先停下来做计划，极高风险默认不让 Codex 自动做。"
+    },
+    {
+      "layout": "table",
+      "title": "推荐审批与沙盒基线",
+      "headers": [
+        "场景",
+        "审批",
+        "沙盒"
+      ],
+      "rows": [
+        [
+          "只读审计",
+          "不允许写入",
+          "read-only"
+        ],
+        [
+          "日常开发",
+          "危险命令审批",
+          "workspace-write"
+        ],
+        [
+          "陌生仓库",
+          "保守审批",
+          "read-only 起步"
+        ],
+        [
+          "CI",
+          "外部隔离 + 最小权限",
+          "看 runner 环境"
+        ],
+        [
+          "生产数据",
+          "默认拒绝",
+          "明确人工授权"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Rules 与 Hooks 各管什么",
+      "bullets": [
+        "Rules 适合硬性限制命令",
+        "拦住递归删除、生产写库和直接推 main",
+        "上线前用 codex execpolicy check 检查规则",
+        "Hooks 是事件脚本，配置在 .codex/hooks.json",
+        "Hook 会运行真实代码，企业必须做代码审查"
+      ],
+      "notes": "官方 Rules 通常写在 rules/*.rules，用 prefix_rule() 描述命令前缀和决策。"
+    },
+    {
+      "layout": "table",
+      "title": "外部能力安全：先问清再放行",
+      "headers": [
+        "能力",
+        "关键问题"
+      ],
+      "rows": [
+        [
+          "MCP",
+          "是否只读、是否访问生产、是否有审计日志"
+        ],
+        [
+          "Plugin",
+          "它带了什么能力、授权 scope 是否过大"
+        ],
+        [
+          "Connector",
+          "能访问哪些账号数据、卸载是否撤销授权"
+        ],
+        [
+          "Automation",
+          "目录范围、文件类型、是否提交、是否通知人"
+        ],
+        [
+          "Hook",
+          "是否泄露上下文、写错是否阻塞开发"
+        ]
+      ],
+      "notes": "安装和授权要分开看，默认不要给生产写权限。"
+    },
+    {
+      "layout": "steps",
+      "title": "企业落地四阶段路线图",
+      "steps": [
+        {
+          "title": "个人安全习惯",
+          "desc": "AGENTS.md、只读起步、Review 面板"
+        },
+        {
+          "title": "团队统一基线",
+          "desc": "根 AGENTS.md、Rules、插件和 MCP 登记表"
+        },
+        {
+          "title": "企业治理",
+          "desc": "managed requirements、profiles、白名单"
+        },
+        {
+          "title": "自动化扩展",
+          "desc": "Automations、Cloud 环境、CI、事故演练"
+        }
+      ],
+      "notes": "每阶段先跑通只读、小范围写入、Review、回滚闭环，再进入下一阶段。"
+    },
+    {
+      "layout": "bullets",
+      "title": "敏感文件与事故处理",
+      "bullets": [
+        "在 AGENTS.md 写清不读取或修改 .env",
+        "不要只依赖 .gitignore，模型仍可能读到文件",
+        "secret 泄露要立即撤销或轮换",
+        "误改大量文件先停止并保存 diff 证据",
+        "误推远端要通知团队、锁定 PR 或回滚"
+      ],
+      "notes": "事故后要能回答：谁让它做的、它看到什么、执行什么、谁批准、怎么回滚。"
+    },
+    {
+      "layout": "bullets",
+      "title": "企业治理包的最小内容",
+      "bullets": [
+        "codex-usage-policy.md：允许、需审批、禁止三档",
+        "权限 profile：只读、日常、审查、应急四类",
+        "codex-mcp-registry.md：数据范围、权限、owner、撤销",
+        "codex-automation-registry.md：频率、权限、停止条件",
+        "每个外部能力都要有 owner 和撤销方式"
+      ],
+      "notes": "治理文件要被维护，而不是写完没人看。"
+    },
+    {
+      "layout": "end",
+      "title": "把大家都知道，变成有人负责",
+      "subtitle": "最小权限、清晰责任、可回看的审计，才是企业基线"
+    }
+  ]
+}

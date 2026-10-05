@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/qa-codex.pdf",
+  "sourceSha256": "08d1fb42b385e5a4d5fc530e88bd91fd817d17694ac4aadd7e0b6f042de7c8b0",
+  "dpi": 100,
+  "pageCount": 18,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/cov-c/page-0001.png",
+      "width": 1334,
+      "height": 750,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 72609
+    }
+  ],
+  "missingFonts": []
+}

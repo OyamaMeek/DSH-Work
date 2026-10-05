@@ -1,0 +1,318 @@
+{
+  "deck": "Codex 主线：从安装到安全用稳",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · 03",
+      "title": "Codex 主线：把桌面 App 用成开发主控台",
+      "subtitle": "零基础入门 · 从安装、认证到 Review 一条主线走通"
+    },
+    {
+      "layout": "section",
+      "title": "目录：从装好到用稳",
+      "subtitle": "是什么 → 安装与认证 → 桌面工作流 → 指令权限与安全 → 20 分钟上手"
+    },
+    {
+      "layout": "bullets",
+      "title": "Codex 是什么",
+      "bullets": [
+        "Codex 是 OpenAI 的编程 Agent，能读文件、写文件、跑命令",
+        "自 App 26.707 起，Codex 已并入 ChatGPT 桌面 App",
+        "装好桌面版就能在里面使用，并可把 Codex 设为默认视图",
+        "原有项目、设置与线程保留，官方主线是 App",
+        "CLI 只用于排查、CI 和自动化，不抢 App 主线"
+      ],
+      "notes": "先讲清 App 是主线。安装成功的标准是能打开、能登录、能开线程、能看 Review。"
+    },
+    {
+      "layout": "cards",
+      "title": "App 主控台的四张面孔",
+      "cards": [
+        {
+          "title": "Thread",
+          "desc": "一条任务线，保留上下文、历史和状态；多个目标混在一起就难 Review"
+        },
+        {
+          "title": "Worktree",
+          "desc": "Git 隔离工作目录，改动互不覆盖，适合新功能与重构"
+        },
+        {
+          "title": "Review",
+          "desc": "看 diff、文件变更、行内反馈、stage 与 unstage 的关口"
+        },
+        {
+          "title": "Settings",
+          "desc": "模型、审批、沙盒、插件、MCP、外观与 Git 的配置入口"
+        }
+      ],
+      "notes": "App 不是聊天窗口，是开发控制台：Thread 管上下文，Review 管结果，Settings 管边界。"
+    },
+    {
+      "layout": "table",
+      "title": "安装：按平台走官方入口",
+      "headers": [
+        "平台",
+        "安装方式",
+        "命令或入口"
+      ],
+      "rows": [
+        [
+          "Windows",
+          "Microsoft Store",
+          "winget install Codex -s msstore"
+        ],
+        [
+          "macOS",
+          "官方下载页",
+          "https://developers.openai.com/codex/app/"
+        ],
+        [
+          "Linux",
+          "App 暂无桌面版",
+          "先用 CLI / Web / Cloud"
+        ]
+      ],
+      "notes": "Git 必装，Review 面板和 diff 依赖 Git。不要从第三方网盘下载安装包。"
+    },
+    {
+      "layout": "bullets",
+      "title": "认证与首次启动的小关卡",
+      "bullets": [
+        "登录优先用 ChatGPT / OpenAI 账号，别把 API Key 当登录方案",
+        "Windows 防火墙弹窗一般只勾专用网络，公用网络不要选",
+        "macOS 被 Gatekeeper 拦住时，先确认来源是官方页面再放行",
+        "Windows 报 npm.ps1 不能加载，去检查 PowerShell 执行策略",
+        "登录失败分三层看：浏览器登录态、账号选错、企业策略"
+      ],
+      "notes": "密钥不要贴进聊天框、截图、AGENTS.md 或仓库配置。"
+    },
+    {
+      "layout": "steps",
+      "title": "第一次打开项目：四步不慌",
+      "steps": [
+        {
+          "title": "选一个普通 Git 仓库",
+          "desc": "别用生产仓库，最好有 README 和简单测试命令"
+        },
+        {
+          "title": "添加本地项目目录",
+          "desc": "确认 App 能识别 Git 状态，Review 才有证据"
+        },
+        {
+          "title": "创建 Local thread 发只读任务",
+          "desc": "让它总结技术栈、启动命令、测试命令，明确不要改文件"
+        },
+        {
+          "title": "再做一次小改动",
+          "desc": "只改一个错别字，改完看 diff，且不自动提交"
+        }
+      ],
+      "notes": "先只读测试，再小范围写入，最后才考虑 CLI 和高级能力。"
+    },
+    {
+      "layout": "section",
+      "title": "App 桌面工作流",
+      "subtitle": "Thread 管上下文，Review 管结果，Settings 管边界"
+    },
+    {
+      "layout": "table",
+      "title": "三种工作方式怎么选",
+      "headers": [
+        "任务",
+        "推荐方式",
+        "为什么"
+      ],
+      "rows": [
+        [
+          "读项目、找命令、解释报错",
+          "Local thread 只读",
+          "快，风险低"
+        ],
+        [
+          "改一个文件或少量文档",
+          "Local thread + Review",
+          "改动小，容易检查"
+        ],
+        [
+          "新功能、重构、改多个文件",
+          "Worktree thread",
+          "隔离改动，方便撤回"
+        ],
+        [
+          "盯 PR、修 CI、长时间任务",
+          "Cloud / Web handoff",
+          "不占用本地环境"
+        ]
+      ],
+      "notes": "Worktree 不是备份，它仍然产生真实代码改动，合并前必须 Review。"
+    },
+    {
+      "layout": "bullets",
+      "title": "写好一次任务：五要素",
+      "bullets": [
+        "目标：这次到底要解决什么问题",
+        "范围：只改哪些文件或目录",
+        "约束：不能做什么，比如不引入新依赖",
+        "验证：怎么确认改对了，跑哪条命令",
+        "交付：要 diff、摘要，还是 PR 描述"
+      ],
+      "notes": "只写“帮我优化一下”，Codex 不知道边界，返工概率高。"
+    },
+    {
+      "layout": "cards",
+      "title": "四个常用 slash 命令",
+      "cards": [
+        {
+          "title": "/status",
+          "desc": "看模型、工作区、审批和上下文状态"
+        },
+        {
+          "title": "/plan",
+          "desc": "先规划不执行，大任务先降低风险"
+        },
+        {
+          "title": "/goal",
+          "desc": "长目标持续推进，必须写清停止条件"
+        },
+        {
+          "title": "/review",
+          "desc": "审查当前 diff 或分支差异，合并前用"
+        }
+      ],
+      "notes": "在输入框输入 / 看当前版本列表。命令随版本、账号和插件变化，不要背死表。"
+    },
+    {
+      "layout": "bullets",
+      "title": "AGENTS.md：给 Codex 的项目说明书",
+      "bullets": [
+        "放在项目里的项目级指令文件，App 打开项目就会读",
+        "写清楚项目是什么、技术栈、常用命令和代码风格",
+        "写清楚哪些文件不要动，以及修改后如何验证",
+        "不要写 API Key、token、个人路径和临时任务",
+        "Monorepo 可分根目录与子目录多层，注意避免规则冲突"
+      ],
+      "notes": "它教 Codex 怎么理解项目；权限和命令边界交给 Settings、Rules、Hooks。"
+    },
+    {
+      "layout": "table",
+      "title": "配置与权限：从软到硬",
+      "headers": [
+        "层级或模式",
+        "管什么"
+      ],
+      "rows": [
+        [
+          "AGENTS.md",
+          "项目事实、常用命令、代码风格、安全边界"
+        ],
+        [
+          "App Settings",
+          "模型、审批、沙盒、连接器、插件等个人配置"
+        ],
+        [
+          "Rules",
+          "允许、提示或禁止特定命令前缀，拦住危险命令"
+        ],
+        [
+          "Hooks",
+          "事件发生时运行真实脚本，做审计或自动检查"
+        ],
+        [
+          "沙盒三档",
+          "read-only、workspace-write、danger-full-access"
+        ]
+      ],
+      "notes": "新手先掌握 AGENTS.md 和 App Settings，团队再引入 profiles、Rules、Hooks。"
+    },
+    {
+      "layout": "cards",
+      "title": "四项扩展能力",
+      "cards": [
+        {
+          "title": "MCP",
+          "desc": "外部工具协议，接浏览器、数据库、内部系统，像 USB 接口"
+        },
+        {
+          "title": "Skills",
+          "desc": "可复用工作流，把每次都要重复说的步骤沉淀成 SOP"
+        },
+        {
+          "title": "Plugins / Connectors",
+          "desc": "能力包与外部服务入口，如 GitHub、Drive、Slack"
+        },
+        {
+          "title": "Automations",
+          "desc": "定时或后台任务，适合重复检查，不适合模糊大改"
+        }
+      ],
+      "notes": "安装插件不等于自动授权外部数据，连接器要单独登录并按最小范围授权。"
+    },
+    {
+      "layout": "bullets",
+      "title": "Subagents 与 Review / GitHub PR",
+      "bullets": [
+        "Subagents 适合并行：一个查文档、一个看代码、一个做审查",
+        "单个错别字、线性任务、范围不清的大任务不要用 Subagents",
+        "Git 流程：Codex 改文件，你在 Review 面板检查后再 stage / commit",
+        "推送分支、创建 PR，必要时交给 Cloud 继续处理",
+        "学习阶段让 Codex 只草拟 commit 与 PR 描述，由人决定执行"
+      ],
+      "notes": "不要把“Codex 说完成了”当最终结果，Review 面板必须过一遍。"
+    },
+    {
+      "layout": "table",
+      "title": "安全红线：允许 / 确认 / 禁止",
+      "headers": [
+        "类别",
+        "典型动作"
+      ],
+      "rows": [
+        [
+          "默认允许",
+          "读项目文件、只读 Git 命令、搜索代码、快速本地测试"
+        ],
+        [
+          "需要确认",
+          "装依赖、改锁文件、跑迁移、改权限认证支付、外部写操作"
+        ],
+        [
+          "拒绝或禁止",
+          "force push、publish、删项目外目录、打印 secrets、自动化写生产"
+        ],
+        [
+          "第一原则",
+          "默认最小权限，扩大能力要说明理由、回滚方式和审查人"
+        ]
+      ],
+      "notes": "敏感文件写进 AGENTS.md，关键规则不要只依赖 .gitignore。"
+    },
+    {
+      "layout": "steps",
+      "title": "20 分钟上手路径",
+      "steps": [
+        {
+          "title": "第 1 个 5 分钟：核心模型",
+          "desc": "搞清 Thread、Workspace、Review、Settings 各管什么"
+        },
+        {
+          "title": "第 2 个 5 分钟：三种工作方式",
+          "desc": "知道 Local、Worktree、Cloud 分别适合什么任务"
+        },
+        {
+          "title": "第 3 个 5 分钟：任务模板",
+          "desc": "按目标、范围、约束、验证、交付写一条任务"
+        },
+        {
+          "title": "第 4 个 5 分钟：Review 工作流",
+          "desc": "看懂 diff、会行内留言，再决定提交或撤销"
+        }
+      ],
+      "notes": "20 分钟后应能做到：描述任务、看懂 diff、完成基本桌面操作。"
+    },
+    {
+      "layout": "end",
+      "title": "下一步：先只读，再小改，最后才放开权限",
+      "subtitle": "下一篇 CX-03 Commands：App 里的 slash commands 与工作流入口"
+    }
+  ]
+}

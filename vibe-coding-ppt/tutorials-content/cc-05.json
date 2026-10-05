@@ -1,0 +1,204 @@
+{
+  "code": "CC-05",
+  "category": "claude-code",
+  "fileTitle": "Hooks系统完整指南",
+  "deck": "Hooks 系统：给 AI 装上自动触发的传感器",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Hooks 系统完整指南",
+      "subtitle": "不靠 AI 记住，事件一到就自动执行",
+      "kicker": "Vibe Coding 学习系列 · CC-05"
+    },
+    {
+      "layout": "section",
+      "title": "一、5 分钟理解 Hooks",
+      "subtitle": "让自动化不再依赖 AI 的记忆"
+    },
+    {
+      "layout": "bullets",
+      "title": "Hooks 是什么",
+      "bullets": [
+        "在特定事件发生时自动执行的脚本",
+        "类比汽车传感器：检测到胎压异常自动报警",
+        "不依赖 AI 记忆，配置后 100% 执行",
+        "可靠性高、每次完全一致、配置一次全员生效",
+        "提示词适合灵活建议，Hooks 适合强制规则"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "三大高频入口",
+      "cards": [
+        {
+          "title": "UserPromptSubmit",
+          "desc": "用户输入提交后触发，可优化或过滤提示词"
+        },
+        {
+          "title": "PreToolUse",
+          "desc": "工具调用前检查，能放行、拒绝或询问"
+        },
+        {
+          "title": "PostToolUse",
+          "desc": "工具调用后处理，例如自动格式化"
+        }
+      ],
+      "notes": "先记这三大入口，再按失败、任务、文件、压缩、交互去扩展。"
+    },
+    {
+      "layout": "bullets",
+      "title": "Hooks 能做什么",
+      "bullets": [
+        "文件保护：禁止修改 production 目录下的文件",
+        "代码格式化：保存后自动运行 prettier",
+        "提交检查：git commit 前跑 lint 和测试",
+        "会话初始化：启动时检查 Python 依赖是否安装",
+        "桌面通知：需要用户确认时弹窗提醒"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "二、5 分钟配置第一个 Hook",
+      "subtitle": "一个脚本加一份 settings.json"
+    },
+    {
+      "layout": "steps",
+      "title": "配置 PostToolUse Hook 四步",
+      "steps": [
+        {
+          "title": "建目录",
+          "desc": "在项目里创建 .claude/hooks/ 目录"
+        },
+        {
+          "title": "写脚本",
+          "desc": "写一个 Python 脚本，从 stdin 读取 JSON"
+        },
+        {
+          "title": "配置 settings.json",
+          "desc": "matcher 设为 Write，command 指向脚本"
+        },
+        {
+          "title": "启动测试",
+          "desc": "让 Claude 建个文件，查看日志确认触发"
+        }
+      ],
+      "notes": "PostToolUse 脚本无法向用户输出，调试信息要写进日志文件。"
+    },
+    {
+      "layout": "table",
+      "title": "settings.json 关键字段",
+      "headers": [
+        "字段",
+        "作用"
+      ],
+      "rows": [
+        [
+          "matcher",
+          "匹配哪些工具，例如 Write"
+        ],
+        [
+          "type",
+          "command 本地命令，http 远程请求"
+        ],
+        [
+          "command",
+          "要执行的脚本命令"
+        ],
+        [
+          "timeout",
+          "超时时间，防止脚本卡死"
+        ],
+        [
+          "url",
+          "HTTP Hook 的远程地址"
+        ]
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、决策、安全与排查",
+      "subtitle": "能拦就拦，但权限要最小"
+    },
+    {
+      "layout": "table",
+      "title": "PreToolUse 决策值",
+      "headers": [
+        "决策值",
+        "说明",
+        "是否执行"
+      ],
+      "rows": [
+        [
+          "allow",
+          "允许执行，绕过权限系统",
+          "是"
+        ],
+        [
+          "deny",
+          "拒绝执行，原因反馈给 Claude",
+          "否"
+        ],
+        [
+          "ask",
+          "暂停，询问用户决定",
+          "等待用户"
+        ],
+        [
+          "无输出",
+          "默认允许",
+          "是"
+        ]
+      ],
+      "notes": "新版推荐 hookSpecificOutput.permissionDecision，旧版 decision 仍兼容。"
+    },
+    {
+      "layout": "bullets",
+      "title": "安全最佳实践",
+      "bullets": [
+        "只运行你信任的脚本，不复制不明来源配置",
+        "脚本只请求必要权限，避免使用 sudo",
+        "不要在脚本里硬编码密码或 Token",
+        "设置合理的 timeout，避免脚本卡死",
+        "团队要一起审查 settings.json 的变更"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "排查 Hook 不执行四步",
+      "steps": [
+        {
+          "title": "检查文件位置",
+          "desc": "确认 .claude/settings.json 存在且有内容"
+        },
+        {
+          "title": "检查 JSON 格式",
+          "desc": "用 python -c 解析，确认没有报错"
+        },
+        {
+          "title": "检查 matcher 拼写",
+          "desc": "Write 首字母大写，写错就不会触发"
+        },
+        {
+          "title": "检查脚本与权限",
+          "desc": "脚本存在，macOS/Linux 需要 chmod +x"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "新增事件速览",
+      "bullets": [
+        "StopFailure：API 异常停止时触发告警",
+        "PostCompact：上下文压缩完成后记录用量",
+        "InstructionsLoaded：指令文件加载时校验",
+        "Elicitation：MCP 请求用户输入时记录",
+        "HTTP Hook：把事件 POST 到远程 URL"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：先加一个 PostToolUse",
+      "subtitle": "让每次保存都有一个自动收尾"
+    }
+  ]
+}

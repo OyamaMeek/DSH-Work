@@ -1,0 +1,205 @@
+{
+  "code": "CX-04",
+  "category": "codex",
+  "fileTitle": "Codex项目指令权限配置",
+  "deck": "Codex 项目指令、配置、权限与沙盒",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex 项目指令、配置、权限与沙盒",
+      "subtitle": "零基础 · 让 App 知道怎么安全工作",
+      "kicker": "Vibe Coding 学习系列 · CX-04"
+    },
+    {
+      "layout": "section",
+      "title": "从软到硬的四层配置",
+      "subtitle": "新手先掌握 AGENTS.md 和 App Settings 两层"
+    },
+    {
+      "layout": "cards",
+      "title": "配置系统的四层心智模型",
+      "cards": [
+        {
+          "title": "项目说明层",
+          "desc": "AGENTS.md，写项目事实、命令、规范和安全边界"
+        },
+        {
+          "title": "用户偏好层",
+          "desc": "App Settings / config.toml，设模型、终端、审批、沙盒"
+        },
+        {
+          "title": "命令策略层",
+          "desc": "Rules / permission profiles，对危险动作建立边界"
+        },
+        {
+          "title": "事件脚本层",
+          "desc": "Hooks，在特定时机运行真实脚本做审计或检查"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "为什么不能只靠提示词",
+      "bullets": [
+        "不持久：换线程后可能忘了重复说",
+        "不够硬：说不要推 main，仍要靠人工盯",
+        "不可审计：团队很难知道每个人临时说了什么",
+        "长期规则写进 AGENTS.md",
+        "高风险命令用 Rules，复杂事件才用 Hooks"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "AGENTS.md 推荐结构",
+      "headers": [
+        "模块",
+        "要回答的问题"
+      ],
+      "rows": [
+        [
+          "项目概览",
+          "这个项目是什么，主要目录在哪里"
+        ],
+        [
+          "常用命令",
+          "安装、测试、lint、build 怎么跑"
+        ],
+        [
+          "修改边界",
+          "哪些文件可以改，哪些要谨慎"
+        ],
+        [
+          "代码风格",
+          "当前项目已有写法是什么"
+        ],
+        [
+          "验证方式",
+          "改完怎么证明，失败要解释"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "AGENTS.md 不该写什么",
+      "bullets": [
+        "API Key、token、cookie",
+        "只针对本次任务的临时要求",
+        "个人机器路径",
+        "不稳定的模型名称或价格",
+        "「写高质量代码」这种无法验证的口号"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "按场景选择权限策略",
+      "headers": [
+        "场景",
+        "建议"
+      ],
+      "rows": [
+        [
+          "陌生项目",
+          "保守审批，先只读"
+        ],
+        [
+          "日常小改",
+          "允许常见读写和安全命令"
+        ],
+        [
+          "大规模重构",
+          "使用 worktree，严格 review"
+        ],
+        [
+          "CI / 自动化",
+          "外部沙箱 + 最小权限"
+        ],
+        [
+          "涉及密钥或生产数据",
+          "默认拒绝，人工确认"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "三种沙盒模式",
+      "cards": [
+        {
+          "title": "read-only",
+          "desc": "只读，适合审计和探索"
+        },
+        {
+          "title": "workspace-write",
+          "desc": "可写工作区，适合日常开发"
+        },
+        {
+          "title": "danger-full-access",
+          "desc": "无沙盒限制，只能在外部可信沙箱使用"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Rules 适合与不适合做什么",
+      "headers": [
+        "适合",
+        "不适合"
+      ],
+      "rows": [
+        [
+          "拦危险删除，例如 rm -rf",
+          "写复杂业务流程"
+        ],
+        [
+          "拦未经确认的 publish",
+          "替代测试或 Review"
+        ],
+        [
+          "对 push、tag、force push 要求确认",
+          "判断产品取舍"
+        ],
+        [
+          "允许 git status、rg、ls 等只读命令",
+          "管理外部账号授权"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "改完配置后怎么核对",
+      "steps": [
+        {
+          "title": "改 AGENTS.md",
+          "desc": "新线程里让 Codex 总结项目规则，看是否读到"
+        },
+        {
+          "title": "改权限或沙盒",
+          "desc": "用 /status 或 Settings 确认实际生效"
+        },
+        {
+          "title": "改 MCP 配置",
+          "desc": "用 /mcp 看 server 和工具是否可见"
+        },
+        {
+          "title": "换项目目录时",
+          "desc": "确认打开了对的目录，旧线程可能仍是旧上下文"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Hooks 是事件脚本，不是万能自动化",
+      "bullets": [
+        "配置通常在 .codex/hooks.json 或 [hooks] 表",
+        "会运行真实命令，可能读取敏感上下文",
+        "写错会阻塞工作流，学习阶段先别急着写",
+        "能用 Rules 解决的命令边界，不要先写 Hook",
+        "相对路径要改从 git root 或绝对路径解析"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "先用 AGENTS.md 和 Settings 把边界写清楚",
+      "subtitle": "下一篇：CX-05 MCP 外部工具"
+    }
+  ]
+}

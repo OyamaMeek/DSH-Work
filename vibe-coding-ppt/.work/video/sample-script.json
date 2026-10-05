@@ -1,0 +1,47 @@
+{
+  "title": "样例",
+  "scenes": [
+    {
+      "kind": "title",
+      "chapter": "",
+      "title": "Codex 使用教程",
+      "subtitle": "从安装到安全用稳",
+      "narration": "这是一段测试旁白，用来验证整条视频合成流程是否正常工作。"
+    },
+    {
+      "kind": "bullets",
+      "chapter": "第一章 开始",
+      "title": "Codex 是什么",
+      "bullets": [
+        "OpenAI 的编程 Agent",
+        "已并入 ChatGPT 桌面 App",
+        "能读文件、写文件、跑命令"
+      ],
+      "narration": "Codex 是 OpenAI 的编程助手，现在已经并入 ChatGPT 桌面应用，它能够读取项目文件、修改代码并且执行命令。"
+    },
+    {
+      "kind": "section",
+      "chapter": "",
+      "title": "安装与认证",
+      "subtitle": "先装好，再登录",
+      "narration": "接下来我们进入安装与认证部分。"
+    },
+    {
+      "kind": "code",
+      "chapter": "第二章 安装",
+      "title": "Windows 安装命令",
+      "code": [
+        "winget install Codex -s msstore",
+        "codex --version"
+      ],
+      "narration": "在 Windows 上可以打开终端，用 winget 从微软商店安装 Codex，装完之后检查版本号确认安装成功。"
+    },
+    {
+      "kind": "end",
+      "chapter": "",
+      "title": "先跑通第一个任务",
+      "subtitle": "更多内容见完整教程",
+      "narration": "以上就是流程测试，接下来生成完整教程视频。"
+    }
+  ]
+}

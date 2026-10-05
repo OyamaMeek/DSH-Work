@@ -1,0 +1,267 @@
+{
+  "code": "OC-03",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw快速开始指南",
+  "deck": "OpenClaw 快速开始指南：5 分钟跑起第一个对话",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-03",
+      "title": "OpenClaw 快速开始指南",
+      "subtitle": "手把手三步，让浏览器里的 AI 助手开口说话"
+    },
+    {
+      "layout": "bullets",
+      "title": "本篇你会做出什么",
+      "bullets": [
+        "Gateway 正常运行，Control UI 可以打开",
+        "能发送第一条消息并收到回复",
+        "知道怎么检查 Gateway 状态",
+        "失败时知道先看哪几个排查点",
+        "在终端里也能用 CLI 与 AI 对话"
+      ],
+      "notes": "老金把快速开始写成手把手，因为太多教程只让人看懂，没让人跑起来。"
+    },
+    {
+      "layout": "steps",
+      "title": "三步跑起第一个对话",
+      "steps": [
+        {
+          "title": "运行引导向导",
+          "desc": "openclaw onboard --install-daemon 完成配置并注册后台服务"
+        },
+        {
+          "title": "检查 Gateway 状态",
+          "desc": "openclaw gateway status，看到 running 就对了"
+        },
+        {
+          "title": "打开 Control UI",
+          "desc": "浏览器访问 http://127.0.0.1:18789/，直接在输入框打字"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Gateway 的四种状态",
+      "headers": [
+        "状态",
+        "含义",
+        "处理方式"
+      ],
+      "rows": [
+        [
+          "running",
+          "正常运行",
+          "无需操作"
+        ],
+        [
+          "stopped",
+          "已停止",
+          "openclaw gateway --port 18789"
+        ],
+        [
+          "error",
+          "启动失败",
+          "加 --verbose 查看日志"
+        ],
+        [
+          "starting",
+          "正在启动",
+          "等待几秒后重新检查"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "Control UI 聊天界面的能力",
+      "cards": [
+        {
+          "title": "实时流式输出",
+          "desc": "AI 回复逐字显示，不用等全部生成完"
+        },
+        {
+          "title": "Markdown 渲染",
+          "desc": "代码块、表格、列表都会正确渲染"
+        },
+        {
+          "title": "多轮对话",
+          "desc": "上下文自动保持，AI 记得你之前说了什么"
+        },
+        {
+          "title": "文件与语音",
+          "desc": "拖拽文件让 AI 分析，点麦克风语音转文字"
+        }
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "第一条消息的完整流程",
+      "steps": [
+        {
+          "title": "确认网关在运行",
+          "desc": "openclaw gateway status 输出包含 running"
+        },
+        {
+          "title": "检查模型配置",
+          "desc": "openclaw config get agents.defaults.model 确认模型已选"
+        },
+        {
+          "title": "发送第一条消息",
+          "desc": "在输入框输入：你好！请做一下自我介绍。"
+        },
+        {
+          "title": "失败就跑诊断",
+          "desc": "没有回复时运行 openclaw doctor 检查链路"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常用 CLI 命令",
+      "headers": [
+        "用途",
+        "命令"
+      ],
+      "rows": [
+        [
+          "查看版本与帮助",
+          "openclaw --version / --help"
+        ],
+        [
+          "查看网关状态",
+          "openclaw gateway status"
+        ],
+        [
+          "健康检查",
+          "openclaw health"
+        ],
+        [
+          "运行诊断",
+          "openclaw doctor"
+        ],
+        [
+          "打开终端 UI",
+          "openclaw tui"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "会话内斜杠命令",
+      "bullets": [
+        "/status 查看会话状态",
+        "/new 或 /reset 重置会话",
+        "/compact 压缩会话上下文",
+        "/think high 设置思考级别",
+        "/usage tokens 显示 Token 使用量"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "配置文件块说明",
+      "headers": [
+        "配置块",
+        "用途",
+        "关键字段"
+      ],
+      "rows": [
+        [
+          "gateway",
+          "网关服务设置",
+          "bind、port、auth.token"
+        ],
+        [
+          "channels",
+          "消息平台配置",
+          "各平台连接信息"
+        ],
+        [
+          "agents.defaults",
+          "Agent 默认配置",
+          "model、compaction、sandbox"
+        ],
+        [
+          "agents.list",
+          "Agent 列表",
+          "id、workspace"
+        ],
+        [
+          "plugins",
+          "插件配置",
+          "slots 中的插件槽位"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "安装后的目录结构",
+      "bullets": [
+        "openclaw.json 是主配置文件，JSON5 格式",
+        "workspace/ 是 AI 的文件操作区域",
+        "工作空间里有 MEMORY.md、SOUL.md、USER.md",
+        "agents/main 存放会话存储与认证配置",
+        "配置含 API Key，建议 chmod 600 收紧权限"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "第一次失败怎么恢复",
+      "headers": [
+        "案例",
+        "现象",
+        "先查什么"
+      ],
+      "rows": [
+        [
+          "Gateway 没启动",
+          "Control UI 打不开，CLI 发送失败",
+          "加 --verbose 前台运行，再跑 doctor"
+        ],
+        [
+          "模型失败",
+          "有入站日志，但报 401、429 或超时",
+          "查 models list、API Key 与模型 ID"
+        ],
+        [
+          "平台不回复",
+          "Control UI 能聊，平台没反应",
+          "查 channels status 和入站出站日志"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "快速开始后的三个小练习",
+      "bullets": [
+        "让 AI 用中文解释当前 Gateway、Agent、Model、Channel",
+        "让 AI 记住一个无敏感偏好，例如偏好中文回答",
+        "新开一轮对话，验证它是否真的记得",
+        "做一次日志复盘，把日志分成六个阶段",
+        "能说清链路，比能不能聊天更有价值"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "三个典型使用场景",
+      "cards": [
+        {
+          "title": "个人 AI 助手",
+          "desc": "接入 Telegram，随时用手机和 AI 对话"
+        },
+        {
+          "title": "团队协作助手",
+          "desc": "接入 Slack，服务团队内部协作"
+        },
+        {
+          "title": "客服机器人",
+          "desc": "接入 WhatsApp，用 Pairing 手动审批客户"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "从能聊到能排错",
+      "subtitle": "下一步：读模型配置指南，把模型换成最适合你的"
+    }
+  ]
+}

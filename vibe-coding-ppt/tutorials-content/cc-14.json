@@ -1,0 +1,226 @@
+{
+  "code": "CC-14",
+  "category": "claude-code",
+  "fileTitle": "快速导航卡",
+  "deck": "Claude Code 学习导航：13 个教程与最短路径",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "快速导航卡",
+      "subtitle": "一页纸掌握 Claude Code 系列核心路径",
+      "kicker": "Vibe Coding 学习系列 · CC-14"
+    },
+    {
+      "layout": "bullets",
+      "title": "这张卡怎么用",
+      "bullets": [
+        "适合课前预习、直播跟练、企业内训",
+        "先解决手上问题，再决定是否系统学习",
+        "一共覆盖 13 个教程",
+        "按 01 到 13 的编号定位内容",
+        "适用版本以 Claude Code v2.1.181 为基线"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "13 个教程一览（节选）",
+      "headers": [
+        "编号",
+        "教程",
+        "核心内容",
+        "学时"
+      ],
+      "rows": [
+        [
+          "01",
+          "安装指南",
+          "环境搭建、安装配置、模型配置",
+          "2-3h"
+        ],
+        [
+          "02",
+          "基础使用",
+          "三种模式、30+ 命令、/voice",
+          "4-6h"
+        ],
+        [
+          "04",
+          "MCP 集成",
+          "外部工具连接、交互",
+          "4-6h"
+        ],
+        [
+          "05",
+          "Hooks 系统",
+          "多事件 Hook、四种处理器",
+          "4-6h"
+        ],
+        [
+          "08",
+          "Plugins",
+          "/plugin、Markets、Manifest",
+          "4-6h"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "3 小时最小路径",
+      "steps": [
+        {
+          "title": "Step 1 共 60 分钟",
+          "desc": "01 安装指南，装好 Claude Code 并验证"
+        },
+        {
+          "title": "Step 2 共 30 分钟",
+          "desc": "04 MCP 集成，配置 Filesystem MCP"
+        },
+        {
+          "title": "Step 3 共 30 分钟",
+          "desc": "05 Hooks 系统，配置 PostToolUse Hook"
+        },
+        {
+          "title": "完成",
+          "desc": "能用 Claude Code、MCP 和 Hook"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "按需求选教程",
+      "headers": [
+        "你想做什么",
+        "看哪个教程",
+        "时间"
+      ],
+      "rows": [
+        [
+          "安装 Claude Code",
+          "01 第 5 部分",
+          "15 分钟"
+        ],
+        [
+          "用语音跟 Claude 对话",
+          "02 /voice 章节",
+          "10 分钟"
+        ],
+        [
+          "手机继续本地会话",
+          "12 启动 Remote Control",
+          "10 分钟"
+        ],
+        [
+          "让外部事件推到会话里",
+          "13 Channels 快速开始",
+          "15 分钟"
+        ],
+        [
+          "定时循环监控任务",
+          "03 /loop 章节",
+          "10 分钟"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "关键术语速查",
+      "headers": [
+        "术语",
+        "通俗解释",
+        "类比"
+      ],
+      "rows": [
+        [
+          "Claude Code",
+          "AI 编程助手命令行工具",
+          "24 小时在线的高级程序员"
+        ],
+        [
+          "MCP",
+          "连接外部工具的协议",
+          "USB 接口标准"
+        ],
+        [
+          "Hook",
+          "事件触发的自动化脚本",
+          "汽车传感器"
+        ],
+        [
+          "Skill",
+          "可复用的功能包",
+          "手机 App"
+        ],
+        [
+          "Channels",
+          "把平台事件推入当前会话",
+          "给 Claude 装消息总线"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "重要风险速查",
+      "bullets": [
+        "--dangerously-skip-permissions 会跳过权限确认",
+        "新手禁用，重要项目禁用",
+        "Hooks 会执行真实命令，配置不当会改坏文件",
+        "只用信任脚本，先在测试仓库验证",
+        "MCP HTTP 远程连接需要安全配置，勿暴露敏感信息"
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "常见问题：零基础与时长",
+      "bullets": [
+        "只想体验 AI Coding，可跟着 01、04、05 走",
+        "想独立改真实项目，建议补命令行和一门语言",
+        "企业培训可把本卡当课程地图",
+        "快速上手约 8 小时，每个教程走路径 A",
+        "完整掌握约 24-34 小时"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "按经验选学习路径",
+      "cards": [
+        {
+          "title": "初学者 0-1 年",
+          "desc": "Week1 学 01，Week2 学 04，Week3 学 05"
+        },
+        {
+          "title": "进阶者 1-3 年",
+          "desc": "Day1 快速过 01，Day2-3 学 04-08"
+        },
+        {
+          "title": "高级者 3 年+",
+          "desc": "按需专项查阅需要的教程"
+        },
+        {
+          "title": "共同目标",
+          "desc": "把入口练成真实工作流"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "必须按顺序学吗",
+      "bullets": [
+        "01 安装指南必须先学，它是基础",
+        "04-08 可按需求选学，建议按顺序",
+        "Windows 和 Mac 都支持",
+        "所有教程的命令都分平台书写",
+        "遇到问题先 Ctrl+F 搜索教程内的 FAQ"
+      ]
+    },
+    {
+      "layout": "quote",
+      "title": "学习建议",
+      "subtitle": "先用导航卡 3 分钟定位入口，再用完整教程把入口练成真实工作流"
+    },
+    {
+      "layout": "end",
+      "title": "从今天开始动手",
+      "subtitle": "先解决手上的问题，再系统学习整套工具链"
+    }
+  ]
+}

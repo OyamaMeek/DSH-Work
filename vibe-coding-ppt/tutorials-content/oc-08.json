@@ -1,0 +1,225 @@
+{
+  "code": "OC-08",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw多Agent协作指南",
+  "deck": "OpenClaw 多 Agent 协作：给 AI 分岗位",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-08",
+      "title": "OpenClaw 多 Agent 协作：给 AI 分岗位",
+      "subtitle": "一个员工全能，不如一群员工各司其职"
+    },
+    {
+      "layout": "section",
+      "title": "为什么要多个 Agent",
+      "subtitle": "一个 Agent 什么都干会出问题"
+    },
+    {
+      "layout": "bullets",
+      "title": "单 Agent 的四个麻烦",
+      "bullets": [
+        "上下文污染：编程和日程技能互相挤占",
+        "无关指令既浪费 token，又让 AI 分心",
+        "人格冲突：编程要严谨，社交要轻松",
+        "安全隔离：社交 Agent 不该有 Shell 权限",
+        "消息路由：不同频道该给不同的人处理"
+      ],
+      "notes": "Agent 就是一个独立的 AI 助手实例，有大脑、记忆、技能和身份。"
+    },
+    {
+      "layout": "cards",
+      "title": "每个 Agent 的四件私人物品",
+      "cards": [
+        {
+          "title": "自己的工位",
+          "desc": "独立的工作空间目录，文件操作默认在这里"
+        },
+        {
+          "title": "自己的工牌",
+          "desc": "独立的 auth-profiles.json 认证凭证"
+        },
+        {
+          "title": "自己的笔记本",
+          "desc": "独立的 MEMORY.md 和每日日志"
+        },
+        {
+          "title": "自己的技能证书",
+          "desc": "独立的技能白名单，只加载需要的技能"
+        }
+      ],
+      "notes": "默认只有一个 main Agent，通常就够用。"
+    },
+    {
+      "layout": "section",
+      "title": "架构与配置",
+      "subtitle": "扁平路由，没有管理者 Agent"
+    },
+    {
+      "layout": "bullets",
+      "title": "扁平路由怎么工作",
+      "bullets": [
+        "Gateway 看 bindings 配置直接决定消息给谁",
+        "没有管理者 Agent 在中间转发",
+        "路由规则是确定的，不需要 AI 判断",
+        "层级管理会增加延迟，还多花 token",
+        "匹配不到的消息默认给 main Agent"
+      ],
+      "notes": "bindings 是顶层配置，不能嵌套在 agents 里。"
+    },
+    {
+      "layout": "table",
+      "title": "Agent 之间共享什么",
+      "headers": [
+        "资源",
+        "是否共享",
+        "说明"
+      ],
+      "rows": [
+        [
+          "工作空间",
+          "否",
+          "每个 Agent 有独立工作目录"
+        ],
+        [
+          "记忆文件",
+          "否",
+          "各自独立的 MEMORY.md 和日志"
+        ],
+        [
+          "会话历史",
+          "否",
+          "对话记录完全隔离"
+        ],
+        [
+          "认证凭证",
+          "否",
+          "各自独立的 auth-profiles.json"
+        ],
+        [
+          "技能配置",
+          "可选",
+          "可配 Agent 级技能白名单"
+        ],
+        [
+          "AI 模型",
+          "可选",
+          "可给每个 Agent 指定不同模型"
+        ]
+      ],
+      "notes": "Agent 记忆后端可配置 Builtin(SQLite)、QMD、Honcho 等。"
+    },
+    {
+      "layout": "steps",
+      "title": "创建一个新 Agent",
+      "steps": [
+        {
+          "title": "用向导创建",
+          "desc": "openclaw agents add coding"
+        },
+        {
+          "title": "自动生成三样东西",
+          "desc": "工作空间、会话存储、认证凭证"
+        },
+        {
+          "title": "查看列表",
+          "desc": "openclaw agents list 确认已创建"
+        },
+        {
+          "title": "改身份设定",
+          "desc": "openclaw agents set-identity 调整人格"
+        }
+      ],
+      "notes": "配置写在 openclaw.json（JSON5）的 agents 字段。"
+    },
+    {
+      "layout": "section",
+      "title": "Agent 之间怎么协作",
+      "subtitle": "直接传话，或者借共享文件"
+    },
+    {
+      "layout": "cards",
+      "title": "四种通信方式",
+      "cards": [
+        {
+          "title": "Sessions 工具",
+          "desc": "用 sessions_send 直接给另一个会话发消息"
+        },
+        {
+          "title": "共享文件",
+          "desc": "都读写 ~/.openclaw/shared/ 公共目录"
+        },
+        {
+          "title": "用户中转",
+          "desc": "你从一个 Agent 拿结果，再发给另一个"
+        },
+        {
+          "title": "定时任务",
+          "desc": "用 cron 让 Agent 按时间顺序接力执行"
+        }
+      ],
+      "notes": "sessions_send 有 reply-back ping-pong 和 announce step 两种模式。"
+    },
+    {
+      "layout": "table",
+      "title": "四种任务分发策略",
+      "headers": [
+        "策略",
+        "分工方式",
+        "适合场景"
+      ],
+      "rows": [
+        [
+          "按职能",
+          "编程、办公、社交各管一摊",
+          "最常见的分工方式"
+        ],
+        [
+          "按平台",
+          "每个 Agent 管一个消息平台",
+          "不同平台用途不同"
+        ],
+        [
+          "按安全等级",
+          "可信、受限、只读三层",
+          "公开频道处理不可信消息"
+        ],
+        [
+          "流水线",
+          "研究、写作、审核按序接力",
+          "长任务拆成多阶段"
+        ]
+      ],
+      "notes": "流水线可用 sessions_send、定时任务或 HTTP API 串联。"
+    },
+    {
+      "layout": "bullets",
+      "title": "权限与隔离",
+      "bullets": [
+        "技能白名单：只给 Agent 装需要的技能",
+        "沙箱：mode 设 non-main，非主会话进 Docker",
+        "allowlist 允许 bash、read、write 等工具",
+        "denylist 禁 browser、cron、gateway 等",
+        "认证隔离：coding 的 Google 凭证不共享给 main"
+      ],
+      "notes": "技能越多越容易误触发，也越浪费 token。"
+    },
+    {
+      "layout": "bullets",
+      "title": "常见问题",
+      "bullets": [
+        "Agent 数量没有硬限制，3-5 个较常见",
+        "默认不共享记忆，可用共享目录或插件",
+        "同频道绑两个 Agent，排在前面的优先",
+        "删 Agent 不删工作空间，记忆文件还在",
+        "空闲 Agent 不占 CPU，只有 API 调用独立计费"
+      ],
+      "notes": "v2026.4.20+ 插件冷启动时间降低约 74%。"
+    },
+    {
+      "layout": "end",
+      "title": "多 Agent 协作入门完成",
+      "subtitle": "下一步：09 Docker 部署指南"
+    }
+  ]
+}

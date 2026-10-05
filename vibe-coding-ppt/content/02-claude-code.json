@@ -1,0 +1,273 @@
+{
+  "deck": "Claude Code 入门：从安装到第一次对话",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · 02",
+      "title": "Claude Code 入门指南",
+      "subtitle": "面向零基础办公人的 3 小时上手路径"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识 Claude Code",
+      "subtitle": "它是什么，能帮你做什么"
+    },
+    {
+      "layout": "bullets",
+      "title": "Claude Code 是什么",
+      "bullets": [
+        "Anthropic 开发的命令行 AI 编程助手",
+        "在终端用中文说出需求，它帮你写代码、改 bug、搜资料、跑测试",
+        "文件读写和命令执行发生在你的电脑里",
+        "类比：一个坐在终端里的高级程序员，随时听你安排",
+        "适合有编程基础的人；零基础先学终端和一门语言"
+      ],
+      "notes": "它是命令行工具，不是网页聊天框，这是最需要先建立的概念。"
+    },
+    {
+      "layout": "cards",
+      "title": "三种使用模式",
+      "cards": [
+        {
+          "title": "交互模式",
+          "desc": "输入 claude 连续对话，保持上下文；日常开发用这个"
+        },
+        {
+          "title": "单次执行",
+          "desc": "claude \"问题\" 执行一次就退出；适合快速查询和脚本"
+        },
+        {
+          "title": "打印模式",
+          "desc": "claude -p \"问题\" 只输出纯文本；适合管道处理"
+        }
+      ],
+      "notes": "生活类比：交互像打电话，单次像发短信，打印像只要答案不要废话。"
+    },
+    {
+      "layout": "section",
+      "title": "二、安装与第一次对话",
+      "subtitle": "三条平台命令，任选一条"
+    },
+    {
+      "layout": "table",
+      "title": "安装方式对比",
+      "headers": [
+        "安装方式",
+        "适用平台",
+        "命令",
+        "推荐度"
+      ],
+      "rows": [
+        [
+          "脚本安装",
+          "macOS / Linux / WSL",
+          "curl -fsSL https://claude.ai/install.sh | bash",
+          "五星"
+        ],
+        [
+          "PowerShell",
+          "Windows",
+          "irm https://claude.ai/install.ps1 | iex",
+          "五星"
+        ],
+        [
+          "Homebrew",
+          "macOS / Linux",
+          "brew install --cask claude-code",
+          "四星"
+        ],
+        [
+          "WinGet",
+          "Windows 10/11",
+          "winget install Anthropic.ClaudeCode",
+          "四星"
+        ],
+        [
+          "NPM",
+          "全平台，需 Node.js 18+",
+          "npm install -g @anthropic-ai/claude-code",
+          "三星"
+        ]
+      ],
+      "notes": "原生安装不需要 Node.js，安装从 40 分钟缩短到 5 分钟；NPM 是仍受支持的标准兼容路径。系统要求：Windows 10+、macOS 10.15+、内存最低 4GB。"
+    },
+    {
+      "layout": "bullets",
+      "title": "安装前的三项检查",
+      "bullets": [
+        "操作系统：Windows 10+、macOS 10.15+、Linux 主流发行版",
+        "内存：最低 4GB，8GB 更佳",
+        "网络：能访问 api.anthropic.com 才能正常使用",
+        "装完用 claude --version 验证，看到 v2.1.x 即成功",
+        "本教程适用版本以 Claude Code v2.1.181 为基线"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "第一次对话，四步",
+      "steps": [
+        {
+          "title": "打开终端",
+          "desc": "Windows 用 PowerShell，macOS 用终端，按 Win+R 或 Cmd+Space 都能找到"
+        },
+        {
+          "title": "进入项目",
+          "desc": "输入 cd 项目路径；没有项目就先 mkdir test-claude 再进入"
+        },
+        {
+          "title": "启动并问好",
+          "desc": "输入 claude，对 You: 光标说“你好，介绍一下你自己”"
+        },
+        {
+          "title": "退出",
+          "desc": "输入 /exit，或按 Ctrl + D（Windows 按 Ctrl + Z 再回车）"
+        }
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、日常操作、扩展与安全",
+      "subtitle": "少量命令，配上权限确认、MCP 与 Hooks"
+    },
+    {
+      "layout": "bullets",
+      "title": "最常用的少量命令",
+      "bullets": [
+        "/help 看帮助，/exit 退出，/clear 清空对话",
+        "/compact 压缩对话省 Token，/context 查看用量",
+        "/init 生成 CLAUDE.md，/memory 编辑项目规则",
+        "/permissions 看权限，/mcp 看外部工具，/hooks 看自动化",
+        "快捷键：Esc Esc 回退，Shift + Tab 切权限，Tab 切深度思考"
+      ],
+      "notes": "CLAUDE.md 是项目的说明书，告诉 Claude 这个项目怎么工作、哪些地方不要乱动。"
+    },
+    {
+      "layout": "cards",
+      "title": "三种权限模式：按 Shift + Tab 循环切换",
+      "cards": [
+        {
+          "title": "plan 计划",
+          "desc": "只分析不修改，纯只读；代码审查和安全探索时用"
+        },
+        {
+          "title": "acceptEdits 接受编辑",
+          "desc": "自动接受文件编辑，仍会确认危险命令；信任项目用"
+        },
+        {
+          "title": "bypassPermissions 跳过",
+          "desc": "跳过所有确认提示；只允许在隔离容器环境使用"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见风险红线",
+      "headers": [
+        "功能",
+        "风险",
+        "建议"
+      ],
+      "rows": [
+        [
+          "--dangerously-skip-permissions",
+          "跳过确认后 AI 可能直接改文件、删文件、跑命令",
+          "新手禁用；公司项目绝对不用"
+        ],
+        [
+          "Hooks",
+          "会执行真实命令，配置不当可能改坏文件或泄露信息",
+          "只用信任脚本，先在测试仓库验证"
+        ],
+        [
+          "MCP HTTP",
+          "远程连接需要安全配置",
+          "不要暴露敏感信息"
+        ],
+        [
+          "API Key",
+          "泄露后会被他人使用并产生费用",
+          "用环境变量保存，不写进代码"
+        ]
+      ],
+      "notes": "官方把这个危险参数叫 Safe YOLO mode；类比：保姆做事不再问你。"
+    },
+    {
+      "layout": "bullets",
+      "title": "MCP：给 AI 装上 USB 接口",
+      "bullets": [
+        "MCP 全称 Model Context Protocol，是连接外部工具的标准协议",
+        "类比 USB：任何 USB 键盘都能插任何电脑，即插即用",
+        "接 Filesystem 能读写文件，接 GitHub 能建 Issue、管 PR",
+        "还能连 SQLite/Postgres 查数据库、Context7 查文档、Brave 搜网页",
+        "配置写在项目根目录 .mcp.json；作用域优先级 Local > Project > User"
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Hooks：给 AI 装上汽车传感器",
+      "bullets": [
+        "Hooks 是事件触发的自动化脚本，不依赖 AI 记忆，100% 执行",
+        "类比汽车传感器：胎压异常自动报警，不用人记得检查",
+        "三大高频入口：UserPromptSubmit、PreToolUse、PostToolUse",
+        "常见用途：保护文件、自动格式化、提交前检查、桌面通知",
+        "安全：只运行信任脚本，不硬编码密码，设置合理 timeout"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "另外三个词，一句话记",
+      "cards": [
+        {
+          "title": "Subagent 子代理",
+          "desc": "把大任务拆给多个 AI 分身并行处理，像一个项目组分工"
+        },
+        {
+          "title": "Skills 技能包",
+          "desc": "可复用的功能包，像手机装 App，装完就能用"
+        },
+        {
+          "title": "Plugins 插件",
+          "desc": "第三方扩展，从市场安装，像 App Store 下载应用"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "新手常见问题",
+      "bullets": [
+        "零基础能学：跟着安装、MCP、Hooks 快速开始即可，不必先学完整编程",
+        "命令找不到：确认已安装；macOS/Linux 用原生脚本，Windows 用 WinGet",
+        "认证失败：重新登录，或检查 ANTHROPIC_API_KEY 环境变量是否为空",
+        "响应慢：用 /context 看用量，超过 60% 就 /compact 压缩",
+        "改坏了：双击 Escape 打开 Rewind 菜单，选择检查点回退"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "3 小时上手路径",
+      "steps": [
+        {
+          "title": "Step 1 · 60 分钟",
+          "desc": "01 安装指南路径A：原生安装 + API 配置 + 启动验证"
+        },
+        {
+          "title": "Step 2 · 30 分钟",
+          "desc": "04 MCP 集成快速开始：配置 Filesystem MCP"
+        },
+        {
+          "title": "Step 3 · 30 分钟",
+          "desc": "05 Hooks 系统快速开始：配置 PostToolUse Hook"
+        },
+        {
+          "title": "完成",
+          "desc": "能用 Claude Code，能用 MCP，能用 Hook"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：打开终端，说出第一句话",
+      "subtitle": "最好的学习方式是实践"
+    }
+  ]
+}

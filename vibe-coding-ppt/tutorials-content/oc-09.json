@@ -1,0 +1,232 @@
+{
+  "code": "OC-09",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw-Docker部署指南",
+  "deck": "OpenClaw Docker 部署：把环境装进盒子",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-09",
+      "title": "OpenClaw Docker 部署：把环境装进盒子",
+      "subtitle": "本地能跑，服务器上也能跑"
+    },
+    {
+      "layout": "section",
+      "title": "为什么用 Docker",
+      "subtitle": "解决环境差异和迁移麻烦"
+    },
+    {
+      "layout": "cards",
+      "title": "Docker 部署的四大优势",
+      "cards": [
+        {
+          "title": "环境一致性",
+          "desc": "Node.js、依赖、配置全打包，消除环境差异"
+        },
+        {
+          "title": "一键部署",
+          "desc": "一条 docker compose up 搞定，不用手装 Node"
+        },
+        {
+          "title": "隔离性",
+          "desc": "OpenClaw 跑在自己容器里，不污染宿主机"
+        },
+        {
+          "title": "回滚方便",
+          "desc": "升级出问题就切回上一个镜像，数据在卷里"
+        }
+      ],
+      "notes": "Docker 把应用和环境打包在一起运行，像把整套厨房搬走。"
+    },
+    {
+      "layout": "bullets",
+      "title": "什么时候不需要 Docker",
+      "bullets": [
+        "在自己电脑上开发调试，本地装更快",
+        "只是临时试用，不需要持久化部署",
+        "机器资源极其有限，Docker 本身有开销",
+        "经验法则：本地开发原生装，远程部署用 Docker",
+        "官方文档：docs.openclaw.ai/install/docker"
+      ],
+      "notes": "这篇讲的是部署，不是本地开发流程。"
+    },
+    {
+      "layout": "section",
+      "title": "准备环境并启动",
+      "subtitle": "先装 Docker，再拉镜像"
+    },
+    {
+      "layout": "table",
+      "title": "系统要求",
+      "headers": [
+        "项目",
+        "最低要求",
+        "推荐配置"
+      ],
+      "rows": [
+        [
+          "CPU",
+          "1 核",
+          "2 核+"
+        ],
+        [
+          "内存",
+          "2 GB",
+          "4 GB+"
+        ],
+        [
+          "磁盘",
+          "10 GB",
+          "20 GB+"
+        ],
+        [
+          "Docker",
+          "24.0+",
+          "最新稳定版"
+        ],
+        [
+          "Docker Compose",
+          "v2.20+",
+          "最新稳定版"
+        ]
+      ],
+      "notes": "本文全部使用 docker compose（v2 语法），docker-compose v1 已弃用。"
+    },
+    {
+      "layout": "steps",
+      "title": "Linux 上安装并验证",
+      "steps": [
+        {
+          "title": "一键安装",
+          "desc": "curl -fsSL https://get.docker.com | sh"
+        },
+        {
+          "title": "加入 docker 组",
+          "desc": "sudo usermod -aG docker $USER 免 sudo"
+        },
+        {
+          "title": "让权限生效",
+          "desc": "newgrp docker 或重新登录"
+        },
+        {
+          "title": "验证版本",
+          "desc": "docker --version 和 docker compose version"
+        }
+      ],
+      "notes": "macOS 用 Docker Desktop 或 brew install --cask docker。"
+    },
+    {
+      "layout": "bullets",
+      "title": "快速启动单容器",
+      "bullets": [
+        "docker run -d --name openclaw-gateway",
+        "端口映射 -p 18789:18789",
+        "数据卷 -v ~/.openclaw:/home/node/.openclaw",
+        "环境令牌 -e OPENCLAW_GATEWAY_TOKEN=你的令牌",
+        "加上 --restart unless-stopped 自动重启"
+      ],
+      "notes": "生产环境强烈建议用 Docker Compose，而不是单条 run。"
+    },
+    {
+      "layout": "section",
+      "title": "数据与配置",
+      "subtitle": "容器会删，数据不能丢"
+    },
+    {
+      "layout": "table",
+      "title": "关键数据目录",
+      "headers": [
+        "容器内路径",
+        "说明",
+        "是否要持久化"
+      ],
+      "rows": [
+        [
+          "/home/node/.openclaw",
+          "OpenClaw 配置和数据",
+          "必须"
+        ],
+        [
+          "/home/node/.openclaw/workspace",
+          "工作空间文件",
+          "必须"
+        ],
+        [
+          "/var/lib/postgresql/data",
+          "PostgreSQL 数据",
+          "必须"
+        ],
+        [
+          "/data",
+          "Redis 持久化数据",
+          "推荐"
+        ]
+      ],
+      "notes": "Named Volume 性能好，Bind Mount 方便直接看文件。"
+    },
+    {
+      "layout": "bullets",
+      "title": "环境变量与密钥",
+      "bullets": [
+        "OPENCLAW_GATEWAY_TOKEN 是必填的网关令牌",
+        "日志级别可选 silent 到 trace",
+        "数据库密码写在 DB_PASSWORD",
+        "模型 Key 如 OPENAI_API_KEY、ANTHROPIC_API_KEY",
+        "用 ${VARIABLE} 引用 .env，别把密钥写进 compose"
+      ],
+      "notes": "记得把 .env 加入 .gitignore；优先级 命令行 > environment > env_file > .env。"
+    },
+    {
+      "layout": "bullets",
+      "title": "生产环境实践",
+      "bullets": [
+        "别直接暴露端口，用 Nginx 反向代理",
+        "Let's Encrypt 免费证书，Caddy 能自动续期",
+        "日志驱动限制 max-size 10m、保留 5 个",
+        "健康检查用 Node fetch 请求 /health",
+        "转发头要用赋值覆盖，不要追加客户端值"
+      ],
+      "notes": "端口 18789 是 Gateway 主服务，其他端口按需映射。"
+    },
+    {
+      "layout": "table",
+      "title": "常用命令速查",
+      "headers": [
+        "操作",
+        "命令"
+      ],
+      "rows": [
+        [
+          "启动服务",
+          "docker compose up -d"
+        ],
+        [
+          "停止服务",
+          "docker compose down"
+        ],
+        [
+          "查看状态",
+          "docker compose ps"
+        ],
+        [
+          "查看日志",
+          "docker compose logs -f"
+        ],
+        [
+          "更新镜像",
+          "docker compose pull && docker compose up -d"
+        ],
+        [
+          "进入容器",
+          "docker compose exec openclaw-gateway /bin/bash"
+        ]
+      ],
+      "notes": "docker compose down -v 会删除数据卷，谨慎使用。"
+    },
+    {
+      "layout": "end",
+      "title": "Docker 部署入门完成",
+      "subtitle": "下一步：10 安全配置指南"
+    }
+  ]
+}

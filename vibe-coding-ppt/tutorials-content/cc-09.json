@@ -1,0 +1,230 @@
+{
+  "code": "CC-09",
+  "category": "claude-code",
+  "fileTitle": "Agent-SDK完整指南",
+  "deck": "Claude Agent SDK：把 AI 编程能力装进你的程序",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Agent SDK 完整指南",
+      "subtitle": "用 Python 或 TypeScript 构建自己的 AI Agent",
+      "kicker": "Vibe Coding 学习系列 · CC-09"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识 Agent SDK",
+      "subtitle": "SDK 与 CLI 的定位和区别"
+    },
+    {
+      "layout": "bullets",
+      "title": "Agent SDK 是什么",
+      "bullets": [
+        "Anthropic 官方开发工具包，原名 Claude Code SDK",
+        "在 Python 或 TypeScript 程序里使用 Claude Code 能力",
+        "类比：把整车拆成零件，自己组装定制车型",
+        "封装文件读写、命令执行、代码分析和 MCP 调用"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "SDK 还是 CLI",
+      "headers": [
+        "特性",
+        "Claude Code CLI",
+        "Claude Agent SDK"
+      ],
+      "rows": [
+        [
+          "使用方式",
+          "在终端里输入命令",
+          "在代码里调用函数"
+        ],
+        [
+          "适合场景",
+          "日常开发、快速任务",
+          "自动化、批处理、系统集成"
+        ],
+        [
+          "交互方式",
+          "人工对话",
+          "程序控制"
+        ],
+        [
+          "并发能力",
+          "单会话",
+          "多代理并行"
+        ],
+        [
+          "学习曲线",
+          "低，会打字就行",
+          "中，需要编程基础"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "两种官方语言",
+      "cards": [
+        {
+          "title": "Python SDK",
+          "desc": "pip install claude-agent-sdk，需 Python 3.10+"
+        },
+        {
+          "title": "TypeScript SDK",
+          "desc": "npm install @anthropic-ai/claude-agent-sdk，需 Node.js 18+"
+        },
+        {
+          "title": "功能相同",
+          "desc": "两种 SDK 功能完全相同，选熟悉的即可"
+        },
+        {
+          "title": "版本升级",
+          "desc": "旧包 claude-code-sdk 已弃用，需换导入语句"
+        }
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "二、5 分钟跑通 Hello World",
+      "subtitle": "环境准备、安装与第一次运行"
+    },
+    {
+      "layout": "steps",
+      "title": "创建第一个 Agent",
+      "steps": [
+        {
+          "title": "环境准备",
+          "desc": "装好 Python 3.10+ 或 Node.js 18+，并检查版本"
+        },
+        {
+          "title": "安装 SDK",
+          "desc": "pip install claude-agent-sdk，推荐先建虚拟环境"
+        },
+        {
+          "title": "配置密钥",
+          "desc": "用环境变量设置 ANTHROPIC_API_KEY"
+        },
+        {
+          "title": "运行示例",
+          "desc": "创建 hello_agent.py 并执行 python hello_agent.py"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "环境与安装要点",
+      "bullets": [
+        "系统要求：Python 3.10+、Node.js 18+、npm 8.0.0+",
+        "推荐先创建虚拟环境再安装 SDK",
+        "Python SDK 自动捆绑 Claude Code CLI",
+        "密钥可用环境变量或 .env 文件",
+        "看到 Agent 回复即说明安装成功"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、核心概念",
+      "subtitle": "query、Agent Loop、Tools 与 Subagents"
+    },
+    {
+      "layout": "cards",
+      "title": "四个核心概念",
+      "cards": [
+        {
+          "title": "query 函数",
+          "desc": "SDK 核心入口，返回异步流式消息"
+        },
+        {
+          "title": "Agent Loop",
+          "desc": "接收、思考、用工具、检查、继续或结束"
+        },
+        {
+          "title": "Tools",
+          "desc": "Agent 的能力来源，可限制或自定义"
+        },
+        {
+          "title": "Subagents",
+          "desc": "子代理并行，最多 10 个同时运行"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "内置工具清单",
+      "headers": [
+        "工具",
+        "功能",
+        "场景"
+      ],
+      "rows": [
+        [
+          "Read",
+          "读取文件内容",
+          "分析代码、读取配置"
+        ],
+        [
+          "Write",
+          "写入文件内容",
+          "创建新文件"
+        ],
+        [
+          "Edit",
+          "编辑文件",
+          "修改现有代码"
+        ],
+        [
+          "Bash",
+          "执行命令",
+          "运行脚本、安装依赖"
+        ],
+        [
+          "Grep",
+          "搜索文件内容",
+          "在代码中查找关键词"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "权限与安全",
+      "bullets": [
+        "三种权限模式：default、acceptEdits、bypassPermissions",
+        "只读 Agent 只给 Read、Glob、Grep",
+        "生产环境用最小权限，开发可以放宽",
+        "用 Hooks 在工具执行前后插入检查",
+        "沙箱可禁止请求在沙箱外执行命令"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "模型选择建议",
+      "headers": [
+        "场景",
+        "推荐模型",
+        "理由"
+      ],
+      "rows": [
+        [
+          "日常开发",
+          "claude-sonnet-5",
+          "能力强、速度快、价格适中"
+        ],
+        [
+          "复杂推理",
+          "claude-opus-4-8",
+          "能力最强，但价格高"
+        ],
+        [
+          "简单任务",
+          "claude-haiku-4-5-20251001",
+          "最便宜，适合简单查询"
+        ]
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "把 Claude 装进你的程序",
+      "subtitle": "从 Hello World 到三个实战项目"
+    }
+  ]
+}

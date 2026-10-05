@@ -1,0 +1,241 @@
+{
+  "code": "CC-08",
+  "category": "claude-code",
+  "fileTitle": "Plugins生态完整指南",
+  "deck": "Claude Code 插件生态：从安装到自制扩展",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Plugins 生态完整指南",
+      "subtitle": "从装一个插件到发布自己的插件",
+      "kicker": "Vibe Coding 学习系列 · CC-08"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识 Plugin",
+      "subtitle": "扩展包、市场与四类扩展的区别"
+    },
+    {
+      "layout": "bullets",
+      "title": "Plugin 是什么",
+      "bullets": [
+        "给 Claude Code 加命令、能力和自动化流程的扩展包",
+        "可以跨项目、跨团队共享",
+        "类比：手机装 App，Claude Code 是操作系统",
+        "官方市场 code.claude.com/plugins 可浏览",
+        "教程以 Claude Code v2.1.181 为基线"
+      ],
+      "notes": "先建立扩展包的概念，再区分它和单个 Skill 的差别。"
+    },
+    {
+      "layout": "table",
+      "title": "Plugin 和四类扩展的区别",
+      "headers": [
+        "维度",
+        "Commands",
+        "Skills",
+        "MCP",
+        "Plugins"
+      ],
+      "rows": [
+        [
+          "定义",
+          "Markdown 提示词",
+          "专业 Agent 能力",
+          "外部服务集成",
+          "打包的扩展"
+        ],
+        [
+          "位置",
+          ".claude/commands/",
+          ".claude/skills/",
+          ".mcp.json",
+          "本地目录 + market 安装"
+        ],
+        [
+          "可分享性",
+          "手动复制",
+          "手动复制",
+          "需要配置",
+          "市场安装 / CLI / 本地"
+        ],
+        [
+          "包含内容",
+          "单个提示词",
+          "多个文件 + 配置",
+          "服务器配置",
+          "manifest + 多种资源"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "Plugin 的四个核心价值",
+      "cards": [
+        {
+          "title": "可复用性",
+          "desc": "一次开发，多个项目直接使用"
+        },
+        {
+          "title": "易分享性",
+          "desc": "通过 GitHub 一键克隆给同事"
+        },
+        {
+          "title": "模块化",
+          "desc": "每个 Plugin 专注一个领域"
+        },
+        {
+          "title": "社区驱动",
+          "desc": "社区持续贡献优质 Plugin"
+        }
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "二、5 分钟装好第一个插件",
+      "subtitle": "官方 /plugin 主路径与本地目录加载"
+    },
+    {
+      "layout": "steps",
+      "title": "安装第一个 Plugin",
+      "steps": [
+        {
+          "title": "检查环境",
+          "desc": "运行 claude --version，并进入自己的项目目录"
+        },
+        {
+          "title": "打开入口",
+          "desc": "在 Claude Code 里输入 /plugin 浏览市场"
+        },
+        {
+          "title": "按市场路径安装",
+          "desc": "/plugin install <plugin-name-or-market-entry>"
+        },
+        {
+          "title": "确认生效",
+          "desc": "检查对应命令、Skill 或行为是否出现"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "本地开发模式 --plugin-dir",
+      "bullets": [
+        "未发布到市场的插件才需要手动目录加载",
+        "克隆到 .claude/plugins/plugins-plus",
+        "启动时加 --plugin-dir 指向该目录",
+        "可以同时加载多个 Plugin 目录",
+        "开发时把它当调试入口，不当分发方式"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、创建、发布与排查",
+      "subtitle": "结构规范、最佳实践与故障处理"
+    },
+    {
+      "layout": "table",
+      "title": "Plugin 结构规范",
+      "headers": [
+        "路径",
+        "是否必需",
+        "作用"
+      ],
+      "rows": [
+        [
+          ".claude-plugin/plugin.json",
+          "必需",
+          "Plugin 元数据清单"
+        ],
+        [
+          "skills/<名称>/SKILL.md",
+          "可选",
+          "Agent Skills 能力"
+        ],
+        [
+          "commands/<名称>.md",
+          "可选",
+          "Slash Commands 命令"
+        ],
+        [
+          "agents/ 与 hooks/",
+          "可选",
+          "Agent 定义与自动化钩子"
+        ],
+        [
+          "README.md",
+          "推荐",
+          "安装和使用文档"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "Plugin 最佳实践",
+      "cards": [
+        {
+          "title": "单一职责",
+          "desc": "每个 Plugin 专注一个领域"
+        },
+        {
+          "title": "清晰文档",
+          "desc": "README 写清安装、示例和配置"
+        },
+        {
+          "title": "版本管理",
+          "desc": "使用语义化版本并打 git tag"
+        },
+        {
+          "title": "安全第一",
+          "desc": "不硬编码密钥，改用环境变量"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "常见故障排查",
+      "bullets": [
+        "加载失败先确认 plugin.json 路径正确",
+        "用 python3 -m json.tool 验证 JSON 格式",
+        "加 --debug 启动查看详细日志",
+        "命令不显示：检查 commands 目录和 .md 后缀",
+        "多 Plugin 冲突时，后加载的覆盖先加载的"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见问题速答",
+      "headers": [
+        "问题",
+        "答案"
+      ],
+      "rows": [
+        [
+          "Plugin 和 Skill 有什么区别？",
+          "Plugin 是 Skill 的超集"
+        ],
+        [
+          "会访问我的代码吗？",
+          "在沙箱运行，不能绕过权限系统"
+        ],
+        [
+          "能同时装载几个？",
+          "没有硬性限制，建议不超过 5 个"
+        ],
+        [
+          "开发需要懂编程吗？",
+          "最简单的只需写 Markdown"
+        ],
+        [
+          "可以离线使用吗？",
+          "本地文件可离线，MCP 部分需要网络"
+        ]
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "从用一个插件到做一个插件",
+      "subtitle": "先跑通 /plugin，再尝试创建和发布自己的 Plugin"
+    }
+  ]
+}

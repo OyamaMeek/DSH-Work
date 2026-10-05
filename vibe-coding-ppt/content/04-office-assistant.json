@@ -1,0 +1,329 @@
+{
+  "deck": "办公助手主线：OpenClaw 与 WorkBuddy",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · 04",
+      "title": "办公助手主线：OpenClaw 与 WorkBuddy",
+      "subtitle": "两条路，一个目标：把重复办公交给 AI"
+    },
+    {
+      "layout": "section",
+      "title": "两条办公助手主线",
+      "subtitle": "一条开源自部署，一条腾讯扫码即用"
+    },
+    {
+      "layout": "table",
+      "title": "两条主线怎么选",
+      "headers": [
+        "维度",
+        "OpenClaw",
+        "WorkBuddy"
+      ],
+      "rows": [
+        [
+          "出品",
+          "Peter Steinberger（开源）",
+          "腾讯"
+        ],
+        [
+          "给谁用",
+          "技术用户、极客",
+          "办公人、普通人、国内团队"
+        ],
+        [
+          "形态",
+          "自部署框架，接消息平台",
+          "桌面 App + 微信 + 小程序"
+        ],
+        [
+          "怎么登",
+          "自配，用你常用的聊天软件",
+          "微信扫码"
+        ],
+        [
+          "网络",
+          "看部署方式",
+          "国内直连，不用翻墙"
+        ],
+        [
+          "支付",
+          "开源免费，模型费自付",
+          "微信、支付宝（人民币）"
+        ]
+      ],
+      "notes": "OpenClaw 是给极客的自部署框架，WorkBuddy 是给办公人的开箱即用桌面 App。"
+    },
+    {
+      "layout": "section",
+      "title": "OpenClaw：开源 AI 私人助手",
+      "subtitle": "跑在你自己的电脑上，接到你常用的聊天软件"
+    },
+    {
+      "layout": "bullets",
+      "title": "OpenClaw 是什么",
+      "bullets": [
+        "开源的 AI 私人助手框架，装在你自己的电脑或服务器",
+        "连接 Telegram、WhatsApp、Discord 等消息平台",
+        "像一名 7×24 小时在线的 AI 员工，用聊天软件沟通",
+        "配置、记忆、聊天记录默认由你本机保存",
+        "接云端模型时，消息仍会发给模型提供商处理"
+      ],
+      "notes": "“隐私优先”指你能控制运行位置、数据目录和模型来源，不是所有数据天然不出本机。"
+    },
+    {
+      "layout": "cards",
+      "title": "OpenClaw 的四个关键角色",
+      "cards": [
+        {
+          "title": "Gateway 网关",
+          "desc": "核心服务进程，接收消息、调度 AI、返回回复，像公司的前台总机"
+        },
+        {
+          "title": "Agent 助手实例",
+          "desc": "独立的 AI 助手，有自己的性格、记忆和技能，像公司里的一名员工"
+        },
+        {
+          "title": "Channel 消息通道",
+          "desc": "WhatsApp、Telegram 等平台连接，像每个员工的工位电话"
+        },
+        {
+          "title": "技能与记忆",
+          "desc": "技能是 Markdown 操作手册，记忆是本地笔记，随时能打开看"
+        }
+      ],
+      "notes": "四个词对应四层：Gateway 管总调度，Agent 管角色，Channel 管入口，技能和记忆管能力。"
+    },
+    {
+      "layout": "steps",
+      "title": "环境准备与第一个对话",
+      "steps": [
+        {
+          "title": "准备环境",
+          "desc": "需要 Node.js 22+，装好 OpenClaw 命令行，端口默认 18789"
+        },
+        {
+          "title": "运行引导向导",
+          "desc": "openclaw onboard --install-daemon，把 Gateway 装成开机自启服务"
+        },
+        {
+          "title": "检查 Gateway 状态",
+          "desc": "openclaw gateway status，看到 running 说明网关已启动"
+        },
+        {
+          "title": "打开 Control UI",
+          "desc": "浏览器访问 http://127.0.0.1:18789/ 就能打字对话"
+        }
+      ],
+      "notes": "向导会依次让你选 AI 提供商、输入 API Key、设置 Gateway 端口和 Token。"
+    },
+    {
+      "layout": "bullets",
+      "title": "模型配置要点",
+      "bullets": [
+        "支持 OpenAI、Anthropic、Google、Ollama 等主流提供商",
+        "国内可选通义千问、智谱、Kimi、DeepSeek 等",
+        "选型看任务：长上下文、多工具、隐私、成本分开配",
+        "隐私敏感任务优先本地模型或企业受控提供商",
+        "配好主备模型优先级，主模型不可用自动切换"
+      ],
+      "notes": "模型目录更新很快，先运行本机 onboarding 或 models 命令确认有哪些模型，再选。"
+    },
+    {
+      "layout": "steps",
+      "title": "消息平台接入：以 Telegram 为例",
+      "steps": [
+        {
+          "title": "创建 Bot",
+          "desc": "在 Telegram 找 @BotFather，发送 /newbot，拿到 Bot Token"
+        },
+        {
+          "title": "添加平台",
+          "desc": "openclaw channels add telegram，或手动设置 botToken"
+        },
+        {
+          "title": "写 AI 人格",
+          "desc": "编辑 workspace/SOUL.md，定义名字、性格、能力和规则"
+        },
+        {
+          "title": "重启并测试",
+          "desc": "openclaw channels status 确认连上，再发消息测试"
+        }
+      ],
+      "notes": "新手先接 Telegram 或 WebChat 这类好调试的平台，每加一个变量都跑一次最小检查。"
+    },
+    {
+      "layout": "bullets",
+      "title": "OpenClaw 安全注意",
+      "bullets": [
+        "Gateway Token 是大门钥匙，别把端口直接开放到公网",
+        "API Key 用环境变量存，配置文件里不写明文",
+        "DM 配对默认开启，陌生人私聊要你手动批准",
+        "配置文件和凭证权限设为 600，开启 TLS 1.3",
+        "工具在沙箱里执行，防提示词注入与恶意技能"
+      ],
+      "notes": "本地跑也要配安全：先只读再写入，先手动再自动，先安全再公网。"
+    },
+    {
+      "layout": "section",
+      "title": "WorkBuddy：腾讯 AI 办公助手",
+      "subtitle": "微信扫码就能用，像请了一群 AI 员工帮你办公"
+    },
+    {
+      "layout": "bullets",
+      "title": "WorkBuddy 是什么",
+      "bullets": [
+        "腾讯 2026 年 3 月推出的 AI 办公助手，微信扫码登录",
+        "不用写代码、不配 API Key、不用英文、不用翻墙",
+        "五个核心概念：专家、专家团、技能、自动化、连接器",
+        "多端打通：桌面 App、微信与企业微信、微信小程序",
+        "知识库可接腾讯文档与 ima，让 AI 读你的资料"
+      ],
+      "notes": "它和 CodeBuddy 同一个账号、积分共享：一个管办公出活，一个管写代码。"
+    },
+    {
+      "layout": "steps",
+      "title": "安装与登录：20 分钟跑通",
+      "steps": [
+        {
+          "title": "下载安装包",
+          "desc": "搜 WorkBuddy 腾讯，认准腾讯域名；Windows 选 .exe，Mac 按芯片选"
+        },
+        {
+          "title": "安装",
+          "desc": "Windows 跟着向导走；Mac 把图标拖进 Applications 文件夹"
+        },
+        {
+          "title": "微信扫码登录",
+          "desc": "手机微信扫一扫并确认，电脑端自动进入主界面"
+        },
+        {
+          "title": "跑通第一个任务",
+          "desc": "在对话框发一句话，AI 回复就说明账号、网络、模型全通"
+        }
+      ],
+      "notes": "第一次别接工作邮箱和生产代码仓库，先用公开或脱敏素材跑通。"
+    },
+    {
+      "layout": "cards",
+      "title": "专家、专家团与技能市场",
+      "cards": [
+        {
+          "title": "专家",
+          "desc": "给 AI 配一个职业身份，人设加方法论加工具链，像雇一个专员"
+        },
+        {
+          "title": "专家团",
+          "desc": "多个专家分工，团长自动拆解、并行、合并，像雇一个项目组"
+        },
+        {
+          "title": "技能市场",
+          "desc": "上万个技能一键安装，让 AI 会发邮件、查股价、读写文件"
+        },
+        {
+          "title": "积分",
+          "desc": "AI 干活的能量额度，专家团消耗是单专家的 3-5 倍"
+        }
+      ],
+      "notes": "选用原则：能直接对话就别用专家，能用单专家就别用专家团。"
+    },
+    {
+      "layout": "table",
+      "title": "连接器与腾讯生态",
+      "headers": [
+        "连接器",
+        "能干什么"
+      ],
+      "rows": [
+        [
+          "QQ 邮箱",
+          "读近一个月收件箱、发邮件、删邮件"
+        ],
+        [
+          "腾讯文档",
+          "搜索、预览、引用段落、回写修改"
+        ],
+        [
+          "腾讯会议",
+          "拉取会议纪要，提取决议和待办"
+        ],
+        [
+          "企业微信",
+          "长链接接入、推送消息、远程触发任务"
+        ],
+        [
+          "TAPD / 腾讯乐享",
+          "读需求缺陷迭代 / 查内部知识库"
+        ],
+        [
+          "自定义连接器",
+          "通过 MCP 协议接其他软件，技术向"
+        ]
+      ],
+      "notes": "连接器是桥：打通后 AI 能直接读写你办公软件里的数据，调用会消耗积分。"
+    },
+    {
+      "layout": "steps",
+      "title": "自动化与定时任务",
+      "steps": [
+        {
+          "title": "定时任务",
+          "desc": "每天 9 点自动生成昨日工作摘要，推送到企业微信"
+        },
+        {
+          "title": "事件触发",
+          "desc": "收到标题含“紧急”的邮件，几秒内推送提醒"
+        },
+        {
+          "title": "远程触发",
+          "desc": "在微信发一句话，桌面端开始干活，结果推回手机"
+        },
+        {
+          "title": "安全防护",
+          "desc": "设积分预警，别配删除和自动回复，先测试运行"
+        }
+      ],
+      "notes": "自动化是双刃剑：先手动跑通同样流程，再让它定时或远程跑。"
+    },
+    {
+      "layout": "table",
+      "title": "选型建议与安全边界",
+      "headers": [
+        "你的情况",
+        "建议"
+      ],
+      "rows": [
+        [
+          "办公出活、要中文、用企业微信",
+          "WorkBuddy，扫码即用"
+        ],
+        [
+          "想完全本地部署、零云依赖",
+          "OpenClaw，开源自部署"
+        ],
+        [
+          "写生产代码、大型重构",
+          "Claude Code / Codex"
+        ],
+        [
+          "涉及敏感数据",
+          "先脱敏，或用专有云私有部署"
+        ],
+        [
+          "团队推广",
+          "先找 3-5 个种子用户试 2-4 周"
+        ],
+        [
+          "生产数据库修改、付款退款",
+          "不建议直接交给 AI"
+        ]
+      ],
+      "notes": "不同人不同工具，没有谁替代谁。按任务选工具，不二选一。"
+    },
+    {
+      "layout": "end",
+      "title": "不同人不同工具，没有谁替代谁",
+      "subtitle": "先跑通一个最小任务，再慢慢加能力"
+    }
+  ]
+}

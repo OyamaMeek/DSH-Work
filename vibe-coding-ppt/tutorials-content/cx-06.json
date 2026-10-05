@@ -1,0 +1,187 @@
+{
+  "code": "CX-06",
+  "category": "codex",
+  "fileTitle": "Codex-Skills可复用工作流",
+  "deck": "Codex Skills：把重复提示变成可复用工作流",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Skills：把重复提示变成可复用工作流",
+      "subtitle": "零基础 · 让流程可重复，而不是让 prompt 更长",
+      "kicker": "Vibe Coding 学习系列 · CX-06"
+    },
+    {
+      "layout": "section",
+      "title": "Skill 是可复用判断，不是 prompt 收藏",
+      "subtitle": "要有步骤、边界和验收方式"
+    },
+    {
+      "layout": "bullets",
+      "title": "Skill 是什么，适合什么",
+      "bullets": [
+        "一组可复用指令、资源和可选脚本",
+        "适合代码审查、文档核对、发布检查和团队 SOP",
+        "不适合只执行一次的临时任务",
+        "不适合需要实时外部 API 的工具连接",
+        "不适合需要定时运行的周期任务"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "什么时候值得做成 Skill",
+      "headers": [
+        "信号",
+        "是否适合"
+      ],
+      "rows": [
+        [
+          "同一提示复制三次以上",
+          "适合"
+        ],
+        [
+          "多人需要同一做法",
+          "适合"
+        ],
+        [
+          "输出格式总要固定",
+          "适合"
+        ],
+        [
+          "只做一次的临时任务",
+          "不适合"
+        ],
+        [
+          "需要每天运行",
+          "交给 Automation 调度"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "好 Skill 的四个特征",
+      "cards": [
+        {
+          "title": "触发清楚",
+          "desc": "description 里写明什么时候用"
+        },
+        {
+          "title": "边界清楚",
+          "desc": "也写明什么时候不用"
+        },
+        {
+          "title": "输入输出清楚",
+          "desc": "Codex 知道读什么、交付什么"
+        },
+        {
+          "title": "内容分层",
+          "desc": "常用指令在 SKILL.md，长资料放 references"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "description 是触发路由，不是介绍文案",
+      "bullets": [
+        "模板：Use when 场景，Do 动作，Do not use when 边界",
+        "差写法：Helps write high quality code",
+        "好写法要写清对象、动作、触发场景和边界",
+        "写得太泛，Codex 可能乱用",
+        "写得太窄，真正需要时触发不了"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "在 App 中调用 Skill",
+      "steps": [
+        {
+          "title": "确认能否看到",
+          "desc": "当前 App 是否显示这个 Skill"
+        },
+        {
+          "title": "确认层级",
+          "desc": "用户级、项目级，还是插件带来的"
+        },
+        {
+          "title": "确认副作用",
+          "desc": "会不会读额外资源、运行脚本或调用工具"
+        },
+        {
+          "title": "显式调用",
+          "desc": "用 $code-review 或自然语言点名，再说清任务"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Skills、Commands、Automations 的分工",
+      "headers": [
+        "需求",
+        "首选"
+      ],
+      "rows": [
+        [
+          "当前线程快速动作",
+          "Command"
+        ],
+        [
+          "固定 SOP / 复用流程",
+          "Skill"
+        ],
+        [
+          "定时或后台重复执行",
+          "Automation"
+        ],
+        [
+          "外部工具连接",
+          "MCP / Connector"
+        ],
+        [
+          "打包分发一组能力",
+          "Plugin"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "文件结构：内容放哪里",
+      "headers": [
+        "内容",
+        "放哪里",
+        "原因"
+      ],
+      "rows": [
+        [
+          "触发场景、流程、输出",
+          "SKILL.md",
+          "Codex 必须先看到"
+        ],
+        [
+          "长规范、示例、术语表",
+          "references/",
+          "需要时再读，节省上下文"
+        ],
+        [
+          "重复性强易写错的逻辑",
+          "scripts/",
+          "要写清运行时和失败输出"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Skill 不该承载什么",
+      "bullets": [
+        "一次性任务",
+        "当前项目的临时 bug",
+        "模糊人设包装",
+        "需要每天变化的命令",
+        "真实密钥或私有账号信息"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "一次性任务放 prompt，项目事实放 AGENTS.md",
+      "subtitle": "下一篇：CX-07 Plugins 连接器"
+    }
+  ]
+}

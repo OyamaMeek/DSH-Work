@@ -1,0 +1,299 @@
+{
+  "code": "OC-01",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw项目介绍",
+  "deck": "OpenClaw 项目介绍：一个 7x24 小时的 AI 员工",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-01",
+      "title": "OpenClaw 项目介绍",
+      "subtitle": "是什么、能做什么、跟其他框架有什么不同"
+    },
+    {
+      "layout": "bullets",
+      "title": "一句话说清楚",
+      "bullets": [
+        "OpenClaw 是开源的 AI 私人助手框架，跑在你自己的电脑上",
+        "能连接 WhatsApp、Telegram、Discord 等消息平台",
+        "可以理解为 7x24 小时在线的 AI 员工，用聊天软件沟通",
+        "配置、记忆、聊天记录和工作文件默认由你自己保存",
+        "接入云端模型时消息仍会发给对应提供商处理"
+      ],
+      "notes": "先纠正误解：隐私优先指你能控制运行位置和数据边界，不是所有数据天然不出本机。"
+    },
+    {
+      "layout": "table",
+      "title": "关键里程碑",
+      "headers": [
+        "时间",
+        "事件",
+        "意义"
+      ],
+      "rows": [
+        [
+          "2025.11",
+          "项目创建",
+          "从个人 AI 实验起步"
+        ],
+        [
+          "2025.11",
+          "开源发布",
+          "快速进入开发者社区视野"
+        ],
+        [
+          "2026.01",
+          "完成更名",
+          "统一到 OpenClaw 品牌"
+        ],
+        [
+          "2026.04.05",
+          "Control UI 多语言",
+          "新增 12 种界面语言"
+        ],
+        [
+          "2026.04.24",
+          "Google Meet 集成",
+          "首个内置会议类插件"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "该选哪个方案",
+      "headers": [
+        "你的需求",
+        "推荐方案"
+      ],
+      "rows": [
+        [
+          "个人 AI 助手，隐私优先",
+          "OpenClaw"
+        ],
+        [
+          "企业客服机器人，需要可视化",
+          "Botpress"
+        ],
+        [
+          "企业级对话系统，需要精确控制",
+          "Rasa"
+        ],
+        [
+          "简单的单平台 Bot",
+          "自建方案"
+        ],
+        [
+          "多平台 + 多模型 + 工具调用",
+          "OpenClaw"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "核心架构：三层结构",
+      "bullets": [
+        "官方定义：多通道 AI 网关，带可扩展的消息集成",
+        "上层是消息平台层，WhatsApp、Telegram、Discord、Slack",
+        "中间是 Gateway 网关控制平面，WebSocket 默认端口 18789",
+        "下层是 AI 模型提供商层，OpenAI、Anthropic、Ollama 等",
+        "网关内还有技能、记忆、工具、插件与 Cron 调度"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "一条消息的旅程",
+      "steps": [
+        {
+          "title": "平台收到事件",
+          "desc": "Telegram 等 Channel 接收用户发来的消息"
+        },
+        {
+          "title": "Gateway 标准化",
+          "desc": "网关接收并转换统一格式，路由到对应 Agent"
+        },
+        {
+          "title": "Agent 处理",
+          "desc": "加载记忆和技能，模型生成计划或回复"
+        },
+        {
+          "title": "回发平台",
+          "desc": "必要时调用工具，网关把回复发回原平台"
+        }
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "四个核心概念",
+      "cards": [
+        {
+          "title": "Gateway 网关",
+          "desc": "长期运行的守护进程，OpenClaw 的心脏和控制平面"
+        },
+        {
+          "title": "Channel",
+          "desc": "对消息平台的统一抽象，不同平台都看作一个通道"
+        },
+        {
+          "title": "Skills 技能",
+          "desc": "教 AI 组合使用工具的教科书，即系统指令加工具定义"
+        },
+        {
+          "title": "Memory 记忆",
+          "desc": "写在磁盘上的 Markdown，没有向量数据库和 RAG 管道"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "内置工具类别",
+      "headers": [
+        "工具类别",
+        "能力"
+      ],
+      "rows": [
+        [
+          "浏览器控制",
+          "打开网页、截图、点击、填表，基于 Playwright"
+        ],
+        [
+          "Canvas",
+          "Agent 驱动的可视化工作区，支持 A2UI 推送"
+        ],
+        [
+          "文件操作",
+          "在工作空间内读写文件、管理目录"
+        ],
+        [
+          "Shell 执行",
+          "在安全沙箱内运行命令行命令"
+        ],
+        [
+          "定时任务",
+          "用 Cron 表达式调度提醒与自动化任务"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "技能与插件的三个层级",
+      "cards": [
+        {
+          "title": "Bundled Skills",
+          "desc": "内置技能，随 OpenClaw 一起安装，来自核心仓库"
+        },
+        {
+          "title": "Workspace Skills",
+          "desc": "你自己写在本地工作空间目录的技能"
+        },
+        {
+          "title": "Managed Skills",
+          "desc": "通过 ClawHub 安装的社区技能，可一键安装"
+        },
+        {
+          "title": "Plugin 插件",
+          "desc": "核心保持精简，可选功能通过插件扩展"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "支持的模型提供商",
+      "headers": [
+        "类别",
+        "代表"
+      ],
+      "rows": [
+        [
+          "国际主流",
+          "OpenAI、Anthropic、Google、Mistral、xAI"
+        ],
+        [
+          "本地与自托管",
+          "Ollama、vLLM、node-llama-cpp"
+        ],
+        [
+          "中国大陆",
+          "通义千问、百度千帆、智谱、DeepSeek、MiniMax"
+        ],
+        [
+          "代理与路由",
+          "OpenRouter、LiteLLM、AWS Bedrock、Together AI"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "适合用 OpenClaw 的场景",
+      "bullets": [
+        "个人效率助手：通过聊天软件管理日程、整理邮件",
+        "开发者工具：在聊天中管理 GitHub Issue 与 PR",
+        "知识管理：连接 Obsidian、Notion，自动摘要长文档",
+        "多平台统一入口：一个助手，所有常用软件都能访问",
+        "共享同一套记忆，AI 在所有平台都认识你"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "不适合的场景",
+      "headers": [
+        "场景",
+        "原因",
+        "替代方案"
+      ],
+      "rows": [
+        [
+          "企业客服机器人",
+          "OpenClaw 是单用户设计",
+          "Botpress、Intercom"
+        ],
+        [
+          "多用户 SaaS 产品",
+          "没有多租户架构",
+          "自建方案"
+        ],
+        [
+          "不想碰终端的用户",
+          "安装和配置需要命令行",
+          "ChatGPT、Claude.ai"
+        ],
+        [
+          "低配设备",
+          "需要 Node.js 22+，内存占用不小",
+          "轻量级 Bot 框架"
+        ],
+        [
+          "需要 100% 可用性",
+          "个人设备可能关机或断网",
+          "云端 AI 服务"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "新手路线（1-2 小时）",
+      "steps": [
+        {
+          "title": "安装 OpenClaw",
+          "desc": "阅读 02 安装部署指南，运行 openclaw onboard"
+        },
+        {
+          "title": "连接第一个平台",
+          "desc": "阅读 05 消息平台接入指南，推荐从 Telegram 开始"
+        },
+        {
+          "title": "配置 AI 模型",
+          "desc": "阅读 04 模型配置指南，推荐从 OpenAI 或 Anthropic 开始"
+        },
+        {
+          "title": "试用内置技能",
+          "desc": "阅读 06 技能系统指南，先试 weather、summarize"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "先建立整体心智模型",
+      "subtitle": "下一步：安装部署，把 OpenClaw 装到你的电脑上"
+    }
+  ]
+}

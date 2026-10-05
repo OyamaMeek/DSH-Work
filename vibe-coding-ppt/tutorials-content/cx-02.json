@@ -1,0 +1,215 @@
+{
+  "code": "CX-02",
+  "category": "codex",
+  "fileTitle": "Codex-App桌面工作流",
+  "deck": "Codex App 桌面工作流：把 App 当主控台",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex App 桌面工作流：把 App 当主控台",
+      "subtitle": "零基础 · 线程、终端、Review、权限在一个桌面流程里",
+      "kicker": "Vibe Coding 学习系列 · CX-02"
+    },
+    {
+      "layout": "section",
+      "title": "App 是开发主控台，不是聊天窗口",
+      "subtitle": "Thread 管上下文，Review 管结果，Settings 管边界"
+    },
+    {
+      "layout": "bullets",
+      "title": "App 把哪些能力放在一起",
+      "bullets": [
+        "Thread：一条任务线，带上下文、历史和状态",
+        "Review：查看 diff、行内反馈和 stage / unstage",
+        "Terminal：让 Codex 在受控环境里运行命令",
+        "Settings：模型、审批、沙盒、插件和 MCP 的入口",
+        "Automations / Plugins：后台检查和外部账号连接"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "核心概念速查",
+      "headers": [
+        "概念",
+        "一句话解释"
+      ],
+      "rows": [
+        [
+          "Thread",
+          "一条任务线，包含上下文、历史和状态"
+        ],
+        [
+          "Worktree",
+          "Git 隔离工作目录，仍会产生真实改动"
+        ],
+        [
+          "Review 面板",
+          "看 diff、行内反馈、stage / revert 的关口"
+        ],
+        [
+          "Local workspace",
+          "当前本机项目目录，决定 Codex 能看到什么"
+        ],
+        [
+          "Cloud handoff",
+          "把任务交给云端环境继续做"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "五个控制点",
+      "cards": [
+        {
+          "title": "目标",
+          "desc": "这次到底要解决什么问题"
+        },
+        {
+          "title": "上下文",
+          "desc": "Codex 该读哪些文件，陌生项目先只读建模"
+        },
+        {
+          "title": "权限",
+          "desc": "是否允许写文件、跑命令、联网、调外部工具"
+        },
+        {
+          "title": "结果",
+          "desc": "改动是否真的在预期范围内，收口由人决定"
+        }
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "一条线程的生命周期",
+      "steps": [
+        {
+          "title": "开场只读",
+          "desc": "先读项目，确认技术栈、命令、目录和风险"
+        },
+        {
+          "title": "明确任务",
+          "desc": "说清目标、范围、不能做什么、怎么验证"
+        },
+        {
+          "title": "允许执行",
+          "desc": "小任务直接改，大任务先 /plan 或用 worktree"
+        },
+        {
+          "title": "检查与收口",
+          "desc": "看 Review，定点反馈，由人决定是否提交"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "三种工作方式怎么选",
+      "headers": [
+        "任务",
+        "推荐方式",
+        "为什么"
+      ],
+      "rows": [
+        [
+          "读项目、解释报错",
+          "Local thread 只读",
+          "快，风险低"
+        ],
+        [
+          "改一个文件或少量文档",
+          "Local thread + Review",
+          "改动小，容易检查"
+        ],
+        [
+          "新功能、重构、改多个文件",
+          "Worktree thread",
+          "隔离改动，便于撤回"
+        ],
+        [
+          "盯 PR、修 CI、长任务",
+          "Cloud / Web handoff",
+          "不占用本地环境"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "好任务要写清五件事",
+      "bullets": [
+        "目标：这次要解决什么问题",
+        "范围：只改哪些文件或目录",
+        "约束：不能做什么，例如不引入新依赖",
+        "验证：怎么确认改对了，跑哪条命令",
+        "交付：要 diff 摘要、测试结果还是 PR 描述"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "Review 面板逐项检查法",
+      "cards": [
+        {
+          "title": "文件列表",
+          "desc": "是否只改了任务范围内文件，范围外要解释或撤掉"
+        },
+        {
+          "title": "单文件 diff",
+          "desc": "是否有无关格式化、删除或重命名"
+        },
+        {
+          "title": "命令记录",
+          "desc": "验证命令是否真的跑过，没跑要说明原因"
+        },
+        {
+          "title": "安全项",
+          "desc": "是否碰了 .env、token 或权限配置，碰到立即停"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见反模式",
+      "headers": [
+        "反模式",
+        "真正风险",
+        "更稳做法"
+      ],
+      "rows": [
+        [
+          "一个线程混多个目标",
+          "上下文混乱，Review 难收口",
+          "一个目标一条线程"
+        ],
+        [
+          "任务只写“优化一下”",
+          "Codex 不知道边界",
+          "写清目标、范围、约束、验证、交付"
+        ],
+        [
+          "陌生仓库直接写",
+          "误读架构和命令",
+          "先只读建模"
+        ],
+        [
+          "允许自动提交推送",
+          "错误进入远端",
+          "先草拟，由人确认"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "App 用户的三个基本动作",
+      "bullets": [
+        "收窄：只改 README，控制 diff 大小",
+        "追证据：你运行了什么命令",
+        "反向解释：根据 diff 解释你做了什么",
+        "线程标题用结果导向命名，方便以后找回上下文",
+        "新目标开新线程；混在一起就难 Review"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "先建立控制感，再逐步放开能力",
+      "subtitle": "下一篇：CX-03 Commands 工作流入口"
+    }
+  ]
+}

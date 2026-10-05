@@ -1,0 +1,234 @@
+{
+  "code": "CC-13",
+  "category": "claude-code",
+  "fileTitle": "Channels与计划任务完整指南",
+  "deck": "Claude Code Channels 与计划任务：把外部事件推入会话",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Channels 与计划任务完整指南",
+      "subtitle": "外部事件推入会话，按时间轮询或提醒",
+      "kicker": "Vibe Coding 学习系列 · CC-13"
+    },
+    {
+      "layout": "bullets",
+      "title": "先说结论",
+      "bullets": [
+        "Channels：外部事件主动推给 Claude",
+        "计划任务：Claude 按时间轮询或提醒",
+        "有事件源时优先使用 Channels",
+        "没有事件源才考虑 /loop 或 /schedule",
+        "自动化要先想清楚谁来接结果"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "四类能力的区别",
+      "headers": [
+        "能力",
+        "解决什么问题",
+        "最适合场景"
+      ],
+      "rows": [
+        [
+          "Channels",
+          "外部事件主动推进来",
+          "CI、聊天桥、Webhook"
+        ],
+        [
+          "Remote Control",
+          "自己从别的设备控制会话",
+          "手机继续本地会话"
+        ],
+        [
+          "普通 MCP",
+          "Claude 主动调用外部工具",
+          "按需查数据或操作系统"
+        ],
+        [
+          "/loop 与 Cron",
+          "按时间轮询或提醒",
+          "没有事件推送源时"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Channels 是什么",
+      "bullets": [
+        "通过 MCP server 把消息推入已打开的会话",
+        "不是新开云端会话，也不是轮询",
+        "需要 Claude Code v2.1.80 以上版本",
+        "目前是 research preview 阶段",
+        "v2.1.128 起也支持 API key 登录"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "最推荐的入门方式：fakechat",
+      "steps": [
+        {
+          "title": "安装插件",
+          "desc": "/plugin install fakechat@claude-plugins-official"
+        },
+        {
+          "title": "启动 channels",
+          "desc": "claude --channels plugin:fakechat@claude-plugins-official"
+        },
+        {
+          "title": "打开界面",
+          "desc": "浏览器访问 http://localhost:8787"
+        },
+        {
+          "title": "发送消息",
+          "desc": "消息会以 channel 事件进入当前会话"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "三个平台的核心模式",
+      "bullets": [
+        "装 plugin，再配 token 或权限",
+        "用 --channels 启动当前会话",
+        "做 pairing 和 allowlist 配对",
+        "iMessage 只支持 macOS，需 Full Disk Access",
+        "Discord Bot 必须开启 Message Content Intent"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Token 存储位置",
+      "headers": [
+        "渠道",
+        "默认位置与关键配置"
+      ],
+      "rows": [
+        [
+          "Telegram",
+          "~/.claude/channels/telegram/.env"
+        ],
+        [
+          "Discord",
+          "~/.claude/channels/discord/.env"
+        ],
+        [
+          "Discord",
+          "必须开启 Message Content Intent"
+        ],
+        [
+          "iMessage",
+          "仅 macOS，需 Full Disk Access"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Channels 的安全边界",
+      "bullets": [
+        "allowlist 是核心，只有被允许的发送者能推消息",
+        "--channels 只是本会话启用",
+        "管理员可用 channelsEnabled 控制组织开关",
+        "allowedChannelPlugins 限制可注册的插件",
+        "事件只在会话打开时到达，关终端就丢"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "计划任务的四个工具",
+      "cards": [
+        {
+          "title": "/loop",
+          "desc": "会话开着时做最低成本的定时轮询"
+        },
+        {
+          "title": "CronCreate",
+          "desc": "创建计划任务"
+        },
+        {
+          "title": "CronList",
+          "desc": "列出已有计划任务"
+        },
+        {
+          "title": "CronDelete",
+          "desc": "删除计划任务"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "/loop 用法",
+      "bullets": [
+        "/loop 5m check if the deployment finished",
+        "支持 s、m、h、d 四种时间单位",
+        "不带 prompt 时使用内置维护提示词",
+        "不写间隔会动态选择 1 分钟到 1 小时",
+        "/proactive 是 /loop 的别名"
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "本地计划任务的关键限制",
+      "bullets": [
+        "任务是 session-scoped，会话结束就消失",
+        "重启默认不保留，--resume 可恢复未过期任务",
+        "循环任务 7 天后自动过期",
+        "每个会话最多 50 个计划任务",
+        "Claude 忙时任务不插队，只在 turn 之间触发"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "什么时候用哪种调度",
+      "headers": [
+        "需求",
+        "推荐方案"
+      ],
+      "rows": [
+        [
+          "只是临时盯一件事",
+          "/loop"
+        ],
+        [
+          "关掉终端也要继续",
+          "Cloud scheduled tasks"
+        ],
+        [
+          "跑在本机且跨重启",
+          "Desktop scheduled tasks"
+        ],
+        [
+          "外部系统本来能发事件",
+          "优先 Channels，而非轮询"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见误区",
+      "headers": [
+        "误区",
+        "事实"
+      ],
+      "rows": [
+        [
+          "Channels 等于 Remote Control",
+          "Remote Control 是自己远程接管"
+        ],
+        [
+          "有 /loop 就不用 Channels",
+          "对事件源轮询更慢、更贵、更脆"
+        ],
+        [
+          "计划任务会一直留着",
+          "本地计划任务是 session-scoped"
+        ]
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "有事件就用 Channels",
+      "subtitle": "没有事件源，才轮到 /loop 和 /schedule"
+    }
+  ]
+}

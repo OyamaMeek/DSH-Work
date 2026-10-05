@@ -1,0 +1,260 @@
+{
+  "code": "CC-11",
+  "category": "claude-code",
+  "fileTitle": "企业实战完整指南",
+  "deck": "Claude Code 企业实战：团队协作与安全合规",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "企业实战完整指南",
+      "subtitle": "团队配置统一、Git Hooks、密钥管理与合规",
+      "kicker": "Vibe Coding 学习系列 · CC-11"
+    },
+    {
+      "layout": "bullets",
+      "title": "统一配置要解决的问题",
+      "bullets": [
+        "每人 settings.json 不同，代码风格混乱",
+        "API Key 写进配置文件会泄露到仓库",
+        "新人手动配置约需 2 小时，容易出错",
+        "配置更新无法同步，部分人还在用旧配置",
+        "没有版本控制，配置回滚困难"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "统一配置四条原则",
+      "cards": [
+        {
+          "title": "唯一真相来源",
+          "desc": "所有配置都在 Git 仓库中"
+        },
+        {
+          "title": "环境变量优先",
+          "desc": "敏感信息必须用环境变量传递"
+        },
+        {
+          "title": "自动验证",
+          "desc": "每次更新自动验证配置正确性"
+        },
+        {
+          "title": "支持回滚",
+          "desc": "用 Git tag 标记稳定版本"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Git Hooks 解决什么",
+      "headers": [
+        "问题",
+        "后果",
+        "Hook 方案"
+      ],
+      "rows": [
+        [
+          "代码未格式化",
+          "PR 冲突，难以 review",
+          "pre-commit 自动格式化"
+        ],
+        [
+          "提交信息混乱",
+          "Git 历史难以追踪",
+          "commit-msg 规范化"
+        ],
+        [
+          "未跑测试就 push",
+          "破坏主分支",
+          "pre-push 强制测试"
+        ],
+        [
+          "代码有明显 bug",
+          "浪费审查时间",
+          "Claude 自动代码审查"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Git Hooks 与 Claude Hooks 的区别",
+      "bullets": [
+        "Claude Code Hooks 在 settings.json 中配置",
+        "Git hooks 是放在 .git/hooks/ 的独立脚本",
+        "两者可配合：Git hook 调用 Claude 做审查",
+        "pre-commit 先格式化再用 Claude 审查",
+        "commit-msg 检查是否符合约定式提交"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "团队知识库建设",
+      "cards": [
+        {
+          "title": "编码标准 Skill",
+          "desc": "team-standards 定义代码规范"
+        },
+        {
+          "title": "架构模式 Skill",
+          "desc": "微服务与数据库设计规范"
+        },
+        {
+          "title": "测试规范 Skill",
+          "desc": "单元测试与集成测试要求"
+        },
+        {
+          "title": "memory 目录",
+          "desc": "记录技术决策与最佳实践"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "跨团队配置共享",
+      "bullets": [
+        "公司基础配置放共享仓库，作为 Git 子模块",
+        "各团队在 .claude/settings.json 定义团队设置",
+        "项目级配置自动覆盖用户级配置",
+        "modelOverrides 把模型映射到企业自有端点",
+        "Worktree 用 sparse checkout 做轻量隔离"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "企业治理新特性",
+      "headers": [
+        "特性",
+        "作用",
+        "版本"
+      ],
+      "rows": [
+        [
+          "parentSettingsBehavior",
+          "托管设置合并策略",
+          "v2.1.133"
+        ],
+        [
+          "claude project purge",
+          "清理项目状态",
+          "v2.1.126"
+        ],
+        [
+          "enforceAvailableModels",
+          "限定可用模型",
+          "v2.1.175"
+        ],
+        [
+          "Tool(param:value)",
+          "参数级权限",
+          "v2.1.178"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "API Key 泄露的代价",
+      "bullets": [
+        "提交到 GitHub 被扫描器发现，被盗刷 15000 美元",
+        "硬编码在前端会暴露给所有用户",
+        "明文存配置文件，服务器被入侵即泄露",
+        "共享给离职员工可能引来法律诉讼",
+        "未设限制会被刷量攻击，损失 25000 美元"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "企业级密钥管理",
+      "cards": [
+        {
+          "title": "分级管理",
+          "desc": "主密钥、服务密钥、开发密钥分开"
+        },
+        {
+          "title": "存储方案",
+          "desc": "环境变量搭配 Secrets Manager"
+        },
+        {
+          "title": "轮换自动化",
+          "desc": "每 90 天检查并轮换密钥"
+        },
+        {
+          "title": "禁止清单",
+          "desc": "不硬编码、不提交、不放前端"
+        }
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "API 泄露应急响应",
+      "steps": [
+        {
+          "title": "立即响应",
+          "desc": "5 分钟内撤销旧密钥并生成新密钥"
+        },
+        {
+          "title": "调查分析",
+          "desc": "1 小时内分析原因、评估影响范围"
+        },
+        {
+          "title": "修复加固",
+          "desc": "24 小时内修复泄露源、加强访问控制"
+        },
+        {
+          "title": "复盘总结",
+          "desc": "72 小时内出报告并改进响应流程"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "合规与安全扫描",
+      "bullets": [
+        "GDPR：数据最小化、访问权、删除权、72 小时通知",
+        "SOC 2 五大原则：安全、可用、完整、机密、隐私",
+        "扫描内容：密钥、依赖漏洞、代码、镜像、配置",
+        "日志脱敏：API Key、邮箱、手机号自动打码",
+        "用 20 条安全规则建立纵深防御体系"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "安全规则优先级分组",
+      "headers": [
+        "优先级",
+        "规则示例",
+        "检查方法"
+      ],
+      "rows": [
+        [
+          "P0",
+          "API Key 永远不硬编码",
+          "Git Secrets 扫描"
+        ],
+        [
+          "P0",
+          "每 90 天轮换一次密钥",
+          "自动化脚本"
+        ],
+        [
+          "P1",
+          "日志自动脱敏",
+          "日志检查"
+        ],
+        [
+          "P2",
+          "网络隔离与加密",
+          "网络配置"
+        ],
+        [
+          "P3",
+          "合规性审计",
+          "定期审计"
+        ]
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "企业落地先管好权限与责任链",
+      "subtitle": "从配置统一到事故响应，形成完整闭环"
+    }
+  ]
+}

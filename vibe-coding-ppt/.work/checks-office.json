@@ -1,0 +1,34 @@
+{
+  "format": "pptx",
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "package",
+      "status": "pass"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "OpenClaw"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "WorkBuddy"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "\u4e13\u5bb6\u56e2"
+    },
+    {
+      "id": "count",
+      "status": "pass",
+      "expected": 18,
+      "actual": 18
+    }
+  ],
+  "summary": {
+    "slides": 18
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "code": "OC-06",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw技能系统指南",
+  "deck": "OpenClaw 技能系统：教 AI 组合本领",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-06",
+      "title": "OpenClaw 技能系统：教 AI 组合本领",
+      "subtitle": "工具是双手，技能是菜谱"
+    },
+    {
+      "layout": "section",
+      "title": "技能到底是什么",
+      "subtitle": "先分清工具和技能"
+    },
+    {
+      "layout": "bullets",
+      "title": "一句话理解技能",
+      "bullets": [
+        "工具是 AI 的双手，只会做一件具体的事",
+        "技能是教 AI 组合工具的教科书",
+        "一个技能能把十几个工具串成完整流程",
+        "比如管理 GitHub Issue 要搜索、读取、评论",
+        "技能用 Markdown 编写，不用写代码"
+      ],
+      "notes": "拿厨房打比方：刀、锅、铲子是工具，菜谱是技能。"
+    },
+    {
+      "layout": "table",
+      "title": "工具与技能的六个差别",
+      "headers": [
+        "维度",
+        "工具 Tools",
+        "技能 Skills"
+      ],
+      "rows": [
+        [
+          "粒度",
+          "单个动作",
+          "多步骤流程"
+        ],
+        [
+          "定义方式",
+          "TypeScript/Python 函数",
+          "Markdown 指令文档"
+        ],
+        [
+          "执行方式",
+          "直接调用",
+          "AI 按指令编排工具"
+        ],
+        [
+          "状态",
+          "无状态",
+          "可以维护上下文"
+        ],
+        [
+          "触发方式",
+          "模型自动选择",
+          "关键词触发或模型判断"
+        ],
+        [
+          "开发难度",
+          "需要编程",
+          "写 Markdown 就行"
+        ]
+      ],
+      "notes": "技能不是一直驻留内存，只有相关技能会被激活。"
+    },
+    {
+      "layout": "section",
+      "title": "找技能、装技能",
+      "subtitle": "三条常用命令走天下"
+    },
+    {
+      "layout": "bullets",
+      "title": "常用命令",
+      "bullets": [
+        "openclaw skills search \"gog\"：搜索技能",
+        "openclaw skills install gog：安装技能",
+        "openclaw skills update：更新已装技能",
+        "openclaw skills list：查看技能列表",
+        "openclaw skills check：检查依赖是否就绪"
+      ],
+      "notes": "技能靠 triggers 关键词匹配，匹配后才注入系统提示词。"
+    },
+    {
+      "layout": "cards",
+      "title": "技能有三种来源",
+      "cards": [
+        {
+          "title": "bundled 内置",
+          "desc": "随 OpenClaw 安装，不能修改，像随车自带的说明书"
+        },
+        {
+          "title": "managed 托管",
+          "desc": "从 ClawHub 技能市场安装，可以更新，像应用商店的 App"
+        },
+        {
+          "title": "workspace 工作区",
+          "desc": "你自己写的技能，放在 workspace/skills 目录"
+        }
+      ],
+      "notes": "优先级：工作区技能 > 托管技能 > 内置技能，同名会被覆盖。"
+    },
+    {
+      "layout": "table",
+      "title": "内置技能分类速览",
+      "headers": [
+        "分类",
+        "代表技能",
+        "用途"
+      ],
+      "rows": [
+        [
+          "办公效率",
+          "gog、notion、slack",
+          "邮件、日历、页面、消息"
+        ],
+        [
+          "开发工具",
+          "coding-agent、github",
+          "写代码、仓库、Issue"
+        ],
+        [
+          "笔记知识",
+          "obsidian、nano-pdf",
+          "笔记管理、PDF 摘要"
+        ],
+        [
+          "多媒体",
+          "voice-call、peekaboo",
+          "语音、截图、视频分析"
+        ],
+        [
+          "生活工具",
+          "weather、things-mac",
+          "天气、任务、提醒事项"
+        ],
+        [
+          "系统管理",
+          "summarize、skill-creator",
+          "长文摘要、创建技能"
+        ]
+      ],
+      "notes": "技能市场 ClawHub 截至 2026 年 4 月已有 52,700+ 工具。"
+    },
+    {
+      "layout": "steps",
+      "title": "动手：装一个低风险技能",
+      "steps": [
+        {
+          "title": "确认命令可用",
+          "desc": "运行 openclaw skills search \"summarize\""
+        },
+        {
+          "title": "安装文本技能",
+          "desc": "openclaw skills install summarize，只处理文本"
+        },
+        {
+          "title": "在对话里触发",
+          "desc": "让 AI 把长文整理成 3 条要点并保留行动项"
+        },
+        {
+          "title": "记住安全底线",
+          "desc": "新手别接邮箱、网盘、密码管理器"
+        }
+      ],
+      "notes": "没有 summarize 技能也能练习，重点是理解流程。"
+    },
+    {
+      "layout": "cards",
+      "title": "SKILL.md 的四个必备部分",
+      "cards": [
+        {
+          "title": "技能名称与说明",
+          "desc": "第一行写名称，下面写描述和用途"
+        },
+        {
+          "title": "触发条件",
+          "desc": "什么情况下激活，比如听到“记录读书笔记”"
+        },
+        {
+          "title": "执行步骤",
+          "desc": "编号写清先做什么、再做什么"
+        },
+        {
+          "title": "依赖工具与注意事项",
+          "desc": "列出要用到的工具和执行边界"
+        }
+      ],
+      "notes": "方法一：让 skill-creator 技能生成；方法二：手动建目录写文件。工作区技能优先于内置技能。"
+    },
+    {
+      "layout": "bullets",
+      "title": "技能的权限清单",
+      "bullets": [
+        "file_read 读文件，风险低",
+        "file_write 写文件，风险中等",
+        "file_delete 删文件、shell_exec 执行命令，风险高",
+        "network 联网、auth_access 访问凭证，要谨慎",
+        "在 SKILL.md 声明权限，再用沙箱和审批控制"
+      ],
+      "notes": "越权操作会被阻止、通知用户并记入安全日志。"
+    },
+    {
+      "layout": "quote",
+      "title": "技能开发的最佳实践",
+      "subtitle": "指令要具体、步骤要编号、提供示例、权限最小化、一个技能只做一件事"
+    },
+    {
+      "layout": "bullets",
+      "title": "常见问题",
+      "bullets": [
+        "装不上：openclaw skills check 看依赖再重试",
+        "想禁用：把 skills.entries 里 enabled 设为 false",
+        "和内置冲突：工作区技能优先，删掉就恢复内置",
+        "技能太多不会拖慢性能，只加载相关技能",
+        "回滚：openclaw skills install 技能名@1.0.0"
+      ],
+      "notes": "触发词太宽会误触发，太窄则完全不触发。"
+    },
+    {
+      "layout": "end",
+      "title": "技能系统入门完成",
+      "subtitle": "下一步：07 记忆系统，让 AI 记住你"
+    }
+  ]
+}

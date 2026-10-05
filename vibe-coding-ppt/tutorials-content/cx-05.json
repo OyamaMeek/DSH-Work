@@ -1,0 +1,207 @@
+{
+  "code": "CX-05",
+  "category": "codex",
+  "fileTitle": "Codex-MCP外部工具",
+  "deck": "Codex MCP：在 App 中连接外部工具",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex MCP：在 App 中连接外部工具",
+      "subtitle": "零基础 · 先只读、再小范围、可审计、可撤销",
+      "kicker": "Vibe Coding 学习系列 · CX-05"
+    },
+    {
+      "layout": "section",
+      "title": "MCP 不是搜索框，而是工具连接层",
+      "subtitle": "让 Codex 连接浏览器、数据库、文档和内部 API"
+    },
+    {
+      "layout": "bullets",
+      "title": "MCP 能给 Codex 什么",
+      "bullets": [
+        "文档上下文：查新文档，减少过期知识",
+        "开发工具：控制浏览器，检查页面",
+        "设计工具：读取 Figma 等设计上下文",
+        "数据工具：数据库 schema、只读查询",
+        "项目与内部系统：GitHub issue / PR、私有 API"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "App 中的 MCP 工作流",
+      "steps": [
+        {
+          "title": "启用或配置",
+          "desc": "在 App Settings 或集成入口启用 MCP"
+        },
+        {
+          "title": "查看可见工具",
+          "desc": "回到线程，用 /mcp 看 server 和工具"
+        },
+        {
+          "title": "用自然语言调用",
+          "desc": "要求 Codex 使用工具，并观察权限提示"
+        },
+        {
+          "title": "Review 结果",
+          "desc": "核对来源、时间、权限和副作用"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "从 0 配 MCP 前先确认四件事",
+      "headers": [
+        "问题",
+        "为什么重要"
+      ],
+      "rows": [
+        [
+          "本地命令还是远程服务",
+          "决定用 stdio、HTTP 还是插件提供"
+        ],
+        [
+          "需要什么账号或 token",
+          "决定密钥放哪里，不能写进仓库"
+        ],
+        [
+          "默认能读写什么",
+          "决定是否只读、是否需要审批"
+        ],
+        [
+          "App 是否已有连接器或插件",
+          "有现成入口时不要重复手写 MCP"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "三类 MCP server",
+      "cards": [
+        {
+          "title": "STDIO",
+          "desc": "本地命令启动进程，适合本机工具和私有脚本"
+        },
+        {
+          "title": "Streamable HTTP",
+          "desc": "访问一个 URL，适合远程服务、OAuth 和云端工具"
+        },
+        {
+          "title": "Plugin-provided",
+          "desc": "插件 manifest 提供 server，先看来源和工具权限"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "密钥放哪里",
+      "headers": [
+        "场景",
+        "推荐",
+        "不推荐"
+      ],
+      "rows": [
+        [
+          "本地个人 token",
+          "系统环境变量或密码管理器",
+          "写进 config.toml 并提交"
+        ],
+        [
+          "团队共享服务",
+          "组织 secret 管理、最小 scope",
+          "共享个人账号 token"
+        ],
+        [
+          "Cloud / remote",
+          "环境变量或官方 secret 入口",
+          "在 setup 日志里 echo"
+        ],
+        [
+          "临时调试",
+          "临时只读 token，用完撤销",
+          "使用生产写 token"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "配置 MCP 前先问的安全问题",
+      "bullets": [
+        "它能读什么数据，能写什么数据",
+        "它是否会联网，是否需要账号授权",
+        "它是否会把数据发给第三方",
+        "它能不能在只读模式下完成任务",
+        "生产库、客户数据和邮箱都按最小权限配置"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "工具风险分级",
+      "cards": [
+        {
+          "title": "只读搜索",
+          "desc": "风险低，可以较宽松"
+        },
+        {
+          "title": "读取私有数据",
+          "desc": "风险中，需要来源说明"
+        },
+        {
+          "title": "写外部系统",
+          "desc": "风险高，需要人工确认"
+        },
+        {
+          "title": "访问生产数据",
+          "desc": "风险很高，默认不要给新手练习"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "MCP 排障流程",
+      "headers": [
+        "症状",
+        "可能原因",
+        "排查"
+      ],
+      "rows": [
+        [
+          "/mcp 看不到 server",
+          "配置层未加载或 App 未刷新",
+          "先看 App Settings，再重启或刷新"
+        ],
+        [
+          "CLI 能看到 App 看不到",
+          "配置层或会话状态不同",
+          "以 App 线程使用结果为准"
+        ],
+        [
+          "server 启动失败",
+          "命令不存在或依赖未安装",
+          "在终端单独跑启动命令看日志"
+        ],
+        [
+          "结果不可信",
+          "来源不明或时间过期",
+          "要求 Codex 列出来源和查询条件"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "MCP 配置核对清单",
+      "bullets": [
+        "App 可见：/mcp 能看到 server 和工具",
+        "最小权限：只给当前任务需要的读写范围",
+        "密钥安全：token 在环境变量或 secret 里",
+        "只读试跑：能完成一次只读查询或读取",
+        "可审计、可撤销：知道怎么禁用和撤销 token"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "先只读、再小范围、可审计、可撤销",
+      "subtitle": "下一篇：CX-06 Skills 可复用工作流"
+    }
+  ]
+}

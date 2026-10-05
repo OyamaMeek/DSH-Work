@@ -1,0 +1,24 @@
+{
+  "format": "pptx",
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "package",
+      "status": "pass"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "Vibe Coding \u5b66\u4e60\u7cfb\u5217 \u00b7 03"
+    },
+    {
+      "id": "count",
+      "status": "pass",
+      "expected": 18,
+      "actual": 18
+    }
+  ],
+  "summary": {
+    "slides": 18
+  }
+}

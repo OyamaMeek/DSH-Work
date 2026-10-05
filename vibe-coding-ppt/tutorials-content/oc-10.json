@@ -1,0 +1,205 @@
+{
+  "code": "OC-10",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw安全配置指南",
+  "deck": "OpenClaw 安全配置：守住五道门",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-10",
+      "title": "OpenClaw 安全配置：守住五道门",
+      "subtitle": "你给它多少权限，它就可能用出多少风险"
+    },
+    {
+      "layout": "section",
+      "title": "为什么安全是第一优先级",
+      "subtitle": "它能读写文件、执行命令、收发消息"
+    },
+    {
+      "layout": "table",
+      "title": "五层纵深防御",
+      "headers": [
+        "层次",
+        "防线内容"
+      ],
+      "rows": [
+        [
+          "网络边界安全",
+          "TLS 1.3、防火墙、IP 白名单"
+        ],
+        [
+          "认证与授权",
+          "Gateway Token、配对系统、用户权限"
+        ],
+        [
+          "输入验证与过滤",
+          "提示词护栏、消息过滤、长度限制"
+        ],
+        [
+          "执行隔离",
+          "Docker 沙箱、文件系统隔离、资源限制"
+        ],
+        [
+          "审计与监控",
+          "操作日志、异常检测、告警通知"
+        ]
+      ],
+      "notes": "每一层都是独立防线，突破一层还有下一层，不要只依赖单一措施。"
+    },
+    {
+      "layout": "bullets",
+      "title": "零信任五条原则",
+      "bullets": [
+        "不信任任何输入，用户消息都先过滤验证",
+        "不信任任何网络，内网也用 TLS 加密",
+        "不信任任何执行，工具调用都在沙箱里跑",
+        "最小权限，只给完成任务所需的最少能力",
+        "持续验证，每次操作都重新检查权限"
+      ],
+      "notes": "沙箱是限制 AI 执行危险操作的隔离环境，像给 AI 一个玻璃房。"
+    },
+    {
+      "layout": "section",
+      "title": "管好 API Key",
+      "subtitle": "密钥是 OpenClaw 最敏感的资产"
+    },
+    {
+      "layout": "cards",
+      "title": "三种密钥存放方式",
+      "cards": [
+        {
+          "title": "系统环境变量",
+          "desc": "服务器推荐，写入 ~/.bashrc 后 source 生效"
+        },
+        {
+          "title": ".env 文件",
+          "desc": "开发推荐，启动时自动读取，权限设为 600"
+        },
+        {
+          "title": "密钥管理服务",
+          "desc": "团队企业推荐，Vault 或 1Password CLI"
+        }
+      ],
+      "notes": "永远不要把 Key 硬编码进 openclaw.json。"
+    },
+    {
+      "layout": "steps",
+      "title": "密钥轮换五步",
+      "steps": [
+        {
+          "title": "生成新 Key",
+          "desc": "在 AI 提供商后台创建新密钥"
+        },
+        {
+          "title": "更新环境变量",
+          "desc": "用新 Key 替换所有引用"
+        },
+        {
+          "title": "重启生效",
+          "desc": "openclaw gateway restart"
+        },
+        {
+          "title": "确认再撤销",
+          "desc": "openclaw health 正常后撤销旧 Key"
+        }
+      ],
+      "notes": "建议每 90 天轮换一次 API Key。"
+    },
+    {
+      "layout": "bullets",
+      "title": "部署前必做清单",
+      "bullets": [
+        "Gateway 认证已设置：Token 或密码模式",
+        "API Key 用环境变量，不明文写进配置文件",
+        "DM 配对启用，dmPolicy 设为 pairing",
+        "Gateway 绑定 127.0.0.1，不对外暴露",
+        "配置和凭证权限设为 600，TLS 1.3 已启用"
+      ],
+      "notes": "再运行 openclaw doctor 确认安全配置无误。"
+    },
+    {
+      "layout": "section",
+      "title": "沙箱与权限控制",
+      "subtitle": "让危险命令出不了玻璃房"
+    },
+    {
+      "layout": "table",
+      "title": "沙箱的三种模式",
+      "headers": [
+        "mode 值",
+        "说明",
+        "适用场景"
+      ],
+      "rows": [
+        [
+          "non-main",
+          "非主会话在 Docker 沙箱运行",
+          "生产推荐默认值"
+        ],
+        [
+          "all",
+          "所有会话都在沙箱运行",
+          "高安全要求场景"
+        ],
+        [
+          "off",
+          "禁用沙箱",
+          "仅限开发调试"
+        ]
+      ],
+      "notes": "用 mode 字段控制，不是简单的 enabled 开关。"
+    },
+    {
+      "layout": "bullets",
+      "title": "工具 Allow 与 Deny",
+      "bullets": [
+        "allow 允许 bash、process、read、write",
+        "allow 还有 edit 和 sessions 系列工具",
+        "deny 禁止 browser、canvas、nodes",
+        "deny 禁止 cron、discord、gateway",
+        "字段是 tools.allow，不是 toolAllowlist"
+      ],
+      "notes": "沙箱内的 Agent 无法访问浏览器或操作 Gateway。"
+    },
+    {
+      "layout": "bullets",
+      "title": "Gateway 认证与 DM 配对",
+      "bullets": [
+        "Gateway 认证是第一条防线，必须设置",
+        "Token 用 openssl rand -hex 32 生成",
+        "Token 至少 32 个字符，别用 password123",
+        "DM 配对默认策略 pairing，未知者需批准",
+        "公开模式 open 不推荐用于生产"
+      ],
+      "notes": "配对批准用 openclaw pairing approve <channel> <code>。"
+    },
+    {
+      "layout": "cards",
+      "title": "四种常见威胁与防护",
+      "cards": [
+        {
+          "title": "提示词注入",
+          "desc": "SOUL.md 约束加沙箱，敏感工具设为需审批"
+        },
+        {
+          "title": "API Key 泄露",
+          "desc": "环境变量存储、权限 600、定期轮换"
+        },
+        {
+          "title": "未授权访问",
+          "desc": "Gateway 认证、DM 配对、IP 白名单"
+        },
+        {
+          "title": "供应链攻击",
+          "desc": "只装可信技能，沙箱运行，插件白名单"
+        }
+      ],
+      "notes": "v2026.4.5+ 提供插件白名单；v2026.4.7+ 自动拦截危险环境变量注入。"
+    },
+    {
+      "layout": "end",
+      "title": "安全配置入门完成",
+      "subtitle": "下一步：11 常见问题 FAQ"
+    }
+  ]
+}

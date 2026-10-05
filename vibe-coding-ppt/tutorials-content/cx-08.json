@@ -1,0 +1,227 @@
+{
+  "code": "CX-08",
+  "category": "codex",
+  "fileTitle": "Codex-Subagents多Agent协作",
+  "deck": "Codex Subagents：把并行工作变成可管理的协作",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Subagents：把并行工作变成可管理的协作",
+      "subtitle": "零基础入门 · 从任务拆分、文件所有权到主线程合并",
+      "kicker": "Vibe Coding 学习系列 · CX-08"
+    },
+    {
+      "layout": "section",
+      "title": "目录：先学会少用，再学会并行",
+      "subtitle": "解决什么问题 → 什么时候用 → 文件所有权 → 合并与 Review"
+    },
+    {
+      "layout": "bullets",
+      "title": "Subagents 是什么",
+      "bullets": [
+        "它把一个任务拆成多个相对独立的子任务",
+        "价值是并行和分工，不是让任务自动变聪明",
+        "它不会扩大单个上下文窗口",
+        "主线程负责目标、分工、合并和最终决策",
+        "没有文件边界，并行只会把混乱一起放大"
+      ],
+      "notes": "先讲清单 agent 边界，再讲多 Agent V2 的可配置并发，不要第一天就开高并发。"
+    },
+    {
+      "layout": "cards",
+      "title": "四个必须记住的角色",
+      "cards": [
+        {
+          "title": "Main thread",
+          "desc": "主线程：锁定目标、拆分任务、处理冲突并合并结果"
+        },
+        {
+          "title": "Worker",
+          "desc": "执行型子 agent：有明确文件所有权，返回 diff 和验证命令"
+        },
+        {
+          "title": "Explorer",
+          "desc": "只读调查型子 agent：并行收集代码、文档和证据"
+        },
+        {
+          "title": "Reviewer",
+          "desc": "审查型子 agent：通常只读，按严重度列出 findings"
+        }
+      ],
+      "notes": "不要让主线程变成旁观者，主线程的价值是判断和整合。"
+    },
+    {
+      "layout": "table",
+      "title": "并行不是越多越好",
+      "headers": [
+        "子任务关系",
+        "是否适合并行"
+      ],
+      "rows": [
+        [
+          "读不同模块、互不依赖",
+          "适合"
+        ],
+        [
+          "一个查文档，一个查代码",
+          "适合"
+        ],
+        [
+          "前端和测试文件所有权分开",
+          "适合"
+        ],
+        [
+          "后一步必须等前一步结论",
+          "不适合"
+        ],
+        [
+          "多个 agent 都要改同一个核心文件",
+          "不适合"
+        ],
+        [
+          "目标本身还不清楚",
+          "主线程先澄清"
+        ]
+      ],
+      "notes": "并行写入的命脉是文件所有权，共享文件由主线程统一修改。"
+    },
+    {
+      "layout": "steps",
+      "title": "启动前必须写清四件事",
+      "steps": [
+        {
+          "title": "总目标",
+          "desc": "这次到底要把什么迁移、重构或修好"
+        },
+        {
+          "title": "子任务边界",
+          "desc": "每个 agent 只读或只改哪些文件和目录"
+        },
+        {
+          "title": "是否允许写",
+          "desc": "先只读分析，还是限定文件写入"
+        },
+        {
+          "title": "汇总与停止条件",
+          "desc": "输出结论、证据、风险；遇权限或测试问题先汇报"
+        }
+      ],
+      "notes": "不写这些，subagent 很容易变成多个不受控的普通对话。"
+    },
+    {
+      "layout": "table",
+      "title": "推荐分工与文件所有权",
+      "headers": [
+        "Agent",
+        "负责范围"
+      ],
+      "rows": [
+        [
+          "Frontend agent",
+          "src/pages/login.tsx、src/components/auth/*"
+        ],
+        [
+          "Backend agent",
+          "src/api/auth/*"
+        ],
+        [
+          "Test agent",
+          "tests/auth/*"
+        ],
+        [
+          "Review agent",
+          "只读 diff，不改文件"
+        ]
+      ],
+      "notes": "路由表、公共类型、全局样式、配置和 lockfile 都是冲突中心。"
+    },
+    {
+      "layout": "bullets",
+      "title": "合并：不要直接相信总结",
+      "bullets": [
+        "先看每个 subagent 的输出是否有证据",
+        "再看是否存在互相冲突的结论",
+        "确认文件所有权有没有被遵守",
+        "由主线程整合，只选一个最小可执行方案",
+        "合并后用 Review 看 diff 并运行验证命令"
+      ],
+      "notes": "如果两个 agent 结论相反，先整理冲突点，再决定下一步。"
+    },
+    {
+      "layout": "table",
+      "title": "常见失败模式与修正",
+      "headers": [
+        "失败模式",
+        "原因",
+        "修正"
+      ],
+      "rows": [
+        [
+          "多个 agent 改同一文件",
+          "所有权不清",
+          "明确文件范围"
+        ],
+        [
+          "主线程不知道进展",
+          "没有汇总点",
+          "要求阶段性汇报"
+        ],
+        [
+          "子任务太大",
+          "拆分不够",
+          "缩小到模块级"
+        ],
+        [
+          "agent 自己发散",
+          "缺少停止条件",
+          "写清边界和停下来的条件"
+        ],
+        [
+          "没有 Review",
+          "并行改动难合并",
+          "合并前统一 review"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "课堂工坊：从只读三路到分文件写入",
+      "steps": [
+        {
+          "title": "只读三路分析",
+          "desc": "frontend、backend、test 各自只读，只输出证据与风险"
+        },
+        {
+          "title": "分文件并行写入",
+          "desc": "三路各改自己的文件，需要跨边界先停下汇报"
+        },
+        {
+          "title": "只读 review agent 查风险",
+          "desc": "检查范围外改动、测试覆盖和是否触碰 secret"
+        },
+        {
+          "title": "主线程合并并运行测试",
+          "desc": "最后运行 npm test -- auth，再看 Review 面板 diff"
+        }
+      ],
+      "notes": "review 输出按严重度列出，主线程据此决定修复、撤销或保留。"
+    },
+    {
+      "layout": "bullets",
+      "title": "多 Agent V2 的官方口径",
+      "bullets": [
+        "CLI 0.145.0 起，多 Agent V2 已经稳定",
+        "可配置 subagent 模型、推理等级和并发上限",
+        "委派模式分三档：禁用、仅显式请求、主动",
+        "父拥有的 subagent 线程是只读的",
+        "agent 任务存储从 CSV 迁移到 SQLite"
+      ],
+      "notes": "演示时先讲单 agent 边界，再讲 V2 的可配置并发。"
+    },
+    {
+      "layout": "end",
+      "title": "先量边界，再谈并行",
+      "subtitle": "知道什么时候少用，才是 Subagents 真正成熟的标志"
+    }
+  ]
+}

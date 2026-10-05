@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/qa-claude.pdf",
+  "sourceSha256": "32cabf9f0fc1a08ed6c33dfe1cc3445c77b0fc5efcf34407d470b63d8972ce8b",
+  "dpi": 100,
+  "pageCount": 18,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/cov-b/page-0001.png",
+      "width": 1334,
+      "height": 750,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 57213
+    }
+  ],
+  "missingFonts": []
+}

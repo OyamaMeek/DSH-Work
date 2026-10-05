@@ -1,0 +1,222 @@
+{
+  "code": "CC-07",
+  "category": "claude-code",
+  "fileTitle": "Skills定制完整指南",
+  "deck": "Skills 技能包：把好经验沉淀成可复用的能力",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Skills 定制完整指南",
+      "subtitle": "把好判断沉淀下来，装成 AI 的能力包",
+      "kicker": "Vibe Coding 学习系列 · CC-07"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识 Skills",
+      "subtitle": "它是能力包，不是又一个命令"
+    },
+    {
+      "layout": "bullets",
+      "title": "Skills 是什么",
+      "bullets": [
+        "Claude Code 的能力包，封装领域知识和工具",
+        "类比：手机装 App，装完就多一项本事",
+        "预置领域知识，AI 直接变成该领域的专家",
+        "配置一次全员共享，输出质量更稳定",
+        "知识集中管理可做版本控制，不再散落聊天记录"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Skills 与 Commands 的区别",
+      "headers": [
+        "维度",
+        "Commands",
+        "Skills"
+      ],
+      "rows": [
+        [
+          "定位",
+          "触发器、入口点",
+          "能力包、知识库"
+        ],
+        [
+          "复杂度",
+          "单个 Markdown 文件",
+          "多文件目录结构"
+        ],
+        [
+          "触发方式",
+          "显式调用 /command",
+          "自动识别加显式调用"
+        ],
+        [
+          "工具集成",
+          "有限，写在 md 里",
+          "强大，可集成脚本"
+        ],
+        [
+          "适用场景",
+          "单一任务",
+          "复杂工作流"
+        ]
+      ],
+      "notes": "两者常配合：Command 是入口，Skill 提供能力。"
+    },
+    {
+      "layout": "cards",
+      "title": "渐进式披露的三层加载",
+      "cards": [
+        {
+          "title": "元数据常驻",
+          "desc": "name 和 description 始终在内存，用于判断激活"
+        },
+        {
+          "title": "指令按需加载",
+          "desc": "Markdown Body 只在 Skill 激活时才加载"
+        },
+        {
+          "title": "资源按需调用",
+          "desc": "scripts 和 templates 只在用时才读取"
+        }
+      ],
+      "notes": "类比微信：先看图标，点开看功能，用时才加载详情。"
+    },
+    {
+      "layout": "section",
+      "title": "二、5 分钟创建第一个 Skill",
+      "subtitle": "一个文件夹加一份 SKILL.md"
+    },
+    {
+      "layout": "steps",
+      "title": "创建代码注释 Skill 四步",
+      "steps": [
+        {
+          "title": "建文件夹",
+          "desc": "在 .claude/skills/ 下建 code-commenter 目录"
+        },
+        {
+          "title": "写 SKILL.md",
+          "desc": "YAML frontmatter 写 name 和 description"
+        },
+        {
+          "title": "补正文",
+          "desc": "Markdown Body 写角色、注释原则和输出格式"
+        },
+        {
+          "title": "测试触发",
+          "desc": "说「给这段代码添加注释」看是否自动激活"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "SKILL.md 的关键配置",
+      "bullets": [
+        "name 同时作为斜杠命令，小写并用连字符",
+        "description 决定何时自动激活，最多 1024 字符",
+        "context 设为 fork 时在独立子代理环境中运行",
+        "allowed-tools 限制可用工具，提高安全性",
+        "disable-model-invocation 设为 true 禁止自动激活"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、目录结构、热重载与排查",
+      "subtitle": "简单开始，按需长大"
+    },
+    {
+      "layout": "table",
+      "title": "标准目录结构",
+      "headers": [
+        "目录或文件",
+        "是否必需",
+        "用途"
+      ],
+      "rows": [
+        [
+          "SKILL.md",
+          "必需",
+          "元信息加详细指令"
+        ],
+        [
+          "scripts/",
+          "可选",
+          "可执行的工具脚本"
+        ],
+        [
+          "templates/",
+          "可选",
+          "输出内容的模板"
+        ],
+        [
+          "config/",
+          "可选",
+          "运行时配置参数"
+        ],
+        [
+          "data/",
+          "可选",
+          "静态数据文件"
+        ]
+      ],
+      "notes": "当前版本不再使用 skill.yaml 和 prompts/ 文件夹，内容统一到 SKILL.md。"
+    },
+    {
+      "layout": "cards",
+      "title": "三个核心特性",
+      "cards": [
+        {
+          "title": "Hot Reloading",
+          "desc": "修改 SKILL.md 后立即生效，不用重启"
+        },
+        {
+          "title": "Sandbox",
+          "desc": "OS 级隔离，限制文件写入和网络访问"
+        },
+        {
+          "title": "skillOverrides",
+          "desc": "off 隐藏，user-invocable-only 只留手动调用"
+        }
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "排查 Skill 未激活四步",
+      "steps": [
+        {
+          "title": "检查文件头",
+          "desc": "head -n 5 查看 YAML 是否被 --- 包裹"
+        },
+        {
+          "title": "检查 YAML 格式",
+          "desc": "用 yamllint 验证，冒号后面要留空格"
+        },
+        {
+          "title": "检查 description",
+          "desc": "写清触发场景，别只写「代码注释工具」"
+        },
+        {
+          "title": "检查路径与重载",
+          "desc": "确认 SKILL.md 存在，必要时 /compact 或重启"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "新手常见问题",
+      "bullets": [
+        "SKILL.md 是唯一必需文件，没有它无法识别",
+        "建议单个 SKILL.md 不超过 1000 行",
+        "scripts 主要支持 Python 和 Bash，推荐 Python",
+        "放进 ~/.claude/skills/ 就能跨项目使用",
+        "整个目录提交到 Git，就能共享给团队"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：把你最擅长的一件事写成 Skill",
+      "subtitle": "沉淀经验，才能反复省时间"
+    }
+  ]
+}

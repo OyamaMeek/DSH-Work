@@ -1,0 +1,182 @@
+{
+  "code": "OC-11",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw常见问题FAQ",
+  "deck": "OpenClaw 常见问题 FAQ：卡住了看这里",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-11",
+      "title": "OpenClaw 常见问题 FAQ：卡住了看这里",
+      "subtitle": "先能定位问题，比背答案更重要"
+    },
+    {
+      "layout": "section",
+      "title": "安装和配置问题",
+      "subtitle": "新手最常卡住的第一步"
+    },
+    {
+      "layout": "cards",
+      "title": "四个高频安装问题",
+      "cards": [
+        {
+          "title": "命令找不到",
+          "desc": "npm 全局 bin 没进 PATH，也可用 npx openclaw"
+        },
+        {
+          "title": "Node 版本不兼容",
+          "desc": "官方建议 Node.js 24.x，22.19+ 兼容，用 nvm 升级"
+        },
+        {
+          "title": "npm 权限错误",
+          "desc": "EACCES 时把全局目录改到 ~/.npm-global，别用 sudo"
+        },
+        {
+          "title": "中国网络很慢",
+          "desc": "换 registry.npmmirror.com 镜像，或改用 Docker"
+        }
+      ],
+      "notes": "当前稳定基线为 v2026.6.8，升级后先跑 openclaw doctor。"
+    },
+    {
+      "layout": "bullets",
+      "title": "配置与升级要点",
+      "bullets": [
+        "配置都在 ~/.openclaw/ 目录下",
+        "主配置是 openclaw.json，JSON5 格式",
+        "优先级：命令行 > 环境变量 > 配置文件",
+        "回滚：npm install -g openclaw@2026.3.28",
+        "升级后先跑 doctor 和 security audit"
+      ],
+      "notes": "Docker 部署要挂载数据卷，否则重建容器会丢配置。"
+    },
+    {
+      "layout": "section",
+      "title": "消息平台问题",
+      "subtitle": "连接正常但收不到消息怎么办"
+    },
+    {
+      "layout": "bullets",
+      "title": "消息平台高频问题",
+      "bullets": [
+        "WhatsApp 掉线：装成系统服务 openclaw daemon",
+        "Telegram 不响应：去 @BotFather 核对 Token",
+        "群组不回复：关闭 Bot 的隐私模式",
+        "Discord 字段是 token，不是 botToken",
+        "飞书收不到：检查事件订阅和回调地址"
+      ],
+      "notes": "一个 WhatsApp 账号只能同时连一个 Web 客户端。"
+    },
+    {
+      "layout": "section",
+      "title": "模型和 AI 问题",
+      "subtitle": "报错码对应不同的病因"
+    },
+    {
+      "layout": "table",
+      "title": "五种模型问题速查",
+      "headers": [
+        "现象",
+        "原因",
+        "解法"
+      ],
+      "rows": [
+        [
+          "401 Unauthorized",
+          "Key 无效或余额不足",
+          "检查环境变量并重设 Key"
+        ],
+        [
+          "429 Too Many Requests",
+          "超过 RPM/TPM 限流",
+          "配置模型故障转移"
+        ],
+        [
+          "模型回复很慢",
+          "大模型推理加网络延迟",
+          "换 gpt-5.2-mini 小模型"
+        ],
+        [
+          "context length exceeded",
+          "上下文窗口被占满",
+          "用 /compact 压缩上下文"
+        ],
+        [
+          "Ollama ECONNREFUSED",
+          "服务没启动或地址不对",
+          "ollama serve 后配 baseUrl"
+        ]
+      ],
+      "notes": "gpt-5.2-mini 速度是 gpt-5.2 的 3-5 倍，日常对话够用。"
+    },
+    {
+      "layout": "bullets",
+      "title": "控制 API 成本",
+      "bullets": [
+        "在提供商控制台设置月度预算上限",
+        "OpenClaw 本身没有内置预算控制",
+        "换 gpt-5.2-mini，价格约是 gpt-5.2 的 1/10",
+        "精简 MEMORY.md 和 SOUL.md 减少 Token",
+        "本地模型零成本，Ollama 拉 llama3.1:8b"
+      ],
+      "notes": "召回与压缩策略也会影响每次请求的 Token 数。"
+    },
+    {
+      "layout": "section",
+      "title": "运维、记忆与安全",
+      "subtitle": "上线之后才真正开始"
+    },
+    {
+      "layout": "bullets",
+      "title": "部署运维与记忆",
+      "bullets": [
+        "容器启动即退出：看日志查配置和端口",
+        "数据卷要挂载，否则重建容器会丢数据",
+        "记忆太大：MEMORY.md 建议 500 行以内",
+        "AI 不记得：开 memoryFlush 并主动让它记",
+        "多 Agent 默认不共享记忆，用共享目录"
+      ],
+      "notes": "会话日志在 ~/.openclaw/agents/main/sessions/*.jsonl。"
+    },
+    {
+      "layout": "cards",
+      "title": "安全隐私四问",
+      "cards": [
+        {
+          "title": "API Key 会不会泄露",
+          "desc": "存环境变量、权限设 600，别写进 git"
+        },
+        {
+          "title": "聊天记录在哪",
+          "desc": "存在本地 ~/.openclaw/，只发给你配置的模型商"
+        },
+        {
+          "title": "Gateway Token 要设吗",
+          "desc": "必须设，用 openssl rand -hex 32 生成"
+        },
+        {
+          "title": "怎么限制谁能对话",
+          "desc": "配对系统加 allowFrom 白名单"
+        }
+      ],
+      "notes": "正确的配置路径是 gateway.auth.token，不是 gateway.token。"
+    },
+    {
+      "layout": "bullets",
+      "title": "中国用户特别提示",
+      "bullets": [
+        "OpenAI、Anthropic、Google 在大陆不能直连",
+        "方案一：设置 HTTP_PROXY 和 HTTPS_PROXY",
+        "方案二：OpenRouter 一个 Key 用所有模型",
+        "方案三：用 DeepSeek、Moonshot 等国产模型",
+        "WhatsApp 需代理，钉钉和微信公众号不支持"
+      ],
+      "notes": "国产模型大多通过 OpenAI 兼容接口接入，飞书国内原生支持。"
+    },
+    {
+      "layout": "end",
+      "title": "FAQ 速查完成",
+      "subtitle": "遇到问题先看日志，再对照本页定位"
+    }
+  ]
+}

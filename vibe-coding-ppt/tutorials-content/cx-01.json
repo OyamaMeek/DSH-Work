@@ -1,0 +1,220 @@
+{
+  "code": "CX-01",
+  "category": "codex",
+  "fileTitle": "Codex-App安装与认证",
+  "deck": "Codex App 安装与认证：从下载到第一个线程",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex App 安装与认证：从下载到第一个线程",
+      "subtitle": "零基础 · Windows / macOS 装好、登上号、跑通第一个安全任务",
+      "kicker": "Vibe Coding 学习系列 · CX-01"
+    },
+    {
+      "layout": "section",
+      "title": "安装目标：先能安全打开本地项目",
+      "subtitle": "App 是主线，CLI / Web / Cloud 是辅助"
+    },
+    {
+      "layout": "bullets",
+      "title": "安装成功的五条标准",
+      "bullets": [
+        "桌面 Codex App 能正常打开",
+        "能用 ChatGPT / OpenAI 账号登录",
+        "能添加本地项目并创建线程",
+        "能让 Codex 只读分析项目",
+        "能看到 Review、diff 和 Settings"
+      ],
+      "notes": "安装成功的标准不是终端里有 codex 命令，而是 App 能用起来。"
+    },
+    {
+      "layout": "table",
+      "title": "系统准备：按平台走官方入口",
+      "headers": [
+        "平台",
+        "版本建议",
+        "安装来源"
+      ],
+      "rows": [
+        [
+          "Windows",
+          "Windows 11 是推荐基线",
+          "Microsoft Store 或 winget"
+        ],
+        [
+          "macOS",
+          "使用仍受 Apple 支持的版本",
+          "官方 Codex App 下载页"
+        ],
+        [
+          "Linux",
+          "桌面版暂未覆盖",
+          "先用 CLI / Web / Cloud"
+        ]
+      ],
+      "notes": "不要从不明网盘或第三方安装包安装。"
+    },
+    {
+      "layout": "steps",
+      "title": "Windows 安装四步",
+      "steps": [
+        {
+          "title": "从官方页面进 Store",
+          "desc": "打开官方 Windows 页，点 Codex app for Windows 链接"
+        },
+        {
+          "title": "在 Store 点获取安装",
+          "desc": "企业禁用 Store 时让管理员分发，或用 winget 安装"
+        },
+        {
+          "title": "开始菜单打开 Codex",
+          "desc": "首次启动按提示登录，优先用 ChatGPT 账号"
+        },
+        {
+          "title": "处理防火墙弹窗",
+          "desc": "一般只勾专用网络，公用网络不要选"
+        }
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "首次启动的三个关卡",
+      "cards": [
+        {
+          "title": "登录",
+          "desc": "优先 ChatGPT / OpenAI 账号；API Key 不是 App 登录方案"
+        },
+        {
+          "title": "权限提示",
+          "desc": "区分选目录、跑只读命令和写文件联网，后者看清再同意"
+        },
+        {
+          "title": "防火墙",
+          "desc": "本地服务通信时弹窗，只放行可信网络"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "排障总表：先定位症状，不要乱重装",
+      "headers": [
+        "症状",
+        "常见原因",
+        "第一反应"
+      ],
+      "rows": [
+        [
+          "App 装不上",
+          "Store、系统版本或企业策略",
+          "先确认来源和系统更新"
+        ],
+        [
+          "登录失败",
+          "浏览器登录态、网络、账号权限",
+          "换浏览器登录或重新授权"
+        ],
+        [
+          "Review 不可用",
+          "没有 Git 或项目不是 Git 仓库",
+          "安装 Git，确认 git status"
+        ],
+        [
+          "命令跑不动",
+          "PowerShell policy 或工具链缺失",
+          "先在终端跑版本命令"
+        ],
+        [
+          "macOS 打不开",
+          "Gatekeeper 或下载来源问题",
+          "从官方入口下载再按提示授权"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "第一次打开项目：四步不慌",
+      "steps": [
+        {
+          "title": "选一个普通 Git 仓库",
+          "desc": "不要一上来打开生产仓库，最好有 README"
+        },
+        {
+          "title": "添加本地项目目录",
+          "desc": "确认 App 能识别 Git 状态"
+        },
+        {
+          "title": "创建 Local thread",
+          "desc": "先发只读任务：总结技术栈、启动命令和测试命令"
+        },
+        {
+          "title": "再做一个小改动",
+          "desc": "只改一个错别字，看 diff 且不自动提交"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "第一个安全可写任务",
+      "bullets": [
+        "只改低风险文件，例如文档里的一个错别字",
+        "明确要求改完展示 diff，不要自动提交",
+        "确认改动只在预期文件里",
+        "确认 Review 面板能看到 diff",
+        "知道怎么撤销或继续修改"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "安装后检查清单",
+      "cards": [
+        {
+          "title": "账号与环境",
+          "desc": "已登录，防火墙和 macOS 权限按最小范围授权"
+        },
+        {
+          "title": "Git 与项目",
+          "desc": "App 能看到 Git 状态，能添加本地仓库"
+        },
+        {
+          "title": "线程与只读",
+          "desc": "能创建 Local thread 并总结项目，不改文件"
+        },
+        {
+          "title": "可写与 Review",
+          "desc": "小改动能在 Review 中看到 diff"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "CLI 只作为辅助",
+      "headers": [
+        "命令",
+        "用途"
+      ],
+      "rows": [
+        [
+          "codex --help",
+          "查看 CLI 帮助"
+        ],
+        [
+          "codex app",
+          "从 CLI 打开 App"
+        ],
+        [
+          "codex review",
+          "做代码审查"
+        ],
+        [
+          "codex exec \"summarize this repo\"",
+          "非交互执行任务"
+        ]
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "装好之后：先只读，再小改，最后 Review",
+      "subtitle": "下一篇：CX-02 Codex App 桌面工作流"
+    }
+  ]
+}

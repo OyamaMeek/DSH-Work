@@ -1,0 +1,216 @@
+{
+  "code": "CC-12",
+  "category": "claude-code",
+  "fileTitle": "Remote-Control完整指南",
+  "deck": "Claude Code Remote Control：手机、浏览器继续本地会话",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Remote Control 完整指南",
+      "subtitle": "让手机或浏览器成为本地会话的远程窗口",
+      "kicker": "Vibe Coding 学习系列 · CC-12"
+    },
+    {
+      "layout": "bullets",
+      "title": "先说结论",
+      "bullets": [
+        "不是把本地项目同步到云端",
+        "让 claude.ai/code 或手机 App 成为远程窗口",
+        "会话仍然在你自己的机器上运行",
+        "本地文件系统、MCP、配置仍然可用",
+        "手机、浏览器、终端可同时连同一会话"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "和 Claude Code on the Web 的区别",
+      "headers": [
+        "对比项",
+        "Remote Control",
+        "on the Web"
+      ],
+      "rows": [
+        [
+          "运行位置",
+          "你的本地机器",
+          "Anthropic 云端"
+        ],
+        [
+          "文件系统",
+          "本地真实项目",
+          "云端克隆或沙箱"
+        ],
+        [
+          "本地工具",
+          "可直接复用本地环境",
+          "取决于云端环境"
+        ],
+        [
+          "典型场景",
+          "本地做一半换设备继续",
+          "远程新开云端任务"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "使用前提",
+      "bullets": [
+        "需要 Claude Code v2.1.51 以上版本",
+        "必须使用 claude.ai 登录",
+        "API key 模式不能用，相关能力会被禁用",
+        "支持 Pro、Max、Team、Enterprise 订阅",
+        "Team 和 Enterprise 需管理员先启用"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "三种启动方式",
+      "steps": [
+        {
+          "title": "独立服务器",
+          "desc": "claude remote-control 进入 server mode"
+        },
+        {
+          "title": "交互加远控",
+          "desc": "claude --remote-control 或 claude --rc"
+        },
+        {
+          "title": "会话内临时开",
+          "desc": "在已运行会话里输入 /remote-control"
+        },
+        {
+          "title": "给会话命名",
+          "desc": "/remote-control Auth Fix Session"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "从别的设备连接",
+      "bullets": [
+        "直接打开终端里显示的 URL",
+        "扫描终端里显示的二维码",
+        "在 claude.ai/code 或手机 App 会话列表找到",
+        "会话标题优先取传入的名字",
+        "用 /rename 改成容易辨认的名字"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "并发模式选择",
+      "headers": [
+        "模式",
+        "隔离方式",
+        "适用场景"
+      ],
+      "rows": [
+        [
+          "same-dir",
+          "所有会话在同一目录工作",
+          "多设备继续同一任务"
+        ],
+        [
+          "worktree",
+          "每个会话独立 git worktree",
+          "并行任务，需要 git 仓库"
+        ],
+        [
+          "session",
+          "每个并发会话独立隔离",
+          "不在 git 仓库中的项目"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "远端可用与仅本地命令",
+      "bullets": [
+        "远端可用：/compact、/clear、/context",
+        "远端可用：/usage、/exit、/recap",
+        "仅本地：/mcp、/plugin、/resume",
+        "手机上不能装插件或恢复旧会话",
+        "日常上下文管理和监控可以远程完成"
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "安全边界",
+      "bullets": [
+        "远端只是入口，真正执行还在本地机器",
+        "所有流量走 HTTPS/TLS，经 Anthropic API 中转",
+        "你的机器不会打开任何入站端口",
+        "使用多个短期、独立过期的凭据",
+        "高风险任务不要顺手开 bypassPermissions"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "Team 和 Enterprise 排查顺序",
+      "cards": [
+        {
+          "title": "确认登录",
+          "desc": "先确认不是 API key 登录"
+        },
+        {
+          "title": "管理员开关",
+          "desc": "请管理员打开后台 Remote Control"
+        },
+        {
+          "title": "项目信任",
+          "desc": "确认当前项目已接受 workspace trust"
+        },
+        {
+          "title": "环境变量",
+          "desc": "检查禁用非必要流量的环境变量"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "版本增强与推送通知",
+      "bullets": [
+        "v2.1.92 起默认会话名带 hostname 前缀",
+        "v2.1.110 远端支持 /autocompact 等命令",
+        "v2.1.110 起可推送通知到手机",
+        "在 /config 启用 Push when Claude decides",
+        "网络中断超过约 10 分钟会超时断开"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见问题速答",
+      "headers": [
+        "问题",
+        "答案"
+      ],
+      "rows": [
+        [
+          "代码会上传到云端吗？",
+          "不会，会话仍在本机运行"
+        ],
+        [
+          "API key 登录能用吗？",
+          "不能，需要 claude.ai 登录"
+        ],
+        [
+          "已经开了会话能临时开吗？",
+          "可以，输入 /remote-control"
+        ],
+        [
+          "Ultraplan 模式下能用吗？",
+          "不能，Ultraplan 会断开 Remote Control"
+        ],
+        [
+          "能同时开多个会话吗？",
+          "server mode 可以，受 --capacity 限制"
+        ]
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "离开工位也能继续盯任务",
+      "subtitle": "先确认登录、权限和项目路径，再开始远控"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "libreoffice",
+  "source": "saved",
+  "inputPath": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/test-codex.pptx",
+  "sourceSha256": "28a9db9ccf4ceb5c44ef7efdd867c7808bd78a5f32492029caadf04e73c47d69",
+  "dpi": 120,
+  "pageCount": 18,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/test-ascii/page-0001.png",
+      "width": 1600,
+      "height": 901,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720.0666666666667
+      },
+      "byteLength": 7670
+    },
+    {
+      "index": 2,
+      "page": 3,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/test-ascii/page-0002.png",
+      "width": 1600,
+      "height": 901,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720.0666666666667
+      },
+      "byteLength": 7670
+    },
+    {
+      "index": 3,
+      "page": 5,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/test-ascii/page-0003.png",
+      "width": 1600,
+      "height": 901,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720.0666666666667
+      },
+      "byteLength": 7670
+    }
+  ],
+  "missingFonts": []
+}

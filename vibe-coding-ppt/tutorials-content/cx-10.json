@@ -1,0 +1,255 @@
+{
+  "code": "CX-10",
+  "category": "codex",
+  "fileTitle": "Codex-Review-GitHub-PR",
+  "deck": "Codex Review：从 App 改动到可合并的 PR",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Review：从 App 改动到可合并的 PR",
+      "subtitle": "零基础入门 · 看懂 diff、写清 PR 描述、守住合并关口",
+      "kicker": "Vibe Coding 学习系列 · CX-10"
+    },
+    {
+      "layout": "section",
+      "title": "目录：合并前必须有人看",
+      "subtitle": "Review 的本质 → 面板看什么 → PR 描述 → 常见风险"
+    },
+    {
+      "layout": "bullets",
+      "title": "Review 的底层逻辑",
+      "bullets": [
+        "Codex 改完代码，不等于你可以直接合并",
+        "Review 面板是 Git diff 工作台，不是成果展示页",
+        "它读的是 Git 仓库状态，可能包含你之前的改动",
+        "小修看 last turn，大合并看 branch，提交前看 staged",
+        "不要只用一个视角看 diff"
+      ],
+      "notes": "Review 里出现你自己改的文件很正常，因为它看的是 Git 状态。"
+    },
+    {
+      "layout": "cards",
+      "title": "三种 diff 视角和一个评论工具",
+      "cards": [
+        {
+          "title": "Uncommitted changes",
+          "desc": "本地还没提交前，看当前工作区所有改动"
+        },
+        {
+          "title": "Last turn changes",
+          "desc": "刚让 Codex 修完一轮，看这轮是否引入新问题"
+        },
+        {
+          "title": "All branch changes",
+          "desc": "PR 或分支合并前，看当前分支整体是否合理"
+        },
+        {
+          "title": "Inline comment",
+          "desc": "绑定具体 diff 行的反馈，比泛泛提示更准"
+        }
+      ],
+      "notes": "小修看 last turn，大合并看 branch，提交前同时看 staged 和 unstaged。"
+    },
+    {
+      "layout": "steps",
+      "title": "一个完整 App 改动流程",
+      "steps": [
+        {
+          "title": "本地修改",
+          "desc": "在 App thread 里限定文件范围后让 Codex 修改"
+        },
+        {
+          "title": "Review 面板检查",
+          "desc": "看文件列表、单文件 diff 和命令记录"
+        },
+        {
+          "title": "运行验证命令",
+          "desc": "运行相关测试和 lint，失败要解释清楚"
+        },
+        {
+          "title": "stage 到创建 PR",
+          "desc": "由你确认 stage、commit、push 和 create PR"
+        }
+      ],
+      "notes": "提交信息可以让 Codex 草拟，但执行提交要由你确认。"
+    },
+    {
+      "layout": "table",
+      "title": "Review 面板逐项看什么",
+      "headers": [
+        "区域",
+        "要看什么"
+      ],
+      "rows": [
+        [
+          "文件列表",
+          "是否出现范围外文件、生成物、锁文件"
+        ],
+        [
+          "单文件 diff",
+          "是否有无关重构、删除、格式化噪音"
+        ],
+        [
+          "命令记录",
+          "是否真的运行过验证命令，失败是否解释"
+        ],
+        [
+          "行内评论",
+          "能否针对具体行要求 Codex 修复"
+        ],
+        [
+          "Stage / Commit",
+          "是否由你确认提交范围和 message"
+        ],
+        [
+          "Push / PR",
+          "是否推到正确分支和远端"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "Review 的严重程度分级",
+      "headers": [
+        "级别",
+        "例子",
+        "处理"
+      ],
+      "rows": [
+        [
+          "P0 必修",
+          "泄露 secret、删库脚本、绕过权限",
+          "立即停止，人工处理"
+        ],
+        [
+          "P1 必修",
+          "测试失败、范围外核心文件",
+          "定点修复后重新 Review"
+        ],
+        [
+          "P2 建议修",
+          "命名不清、重复逻辑",
+          "看时间和风险决定"
+        ],
+        [
+          "P3 可后续",
+          "文案、格式、非阻塞优化",
+          "记录到后续任务"
+        ]
+      ],
+      "notes": "真正要拦的是 P0/P1，Codex 很容易为了修小建议扩大 diff。"
+    },
+    {
+      "layout": "bullets",
+      "title": "/review 与 GitHub Connector",
+      "bullets": [
+        "/review 可以审查当前改动",
+        "带重点描述更好，比如移动端布局和测试缺口",
+        "GitHub Connector 能读 issue、PR 和 CI 状态",
+        "看 PR 上下文通常要装 gh 并完成 gh auth login",
+        "授权前确认仓库范围、写权限和能否评论 PR"
+      ],
+      "notes": "如果 PR 评论不显示，先检查是否在 PR 分支、是否完成 gh auth login。"
+    },
+    {
+      "layout": "table",
+      "title": "PR 前核对清单",
+      "headers": [
+        "项",
+        "你应该看到"
+      ],
+      "rows": [
+        [
+          "分支",
+          "不是直接在 main 上提交"
+        ],
+        [
+          "Diff",
+          "没有范围外改动"
+        ],
+        [
+          "测试",
+          "至少运行相关测试或说明不能运行原因"
+        ],
+        [
+          "描述",
+          "Summary / Verification / Risk 写清楚"
+        ],
+        [
+          "Secret",
+          "没有 .env、token、账号信息"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "PR 描述不是营销文案",
+      "bullets": [
+        "Summary：具体改了什么，不写全面优化系统",
+        "Verification：真实运行的命令和结果",
+        "Risk：影响范围和未覆盖点",
+        "没跑过的检查不要写 passed",
+        "复杂改动必要时说明怎么撤"
+      ],
+      "notes": "一个诚实的 Verification 比漂亮的总结更重要。"
+    },
+    {
+      "layout": "table",
+      "title": "常见风险与防法",
+      "headers": [
+        "风险",
+        "防法"
+      ],
+      "rows": [
+        [
+          "Codex 顺手重构",
+          "任务里写清范围和排除项"
+        ],
+        [
+          "未运行测试",
+          "明确验证命令"
+        ],
+        [
+          "改了主分支",
+          "使用 worktree 或 feature branch"
+        ],
+        [
+          "PR 太大",
+          "拆任务"
+        ],
+        [
+          "CI 失败自动乱修",
+          "限定失败项和文件范围"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "课堂工坊：从一个小 bug 到 PR",
+      "steps": [
+        {
+          "title": "本地小修先 Review",
+          "desc": "限改两个文件，展示 diff 和命令结果，不提交"
+        },
+        {
+          "title": "处理 PR 评论",
+          "desc": "切到 PR 分支，引用具体评论，只处理那一条"
+        },
+        {
+          "title": "写 PR 描述但不发布",
+          "desc": "草拟 Summary、Verification、Risk，不创建 PR"
+        },
+        {
+          "title": "提交前做反向解释",
+          "desc": "让 Codex 解释每个文件为什么必须改"
+        }
+      ],
+      "notes": "如果它解释不清某个文件为什么改，通常是范围外改动或需要重审。"
+    },
+    {
+      "layout": "end",
+      "title": "能看懂 diff，才算真正掌握 App",
+      "subtitle": "Review 的目标是让下一次任务更好写、更好查、更好合并"
+    }
+  ]
+}

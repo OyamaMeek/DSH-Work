@@ -1,0 +1,179 @@
+{
+  "code": "CC-04",
+  "category": "claude-code",
+  "fileTitle": "MCP集成完整指南",
+  "deck": "MCP 集成：给 AI 装上一个 USB 接口",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "MCP 集成完整指南",
+      "subtitle": "让 AI 即插即用地连接外部工具",
+      "kicker": "Vibe Coding 学习系列 · CC-04"
+    },
+    {
+      "layout": "section",
+      "title": "一、5 分钟理解 MCP",
+      "subtitle": "先搞懂它解决什么问题"
+    },
+    {
+      "layout": "bullets",
+      "title": "MCP 是什么",
+      "bullets": [
+        "MCP 全称 Model Context Protocol，即模型上下文协议",
+        "类比 USB 接口标准：任何设备都能即插即用",
+        "一次开发，多处复用，不用为每个工具单独对接",
+        "MCP Server 是工具包，MCP Client 是电脑的 USB 口",
+        "2025 年 12 月捐赠给 Linux 基金会，成为行业标准"
+      ],
+      "notes": "没有 USB 标准时，每个品牌的键盘都要专用接口；有了标准就能通用。"
+    },
+    {
+      "layout": "cards",
+      "title": "MCP 的三大组件",
+      "cards": [
+        {
+          "title": "Tools",
+          "desc": "AI 可调用的工具函数，像工具箱里的锤子"
+        },
+        {
+          "title": "Resources",
+          "desc": "AI 可读取的数据资源，像参考书"
+        },
+        {
+          "title": "Prompts",
+          "desc": "预设模板，标准化交互，像填空表格"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "MCP 能帮你做什么",
+      "bullets": [
+        "文件系统：创建、读取、搜索文件",
+        "GitHub：建 Issue、管理 PR 和仓库",
+        "数据库：用 SQL 查询用户表记录数",
+        "查文档：通过 Context7 获取框架最新文档",
+        "搜网页：通过 Brave Search 搜索最新信息"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "二、5 分钟配置第一个服务器",
+      "subtitle": "从 Filesystem 开始，不需要 API Key"
+    },
+    {
+      "layout": "steps",
+      "title": "配置 Filesystem MCP 四步",
+      "steps": [
+        {
+          "title": "创建配置文件",
+          "desc": "在项目根目录新建 .mcp.json"
+        },
+        {
+          "title": "写配置内容",
+          "desc": "用 npx 启动 server-filesystem，允许访问当前目录"
+        },
+        {
+          "title": "验证并重启",
+          "desc": "确认 JSON 合法，重启后看到 ✓ filesystem"
+        },
+        {
+          "title": "测试调用",
+          "desc": "说「列出当前目录下的所有文件」看结果"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "配置字段说明",
+      "bullets": [
+        "command 是启动命令，例如 npx、node、python",
+        "args 是命令参数数组，必需字段",
+        "env 用来注入环境变量，例如 API Key",
+        "timeout 设置超时时间，单位毫秒",
+        "alwaysLoad 设为 true 可跳过工具懒加载"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、作用域、安全与排查",
+      "subtitle": "配置放哪里，比怎么配更重要"
+    },
+    {
+      "layout": "table",
+      "title": "三大作用域与优先级",
+      "headers": [
+        "作用域",
+        "存储位置",
+        "适用场景"
+      ],
+      "rows": [
+        [
+          "Local",
+          "~/.claude.json 项目条目",
+          "个人私有配置、含 API Key"
+        ],
+        [
+          "Project",
+          "项目根目录 .mcp.json",
+          "团队共享、可版本控制"
+        ],
+        [
+          "User",
+          "~/.claude.json 全局部分",
+          "个人常用工具"
+        ]
+      ],
+      "notes": "优先级为 Local > Project > User，Local 最高。"
+    },
+    {
+      "layout": "bullets",
+      "title": "API Key 安全管理五条",
+      "bullets": [
+        "用环境变量保存，不把 Key 写进代码",
+        "配置里用 ${VAR} 语法引用变量",
+        ".mcp.json 只放引用，不放真实值",
+        "敏感配置放 Local 作用域，不会提交 Git",
+        "Key 泄露立刻删除、重建并检查用量"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "排查 MCP 连不上四步",
+      "steps": [
+        {
+          "title": "检查配置文件",
+          "desc": "用 jq 或 jsonlint 确认 JSON 合法"
+        },
+        {
+          "title": "检查服务器状态",
+          "desc": "手动运行 npx 命令看具体报错"
+        },
+        {
+          "title": "检查环境变量",
+          "desc": "确认 API Key 已设置且非空"
+        },
+        {
+          "title": "检查网络与版本",
+          "desc": "配镜像或代理，Node.js 需要 v18+"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "常用服务器速查",
+      "bullets": [
+        "filesystem：文件读写，不需要 API Key",
+        "github：仓库管理，需要 Personal Access Token",
+        "sqlite：本地数据库，不需要 API Key",
+        "context7：技术文档，免费额度每月 1000 次",
+        "brave-search：网页搜索，免费层每月 2000 次"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：先配 filesystem，让 AI 摸到你的文件",
+      "subtitle": "每连一个工具，AI 就多一双手"
+    }
+  ]
+}

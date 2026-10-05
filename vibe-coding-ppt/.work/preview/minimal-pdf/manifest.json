@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/minimal.pdf",
+  "sourceSha256": "dc4cb76ce7a5767d5dbb7969643c67041caba2c20d8297c7eb6b452e9ce11d11",
+  "dpi": 120,
+  "pageCount": 1,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/minimal-pdf/page-0001.png",
+      "width": 1600,
+      "height": 900,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 18129
+    }
+  ],
+  "missingFonts": []
+}

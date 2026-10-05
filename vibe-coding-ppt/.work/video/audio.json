@@ -1,0 +1,272 @@
+[
+ {
+  "index": 0,
+  "file": "audio/000.aiff",
+  "duration": 21.224
+ },
+ {
+  "index": 1,
+  "file": "audio/001.aiff",
+  "duration": 22.042
+ },
+ {
+  "index": 2,
+  "file": "audio/002.aiff",
+  "duration": 21.661
+ },
+ {
+  "index": 3,
+  "file": "audio/003.aiff",
+  "duration": 22.462
+ },
+ {
+  "index": 4,
+  "file": "audio/004.aiff",
+  "duration": 21.996
+ },
+ {
+  "index": 5,
+  "file": "audio/005.aiff",
+  "duration": 22.761
+ },
+ {
+  "index": 6,
+  "file": "audio/006.aiff",
+  "duration": 26.292
+ },
+ {
+  "index": 7,
+  "file": "audio/007.aiff",
+  "duration": 20.722
+ },
+ {
+  "index": 8,
+  "file": "audio/008.aiff",
+  "duration": 24.27
+ },
+ {
+  "index": 9,
+  "file": "audio/009.aiff",
+  "duration": 19.582
+ },
+ {
+  "index": 10,
+  "file": "audio/010.aiff",
+  "duration": 21.426
+ },
+ {
+  "index": 11,
+  "file": "audio/011.aiff",
+  "duration": 22.645
+ },
+ {
+  "index": 12,
+  "file": "audio/012.aiff",
+  "duration": 21.022
+ },
+ {
+  "index": 13,
+  "file": "audio/013.aiff",
+  "duration": 21.231
+ },
+ {
+  "index": 14,
+  "file": "audio/014.aiff",
+  "duration": 19.459
+ },
+ {
+  "index": 15,
+  "file": "audio/015.aiff",
+  "duration": 23.451
+ },
+ {
+  "index": 16,
+  "file": "audio/016.aiff",
+  "duration": 20.934
+ },
+ {
+  "index": 17,
+  "file": "audio/017.aiff",
+  "duration": 25.012
+ },
+ {
+  "index": 18,
+  "file": "audio/018.aiff",
+  "duration": 23.272
+ },
+ {
+  "index": 19,
+  "file": "audio/019.aiff",
+  "duration": 20.558
+ },
+ {
+  "index": 20,
+  "file": "audio/020.aiff",
+  "duration": 24.944
+ },
+ {
+  "index": 21,
+  "file": "audio/021.aiff",
+  "duration": 24.213
+ },
+ {
+  "index": 22,
+  "file": "audio/022.aiff",
+  "duration": 20.544
+ },
+ {
+  "index": 23,
+  "file": "audio/023.aiff",
+  "duration": 20.753
+ },
+ {
+  "index": 24,
+  "file": "audio/024.aiff",
+  "duration": 23.214
+ },
+ {
+  "index": 25,
+  "file": "audio/025.aiff",
+  "duration": 20.488
+ },
+ {
+  "index": 26,
+  "file": "audio/026.aiff",
+  "duration": 25.384
+ },
+ {
+  "index": 27,
+  "file": "audio/027.aiff",
+  "duration": 19.846
+ },
+ {
+  "index": 28,
+  "file": "audio/028.aiff",
+  "duration": 22.007
+ },
+ {
+  "index": 29,
+  "file": "audio/029.aiff",
+  "duration": 25.652
+ },
+ {
+  "index": 30,
+  "file": "audio/030.aiff",
+  "duration": 23.932
+ },
+ {
+  "index": 31,
+  "file": "audio/031.aiff",
+  "duration": 22.434
+ },
+ {
+  "index": 32,
+  "file": "audio/032.aiff",
+  "duration": 24.61
+ },
+ {
+  "index": 33,
+  "file": "audio/033.aiff",
+  "duration": 22.253
+ },
+ {
+  "index": 34,
+  "file": "audio/034.aiff",
+  "duration": 27.613
+ },
+ {
+  "index": 35,
+  "file": "audio/035.aiff",
+  "duration": 25.28
+ },
+ {
+  "index": 36,
+  "file": "audio/036.aiff",
+  "duration": 25.5
+ },
+ {
+  "index": 37,
+  "file": "audio/037.aiff",
+  "duration": 25.958
+ },
+ {
+  "index": 38,
+  "file": "audio/038.aiff",
+  "duration": 24.269
+ },
+ {
+  "index": 39,
+  "file": "audio/039.aiff",
+  "duration": 24.246
+ },
+ {
+  "index": 40,
+  "file": "audio/040.aiff",
+  "duration": 26.374
+ },
+ {
+  "index": 41,
+  "file": "audio/041.aiff",
+  "duration": 28.114
+ },
+ {
+  "index": 42,
+  "file": "audio/042.aiff",
+  "duration": 23.773
+ },
+ {
+  "index": 43,
+  "file": "audio/043.aiff",
+  "duration": 24.831
+ },
+ {
+  "index": 44,
+  "file": "audio/044.aiff",
+  "duration": 22.38
+ },
+ {
+  "index": 45,
+  "file": "audio/045.aiff",
+  "duration": 22.615
+ },
+ {
+  "index": 46,
+  "file": "audio/046.aiff",
+  "duration": 23.401
+ },
+ {
+  "index": 47,
+  "file": "audio/047.aiff",
+  "duration": 27.383
+ },
+ {
+  "index": 48,
+  "file": "audio/048.aiff",
+  "duration": 25.234
+ },
+ {
+  "index": 49,
+  "file": "audio/049.aiff",
+  "duration": 18.282
+ },
+ {
+  "index": 50,
+  "file": "audio/050.aiff",
+  "duration": 22.925
+ },
+ {
+  "index": 51,
+  "file": "audio/051.aiff",
+  "duration": 28.309
+ },
+ {
+  "index": 52,
+  "file": "audio/052.aiff",
+  "duration": 25.271
+ },
+ {
+  "index": 53,
+  "file": "audio/053.aiff",
+  "duration": 18.572
+ }
+]

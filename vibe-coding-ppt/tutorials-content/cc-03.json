@@ -1,0 +1,215 @@
+{
+  "code": "CC-03",
+  "category": "claude-code",
+  "fileTitle": "Commands系统完整指南",
+  "deck": "Commands 命令系统：把重复提示词变成一键工作流",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Commands 系统完整指南",
+      "subtitle": "一个 Markdown 文件，就是一条自定义命令",
+      "kicker": "Vibe Coding 学习系列 · CC-03"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识 Slash 命令",
+      "subtitle": "命令的本质是提前写好的提示词"
+    },
+    {
+      "layout": "bullets",
+      "title": "Slash 命令是什么",
+      "bullets": [
+        "以 / 开头的快捷指令，输入即触发预设操作",
+        "自定义命令就是 .claude/commands/ 下的 Markdown 文件",
+        "命令名等于文件名，去掉 .md 后缀",
+        "命令内容是提示词，$ARGUMENTS 接收你输入的参数",
+        "类比：外卖里的常用订单，一键下单不用重填"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "命令的几大来源",
+      "headers": [
+        "类型",
+        "来源",
+        "存放位置"
+      ],
+      "rows": [
+        [
+          "内置命令",
+          "Claude Code 官方",
+          "程序内部，不可修改"
+        ],
+        [
+          "项目级自定义命令",
+          "你自己创建",
+          ".claude/commands/"
+        ],
+        [
+          "用户级兼容命令",
+          "你自己创建（全局）",
+          "~/.claude/commands/"
+        ],
+        [
+          "Skills 工作流",
+          "你自己创建",
+          ".claude/skills/"
+        ]
+      ],
+      "notes": "官方现在更推荐长期工作流用 Skills，轻量包装仍可用 commands。"
+    },
+    {
+      "layout": "section",
+      "title": "二、5 分钟创建第一个命令",
+      "subtitle": "用一个问候命令跑通全流程"
+    },
+    {
+      "layout": "steps",
+      "title": "创建 /hello 命令四步",
+      "steps": [
+        {
+          "title": "建目录",
+          "desc": "在项目里创建 .claude/commands/ 目录"
+        },
+        {
+          "title": "写文件",
+          "desc": "新建 hello.md，正文里写入 $ARGUMENTS"
+        },
+        {
+          "title": "启动测试",
+          "desc": "输入 claude，再输入 /hello 张三"
+        },
+        {
+          "title": "验证默认值",
+          "desc": "不带参数时用「朋友」作为默认称呼"
+        }
+      ],
+      "notes": "新手可以直接在对话框里说人话，让 Claude 帮你创建文件。"
+    },
+    {
+      "layout": "bullets",
+      "title": "命令文件的两段结构",
+      "bullets": [
+        "上半段是 frontmatter：YAML 配置，用 --- 包围",
+        "下半段是 Markdown 正文：真正执行的任务指令",
+        "description 显示在命令列表和 Tab 补全里",
+        "argument-hint 提示参数该怎么写",
+        "allowed-tools 限制命令能调用哪些工具"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "frontmatter 常用字段",
+      "headers": [
+        "字段",
+        "作用"
+      ],
+      "rows": [
+        [
+          "description",
+          "一句话描述，显示在 /help 中"
+        ],
+        [
+          "argument-hint",
+          "参数占位提示，例如 <主题>"
+        ],
+        [
+          "allowed-tools",
+          "限制可用工具，提高安全性"
+        ],
+        [
+          "model",
+          "指定执行命令时使用的模型"
+        ],
+        [
+          "disable-model-invocation",
+          "只做文本替换，不调用模型"
+        ]
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、作用域、命名空间与进阶",
+      "subtitle": "从一条命令到一套工作流"
+    },
+    {
+      "layout": "table",
+      "title": "两种作用域与优先级",
+      "headers": [
+        "作用域",
+        "存放位置",
+        "生效范围"
+      ],
+      "rows": [
+        [
+          "项目级",
+          ".claude/commands/",
+          "仅当前项目，适合团队共享"
+        ],
+        [
+          "用户级",
+          "~/.claude/commands/",
+          "所有项目，适合个人通用"
+        ]
+      ],
+      "notes": "同名时项目级优先；/clear、/help 等核心命令受保护，自定义命令无法覆盖。"
+    },
+    {
+      "layout": "cards",
+      "title": "命名空间、组合与模块化",
+      "cards": [
+        {
+          "title": "命名空间",
+          "desc": "放进子目录，用 /dev:code-review 调用"
+        },
+        {
+          "title": "命令组合",
+          "desc": "工作流里依次调用 /hotspot、/write"
+        },
+        {
+          "title": "模块化",
+          "desc": "通用逻辑抽成模块文件，多处复用"
+        }
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "排查命令不生效四步",
+      "steps": [
+        {
+          "title": "确认文件存在",
+          "desc": "ls .claude/commands/my-command.md 看是否在"
+        },
+        {
+          "title": "检查文件名大小写",
+          "desc": "命令名等于文件名，且区分大小写"
+        },
+        {
+          "title": "检查目录位置",
+          "desc": "项目级和用户级两个路径别放错"
+        },
+        {
+          "title": "重启 Claude Code",
+          "desc": "exit 退出后重新输入 claude 再试"
+        }
+      ],
+      "notes": "frontmatter 的 YAML 语法错误也会让命令无法解析。"
+    },
+    {
+      "layout": "bullets",
+      "title": "内置命令高频速查",
+      "bullets": [
+        "/clear 清空对话，/compact 压缩省 Token",
+        "/resume 恢复会话，/rewind 回退检查点",
+        "/context 看用量，/model 切换模型",
+        "/doctor 系统体检，/status 看完整状态",
+        "/skills 看技能，/plugin 管理插件"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：把最常重复的那段话写成命令",
+      "subtitle": "一次配置，永久复用"
+    }
+  ]
+}

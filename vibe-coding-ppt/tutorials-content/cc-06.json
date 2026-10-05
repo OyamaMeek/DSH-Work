@@ -1,0 +1,209 @@
+{
+  "code": "CC-06",
+  "category": "claude-code",
+  "fileTitle": "Subagent子代理完整指南",
+  "deck": "Subagent 子代理：把大任务分给多个 AI 分身",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Subagent 子代理完整指南",
+      "subtitle": "先问清边界，再多开一个分身",
+      "kicker": "Vibe Coding 学习系列 · CC-06"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识子代理",
+      "subtitle": "它是分工工具，不是神奇按钮"
+    },
+    {
+      "layout": "bullets",
+      "title": "Subagent 是什么",
+      "bullets": [
+        "Claude Code 通过 Agent 工具启动的专业化 AI 代理",
+        "每个子代理拥有独立的上下文窗口",
+        "类比：把大任务分给项目组，各干一块再汇总",
+        "旧资料把 Agent 工具写作 Task，本质相同",
+        "最适合边界清晰、可独立完成的任务"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "官方三个入口",
+      "cards": [
+        {
+          "title": "Agent 工具",
+          "desc": "把一个子任务委派给独立上下文窗口"
+        },
+        {
+          "title": ".claude/agents/",
+          "desc": "项目级子代理定义，仅当前仓库可用"
+        },
+        {
+          "title": "~/.claude/agents/",
+          "desc": "用户级定义，跨项目复用"
+        }
+      ],
+      "notes": "用 /agents 查看已启用的子代理，项目级定义优先于用户级定义。"
+    },
+    {
+      "layout": "bullets",
+      "title": "官方最小示例与运行口径",
+      "bullets": [
+        "请开一个 reviewer 子代理，检查回归风险和缺失测试",
+        "并行开两个子代理，分别查后端接口和前端样式",
+        "v2.1.198 起子代理默认在后台运行",
+        "v2.1.219 起嵌套深度默认提升到 3 层",
+        "每会话子代理上限 200，并发默认 20"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "二、社区代理资源",
+      "subtitle": "缺能力再补能力，别当官方菜单"
+    },
+    {
+      "layout": "bullets",
+      "title": "VoltAgent 社区代理包",
+      "bullets": [
+        "VoltAgent 是社区维护的开源代理集合，不是官方内置",
+        "方法一：克隆仓库后运行 install-agents.sh",
+        "方法二：下载脚本后执行，适合快速安装",
+        "方法三：手动把 .md 代理文件放进 agents 目录",
+        "安装后用 /agents 查看，按需补充能力"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "十类社区代理概览",
+      "headers": [
+        "分类",
+        "代表代理",
+        "说明"
+      ],
+      "rows": [
+        [
+          "核心开发",
+          "backend-developer",
+          "可扩展 API 的服务器端专家"
+        ],
+        [
+          "语言专家",
+          "python-pro",
+          "Python 生态系统大师"
+        ],
+        [
+          "基础设施",
+          "devops-engineer",
+          "CI/CD 和自动化专家"
+        ],
+        [
+          "质量与安全",
+          "code-reviewer",
+          "代码质量守护者"
+        ],
+        [
+          "数据与 AI",
+          "llm-architect",
+          "大型语言模型架构师"
+        ]
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、Agent Teams 与进阶配置",
+      "subtitle": "从一对一委派到团队协作"
+    },
+    {
+      "layout": "cards",
+      "title": "Agent Teams 四个概念",
+      "cards": [
+        {
+          "title": "Team Lead",
+          "desc": "团队领导代理，负责分配任务和协调进度"
+        },
+        {
+          "title": "Teammate",
+          "desc": "团队成员代理，执行具体任务并汇报"
+        },
+        {
+          "title": "TaskList",
+          "desc": "共享任务列表，所有成员可见进度和状态"
+        },
+        {
+          "title": "SendMessage",
+          "desc": "代理间通信机制，支持直接消息和广播"
+        }
+      ],
+      "notes": "Agent Teams 是实验性功能，需设置 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1。"
+    },
+    {
+      "layout": "table",
+      "title": "普通 Subagent 与 Agent Teams 的区别",
+      "headers": [
+        "特性",
+        "普通 Subagent",
+        "Agent Teams"
+      ],
+      "rows": [
+        [
+          "协作模式",
+          "一对一委派",
+          "多对多团队协作"
+        ],
+        [
+          "任务管理",
+          "各自独立，互不感知",
+          "共享任务列表，实时同步"
+        ],
+        [
+          "通信方式",
+          "只把结果返回主代理",
+          "成员之间可以互相通信"
+        ],
+        [
+          "适用场景",
+          "独立子任务",
+          "复杂项目分工"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "Token 与安全提醒",
+      "bullets": [
+        "多代理并行调用的 Token 消耗量巨大",
+        "每启动一个子代理都占用独立上下文窗口",
+        "按需调用，不要一次性启动太多代理",
+        "简单独立任务用普通 Subagent 更轻量",
+        "复杂协作项目再考虑 Agent Teams"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "开始用子代理四步",
+      "steps": [
+        {
+          "title": "说清边界",
+          "desc": "用自然语言描述任务范围和交付物"
+        },
+        {
+          "title": "选择入口",
+          "desc": "用 Agent 工具委派，或先把 .md 放进 agents 目录"
+        },
+        {
+          "title": "查看状态",
+          "desc": "在 Claude Code 里输入 /agents 检查启用情况"
+        },
+        {
+          "title": "确认结果",
+          "desc": "子代理只回传结果，主会话负责整合"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：先委派一个 reviewer 试试水",
+      "subtitle": "边界清楚，分身才好用"
+    }
+  ]
+}

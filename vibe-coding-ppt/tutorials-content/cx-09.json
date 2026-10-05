@@ -1,0 +1,259 @@
+{
+  "code": "CX-09",
+  "category": "codex",
+  "fileTitle": "Codex-Automations后台任务",
+  "deck": "Codex Automations：让 Codex 按时间醒来的后台同事",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Automations：让 Codex 按时间醒来的后台同事",
+      "subtitle": "零基础入门 · 从只读巡检到小范围修复",
+      "kicker": "Vibe Coding 学习系列 · CX-09"
+    },
+    {
+      "layout": "section",
+      "title": "目录：先只读，再放开写入",
+      "subtitle": "是什么 → 什么时候跑 → 权限与失败 → 运营与分级"
+    },
+    {
+      "layout": "bullets",
+      "title": "Automations 是什么",
+      "bullets": [
+        "让 Codex 在后台或按计划执行重复任务",
+        "项目级 Automation 依赖本机 App 环境",
+        "运行时机器要开机、App 要在运行、目录要存在",
+        "background worktree 能隔离后台改动",
+        "一次性问题和目标不清的大改不适合"
+      ],
+      "notes": "Automation 管什么时候醒来，Skill 管醒来后怎么做，Triage 管结果在哪里看。"
+    },
+    {
+      "layout": "cards",
+      "title": "四个先搞懂的词",
+      "cards": [
+        {
+          "title": "Automation",
+          "desc": "后台或周期运行的 Codex 任务，不是一次性 prompt"
+        },
+        {
+          "title": "Thread automation",
+          "desc": "绑定当前线程定期唤醒，适合持续追踪同一件事"
+        },
+        {
+          "title": "Triage",
+          "desc": "自动化结果 inbox，有发现才进入，没发现可能自动归档"
+        },
+        {
+          "title": "Skill-driven",
+          "desc": "Automation 负责时间，Skill 负责做法，团队最推荐"
+        }
+      ],
+      "notes": "Rules 和 sandbox 管能做多大动作，Triage 管结果在哪里看。"
+    },
+    {
+      "layout": "table",
+      "title": "Standalone 和 Thread 怎么选",
+      "headers": [
+        "需求",
+        "推荐",
+        "原因"
+      ],
+      "rows": [
+        [
+          "每天检查项目测试",
+          "Standalone",
+          "每次运行相互独立"
+        ],
+        [
+          "每周总结多项目文档漂移",
+          "Standalone",
+          "可跨项目，报告独立"
+        ],
+        [
+          "30 分钟后看部署是否完成",
+          "Thread automation",
+          "需要保留当前线程上下文"
+        ],
+        [
+          "持续跟进一个 PR review loop",
+          "Thread automation",
+          "评论、修复都在同一线程"
+        ],
+        [
+          "每次都要从干净 prompt 开始",
+          "Standalone",
+          "上下文更可控"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "后台 prompt 要更耐久",
+      "bullets": [
+        "频率：什么时候运行",
+        "范围：在哪个项目、哪些目录",
+        "动作：每次醒来具体做什么",
+        "权限：能否写文件、联网、评论、创建 PR",
+        "输出与停止：报告去哪，何时不再重复"
+      ],
+      "notes": "后台运行时 prompt 含糊，它会反复失败或产生你没看见的副作用。"
+    },
+    {
+      "layout": "table",
+      "title": "三类任务与权限建议",
+      "headers": [
+        "类型",
+        "示例",
+        "权限建议"
+      ],
+      "rows": [
+        [
+          "摘要",
+          "每周总结 open issues",
+          "只读"
+        ],
+        [
+          "检查",
+          "每天运行测试或 lint",
+          "只读或最小写入"
+        ],
+        [
+          "修复",
+          "自动修小问题并提交 PR",
+          "必须明确范围和 Review"
+        ]
+      ],
+      "notes": "学习阶段优先只读；Automation 的价值是稳定报告，不是替你做高风险决策。"
+    },
+    {
+      "layout": "steps",
+      "title": "创建后先核对四件事",
+      "steps": [
+        {
+          "title": "确认名称和状态",
+          "desc": "面板里能看到 automation 名称和状态"
+        },
+        {
+          "title": "核对时间和目录",
+          "desc": "运行时间符合你的时区，目录是目标项目"
+        },
+        {
+          "title": "确认权限范围",
+          "desc": "是否只读，写入范围是否受限"
+        },
+        {
+          "title": "找到暂停入口",
+          "desc": "确认能暂停、删除或修改这条自动化"
+        }
+      ],
+      "notes": "创建后不要立刻信任它，第一次运行要先看 Triage 或对应线程。"
+    },
+    {
+      "layout": "table",
+      "title": "频率设计：别制造噪音",
+      "headers": [
+        "任务",
+        "推荐频率",
+        "原因"
+      ],
+      "rows": [
+        [
+          "测试守护",
+          "每天一次或工作日前一次",
+          "太频繁会被失败噪音淹没"
+        ],
+        [
+          "PR 状态跟进",
+          "15-60 分钟，带停止条件",
+          "等 CI 或 review 时有价值"
+        ],
+        [
+          "依赖摘要",
+          "每周一次",
+          "每天看依赖容易疲劳"
+        ],
+        [
+          "文档漂移",
+          "每周或每次 release 前",
+          "文档变化不是秒级问题"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "安全基线与失败收敛",
+      "bullets": [
+        "学习阶段只读优先，先报告再决定是否写入",
+        "不读取 .env，不自动推送主分支，不自动删除",
+        "第一次失败不要马上放大权限",
+        "失败超过 2 次就停止并汇报，不要无限重试",
+        "报告要给出命令、错误摘要和相关文件"
+      ],
+      "notes": "先判断是环境问题、任务描述不清，还是权限不足，再决定下一步。"
+    },
+    {
+      "layout": "table",
+      "title": "自动化分级：学习阶段停在 L1-L2",
+      "headers": [
+        "等级",
+        "能做什么",
+        "例子"
+      ],
+      "rows": [
+        [
+          "L1 只读报告",
+          "不改文件、不外部写",
+          "每日测试失败摘要"
+        ],
+        [
+          "L2 小范围本地修复",
+          "只改指定 docs 或 tests，等待 Review",
+          "修 markdown 内部链接"
+        ],
+        [
+          "L3 创建 PR",
+          "在 worktree 或分支提交建议 PR",
+          "依赖小版本更新"
+        ],
+        [
+          "L4 外部系统动作",
+          "评论、发消息、更新 issue",
+          "需要明确 scope 和审计"
+        ],
+        [
+          "L5 高风险自动化",
+          "部署、合并、生产写入",
+          "默认不建议由 App 做"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "课堂工坊：从只读到小范围修复",
+      "steps": [
+        {
+          "title": "每日测试守护",
+          "desc": "每天早上 9 点运行 npm test，只报告不修文件"
+        },
+        {
+          "title": "文档漂移检查",
+          "desc": "每周一检查 README、AGENTS.md 与 package.json 是否一致"
+        },
+        {
+          "title": "小范围自动修复",
+          "desc": "只改 docs 下 markdown 链接，展示 diff 等 Review"
+        },
+        {
+          "title": "第一周盯 Triage",
+          "desc": "看是否重复报告，是否需要改频率和停止条件"
+        }
+      ],
+      "notes": "没人维护的后台任务会慢慢变成噪音或风险。"
+    },
+    {
+      "layout": "end",
+      "title": "后台同事也需要有人接住",
+      "subtitle": "先只读、再小范围写入，最后才考虑自动创建 PR"
+    }
+  ]
+}

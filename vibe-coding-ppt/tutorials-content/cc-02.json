@@ -1,0 +1,204 @@
+{
+  "code": "CC-02",
+  "category": "claude-code",
+  "fileTitle": "基础使用完整指南",
+  "deck": "Claude Code 基础使用：从第一句话到日常高手",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Claude Code 基础使用完整指南",
+      "subtitle": "先写第一份 CLAUDE.md，再谈命令",
+      "kicker": "Vibe Coding 学习系列 · CC-02"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识它，十分钟上手",
+      "subtitle": "三种模式，先会一种就够用"
+    },
+    {
+      "layout": "bullets",
+      "title": "Claude Code 是什么",
+      "bullets": [
+        "Anthropic 开发的命令行 AI 编程助手",
+        "在终端里直接和 AI 对话写代码",
+        "类比：请了一位厨师助手，报菜名就帮你做",
+        "传统编程自己从买菜做到炒菜，它帮你分担",
+        "本课基线版本 Claude Code v2.1.181"
+      ],
+      "notes": "术语表把 CLI 类比成发短信指挥别人干活，适合新手记忆。"
+    },
+    {
+      "layout": "table",
+      "title": "三种使用模式",
+      "headers": [
+        "模式",
+        "启动方式",
+        "特点",
+        "适合场景"
+      ],
+      "rows": [
+        [
+          "交互模式",
+          "claude",
+          "连续对话，保持上下文",
+          "日常开发、复杂任务"
+        ],
+        [
+          "单次执行",
+          "claude \"prompt\"",
+          "执行一次就退出",
+          "脚本自动化、快速查询"
+        ],
+        [
+          "打印模式",
+          "claude -p \"prompt\"",
+          "只输出纯文本结果",
+          "管道处理、数据转换"
+        ]
+      ],
+      "notes": "生活类比：交互像打电话，单次像发短信，打印像只要答案不要废话。"
+    },
+    {
+      "layout": "steps",
+      "title": "15 分钟写出第一份 CLAUDE.md",
+      "steps": [
+        {
+          "title": "进入项目并启动",
+          "desc": "cd 到项目目录后输入 claude"
+        },
+        {
+          "title": "只读分析项目",
+          "desc": "让 Claude 说出用途、常用命令、重要目录，不改文件"
+        },
+        {
+          "title": "创建最小 CLAUDE.md",
+          "desc": "写项目背景、常用命令、安全边界、验收标准"
+        },
+        {
+          "title": "验证是否生效",
+          "desc": "新会话让它按 CLAUDE.md 总结工作规则"
+        }
+      ],
+      "notes": "CLAUDE.md 是项目的说明书，告诉 AI 这个项目怎么工作、哪些地方不要乱动。"
+    },
+    {
+      "layout": "bullets",
+      "title": "CLAUDE.md 里的四条工作规则",
+      "bullets": [
+        "写代码前先想清楚：假设写明白，不确定就问",
+        "简单优先：只写解决当前问题的最少代码",
+        "外科手术式修改：每行改动都能追到这次请求",
+        "目标驱动执行：先写测试，再改到测试通过",
+        "安全边界：不碰 .env、密钥和锁文件"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "二、交互模式与常用命令",
+      "subtitle": "命令不必背，先认识高频的几个"
+    },
+    {
+      "layout": "bullets",
+      "title": "最常用的 Slash 命令",
+      "bullets": [
+        "/help 看帮助，/exit 退出，/clear 清空对话",
+        "/compact 压缩对话省 Token，可带保留指令",
+        "/context 看 Token 用量，/status 看当前状态",
+        "/resume 恢复会话，/export 导出对话",
+        "/init 生成 CLAUDE.md，/memory 编辑项目规则"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "Rewind：给代码和对话存档",
+      "cards": [
+        {
+          "title": "仅恢复对话",
+          "desc": "保留代码改动，重置 AI 上下文"
+        },
+        {
+          "title": "仅恢复代码",
+          "desc": "保留对话历史，回退文件修改"
+        },
+        {
+          "title": "同时恢复",
+          "desc": "代码和对话都回到之前状态"
+        }
+      ],
+      "notes": "双击 Escape 或输入 /rewind 打开菜单；只追踪 Write、Edit 文件工具，不追踪 bash 命令改动。"
+    },
+    {
+      "layout": "table",
+      "title": "五个必会快捷键",
+      "headers": [
+        "快捷键",
+        "作用"
+      ],
+      "rows": [
+        [
+          "Ctrl + C",
+          "取消当前输入或生成"
+        ],
+        [
+          "Ctrl + D",
+          "退出 Claude Code"
+        ],
+        [
+          "Esc + Esc",
+          "打开 Rewind 菜单"
+        ],
+        [
+          "Tab",
+          "切换 Extended Thinking"
+        ],
+        [
+          "Shift + Tab",
+          "切换权限模式"
+        ]
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、日常实践、省钱与排错",
+      "subtitle": "把工具用进每天的工作流"
+    },
+    {
+      "layout": "bullets",
+      "title": "五条省钱技巧",
+      "bullets": [
+        "简单问题不用 Extended Thinking，省约 70%",
+        "定期 /compact 压缩对话，省 40-60%",
+        "完成任务后用 /clear，直接省 100%",
+        "日常开发用 Sonnet，简单任务用 Haiku",
+        "关键决策再用 Opus，配合 ultrathink"
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "推荐的一天工作流",
+      "steps": [
+        {
+          "title": "早上恢复会话",
+          "desc": "claude -c 接着昨天的进度继续"
+        },
+        {
+          "title": "检查状态",
+          "desc": "输入 /status 和 /context 看用量"
+        },
+        {
+          "title": "超过 60% 就压缩",
+          "desc": "用 /compact 保留关键讨论内容"
+        },
+        {
+          "title": "下班前整理",
+          "desc": "/export 导出对话，/rename 重命名会话"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "下一步：把项目规则写进 CLAUDE.md",
+      "subtitle": "命令可以查，规则才是长期协作的基础"
+    }
+  ]
+}

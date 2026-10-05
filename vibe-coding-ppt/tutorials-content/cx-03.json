@@ -1,0 +1,205 @@
+{
+  "code": "CX-03",
+  "category": "codex",
+  "fileTitle": "Codex-Commands工作流入口",
+  "deck": "Codex Commands：App 里的工作流入口",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Commands：App 里的工作流入口",
+      "subtitle": "零基础 · 不背命令表，学会什么时候切换工作模式",
+      "kicker": "Vibe Coding 学习系列 · CX-03"
+    },
+    {
+      "layout": "section",
+      "title": "入口、状态、动作",
+      "subtitle": "先看状态，再定推进方式，执行后用 /review 收口"
+    },
+    {
+      "layout": "bullets",
+      "title": "slash commands 的三层",
+      "bullets": [
+        "入口层：/status、/mcp、/feedback",
+        "状态层：/plan、/goal，改变任务推进方式",
+        "审查层：/review，围绕当前 diff 做检查",
+        "命令只是更快进入某种工作模式",
+        "模式不对，命令反而会制造混乱"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "用不用 Command 的判断",
+      "headers": [
+        "你想做什么",
+        "首选方式",
+        "为什么"
+      ],
+      "rows": [
+        [
+          "看当前线程状态",
+          "/status",
+          "快速确认上下文、限制和配额"
+        ],
+        [
+          "让 Codex 先别动手",
+          "/plan",
+          "把执行前移到方案讨论"
+        ],
+        [
+          "长时间推进清楚目标",
+          "/goal",
+          "让目标跨多个 turn 持续存在"
+        ],
+        [
+          "检查当前改动",
+          "/review",
+          "直接进入代码审查口径"
+        ],
+        [
+          "查 MCP 是否连接",
+          "/mcp",
+          "看工具 server 和状态"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "App 用户先掌握的稳定命令",
+      "cards": [
+        {
+          "title": "/status",
+          "desc": "查看模型、工作区、审批和上下文状态"
+        },
+        {
+          "title": "/plan",
+          "desc": "大任务先规划，不急着改文件"
+        },
+        {
+          "title": "/review",
+          "desc": "审查当前改动，合并前使用"
+        },
+        {
+          "title": "/mcp",
+          "desc": "接外部工具后，查看 server 和工具"
+        }
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "在 App 里发现命令四步",
+      "steps": [
+        {
+          "title": "打开项目线程",
+          "desc": "任何已有项目的线程都可以"
+        },
+        {
+          "title": "输入 /",
+          "desc": "看弹出的命令列表和说明"
+        },
+        {
+          "title": "注意实验标记",
+          "desc": "不确定时先问，不要直接执行"
+        },
+        {
+          "title": "查官方文档核对",
+          "desc": "以当前 App 显示和官方 App Commands 为准"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "/plan：好的计划应该包含什么",
+      "bullets": [
+        "要读哪些文件，要改哪些文件",
+        "可能方案和取舍",
+        "验证命令，以及不做什么",
+        "什么时候退出计划模式进入执行",
+        "差的 /plan 只写“做一个完整优化”，缺对象和边界"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "/goal：长目标也要有边界",
+      "headers": [
+        "适合",
+        "不适合"
+      ],
+      "rows": [
+        [
+          "长迁移、长重构",
+          "目标没有范围，例如“优化项目”"
+        ],
+        [
+          "部署重试直到成功",
+          "没有结束条件"
+        ],
+        [
+          "原型打磨直到测试通过",
+          "没有权限边界"
+        ],
+        [
+          "比一次提示更长但有明确终点",
+          "周期或后台检查，应交给 Automations"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "/review 的五个检查维度",
+      "bullets": [
+        "范围：是否只改了任务指定文件",
+        "正确性：边界条件、空值、异步竞态",
+        "安全：是否触碰 secret、权限、网络",
+        "测试：是否覆盖新增行为",
+        "可维护：是否引入重复逻辑或隐式依赖"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "命令排障表",
+      "headers": [
+        "症状",
+        "可能原因",
+        "排查顺序"
+      ],
+      "rows": [
+        [
+          "输入 /goal 没出现",
+          "feature 未启用或版本不支持",
+          "先看 / 列表，再查 features.goals"
+        ],
+        [
+          "/review 没问题",
+          "当前没有 Git diff",
+          "先看 Review 面板文件列表"
+        ],
+        [
+          "/mcp 看不到工具",
+          "MCP 未配置或 App 未刷新",
+          "看 Settings，再用 codex mcp list 辅助"
+        ],
+        [
+          "命令列表和教程不同",
+          "版本、插件或实验开关不同",
+          "以当前 App 列表和官方文档为准"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "App Commands 与 CLI Commands 不保证一致",
+      "bullets": [
+        "App 面向桌面线程、Review 面板和工具入口",
+        "CLI 面向终端 TUI、命令行权限和会话",
+        "App 输入 / 查看，CLI 输入 /help 查看",
+        "两者不保证完全一致，以当前界面显示为准",
+        "CLI 命令写到 CX-12，不能写成 App 主线"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "掌握的是什么时候切换工作模式",
+      "subtitle": "下一篇：CX-04 项目指令、配置、权限与沙盒"
+    }
+  ]
+}

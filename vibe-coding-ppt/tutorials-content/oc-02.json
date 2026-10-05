@@ -1,0 +1,279 @@
+{
+  "code": "OC-02",
+  "category": "openclaw",
+  "fileTitle": "OpenClaw安装部署指南",
+  "deck": "OpenClaw 安装部署指南：从零装到能跑",
+  "slides": [
+    {
+      "layout": "cover",
+      "kicker": "Vibe Coding 学习系列 · OC-02",
+      "title": "OpenClaw 安装部署指南",
+      "subtitle": "macOS、Linux、Windows 的安装、升级与故障排查"
+    },
+    {
+      "layout": "bullets",
+      "title": "核心流程就三步",
+      "bullets": [
+        "本章按 OpenClaw v2026.6.8 稳定基线更新",
+        "官方推荐：运行安装脚本，必要时自动安装 Node",
+        "或者手动安装 CLI，用 npm、pnpm、bun",
+        "最后运行引导向导 openclaw onboard",
+        "日常升级优先用 openclaw update"
+      ],
+      "notes": "老金写安装最看重可复现：装好之后还要知道升级时从哪回头查。"
+    },
+    {
+      "layout": "table",
+      "title": "软件依赖要求",
+      "headers": [
+        "软件",
+        "最低版本",
+        "推荐版本"
+      ],
+      "rows": [
+        [
+          "Node.js",
+          "22.19+ 兼容",
+          "24.x"
+        ],
+        [
+          "npm",
+          "10.0.0",
+          "10.x"
+        ],
+        [
+          "Git",
+          "2.30+",
+          "最新版"
+        ],
+        [
+          "Python（可选）",
+          "3.10+",
+          "3.12"
+        ],
+        [
+          "Docker（可选）",
+          "24.0+",
+          "最新版"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "硬件要求",
+      "headers": [
+        "项目",
+        "最低要求",
+        "推荐配置"
+      ],
+      "rows": [
+        [
+          "CPU",
+          "1 核",
+          "2 核+"
+        ],
+        [
+          "内存",
+          "512 MB",
+          "2 GB+"
+        ],
+        [
+          "磁盘",
+          "500 MB 可用",
+          "2 GB+"
+        ],
+        [
+          "网络",
+          "能访问模型 API",
+          "稳定宽带连接"
+        ],
+        [
+          "本地模型 7B",
+          "8 GB RAM",
+          "6 GB VRAM"
+        ]
+      ],
+      "notes": "只用云端 API 不需要 GPU，普通云服务器就够。"
+    },
+    {
+      "layout": "cards",
+      "title": "四种安装方式各适合谁",
+      "cards": [
+        {
+          "title": "官方安装脚本",
+          "desc": "适合个人和普通用户，最快跑通"
+        },
+        {
+          "title": "npm / pnpm 全局",
+          "desc": "适合熟悉 Node 生态的人，方便版本控制和排查 PATH"
+        },
+        {
+          "title": "Docker",
+          "desc": "适合服务器长期运行，便于隔离、备份和反向代理"
+        },
+        {
+          "title": "源码构建",
+          "desc": "适合贡献代码、调试 OpenClaw 本身、开发插件"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "CLI 安装方式对比",
+      "headers": [
+        "方式",
+        "命令",
+        "优点"
+      ],
+      "rows": [
+        [
+          "npm",
+          "npm i -g openclaw@latest",
+          "最通用、文档最多"
+        ],
+        [
+          "yarn",
+          "yarn global add openclaw",
+          "速度快、缓存好"
+        ],
+        [
+          "pnpm",
+          "pnpm add -g openclaw",
+          "磁盘占用小"
+        ],
+        [
+          "npx",
+          "npx openclaw",
+          "免安装，适合体验"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "引导向导会带你做什么",
+      "steps": [
+        {
+          "title": "选择 AI 模型提供商",
+          "desc": "DeepSeek、OpenAI、Anthropic、Google、Ollama 或自定义 API"
+        },
+        {
+          "title": "配置 API Key",
+          "desc": "输入后向导会自动验证，并列出可用模型"
+        },
+        {
+          "title": "选择消息平台",
+          "desc": "Telegram、WhatsApp、Discord、Slack、Web Chat 可多选"
+        },
+        {
+          "title": "配置 Gateway 并完成",
+          "desc": "设置端口 18789 与 Control UI 密码，生成 openclaw.json"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "三个版本通道",
+      "headers": [
+        "通道",
+        "说明",
+        "npm 标签"
+      ],
+      "rows": [
+        [
+          "stable",
+          "标签发布，正式版本",
+          "latest"
+        ],
+        [
+          "beta",
+          "预发布版本",
+          "beta"
+        ],
+        [
+          "dev",
+          "main 分支最新代码",
+          "dev"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "升级、锁定与回滚",
+      "bullets": [
+        "升级前先备份：cp openclaw.json openclaw.json.bak",
+        "升级用 openclaw update --channel stable",
+        "升级后用 openclaw status 验证",
+        "锁定版本：npm install -g openclaw@2026.2.24",
+        "回滚先 npm uninstall 再安装旧版本"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见安装问题排查",
+      "headers": [
+        "症状",
+        "处理方式"
+      ],
+      "rows": [
+        [
+          "EACCES permission denied",
+          "改用 nvm，或修改 npm 全局目录权限"
+        ],
+        [
+          "npm ERR network timeout",
+          "换淘宝镜像，或配置代理后恢复"
+        ],
+        [
+          "node-gyp rebuild failed",
+          "安装 Xcode 命令行工具或 build-essential"
+        ],
+        [
+          "EADDRINUSE 端口 18789",
+          "查看占用进程，或改端口为 18790"
+        ],
+        [
+          "Invalid API key",
+          "用 openclaw config set 重新设置 model.apiKey"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "安装完成后的健康检查",
+      "bullets": [
+        "openclaw --version 与 --help 检查 CLI 是否正常",
+        "openclaw config get 检查配置内容",
+        "openclaw status 检查 Gateway 状态",
+        "openclaw doctor 运行完整诊断工具",
+        "浏览器打开 http://localhost:18789 查看 Control UI"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "安装前先写一份环境画像",
+      "cards": [
+        {
+          "title": "机器信息",
+          "desc": "操作系统、Shell、CPU、内存"
+        },
+        {
+          "title": "运行时",
+          "desc": "Node、npm、Git 版本与安装方式"
+        },
+        {
+          "title": "网络",
+          "desc": "所在地区、代理设置、npm 镜像源"
+        },
+        {
+          "title": "权限",
+          "desc": "npm 全局路径、当前用户、是否使用 sudo"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "装好只是开始",
+      "subtitle": "下一步：运行 openclaw onboard，跑起你的第一个对话"
+    }
+  ]
+}

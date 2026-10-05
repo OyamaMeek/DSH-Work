@@ -1,0 +1,224 @@
+{
+  "code": "CX-07",
+  "category": "codex",
+  "fileTitle": "Codex-Plugins连接器",
+  "deck": "Codex Plugins 与 Connectors：App 能力扩展",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Plugins 与 Connectors：App 能力扩展",
+      "subtitle": "零基础 · 安装是让能力可见，授权是让数据可用",
+      "kicker": "Vibe Coding 学习系列 · CX-07"
+    },
+    {
+      "layout": "section",
+      "title": "安装、授权、调用是三件事",
+      "subtitle": "插件可以包含 Skills、MCP、Apps，但不等于其中任何一个"
+    },
+    {
+      "layout": "bullets",
+      "title": "安装、授权、调用、撤销",
+      "bullets": [
+        "安装 Plugin：看它带来的 Skills / MCP / Apps / 配置",
+        "对外部服务单独授权",
+        "在线程中引用或调用外部上下文",
+        "工具或外部动作按权限和审批执行",
+        "不用时撤销授权或卸载"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "先分清四个概念",
+      "headers": [
+        "概念",
+        "本质",
+        "例子"
+      ],
+      "rows": [
+        [
+          "Connector / App",
+          "外部账号连接",
+          "GitHub、Gmail、Drive、Slack"
+        ],
+        [
+          "Plugin",
+          "能力包",
+          "一组 skills、MCP、apps、配置"
+        ],
+        [
+          "Skill",
+          "可复用工作流",
+          "代码审查 SOP"
+        ],
+        [
+          "MCP",
+          "工具协议",
+          "浏览器、数据库、文档源"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "App 中的连接器工作流",
+      "steps": [
+        {
+          "title": "打开入口",
+          "desc": "进入 App 的 Plugins / Connectors / Apps"
+        },
+        {
+          "title": "选择服务",
+          "desc": "挑要连接的 GitHub、Drive、Slack 等"
+        },
+        {
+          "title": "完成授权",
+          "desc": "授权范围要单独看清楚"
+        },
+        {
+          "title": "引用并执行",
+          "desc": "用 @、mention 或自然语言引用外部上下文"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "安装或连接前的检查",
+      "headers": [
+        "检查项",
+        "要确认什么"
+      ],
+      "rows": [
+        [
+          "来源",
+          "官方、组织内，还是第三方插件"
+        ],
+        [
+          "能力",
+          "带 Skills、MCP、Connectors 还是组合包"
+        ],
+        [
+          "权限",
+          "只读、评论、写文件、发消息分别要什么权限"
+        ],
+        [
+          "数据范围",
+          "能访问哪些仓库、文档、邮箱或群聊"
+        ],
+        [
+          "撤销方式",
+          "在 App、服务后台还是组织管理端撤销"
+        ]
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "插件安装后的四层变化",
+      "cards": [
+        {
+          "title": "目录层",
+          "desc": "Plugins 页面出现已安装条目"
+        },
+        {
+          "title": "能力层",
+          "desc": "@ mention 或 bundled skills 可被调用"
+        },
+        {
+          "title": "授权层",
+          "desc": "外部 App 可能要求登录或授权"
+        },
+        {
+          "title": "执行层",
+          "desc": "Codex 按 prompt、权限和审批调用工具"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "最小权限原则",
+      "bullets": [
+        "第一次安装只给必要权限",
+        "只读任务不给写权限",
+        "需要发消息或改 PR 时，明确说明目标和范围",
+        "团队插件先在测试项目验证",
+        "不再使用时及时禁用或卸载"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常见连接场景与风险",
+      "headers": [
+        "场景",
+        "连接器价值",
+        "风险点"
+      ],
+      "rows": [
+        [
+          "GitHub",
+          "读取 issue、PR、仓库上下文",
+          "写权限、PR 评论权限"
+        ],
+        [
+          "Google Drive / Docs",
+          "读取团队文档",
+          "文档访问范围"
+        ],
+        [
+          "Gmail / Outlook",
+          "引用邮件上下文",
+          "隐私和敏感信息"
+        ],
+        [
+          "Slack / Teams",
+          "查讨论和决策",
+          "群聊范围和成员隐私"
+        ],
+        [
+          "Calendar",
+          "查日程和会议背景",
+          "个人隐私"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "CLI 辅助管理 marketplace",
+      "headers": [
+        "命令",
+        "用途"
+      ],
+      "rows": [
+        [
+          "codex plugin marketplace list",
+          "列出已添加的 marketplace"
+        ],
+        [
+          "codex plugin marketplace add owner/repo",
+          "添加 marketplace 来源"
+        ],
+        [
+          "codex plugin marketplace upgrade",
+          "升级 marketplace"
+        ],
+        [
+          "codex plugin marketplace remove 名称",
+          "移除 marketplace"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "观察输出：看用了什么，不只看答得像不像",
+      "bullets": [
+        "你使用了哪些插件或工具能力",
+        "哪些信息来自外部系统",
+        "哪些结论是根据上下文推断的",
+        "有没有权限、网络、认证或数据范围限制",
+        "安装是让能力可见，审批是最后的安全门"
+      ]
+    },
+    {
+      "layout": "end",
+      "title": "安装让能力可见，授权让数据可用，审批是安全门",
+      "subtitle": "本系列 codex 分册到此"
+    }
+  ]
+}

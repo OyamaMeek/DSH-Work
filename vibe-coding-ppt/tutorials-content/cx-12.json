@@ -1,0 +1,255 @@
+{
+  "code": "CX-12",
+  "category": "codex",
+  "fileTitle": "Codex-CLI辅助",
+  "deck": "Codex CLI：App 用户什么时候需要终端",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex CLI：App 用户什么时候需要终端",
+      "subtitle": "零基础入门 · 用终端排查配置、跑 CI、管插件",
+      "kicker": "Vibe Coding 学习系列 · CX-12"
+    },
+    {
+      "layout": "section",
+      "title": "目录：CLI 是 App 的补充",
+      "subtitle": "CLI 定位 → 常用命令 → 审批与沙盒 → CI 安全与排障"
+    },
+    {
+      "layout": "bullets",
+      "title": "CLI 的定位",
+      "bullets": [
+        "CLI 是 App 的辅助工具，不是普通用户的第一入口",
+        "它适合排查配置、管理 MCP、在 CI 中无头执行",
+        "也适合终端快速 review 和脚本批处理",
+        "Linux 或远程服务器环境常需要 CLI",
+        "正确路径是 App 主线遇到排障问题再回到 CLI"
+      ],
+      "notes": "不要先背参数表，本机 --help 比教程里的静态列表可靠。"
+    },
+    {
+      "layout": "cards",
+      "title": "CLI 的三种使用模式",
+      "cards": [
+        {
+          "title": "交互模式",
+          "desc": "运行 codex 进入终端 TUI，用 slash commands 协作和排查"
+        },
+        {
+          "title": "无头模式",
+          "desc": "codex exec 适合 CI、脚本、一次性报告和结构化输出"
+        },
+        {
+          "title": "专项命令",
+          "desc": "codex review / codex mcp / codex plugin marketplace"
+        },
+        {
+          "title": "codex doctor",
+          "desc": "诊断环境、Git、终端和 app-server，排障优先跑"
+        }
+      ],
+      "notes": "CLI 版本变化快，本机帮助输出比教程更可靠。"
+    },
+    {
+      "layout": "table",
+      "title": "什么时候必须看 CLI",
+      "headers": [
+        "场景",
+        "为什么看 CLI"
+      ],
+      "rows": [
+        [
+          "App 看不到 MCP",
+          "codex mcp list 可辅助确认配置"
+        ],
+        [
+          "CI 想跑一次性审查",
+          "App 不适合无头运行"
+        ],
+        [
+          "远程服务器或 Linux",
+          "没有桌面 App 主线"
+        ],
+        [
+          "权限或 profile 排障",
+          "codex doctor 和 --profile 更直接"
+        ],
+        [
+          "自动化需要 JSON",
+          "codex exec --output-schema 适合脚本"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "常用命令",
+      "headers": [
+        "命令",
+        "用途"
+      ],
+      "rows": [
+        [
+          "codex --help",
+          "查看本机支持项"
+        ],
+        [
+          "codex",
+          "进入终端交互 TUI"
+        ],
+        [
+          "codex exec",
+          "无头执行一次任务"
+        ],
+        [
+          "codex review",
+          "在终端审查当前改动"
+        ],
+        [
+          "codex mcp list",
+          "查看 MCP server 配置"
+        ],
+        [
+          "codex plugin marketplace list",
+          "查看 marketplace 来源"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "审批与沙盒怎么选",
+      "headers": [
+        "场景",
+        "建议"
+      ],
+      "rows": [
+        [
+          "只读分析",
+          "read-only，需要审批"
+        ],
+        [
+          "小范围改 docs",
+          "workspace-write，明确目录"
+        ],
+        [
+          "跑测试",
+          "允许普通命令，危险命令仍审批"
+        ],
+        [
+          "CI runner",
+          "只给 PR diff 或目标目录"
+        ],
+        [
+          "一次性隔离环境",
+          "才考虑无审批无沙盒"
+        ]
+      ],
+      "notes": "--dangerously-bypass-approvals-and-sandbox 不要写成团队默认推荐。"
+    },
+    {
+      "layout": "bullets",
+      "title": "CLI 安全心智模型",
+      "bullets": [
+        "默认只读或 workspace-write",
+        "danger-full-access 只在外部隔离环境用",
+        "CI token 只给必要仓库权限",
+        "codex exec 的 prompt 里写清不要修改文件",
+        "命令输出和日志不要打印 secret"
+      ],
+      "notes": "CLI 离 Git、shell、CI 更近，所以要更保守。"
+    },
+    {
+      "layout": "table",
+      "title": "升级后先确认本机能力",
+      "headers": [
+        "版本",
+        "你应该确认什么"
+      ],
+      "rows": [
+        [
+          "v0.129.0",
+          "/vim composer、/keymap debug、/hooks 浏览"
+        ],
+        [
+          "v0.132.0",
+          "codex exec 结构化输出、session picker"
+        ],
+        [
+          "v0.133.0",
+          "Goals 默认启用、permission profiles"
+        ],
+        [
+          "v0.139.0",
+          "code mode web search、doctor 诊断"
+        ],
+        [
+          "v0.141.0",
+          "远程执行 E2E relay、Windows sandbox 修复"
+        ]
+      ],
+      "notes": "升级后先跑 codex --version、codex doctor 和 codex --help 看差量。"
+    },
+    {
+      "layout": "steps",
+      "title": "CI 中的最小安全模板",
+      "steps": [
+        {
+          "title": "明确范围",
+          "desc": "只审查 PR diff 或指定路径"
+        },
+        {
+          "title": "最小权限",
+          "desc": "CI token 只给需要的仓库权限"
+        },
+        {
+          "title": "只读加不审批",
+          "desc": "codex exec --sandbox read-only --ask-for-approval never"
+        },
+        {
+          "title": "人工合并",
+          "desc": "自动评论可以，自动合并要慎重"
+        }
+      ],
+      "notes": "CI 中先把它当成高信号 reviewer，不要默认让它写代码或 push。"
+    },
+    {
+      "layout": "bullets",
+      "title": "CLI slash commands 重点",
+      "bullets": [
+        "先输入 /help 查看当前支持的 slash commands",
+        "状态与规划：/status、/permissions、/plan、/goal",
+        "审查与工具：/review、/mcp、/plugins",
+        "上下文与恢复：/compact、/resume",
+        "本机没有的命令不要按教程硬敲"
+      ],
+      "notes": "v0.133.0 起 Goals 默认启用，写 /goal 要给明确停止条件。"
+    },
+    {
+      "layout": "steps",
+      "title": "课堂工坊：三个 CLI 辅助场景",
+      "steps": [
+        {
+          "title": "只读诊断仓库命令",
+          "desc": "codex exec 读 package.json 和 AGENTS.md，不改文件"
+        },
+        {
+          "title": "结构化输出给脚本",
+          "desc": "用 --output-schema 返回机器可读 JSON"
+        },
+        {
+          "title": "插件排查",
+          "desc": "TUI 输入 /plugins，再用 marketplace list 看来源"
+        },
+        {
+          "title": "权限 profile 排查",
+          "desc": "先跑 codex doctor，再试 --profile read-only"
+        }
+      ],
+      "notes": "CLI 改完 MCP 或插件后，仍要回 App 核对调用和权限提示。"
+    },
+    {
+      "layout": "end",
+      "title": "先会用，再会背",
+      "subtitle": "App 是主线，CLI 是遇到配置、CI 和排障时的补充"
+    }
+  ]
+}

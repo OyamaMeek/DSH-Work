@@ -1,0 +1,248 @@
+{
+  "code": "CX-11",
+  "category": "codex",
+  "fileTitle": "Codex-Web-Cloud辅助",
+  "deck": "Codex Cloud：什么时候应该离开本机 App",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex Cloud：什么时候应该离开本机 App",
+      "subtitle": "零基础入门 · 学会远程执行、环境配置与结果回流",
+      "kicker": "Vibe Coding 学习系列 · CX-11"
+    },
+    {
+      "layout": "section",
+      "title": "目录：远端执行，本地收口",
+      "subtitle": "Cloud 是什么 → 何时用 → 环境与密钥 → 结果回流 Review"
+    },
+    {
+      "layout": "bullets",
+      "title": "Cloud 的定位",
+      "bullets": [
+        "Codex Web / Cloud 是远程执行路径",
+        "它不是更强的本地 App",
+        "它围绕已连接的 GitHub 仓库、PR 和云端环境工作",
+        "Cloud 看不到你本机未保存、未提交、未推送的文件",
+        "Cloud 完成不等于可以合并，最终仍要 Review"
+      ],
+      "notes": "App 适合本机控制，Cloud 适合远程仓库执行，两者靠 Git、PR 和 Review 衔接。"
+    },
+    {
+      "layout": "cards",
+      "title": "四个关键术语",
+      "cards": [
+        {
+          "title": "Cloud environment",
+          "desc": "远程任务的仓库、依赖、脚本、变量和网络配置"
+        },
+        {
+          "title": "Setup script",
+          "desc": "agent 开始前安装依赖、准备环境，默认可联网"
+        },
+        {
+          "title": "Agent phase",
+          "desc": "Codex 真正执行任务的阶段，默认不联网"
+        },
+        {
+          "title": "Secrets",
+          "desc": "setup 阶段可用、agent 阶段前移除的敏感值"
+        }
+      ],
+      "notes": "环境可复现比模型能力更重要。"
+    },
+    {
+      "layout": "table",
+      "title": "什么时候用 Cloud，什么时候留 App",
+      "headers": [
+        "情况",
+        "优先"
+      ],
+      "rows": [
+        [
+          "PR 评论反复修",
+          "Cloud"
+        ],
+        [
+          "长时间测试或构建",
+          "Cloud"
+        ],
+        [
+          "从手机或另一台电脑派任务",
+          "Cloud"
+        ],
+        [
+          "依赖本机数据库或桌面 GUI",
+          "App"
+        ],
+        [
+          "需要访问未推送的本机文件",
+          "App"
+        ],
+        [
+          "需要频繁看 UI 判断",
+          "App"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "一次 Cloud 任务的执行链路",
+      "steps": [
+        {
+          "title": "选择仓库和分支",
+          "desc": "Cloud 围绕远程仓库、分支和 PR 执行任务"
+        },
+        {
+          "title": "准备 environment",
+          "desc": "创建或复用 cloud environment"
+        },
+        {
+          "title": "运行 setup script",
+          "desc": "安装依赖，结束后移除 setup-only secrets"
+        },
+        {
+          "title": "进入 agent phase",
+          "desc": "执行任务并产出分支、PR、评论或报告"
+        }
+      ],
+      "notes": "这条链路解释了为什么 Cloud 不知道你本机的草稿。"
+    },
+    {
+      "layout": "bullets",
+      "title": "创建任务前的最小交接包",
+      "bullets": [
+        "仓库和分支：owner/repo 的具体分支",
+        "目标：一句话说清要修什么",
+        "范围：只改哪些文件和目录",
+        "环境：装依赖和验证分别用哪条命令",
+        "限制与交付：不碰什么，开 PR 还是只出报告"
+      ],
+      "notes": "不要只写帮我继续修，上下文不足会让 Cloud 扩大改动。"
+    },
+    {
+      "layout": "table",
+      "title": "Setup script 好坏对照",
+      "headers": [
+        "好 setup script",
+        "问题写法",
+        "问题"
+      ],
+      "rows": [
+        [
+          "pnpm install --frozen-lockfile",
+          "npm install",
+          "依赖不可复现"
+        ],
+        [
+          "corepack enable",
+          "echo $PRIVATE_TOKEN",
+          "泄露 secret"
+        ],
+        [
+          "pnpm build",
+          "read -p \"continue?\"",
+          "交互式阻塞"
+        ],
+        [
+          "与 README / AGENTS.md 一致",
+          "open http://localhost:3000",
+          "依赖本机 GUI"
+        ]
+      ],
+      "notes": "setup script 要短而稳定、不写交互式命令、不输出密钥。"
+    },
+    {
+      "layout": "table",
+      "title": "变量、密钥和网络的作用时间",
+      "headers": [
+        "类型",
+        "作用时间",
+        "适合"
+      ],
+      "rows": [
+        [
+          "Environment variables",
+          "setup 和 agent 阶段都可用",
+          "普通环境开关、非敏感配置"
+        ],
+        [
+          "Secrets",
+          "只在 setup 阶段解密可用",
+          "安装私有依赖、拉取私有资源"
+        ],
+        [
+          "Internet access",
+          "agent 阶段默认关闭",
+          "开启后只允许必要域名和方法"
+        ]
+      ],
+      "notes": "command export FOO=bar 只在 setup shell 生效，需要持久变量时放到 environment 设置。"
+    },
+    {
+      "layout": "steps",
+      "title": "Cloud 回到 App 怎么核对",
+      "steps": [
+        {
+          "title": "拉取远端分支或打开 PR",
+          "desc": "把 Cloud 产物带回本地"
+        },
+        {
+          "title": "App Review 看文件列表和 diff",
+          "desc": "检查是否改了范围外文件"
+        },
+        {
+          "title": "本地运行关键验证命令",
+          "desc": "不要因为 Cloud 通过就跳过本地测试"
+        },
+        {
+          "title": "修正 Verification 和 Risk",
+          "desc": "对照 diff 和日志重写过度乐观的描述"
+        }
+      ],
+      "notes": "Cloud 是执行者，不是最终审批者。"
+    },
+    {
+      "layout": "table",
+      "title": "Cloud 回流的四个常见风险",
+      "headers": [
+        "风险",
+        "检查方式"
+      ],
+      "rows": [
+        [
+          "云端环境和本机不同",
+          "本地重新跑关键命令"
+        ],
+        [
+          "Cloud 改了范围外文件",
+          "App Review 查看文件列表"
+        ],
+        [
+          "PR 描述过度乐观",
+          "对照 diff 和测试日志重写"
+        ],
+        [
+          "Secrets 或网络权限过宽",
+          "检查 environment 和 connector 权限"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "App、Cloud、Automation 怎么分工",
+      "bullets": [
+        "本地项目周期检查，优先用 App Automation",
+        "远程仓库长任务，优先交给 Cloud",
+        "PR / CI 触发，交给 GitHub、CI 或 Cloud",
+        "内部系统调度，用 SDK 或外部队列",
+        "不要用桌面 App 伪装 webhook server"
+      ],
+      "notes": "接飞书、钉钉、企业微信时，通常由外部系统触发 CI、SDK 或 Cloud。"
+    },
+    {
+      "layout": "end",
+      "title": "远端完成，不等于本地结束",
+      "subtitle": "本机掌握控制，Cloud 承担执行，Review 负责收口"
+    }
+  ]
+}

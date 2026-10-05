@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/covers/d.pdf",
+  "sourceSha256": "39beec28ce1c93c17b1ba6999a63a3dbbb6509b7178c2c411bfc15e83bb52b58",
+  "dpi": 60,
+  "pageCount": 14,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/covers/pages/page-0001.png",
+      "width": 800,
+      "height": 450,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 40080
+    }
+  ],
+  "missingFonts": []
+}

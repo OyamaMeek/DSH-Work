@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/qa-overview.pdf",
+  "sourceSha256": "2af42d0decdb602be8003cd72c859072db794adaad3a3df04a3761d9d9ff9eeb",
+  "dpi": 110,
+  "pageCount": 15,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0001.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 69017
+    },
+    {
+      "index": 2,
+      "page": 2,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0002.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 104514
+    },
+    {
+      "index": 3,
+      "page": 3,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0003.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 89766
+    },
+    {
+      "index": 4,
+      "page": 4,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0004.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 91013
+    },
+    {
+      "index": 5,
+      "page": 5,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0005.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 82394
+    },
+    {
+      "index": 6,
+      "page": 6,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0006.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 83971
+    },
+    {
+      "index": 7,
+      "page": 7,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0007.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 92164
+    },
+    {
+      "index": 8,
+      "page": 8,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0008.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 81753
+    },
+    {
+      "index": 9,
+      "page": 9,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0009.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 88927
+    },
+    {
+      "index": 10,
+      "page": 10,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0010.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 76607
+    },
+    {
+      "index": 11,
+      "page": 11,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0011.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 72961
+    },
+    {
+      "index": 12,
+      "page": 12,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0012.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 80765
+    },
+    {
+      "index": 13,
+      "page": 13,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0013.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 66289
+    },
+    {
+      "index": 14,
+      "page": 14,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0014.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 50670
+    },
+    {
+      "index": 15,
+      "page": 15,
+      "path": "/Users/oyamahappa/Documents/Agent/DSH/vibe-coding-ppt/.work/preview/overview-pdf/page-0015.png",
+      "width": 1467,
+      "height": 825,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "byteLength": 43652
+    }
+  ],
+  "missingFonts": []
+}

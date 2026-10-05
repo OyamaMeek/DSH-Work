@@ -1,0 +1,270 @@
+{
+  "code": "CX-14",
+  "category": "codex",
+  "fileTitle": "Codex与Claude-Code对比",
+  "deck": "Codex 与 Claude Code：按工作流选主力工具",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Codex 与 Claude Code：按工作流选主力工具",
+      "subtitle": "零基础入门 · 从重心差异到双工具共存",
+      "kicker": "Vibe Coding 学习系列 · CX-14"
+    },
+    {
+      "layout": "section",
+      "title": "目录：不选更强，只选更合适",
+      "subtitle": "对比方法 → 重心差异 → 共存策略 → 落地计划"
+    },
+    {
+      "layout": "bullets",
+      "title": "正确对比方法",
+      "bullets": [
+        "不要按模型名、跑分或价格做长期选型",
+        "先看团队工作界面和常见任务类型",
+        "再看权限、审计要求和外部系统连接",
+        "然后评估自动化和并行需求",
+        "最后算培训成本以及迁移和共存策略"
+      ],
+      "notes": "先固定对比维度，避免把选型变成谁更强的口水战。"
+    },
+    {
+      "layout": "cards",
+      "title": "两个工具的重心不同",
+      "cards": [
+        {
+          "title": "Codex App",
+          "desc": "桌面开发主控台：线程、Review 面板、Settings、Cloud handoff"
+        },
+        {
+          "title": "Claude Code",
+          "desc": "多端 coding agent 工具链，CLI 仍是强主线"
+        },
+        {
+          "title": "Workflow center",
+          "desc": "工作流中心决定学习路径，不是能力排名"
+        },
+        {
+          "title": "Migration cost",
+          "desc": "切换工具的配置、习惯、培训成本都要算"
+        }
+      ],
+      "notes": "团队选错重心，教程再厚也会学歪。"
+    },
+    {
+      "layout": "table",
+      "title": "一句话对比",
+      "headers": [
+        "工具",
+        "更像什么",
+        "适合"
+      ],
+      "rows": [
+        [
+          "Codex App",
+          "桌面开发主控台",
+          "本地多线程、Review、Automations、Cloud handoff"
+        ],
+        [
+          "Claude Code",
+          "多端 coding agent 工具链",
+          "CLI 深度协作、Hooks、Skills、MCP、Agent Teams"
+        ]
+      ],
+      "notes": "这不是谁替代谁的问题，而是工作流重心不同。"
+    },
+    {
+      "layout": "table",
+      "title": "什么时候优先谁",
+      "headers": [
+        "情况",
+        "优先"
+      ],
+      "rows": [
+        [
+          "桌面线程管理多个任务",
+          "Codex App"
+        ],
+        [
+          "重视 Review 面板和可视化 diff",
+          "Codex App"
+        ],
+        [
+          "需要从本地接力到 Cloud 或 GitHub",
+          "Codex App"
+        ],
+        [
+          "团队主要在终端中工作",
+          "Claude Code"
+        ],
+        [
+          "需要深度自定义 CLI / SDK / Agent Teams",
+          "Claude Code"
+        ],
+        [
+          "需要在 SSH、服务器、tmux 长时间运行",
+          "Claude Code"
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "双工具推荐分工",
+      "headers": [
+        "任务",
+        "Codex App",
+        "Claude Code"
+      ],
+      "rows": [
+        [
+          "桌面多线程开发",
+          "主力",
+          "辅助"
+        ],
+        [
+          "本地 Review",
+          "主力",
+          "辅助"
+        ],
+        [
+          "终端自动化",
+          "辅助",
+          "主力"
+        ],
+        [
+          "Hooks 深度定制",
+          "辅助",
+          "主力"
+        ],
+        [
+          "App Automations",
+          "主力",
+          "另建计划任务"
+        ],
+        [
+          "Cloud / GitHub handoff",
+          "主力",
+          "视插件能力"
+        ]
+      ],
+      "notes": "同一任务只指定一个主力工具，不要同时抢方向盘。"
+    },
+    {
+      "layout": "bullets",
+      "title": "配置共存与 MCP 共享",
+      "bullets": [
+        "同一仓库可以同时有 AGENTS.md 和 CLAUDE.md",
+        "AGENTS.md 给 Codex，CLAUDE.md 给 Claude Code",
+        "两边写相同项目事实，但不要互相假设",
+        "MCP server 可复用，配置和权限分别验证",
+        "不要让两个工具同时改同一批文件"
+      ],
+      "notes": "不要让两个工具同时改同一工作区，用分支或 worktree 隔离。"
+    },
+    {
+      "layout": "table",
+      "title": "选型评分表：给团队会议用",
+      "headers": [
+        "问题",
+        "Codex App 倾向",
+        "Claude Code 倾向"
+      ],
+      "rows": [
+        [
+          "团队成员是否熟终端",
+          "不熟，App 更易培训",
+          "熟，终端效率更高"
+        ],
+        [
+          "是否高度依赖可视化 Review",
+          "是",
+          "一般"
+        ],
+        [
+          "是否已有大量 .claude 资产",
+          "需要迁移成本",
+          "可继续复用"
+        ],
+        [
+          "是否需要深度 shell / SSH / tmux",
+          "一般",
+          "是"
+        ],
+        [
+          "是否要企业统一权限配置",
+          "两边都要评估",
+          "两边都要评估"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "30 天 Codex App 落地计划",
+      "steps": [
+        {
+          "title": "第 1 周：建立控制感",
+          "desc": "只读总结、改 README、看 Review，不自动提交"
+        },
+        {
+          "title": "第 2 周：建立项目规则",
+          "desc": "写根 AGENTS.md，明确命令来源和安全边界"
+        },
+        {
+          "title": "第 3 周：接入外部能力",
+          "desc": "只读接入 GitHub、MCP、插件，写登记表"
+        },
+        {
+          "title": "第 4 周：并行后台云端",
+          "desc": "worktree、只读 Subagents、Automation、Cloud 回流 Review"
+        }
+      ],
+      "notes": "每一周都先跑通只读、小范围写入、Review、回滚闭环。"
+    },
+    {
+      "layout": "table",
+      "title": "30 天后团队应该留下什么",
+      "headers": [
+        "产物",
+        "用途"
+      ],
+      "rows": [
+        [
+          "AGENTS.md",
+          "项目事实和安全边界"
+        ],
+        [
+          "Code Review Skill",
+          "统一审查口径"
+        ],
+        [
+          "MCP / Plugin 登记表",
+          "外部能力可追踪"
+        ],
+        [
+          "Automation 登记表",
+          "后台任务有人负责"
+        ],
+        [
+          "双工具分工规则",
+          "不让两个工具抢同一批文件"
+        ]
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "常见错误与迁移口径",
+      "bullets": [
+        "按模型名判断工具，而不是看工作流",
+        "两个工具同时改同一文件",
+        "配置只写一边，AGENTS.md 和 CLAUDE.md 都要维护",
+        "MCP 权限复制粘贴，不做分别验证",
+        "不要把 .claude 目录原样复制到 Codex"
+      ],
+      "notes": "迁移的核心是意图迁移，不是文件结构照搬。"
+    },
+    {
+      "layout": "end",
+      "title": "先选一个主力，另配一个补充",
+      "subtitle": "按任务、团队和风险选择，不要一开始双主线培训"
+    }
+  ]
+}

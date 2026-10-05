@@ -1,0 +1,226 @@
+{
+  "code": "CC-01",
+  "category": "claude-code",
+  "fileTitle": "Claude Code完整安装指南",
+  "deck": "Claude Code 安装：从零到跑通 Hello World",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Claude Code 完整安装指南",
+      "subtitle": "零基础也能在 30 分钟里跑起来",
+      "kicker": "Vibe Coding 学习系列 · CC-01"
+    },
+    {
+      "layout": "section",
+      "title": "一、认识它，准备好环境",
+      "subtitle": "先搞懂是什么，再备齐钥匙"
+    },
+    {
+      "layout": "bullets",
+      "title": "Claude Code 是什么",
+      "bullets": [
+        "Anthropic 开发的命令行 AI 编程助手",
+        "在终端用中文说需求，帮你写代码、改 bug、跑测试",
+        "文件读写和命令执行发生在你自己电脑里",
+        "类比：坐在终端里的高级程序员，随时听你安排",
+        "本课基线版本 Claude Code v2.1.181"
+      ],
+      "notes": "它是命令行工具，不是网页聊天框，这是最先要建立的印象。"
+    },
+    {
+      "layout": "bullets",
+      "title": "课前准备五项检查",
+      "bullets": [
+        "系统：Windows 10+、macOS 10.15+ 或 Linux",
+        "终端：PowerShell、Terminal 或 Bash 能打开",
+        "磁盘：至少保留 2GB 可用空间",
+        "账号：注册 Anthropic 账号并拿到 API Key",
+        "网络：能访问 api.anthropic.com，否则要配代理"
+      ]
+    },
+    {
+      "layout": "cards",
+      "title": "四条学习路径，按需选一条",
+      "cards": [
+        {
+          "title": "快速上手",
+          "desc": "30 分钟：看术语表、配 Key、装好、启动验证"
+        },
+        {
+          "title": "完整学习",
+          "desc": "2-3 小时：从头到尾掌握每个安装细节"
+        },
+        {
+          "title": "问题排查",
+          "desc": "10 分钟：按错误信息直接跳到故障排查"
+        },
+        {
+          "title": "专项学习",
+          "desc": "30-60 分钟：只学 IDE 集成、权限或迁移"
+        }
+      ],
+      "notes": "这是一篇三千多行的长教程，不必全看，按目标选路径。"
+    },
+    {
+      "layout": "section",
+      "title": "二、账号与 API Key",
+      "subtitle": "Key 是你使用服务的通行证"
+    },
+    {
+      "layout": "steps",
+      "title": "获取 API Key 四步",
+      "steps": [
+        {
+          "title": "注册登录",
+          "desc": "进入 console.anthropic.com 注册并登录账号"
+        },
+        {
+          "title": "创建 Key",
+          "desc": "打开 Settings → API Keys，点 Create Key"
+        },
+        {
+          "title": "保存 Key",
+          "desc": "Key 只显示一次，立即复制存到安全位置"
+        },
+        {
+          "title": "配置环境变量",
+          "desc": "设置 ANTHROPIC_API_KEY，重启终端后生效"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": "环境变量配置要点",
+      "bullets": [
+        "好处：Key 不写进代码，不会误传到 GitHub",
+        "不同电脑可用不同 Key，切换更灵活",
+        "Windows 用 PowerShell 设置用户环境变量",
+        "macOS/Linux 写进 ~/.zshrc 或 ~/.bashrc",
+        "验证：查看 $env:ANTHROPIC_API_KEY 或 echo 变量"
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "三、安装、验证与 Hello World",
+      "subtitle": "一条命令，然后确认真的能用"
+    },
+    {
+      "layout": "table",
+      "title": "五种安装方式对比",
+      "headers": [
+        "安装方式",
+        "适用平台",
+        "推荐度"
+      ],
+      "rows": [
+        [
+          "脚本安装",
+          "macOS/Linux/WSL",
+          "五星"
+        ],
+        [
+          "PowerShell",
+          "Windows",
+          "五星"
+        ],
+        [
+          "Homebrew",
+          "macOS/Linux",
+          "四星"
+        ],
+        [
+          "WinGet",
+          "Windows 10/11",
+          "四星"
+        ],
+        [
+          "NPM",
+          "全平台，需 Node.js 18+",
+          "三星"
+        ]
+      ],
+      "notes": "原生安装不需要 Node.js，Windows 用 PowerShell，Mac 用脚本或 Homebrew。"
+    },
+    {
+      "layout": "steps",
+      "title": "安装与验证四步",
+      "steps": [
+        {
+          "title": "选一种方式安装",
+          "desc": "Mac 用脚本或 Homebrew，Windows 用 PowerShell 或 WinGet"
+        },
+        {
+          "title": "配置 PATH",
+          "desc": "Windows 需把 .local\\bin 加进 PATH 并重启终端"
+        },
+        {
+          "title": "验证版本",
+          "desc": "运行 claude --version，显示 v2.1.x (native) 即成功"
+        },
+        {
+          "title": "检查帮助",
+          "desc": "运行 claude --help，能显示完整帮助信息"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "原生安装与 NPM 安装的区别",
+      "headers": [
+        "对比项",
+        "原生安装",
+        "NPM 安装"
+      ],
+      "rows": [
+        [
+          "需要 Node.js",
+          "不需要",
+          "需要 18+"
+        ],
+        [
+          "自动更新",
+          "内置",
+          "需手动 npm update -g"
+        ],
+        [
+          "安装大小",
+          "约 80MB",
+          "约 80MB 加 Node.js"
+        ],
+        [
+          "适合场景",
+          "所有用户",
+          "原生安装失败时的备选"
+        ]
+      ]
+    },
+    {
+      "layout": "steps",
+      "title": "Hello World 快速验证",
+      "steps": [
+        {
+          "title": "四项基础测试",
+          "desc": "版本、2+2 等于 4、中文回复、帮助命令都通过"
+        },
+        {
+          "title": "建项目目录",
+          "desc": "mkdir ~/claude-hello-world 并执行 git init"
+        },
+        {
+          "title": "让 Claude 生成项目",
+          "desc": "一句中文指令生成 hello.py、README.md、.gitignore"
+        },
+        {
+          "title": "运行程序",
+          "desc": "python hello.py 输出 Hello, Claude Code!"
+        }
+      ],
+      "notes": "四项基础测试全过，说明 Claude Code 工作正常。"
+    },
+    {
+      "layout": "end",
+      "title": "接下来：备份 Key，动手装一遍",
+      "subtitle": "装好之后，进入基础使用指南"
+    }
+  ]
+}
