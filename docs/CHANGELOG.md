@@ -14,7 +14,7 @@
   - `OneTool/config/authcode.php`（删除，72 字节）
   - `OneTool/let`（删除，18 字节）
 
-- **Git 提交**：待提交
+- **Git 提交**：`ec0737a chore(onetool): 移除后台更新页的远端授权校验`
 
 ---
 
