@@ -1,3 +1,23 @@
+## [2026-10-05 21:05] OneTool 移除后台更新页的远端授权校验
+
+- **需求/问题描述**：
+  > 另一处也移除
+
+- **实际实现的功能与改动**：
+  - 后台更新页 `OneTool/app/admin/view/update.html` 与 `OneTool/app/admin/view/system/update.html` 原先把当前域名与 `config('authcode')` 发到 `https://auth.onetool.cc/check.php` 取回版本与更新信息，现移除该远端调用，`$arr` 改为只使用本地版本号，页面不再外发域名与授权码。
+  - 删除已无任何引用的授权配置 `OneTool/config/authcode.php` 与授权文件 `OneTool/let`。
+  - **测试/验证**：`grep -rn "authcode|LangShen|auth.onetool.cc|LetNet|浪神"` 在 `OneTool/app`、`OneTool/config`、`OneTool/public` 下无残留；本机没有 PHP 运行时，未执行 `php -l`。
+
+- **涉及文件**：
+  - `OneTool/app/admin/view/update.html`（-7 行 / +1 行）
+  - `OneTool/app/admin/view/system/update.html`（-7 行 / +1 行）
+  - `OneTool/config/authcode.php`（删除，72 字节）
+  - `OneTool/let`（删除，18 字节）
+
+- **Git 提交**：待提交
+
+---
+
 ## [2026-10-05 21:03] OneTool 移除授权判断中间件
 
 - **需求/问题描述**：
