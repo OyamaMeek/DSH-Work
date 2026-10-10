@@ -19,7 +19,7 @@
   - `Python语言程序设计基础 第三版 (嵩天, 黄天羽, 杨雅婷).pdf`（已更新大纲书签）
   - `memory/{agents.md,plan.md,progress.md,verify.md}`
 
-- **Git 提交**：待提交
+- **Git 提交**：`c879cd5 docs: 记录重做《Python语言程序设计基础 第三版》大纲书签`
 
 ---
 
