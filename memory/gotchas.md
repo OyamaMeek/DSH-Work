@@ -1,9 +1,10 @@
 # 任务注意事项
 
-- 教程文档单篇最长 3400+ 行，必须分段读取，不要整篇加载。
-- 教程中的版本号是编写时快照，PPT 里引用时要注明以本机版本和官方文档为准。
-- 生成 PPTX 时中文需要同时设置 latin 与 east asian 字体，否则可能回退导致排版变化。
-- LibreOfficeKit 在本机直接把 pptx 渲染为 PNG 会输出全部空白页；先 `convert` 转 PDF，再对 PDF `render` 可正常出图，视觉检查走这条路径。
-- LibreOfficeKit 的 render/convert 不会覆盖已存在的输出文件或目录，重复渲染前先删除旧文件与目录。
-- python-pptx 的表格行高会由渲染器按内容自动扩展，长文本换行不会被裁剪，但列宽需要按内容长度分配。
-- 被删除的文件再次 write 会因文件观察策略报错，需先 read 一次清除状态，或改用新文件名。
+- 教程文档单篇最长 3400+ 行，必须分段读取，不要整篇加载；被删除的文件再次 write 会因文件观察策略报错，需先 read 一次或改用新文件名。
+- LibreOfficeKit 直接渲染 pptx 为 PNG 会输出空白页，必须先 convert 转 PDF 再 render；render/convert 不覆盖已存在的输出目录。
+- python-pptx 表格行高由渲染器按内容自动扩展，列宽需要按内容长度分配。
+- 本机没有 ffmpeg、没有 PyObjC、没有 OpenCV，视频编码只能用 Xcode 自带的 Swift + AVFoundation。
+- Swift 编译默认写 /var/folders 会被文件沙箱拒绝，必须把 TMPDIR、CLANG_MODULE_CACHE_PATH、SWIFT_MODULECACHE_PATH 指向工作区目录，并加 `-module-cache-path`。
+- AVAssetWriter 稀疏帧会让成片比脚本时长多出几秒，导出时用 `AVAssetExportSession.timeRange` 裁剪。
+- AVMutableComposition 里每段音频单独 addMutableTrack 会产生几十条音轨，应合并到同一条音轨再逐段 insertTimeRange。
+- PIL 用 Menlo 渲染含中文的代码行会出现方框，需要按行检测 CJK 并切换到 Hiragino 等中文字体。
