@@ -22,7 +22,7 @@
   - `数学分析(第5版) 下 (华东师范大学数学系).pdf`（已更新大纲书签）
   - `memory/{agents.md,plan.md,progress.md,verify.md}`
 
-- **Git 提交**：待提交
+- **Git 提交**：`df42cc8 docs: 记录制作《数学分析（第5版）》（上、下两册）大纲书签`
 
 ---
 
