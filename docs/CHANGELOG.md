@@ -18,7 +18,7 @@
   - `261020/README.md`
   - `memory/{plan.md,progress.md}`
 
-- **Git 提交**：待提交
+- **Git 提交**：`c11b404 docs: 单独提取并系统解析261020全库AI Agent Skills清单`
 
 ---
 
