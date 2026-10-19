@@ -1,3 +1,27 @@
+## [2026-10-20 00:39] 单独提取并系统解析 261020 全库 AI Agent Skills 清单
+
+- **需求/问题描述**：
+  > 再把这里面介绍的skill单独整理出来告诉我这些是干嘛的
+
+- **实际实现的功能与改动**：
+  - 从资料库中全面提取出全部 30 余款 AI Agent 实用 Skills，创建专属文档 `261020/06-AI-Agent-Skills全景清单与详解.md`，并同步更新 `261020/README.md` 导航链接；
+  - 按照四大业务领域进行系统化归类，逐一详细阐述其核心功能、适用场景与调用指令：
+    - **通用研发与架构工作流（TOP 10）**：系统解释 find-skills、grill-me、grill-with-docs、improve-codebase-architecture、tdd、agent-browser、frontend-design、setup-matt-pocock-skills、handoff、triage 的底层逻辑；
+    - **学术科研全流程与论文写作**：按“选题研讨 $\rightarrow$ 文献检索 $\rightarrow$ 实验统计 $\rightarrow$ 顶刊制图 $\rightarrow$ 英文成稿 $\rightarrow$ 去 AI 痕迹与润色 $\rightarrow$ 审稿返修 $\rightarrow$ 答辩 PPT”全链条拆解 ARS、ARIS、nature-skills、figures4papers、anti defensive writing 等技能包；
+    - **视频创作与多媒体剪辑**：归类 MoneyPrinterTurbo、OpenCut、Remotion、OpenMontage、HyperFrames 等自动化音视频与设计技能；
+    - **游戏开发与系统逆向**：解析游戏生成、手感调试、多人联机、Three.js UI 以及逆向脱壳技能。
+  - **测试/验证**：
+    - 检查全套 Markdown 语法与表格格式，确认与原有 5 个专题文档的关联跳转无死链。
+
+- **涉及文件**：
+  - `261020/06-AI-Agent-Skills全景清单与详解.md`
+  - `261020/README.md`
+  - `memory/{plan.md,progress.md}`
+
+- **Git 提交**：待提交
+
+---
+
 ## [2026-10-20 00:34] 系统化重构 261020 知识库为易读模块化文档集并增补权威资料
 
 - **需求/问题描述**：
