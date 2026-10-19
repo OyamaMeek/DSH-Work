@@ -27,7 +27,7 @@
   - `261020/05-生活指南与实用速查.md`
   - `memory/{agents.md,plan.md,progress.md,verify.md}`
 
-- **Git 提交**：待提交
+- **Git 提交**：`6e13a13 docs: 重构261020知识库为易读模块化文档集并补充权威网络资料`
 
 ---
 
