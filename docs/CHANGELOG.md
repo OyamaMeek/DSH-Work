@@ -357,3 +357,25 @@
 - **Git 提交**：`c8da7a4 feat: add whale riding bicycle SVG animation`
 
 ---
+
+## [2026-10-20 14:21] 奶龙悠闲骑自行车 SVG 动画
+
+- **需求/问题描述**：
+  > 创建一个 HTML，内容是 SVG 绘制一个奶龙悠闲地骑自行车的 2D 动画。
+
+- **实际实现的功能与改动**：
+  - 独立 HTML，内嵌 SVG、CSS、JavaScript，无外部运行依赖，可离线打开。
+  - 黄色奶龙与绿色自行车、田园山丘和花草，统一时间驱动车轮与脚踏，双腿跟随脚踏移动；包含眨眼、围巾和尾巴摆动、身体起伏及分层景物移动。
+  - 暂停/继续、三档速度、手机适配、减少动态效果默认暂停、页面隐藏时停止动画调度。
+  - **测试/验证**：先确认页面缺失使测试失败，再实现；Node 静态测试 4/4 通过；真实浏览器验证动画、暂停、继续、调速，快慢档速度比 2.3123；375px 视口无横向溢出；减少动态效果默认暂停；运行错误 0。未执行截图或视觉检查。
+
+- **涉及文件**：
+  - `nailong-bike/index.html`
+  - `nailong-bike/check.test.mjs`
+  - `nailong-bike/browser-check.mjs`
+  - `memory/agents.md`、`memory/plan.md`、`memory/progress.md`、`memory/verify.md`
+  - `context/2026/10/20/14-20-36/对话.md`
+
+- **Git 提交**：待提交。
+
+---
