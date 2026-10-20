@@ -354,6 +354,6 @@
 - **涉及文件**：
   - `whale-bike/index.html` (+208 / -0)
 
-- **Git 提交**：待提交
+- **Git 提交**：`c8da7a4 feat: add whale riding bicycle SVG animation`
 
 ---
