@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鲸鱼悠闲地骑自行车</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #bfe6f7; }
+  body { display: flex; align-items: center; justify-content: center; }
+  svg { width: 100%; height: 100%; max-height: 100vh; display: block; }
+
+  .scroll-far  { animation: scroll 40s linear infinite; }
+  .scroll-near { animation: scroll 16s linear infinite; }
+  .scroll-road { animation: scroll-dash 0.32s linear infinite; }
+  .cloud-a { animation: drift 60s linear infinite; }
+  .cloud-b { animation: drift 85s linear infinite; animation-delay: -30s; }
+
+  .rider  { animation: bob 0.8s ease-in-out infinite; }
+  .tail   { transform-box: view-box; transform-origin: 215px 160px; animation: sway 2.4s ease-in-out infinite; }
+  .eyelid { transform-box: fill-box; transform-origin: center top; transform: scaleY(0); animation: blink 5s infinite; }
+  .spout  { transform-box: fill-box; transform-origin: center bottom; opacity: 0; animation: spout 6s ease-out infinite; }
+  .note   { opacity: 0; animation: float-note 4s ease-out infinite; }
+  .note-2 { animation-delay: -2s; }
+  .sun-rays { transform-box: fill-box; transform-origin: center; animation: spin 30s linear infinite; }
+
+  @keyframes scroll      { to { transform: translateX(-800px); } }
+  @keyframes scroll-dash { to { transform: translateX(-100px); } }
+  @keyframes drift       { from { transform: translateX(900px); } to { transform: translateX(-400px); } }
+  @keyframes bob         { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  @keyframes sway        { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(8deg); } }
+  @keyframes blink       { 0%, 94%, 100% { transform: scaleY(0); } 97% { transform: scaleY(1); } }
+  @keyframes spout       { 0%, 55% { opacity: 0; transform: scale(0.2); } 65% { opacity: 1; transform: scale(1); } 85% { opacity: 0.9; transform: scale(1.05); } 100% { opacity: 0; transform: scale(1.1) translateY(-6px); } }
+  @keyframes float-note  { 0% { opacity: 0; transform: translate(0, 0); } 20% { opacity: 1; } 100% { opacity: 0; transform: translate(-40px, -70px) rotate(-15deg); } }
+  @keyframes spin        { to { transform: rotate(360deg); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-play-state: paused !important; }
+  }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 800 500" role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">鲸鱼悠闲地骑自行车</title>
+  <desc id="desc">一只戴草帽的蓝色鲸鱼坐在红色自行车上，沿着乡间小路慢慢骑行，一边哼歌一边从喷水孔喷出水花，背景的云朵和山丘缓缓后退。</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd3f4"/>
+      <stop offset="1" stop-color="#e6f7ff"/>
+    </linearGradient>
+    <linearGradient id="whale-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a8fd6"/>
+      <stop offset="1" stop-color="#2f6db5"/>
+    </linearGradient>
+    <g id="cloud">
+      <ellipse cx="0" cy="0" rx="46" ry="20" fill="#fff"/>
+      <ellipse cx="-26" cy="4" rx="28" ry="16" fill="#fff"/>
+      <ellipse cx="22" cy="-12" rx="28" ry="20" fill="#fff"/>
+    </g>
+    <g id="hills-far">
+      <path d="M0 330 Q100 250 200 320 T400 300 T600 315 T800 330 V420 H0 Z" fill="#9fd49a"/>
+    </g>
+    <g id="hills-near">
+      <path d="M0 370 Q120 310 240 360 T480 350 T720 365 T800 370 V420 H0 Z" fill="#7cc17a"/>
+      <g fill="#3f8f4a">
+        <rect x="128" y="320" width="6" height="30"/><circle cx="131" cy="312" r="18"/>
+        <rect x="548" y="318" width="6" height="34"/><circle cx="551" cy="308" r="22"/>
+      </g>
+    </g>
+    <g id="wheel">
+      <circle r="50" fill="none" stroke="#2b2b2b" stroke-width="8"/>
+      <circle r="44" fill="none" stroke="#9aa3ab" stroke-width="2"/>
+      <g stroke="#b9c1c8" stroke-width="2">
+        <line x1="-44" y1="0" x2="44" y2="0"/>
+        <line x1="0" y1="-44" x2="0" y2="44"/>
+        <line x1="-31" y1="-31" x2="31" y2="31"/>
+        <line x1="-31" y1="31" x2="31" y2="-31"/>
+      </g>
+      <circle r="5" fill="#555"/>
+    </g>
+  </defs>
+
+  <!-- 天空与太阳 -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <g transform="translate(680 80)">
+    <g class="sun-rays" stroke="#ffd36b" stroke-width="4" stroke-linecap="round">
+      <line x1="0" y1="-52" x2="0" y2="-40"/><line x1="0" y1="40" x2="0" y2="52"/>
+      <line x1="-52" y1="0" x2="-40" y2="0"/><line x1="40" y1="0" x2="52" y2="0"/>
+      <line x1="-37" y1="-37" x2="-28" y2="-28"/><line x1="28" y1="28" x2="37" y2="37"/>
+      <line x1="-37" y1="37" x2="-28" y2="28"/><line x1="28" y1="-28" x2="37" y2="-37"/>
+    </g>
+    <circle r="32" fill="#ffe08a"/>
+  </g>
+
+  <!-- 云朵 -->
+  <g class="cloud-a"><use href="#cloud" x="0" y="90" opacity="0.95"/></g>
+  <g class="cloud-b"><use href="#cloud" x="0" y="150" opacity="0.8" transform="scale(0.8)"/></g>
+
+  <!-- 远近山丘，两份拼接实现无缝滚动 -->
+  <g class="scroll-far"><use href="#hills-far"/><use href="#hills-far" x="800"/></g>
+  <g class="scroll-near"><use href="#hills-near"/><use href="#hills-near" x="800"/></g>
+
+  <!-- 道路 -->
+  <rect y="400" width="800" height="100" fill="#d9c3a0"/>
+  <rect y="400" width="800" height="6" fill="#c2a77f"/>
+  <g class="scroll-road" fill="#f5ead7">
+    <rect x="0" y="440" width="50" height="6" rx="3"/><rect x="100" y="440" width="50" height="6" rx="3"/>
+    <rect x="200" y="440" width="50" height="6" rx="3"/><rect x="300" y="440" width="50" height="6" rx="3"/>
+    <rect x="400" y="440" width="50" height="6" rx="3"/><rect x="500" y="440" width="50" height="6" rx="3"/>
+    <rect x="600" y="440" width="50" height="6" rx="3"/><rect x="700" y="440" width="50" height="6" rx="3"/>
+    <rect x="800" y="440" width="50" height="6" rx="3"/>
+  </g>
+
+  <!-- 阴影 -->
+  <ellipse cx="390" cy="402" rx="150" ry="8" fill="#000" opacity="0.12"/>
+
+  <!-- 自行车 -->
+  <g id="bicycle">
+    <g transform="translate(300 350)">
+      <g><use href="#wheel"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(480 350)">
+      <g><use href="#wheel"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <g fill="none" stroke="#e2574c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M300 350 L380 352 L352 272 Z"/>
+      <path d="M352 272 L452 268 L380 352"/>
+      <path d="M452 268 L480 350"/>
+    </g>
+    <path d="M452 268 L446 244 L424 240" fill="none" stroke="#444" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M352 272 L348 258" stroke="#444" stroke-width="5" stroke-linecap="round"/>
+    <path d="M326 254 Q348 246 368 256 Q350 262 326 258 Z" fill="#3a3a3a"/>
+    <path d="M300 350 L380 352" stroke="#666" stroke-width="2" stroke-dasharray="4 3"/>
+
+    <!-- 脚踏曲柄 -->
+    <g transform="translate(380 352)">
+      <g>
+        <circle r="12" fill="#888" stroke="#555" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="-28" stroke="#555" stroke-width="5" stroke-linecap="round"/>
+        <line x1="0" y1="0" x2="0" y2="28" stroke="#555" stroke-width="5" stroke-linecap="round"/>
+        <g transform="translate(0 -28)"><rect x="-10" y="-3" width="20" height="6" rx="2" fill="#333">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="1.6s" repeatCount="indefinite"/></rect></g>
+        <g transform="translate(0 28)"><rect x="-10" y="-3" width="20" height="6" rx="2" fill="#333">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="1.6s" repeatCount="indefinite"/></rect></g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.6s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 鲸鱼 -->
+  <g class="rider">
+    <g class="tail">
+      <path d="M232 168 C215 160 205 150 200 136" fill="none" stroke="#2f6db5" stroke-width="18" stroke-linecap="round"/>
+      <path d="M200 138 C180 120 160 122 150 130 C170 134 185 140 196 146 C190 128 196 110 210 100 C212 118 210 132 204 142 Z" fill="#2f6db5"/>
+    </g>
+
+    <path d="M440 205 C440 145 390 118 325 122 C270 126 240 150 226 172 C238 220 280 262 335 266 C400 270 440 245 440 205 Z" fill="url(#whale-body)"/>
+    <path d="M262 222 C300 252 360 262 410 250 C430 243 440 228 440 212 C420 232 360 240 300 228 Z" fill="#dff1ff"/>
+    <g stroke="#b5d6ef" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M310 238 Q360 250 412 240"/>
+      <path d="M330 248 Q370 256 404 249"/>
+    </g>
+
+    <!-- 草帽 -->
+    <g transform="rotate(-8 370 118)">
+      <ellipse cx="370" cy="122" rx="52" ry="10" fill="#e9c46a"/>
+      <path d="M342 120 Q344 92 370 90 Q396 92 398 120 Z" fill="#f2d48a"/>
+      <rect x="342" y="110" width="56" height="7" fill="#e76f51"/>
+    </g>
+
+    <!-- 喷水 -->
+    <g transform="translate(330 120)">
+      <path class="spout" d="M0 0 C-4 -20 -22 -30 -34 -26 M0 0 C0 -24 0 -36 0 -44 M0 0 C4 -20 22 -30 34 -26" fill="none" stroke="#7fd0ff" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- 眼睛、腮红、嘴 -->
+    <circle cx="405" cy="186" r="7" fill="#1b2a3a"/>
+    <circle cx="407.5" cy="183.5" r="2.2" fill="#fff"/>
+    <ellipse class="eyelid" cx="405" cy="186" rx="8" ry="8" fill="#4a8fd6"/>
+    <ellipse cx="412" cy="206" rx="9" ry="5" fill="#ff9fb2" opacity="0.7"/>
+    <path d="M438 214 Q425 226 408 222" fill="none" stroke="#1b2a3a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- 握车把的胸鳍 -->
+    <path d="M372 222 C392 226 414 234 428 240 C420 248 400 248 380 238 Z" fill="#2f6db5"/>
+    <circle cx="426" cy="240" r="7" fill="#2f6db5"/>
+
+    <!-- 哼歌音符 -->
+    <g fill="#355070">
+      <g class="note"><text x="450" y="190" font-size="22" font-family="serif">♪</text></g>
+      <g class="note note-2"><text x="462" y="176" font-size="18" font-family="serif">♫</text></g>
+    </g>
+  </g>
+</svg>
+<script>
+  // SMIL 动画不受 CSS animation-play-state 控制，需要单独暂停
+  const svg = document.querySelector('svg');
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const applyMotionPreference = () => motionQuery.matches ? svg.pauseAnimations() : svg.unpauseAnimations();
+  applyMotionPreference();
+  motionQuery.addEventListener('change', applyMotionPreference);
+</script>
+</body>
+</html>
