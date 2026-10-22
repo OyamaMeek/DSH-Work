@@ -455,7 +455,7 @@
   - `.gitignore`、`memory/progress.md`、`memory/gotchas.md`、`docs/CHANGELOG.md`
   - `context/2026/10/22/19-31-00/对话.md`
 
-- **Git 提交**：待提交
+- **Git 提交**：`8e0db5d feat: 为读书报告会 PPT 添加平滑切换与缩放定位`；已推送至 `origin/main`。
 
 ---
 
