@@ -1,34 +1,28 @@
-# 当前任务：奶龙悠闲骑车 SVG 动画
+# 任务九：261022 视频总结重命名、详细 Markdown 笔记与观看顺序设计
 
-- 交付 nailong-bike/index.html，内联 SVG、CSS、JavaScript，可离线直接打开。
-- 采用暖黄色奶龙、绿色自行车和田园场景；统一时钟驱动车轮、脚踏及腿部联动，加入眨眼、轻微起伏和分层风景。
-- 提供暂停与速度控制，适配手机和减少动态效果偏好。
-- 先运行静态测试确认缺失，再实现并执行真实浏览器行为测试；不截图或执行视觉检查。
-- 完成开发记录、会话归档、提交和推送，仅包含本次任务文件。
+## 目标
+针对 261022 目录下的 12 个视频文件，基于高精度视频帧 OCR 与内容多维解析：
+1. 将视频文件名修改为对应内容的准确总结名称；
+2. 为每个视频创建同名对应的大篇幅详细 Markdown 笔记文件（含视频基本信息、核心主旨、知识点逐层深度拆解、实操建议与避坑要点）；
+3. 建立结构化的体系化建议观看顺序（分为大学学业起步、学术科研进阶、AI Agent与生产力、Vibe Coding全栈实战、实习与职场防坑五大阶段），并生成 261022/README.md 导航主页。
 
----
+## 视频映射表与建议顺序
+- 01-大学大一核心课程速通网课推荐与四年规划指南 (原 owgtBKeGGIel7fVBUS0nqapj4CVA7IMALQDvEA.MP4)
+- 02-大学高等数学全网名师网课测评与期末救命备考指南 (原 o8QqUtpEYM9hgIcQfCFqARFDw2eFLELqfLtAai.MP4)
+- 03-大学目标分流策略：保研、考研与就业的时间分配与逃课避坑教学 (原 o8ByqkfzOA7L1iZAwO0BAKDRiVEAnIXgemilpm.MP4)
+- 04-大学生存反套路指南：外卖省钱技巧与招聘避坑防雷妙招 (原 o4GgXqjffABVgWDwAzyCczIwNF9rjwMD8oEQEA.MP4)
+- 05-本科生科研入门全攻略：论文概念、会议期刊与SCI发表指南 (原 oExAeflZ1IDOARA5pBXiMD8iEwBQX0A46gPngA.MP4)
+- 06-学术科研必装AI-Agent与Skills六大体系深度盘点 (原 okHDFCgIRAjZoVUoQgEVEfi3eCqyqIAvxEN9we.MP4)
+- 07-不同职业Codex必装Skill与插件生态全景指南 (原 oc6yu4gEitBAWCViUXB2K1v33CoAeAQpIa0if5.MP4)
+- 08-Vibe-Coding实战：从提示词到架构判断力的AI全栈进阶 (原 okAvwKQTx6i4ImCivPaQyaicE39vnadZABBIK.MP4)
+- 09-Vibe-Coding术语课：前端UI主色规范与AI提示词指南 (原 cb1c1921a6034288a1381628dc496222.MP4)
+- 10-Vibe-Coding术语课：四大前端设计风格与混合搭配实战 (原 ocDXAE7QiEjsXFLANC5fO0aYufGpB9gMwqIIAA.MP4)
+- 11-AI前端开发：7种加载动效模式与标准Prompt生成指令 (原 oofJYFVRT6BGVCb1gX8e5eIgLBA74ABaXkpxEg.MP4)
+- 12-揭秘实习简历造假套路与AI逆向业务逻辑拆解 (原 oIZIBswAQb2IGAviyCRaintPFiD6I2IYPBEZQ.MP4)
 
-# 261020 知识资料库模块化重构与内容增强计划
-
-目标：将 261020 目录下混杂的截图/OCR 转录草稿整理为结构清晰、易于阅读的专题知识库，剔除冗余 OCR 杂音，通过网络权威信息补全缺失的仓库链接、技术背景与学术规范。
-
-1. 模块化专题划分：
-   - 261020/README.md：知识库总览、全局导航与核心高频速查索引。
-   - 261020/01-科研与学术全流程指南.md：学术论文规范、会议 vs 期刊对比、SCI/JCR/中科院分区与影响因子、好论文金标准、查重与去 AI 痕迹实操、进组 Checklist。
-   - 261020/02-AI-Agent与Skills生态体系.md：skills.sh TOP 10 核心技能、GitHub 科研 Skills TOP 10 详解、代码图谱与架构工具（GitIngest、GitDiagram、Graphify）、多 Agent 协同体系（Orca + Droid + DeepSeek Harness）、视频/游戏/逆向 Skills、Claude 账号网络风控防护（DNS Type 64/65 与 IP 纯净度）。
-   - 261020/03-计算机与网络安全成长路线.md：前/后 AI 时代专业范式演化、经典核心书单推荐、AI & Agent 梯度学习主线、网络安全专家与实战靶场路线、蓝桥杯竞赛代码规范与备考、HTTP 核心状态码。
-   - 261020/04-求职备考与商业副业灵感.md：银行校招网申/简历 STAR 法则与笔试六大模块攻略、Starter Story 商业模式拆解、优质学习与自媒体博主清单。
-   - 261020/05-生活指南与实用速查.md：杭州下沙美食外卖选餐参考、杭州甜品天梯榜、人际交往礼物红黑榜、职场办公谐音梗文案。
-   - 261020/06-AI-Agent-Skills全景清单与详解.md：全库 Agent Skills 汇总与功能详解专项文档。
-
-2. 格式与规范优化：
-   - 将原文档中的 ASCII Art 结构图全部改写为标准 Mermaid 图表。
-   - 清洗 OCR 转录废话（如“图片内容涵盖了”、“三张截图中的”等无意义表述）。
-   - 修复损坏链接（如原 Google 搜索伪链接）。
-   - 补齐所有涉及的 GitHub 项目完整主页 URL、作者、Stars 现状及核心用途。
-
-3. 执行步骤：
-   - 编写并写入各子专题 Markdown 文件。
-   - 编写并更新 261020/README.md 总览主页。
-   - 验证所有文件格式与链接正确性。
-   - 更新 CHANGELOG 并归档对话记录。
+## 执行步骤
+1. 执行文件重命名；
+2. 逐一撰写 12 个对应详细 Markdown 笔记文件；
+3. 创建 261022/README.md 导航索引页，提供 Mermaid 学习路线导图；
+4. 验证所有文件对应关系、内容完整性与格式规范；
+5. 更新 CHANGELOG.md 并归档当前会话记录至 context/。
