@@ -2,3 +2,4 @@
 *.pdf
 .DS_Store
 .work_video/
+.npm_cache/

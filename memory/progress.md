@@ -1,9 +1,8 @@
-# 261022 视频总结重命名与内容笔记进度
+# 安装 ego-lite 技能进度
 
-- [x] 通过 Swift + Vision OCR 全量提取 12 个视频的关键帧画面文字与字幕数据。
-- [x] 解析各视频核心主题、知识脉络与相互逻辑依赖关系，制定 12 个总结名称与 5 阶段观看顺序。
-- [x] 执行视频文件重命名（保留对应编号与总结名称）。
-- [x] 撰写 12 个视频的详细内容 Markdown 文档。
-- [x] 创建 261022/README.md 导航总览与学习路线图。
-- [x] 校验全部文件完整性、语法排版规范与内容深度。
-- [x] 追加 docs/CHANGELOG.md 开发记录，归档会话记录至 context/。
+- [x] 解析仓库 `https://github.com/citrolabs/ego-lite`，确认目标 Skill 为 `ego-browser`。
+- [x] 确认全局与本地技能目录状态，并通过 `skills` CLI 完成项目级技能安装。
+- [x] 验证 `ego-browser` 命令与 Node.js 交互环境正常运行。
+- [ ] 更新 `docs/CHANGELOG.md` 记录本次改动与验证结果。
+- [ ] 归档会话记录至 `context/` 目录。
+- [ ] 提交改动并执行 `git push`。

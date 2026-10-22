@@ -1,3 +1,27 @@
+## [2026-10-22 15:40] 安装 citrolabs/ego-lite 技能 (ego-browser)
+
+- **需求/问题描述**：
+  > 安装这个skill:https://github.com/citrolabs/ego-lite
+
+- **实际实现的功能与改动**：
+  - [技能安装]：解析 `https://github.com/citrolabs/ego-lite` 官方规范，确认核心技能为 `ego-browser`；通过 `skills` CLI 将技能安装到工作区 `.agents/skills/ego-browser`，并建立 `.claude/skills/ego-browser` 软链接；
+  - [版本锁定与环境配置]：生成 `skills-lock.json` 锁定 `citrolabs/ego-lite` 技能版本源；在 `.gitignore` 中加入 `.npm_cache/`；
+  - [测试/验证]：
+    - `skills list` 正常识别并列出 `ego-browser`；
+    - 执行 `ego-browser nodejs -e "console.log('ego-browser test passed')"` 成功输出，退出码为 0；
+    - 执行 `ego-browser skill` 正常输出完整使用指南。
+
+- **涉及文件**：
+  - `.agents/skills/ego-browser/`
+  - `.claude/skills/ego-browser`
+  - `skills-lock.json`
+  - `.gitignore`
+  - `memory/{agents.md,plan.md,progress.md,verify.md}`
+
+- **Git 提交**：待提交
+
+---
+
 ## [2026-10-22 11:10] 261022 视频总结重命名、详细内容 Markdown 沉淀与推荐观看顺序制定
 
 - **需求/问题描述**：

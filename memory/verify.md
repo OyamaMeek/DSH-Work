@@ -1,12 +1,10 @@
-# 261022 视频重命名与笔记验证标准
+# ego-lite 技能安装验证标准
 
-- 视频重命名验证：
-  - 12 个视频全部重命名为对应内容的精准总结名称，扩展名规范。
-  - 原视频无损坏、无遗漏，视频与新文件名完全一一对应。
-- Markdown 笔记验证：
-  - 12 个视频均拥有对应的独立 .md 详细笔记文件。
-  - 每个 .md 文件结构完整：包含视频基本信息（时长/主题）、核心思想总结、详细内容全景拆解（保留具体名师/工具/技巧/Prompt/学术指标）、落地实操建议与避坑提示。
-  - 严禁包含 ASCII Art，图示使用标准 Mermaid，表格使用标准 Markdown。
-- 建议观看顺序验证：
-  - 提出符合逻辑认知（学业起步 -> 科研启蒙 -> AI工具落地 -> Vibe Coding工程 -> 职场避坑）的最佳观看路线。
-  - 在 261022/README.md 中提供导航总览与 Mermaid 学习路线图。
+- 技能目录验证：
+  - `.agents/skills/ego-browser` 目录存在且包含 `SKILL.md` 及依赖文件。
+  - `.claude/skills/ego-browser` 软链接正确指向技能目录。
+  - `skills-lock.json` 正确记录 `citrolabs/ego-lite` 的版本锁定信息。
+  - `skills list` 命令正确识别项目技能 `ego-browser`。
+- 运行时验证：
+  - `ego-browser nodejs -e "console.log('ego-browser test passed')"` 执行成功，退出码为 0。
+  - `ego-browser skill` 能够正常输出使用指南。
