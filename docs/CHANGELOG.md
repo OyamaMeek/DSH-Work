@@ -18,7 +18,7 @@
   - `.gitignore`
   - `memory/{agents.md,plan.md,progress.md,verify.md}`
 
-- **Git 提交**：待提交
+- **Git 提交**：`3424434 feat: 安装 citrolabs/ego-lite 技能 (ego-browser)`
 
 ---
 

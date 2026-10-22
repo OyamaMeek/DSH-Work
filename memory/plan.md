@@ -12,6 +12,6 @@
 1. [x] 解析仓库 `citrolabs/ego-lite` 结构与官方 Skill 规范，确认核心技能为 `ego-browser`。
 2. [x] 使用 `skills add citrolabs/ego-lite -y` 完成项目与相关 Agent 的技能安装。
 3. [x] 验证 `ego-browser` CLI 状态与运行环境。
-4. [ ] 追加 `docs/CHANGELOG.md` 开发记录。
-5. [ ] 归档会话记录至 `context/` 目录。
-6. [ ] 提交代码并推送到远端仓库。
+4. [x] 追加 `docs/CHANGELOG.md` 开发记录。
+5. [x] 归档会话记录至 `context/` 目录。
+6. [x] 提交代码并推送到远端仓库。
