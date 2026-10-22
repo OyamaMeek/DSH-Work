@@ -8,3 +8,5 @@
 - AVAssetWriter 稀疏帧会让成片比脚本时长多出几秒，导出时用 `AVAssetExportSession.timeRange` 裁剪。
 - AVMutableComposition 里每段音频单独 addMutableTrack 会产生几十条音轨，应合并到同一条音轨再逐段 insertTimeRange。
 - PIL 用 Menlo 渲染含中文的代码行会出现方框，需要按行检测 CJK 并切换到 Hiragino 等中文字体。
+- Python 脚本不要命名为 `inspect.py` 等标准库模块名，否则 lxml/python-pptx 导入时会循环导入失败。
+- PowerPoint 平滑切换的 XML 是 `mc:AlternateContent` 内的 `p159:morph`（2015/09 命名空间），回退写 `p:fade`；缩放定位使用 `pslz:sldZm`，`cId` 要与目标页的 `p14:creationId` 一致。
