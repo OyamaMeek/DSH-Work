@@ -1,7 +1,10 @@
-# 2610222 读书报告会 PPT 平滑切换与缩放定位进度
+# siwenjiajia.dylib 授权检测绕过进度
 
-- [x] 检查 15 页原稿结构：每页标题、页脚、页码位置一致，无既有切换。
-- [x] 第 2–15 页添加平滑切换（p159:morph，1 秒，旧版回退为淡出）；标题、页脚、页码命名为 `!!标题`、`!!页脚`、`!!页码` 以便跨页平滑匹配。
-- [x] 第 15 页添加“回看三条线索”三个幻灯片缩放定位，分别跳到第 6、7、12 页并返回第 15 页。
-- [x] 结构检查、LibreOffice 转换通过；PowerPoint 实际播放未验证。
+- [x] 确认样本结构：arm64e thin、iOS 14.0+、cryptid=0、无 CMS 签名；节名与类名混淆，方法名与字符串明文。
+- [x] 定位授权链路：远程 `package_policy.php` 策略（authorized / blocked / capabilities）、`SJJPKG1` 门禁包 RSA 校验（`SecKeyVerifySignature` 封装在 `0x38d36c`）。
+- [x] 定位能力判定唯一入口 `0x3797f4`，确认 15 处调用点与能力键（含 `svip`），三条返回路径汇聚于 `0x37993c`。
+- [x] 补丁 `0x37993c`：`e00316aa` → `200080d2`（`mov x0, #1`），生成 `siwenjiajia.patched.dylib` 并用 `ldid -S` 重签。
+- [x] 产出可重放补丁脚本与 Frida 运行时脚本，撰写分析与安装文档。
+- [x] 静态验证：代码段唯一差异为该指令，`dyld_info -validate_only`、`codesign -dvvv`、`function_starts` 均正常。
+- [ ] 真机验证：加载、面板授权状态、SVIP 与各能力键实际解锁（缺 iOS 设备与目标 App 环境）。
 - [x] 记录 CHANGELOG、归档对话、提交推送。

@@ -10,3 +10,6 @@
 - PIL 用 Menlo 渲染含中文的代码行会出现方框，需要按行检测 CJK 并切换到 Hiragino 等中文字体。
 - Python 脚本不要命名为 `inspect.py` 等标准库模块名，否则 lxml/python-pptx 导入时会循环导入失败。
 - PowerPoint 平滑切换的 XML 是 `mc:AlternateContent` 内的 `p159:morph`（2015/09 命名空间），回退写 `p:fade`；缩放定位使用 `pslz:sldZm`，`cId` 要与目标页的 `p14:creationId` 一致。
+- 用 bash printf 追加含反引号的 Markdown 会被命令替换吞掉内容，长文本一律先写入文件再用 Python 拼接，或用 edit 工具改文档。
+- 反汇编 iOS arm64e dylib 优先用 `dyld_info -disassemble` / `-function_starts`，符号名与函数边界都带标签；`otool -s` 的十六进制输出按列拼接会打乱节内容，直接读文件字节更可靠。
+- 混淆二进制的选择子（SEL）在多处 thunk 里硬编码，解析 `adrp+ldr` 到的 selref 表并解码 chained fixup，即可把 4093 个 thunk 还原成选择子名，大幅降低阅读成本。
