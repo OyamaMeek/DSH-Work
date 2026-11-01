@@ -595,6 +595,6 @@
   - `reconstructed/headers/`、`reconstructed/skeleton/`（重新生成，方法声明修正）
   - `docs/CHANGELOG.md`、`memory/progress.md`、`context/2026/11/01/21-35-00/对话.md`
 
-- **Git 提交**：待提交
+- **Git 提交**：`17b2bf1 feat: 把重建结果整理为可编译的 Theos 工程`；已推送至 `origin/main`。
 
 ---
