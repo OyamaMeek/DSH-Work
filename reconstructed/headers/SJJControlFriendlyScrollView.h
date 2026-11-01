@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e158，父类 UIScrollView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,8 +25,8 @@
 
 @interface SJJControlFriendlyScrollView : UIScrollView
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(id)initWithCoder:(id)initWithCoder;
--(BOOL)touchesShouldCancelInContentView:(id)touchesShouldCancelInContentView;
+-(id)initWithFrame:(struct CGRect)a1; // 0x00391880
+-(id)initWithCoder:(id)a1; // 0x003918ec
+-(BOOL)touchesShouldCancelInContentView:(id)a1; // 0x00391984
 
 @end

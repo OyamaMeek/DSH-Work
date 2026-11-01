@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d4d8，父类 NSObject
 //
 
+// 职责：视频进度条上的 GIF 动画播放器，按帧率驱动 CALayer。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -49,28 +54,28 @@
 
 @property (nonatomic) double elapsedInFrame;
 
--(id)initWithLayer:(id)initWithLayer sourceData:(id)sourceData frames:(id)frames delays:(id)delays;
--(void)dealloc;
--(void)start;
--(void)stop;
--(void)displayLinkDidFire:(id)displayLinkDidFire;
--(id)layer;
--(void)setLayer:(id)setLayer;
--(id)frames;
--(void)setFrames:(id)setFrames;
--(id)delays;
--(void)setDelays:(id)setDelays;
--(id)sourceData;
--(void)setSourceData:(id)setSourceData;
--(id)displayLink;
--(void)setDisplayLink:(id)setDisplayLink;
--(id)displayLinkProxy;
--(void)setDisplayLinkProxy:(id)setDisplayLinkProxy;
--(unsigned long long)frameIndex;
--(void)setFrameIndex:(unsigned long long)setFrameIndex;
--(double)lastTimestamp;
--(void)setLastTimestamp:(double)setLastTimestamp;
--(double)elapsedInFrame;
--(void)setElapsedInFrame:(double)setElapsedInFrame;
+-(id)initWithLayer:(id)a1 sourceData:(id)a2 frames:(id)a3 delays:(id)a4; // 0x0000fdc0
+-(void)dealloc; // 0x0000fedc
+-(void)start; // 0x0000ff40
+-(void)stop; // 0x00010168
+-(void)displayLinkDidFire:(id)a1; // 0x000101cc
+-(id)layer; // 0x00010610
+-(void)setLayer:(id)a1; // 0x00010638
+-(id)frames; // 0x0001063c
+-(void)setFrames:(id)a1; // 0x00010644
+-(id)delays; // 0x0001064c
+-(void)setDelays:(id)a1; // 0x00010654
+-(id)sourceData; // 0x0001065c
+-(void)setSourceData:(id)a1; // 0x00010664
+-(id)displayLink; // 0x00010668
+-(void)setDisplayLink:(id)a1; // 0x00010670
+-(id)displayLinkProxy; // 0x0001067c
+-(void)setDisplayLinkProxy:(id)a1; // 0x00010684
+-(unsigned long long)frameIndex; // 0x00010690
+-(void)setFrameIndex:(unsigned long long)a1; // 0x00010698
+-(double)lastTimestamp; // 0x000106a0
+-(void)setLastTimestamp:(double)a1; // 0x000106a8
+-(double)elapsedInFrame; // 0x000106b0
+-(void)setElapsedInFrame:(double)a1; // 0x000106b8
 
 @end

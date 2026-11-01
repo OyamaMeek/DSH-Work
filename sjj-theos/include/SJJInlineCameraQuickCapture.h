@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e6a8，父类 NSObject
 //
 
+// 职责：相机快速拍摄：AVCapturePhotoOutput / MovieFileOutput 回调。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -85,63 +90,63 @@
 
 @property (nonatomic) long long pendingLivePhotoWaitAttempts;
 
-+(id)shared;
--(id)init;
--(void)triggerFromHost:(id)triggerFromHost sourceView:(id)sourceView;
--(BOOL)consumeTapIfRecordingFromSourceView:(id)consumeTapIfRecordingFromSourceView;
--(void)requestCameraAccessWithCompletion:(id /* block */)requestCameraAccessWithCompletion;
--(void)requestAudioAccessForVideoIfNeeded;
--(void)configureQuickSessionForVideo:(BOOL)configureQuickSessionForVideo completion:(id /* block */)completion;
--(void)captureQuickPhotoFromSource:(id)captureQuickPhotoFromSource;
--(void)finishPendingQuickPhotoCaptureIfReady;
--(void)startQuickVideoFromSource:(id)startQuickVideoFromSource;
--(id)targetWindowForSource:(id)targetWindowForSource;
--(void)stopQuickVideoAndSave;
--(void)cleanupSessionAndIndicator:(BOOL)cleanupSessionAndIndicator;
--(void)captureOutput:(id)captureOutput didFinishProcessingPhoto:(id)didFinishProcessingPhoto error:(id)error;
--(void)captureOutput:(id)captureOutput didStartRecordingToOutputFileAtURL:(id)didStartRecordingToOutputFileAtURL fromConnections:(id)fromConnections;
--(void)captureOutput:(id)captureOutput didFinishRecordingToOutputFileAtURL:(id)didFinishRecordingToOutputFileAtURL fromConnections:(id)fromConnections error:(id)error;
--(id)session;
--(void)setSession:(id)setSession;
--(id)captureDevice;
--(void)setCaptureDevice:(id)setCaptureDevice;
--(id)videoInput;
--(void)setVideoInput:(id)setVideoInput;
--(id)audioInput;
--(void)setAudioInput:(id)setAudioInput;
--(id)photoOutput;
--(void)setPhotoOutput:(id)setPhotoOutput;
--(id)movieOutput;
--(void)setMovieOutput:(id)setMovieOutput;
--(id)sessionQueue;
--(void)setSessionQueue:(id)setSessionQueue;
--(id)recordedVideoURL;
--(void)setRecordedVideoURL:(id)setRecordedVideoURL;
--(id)pendingLivePhotoVideoURL;
--(void)setPendingLivePhotoVideoURL:(id)setPendingLivePhotoVideoURL;
--(id)pendingPhotoData;
--(void)setPendingPhotoData:(id)setPendingPhotoData;
--(id)pendingPhotoImage;
--(void)setPendingPhotoImage:(id)setPendingPhotoImage;
--(id)sourceSnapshot;
--(void)setSourceSnapshot:(id)setSourceSnapshot;
--(id)sourceView;
--(void)setSourceView:(id)setSourceView;
--(BOOL)configuring;
--(void)setConfiguring:(BOOL)setConfiguring;
--(BOOL)recording;
--(void)setRecording:(BOOL)setRecording;
--(BOOL)savingVideo;
--(void)setSavingVideo:(BOOL)setSavingVideo;
--(BOOL)pendingPhotoCaptureActive;
--(void)setPendingPhotoCaptureActive:(BOOL)setPendingPhotoCaptureActive;
--(BOOL)pendingLivePhotoFinished;
--(void)setPendingLivePhotoFinished:(BOOL)setPendingLivePhotoFinished;
--(BOOL)pendingPhotoStoreInFlight;
--(void)setPendingPhotoStoreInFlight:(BOOL)setPendingPhotoStoreInFlight;
--(BOOL)requestedAudioAccess;
--(void)setRequestedAudioAccess:(BOOL)setRequestedAudioAccess;
--(long long)pendingLivePhotoWaitAttempts;
--(void)setPendingLivePhotoWaitAttempts:(long long)setPendingLivePhotoWaitAttempts;
++(id)shared; // 0x0044a090
+-(id)init; // 0x0044a148
+-(void)triggerFromHost:(id)a1 sourceView:(id)a2; // 0x0044a1b0
+-(BOOL)consumeTapIfRecordingFromSourceView:(id)a1; // 0x0044a4dc
+-(void)requestCameraAccessWithCompletion:(id /* block */)a1; // 0x0044a634
+-(void)requestAudioAccessForVideoIfNeeded; // 0x0044a7b0
+-(void)configureQuickSessionForVideo:(BOOL)a1 completion:(id /* block */)a2; // 0x0044a868
+-(void)captureQuickPhotoFromSource:(id)a1; // 0x0044afa4
+-(void)finishPendingQuickPhotoCaptureIfReady; // 0x0044b31c
+-(void)startQuickVideoFromSource:(id)a1; // 0x0044bb0c
+-(id)targetWindowForSource:(id)a1; // 0x0044ce64
+-(void)stopQuickVideoAndSave; // 0x0044d0a0
+-(void)cleanupSessionAndIndicator:(BOOL)a1; // 0x0044d1c0
+-(void)captureOutput:(id)a1 didFinishProcessingPhoto:(id)a2 error:(id)a3; // 0x0044d3f8
+-(void)captureOutput:(id)a1 didStartRecordingToOutputFileAtURL:(id)a2 fromConnections:(id)a3; // 0x0044d7b0
+-(void)captureOutput:(id)a1 didFinishRecordingToOutputFileAtURL:(id)a2 fromConnections:(id)a3 error:(id)a4; // 0x0044d86c
+-(id)session; // 0x0044db54
+-(void)setSession:(id)a1; // 0x0044db5c
+-(id)captureDevice; // 0x0044db68
+-(void)setCaptureDevice:(id)a1; // 0x0044db70
+-(id)videoInput; // 0x0044db7c
+-(void)setVideoInput:(id)a1; // 0x0044db84
+-(id)audioInput; // 0x0044db90
+-(void)setAudioInput:(id)a1; // 0x0044db98
+-(id)photoOutput; // 0x0044dba4
+-(void)setPhotoOutput:(id)a1; // 0x0044dbac
+-(id)movieOutput; // 0x0044dbb8
+-(void)setMovieOutput:(id)a1; // 0x0044dbc0
+-(id)sessionQueue; // 0x0044dbcc
+-(void)setSessionQueue:(id)a1; // 0x0044dbd4
+-(id)recordedVideoURL; // 0x0044dbe0
+-(void)setRecordedVideoURL:(id)a1; // 0x0044dbe8
+-(id)pendingLivePhotoVideoURL; // 0x0044dbf4
+-(void)setPendingLivePhotoVideoURL:(id)a1; // 0x0044dbfc
+-(id)pendingPhotoData; // 0x0044dc08
+-(void)setPendingPhotoData:(id)a1; // 0x0044dc10
+-(id)pendingPhotoImage; // 0x0044dc1c
+-(void)setPendingPhotoImage:(id)a1; // 0x0044dc24
+-(id)sourceSnapshot; // 0x0044dc30
+-(void)setSourceSnapshot:(id)a1; // 0x0044dc38
+-(id)sourceView; // 0x0044dc44
+-(void)setSourceView:(id)a1; // 0x0044dc6c
+-(BOOL)configuring; // 0x0044dc78
+-(void)setConfiguring:(BOOL)a1; // 0x0044dc80
+-(BOOL)recording; // 0x0044dc88
+-(void)setRecording:(BOOL)a1; // 0x0044dc90
+-(BOOL)savingVideo; // 0x0044dc98
+-(void)setSavingVideo:(BOOL)a1; // 0x0044dca0
+-(BOOL)pendingPhotoCaptureActive; // 0x0044dca8
+-(void)setPendingPhotoCaptureActive:(BOOL)a1; // 0x0044dcb0
+-(BOOL)pendingLivePhotoFinished; // 0x0044dcb8
+-(void)setPendingLivePhotoFinished:(BOOL)a1; // 0x0044dcc0
+-(BOOL)pendingPhotoStoreInFlight; // 0x0044dcc8
+-(void)setPendingPhotoStoreInFlight:(BOOL)a1; // 0x0044dcd0
+-(BOOL)requestedAudioAccess; // 0x0044dcd8
+-(void)setRequestedAudioAccess:(BOOL)a1; // 0x0044dce0
+-(long long)pendingLivePhotoWaitAttempts; // 0x0044dce8
+-(void)setPendingLivePhotoWaitAttempts:(long long)a1; // 0x0044dcf0
 
 @end

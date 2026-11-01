@@ -14,25 +14,25 @@
 // 0x0008a750  412 条指令
 // 消息: bounds, initWithFrame:, colorWithWhite:alpha:, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, CGColor, setBorderColor:, setShadowOpacity:, setShadowRadius:, setShadowOffset:
 // C 调用: _objc_retain, _objc_alloc, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)addSectionCardInView:(id)addSectionCardInView y:(double)y height:(double)height { /* 重建骨架，语义见 pseudocode */ }
+-(id)addSectionCardInView:(id)a1 y:(double)a2 height:(double)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008b2d4  243 条指令
 // 消息: viewWithTag:, initWithFrame:, setTag:, setUserInteractionEnabled:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, insertSubview:atIndex:, subviews, tag, clearColor, setTitleColor:forState:, systemFontOfSize:weight:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, _objc_enumerationMutation, _objc_retainBlock
--(void)attachPressAnimation:(id)attachPressAnimation { /* 重建骨架，语义见 pseudocode */ }
+-(void)attachPressAnimation:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008b2d8  242 条指令
 // 消息: viewWithTag:, initWithFrame:, setTag:, setUserInteractionEnabled:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, insertSubview:atIndex:, subviews, tag, clearColor, setTitleColor:forState:, systemFontOfSize:weight:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, _objc_enumerationMutation, _objc_retainBlock
--(void)sjjApplyBaseTabVisualStateInWrap:(id)sjjApplyBaseTabVisualStateInWrap animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjApplyBaseTabVisualStateInWrap:(id)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008bb30  10 条指令
 // 消息: setTransform:
--(void)buttonPressDown:(id)buttonPressDown { /* 重建骨架，语义见 pseudocode */ }
+-(void)buttonPressDown:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008bb58  10 条指令
 // 消息: setTransform:
--(void)buttonPressUp:(id)buttonPressUp { /* 重建骨架，语义见 pseudocode */ }
+-(void)buttonPressUp:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008bb80  92 条指令
 // 消息: count, objectAtIndexedSubscript:, integerValue, viewWithTag:, setAlpha:, setTransform:, animateWithDuration:delay:options:animations:completion:
@@ -42,66 +42,66 @@
 // 0x0008bd50  125 条指令
 // 消息: sjjPausePanelDecorativeAnimationsBrieflyForInteraction, tag, viewWithTag:, boolValue, contentOffset, setContentOffset:animated:, sjjRestoreCurrentPanelInteractionStateSoon, applySubmenuInContent:scroll:, countByEnumeratingWithState:objects:count:, integerValue, applyFoldToggleInPlaceForTag:animated:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _objc_release, _objc_enumerationMutation
--(void)sectionTabTapped:(id)sectionTabTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)sectionTabTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008c014  110 条指令
 // 字符串: "v8@?0"
 // 消息: sjjPausePanelDecorativeAnimationsBrieflyForInteraction, tag, isAliasSVIPUnlocked, superview, viewWithTag:, sjjApplyBaseTabVisualStateInWrap:animated:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _dispatch_time, _dispatch_after
--(void)baseSubTabTapped:(id)baseSubTabTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)baseSubTabTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008c230  79 条指令
 // 字符串: "v8@?0"
 // 消息: sjjPausePanelDecorativeAnimationsBrieflyForInteraction, tag, isAliasSVIPUnlocked
 // C 调用: _objc_retain, _dispatch_async, _objc_release
--(void)videoCategoryTabTapped:(id)videoCategoryTabTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoCategoryTabTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008c3b4  98 条指令
 // 字符串: "v8@?0"
 // 消息: sjjPausePanelDecorativeAnimationsBrieflyForInteraction, isAliasSVIPUnlocked, count, selectedSegmentIndex, objectAtIndexedSubscript:, integerValue
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_async
--(void)videoCategorySegmentChanged:(id)videoCategorySegmentChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoCategorySegmentChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008c59c  1118 条指令
 // 消息: objectForKeyedSubscript:, count, objectAtIndexedSubscript:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)featureToggleTitleForTag:(long long)featureToggleTitleForTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)featureToggleTitleForTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008ddf4  188 条指令
 // 字符串: "gkdr_swj_xiaoxiao_red_packet_enabled", "sjj_spark_renew_enabled", "gkdr_swj_xiaoxiao_red_packet_auto_reply_enabled"
 // 消息: sjjConfiguredFeatureSwitchStateForTag:known:
--(BOOL)featureSwitchStateForTag:(long long)featureSwitchStateForTag known:(BOOL *)known { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)featureSwitchStateForTag:(long long)a1 known:(BOOL *)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008ddf8  187 条指令
 // 字符串: "gkdr_swj_xiaoxiao_red_packet_enabled", "sjj_spark_renew_enabled", "gkdr_swj_xiaoxiao_red_packet_auto_reply_enabled"
--(BOOL)sjjConfiguredFeatureSwitchStateForTag:(long long)sjjConfiguredFeatureSwitchStateForTag known:(BOOL *)known { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjConfiguredFeatureSwitchStateForTag:(long long)a1 known:(BOOL *)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008f888  804 条指令
 // 消息: length, featureToggleTitleForTag:, stringWithFormat:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)featureSwitchHelpHintForTag:(long long)featureSwitchHelpHintForTag title:(id)title { /* 重建骨架，语义见 pseudocode */ }
+-(id)featureSwitchHelpHintForTag:(long long)a1 title:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000908bc  1350 条指令
 // 字符串: "i", "category", "fold", "section", "keywords", "vip"
 // 消息: stringWithFormat:, numberWithInteger:, numberWithBool:, dictionaryWithObjects:forKeys:count:, mutableCopy, setObject:forKeyedSubscript:, copy, lowercaseString, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, countByEnumeratingWithState:objects:count:, stringByReplacingOccurrencesOfString:withString:, length, containsString:
 // C 调用: _objc_autoreleaseReturnValue, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, ___stack_chk_fail, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation
--(id)featureSwitchHelpGuideForTag:(long long)featureSwitchHelpGuideForTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)featureSwitchHelpGuideForTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0009128c  722 条指令
 // 字符串: "i", "category", "fold", "section", "keywords", "vip"
 // 消息: numberWithInteger:, numberWithBool:, dictionaryWithObjects:forKeys:count:, mutableCopy, setObject:forKeyedSubscript:, copy, lowercaseString, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, countByEnumeratingWithState:objects:count:, stringByReplacingOccurrencesOfString:withString:, length, containsString:, sjjFeatureSearchNormalizedText:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, _objc_retain, ___stack_chk_fail, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation
--(id)featureSearchRoutingForSwitchTag:(long long)featureSearchRoutingForSwitchTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)featureSearchRoutingForSwitchTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00091b00  181 条指令
 // 消息: lowercaseString, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, countByEnumeratingWithState:objects:count:, stringByReplacingOccurrencesOfString:withString:, length, containsString:, sjjFeatureSearchNormalizedText:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume
--(id)sjjFeatureSearchNormalizedText:(id)sjjFeatureSearchNormalizedText { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjFeatureSearchNormalizedText:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00091cb8  71 条指令
 // 消息: length, lowercaseString, containsString:, sjjFeatureSearchNormalizedText:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release
--(BOOL)featureSearchText:(id)featureSearchText matchesQuery:(id)matchesQuery normalizedQuery:(id)normalizedQuery { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)featureSearchText:(id)a1 matchesQuery:(id)a2 normalizedQuery:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00091e1c  1671 条指令
 // 字符串: "q", "target_tag", "switch_%ld", "keywords", "category", "i"
@@ -131,25 +131,25 @@
 // 字符串: "vip", "category", "target_tag", "fold"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, lowercaseString, length, sjjFeatureSearchNormalizedText:, isAliasSVIPUnlocked, array, featureSearchIndex, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:, boolValue, integerValue, featureSearchText:matchesQuery:normalizedQuery:, addObject:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _CGRectGetHeight, _CGRectGetMidY, _objc_retainAutorelease
--(id)featureSearchResultsForQuery:(id)featureSearchResultsForQuery { /* 重建骨架，语义见 pseudocode */ }
+-(id)featureSearchResultsForQuery:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0009343c  255 条指令
 // 字符串: "target_tag", "fold"
 // 消息: viewWithTag:, objectForKeyedSubscript:, integerValue, superview, bounds, convertRect:fromView:, contentInset, adjustedContentInset, contentSize, setContentOffset:animated:, layer, borderColor, CGColor, colorWithCGColor:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, _CGRectGetHeight, _CGRectGetMidY, _objc_retainAutorelease
--(void)focusFeatureSearchEntry:(id)focusFeatureSearchEntry { /* 重建骨架，语义见 pseudocode */ }
+-(void)focusFeatureSearchEntry:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00093b4c  144 条指令
 // 字符串: "category", "fold"
 // 消息: objectForKeyedSubscript:, integerValue, isAliasSVIPUnlocked, showToast:duration:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_time, _dispatch_after
--(void)applyFeatureSearchEntry:(id)applyFeatureSearchEntry { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyFeatureSearchEntry:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094004  271 条指令
 // 字符串: "open_secondary"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, length, featureSearchResultsForQuery:, count, array, showToast:duration:, currentTopViewController, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, stringWithFormat:, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass
--(void)performFeatureSearchQuery:(id)performFeatureSearchQuery { /* 重建骨架，语义见 pseudocode */ }
+-(void)performFeatureSearchQuery:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094670  30 条指令
 // 消息: sjjActivateInlineFeatureSearchFromPull
@@ -164,47 +164,47 @@
 // 0x000949b0  245 条指令
 // 消息: viewWithTag:, setUserInteractionEnabled:, setEnabled:, setHidden:, sjjUpdateSearchDotPullProgress:armed:animated:, resignFirstResponder, setText:, sjjHideInlineSearchResultsAnimated:, text, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, length, showToast:duration:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retain, _objc_initWeak, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)sjjSetInlineFeatureSearchActive:(BOOL)sjjSetInlineFeatureSearchActive animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetInlineFeatureSearchActive:(BOOL)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094bc8  111 条指令
 // 消息: sjjHideInlineSearchResultsAnimated:, text, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, resignFirstResponder, length, showToast:duration:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)sjjInlineSearchTextChanged:(id)sjjInlineSearchTextChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjInlineSearchTextChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094c30  85 条指令
 // 消息: text, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, resignFirstResponder, length, sjjHideInlineSearchResultsAnimated:, showToast:duration:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)sjjInlineSearchReturn:(id)sjjInlineSearchReturn { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjInlineSearchReturn:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094e60  704 条指令
 // 消息: sjjSetInlineFeatureSearchActive:animated:, applyFeatureSearchEntry:, viewWithTag:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, sjjHideInlineSearchResultsAnimated:, length, featureSearchResultsForQuery:, bounds, count, convertRect:fromView:, initWithFrame:, setTag:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _CGRectGetWidth, _CGRectGetMaxY, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease, _objc_setAssociatedObject
--(void)sjjInlineSearchCancelTapped:(id)sjjInlineSearchCancelTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjInlineSearchCancelTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094e6c  701 条指令
 // 消息: sjjSetInlineFeatureSearchActive:animated:, applyFeatureSearchEntry:, viewWithTag:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, sjjHideInlineSearchResultsAnimated:, length, featureSearchResultsForQuery:, bounds, count, convertRect:fromView:, initWithFrame:, setTag:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _CGRectGetWidth, _CGRectGetMaxY, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease, _objc_setAssociatedObject
--(void)sjjInlineSearchResultTapped:(id)sjjInlineSearchResultTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjInlineSearchResultTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00094ef0  668 条指令
 // 消息: viewWithTag:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, sjjHideInlineSearchResultsAnimated:, length, featureSearchResultsForQuery:, bounds, count, convertRect:fromView:, initWithFrame:, setTag:, colorWithAlphaComponent:, setBackgroundColor:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _CGRectGetWidth, _CGRectGetMaxY, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease, _objc_setAssociatedObject, _CGRectInset, _CGAffineTransformMakeTranslation
--(void)sjjShowInlineSearchResultsForQuery:(id)sjjShowInlineSearchResultsForQuery { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjShowInlineSearchResultsForQuery:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00095ba0  69 条指令
 // 消息: viewWithTag:, animateWithDuration:delay:options:animations:completion:, removeFromSuperview
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain, _objc_retainBlock, _objc_release
--(void)sjjHideInlineSearchResultsAnimated:(BOOL)sjjHideInlineSearchResultsAnimated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHideInlineSearchResultsAnimated:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00095d38  316 条指令
 // 消息: viewWithTag:, bounds, colorWithAlphaComponent:, clearColor, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetWidth, _CGRectGetHeight, _objc_release, _objc_retain, _objc_retainBlock
--(void)sjjUpdateSearchDotPullProgress:(double)sjjUpdateSearchDotPullProgress armed:(BOOL)armed animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjUpdateSearchDotPullProgress:(double)a1 armed:(BOOL)a2 animated:(BOOL)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00096c40  107 条指令
 // 消息: sjjUpdateSearchDotPullProgress:armed:animated:, viewWithTag:, resignFirstResponder, setText:, sjjHideInlineSearchResultsAnimated:, featureSwitchStateForTag:known:, setTag:, setOn:, swChange:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_opt_new
--(void)sjjResetSearchDotAnimated:(BOOL)sjjResetSearchDotAnimated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjResetSearchDotAnimated:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00096c50  103 条指令
 // 消息: viewWithTag:, resignFirstResponder, setText:, sjjHideInlineSearchResultsAnimated:, sjjUpdateSearchDotPullProgress:armed:animated:, featureSwitchStateForTag:known:, setTag:, setOn:, swChange:
@@ -214,7 +214,7 @@
 // 0x00096d70  31 条指令
 // 消息: featureSwitchStateForTag:known:, setTag:, setOn:, swChange:
 // C 调用: _objc_opt_new, _objc_release
--(void)toggleFeatureSwitchTag:(long long)toggleFeatureSwitchTag { /* 重建骨架，语义见 pseudocode */ }
+-(void)toggleFeatureSwitchTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00096dfc  75 条指令
 // 字符串: "block"
@@ -278,7 +278,7 @@
 // 0x000989c0  152 条指令
 // 消息: openGlassTabBarSettingsPage, currentTopViewController, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, addAction:, setPreferredAction:, presentViewController:animated:completion:, showToast:duration:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_retain, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion:(id /* block */)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion:(id /* block */)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00098ec0  24 条指令
 // 消息: sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
@@ -574,22 +574,22 @@
 // 0x000a5e6c  203 条指令
 // 消息: size, defaultFormat, setOpaque:, scale, mainScreen, setScale:, initWithSize:format:, imageWithActions:, length, showToast:duration:, applySVIPPanelVisualsLiveIfPossible
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_alloc, _UIImageJPEGRepresentation, _UIImagePNGRepresentation, _objc_storeStrong
--(void)applyPanelCustomBackgroundImage:(id)applyPanelCustomBackgroundImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyPanelCustomBackgroundImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a6230  64 条指令
 // 消息: currentTopViewController, setModalPresentationStyle:, setSourceImage:, setCompletion:, presentViewController:animated:completion:, showToast:duration:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_opt_new, _objc_initWeak, _objc_destroyWeak, _objc_release
--(void)presentPanelBackgroundCropperForImage:(id)presentPanelBackgroundCropperForImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentPanelBackgroundCropperForImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a63f8  194 条指令
 // 消息: length, showToast:duration:, sjjRefreshSecondarySettingsPageContentInPlace, currentTopViewController, setModalPresentationStyle:, setSourceImage:, setHintText:, view, bounds, setTargetAspectRatio:, mainScreen, setCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _UIImageJPEGRepresentation, _UIImagePNGRepresentation, _objc_release, __Unwind_Resume, _objc_opt_new, _CGRectGetWidth, _CGRectGetHeight, _objc_initWeak, _objc_destroyWeak
--(void)applyMessagePageBackgroundImage:(id)applyMessagePageBackgroundImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyMessagePageBackgroundImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a6548  110 条指令
 // 消息: currentTopViewController, setModalPresentationStyle:, setSourceImage:, setHintText:, view, bounds, setTargetAspectRatio:, showToast:duration:, mainScreen, setCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_opt_new, _objc_release, _CGRectGetWidth, _CGRectGetHeight, _objc_initWeak, _objc_destroyWeak
--(void)presentMessagePageBackgroundCropperForImage:(id)presentMessagePageBackgroundCropperForImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentMessagePageBackgroundCropperForImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a67e4  162 条指令
 // 消息: currentTopViewController, count, array, objectAtIndexedSubscript:, objectForKeyedSubscript:, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:
@@ -604,7 +604,7 @@
 // 0x000a6e4c  730 条指令
 // 消息: currentTopViewController, view, window, sjjPausePanelDecorativeAnimationsBrieflyForInteraction, numberWithInteger:, copy, bounds, initWithFrame:, colorWithWhite:alpha:, setBackgroundColor:, setAlpha:, shared, addTarget:action:forControlEvents:, addSubview:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_setAssociatedObject, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _CGRectGetMidX, _CGRectGetMidY, _objc_storeStrong
--(void)sjjPresentSecondarySettingsPageWithTitle:(id)sjjPresentSecondarySettingsPageWithTitle subtitle:(id)subtitle tintTag:(long long)tintTag builder:(id /* block */)builder { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPresentSecondarySettingsPageWithTitle:(id)a1 subtitle:(id)a2 tintTag:(long long)a3 builder:(id /* block */)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a8a38  14 条指令
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release
@@ -624,28 +624,28 @@
 // 字符串: "v8@?0"
 // 消息: integerValue, length, sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:, currentTopViewController, sjjClearSecondarySettingsPageContext, dismissViewControllerAnimated:completion:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_respondsToSelector, _objc_release, __Unwind_Resume, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _dispatch_after
--(void)sjjRestoreSecondarySettingsPageAnimated:(BOOL)sjjRestoreSecondarySettingsPageAnimated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjRestoreSecondarySettingsPageAnimated:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a91dc  83 条指令
 // 字符串: "v8@?0"
 // 消息: currentTopViewController, sjjClearSecondarySettingsPageContext, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _dispatch_after
--(void)dismissSJJSecondarySettingsPage:(id)dismissSJJSecondarySettingsPage { /* 重建骨架，语义见 pseudocode */ }
+-(void)dismissSJJSecondarySettingsPage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a9328  296 条指令
 // 消息: viewWithTag:, sjjPanelOrSecondaryViewWithTag:, showToast:duration:, state, sjjConfigureHighRefresh, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_retain
--(id)sjjPanelOrSecondaryViewWithTag:(long long)sjjPanelOrSecondaryViewWithTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjPanelOrSecondaryViewWithTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a93d4  253 条指令
 // 消息: sjjPanelOrSecondaryViewWithTag:, showToast:duration:, state, sjjConfigureHighRefresh, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)sjjValueLabelForSlider:(id)sjjValueLabelForSlider valueTag:(long long)valueTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjValueLabelForSlider:(id)a1 valueTag:(long long)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a94b4  197 条指令
 // 消息: sjjPanelOrSecondaryViewWithTag:, showToast:duration:, state, sjjConfigureHighRefresh, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)sjjPreviewViewForSlider:(id)sjjPreviewViewForSlider valueTag:(long long)valueTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjPreviewViewForSlider:(id)a1 valueTag:(long long)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a9554  157 条指令
 // 消息: showToast:duration:, state, sjjConfigureHighRefresh, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
@@ -655,7 +655,7 @@
 // 0x000a959c  139 条指令
 // 消息: state, sjjConfigureHighRefresh, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue
--(void)sjjHighRefreshTitleLongPress:(id)sjjHighRefreshTitleLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHighRefreshTitleLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a9610  110 条指令
 // 消息: currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
@@ -663,12 +663,12 @@
 -(void)sjjConfigureHighRefresh { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a9870  19 条指令
--(SEL)sjjSecondarySettingsActionForSwitchTag:(long long)sjjSecondarySettingsActionForSwitchTag { /* 重建骨架，语义见 pseudocode */ }
+-(SEL)sjjSecondarySettingsActionForSwitchTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000a9f1c  449 条指令
 // 消息: stringWithFormat:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)sjjSecondarySettingsHintForSwitchTag:(long long)sjjSecondarySettingsHintForSwitchTag { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjSecondarySettingsHintForSwitchTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000aa65c  158 条指令
 // 消息: currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, stringWithFormat:
@@ -704,7 +704,7 @@
 // 0x000ac298  276 条指令
 // 消息: currentTopViewController, length, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _objc_release, _objc_destroyWeak
--(void)presentTopBarTitleColorEditorForSource:(id)presentTopBarTitleColorEditorForSource { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentTopBarTitleColorEditorForSource:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000acb64  324 条指令
 // 字符串: "key", "action"
@@ -727,12 +727,12 @@
 // 0x000ada38  191 条指令
 // 消息: currentTopViewController, length, objectForKeyedSubscript:, stringWithFormat:, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, copy
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_release, _objc_copyWeak, _objc_destroyWeak
--(void)presentTopBarTitleCustomizationEditorForSource:(id)presentTopBarTitleCustomizationEditorForSource replacement:(id)replacement { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentTopBarTitleCustomizationEditorForSource:(id)a1 replacement:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ae188  118 条指令
 // 消息: currentTopViewController, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _objc_release, _objc_destroyWeak
--(void)sjjConfigureSingleTitleCustomizationWithTitle:(id)sjjConfigureSingleTitleCustomizationWithTitle key:(id)key placeholder:(id)placeholder { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjConfigureSingleTitleCustomizationWithTitle:(id)a1 key:(id)a2 placeholder:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ae560  108 条指令
 // 消息: sjjConfigureSingleTitleCustomizationWithTitle:key:placeholder:, sjjRefreshSecondarySettingsPageContentInPlace, showToast:duration:, sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
@@ -765,7 +765,7 @@
 // 0x000ae8c8  34 条指令
 // 消息: sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 // C 调用: _objc_retain, _objc_release
--(void)sjjOpenInterfaceHideSettingsPageForGroup:(id)sjjOpenInterfaceHideSettingsPageForGroup title:(id)title subtitle:(id)subtitle { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjOpenInterfaceHideSettingsPageForGroup:(id)a1 title:(id)a2 subtitle:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000aec24  64 条指令
 // 消息: sjjOpenInterfaceHideSettingsPageForGroup:title:subtitle:, sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
@@ -912,7 +912,7 @@
 // 0x000b3e24  127 条指令
 // 消息: length, showToast:duration:, sjjRefreshSecondarySettingsPageContentInPlace
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _UIImageJPEGRepresentation, _UIImagePNGRepresentation, _objc_release, __Unwind_Resume
--(void)applyCommentBackgroundImage:(id)applyCommentBackgroundImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyCommentBackgroundImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000b3f74  43 条指令
 // 消息: sjjRefreshSecondarySettingsPageContentInPlace, showToast:duration:
@@ -963,7 +963,7 @@
 // 0x000b7fdc  94 条指令
 // 消息: currentTopViewController, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)showProfileEditorWithTitle:(id)showProfileEditorWithTitle current:(id)current saveBlock:(id /* block */)saveBlock { /* 重建骨架，语义见 pseudocode */ }
+-(void)showProfileEditorWithTitle:(id)a1 current:(id)a2 saveBlock:(id /* block */)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000b82bc  600 条指令
 // 字符串: "sjj_panel_profile_account_did_change_v1", "#", "placeholder", "text"
@@ -999,19 +999,19 @@
 // 字符串: "#", "placeholder", "text"
 // 消息: currentTopViewController, length, setTitle:, setSupportsAlpha:, setSelectedColor:, setDelegate:, copy, presentViewController:animated:completion:, hasPrefix:, substringFromIndex:, scannerWithString:, scanHexInt:, colorWithRed:green:blue:alpha:, selectedColor
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_new, _objc_release, _objc_setAssociatedObject, __Unwind_Resume, _objc_autoreleaseReturnValue, __Block_object_assign, _objc_copyWeak, _objc_getAssociatedObject, _objc_initWeak, _objc_destroyWeak
--(void)sjjPresentPanelColorPickerWithTitle:(id)sjjPresentPanelColorPickerWithTitle currentHex:(id)currentHex saveBlock:(id /* block */)saveBlock { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPresentPanelColorPickerWithTitle:(id)a1 currentHex:(id)a2 saveBlock:(id /* block */)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000b8878  233 条指令
 // 字符串: "placeholder", "text"
 // 消息: selectedColor, currentTopViewController, length, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, copy
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)colorPickerViewControllerDidFinish:(id)colorPickerViewControllerDidFinish { /* 重建骨架，语义见 pseudocode */ }
+-(void)colorPickerViewControllerDidFinish:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000b895c  176 条指令
 // 字符串: "placeholder", "text"
 // 消息: currentTopViewController, length, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, copy
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _objc_release, _objc_destroyWeak
--(void)presentPanelTitleReplacementEditorForSource:(id)presentPanelTitleReplacementEditorForSource replacement:(id)replacement { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentPanelTitleReplacementEditorForSource:(id)a1 replacement:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000b90e8  216 条指令
 // 字符串: "%@ -> %@"
@@ -1055,13 +1055,13 @@
 // 字符串: "default", "text", "q", "v40@?0@"NSString"8^B16@"NSString"24B32B36"
 // 消息: currentTopViewController, objectForKeyedSubscript:, longLongValue, length, stringWithFormat:, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, copy
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)sjjEditVideoStatsFakeField:(id)sjjEditVideoStatsFakeField { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjEditVideoStatsFakeField:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000bc358  201 条指令
 // 字符串: "title"
 // 消息: currentTopViewController, length, array, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:, integerValue, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass
--(void)sjjPresentAdaptiveDarkModePickerWithTitle:(id)sjjPresentAdaptiveDarkModePickerWithTitle currentMode:(long long)currentMode saveKey:(id)saveKey storage:(long long *)storage { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPresentAdaptiveDarkModePickerWithTitle:(id)a1 currentMode:(long long)a2 saveKey:(id)a3 storage:(long long *)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000bc82c  174 条指令
 // 字符串: "sjj_adaptive_dark_capsule_mode_v1", "sjj_adaptive_dark_side_dock_mode_v1", "sjj_adaptive_dark_video_popup_mode_v1"
@@ -1118,7 +1118,7 @@
 // 0x000bd7c4  57 条指令
 // 消息: length, currentTopViewController
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)showGeneratedAuthCode:(id)showGeneratedAuthCode { /* 重建骨架，语义见 pseudocode */ }
+-(void)showGeneratedAuthCode:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000bd92c  149 条指令
 // 字符串: "text", "q", "sjj.orb.rotate"
@@ -1166,7 +1166,7 @@
 // 字符串: "gkdr_video_interface_parse_api_2", "placeholder", "text", "keyboard", "q", "secure"
 // 消息: currentTopViewController, stringForKey:, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sideDockAIHubTap:(id)sideDockAIHubTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)sideDockAIHubTap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000be6ac  128 条指令
 // 字符串: "gkdr_video_interface_parse_api_2", "placeholder", "text", "keyboard", "q", "secure"
@@ -1232,7 +1232,7 @@
 // 0x000c7c24  175 条指令
 // 消息: size, showToast:duration:, defaultFormat, setOpaque:, mainScreen, scale, setScale:, initWithSize:format:, imageWithActions:, length
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _UIImageJPEGRepresentation, _UIImagePNGRepresentation
--(void)applyFeedSmoothSwipeBackgroundImage:(id)applyFeedSmoothSwipeBackgroundImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyFeedSmoothSwipeBackgroundImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000c7fb8  146 条指令
 // 字符串: "v16@?0@"NSArray"8"
@@ -1249,7 +1249,7 @@
 // 0x000c8604  129 条指令
 // 消息: currentTopViewController, array, countByEnumeratingWithState:objects:count:, integerValue, stringByAppendingString:, copy, dictionaryWithObjects:forKeys:count:, addObject:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release
--(void)presentDoubleTapActionPickerWithTitle:(id)presentDoubleTapActionPickerWithTitle current:(long long)current save:(id /* block */)save { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentDoubleTapActionPickerWithTitle:(id)a1 current:(long long)a2 save:(id /* block */)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000c8908  50 条指令
 // 消息: firstObject, objectForKeyedSubscript:, integerValue, presentDoubleTapActionPickerWithTitle:current:save:
@@ -1278,7 +1278,7 @@
 // 字符串: "x", "y", "action", "enabled", "scale"
 // 消息: mutableCopy, array, count, UUID, UUIDString, stringWithFormat:, numberWithDouble:, numberWithInteger:, dictionaryWithObjects:forKeys:count:, addObject:, showToast:duration:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addDoubleTapIndicatorWithAction:(long long)addDoubleTapIndicatorWithAction { /* 重建骨架，语义见 pseudocode */ }
+-(void)addDoubleTapIndicatorWithAction:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000c97e8  328 条指令
 // 字符串: "block", "title", "subtitle", "destructive"
@@ -1547,66 +1547,66 @@
 // 0x000d7280  255 条指令
 // 消息: configurationWithPointSize:weight:, systemImageNamed:withConfiguration:, imageWithRenderingMode:, bounds, initWithFrame:, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, CGColor, setBorderColor:, setUserInteractionEnabled:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc, _CGRectGetWidth, _objc_retainAutorelease
--(id)sjjHiFloatingSymbol:(id)sjjHiFloatingSymbol { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjHiFloatingSymbol:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d734c  204 条指令
 // 消息: bounds, initWithFrame:, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, CGColor, setBorderColor:, setUserInteractionEnabled:, insertSubview:atIndex:, setText:, setTextColor:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, __Unwind_Resume
--(void)sjjAddHiFloatingGroupBackground:(id)sjjAddHiFloatingGroupBackground fromY:(double)fromY toY:(double)toY { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjAddHiFloatingGroupBackground:(id)a1 fromY:(double)a2 toY:(double)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d7584  62 条指令
 // 消息: bounds, initWithFrame:, setText:, setTextColor:, systemFontOfSize:weight:, setFont:, addSubview:
 // C 调用: _objc_retain, _objc_alloc, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release
--(double)sjjAddHiFloatingSectionTitle:(id)sjjAddHiFloatingSectionTitle inView:(id)inView y:(double)y { /* 重建骨架，语义见 pseudocode */ }
+-(double)sjjAddHiFloatingSectionTitle:(id)a1 inView:(id)a2 y:(double)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d76b8  288 条指令
 // 消息: mainScreen, scale, bounds, initWithFrame:, colorWithAlphaComponent:, setBackgroundColor:, setUserInteractionEnabled:, addSubview:, clearColor, sjjHiFloatingSymbol:, initWithImage:, setFrame:, setContentMode:, setTintColor:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _CGRectGetHeight, _CGRectGetWidth, __Unwind_Resume, _CGAffineTransformMakeScale, _objc_setAssociatedObject
--(void)sjjAddHiFloatingRowDivider:(id)sjjAddHiFloatingRowDivider { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjAddHiFloatingRowDivider:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d7844  189 条指令
 // 消息: bounds, initWithFrame:, clearColor, setBackgroundColor:, addSubview:, sjjHiFloatingSymbol:, initWithImage:, setFrame:, setContentMode:, setTintColor:, setText:, setTextColor:, systemFontOfSize:weight:, setFont:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _CGAffineTransformMakeScale, _objc_setAssociatedObject
--(double)sjjAddHiFloatingSwitchRow:(id)sjjAddHiFloatingSwitchRow y:(double)y title:(id)title symbol:(id)symbol key:(id)key { /* 重建骨架，语义见 pseudocode */ }
+-(double)sjjAddHiFloatingSwitchRow:(id)a1 y:(double)a2 title:(id)a3 symbol:(id)a4 key:(id)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d7c84  228 条指令
 // 消息: bounds, buttonWithType:, setFrame:, clearColor, setBackgroundColor:, addTarget:action:forControlEvents:, attachPressAnimation:, addSubview:, sjjHiFloatingSymbol:, initWithImage:, setContentMode:, setTintColor:, setUserInteractionEnabled:, initWithFrame:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(double)sjjAddHiFloatingActionRow:(id)sjjAddHiFloatingActionRow y:(double)y title:(id)title detail:(id)detail symbol:(id)symbol action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
+-(double)sjjAddHiFloatingActionRow:(id)a1 y:(double)a2 title:(id)a3 detail:(id)a4 symbol:(id)a5 action:(SEL)a6 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d80e4  150 条指令
 // 消息: initWithItems:, bounds, setFrame:, count, setSelectedSegmentIndex:, colorWithAlphaComponent:, setSelectedSegmentTintColor:, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, setTitleTextAttributes:forState:, addTarget:action:forControlEvents:, addSubview:
 // C 调用: _objc_retain, _objc_alloc, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release
--(double)sjjAddHiFloatingSegment:(id)sjjAddHiFloatingSegment y:(double)y items:(id)items selected:(long long)selected action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
+-(double)sjjAddHiFloatingSegment:(id)a1 y:(double)a2 items:(id)a3 selected:(long long)a4 action:(SEL)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d83f0  174 条指令
 // 消息: bounds, initWithFrame:, addSubview:, sjjHiFloatingSymbol:, initWithImage:, setFrame:, setContentMode:, setTintColor:, setText:, setTextColor:, systemFontOfSize:weight:, setFont:, setAdjustsFontSizeToFitWidth:, setMinimumScaleFactor:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_setAssociatedObject
--(double)sjjAddHiClearScreenSwitchRow:(id)sjjAddHiClearScreenSwitchRow y:(double)y title:(id)title symbol:(id)symbol option:(long long)option { /* 重建骨架，语义见 pseudocode */ }
+-(double)sjjAddHiClearScreenSwitchRow:(id)a1 y:(double)a2 title:(id)a3 symbol:(id)a4 option:(long long)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d8744  230 条指令
 // 字符串: "AudioQueueStart"
 // 消息: selectedSegmentIndex, sjjRefreshSecondarySettingsPageContentInPlace, isOn, length, setBool:forKey:, isEqualToString:, showToast:duration:, setOn:animated:, boolForKey:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass
--(void)sjjHiFloatingSettingsTabChanged:(id)sjjHiFloatingSettingsTabChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHiFloatingSettingsTabChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d87e0  191 条指令
 // 字符串: "AudioQueueStart"
 // 消息: selectedSegmentIndex, sjjRefreshSecondarySettingsPageContentInPlace, isOn, length, setBool:forKey:, isEqualToString:, showToast:duration:, setOn:animated:, boolForKey:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass
--(void)sjjHiClearScreenSettingsTabChanged:(id)sjjHiClearScreenSettingsTabChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHiClearScreenSettingsTabChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d887c  152 条指令
 // 字符串: "AudioQueueStart"
 // 消息: isOn, length, setBool:forKey:, isEqualToString:, showToast:duration:, setOn:animated:, boolForKey:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume
--(void)sjjHiFloatingSwitchChanged:(id)sjjHiFloatingSwitchChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHiFloatingSwitchChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d8b0c  191 条指令
 // 字符串: "30"
 // 消息: isOn, integerValue, setOn:animated:, sjjRefreshSecondarySettingsPageContentInPlace, objectForKey:, doubleForKey:, stringWithFormat:, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_respondsToSelector, _objc_release, __Unwind_Resume
--(void)sjjHiClearScreenSwitchChanged:(id)sjjHiClearScreenSwitchChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHiClearScreenSwitchChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d8c50  110 条指令
 // 字符串: "30"
@@ -1629,7 +1629,7 @@
 // 0x000d960c  43 条指令
 // 消息: length, showToast:duration:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain, _objc_release
--(BOOL)sjjStoreHiFloatingClearIconData:(id)sjjStoreHiFloatingClearIconData { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjStoreHiFloatingClearIconData:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000d98c8  300 条指令
 // 字符串: "subtitle", "instantDismiss"
@@ -1765,17 +1765,17 @@
 // 0x000dd4a8  283 条指令
 // 消息: length, imageWithData:, showToast:duration:, applyNativeLongPressBackgroundImageData:, currentTopViewController, setModalPresentationStyle:, setSourceImage:, mainScreen, bounds, setTargetAspectRatio:, setHintText:, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _UIImageJPEGRepresentation, _UIImagePNGRepresentation, _objc_opt_new, _CGRectGetWidth, _CGRectGetHeight, _objc_initWeak
--(void)applyNativeLongPressBackgroundImageData:(id)applyNativeLongPressBackgroundImageData { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyNativeLongPressBackgroundImageData:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000dd5fc  198 条指令
 // 消息: length, applyNativeLongPressBackgroundImageData:, showToast:duration:, currentTopViewController, setModalPresentationStyle:, setSourceImage:, mainScreen, bounds, setTargetAspectRatio:, setHintText:, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _UIImageJPEGRepresentation, _objc_retainAutoreleasedReturnValue, _UIImagePNGRepresentation, _objc_release, __Unwind_Resume, _objc_opt_new, _CGRectGetWidth, _CGRectGetHeight, _objc_initWeak
--(void)applyNativeLongPressBackgroundImage:(id)applyNativeLongPressBackgroundImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyNativeLongPressBackgroundImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000dd6dc  142 条指令
 // 消息: currentTopViewController, setModalPresentationStyle:, setSourceImage:, mainScreen, bounds, showToast:duration:, setTargetAspectRatio:, setHintText:, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_opt_new, _objc_release, _CGRectGetWidth, _CGRectGetHeight, _objc_initWeak, _objc_destroyWeak
--(void)presentNativeLongPressBackgroundCropperForImage:(id)presentNativeLongPressBackgroundCropperForImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentNativeLongPressBackgroundCropperForImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000dd9ec  201 条指令
 // 消息: currentTopViewController, array, length, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:
@@ -1786,7 +1786,7 @@
 // 字符串: "subtitle", "instantDismiss"
 // 消息: currentTopViewController, length, array, copy, dictionaryWithObjects:forKeys:count:, addObject:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)configureNativeLongPressButtonBackgroundForID:(id)configureNativeLongPressButtonBackgroundForID { /* 重建骨架，语义见 pseudocode */ }
+-(void)configureNativeLongPressButtonBackgroundForID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000de690  466 条指令
 // 消息: length, chooseImage, showToast:duration:, array, typeWithIdentifier:, addObject:, initForOpeningContentTypes:asCopy:, setDelegate:, setAllowsMultipleSelection:, setModalPresentationStyle:, imageWithData:, applyNativeLongPressButtonBackgroundData:itemID:, currentTopViewController, setSourceImage:
@@ -1801,17 +1801,17 @@
 // 0x000de978  280 条指令
 // 消息: length, imageWithData:, showToast:duration:, applyNativeLongPressButtonBackgroundData:itemID:, currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _UIImageJPEGRepresentation, _UIImagePNGRepresentation, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)applyNativeLongPressButtonBackgroundData:(id)applyNativeLongPressButtonBackgroundData itemID:(id)itemID { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyNativeLongPressButtonBackgroundData:(id)a1 itemID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000deb10  178 条指令
 // 消息: length, applyNativeLongPressButtonBackgroundData:itemID:, showToast:duration:, currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _UIImageJPEGRepresentation, _objc_retainAutoreleasedReturnValue, _UIImagePNGRepresentation, _objc_release, __Unwind_Resume, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)applyNativeLongPressButtonBackgroundImage:(id)applyNativeLongPressButtonBackgroundImage itemID:(id)itemID { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyNativeLongPressButtonBackgroundImage:(id)a1 itemID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000dec28  108 条指令
 // 消息: length, currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:, showToast:duration:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_release, _objc_destroyWeak
--(void)presentNativeLongPressButtonBackgroundCropperForImage:(id)presentNativeLongPressButtonBackgroundCropperForImage itemID:(id)itemID { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentNativeLongPressButtonBackgroundCropperForImage:(id)a1 itemID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000deee0  142 条指令
 // 消息: currentTopViewController, array, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:
@@ -1822,7 +1822,7 @@
 // 字符串: "image_slot", "subtitle", "destructive", "instantDismiss", "t"
 // 消息: currentTopViewController, isEqualToString:, length, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)configureNativeLongPressImageSlotForID:(id)configureNativeLongPressImageSlotForID { /* 重建骨架，语义见 pseudocode */ }
+-(void)configureNativeLongPressImageSlotForID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000df888  501 条指令
 // 消息: chooseImage, showToast:duration:, array, typeWithIdentifier:, addObject:, initForOpeningContentTypes:asCopy:, setDelegate:, setAllowsMultipleSelection:, setModalPresentationStyle:, length, imageWithData:, stringWithFormat:, applyNativeLongPressImageSlotData:slotID:, currentTopViewController
@@ -1837,22 +1837,22 @@
 // 0x000dfb34  330 条指令
 // 消息: length, showToast:duration:, imageWithData:, stringWithFormat:, applyNativeLongPressImageSlotData:slotID:, currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, __Unwind_Resume, _UIImageJPEGRepresentation, _UIImagePNGRepresentation, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)applyNativeLongPressImageSlotData:(id)applyNativeLongPressImageSlotData slotID:(id)slotID { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyNativeLongPressImageSlotData:(id)a1 slotID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000dfd74  186 条指令
 // 消息: length, applyNativeLongPressImageSlotData:slotID:, showToast:duration:, currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _UIImageJPEGRepresentation, _objc_retainAutoreleasedReturnValue, _UIImagePNGRepresentation, __Unwind_Resume, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)applyNativeLongPressImageSlotImage:(id)applyNativeLongPressImageSlotImage slotID:(id)slotID { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyNativeLongPressImageSlotImage:(id)a1 slotID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000dfea8  109 条指令
 // 消息: currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setCompletion:, setCancelCompletion:, presentViewController:animated:completion:, showToast:duration:
 // C 调用: _objc_retain, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)presentNativeLongPressImageSlotCropperForImage:(id)presentNativeLongPressImageSlotCropperForImage slotID:(id)slotID { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentNativeLongPressImageSlotCropperForImage:(id)a1 slotID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e0220  145 条指令
 // 消息: currentTopViewController, setModalPresentationStyle:, setSourceImage:, setTargetAspectRatio:, setHintText:, copy, setRectCompletion:, setCancelCompletion:, presentViewController:animated:completion:, showToast:duration:
 // C 调用: _objc_retain, _objc_release, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_new, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)presentNativeLongPressImageSlotCropperForGIFData:(id)presentNativeLongPressImageSlotCropperForGIFData slotID:(id)slotID { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentNativeLongPressImageSlotCropperForGIFData:(id)a1 slotID:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e0d08  209 条指令
 // 消息: currentTopViewController, array, objectForKeyedSubscript:, length, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:, count
@@ -1904,43 +1904,43 @@
 // 字符串: "instantDismiss"
 // 消息: length, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, stringWithFormat:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)configureSideDockIconForActionID:(id)configureSideDockIconForActionID { /* 重建骨架，语义见 pseudocode */ }
+-(void)configureSideDockIconForActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e3054  110 条指令
 // 字符串: "symbol", "text", "q", "SF Symbol"
 // 消息: length, currentTopViewController, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)promptSideDockSymbolForActionID:(id)promptSideDockSymbolForActionID { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptSideDockSymbolForActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e3058  109 条指令
 // 字符串: "symbol", "text", "q", "SF Symbol"
 // 消息: length, currentTopViewController, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)promptSideDockSymbolForActionID:(id)promptSideDockSymbolForActionID selectedState:(BOOL)selectedState { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptSideDockSymbolForActionID:(id)a1 selectedState:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e35bc  304 条指令
 // 字符串: "text", "keyboard", "q"
 // 消息: length, isSourceTypeAvailable:, copy, chooseImage, showToast:duration:, array, typeWithIdentifier:, addObject:, initForOpeningContentTypes:asCopy:, setDelegate:, setAllowsMultipleSelection:, setModalPresentationStyle:, currentTopViewController, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_alloc
--(void)pickSideDockIconFromAlbumForActionID:(id)pickSideDockIconFromAlbumForActionID { /* 重建骨架，语义见 pseudocode */ }
+-(void)pickSideDockIconFromAlbumForActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e35c0  303 条指令
 // 字符串: "text", "keyboard", "q"
 // 消息: length, isSourceTypeAvailable:, copy, chooseImage, showToast:duration:, array, typeWithIdentifier:, addObject:, initForOpeningContentTypes:asCopy:, setDelegate:, setAllowsMultipleSelection:, setModalPresentationStyle:, currentTopViewController, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_alloc
--(void)pickSideDockIconFromAlbumForActionID:(id)pickSideDockIconFromAlbumForActionID selectedState:(BOOL)selectedState { /* 重建骨架，语义见 pseudocode */ }
+-(void)pickSideDockIconFromAlbumForActionID:(id)a1 selectedState:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e3680  255 条指令
 // 字符串: "text", "keyboard", "q"
 // 消息: length, array, typeWithIdentifier:, addObject:, initForOpeningContentTypes:asCopy:, copy, setDelegate:, setAllowsMultipleSelection:, setModalPresentationStyle:, currentTopViewController, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, __Unwind_Resume
--(void)pickSideDockIconFromFileForActionID:(id)pickSideDockIconFromFileForActionID { /* 重建骨架，语义见 pseudocode */ }
+-(void)pickSideDockIconFromFileForActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e3684  254 条指令
 // 字符串: "text", "keyboard", "q"
 // 消息: length, array, typeWithIdentifier:, addObject:, initForOpeningContentTypes:asCopy:, copy, setDelegate:, setAllowsMultipleSelection:, setModalPresentationStyle:, currentTopViewController, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, __Unwind_Resume
--(void)pickSideDockIconFromFileForActionID:(id)pickSideDockIconFromFileForActionID selectedState:(BOOL)selectedState { /* 重建骨架，语义见 pseudocode */ }
+-(void)pickSideDockIconFromFileForActionID:(id)a1 selectedState:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e38dc  104 条指令
 // 字符串: "text", "keyboard", "q"
@@ -1988,7 +1988,7 @@
 // 字符串: "direct_share_friend", "dispatcherManager.context", "viewModel.context", "interactor.context"
 // 消息: currentTopViewController, showToast:duration:, isEqualToString:, set, array, count, objectAtIndexedSubscript:, firstObject, objectForKeyedSubscript:, length, stringWithFormat:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_loadWeakRetained, _objc_release, __Unwind_Resume, _objc_retainBlock, _objc_opt_respondsToSelector, _objc_enumerationMutation, _objc_msgSend, _objc_begin_catch, _objc_end_catch, _objc_autoreleaseReturnValue
--(void)configureSideDockDirectShareFriendForActionID:(id)configureSideDockDirectShareFriendForActionID { /* 重建骨架，语义见 pseudocode */ }
+-(void)configureSideDockDirectShareFriendForActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e4ed0  116 条指令
 // 字符串: "placeholder", "text", "keyboard", "q"
@@ -2004,32 +2004,32 @@
 // 0x000e54b4  66 条指令
 // 消息: editProfileName, state, editProfileSign, isAliasSVIPUnlocked, showToast:duration:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)nameTap:(id)nameTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)nameTap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e54b8  65 条指令
 // 消息: state, editProfileName, editProfileSign, isAliasSVIPUnlocked, showToast:duration:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)nameLongPress:(id)nameLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)nameLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5514  42 条指令
 // 消息: editProfileSign, state, isAliasSVIPUnlocked, showToast:duration:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)signTap:(id)signTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)signTap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5518  41 条指令
 // 消息: state, editProfileSign, isAliasSVIPUnlocked, showToast:duration:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)signLongPress:(id)signLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)signLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5574  18 条指令
 // 消息: isAliasSVIPUnlocked, showToast:duration:
--(void)accountLabelTap:(id)accountLabelTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)accountLabelTap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e55bc  185 条指令
 // 字符串: "title"
 // 消息: state, presentAliasBadgeStyleSelector, isAliasSVIPUnlocked, currentTopViewController, array, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, stringByAppendingString:, copy, dictionaryWithObjects:forKeys:count:, addObject:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass
--(void)accountLabelLongPress:(id)accountLabelLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)accountLabelLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5618  162 条指令
 // 字符串: "title"
@@ -2040,7 +2040,7 @@
 // 0x000e5acc  128 条指令
 // 消息: gestureRecognizers, copy, countByEnumeratingWithState:objects:count:, removeGestureRecognizer:, initWithTarget:action:, setMinimumPressDuration:, addGestureRecognizer:, requireGestureRecognizerToFail:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_alloc
--(void)ensureAliasAccountLabelGestures:(id)ensureAliasAccountLabelGestures { /* 重建骨架，语义见 pseudocode */ }
+-(void)ensureAliasAccountLabelGestures:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5d3c  1138 条指令
 // 字符串: "SVIP", "sjj.svip.badge.glowPulse"
@@ -2052,13 +2052,13 @@
 // 字符串: "SVIP", "sjj.svip.badge.glowPulse"
 // 消息: aliasSVIPBadgeFrameInAvatarBounds:, colorWithRed:green:blue:alpha:, CGColor, arrayWithObjects:count:, clearColor, blackColor, layer, sublayers, copy, removeFromSuperlayer, subviews, removeFromSuperview, aliasSVIPBadgeAppearance, count
 // C 调用: _CGRectGetWidth, _CGRectGetHeight, _CGRectIntegral, _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retain, _objc_enumerationMutation, _CGRectInset
--(struct CGRect)aliasSVIPBadgeFrameInAvatarBounds:(id)aliasSVIPBadgeFrameInAvatarBounds { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGRect)aliasSVIPBadgeFrameInAvatarBounds:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5e78  1059 条指令
 // 字符串: "SVIP", "sjj.svip.badge.glowPulse"
 // 消息: aliasSVIPBadgeFrameInAvatarBounds:, colorWithRed:green:blue:alpha:, CGColor, arrayWithObjects:count:, clearColor, blackColor, layer, sublayers, copy, removeFromSuperlayer, subviews, removeFromSuperview, aliasSVIPBadgeAppearance, count
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retain, _objc_enumerationMutation, _CGRectInset, _CGRectGetWidth, _objc_alloc
--(struct CGRect)aliasSVIPBadgePreviewFrameInAvatarBounds:(id)aliasSVIPBadgePreviewFrameInAvatarBounds { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGRect)aliasSVIPBadgePreviewFrameInAvatarBounds:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e5e7c  1058 条指令
 // 字符串: "SVIP", "sjj.svip.badge.glowPulse"
@@ -2070,13 +2070,13 @@
 // 字符串: "SVIP", "sjj.svip.badge.glowPulse"
 // 消息: layer, sublayers, copy, removeFromSuperlayer, subviews, removeFromSuperview, aliasSVIPBadgeAppearance, count, objectAtIndexedSubscript:, clearColor, blackColor, setCornerRadius:, setCornerCurve:, setMasksToBounds:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retainAutorelease, _CGRectInset, _CGRectGetWidth, _objc_alloc
--(void)decorateSVIPBadgeView:(id)decorateSVIPBadgeView { /* 重建骨架，语义见 pseudocode */ }
+-(void)decorateSVIPBadgeView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e71e8  1313 条指令
 // 字符串: "sjj.avatar.frame.shift", "sjj.avatar.inner.shift", "transform.rotation", "sjj.avatar.orbit.spin"
 // 消息: layer, sublayers, copy, removeFromSuperlayer, clearColor, setBackgroundColor:, setBorderWidth:, CGColor, setBorderColor:, blackColor, setShadowColor:, setShadowOffset:, setShadowRadius:, setShadowOpacity:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retainAutorelease, _CGRectGetWidth, _CGRectInset
--(void)decorateSVIPAvatarFrame:(id)decorateSVIPAvatarFrame withInnerContainer:(id)withInnerContainer previewMode:(BOOL)previewMode { /* 重建骨架，语义见 pseudocode */ }
+-(void)decorateSVIPAvatarFrame:(id)a1 withInnerContainer:(id)a2 previewMode:(BOOL)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000e8b30  20 条指令
 // 消息: isAliasSVIPUnlocked, length
@@ -2107,33 +2107,33 @@
 // 0x000ed460  35 条指令
 // 消息: tag, boolValue
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sjjSetMainPanelScrollPerformanceMode:(BOOL)sjjSetMainPanelScrollPerformanceMode forScrollView:(id)forScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetMainPanelScrollPerformanceMode:(BOOL)a1 forScrollView:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ed464  34 条指令
 // 消息: tag, boolValue
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release
--(BOOL)sjjIsMainPanelScrollDragPerformanceActiveForScrollView:(id)sjjIsMainPanelScrollDragPerformanceActiveForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjIsMainPanelScrollDragPerformanceActiveForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ed50c  434 条指令
 // 字符串: "opaque", "q", "minimumAlpha"
 // 消息: dictionary, begin, setDisableActions:, countByEnumeratingWithState:objects:count:, integerValue, viewWithTag:, isHidden, alpha, numberWithBool:, numberWithDouble:, dictionaryWithObjects:forKeys:count:, setObject:forKeyedSubscript:, setHidden:, count
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, _objc_release, _objc_setAssociatedObject
--(void)sjjSetMainPanelLiveBlurReducedForScrolling:(BOOL)sjjSetMainPanelLiveBlurReducedForScrolling { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetMainPanelLiveBlurReducedForScrolling:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000edfec  113 条指令
 // 消息: tag, unsignedIntegerValue, numberWithUnsignedInteger:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_setAssociatedObject, _objc_initWeak, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)sjjBeginMainPanelScrollDragPerformanceForScrollView:(id)sjjBeginMainPanelScrollDragPerformanceForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjBeginMainPanelScrollDragPerformanceForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ee064  83 条指令
 // 消息: tag, unsignedIntegerValue, numberWithUnsignedInteger:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_setAssociatedObject, _objc_initWeak, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)sjjScheduleMainPanelLiveBlurRestoreForScrollView:(id)sjjScheduleMainPanelLiveBlurRestoreForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjScheduleMainPanelLiveBlurRestoreForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ee2e8  461 条指令
 // 消息: tag, viewWithTag:, unsignedIntegerValue, numberWithUnsignedInteger:, sjjIsMainPanelScrollDragPerformanceActiveForScrollView:, sjjSetMainPanelLiveBlurReducedForScrolling:, count, arrayWithCapacity:, countByEnumeratingWithState:objects:count:, superview, addObject:, array, subviews, accessibilityIdentifier
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_getAssociatedObject, _objc_setAssociatedObject, _objc_enumerationMutation, _objc_autoreleaseReturnValue, ___stack_chk_fail
--(void)sjjFinishMainPanelScrollDragPerformanceForScrollView:(id)sjjFinishMainPanelScrollDragPerformanceForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjFinishMainPanelScrollDragPerformanceForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ee358  433 条指令
 // 消息: viewWithTag:, unsignedIntegerValue, numberWithUnsignedInteger:, sjjIsMainPanelScrollDragPerformanceActiveForScrollView:, sjjSetMainPanelLiveBlurReducedForScrolling:, count, arrayWithCapacity:, countByEnumeratingWithState:objects:count:, superview, addObject:, array, subviews, tag, accessibilityIdentifier
@@ -2143,23 +2143,23 @@
 // 0x000ee468  365 条指令
 // 消息: viewWithTag:, count, arrayWithCapacity:, countByEnumeratingWithState:objects:count:, superview, addObject:, array, subviews, tag, accessibilityIdentifier, isEqualToString:, copy, allObjects
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_getAssociatedObject, _objc_enumerationMutation, _objc_release, _objc_setAssociatedObject, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume
--(id)sjjMainPanelVisualContainersForScrollView:(id)sjjMainPanelVisualContainersForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjMainPanelVisualContainersForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ee870  107 条指令
 // 消息: allObjects, countByEnumeratingWithState:objects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release
--(void)sjjApplyMainPanelTransientScrollReduction:(BOOL)sjjApplyMainPanelTransientScrollReduction forScrollView:(id)forScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjApplyMainPanelTransientScrollReduction:(BOOL)a1 forScrollView:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000eeb9c  30 条指令
 // 消息: tag
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(BOOL)sjjIsPanelOwnedScrollView:(id)sjjIsPanelOwnedScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjIsPanelOwnedScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000eec28  2 条指令
 -(void)sjjPausePanelDecorativeAnimationsBrieflyForInteraction { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000eec2c  2 条指令
--(void)sjjSetPanelDecorativeAnimationsPausedForScrolling:(BOOL)sjjSetPanelDecorativeAnimationsPausedForScrolling { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetPanelDecorativeAnimationsPausedForScrolling:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000eec30  261 条指令
 // 消息: sjjCancelMainPanelScrollDragPerformance, viewWithTag:, isHidden, containsObject:, setHidden:, removeObject:, addObject:, tag, sjjIsFoldExpandedForTag:, subviews, hasPrefix:, setUserInteractionEnabled:
@@ -2174,12 +2174,12 @@
 // 0x000eecf8  211 条指令
 // 消息: isHidden, containsObject:, setHidden:, removeObject:, addObject:, tag, viewWithTag:, sjjIsFoldExpandedForTag:, subviews, hasPrefix:, setUserInteractionEnabled:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _NSStringFromClass
--(void)sjjSetPanelCullHidden:(BOOL)sjjSetPanelCullHidden forView:(id)forView content:(id)content hiddenSet:(id)hiddenSet { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetPanelCullHidden:(BOOL)a1 forView:(id)a2 content:(id)a3 hiddenSet:(id)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000eedf0  149 条指令
 // 消息: tag, viewWithTag:, sjjIsFoldExpandedForTag:, subviews, hasPrefix:, setHidden:, setUserInteractionEnabled:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _NSStringFromClass
--(void)sjjRestoreFoldContainerChildren:(id)sjjRestoreFoldContainerChildren { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjRestoreFoldContainerChildren:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ef0b0  31 条指令
 // C 调用: _objc_initWeak, _dispatch_after, _objc_destroyWeak
@@ -2188,7 +2188,7 @@
 // 0x000ef208  154 条指令
 // 消息: length, subviews, copy, isEqualToString:, setText:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_getAssociatedObject
--(BOOL)sjjUpdateVisibleSummaryActionWithTitle:(id)sjjUpdateVisibleSummaryActionWithTitle status:(id)status subtitle:(id)subtitle { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjUpdateVisibleSummaryActionWithTitle:(id)a1 status:(id)a2 subtitle:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000ef51c  256 条指令
 // 字符串: "views", "height"
@@ -2199,45 +2199,45 @@
 // 0x000eff08  32 条指令
 // 消息: tag
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(BOOL)sjjShouldKeepPanelSubviewStableDuringContentSwap:(id)sjjShouldKeepPanelSubviewStableDuringContentSwap { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjShouldKeepPanelSubviewStableDuringContentSwap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000effa8  25 条指令
 // 消息: tag
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(BOOL)sjjShouldPreservePanelSubviewDuringContentRefresh:(id)sjjShouldPreservePanelSubviewDuringContentRefresh { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjShouldPreservePanelSubviewDuringContentRefresh:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f0020  109 条指令
 // 消息: frame, subviews, countByEnumeratingWithState:objects:count:, tag, sjjSetPanelCullHidden:forView:content:hiddenSet:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetMinY, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _CGRectGetMaxY, _objc_release
--(void)sjjCullMainPanelSubviewsInContainer:(id)sjjCullMainPanelSubviewsInContainer visibleMinY:(double)visibleMinY visibleMaxY:(double)visibleMaxY content:(id)content hiddenSet:(id)hiddenSet { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjCullMainPanelSubviewsInContainer:(id)a1 visibleMinY:(double)a2 visibleMaxY:(double)a3 content:(id)a4 hiddenSet:(id)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f0230  516 条指令
 // 字符串: "_"
 // 消息: tag, sjjUpdateFoldRenderBucketsForScrollView:force:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, sjjIsPanelOwnedScrollView:, sjjMainPanelHasCulledViewsForScrollView:, sjjRestoreMainPanelCulledViewsForScrollView:, sjjIsMainPanelScrollDragPerformanceActiveForScrollView:, contentSize, bounds, contentOffset, doubleValue, numberWithDouble:, viewWithTag:, sjjMainPanelVisualContainersForScrollView:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _CGRectGetHeight, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_setAssociatedObject, _objc_enumerationMutation, _NSStringFromClass, _CGRectInset
--(void)sjjUpdateFoldRenderBucketsForScrollView:(id)sjjUpdateFoldRenderBucketsForScrollView force:(BOOL)force { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjUpdateFoldRenderBucketsForScrollView:(id)a1 force:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f0294  491 条指令
 // 字符串: "_"
 // 消息: sjjUpdateFoldRenderBucketsForScrollView:force:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, sjjIsPanelOwnedScrollView:, tag, sjjMainPanelHasCulledViewsForScrollView:, sjjRestoreMainPanelCulledViewsForScrollView:, sjjIsMainPanelScrollDragPerformanceActiveForScrollView:, contentSize, bounds, contentOffset, doubleValue, numberWithDouble:, viewWithTag:, sjjMainPanelVisualContainersForScrollView:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetHeight, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_setAssociatedObject, _objc_enumerationMutation, _NSStringFromClass, _CGRectInset
--(void)sjjCullMainPanelOffscreenViewsForScrollView:(id)sjjCullMainPanelOffscreenViewsForScrollView force:(BOOL)force { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjCullMainPanelOffscreenViewsForScrollView:(id)a1 force:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f0300  464 条指令
 // 字符串: "_"
 // 消息: sjjIsPanelOwnedScrollView:, tag, sjjMainPanelHasCulledViewsForScrollView:, sjjRestoreMainPanelCulledViewsForScrollView:, sjjIsMainPanelScrollDragPerformanceActiveForScrollView:, contentSize, bounds, contentOffset, doubleValue, numberWithDouble:, viewWithTag:, sjjMainPanelVisualContainersForScrollView:, copy, layer
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetHeight, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_setAssociatedObject, _objc_release, _objc_enumerationMutation, _NSStringFromClass, _CGRectInset, _CGRectIntersectsRect
--(void)sjjCullPanelOwnedOffscreenLayersForScrollView:(id)sjjCullPanelOwnedOffscreenLayersForScrollView force:(BOOL)force { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjCullPanelOwnedOffscreenLayersForScrollView:(id)a1 force:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f0c04  55 条指令
 // 消息: viewWithTag:, count
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_getAssociatedObject, _objc_release
--(BOOL)sjjMainPanelHasCulledViewsForScrollView:(id)sjjMainPanelHasCulledViewsForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjMainPanelHasCulledViewsForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f0d18  160 条指令
 // 消息: viewWithTag:, count, copy, countByEnumeratingWithState:objects:count:, layer, setHidden:, removeAllObjects
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_getAssociatedObject, _objc_enumerationMutation, _objc_release, _objc_setAssociatedObject
--(void)sjjRestoreMainPanelCulledViewsForScrollView:(id)sjjRestoreMainPanelCulledViewsForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjRestoreMainPanelCulledViewsForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f13ac  3 条指令
 -(double)effectiveSVIPPanelWidthScale { /* 重建骨架，语义见 pseudocode */ }
@@ -2248,7 +2248,7 @@
 // 0x000f13c4  109 条指令
 // 消息: isAliasSVIPUnlocked, currentTopViewController, count, array, enumerateObjectsUsingBlock:, showToast:duration:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _objc_release, _objc_destroyWeak
--(void)presentSVIPStyleSelectorWithTitle:(id)presentSVIPStyleSelectorWithTitle key:(id)key currentValue:(long long)currentValue labels:(id)labels toastPrefix:(id)toastPrefix { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentSVIPStyleSelectorWithTitle:(id)a1 key:(id)a2 currentValue:(long long)a3 labels:(id)a4 toastPrefix:(id)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f190c  188 条指令
 // 字符串: "badge_glow", "style"
@@ -2290,7 +2290,7 @@
 // 字符串: "persona"
 // 消息: isAliasSVIPUnlocked, defaultPersona, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, showToast:duration:, valueForKey:, setObject:forKey:, setInteger:forKey:, stringWithFormat:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain
--(void)applySVIPAIReplyPresetByIndex:(long long)applySVIPAIReplyPresetByIndex { /* 重建骨架，语义见 pseudocode */ }
+-(void)applySVIPAIReplyPresetByIndex:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f25e0  173 条指令
 // 字符串: "subtitle", "block"
@@ -2341,7 +2341,7 @@
 // 字符串: "destructive", "block"
 // 消息: isAliasSVIPUnlocked, showToast:duration:, stringWithFormat:, currentTopViewController, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)applySVIPSmartPresetByIndex:(long long)applySVIPSmartPresetByIndex { /* 重建骨架，语义见 pseudocode */ }
+-(void)applySVIPSmartPresetByIndex:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f37cc  212 条指令
 // 字符串: "destructive", "block"
@@ -2352,7 +2352,7 @@
 // 0x000f3da8  60 条指令
 // 消息: isAliasSVIPUnlocked, setAlpha:, setTransform:
 // C 调用: _objc_retain, _objc_release
--(void)playSVIPEntranceAnimationForContainer:(id)playSVIPEntranceAnimationForContainer header:(id)header avatarFrame:(id)avatarFrame badge:(id)badge { /* 重建骨架，语义见 pseudocode */ }
+-(void)playSVIPEntranceAnimationForContainer:(id)a1 header:(id)a2 avatarFrame:(id)a3 badge:(id)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f3ec0  1972 条指令
 // 字符串: "%d|%ld|%@|%.1f", "borderColor", "prefixColor", "valueColor", "valueGlowColor", "ringColor"
@@ -2368,13 +2368,13 @@
 // 0x000f6990  141 条指令
 // 消息: tag, gestureRecognizers, copy, countByEnumeratingWithState:objects:count:, removeGestureRecognizer:, initWithTarget:action:, setMinimumPressDuration:, setAllowableMovement:, setCancelsTouchesInView:, setDelaysTouchesBegan:, setDelaysTouchesEnded:, setDelegate:, addGestureRecognizer:, isAliasSVIPUnlocked
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_alloc
--(void)ensureAliasSVIPBadgeLongPressDragGesture:(id)ensureAliasSVIPBadgeLongPressDragGesture { /* 重建骨架，语义见 pseudocode */ }
+-(void)ensureAliasSVIPBadgeLongPressDragGesture:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f6c28  258 条指令
 // 字符串: "v8@?0"
 // 消息: view, superview, tag, viewWithTag:, isAliasSVIPUnlocked, locationInView:, frame, state, valueWithCGPoint:, bringSubviewToFront:, setAlpha:, CGPointValue, bounds, setFrame:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release, _CGRectGetWidth, _CGRectGetHeight, _CGRectGetMinX, _CGRectGetMinY, _objc_setAssociatedObject, _objc_getAssociatedObject, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectIntegral
--(void)aliasSVIPHeaderBadgeLongPressed:(id)aliasSVIPHeaderBadgeLongPressed { /* 重建骨架，语义见 pseudocode */ }
+-(void)aliasSVIPHeaderBadgeLongPressed:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f705c  509 条指令
 // 字符串: "0", "1", "frame", "hidden"
@@ -2386,13 +2386,13 @@
 // 字符串: "0", "1", "frame", "hidden"
 // 消息: state, chooseProfileAvatar, subviews, count, objectAtIndexedSubscript:, tag, setAccessibilityIdentifier:, stringWithCapacity:, countByEnumeratingWithState:objects:count:, integerValue, sjjIsFoldExpandedForTag:, appendString:, length, objectForKeyedSubscript:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_setAssociatedObject, _objc_enumerationMutation, _objc_autoreleaseReturnValue, ___stack_chk_fail, _objc_getAssociatedObject, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_respondsToSelector
--(void)avatarLongPress:(id)avatarLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)avatarLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f7128  458 条指令
 // 字符串: "0", "1", "frame", "hidden"
 // 消息: subviews, count, objectAtIndexedSubscript:, tag, setAccessibilityIdentifier:, stringWithCapacity:, countByEnumeratingWithState:objects:count:, integerValue, sjjIsFoldExpandedForTag:, appendString:, length, objectForKeyedSubscript:, sjjFoldStateSignature, superview
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_setAssociatedObject, __Unwind_Resume, _objc_enumerationMutation, _objc_autoreleaseReturnValue, ___stack_chk_fail, _objc_getAssociatedObject, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_respondsToSelector
--(void)markViewsInContent:(id)markViewsInContent fromIndex:(long long)fromIndex sectionKey:(id)sectionKey { /* 重建骨架，语义见 pseudocode */ }
+-(void)markViewsInContent:(id)a1 fromIndex:(long long)a2 sectionKey:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f7280  372 条指令
 // 字符串: "0", "1", "frame", "hidden"
@@ -2404,44 +2404,44 @@
 // 字符串: "frame", "hidden"
 // 消息: length, count, objectForKeyedSubscript:, sjjFoldStateSignature, superview, accessibilityIdentifier, isEqualToString:, isDescendantOfView:, CGRectValue, setFrame:, boolValue, setHidden:, tag, isHidden
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_enumerationMutation, _objc_opt_respondsToSelector, _CGRectGetWidth
--(BOOL)sjjApplyFoldSnapshotIfPossibleInContent:(id)sjjApplyFoldSnapshotIfPossibleInContent scroll:(id)scroll activeKey:(id)activeKey { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjApplyFoldSnapshotIfPossibleInContent:(id)a1 scroll:(id)a2 activeKey:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f7974  349 条指令
 // 字符串: "view", "entries", "contentHeight"
 // 消息: length, objectForKeyedSubscript:, count, arrayWithCapacity:, countByEnumeratingWithState:objects:count:, accessibilityIdentifier, isEqualToString:, tag, frame, valueWithCGRect:, numberWithBool:, dictionaryWithObjects:forKeys:count:, addObject:, isHidden
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, _objc_release, _CGRectGetMaxY, _CGRectGetHeight, _objc_setAssociatedObject
--(void)sjjCacheCurrentFoldSnapshotInContent:(id)sjjCacheCurrentFoldSnapshotInContent scroll:(id)scroll { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjCacheCurrentFoldSnapshotInContent:(id)a1 scroll:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f8074  112 条指令
 // 消息: isTracking, isDragging, isDecelerating, unsignedIntegerValue, numberWithUnsignedInteger:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_setAssociatedObject, _objc_initWeak, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)sjjScheduleFoldSnapshotCacheInContent:(id)sjjScheduleFoldSnapshotCacheInContent scroll:(id)scroll { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjScheduleFoldSnapshotCacheInContent:(id)a1 scroll:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f83b0  823 条指令
 // 字符串: "frame", "view", "entries", "contentHeight"
 // 消息: count, objectAtIndexedSubscript:, dictionary, subviews, countByEnumeratingWithState:objects:count:, tag, accessibilityIdentifier, length, objectForKeyedSubscript:, array, setObject:forKeyedSubscript:, addObject:, copy, dictionaryWithCapacity:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_getAssociatedObject, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, _objc_release, _CGRectGetMinY, _objc_setAssociatedObject, _CGRectGetMaxY, _objc_opt_respondsToSelector, _CGRectGetWidth
--(void)applySubmenuInContent:(id)applySubmenuInContent scroll:(id)scroll { /* 重建骨架，语义见 pseudocode */ }
+-(void)applySubmenuInContent:(id)a1 scroll:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f937c  12 条指令
--(void)sjjEnsureLazyPanelPageBuiltForIndex:(long long)sjjEnsureLazyPanelPageBuiltForIndex { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjEnsureLazyPanelPageBuiltForIndex:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f96ac  363 条指令
 // 字符串: "sjj.panel.pageDotPulse"
 // 消息: viewWithTag:, boolValue, bounds, frame, subviews, indexOfObject:, sjjBuildSupportersPageViewWithFrame:panelWidth:panelHeight:, setTag:, numberWithBool:, removeFromSuperview, count, addSubview:, insertSubview:atIndex:, tag
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_getAssociatedObject, _CGRectGetWidth, _CGRectGetHeight, _objc_release, _objc_setAssociatedObject, __Unwind_Resume, _objc_enumerationMutation, _objc_retain, _objc_retainBlock
--(void)sjjRebuildSupportersPageWithAnimationsEnabled:(BOOL)sjjRebuildSupportersPageWithAnimationsEnabled { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjRebuildSupportersPageWithAnimationsEnabled:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000f99f8  152 条指令
 // 字符串: "sjj.panel.pageDotPulse"
 // 消息: viewWithTag:, subviews, tag, colorWithAlphaComponent:, layer, removeAnimationForKey:, sjjUpdatePanelPageAnimationBudgetForIndex:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _objc_retain, _objc_retainBlock
--(void)sjjUpdatePanelPageUIForIndex:(long long)sjjUpdatePanelPageUIForIndex animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjUpdatePanelPageUIForIndex:(long long)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa02c  62 条指令
 // 消息: sjjEnsureLazyPanelPageBuiltForIndex:, viewWithTag:, sjjRebuildSupportersPageWithAnimationsEnabled:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume
--(void)sjjUpdatePanelPageAnimationBudgetForIndex:(long long)sjjUpdatePanelPageAnimationBudgetForIndex { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjUpdatePanelPageAnimationBudgetForIndex:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa118  3 条指令
 -(double)sjjProfileHeaderTrailingReservedWidth { /* 重建骨架，语义见 pseudocode */ }
@@ -2449,271 +2449,271 @@
 // 0x000fa124  157 条指令
 // 消息: viewWithTag:, setCurrentPage:, sjjSetSecretLabVisible:animated:, setHidden:, setAlpha:, setTransform:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _CGAffineTransformMakeTranslation
--(void)sjjUpdateProfileSecretEntryUIForPage:(long long)sjjUpdateProfileSecretEntryUIForPage { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjUpdateProfileSecretEntryUIForPage:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa1a0  126 条指令
 // 消息: sjjSetSecretLabVisible:animated:, viewWithTag:, setHidden:, setAlpha:, setTransform:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGAffineTransformMakeTranslation, _objc_release
--(void)sjjSetProfileSecretPage:(long long)sjjSetProfileSecretPage animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetProfileSecretPage:(long long)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa1ac  123 条指令
 // 消息: viewWithTag:, setHidden:, setAlpha:, setTransform:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGAffineTransformMakeTranslation, _objc_release
--(void)sjjApplySecretLabTransitionProgress:(double)sjjApplySecretLabTransitionProgress { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjApplySecretLabTransitionProgress:(double)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa3dc  127 条指令
 // 消息: viewWithTag:, setHidden:, setAlpha:, setTransform:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGAffineTransformMakeTranslation, _objc_release
--(void)sjjApplyProfileRightPlaceholderTransitionProgress:(double)sjjApplyProfileRightPlaceholderTransitionProgress { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjApplyProfileRightPlaceholderTransitionProgress:(double)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa61c  258 条指令
 // 消息: viewWithTag:, setHidden:, setAlpha:, setTransform:, sjjUpdateProfileSecretEntryUIForPage:, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGAffineTransformMakeTranslation
--(void)sjjRequestSecretLabUnlockIfNeeded:(id /* block */)sjjRequestSecretLabUnlockIfNeeded { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjRequestSecretLabUnlockIfNeeded:(id /* block */)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fa674  236 条指令
 // 消息: viewWithTag:, setHidden:, setAlpha:, setTransform:, sjjUpdateProfileSecretEntryUIForPage:, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGAffineTransformMakeTranslation, _objc_release, _objc_retain
--(void)sjjSetSecretLabVisible:(BOOL)sjjSetSecretLabVisible animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetSecretLabVisible:(BOOL)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fac0c  231 条指令
 // 消息: viewWithTag:, sjjUpdateProfileSecretEntryUIForPage:, setHidden:, setAlpha:, setTransform:, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGAffineTransformMakeTranslation, _objc_release, _objc_retain
--(void)sjjSetProfileRightPlaceholderVisible:(BOOL)sjjSetProfileRightPlaceholderVisible animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetProfileRightPlaceholderVisible:(BOOL)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fb1a0  1930 条指令
 // 字符串: "sjj_panel_profile_message_board_text"
 // 消息: state, view, tag, direction, sjjSetSecretLabVisible:animated:, sjjSetProfileRightPlaceholderVisible:animated:, initWithFrame:, clearColor, setBackgroundColor:, setOpaque:, bounds, layer, setFrame:, colorWithRed:green:blue:alpha:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease, _CGRectGetMaxY, _objc_autoreleaseReturnValue
--(void)handleProfileSecretSwipe:(id)handleProfileSecretSwipe { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleProfileSecretSwipe:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fb2d4  1853 条指令
 // 字符串: "sjj_panel_profile_message_board_text"
 // 消息: initWithFrame:, clearColor, setBackgroundColor:, setOpaque:, bounds, layer, setFrame:, colorWithRed:green:blue:alpha:, CGColor, arrayWithObjects:count:, setColors:, setLocations:, setStartPoint:, setEndPoint:
 // C 调用: _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease, _objc_retain, _CGRectGetMaxY, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_opt_class
--(id)sjjBuildProfileRightPlaceholderPageWithFrame:(struct CGRect)sjjBuildProfileRightPlaceholderPageWithFrame { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjBuildProfileRightPlaceholderPageWithFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fc938  420 条指令
 // 字符串: "sjj_panel_profile_message_board_text"
 // 消息: viewWithTag:, endEditing:, text, setObject:forKey:, synchronize, length, setHidden:, resignFirstResponder, showToast:duration:, tag, sjjProfileMessageBoardTextChanged:, view, bounds, translationInView:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_retain, _CGRectGetWidth, _objc_getAssociatedObject
--(void)sjjDismissProfileMessageBoardKeyboard:(id)sjjDismissProfileMessageBoardKeyboard { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjDismissProfileMessageBoardKeyboard:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fc9ac  391 条指令
 // 字符串: "sjj_panel_profile_message_board_text"
 // 消息: viewWithTag:, text, setObject:forKey:, synchronize, length, setHidden:, resignFirstResponder, showToast:duration:, tag, sjjProfileMessageBoardTextChanged:, view, bounds, translationInView:, state
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _CGRectGetWidth, _objc_getAssociatedObject
--(void)sjjProfileMessageBoardTextChanged:(id)sjjProfileMessageBoardTextChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjProfileMessageBoardTextChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fcb84  273 条指令
 // 消息: tag, sjjProfileMessageBoardTextChanged:, view, bounds, translationInView:, state, sjjApplyProfileRightPlaceholderTransitionProgress:, velocityInView:, sjjSetProfileRightPlaceholderVisible:animated:, sjjApplySecretLabTransitionProgress:, sjjSetSecretLabVisible:animated:, boolValue
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetWidth, _objc_getAssociatedObject
--(void)textViewDidChange:(id)textViewDidChange { /* 重建骨架，语义见 pseudocode */ }
+-(void)textViewDidChange:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fcbe4  249 条指令
 // 消息: view, tag, bounds, translationInView:, state, sjjApplyProfileRightPlaceholderTransitionProgress:, velocityInView:, sjjSetProfileRightPlaceholderVisible:animated:, sjjApplySecretLabTransitionProgress:, sjjSetSecretLabVisible:animated:, boolValue
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetWidth, _objc_release, __Unwind_Resume, _objc_getAssociatedObject
--(void)handleProfileSecretPan:(id)handleProfileSecretPan { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleProfileSecretPan:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fceec  55 条指令
 // 消息: boolValue, view, velocityInView:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)gestureRecognizerShouldBegin:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fcffc  71 条指令
 // 消息: boolValue, view
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fd15c  1923 条指令
 // 字符串: "infoPage", "eyebrow", "currentVersion", "body", "historyTitle", "historyBody"
 // 消息: initWithFrame:, setTag:, clearColor, setBackgroundColor:, setOpaque:, bounds, setAutoresizingMask:, setAlwaysBounceVertical:, setShowsVerticalScrollIndicator:, setShowsHorizontalScrollIndicator:, setDirectionalLockEnabled:, setContentInset:, setContentInsetAdjustmentBehavior:, addSubview:
 // C 调用: _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetWidth, _objc_retainAutorelease, _CGRectGetHeight, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_retain, _objc_retainBlock, _objc_opt_class, _objc_opt_isKindOfClass
--(id)sjjBuildProfileSecretPageWithFrame:(struct CGRect)sjjBuildProfileSecretPageWithFrame { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjBuildProfileSecretPageWithFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fd95c  1411 条指令
 // 字符串: "infoPage", "eyebrow", "currentVersion", "body", "historyTitle", "historyBody"
 // 消息: initWithFrame:, setShowsVerticalScrollIndicator:, setIndicatorStyle:, setDelegate:, setContentInset:, clearColor, setBackgroundColor:, addSubview:, setText:, colorWithAlphaComponent:, setTextColor:, systemFontOfSize:weight:, setFont:, setNumberOfLines:
 // C 调用: _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, _objc_retainBlock, _CGRectGetHeight, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, ___stack_chk_fail
--(id)sjjBuildInfoPageScrollWithFrame:(struct CGRect)sjjBuildInfoPageScrollWithFrame panelWidth:(struct CGSize)panelWidth panelHeight:(id)panelHeight { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjBuildInfoPageScrollWithFrame:(struct CGRect)a1 panelWidth:(struct CGSize)a2 panelHeight:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000fefa4  2048 条指令
 // 字符串: "supportPage", "subtitle", "badgeText", "S", "eyebrow", "names"
 // 消息: initWithFrame:, clearColor, setBackgroundColor:, layer, bounds, setFrame:, setCornerRadius:, colorWithRed:green:blue:alpha:, CGColor, arrayWithObjects:count:, setColors:, setStartPoint:, setEndPoint:, addSublayer:
 // C 调用: _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _CGRectInset, _CGRectGetMaxY, _CGAffineTransformMakeRotation, _CGRectGetWidth, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation
--(id)sjjBuildSupportersPageViewWithFrame:(struct CGRect)sjjBuildSupportersPageViewWithFrame panelWidth:(struct CGSize)panelWidth panelHeight:(id)panelHeight { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjBuildSupportersPageViewWithFrame:(struct CGRect)a1 panelWidth:(struct CGSize)a2 panelHeight:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00103c18  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: tag, viewWithTag:, bounds, contentOffset, numberOfPages, setCurrentPage:, sjjIsPanelOwnedScrollView:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, sjjSyncVideoQualityPageIndicatorForScrollView:, sjjUpdateProfileSecretEntryUIForPage:, sjjUpdateFoldRenderBucketsForScrollView:force:, adjustedContentInset, sjjUpdateSearchDotPullProgress:armed:animated:, sjjFinishMainPanelScrollDragPerformanceForScrollView:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetWidth, _objc_release, __Unwind_Resume, _objc_getAssociatedObject, _objc_msgSendSuper2, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease
--(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)sjjSyncVideoQualityPageIndicatorForScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00103d50  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: sjjIsPanelOwnedScrollView:, tag, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, sjjSyncVideoQualityPageIndicatorForScrollView:, bounds, contentOffset, sjjUpdateProfileSecretEntryUIForPage:, sjjUpdateFoldRenderBucketsForScrollView:force:, adjustedContentInset, sjjUpdateSearchDotPullProgress:armed:animated:, sjjFinishMainPanelScrollDragPerformanceForScrollView:, sjjResetSearchDotAnimated:, sjjUpdatePanelPageUIForIndex:animated:, sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _objc_release, __Unwind_Resume, _objc_msgSendSuper2, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease
--(void)scrollViewDidScroll:(id)scrollViewDidScroll { /* 重建骨架，语义见 pseudocode */ }
+-(void)scrollViewDidScroll:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00103f58  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: tag, sjjSyncVideoQualityPageIndicatorForScrollView:, contentOffset, bounds, sjjUpdateProfileSecretEntryUIForPage:, sjjFinishMainPanelScrollDragPerformanceForScrollView:, sjjResetSearchDotAnimated:, sjjUpdatePanelPageUIForIndex:animated:, sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling, sjjIsPanelOwnedScrollView:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, adjustedContentInset, openFeatureSearchFromPull, sjjBeginMainPanelScrollDragPerformanceForScrollView:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_release, __Unwind_Resume, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease
--(void)scrollViewDidEndDecelerating:(id)scrollViewDidEndDecelerating { /* 重建骨架，语义见 pseudocode */ }
+-(void)scrollViewDidEndDecelerating:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001040fc  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: tag, sjjSyncVideoQualityPageIndicatorForScrollView:, contentOffset, bounds, sjjUpdateProfileSecretEntryUIForPage:, sjjFinishMainPanelScrollDragPerformanceForScrollView:, sjjUpdatePanelPageUIForIndex:animated:, sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling, adjustedContentInset, sjjIsPanelOwnedScrollView:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, openFeatureSearchFromPull, sjjResetSearchDotAnimated:, sjjBeginMainPanelScrollDragPerformanceForScrollView:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_release, __Unwind_Resume, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease
--(void)scrollViewDidEndDragging:(id)scrollViewDidEndDragging willDecelerate:(BOOL)willDecelerate { /* 重建骨架，语义见 pseudocode */ }
+-(void)scrollViewDidEndDragging:(id)a1 willDecelerate:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00104334  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: tag, sjjSyncVideoQualityPageIndicatorForScrollView:, contentOffset, bounds, sjjUpdateProfileSecretEntryUIForPage:, sjjUpdatePanelPageUIForIndex:animated:, sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling, sjjIsPanelOwnedScrollView:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, sjjBeginMainPanelScrollDragPerformanceForScrollView:, clearColor, setBackgroundColor:, setUserInteractionEnabled:, effectiveSVIPPanelOpacity
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_release, __Unwind_Resume, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease, _objc_opt_class, _objc_opt_isKindOfClass
--(void)scrollViewDidEndScrollingAnimation:(id)scrollViewDidEndScrollingAnimation { /* 重建骨架，语义见 pseudocode */ }
+-(void)scrollViewDidEndScrollingAnimation:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00104480  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: tag, sjjBeginMainPanelScrollDragPerformanceForScrollView:, sjjIsPanelOwnedScrollView:, sjjCullPanelOwnedOffscreenLayersForScrollView:force:, clearColor, setBackgroundColor:, setUserInteractionEnabled:, effectiveSVIPPanelOpacity, effectiveSVIPPanelBlurAmount, effectiveSVIPGroupOpacity, effectiveSVIPGroupBlurAmount, isAliasSVIPUnlocked, bounds, effectiveSVIPPanelWidthScale
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease, _objc_opt_class, _objc_opt_isKindOfClass
--(void)scrollViewWillBeginDragging:(id)scrollViewWillBeginDragging { /* 重建骨架，语义见 pseudocode */ }
+-(void)scrollViewWillBeginDragging:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00104504  2048 条指令
 // 字符串: "sjj.svip.panelAura.opacity", "chevron.down", "xmark"
 // 消息: clearColor, setBackgroundColor:, setUserInteractionEnabled:, effectiveSVIPPanelOpacity, effectiveSVIPPanelBlurAmount, effectiveSVIPGroupOpacity, effectiveSVIPGroupBlurAmount, isAliasSVIPUnlocked, bounds, effectiveSVIPPanelWidthScale, effectiveSVIPPanelHeightScale, initWithFrame:, setTag:, layer
 // C 调用: _objc_msgSendSuper2, _objc_retain, _objc_release, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _CGRectGetHeight, _objc_alloc, _objc_retainAutorelease, _objc_opt_class, _objc_opt_isKindOfClass
--(id)initWithFrame:(struct CGRect)initWithFrame { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001152a0  1032 条指令
 // 字符串: "i"
 // 消息: sjjConfiguredFeatureSwitchStateForTag:known:, featureSwitchHelpHintForTag:title:, stringByAppendingString:, sjjSecondarySettingsActionForSwitchTag:, sjjSecondarySettingsHintForSwitchTag:, length, bounds, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:, initWithFrame:, clearColor, setBackgroundColor:, colorWithAlphaComponent:
 // C 调用: _objc_retain, _objc_release, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _objc_alloc, _objc_retainAutorelease, _CGRectGetMaxY, _CGRectGetMaxX, _objc_setAssociatedObject, _CGAffineTransformMakeScale
--(double)addSwitch:(id)addSwitch y:(double)y title:(id)title tag:(long long)tag on:(BOOL)on { /* 重建骨架，语义见 pseudocode */ }
+-(double)addSwitch:(id)a1 y:(double)a2 title:(id)a3 tag:(long long)a4 on:(BOOL)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001169e4  178 条指令
 // 消息: superview, tag, viewWithTag:, isOn, isHidden, alpha, setHidden:, setAlpha:, setTransform:, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_retainBlock
--(void)sjjSwitchVisualStateChanged:(id)sjjSwitchVisualStateChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSwitchVisualStateChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001169ec  176 条指令
 // 消息: superview, tag, viewWithTag:, isOn, isHidden, alpha, setHidden:, setAlpha:, setTransform:, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_retainBlock
--(void)sjjSyncSwitchHelpButtonForSwitch:(id)sjjSyncSwitchHelpButtonForSwitch animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSyncSwitchHelpButtonForSwitch:(id)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00116dc4  713 条指令
 // 字符串: "  "
 // 消息: integerValue, featureSwitchHelpGuideForTag:, array, length, stringWithFormat:, addObject:, count, componentsJoinedByString:, currentTopViewController, view, window, bounds, initWithFrame:, colorWithWhite:alpha:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_opt_respondsToSelector, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _CGRectGetMidX, _CGRectGetMidY
--(void)sjjShowSwitchHelp:(id)sjjShowSwitchHelp { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjShowSwitchHelp:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00117bd0  383 条指令
 // 消息: bounds, buttonWithType:, setFrame:, clearColor, setBackgroundColor:, setAccessibilityLabel:, setAccessibilityValue:, addTarget:action:forControlEvents:, attachPressAnimation:, addSubview:, initWithFrame:, setText:, setTextColor:, systemFontOfSize:weight:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(double)addFlatSecondarySettingsActionRow:(id)addFlatSecondarySettingsActionRow y:(double)y title:(id)title status:(id)status action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
+-(double)addFlatSecondarySettingsActionRow:(id)a1 y:(double)a2 title:(id)a3 status:(id)a4 action:(SEL)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00118354  521 条指令
 // 消息: subviews, lastObject, bounds, systemFontOfSize:weight:, length, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:, buttonWithType:, setFrame:, clearColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:
 // C 调用: _objc_retain, _objc_release, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, _CGRectGetWidth, _objc_retainAutorelease, _objc_setAssociatedObject, _objc_alloc
--(double)addSummaryActionButton:(id)addSummaryActionButton y:(double)y title:(id)title status:(id)status subtitle:(id)subtitle action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
+-(double)addSummaryActionButton:(id)a1 y:(double)a2 title:(id)a3 status:(id)a4 subtitle:(id)a5 action:(SEL)a6 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00118dbc  412 条指令
 // 消息: bounds, systemFontOfSize:weight:, length, dictionaryWithObjects:forKeys:count:, buttonWithType:, setFrame:, clearColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, colorWithWhite:alpha:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _objc_release, _objc_retainAutorelease, _objc_alloc
--(double)addCompactAIActionRow:(id)addCompactAIActionRow y:(double)y title:(id)title subtitle:(id)subtitle symbolName:(id)symbolName action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
+-(double)addCompactAIActionRow:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 symbolName:(id)a5 action:(SEL)a6 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00119644  728 条指令
 // 字符串: "internal", "title", "sjj.side.pet.glowRing.opacity", "api"
 // 消息: length, subviews, reverseObjectEnumerator, allObjects, isEqualToString:, sjjFindSummaryActionButtonWithTitle:inContainer:, bounds, objectForKeyedSubscript:, boolValue, stringWithFormat:, array, countByEnumeratingWithState:objects:count:, addObject:, count
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_getAssociatedObject, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _CGRectGetWidth, _objc_alloc_init
--(id)sjjFindSummaryActionButtonWithTitle:(id)sjjFindSummaryActionButtonWithTitle inContainer:(id)inContainer { /* 重建骨架，语义见 pseudocode */ }
+-(id)sjjFindSummaryActionButtonWithTitle:(id)a1 inContainer:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001198ac  574 条指令
 // 字符串: "internal", "title", "sjj.side.pet.glowRing.opacity", "api"
 // 消息: bounds, objectForKeyedSubscript:, boolValue, stringWithFormat:, array, countByEnumeratingWithState:objects:count:, length, addObject:, count, componentsJoinedByString:, systemFontOfSize:weight:, setLineBreakMode:, setLineSpacing:, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _objc_enumerationMutation, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc_init, _objc_retainAutorelease, _objc_alloc
--(double)addParseAPIActionButton:(id)addParseAPIActionButton y:(double)y { /* 重建骨架，语义见 pseudocode */ }
+-(double)addParseAPIActionButton:(id)a1 y:(double)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011a468  392 条指令
 // 消息: bounds, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringWithFormat:, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:, initWithFrame:, clearColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(double)addBetaUpdateContentCard:(id)addBetaUpdateContentCard y:(double)y { /* 重建骨架，语义见 pseudocode */ }
+-(double)addBetaUpdateContentCard:(id)a1 y:(double)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011ac70  430 条指令
 // 消息: buttonWithType:, setFrame:, clearColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, colorWithWhite:alpha:, CGColor, setBorderColor:, cornerRadius, addTarget:action:forControlEvents:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)buildConfigActionCardWithFrame:(struct CGRect)buildConfigActionCardWithFrame title:(struct CGSize)title status:(id)status subtitle:(id)subtitle action:(id)action { /* 重建骨架，语义见 pseudocode */ }
+-(id)buildConfigActionCardWithFrame:(struct CGRect)a1 title:(struct CGSize)a2 status:(id)a3 subtitle:(id)a4 action:(id)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011b208  72 条指令
 // 消息: systemFontOfSize:weight:, length, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(double)sjjConfigActionCardHeightForSubtitle:(id)sjjConfigActionCardHeightForSubtitle width:(double)width { /* 重建骨架，语义见 pseudocode */ }
+-(double)sjjConfigActionCardHeightForSubtitle:(id)a1 width:(double)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011b374  117 条指令
 // 消息: bounds, sjjConfigActionCardHeightForSubtitle:width:, buildConfigActionCardWithFrame:title:status:subtitle:action:, addSubview:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release
--(double)addTwoColumnConfigCardsInView:(id)addTwoColumnConfigCardsInView y:(double)y leftTitle:(id)leftTitle leftStatus:(id)leftStatus leftSubtitle:(id)leftSubtitle leftAction:(SEL)leftAction rightTitle:(id)rightTitle rightStatus:(id)rightStatus rightSubtitle:(id)rightSubtitle rightAction:(SEL)rightAction { /* 重建骨架，语义见 pseudocode */ }
+-(double)addTwoColumnConfigCardsInView:(id)a1 y:(double)a2 leftTitle:(id)a3 leftStatus:(id)a4 leftSubtitle:(id)a5 leftAction:(SEL)a6 rightTitle:(id)a7 rightStatus:(id)a8 rightSubtitle:(id)a9 rightAction:(SEL)a10 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011b5b8  636 条指令
 // 消息: frame, setFrame:, clearColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, colorWithWhite:alpha:, CGColor, setBorderColor:, cornerRadius, setTitleColor:forState:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _CGRectGetMidX, _objc_release, _objc_retainAutorelease, __Unwind_Resume, _CGRectGetWidth, _objc_alloc, _CGRectGetMaxX
--(double)addBottomAreaDividerInView:(id)addBottomAreaDividerInView y:(double)y { /* 重建骨架，语义见 pseudocode */ }
+-(double)addBottomAreaDividerInView:(id)a1 y:(double)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011b5bc  635 条指令
 // 消息: frame, setFrame:, clearColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, colorWithWhite:alpha:, CGColor, setBorderColor:, cornerRadius, setTitleColor:forState:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _CGRectGetMidX, _objc_release, _objc_retainAutorelease, __Unwind_Resume, _CGRectGetWidth, _objc_alloc, _CGRectGetMaxX
--(void)applyFlatStyleIfNeededForButtonRow:(id)applyFlatStyleIfNeededForButtonRow { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyFlatStyleIfNeededForButtonRow:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011b91c  419 条指令
 // 消息: bounds, initWithFrame:, setTag:, clearColor, setBackgroundColor:, addSubview:, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, sizeWithAttributes:, count, objectAtIndexedSubscript:, colorWithAlphaComponent:, layer, setCornerRadius:
 // C 调用: _objc_retain, _objc_release, _CGRectGetWidth, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _CGRectGetMaxX
--(double)addSubFoldGroupHeader:(id)addSubFoldGroupHeader y:(double)y title:(id)title subtitle:(id)subtitle tag:(long long)tag expanded:(BOOL)expanded { /* 重建骨架，语义见 pseudocode */ }
+-(double)addSubFoldGroupHeader:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 tag:(long long)a5 expanded:(BOOL)a6 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011d394  212 条指令
 // 消息: bounds, buttonWithType:, setFrame:, clearColor, setBackgroundColor:, layer, setCornerRadius:, setBorderWidth:, setTag:, tag, viewWithTag:, addTarget:action:forControlEvents:, addSubview:, initWithFrame:
 // C 调用: _objc_retain, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_setAssociatedObject
--(double)addFoldGroupHeader:(id)addFoldGroupHeader y:(double)y title:(id)title subtitle:(id)subtitle tag:(long long)tag expanded:(BOOL)expanded { /* 重建骨架，语义见 pseudocode */ }
+-(double)addFoldGroupHeader:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 tag:(long long)a5 expanded:(BOOL)a6 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011da04  81 条指令
--(BOOL)sjjIsFoldExpandedForTag:(long long)sjjIsFoldExpandedForTag { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)sjjIsFoldExpandedForTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011dbb4  81 条指令
 // 消息: length, setHidden:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)sjjUpdateFoldHeaderForButton:(id)sjjUpdateFoldHeaderForButton expanded:(BOOL)expanded { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjUpdateFoldHeaderForButton:(id)a1 expanded:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011dcf4  942 条指令
 // 字符串: "v8@?0"
 // 消息: viewWithTag:, superview, sjjRestoreMainPanelCulledViewsForScrollView:, array, count, countByEnumeratingWithState:objects:count:, addObject:, subviews, tag, sjjSetMainPanelScrollPerformanceMode:forScrollView:, sortUsingComparator:, copy, arrayWithCapacity:, isHidden
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_getAssociatedObject, _objc_retain, _objc_enumerationMutation, _objc_setAssociatedObject, _objc_retainBlock, _CGRectGetHeight, __Block_object_dispose
--(void)sjjPersistFoldStateForTag:(long long)sjjPersistFoldStateForTag { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPersistFoldStateForTag:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0011dcf8  941 条指令
 // 字符串: "v8@?0"
 // 消息: viewWithTag:, superview, sjjRestoreMainPanelCulledViewsForScrollView:, array, count, countByEnumeratingWithState:objects:count:, addObject:, subviews, tag, sjjSetMainPanelScrollPerformanceMode:forScrollView:, sortUsingComparator:, copy, arrayWithCapacity:, isHidden
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_getAssociatedObject, _objc_retain, _objc_enumerationMutation, _objc_setAssociatedObject, _objc_retainBlock, _CGRectGetHeight, __Block_object_dispose
--(BOOL)applyFoldToggleInPlaceForTag:(long long)applyFoldToggleInPlaceForTag animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)applyFoldToggleInPlaceForTag:(long long)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001219cc  469 条指令
 // 字符串: "%.0f pt"
 // 消息: bounds, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:, initWithFrame:, clearColor, setBackgroundColor:, colorWithAlphaComponent:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, CGColor, setBorderColor:
 // C 调用: _objc_retain, _objc_release, _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_retainAutorelease, _objc_setAssociatedObject
--(double)addUnifiedSliderCard:(id)addUnifiedSliderCard y:(double)y title:(id)title hint:(id)hint tag:(long long)tag valueTag:(long long)valueTag min:(double)min max:(double)max value:(double)value displayPercent:(BOOL)displayPercent { /* 重建骨架，语义见 pseudocode */ }
+-(double)addUnifiedSliderCard:(id)a1 y:(double)a2 title:(id)a3 hint:(id)a4 tag:(long long)a5 valueTag:(long long)a6 min:(double)a7 max:(double)a8 value:(double)a9 displayPercent:(BOOL)a10 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00122358  247 条指令
 // 消息: sjjPausePanelDecorativeAnimationsBrieflyForInteraction, tag, viewWithTag:, boolValue, sjjIsFoldExpandedForTag:, sjjPersistFoldStateForTag:, applyFoldToggleInPlaceForTag:animated:, performWithoutAnimation:, sjjRestoreCurrentPanelInteractionStateSoon
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_getAssociatedObject, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain, _objc_release
--(void)groupFoldTapped:(id)groupFoldTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)groupFoldTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00122820  150 条指令
 // 消息: showToast:duration:, synchronize, currentTopViewController
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_begin_catch, _objc_end_catch, __Unwind_Resume, _objc_retain, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)applyPanelThemeMode:(long long)applyPanelThemeMode { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyPanelThemeMode:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0012293c  79 条指令
 // 消息: currentTopViewController
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _objc_release, _objc_destroyWeak
--(void)sjjPresentPanelThemePasswordPromptForMode:(long long)sjjPresentPanelThemePasswordPromptForMode title:(id)title password:(id)password successToast:(id)successToast { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPresentPanelThemePasswordPromptForMode:(long long)a1 title:(id)a2 password:(id)a3 successToast:(id)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00122c60  505 条指令
 // 字符串: "arrow.uturn.backward", "m", "paintpalette"
@@ -2725,53 +2725,53 @@
 // 字符串: "m"
 // 消息: currentTopViewController, alertControllerWithTitle:message:preferredStyle:, isAliasSVIPUnlocked, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:, integerValue, stringByAppendingString:, actionWithTitle:style:handler:, addAction:, popoverPresentationController, view, setSourceView:, bounds, setSourceRect:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_unsafeClaimAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass
--(void)sjjPresentSystemThemeActionSheetFromSourceView:(id)sjjPresentSystemThemeActionSheetFromSourceView { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPresentSystemThemeActionSheetFromSourceView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0012356c  89 条指令
 // 字符串: "_presentMenuAtLocation:"
 // 消息: state, view, interactions, countByEnumeratingWithState:objects:count:, locationInView:, sjjPresentSystemThemeActionSheetFromSourceView:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, _NSSelectorFromString, _objc_opt_respondsToSelector, _objc_msgSend, _objc_begin_catch, _objc_end_catch, _objc_release
--(void)sjjHandlePanelThemeMenuLongPress:(id)sjjHandlePanelThemeMenuLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHandlePanelThemeMenuLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00123728  312 条指令
 // 字符串: "t", "m"
 // 消息: view, tag, configurationWithIdentifier:previewProvider:actionProvider:, sjjPanelThemeMenuElements, menuWithTitle:children:, state, currentTopViewController, array, isAliasSVIPUnlocked, objectAtIndexedSubscript:, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_retain, _objc_unsafeClaimAutoreleasedReturnValue, _objc_enumerationMutation, __Block_object_dispose
--(id)contextMenuInteraction:(id)contextMenuInteraction configurationForMenuAtLocation:(struct CGPoint)configurationForMenuAtLocation { /* 重建骨架，语义见 pseudocode */ }
+-(id)contextMenuInteraction:(id)a1 configurationForMenuAtLocation:(struct CGPoint)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00123868  232 条指令
 // 字符串: "t", "m"
 // 消息: state, currentTopViewController, array, isAliasSVIPUnlocked, objectAtIndexedSubscript:, stringWithFormat:, copy, dictionaryWithObjects:forKeys:count:, addObject:, objectForKeyedSubscript:, integerValue, stringByAppendingString:, countByEnumeratingWithState:objects:count:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_unsafeClaimAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, __Block_object_dispose
--(void)collapseButtonLongPress:(id)collapseButtonLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)collapseButtonLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00124158  375 条指令
 // 字符串: "sjj_auto_play_feature_enabled_v1", "sjj_auto_play_active_v1"
 // 消息: isOn, tag, setOn:, showToast:duration:, setBool:forKey:, boolForKey:, sjjConfiguredFeatureSwitchStateForTag:known:, setOn:animated:, sjjSyncSwitchHelpButtonForSwitch:animated:, featureToggleTitleForTag:, length, stringWithFormat:, isAliasSVIPUnlocked
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak, _dispatch_after
--(void)swChange:(id)swChange { /* 重建骨架，语义见 pseudocode */ }
+-(void)swChange:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00130124  786 条指令
 // 字符串: "sjj.side.panelPreview"
 // 消息: sjjSetPanelDecorativeAnimationsPausedForScrolling:, tag, layer, removeAllAnimations, removeFromSuperview, isMainThread, safeAreaInsets, bounds, superview, initWithFrame:, setUserInteractionEnabled:, setAccessibilityIdentifier:, setAlpha:, setTransform:
 // C 调用: _objc_retain, _objc_storeWeak, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _CGRectGetHeight, _dispatch_async, _objc_alloc, _CGAffineTransformMakeScale
--(void)sliderAdjustBegan:(id)sliderAdjustBegan { /* 重建骨架，语义见 pseudocode */ }
+-(void)sliderAdjustBegan:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00130ed0  2048 条指令
 // 字符串: "%.2fG", "sjj_nickname_caption_vertical_offset_manually_adjusted_v1"
 // 消息: isTracking, isHighlighted, tag, value, sjjValueLabelForSlider:valueTag:, stringWithFormat:, setText:, applySVIPPanelVisualsLiveIfPossible, setBool:forKey:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_loadWeakRetained, _objc_release
--(void)sliderChange:(id)sliderChange { /* 重建骨架，语义见 pseudocode */ }
+-(void)sliderChange:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00136ea4  136 条指令
 // 消息: sliderChange:, tag, sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling, applySVIPPanelVisualsLiveIfPossible, layer, removeAllAnimations, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retain, _objc_storeWeak, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue
--(void)sliderAdjustEnded:(id)sliderAdjustEnded { /* 重建骨架，语义见 pseudocode */ }
+-(void)sliderAdjustEnded:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00137194  498 条指令
 // 消息: tag, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, length, dataWithContentsOfFile:, showToast:duration:, defaultManager, removeItemAtPath:error:, removeObjectAtIndex:, isEqualToString:, firstObject, state, view
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_storeStrong, _objc_release, __Unwind_Resume, _objc_autoreleaseReturnValue
--(void)selectFontItem:(id)selectFontItem { /* 重建骨架，语义见 pseudocode */ }
+-(void)selectFontItem:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0013749c  304 条指令
 // 消息: showToast:duration:, tag, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, length, defaultManager, removeItemAtPath:error:, removeObjectAtIndex:, isEqualToString:, firstObject, state, view, copy
@@ -2781,12 +2781,12 @@
 // 0x0013750c  276 条指令
 // 消息: tag, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, length, defaultManager, removeItemAtPath:error:, removeObjectAtIndex:, isEqualToString:, firstObject, state, view, copy, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)deleteFontItem:(id)deleteFontItem { /* 重建骨架，语义见 pseudocode */ }
+-(void)deleteFontItem:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00137754  130 条指令
 // 消息: state, view, tag, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, copy, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, currentTopViewController
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)fontItemLongPress:(id)fontItemLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)fontItemLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00137a58  568 条指令
 // 字符串: "public.truetype-font", "public.opentype-font", "public.font", "public.zip-archive", "public.audio", "public.mp3"
@@ -2845,19 +2845,19 @@
 // 字符串: "import", "sjj_documents_backup_import_%@", "documents_backup.zip", "unzipped", "manifest.json", "frontier_qos"
 // 消息: length, defaultManager, removeItemAtPath:error:, sjjPresentDocumentsBackupImportConfirmationForData:sourceName:manifest:, showToast:duration:, UUID, UUIDString, stringWithFormat:, stringByAppendingPathComponent:, createDirectoryAtPath:withIntermediateDirectories:attributes:error:, writeToFile:atomically:, extractZipAtPath:toDirectory:error:, array, fileExistsAtPath:isDirectory:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _NSTemporaryDirectory, _objc_enumerationMutation, _objc_retainAutorelease, _objc_autorelease, _objc_autoreleaseReturnValue, ___stack_chk_fail
--(void)sjjImportDocumentsBackupData:(id)sjjImportDocumentsBackupData sourceName:(id)sourceName { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjImportDocumentsBackupData:(id)a1 sourceName:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0013c060  609 条指令
 // 字符串: "created_at_text", "created_at", "file_count", "name", "sjj_documents_backup_zip_v1", "sjj_documents_backup_zip_legacy"
 // 消息: currentTopViewController, stringValue, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, objectForKeyedSubscript:, doubleValue, unsignedIntegerValue, countByEnumeratingWithState:objects:count:, array, containsObject:, addObject:, count, isEqualToString:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_respondsToSelector, _objc_begin_catch, _objc_end_catch, _objc_enumerationMutation, _objc_copyWeak, _objc_destroyWeak
--(void)sjjPresentDocumentsBackupImportConfirmationForData:(id)sjjPresentDocumentsBackupImportConfirmationForData sourceName:(id)sourceName manifest:(id)manifest { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjPresentDocumentsBackupImportConfirmationForData:(id)a1 sourceName:(id)a2 manifest:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0013ccd8  994 条指令
 // 字符串: "target_dir", "frontier_qos", "Preferences", "bullet-", ".plist"
 // 消息: count, array, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:, length, defaultManager, set, isEqualToString:, stringByAppendingPathComponent:, contentsOfDirectoryAtPath:error:, hasPrefix:, hasSuffix:, copy, attributesOfItemAtPath:error:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation, _objc_release
--(void)sjjStartDocumentsBackupRestoreWithData:(id)sjjStartDocumentsBackupRestoreWithData sourceName:(id)sourceName { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjStartDocumentsBackupRestoreWithData:(id)a1 sourceName:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0013e3b4  291 条指令
 // 消息: length, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, defaultManager, fileExistsAtPath:isDirectory:, stringWithFormat:, currentTopViewController, showToast:duration:, sjjPresentDocumentsBackupRestoreFinishedRestartPrompt
@@ -2886,33 +2886,33 @@
 // 字符串: "image_slot_1", "data"
 // 消息: copy, length, showToast:duration:, sjjStoreHiFloatingClearIconData:, imageWithData:, applyFeedSmoothSwipeBackgroundImage:, presentPanelBackgroundCropperForImage:, mainScreen, scale, imageWithData:scale:, applyCommentBackgroundImage:, presentMessagePageBackgroundCropperForImage:, applyNativeLongPressBackgroundImageData:, presentNativeLongPressImageSlotCropperForGIFData:slotID:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_storeStrong, _objc_release, _objc_loadWeakRetained, __Unwind_Resume, _objc_autoreleaseReturnValue, _UIImageJPEGRepresentation, _objc_getAssociatedObject, _objc_opt_respondsToSelector
--(void)sjjHandlePickedImageData:(id)sjjHandlePickedImageData image:(id)image target:(long long)target { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjHandlePickedImageData:(id)a1 image:(id)a2 target:(long long)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00140f28  97 条指令
 // 消息: integerValue, dismissViewControllerAnimated:completion:, firstObject
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_respondsToSelector, _objc_opt_class, _objc_opt_isKindOfClass, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak, _objc_release
--(void)picker:(id)picker didFinishPicking:(id)didFinishPicking { /* 重建骨架，语义见 pseudocode */ }
+-(void)picker:(id)a1 didFinishPicking:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x001412a0  1296 条指令
 // 字符串: "v8@?0", "image_slot_1"
 // 消息: integerValue, copy, length, dismissViewControllerAnimated:completion:, objectForKeyedSubscript:, setNetworkAccessAllowed:, setVersion:, setDeliveryMode:, defaultManager, requestImageDataAndOrientationForAsset:options:resultHandler:, dataWithContentsOfURL:, sjjStoreHiFloatingClearIconData:
 // C 调用: _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_respondsToSelector, _objc_retainBlock, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_new, _objc_release, _objc_copyWeak, _UIImagePNGRepresentation, _objc_storeStrong
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00144630  152 条指令
 // 消息: dismissViewControllerAnimated:completion:, firstObject, startAccessingSecurityScopedResource, dataWithContentsOfURL:options:error:, length, dataWithData:, stopAccessingSecurityScopedResource, copy, showToast:duration:, localizedDescription
 // C 调用: _objc_release, _objc_retain, _objc_retainAutoreleasedReturnValue
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePickerControllerDidCancel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00144684  131 条指令
 // 消息: firstObject, startAccessingSecurityScopedResource, dataWithContentsOfURL:options:error:, length, dataWithData:, stopAccessingSecurityScopedResource, copy, showToast:duration:, localizedDescription
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs { /* 重建骨架，语义见 pseudocode */ }
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00145ca8  179 条指令
 // 消息: sjjPrepareInlineFeatureSearchForPanelDismiss, sjjRemovePanelDecorativeAnimations, isMainThread, invalidate, setUserInteractionEnabled:, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retain, _dispatch_async, _objc_retainBlock
--(void)documentPickerWasCancelled:(id)documentPickerWasCancelled { /* 重建骨架，语义见 pseudocode */ }
+-(void)documentPickerWasCancelled:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00145cf0  161 条指令
 // 消息: sjjPrepareInlineFeatureSearchForPanelDismiss, sjjRemovePanelDecorativeAnimations, isMainThread, invalidate, setUserInteractionEnabled:, animateWithDuration:delay:options:animations:completion:

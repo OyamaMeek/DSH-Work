@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fd78，父类 NSObject
 //
 
+// 职责：AI 回复模块的通用工具。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,31 +25,31 @@
 
 @interface AWECAUtils : NSObject
 
-+(id)documentsPath;
-+(id)audioSavePath;
-+(void)ensureDirectoriesExist;
-+(void)showToast:(id)showToast;
-+(void)showToast:(id)showToast duration:(double)duration;
-+(void)showActionStatusToast:(id)showActionStatusToast duration:(double)duration;
-+(void)showLoadingHUD:(id)showLoadingHUD;
-+(void)updateLoadingHUDTitle:(id)updateLoadingHUDTitle detail:(id)detail;
-+(void)hideLoadingHUD;
-+(void)beginAIAutoReplyIndicator;
-+(void)endAIAutoReplyIndicator;
-+(void)refreshAIAutoReplyIndicatorAppearance;
-+(void)setAIAutoReplyIndicatorMode:(long long)setAIAutoReplyIndicatorMode;
-+(void)flashAIAutoReplySuccessBurst;
-+(void)flashAIAutoReplyFailureBurst;
-+(void)exportAudioClipAtPath:(id)exportAudioClipAtPath startSeconds:(double)startSeconds endSeconds:(double)endSeconds toOutputPath:(id)toOutputPath completion:(id /* block */)completion;
-+(id)audioWaveformSamplesAtPath:(id)audioWaveformSamplesAtPath sampleCount:(unsigned long long)sampleCount;
-+(id)generateFilenameForCommentID:(id)generateFilenameForCommentID duration:(long long)duration;
-+(id)sanitizeFilename:(id)sanitizeFilename maxLength:(unsigned long long)maxLength;
-+(id)topViewController;
-+(BOOL)extractZipAtPath:(id)extractZipAtPath toDirectory:(id)toDirectory error:(id *)error;
-+(BOOL)extractZipAtPath:(id)extractZipAtPath toDirectory:(id)toDirectory maxTotalBytes:(unsigned long long)maxTotalBytes maxFileCount:(unsigned long long)maxFileCount error:(id *)error;
-+(BOOL)createZipAtPath:(id)createZipAtPath fromDirectory:(id)fromDirectory error:(id *)error;
-+(BOOL)isEncryptedConfigV3Payload:(id)isEncryptedConfigV3Payload kind:(unsigned long long *)kind;
-+(id)encryptConfigV3Payload:(id)encryptConfigV3Payload kind:(unsigned long long)kind error:(id *)error;
-+(id)decryptConfigV3Payload:(id)decryptConfigV3Payload expectedKind:(unsigned long long)expectedKind error:(id *)error;
++(id)documentsPath; // 0x0064a228
++(id)audioSavePath; // 0x0064a284
++(void)ensureDirectoriesExist; // 0x0064a2dc
++(void)showToast:(id)a1; // 0x0064a3c8
++(void)showToast:(id)a1 duration:(double)a2; // 0x0064a3d4
++(void)showActionStatusToast:(id)a1 duration:(double)a2; // 0x0064a464
++(void)showLoadingHUD:(id)a1; // 0x0064a470
++(void)updateLoadingHUDTitle:(id)a1 detail:(id)a2; // 0x0064cfc4
++(void)hideLoadingHUD; // 0x0064d464
++(void)beginAIAutoReplyIndicator; // 0x0064d79c
++(void)endAIAutoReplyIndicator; // 0x0064f47c
++(void)refreshAIAutoReplyIndicatorAppearance; // 0x0064f8d8
++(void)setAIAutoReplyIndicatorMode:(long long)a1; // 0x0064ff60
++(void)flashAIAutoReplySuccessBurst; // 0x00650318
++(void)flashAIAutoReplyFailureBurst; // 0x006514c8
++(void)exportAudioClipAtPath:(id)a1 startSeconds:(double)a2 endSeconds:(double)a3 toOutputPath:(id)a4 completion:(id /* block */)a5; // 0x00651e70
++(id)audioWaveformSamplesAtPath:(id)a1 sampleCount:(unsigned long long)a2; // 0x00652280
++(id)generateFilenameForCommentID:(id)a1 duration:(long long)a2; // 0x00652978
++(id)sanitizeFilename:(id)a1 maxLength:(unsigned long long)a2; // 0x00652a30
++(id)topViewController; // 0x00652b90
++(BOOL)extractZipAtPath:(id)a1 toDirectory:(id)a2 error:(id *)a3; // 0x00652e4c
++(BOOL)extractZipAtPath:(id)a1 toDirectory:(id)a2 maxTotalBytes:(unsigned long long)a3 maxFileCount:(unsigned long long)a4 error:(id *)a5; // 0x00652e5c
++(BOOL)createZipAtPath:(id)a1 fromDirectory:(id)a2 error:(id *)a3; // 0x00653cf0
++(BOOL)isEncryptedConfigV3Payload:(id)a1 kind:(unsigned long long *)a2; // 0x00654818
++(id)encryptConfigV3Payload:(id)a1 kind:(unsigned long long)a2 error:(id *)a3; // 0x0065490c
++(id)decryptConfigV3Payload:(id)a1 expectedKind:(unsigned long long)a2 error:(id *)a3; // 0x00654eb8
 
 @end

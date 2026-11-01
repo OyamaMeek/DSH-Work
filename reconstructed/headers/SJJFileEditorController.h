@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f828，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -29,10 +34,10 @@
     NSString * _originalExt;
 }
 
--(id)initWithFilePath:(id)initWithFilePath rootPath:(id)rootPath darkTheme:(BOOL)darkTheme;
--(void)viewDidLoad;
--(void)viewDidLayoutSubviews;
--(void)loadFileContent;
--(void)saveTap;
+-(id)initWithFilePath:(id)a1 rootPath:(id)a2 darkTheme:(BOOL)a3; // 0x005c3328
+-(void)viewDidLoad; // 0x005c3534
+-(void)viewDidLayoutSubviews; // 0x005c397c
+-(void)loadFileContent; // 0x005c3b38
+-(void)saveTap; // 0x005c4534
 
 @end

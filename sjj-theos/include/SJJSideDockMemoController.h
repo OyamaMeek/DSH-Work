@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e1a8，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -35,19 +40,19 @@
 
 @property (copy, nonatomic) id /* block */ onSave;
 
--(void)viewDidLoad;
--(void)viewDidLayoutSubviews;
--(void)dismissKeyboardTap;
--(void)keyboardWillChangeFrame:(id)keyboardWillChangeFrame;
--(void)keyboardWillHide:(id)keyboardWillHide;
--(void)closeTap;
--(void)saveTap;
--(void)dealloc;
--(BOOL)darkTheme;
--(void)setDarkTheme:(BOOL)setDarkTheme;
--(id)initialText;
--(void)setInitialText:(id)setInitialText;
--(id /* block */)onSave;
--(void)setOnSave:(id /* block */)setOnSave;
+-(void)viewDidLoad; // 0x00391a84
+-(void)viewDidLayoutSubviews; // 0x00392514
+-(void)dismissKeyboardTap; // 0x003927f0
+-(void)keyboardWillChangeFrame:(id)a1; // 0x00392840
+-(void)keyboardWillHide:(id)a1; // 0x00392a58
+-(void)closeTap; // 0x00392b58
+-(void)saveTap; // 0x00392bbc
+-(void)dealloc; // 0x00392f10
+-(BOOL)darkTheme; // 0x00392fb0
+-(void)setDarkTheme:(BOOL)a1; // 0x00392fbc
+-(id)initialText; // 0x00392fc8
+-(void)setInitialText:(id)a1; // 0x00392fd4
+-(id /* block */)onSave; // 0x00392fe0
+-(void)setOnSave:(id /* block */)a1; // 0x00392fec
 
 @end

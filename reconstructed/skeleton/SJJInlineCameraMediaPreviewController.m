@@ -14,12 +14,12 @@
 // 0x00424e5c  150 条指令
 // 消息: previewImage, mediaContainerView, livePhotoFrameMaskView, initWithFrame:, setLivePhotoFrameMaskView:, setUserInteractionEnabled:, setClipsToBounds:, layer, setCornerCurve:, addSubview:, scale, mainScreen, size
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_alloc
--(void)layoutLivePhotoFrameMaskWithPixelRect:(struct CGRect)layoutLivePhotoFrameMaskWithPixelRect { /* 重建骨架，语义见 pseudocode */ }
+-(void)layoutLivePhotoFrameMaskWithPixelRect:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00425458  67 条指令
 // 消息: object, player, currentItem, seekToTime:toleranceBefore:toleranceAfter:, liveMotionPlayback, play
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)liveMotionDidReachEnd:(id)liveMotionDidReachEnd { /* 重建骨架，语义见 pseudocode */ }
+-(void)liveMotionDidReachEnd:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0042559c  654 条指令
 // 字符串: "sjj.inline.camera.preview.topVeil", "sjj.inline.camera.preview.wash", "photo"
@@ -30,7 +30,7 @@
 // 0x00426300  42 条指令
 // 消息: animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_msgSendSuper2
--(void)viewDidAppear:(BOOL)viewDidAppear { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewDidAppear:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004264d8  45 条指令
 // 消息: player, pause, restoreInlineCameraBackdropIfNeeded, animateWithDuration:delay:options:animations:completion:
@@ -63,7 +63,7 @@
 
 // 0x00427148  271 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setItem:(id)setItem { /* 重建骨架，语义见 pseudocode */ }
+-(void)setItem:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427154  268 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -71,7 +71,7 @@
 
 // 0x00427160  265 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setOverlayControl:(id)setOverlayControl { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOverlayControl:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427170  261 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -79,7 +79,7 @@
 
 // 0x0042717c  258 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setBlurView:(id)setBlurView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBlurView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0042718c  254 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -87,7 +87,7 @@
 
 // 0x00427198  251 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setBackgroundTintView:(id)setBackgroundTintView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundTintView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004271a8  247 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -95,7 +95,7 @@
 
 // 0x004271b4  244 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setCardView:(id)setCardView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCardView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004271c4  240 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -103,7 +103,7 @@
 
 // 0x004271d0  237 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setMediaContainerView:(id)setMediaContainerView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMediaContainerView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004271e0  233 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -111,7 +111,7 @@
 
 // 0x004271ec  230 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setImageView:(id)setImageView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004271fc  226 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -119,7 +119,7 @@
 
 // 0x00427208  223 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setLivePhotoView:(id)setLivePhotoView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLivePhotoView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427218  219 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -127,7 +127,7 @@
 
 // 0x00427224  216 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setLivePhotoFrameMaskView:(id)setLivePhotoFrameMaskView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLivePhotoFrameMaskView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427234  212 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -135,7 +135,7 @@
 
 // 0x00427240  209 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setLiveMotionLayer:(id)setLiveMotionLayer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLiveMotionLayer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427250  205 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -143,7 +143,7 @@
 
 // 0x0042725c  202 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setTitleLabel:(id)setTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0042726c  198 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -151,7 +151,7 @@
 
 // 0x00427278  195 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setSubtitleLabel:(id)setSubtitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSubtitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427288  191 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -159,7 +159,7 @@
 
 // 0x00427294  188 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setCloseButton:(id)setCloseButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCloseButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004272a4  184 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -167,7 +167,7 @@
 
 // 0x004272b0  181 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setSaveButton:(id)setSaveButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSaveButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004272c0  177 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -175,7 +175,7 @@
 
 // 0x004272cc  174 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setClipboardButton:(id)setClipboardButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setClipboardButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004272dc  170 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -183,7 +183,7 @@
 
 // 0x004272e8  167 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setPlayerController:(id)setPlayerController { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPlayerController:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004272f8  163 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -191,7 +191,7 @@
 
 // 0x00427304  160 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setPlayer:(id)setPlayer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPlayer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427314  156 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -199,7 +199,7 @@
 
 // 0x00427320  153 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setPreviewImage:(id)setPreviewImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPreviewImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427330  149 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -207,7 +207,7 @@
 
 // 0x00427360  137 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setRestoreBackdropTarget:(id)setRestoreBackdropTarget { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRestoreBackdropTarget:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427370  133 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -215,7 +215,7 @@
 
 // 0x0042737c  130 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setDidRestoreBackdrop:(BOOL)setDidRestoreBackdrop { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDidRestoreBackdrop:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00427388  127 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -223,7 +223,7 @@
 
 // 0x00427394  124 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setLiveMotionPixelRect:(struct CGRect)setLiveMotionPixelRect { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLiveMotionPixelRect:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004273a0  121 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -231,7 +231,7 @@
 
 // 0x004273ac  118 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
--(void)setLiveMotionPlayback:(BOOL)setLiveMotionPlayback { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLiveMotionPlayback:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004273b8  115 条指令
 // C 调用: _objc_destroyWeak, _objc_storeStrong, _objc_retain, _dispatch_async, _objc_release
@@ -240,6 +240,6 @@
 // 0x00421048  89 条指令
 // 消息: objectForKeyedSubscript:, length, defaultManager, fileExistsAtPath:, showToast:duration:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_async
-+(void)presentItem:(id)presentItem from:(id)from { /* 重建骨架，语义见 pseudocode */ }
++(void)presentItem:(id)a1 from:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

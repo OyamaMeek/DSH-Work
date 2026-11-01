@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e3b0，父类 NSObject
 //
 
+// 职责：悬浮控件管理：测速、清屏、位置记忆。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -58,41 +63,41 @@
 
 @property (nonatomic) BOOL started;
 
--(void)start;
--(void)stopRuntime;
--(id)makeButtonForKind:(long long)makeButtonForKind size:(double)size;
--(void)reloadSettings;
--(BOOL)stickToEdgeForKind:(long long)stickToEdgeForKind;
--(BOOL)autoHideSpeedEnabled;
--(double)autoHideSpeedInterval;
--(void)showToast:(id)showToast;
--(void)attachButtonIfNeeded:(id)attachButtonIfNeeded toWindow:(id)toWindow;
--(void)resolveButtonOverlap;
--(void)refresh;
--(void)handleButtonTap:(id)handleButtonTap;
--(id /* block */)speedVisibilityProvider;
--(void)setSpeedVisibilityProvider:(id /* block */)setSpeedVisibilityProvider;
--(id /* block */)clearVisibilityProvider;
--(void)setClearVisibilityProvider:(id /* block */)setClearVisibilityProvider;
--(id /* block */)speedCycleHandler;
--(void)setSpeedCycleHandler:(id /* block */)setSpeedCycleHandler;
--(id /* block */)speedValueProvider;
--(void)setSpeedValueProvider:(id /* block */)setSpeedValueProvider;
--(id /* block */)clearToggleHandler;
--(void)setClearToggleHandler:(id /* block */)setClearToggleHandler;
--(id /* block */)clearStateProvider;
--(void)setClearStateProvider:(id /* block */)setClearStateProvider;
--(id /* block */)toastHandler;
--(void)setToastHandler:(id /* block */)setToastHandler;
--(id)hostWindow;
--(void)setHostWindow:(id)setHostWindow;
--(id)speedButton;
--(void)setSpeedButton:(id)setSpeedButton;
--(id)clearButton;
--(void)setClearButton:(id)setClearButton;
--(id)refreshTimer;
--(void)setRefreshTimer:(id)setRefreshTimer;
--(BOOL)started;
--(void)setStarted:(BOOL)setStarted;
+-(void)start; // 0x003b3ab0
+-(void)stopRuntime; // 0x003b3ab4
+-(id)makeButtonForKind:(long long)a1 size:(double)a2; // 0x003b3b78
+-(void)reloadSettings; // 0x003b3c0c
+-(BOOL)stickToEdgeForKind:(long long)a1; // 0x003b4478
+-(BOOL)autoHideSpeedEnabled; // 0x003b4494
+-(double)autoHideSpeedInterval; // 0x003b44a0
+-(void)showToast:(id)a1; // 0x003b44bc
+-(void)attachButtonIfNeeded:(id)a1 toWindow:(id)a2; // 0x003b4564
+-(void)resolveButtonOverlap; // 0x003b4618
+-(void)refresh; // 0x003b49b4
+-(void)handleButtonTap:(id)a1; // 0x003b5938
+-(id /* block */)speedVisibilityProvider; // 0x003b5ce0
+-(void)setSpeedVisibilityProvider:(id /* block */)a1; // 0x003b5ce8
+-(id /* block */)clearVisibilityProvider; // 0x003b5cf0
+-(void)setClearVisibilityProvider:(id /* block */)a1; // 0x003b5cf8
+-(id /* block */)speedCycleHandler; // 0x003b5d00
+-(void)setSpeedCycleHandler:(id /* block */)a1; // 0x003b5d08
+-(id /* block */)speedValueProvider; // 0x003b5d10
+-(void)setSpeedValueProvider:(id /* block */)a1; // 0x003b5d18
+-(id /* block */)clearToggleHandler; // 0x003b5d20
+-(void)setClearToggleHandler:(id /* block */)a1; // 0x003b5d28
+-(id /* block */)clearStateProvider; // 0x003b5d30
+-(void)setClearStateProvider:(id /* block */)a1; // 0x003b5d38
+-(id /* block */)toastHandler; // 0x003b5d40
+-(void)setToastHandler:(id /* block */)a1; // 0x003b5d48
+-(id)hostWindow; // 0x003b5d50
+-(void)setHostWindow:(id)a1; // 0x003b5d78
+-(id)speedButton; // 0x003b5d84
+-(void)setSpeedButton:(id)a1; // 0x003b5d8c
+-(id)clearButton; // 0x003b5d98
+-(void)setClearButton:(id)a1; // 0x003b5da0
+-(id)refreshTimer; // 0x003b5dac
+-(void)setRefreshTimer:(id)a1; // 0x003b5db4
+-(BOOL)started; // 0x003b5dc0
+-(void)setStarted:(BOOL)a1; // 0x003b5dc8
 
 @end

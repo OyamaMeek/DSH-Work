@@ -23,12 +23,12 @@
 // 0x00392840  110 条指令
 // 消息: userInfo, objectForKeyedSubscript:, CGRectValue, view, convertRect:fromView:, bounds, doubleValue, animateWithDuration:animations:
 // C 调用: _objc_retainAutoreleasedReturnValue, _CGRectGetMaxY, _CGRectGetMinY, _objc_release
--(void)keyboardWillChangeFrame:(id)keyboardWillChangeFrame { /* 重建骨架，语义见 pseudocode */ }
+-(void)keyboardWillChangeFrame:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00392a58  54 条指令
 // 消息: userInfo, objectForKeyedSubscript:, doubleValue, animateWithDuration:animations:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)keyboardWillHide:(id)keyboardWillHide { /* 重建骨架，语义见 pseudocode */ }
+-(void)keyboardWillHide:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00392b58  191 条指令
 // 字符串: " ", "sjj_nickname_text_scale_v1"
@@ -55,7 +55,7 @@
 // 0x00392fbc  333 条指令
 // 消息: setTitle:, setLiveSaveEnabled:, copy, array, countByEnumeratingWithState:objects:count:, containsObject:, objectForKeyedSubscript:, boolValue, addObject:, count
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_msgSendSuper2, _objc_release, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_opt_respondsToSelector
--(void)setDarkTheme:(BOOL)setDarkTheme { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDarkTheme:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00392fc8  330 条指令
 // 消息: setTitle:, setLiveSaveEnabled:, copy, array, countByEnumeratingWithState:objects:count:, containsObject:, objectForKeyedSubscript:, boolValue, addObject:, count
@@ -65,7 +65,7 @@
 // 0x00392fd4  327 条指令
 // 消息: setTitle:, setLiveSaveEnabled:, copy, array, countByEnumeratingWithState:objects:count:, containsObject:, objectForKeyedSubscript:, boolValue, addObject:, count
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_msgSendSuper2, _objc_release, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_opt_respondsToSelector
--(void)setInitialText:(id)setInitialText { /* 重建骨架，语义见 pseudocode */ }
+-(void)setInitialText:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00392fe0  324 条指令
 // 消息: setTitle:, setLiveSaveEnabled:, copy, array, countByEnumeratingWithState:objects:count:, containsObject:, objectForKeyedSubscript:, boolValue, addObject:, count
@@ -75,7 +75,7 @@
 // 0x00392fec  321 条指令
 // 消息: setTitle:, setLiveSaveEnabled:, copy, array, countByEnumeratingWithState:objects:count:, containsObject:, objectForKeyedSubscript:, boolValue, addObject:, count
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_msgSendSuper2, _objc_release, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_opt_respondsToSelector
--(void)setOnSave:(id /* block */)setOnSave { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOnSave:(id /* block */)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00392ff8  318 条指令
 // 消息: setTitle:, setLiveSaveEnabled:, copy, array, countByEnumeratingWithState:objects:count:, containsObject:, objectForKeyedSubscript:, boolValue, addObject:, count

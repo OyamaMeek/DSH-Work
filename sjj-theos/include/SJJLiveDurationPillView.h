@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f648，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -46,29 +51,29 @@
 
 @property (nonatomic, getter=isMovementLocked) BOOL movementLocked;
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(void)layoutSubviews;
--(void)didMoveToWindow;
--(void)setDurationText:(id)setDurationText;
--(void)sjj_handlePan:(id)sjj_handlePan;
--(void)sjj_handleLongPress:(id)sjj_handleLongPress;
--(void)sjj_savePosition;
--(struct CGRect)frameByApplyingSavedPosition:(id)frameByApplyingSavedPosition inRoot:(id)inRoot;
--(id)materialView;
--(void)setMaterialView:(id)setMaterialView;
--(id)pulseRing;
--(void)setPulseRing:(id)setPulseRing;
--(id)liveDot;
--(void)setLiveDot:(id)setLiveDot;
--(id)statusLabel;
--(void)setStatusLabel:(id)setStatusLabel;
--(id)separatorView;
--(void)setSeparatorView:(id)setSeparatorView;
--(id)durationLabel;
--(void)setDurationLabel:(id)setDurationLabel;
--(BOOL)isDragging;
--(void)setDragging:(BOOL)setDragging;
--(BOOL)isMovementLocked;
--(void)setMovementLocked:(BOOL)setMovementLocked;
+-(id)initWithFrame:(struct CGRect)a1; // 0x005affc0
+-(void)layoutSubviews; // 0x005b0b20
+-(void)didMoveToWindow; // 0x005b0f84
+-(void)setDurationText:(id)a1; // 0x005b12c0
+-(void)sjj_handlePan:(id)a1; // 0x005b13f4
+-(void)sjj_handleLongPress:(id)a1; // 0x005b1784
+-(void)sjj_savePosition; // 0x005b18b0
+-(struct CGRect)frameByApplyingSavedPosition:(id)a1 inRoot:(id)a2; // 0x005b19b8
+-(id)materialView; // 0x005b1b74
+-(void)setMaterialView:(id)a1; // 0x005b1b80
+-(id)pulseRing; // 0x005b1b90
+-(void)setPulseRing:(id)a1; // 0x005b1b9c
+-(id)liveDot; // 0x005b1bac
+-(void)setLiveDot:(id)a1; // 0x005b1bb8
+-(id)statusLabel; // 0x005b1bc8
+-(void)setStatusLabel:(id)a1; // 0x005b1bd4
+-(id)separatorView; // 0x005b1be4
+-(void)setSeparatorView:(id)a1; // 0x005b1bf0
+-(id)durationLabel; // 0x005b1c00
+-(void)setDurationLabel:(id)a1; // 0x005b1c0c
+-(BOOL)isDragging; // 0x005b1c1c
+-(void)setDragging:(BOOL)a1; // 0x005b1c28
+-(BOOL)isMovementLocked; // 0x005b1c34
+-(void)setMovementLocked:(BOOL)a1; // 0x005b1c40
 
 @end

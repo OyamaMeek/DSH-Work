@@ -8,7 +8,7 @@
 // 0x003af650  311 条指令
 // 消息: clearColor, setBackgroundColor:, setClipsToBounds:, setExclusiveTouch:, setAdjustsImageWhenHighlighted:, setAccessibilityTraits:, effectWithStyle:, initWithEffect:, setMaterialView:, materialView, setUserInteractionEnabled:, insertSubview:atIndex:, bounds, initWithFrame:
 // C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retain
--(id)initWithFrame:(struct CGRect)initWithFrame { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003afbe4  30 条指令
 // 消息: dimTimer, invalidate, edgeHideTimer
@@ -19,7 +19,7 @@
 // 字符串: "GIF87a", "GIF89a"
 // 消息: length, customClearIconData, isEqualToData:, customClearIconImage, copy, setCustomClearIconData:, mainScreen, scale, imageWithData:scale:, bytes, arrayWithCapacity:, imageWithCGImage:scale:orientation:, objectForKeyedSubscript:, doubleValue
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _memcmp, _CGImageSourceCreateWithData, _CGImageSourceGetCount, _CGImageSourceCreateImageAtIndex, _CGImageRelease, _CGImageSourceCopyPropertiesAtIndex
--(void)reloadCustomClearIconData:(id)reloadCustomClearIconData { /* 重建骨架，语义见 pseudocode */ }
+-(void)reloadCustomClearIconData:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b0544  461 条指令
 // 消息: bounds, materialView, setFrame:, tintView, customClearIconView, layer, setCornerRadius:, setCornerCurve:, edgeHidden, edgeHiddenForClearMode, standardUserDefaults, controlKind, customClearIconImage, setBorderWidth:
@@ -40,17 +40,17 @@
 // 0x003b2448  75 条指令
 // 消息: superview, safeAreaInsets, bounds
 // C 调用: _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _CGRectGetHeight, _objc_release
--(struct CGPoint)sjj_constrainedCenter:(struct CGPoint)sjj_constrainedCenter { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGPoint)sjj_constrainedCenter:(struct CGPoint)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b2590  59 条指令
 // 消息: superview, sjj_constrainedCenter:, safeAreaInsets, bounds
 // C 调用: _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _objc_release
--(struct CGPoint)sjj_nearestEdgeCenter:(struct CGPoint)sjj_nearestEdgeCenter hiddenState:(BOOL)hiddenState { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGPoint)sjj_nearestEdgeCenter:(struct CGPoint)a1 hiddenState:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b2698  68 条指令
 // 消息: superview, hasCenterBeforeEdgeHide, center, setCenterBeforeEdgeHide:, setHasCenterBeforeEdgeHide:, dimTimer, invalidate, setDimTimer:, edgeHideTimer, setEdgeHideTimer:, setEdgeHidden:, setEdgeHiddenForClearMode:, sjj_nearestEdgeCenter:hiddenState:, setCenter:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sjj_hideToNearestEdge:(BOOL)sjj_hideToNearestEdge { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_hideToNearestEdge:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b27bc  26 条指令
 // 消息: sjj_hideToNearestEdge:, setUserInteractionEnabled:, edgeHidden, edgeHiddenForClearMode
@@ -90,37 +90,37 @@
 // 0x003b2f68  50 条指令
 // 消息: setLongPressHandled:, edgeHidden, edgeHiddenForClearMode, dimTimer, invalidate, edgeHideTimer, animateWithDuration:animations:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sjj_touchDown:(id)sjj_touchDown { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_touchDown:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b30c4  60 条指令
 // 消息: animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:, consumeNextTap, setConsumeNextTap:, longPressHandled, setLongPressHandled:, panHandled, setPanHandled:, manager, handleButtonTap:, reloadPresentationTimers
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sjj_touchUp:(id)sjj_touchUp { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_touchUp:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b31f8  18 条指令
 // 消息: setTransform:, setLongPressHandled:, setPanHandled:, reloadPresentationTimers
--(void)sjj_touchCancelled:(id)sjj_touchCancelled { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_touchCancelled:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3240  322 条指令
 // 字符串: "v8@?0"
 // 消息: state, edgeHiddenForClearMode, edgeHidden, restoreFromEdgeHidden, setLongPressHandled:, positionLocked, setPositionLocked:, standardUserDefaults, controlKind, setBool:forKey:, savePosition, initWithStyle:, impactOccurred, manager
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retain, __Unwind_Resume
--(void)sjj_handleLongPress:(id)sjj_handleLongPress { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_handleLongPress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3470  182 条指令
 // 字符串: "v8@?0"
 // 消息: positionLocked, edgeHiddenForClearMode, superview, state, setPanHandled:, dimTimer, invalidate, edgeHideTimer, edgeHidden, restoreFromEdgeHidden, setConsumeNextTap:, center, setPanStartCenter:, setTransform:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sjj_handlePan:(id)sjj_handlePan { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_handlePan:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b37d4  2 条指令
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b37dc  8 条指令
 -(long long)controlKind { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b37e8  5 条指令
--(void)setControlKind:(long long)setControlKind { /* 重建骨架，语义见 pseudocode */ }
+-(void)setControlKind:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b37fc  281 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -130,7 +130,7 @@
 // 0x003b382c  269 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeWeak, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setManager:(id)setManager { /* 重建骨架，语义见 pseudocode */ }
+-(void)setManager:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3840  264 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -140,7 +140,7 @@
 // 0x003b384c  261 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setMaterialView:(id)setMaterialView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMaterialView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b385c  257 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -150,7 +150,7 @@
 // 0x003b3868  254 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setTintView:(id)setTintView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTintView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3878  250 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -160,7 +160,7 @@
 // 0x003b3884  247 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setEdgeIndicatorView:(id)setEdgeIndicatorView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setEdgeIndicatorView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3894  243 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -170,7 +170,7 @@
 // 0x003b38a0  240 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setDimTimer:(id)setDimTimer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDimTimer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b38b0  236 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -180,7 +180,7 @@
 // 0x003b38bc  233 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setEdgeHideTimer:(id)setEdgeHideTimer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setEdgeHideTimer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b38cc  229 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -190,7 +190,7 @@
 // 0x003b38d8  226 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setPositionLocked:(BOOL)setPositionLocked { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPositionLocked:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b38e4  223 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -200,7 +200,7 @@
 // 0x003b38f0  220 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setEdgeHidden:(BOOL)setEdgeHidden { /* 重建骨架，语义见 pseudocode */ }
+-(void)setEdgeHidden:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b38fc  217 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -210,7 +210,7 @@
 // 0x003b3908  214 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setEdgeHiddenForClearMode:(BOOL)setEdgeHiddenForClearMode { /* 重建骨架，语义见 pseudocode */ }
+-(void)setEdgeHiddenForClearMode:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3914  211 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -220,7 +220,7 @@
 // 0x003b3920  208 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setSelfHiddenForClearMode:(BOOL)setSelfHiddenForClearMode { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelfHiddenForClearMode:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b392c  205 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -230,7 +230,7 @@
 // 0x003b3938  202 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setConsumeNextTap:(BOOL)setConsumeNextTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)setConsumeNextTap:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3944  199 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -240,7 +240,7 @@
 // 0x003b3950  196 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setLongPressHandled:(BOOL)setLongPressHandled { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLongPressHandled:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b395c  193 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -250,7 +250,7 @@
 // 0x003b3968  190 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setPanHandled:(BOOL)setPanHandled { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPanHandled:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3974  187 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -260,7 +260,7 @@
 // 0x003b3980  184 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setPanStartCenter:(struct CGPoint)setPanStartCenter { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPanStartCenter:(struct CGPoint)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b398c  181 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -270,7 +270,7 @@
 // 0x003b3998  178 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setCenterBeforeEdgeHide:(struct CGPoint)setCenterBeforeEdgeHide { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCenterBeforeEdgeHide:(struct CGPoint)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b39a4  175 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -280,7 +280,7 @@
 // 0x003b39b0  172 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setHasCenterBeforeEdgeHide:(BOOL)setHasCenterBeforeEdgeHide { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHasCenterBeforeEdgeHide:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b39bc  169 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -290,7 +290,7 @@
 // 0x003b39c8  166 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setCustomClearIconData:(id)setCustomClearIconData { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomClearIconData:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b39d8  162 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -300,7 +300,7 @@
 // 0x003b39e4  159 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setCustomClearIconImage:(id)setCustomClearIconImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomClearIconImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b39f4  155 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
@@ -310,7 +310,7 @@
 // 0x003b3a00  152 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _dispatch_async
--(void)setCustomClearIconView:(id)setCustomClearIconView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomClearIconView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003b3a10  148 条指令
 // 消息: reloadSettings, refreshTimer, invalidate, setRefreshTimer:, speedButton, removeFromSuperview, clearButton, setSpeedButton:, setClearButton:, setHostWindow:, setStarted:, initWithFrame:, setControlKind:, setManager:

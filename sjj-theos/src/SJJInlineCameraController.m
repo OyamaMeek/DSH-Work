@@ -1,10 +1,15 @@
 // SJJInlineCameraController.m
-// 由反汇编重建的骨架实现；方法体保留为最小可编译实现，语义见 reconstructed/walkthrough
+// 内联相机：拍摄、录制、拍照参数与预览。
+//
+// 来源：siwenjiajia.dylib 中 0x00a2e658 处的类对象，父类 UIViewController，292 个实例方法、0 个类方法。
+// 本文件是可编译骨架：方法体返回零值，注释给出反汇编摘要（字符串常量、消息序列、系统调用）。
+// 完整伪代码见 reconstructed/pseudocode/SJJInlineCameraController.m，按注释里的地址对照。
 
 #import "SJJInlineCameraController.h"
 
 @implementation SJJInlineCameraController
 
+// 属性合成：ivar 沿用二进制里的 _name 命名，保持与原始布局一致
 @synthesize dimmingControl = _dimmingControl;
 @synthesize panelBlurView = _panelBlurView;
 @synthesize cameraShellView = _cameraShellView;
@@ -111,882 +116,1160 @@
 @synthesize controlsMaxYOffset = _controlsMaxYOffset;
 @synthesize islandOriginFrame = _islandOriginFrame;
 @synthesize lastZoomPersistTime = _lastZoomPersistTime;
-@synthesize hash;
-@synthesize superclass;
-@synthesize description;
-@synthesize debugDescription;
 
-// 0x0042bb28
+// 0x0042bb28 · 2 条指令
 -(BOOL)prefersStatusBarHidden { return NO; }
 
-// 0x0042bb30
+// 0x0042bb30 · 2 条指令
 -(long long)preferredStatusBarUpdateAnimation { return 0; }
 
-// 0x0042bb38
+// 0x0042bb38 · 2048 条指令
+// 字符串："com.siwenjiajia.inlineCamera.session"、"sjj_inline_camera_controls_y_offset_v1"、"sjj_inline_camera_theme_index_v1"、"LIVE"
+// 消息：mainScreen → bounds → initWithFrame: → clearColor → setBackgroundColor: → setView: → view → sharedApplication
+// 系统：_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_msgSendSuper2、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)loadView { }
 
-// 0x0042bbfc
+// 0x0042bbfc · 2048 条指令
+// 字符串："com.siwenjiajia.inlineCamera.session"、"sjj_inline_camera_controls_y_offset_v1"、"sjj_inline_camera_theme_index_v1"、"LIVE"
+// 消息：clearColor → view → setBackgroundColor: → sharedApplication → connectedScenes → countByEnumeratingWithState:objects:count: → statusBarManager → isStatusBarHidden
+// 系统：_objc_msgSendSuper2、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_dispatch_queue_create
 -(void)viewDidLoad { }
 
-// 0x004334a8
--(void)viewDidAppear:(BOOL)viewDidAppear { }
+// 0x004334a8 · 15 条指令
+// 消息：runIslandOpenAnimationIfNeeded
+// 系统：_objc_msgSendSuper2
+-(void)viewDidAppear:(BOOL)a1 { }
 
-// 0x004334e4
+// 0x004334e4 · 2048 条指令
+// 消息：view → bounds → dimmingControl → setFrame: → safeAreaInsets → setIslandOriginFrame: → islandOriginFrame → panelView
+// 系统：_objc_msgSendSuper2、_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectGetWidth、_CGRectGetHeight、_CGRectGetMinX、_CGRectGetMinY、_CGRectGetMaxY
 -(void)viewDidLayoutSubviews { }
 
-// 0x004366c0
--(void)viewWillAppear:(BOOL)viewWillAppear { }
+// 0x004366c0 · 18 条指令
+// 消息：sessionConfigured → startSessionIfNeeded
+// 系统：_objc_msgSendSuper2
+-(void)viewWillAppear:(BOOL)a1 { }
 
-// 0x00436708
--(void)viewWillDisappear:(BOOL)viewWillDisappear { }
+// 0x00436708 · 20 条指令
+// 消息：stopSession → priorStatusBarHidden
+// 系统：_objc_msgSendSuper2
+-(void)viewWillDisappear:(BOOL)a1 { }
 
-// 0x00436758
+// 0x00436758 · 549 条指令
+// 字符串："v8@?0"
+// 消息：didRunIslandAnimation → view → layoutIfNeeded → setDidRunIslandAnimation: → setIslandOpenAnimating: → panelView → setAlpha: → dimmingControl
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectIsEmpty、_CGRectGetHeight、_CGRectGetWidth、_CGAffineTransformMakeTranslation、_objc_retain、_objc_opt_class
 -(void)runIslandOpenAnimationIfNeeded { }
 
-// 0x004376dc
--(void)runIslandCloseAnimationWithCompletion:(id /* block */)runIslandCloseAnimationWithCompletion { }
+// 0x004376dc · 413 条指令
+// 消息：view → layoutIfNeeded → setUserInteractionEnabled: → panelView → layer → removeAllAnimations → cameraShellView → controlsPlateView
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectIsEmpty、_CGRectGetHeight、_objc_alloc、_objc_retain
+-(void)runIslandCloseAnimationWithCompletion:(id /* block */)a1 { }
 
-// 0x00438320
--(void)dismissFadeOnlyWithCompletion:(id /* block */)dismissFadeOnlyWithCompletion { }
+// 0x00438320 · 141 条指令
+// 消息：view → layoutIfNeeded → setUserInteractionEnabled: → priorStatusBarHidden → layer → removeAllAnimations → panelView → cameraShellView
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
+-(void)dismissFadeOnlyWithCompletion:(id /* block */)a1 { }
 
-// 0x00438844
+// 0x00438844 · 216 条指令
+// 字符串："title"、"720P"、"preset"、"height"、"i"
+// 消息：count → selectedResolutionIndex → objectAtIndexedSubscript: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → selectedFPSIndex → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、___stack_chk_fail
 -(id)selectedResolutionOption { return NULL; }
 
-// 0x00438af4
+// 0x00438af4 · 44 条指令
+// 消息：count → selectedFPSIndex → objectAtIndexedSubscript: → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(long long)selectedFPS { return 0; }
 
-// 0x00438bb4
+// 0x00438bb4 · 512 条指令
+// 字符串："title"、"1080P"、"%ld FPS"、"%@/%ld %.1fx"、"sjj_inline_camera_resolution_index_v1"
+// 消息：selectedResolutionOption → objectForKeyedSubscript: → selectedFPS → resolutionButton → setTitle:forState: → fpsButton → stringWithFormat: → currentZoom
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain、_objc_retainBlock
 -(void)updateSpecButtons { }
 
-// 0x00438d5c
+// 0x00438d5c · 406 条指令
+// 字符串："sjj_inline_camera_resolution_index_v1"、"sjj_inline_camera_fps_index_v1"、"sjj_inline_camera_video_mode_v1"、"sjj_inline_camera_zoom_v1"、"LIVE"
+// 消息：selectedResolutionIndex → selectedFPSIndex → videoMode → currentZoom → count → setInteger:forKey: → setBool:forKey: → setDouble:forKey:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain、_objc_retainBlock
 -(void)saveCameraPreferences { }
 
-// 0x00438e94
+// 0x00438e94 · 328 条指令
+// 字符串："LIVE"、"REC"
+// 消息：colorWithWhite:alpha: → clearColor → videoMode → photoModeButton → setBackgroundColor: → videoModeButton → setTitleColor:forState: → titleLabel
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain、_objc_retainBlock
 -(void)updateModeButtons { }
 
-// 0x00439118
--(void)applyThemeAnimated:(BOOL)applyThemeAnimated { }
+// 0x00439118 · 167 条指令
+// 消息：selectedThemeIndex → colorWithWhite:alpha: → effectWithStyle: → panelView → transitionWithView:duration:options:animations:completion: → performWithoutAnimation: → updateActionButtons
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_objc_retainBlock
+-(void)applyThemeAnimated:(BOOL)a1 { }
 
-// 0x0043a444
+// 0x0043a444 · 447 条指令
+// 字符串："%.1fx"、"%.1f"、"0.5"、"1"、"%.0f"
+// 消息：maxZoom → captureDevice → cameraPosition → zoomSlider → setHidden: → zoomButton → zoomRailView → zoomWideButton
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retain
 -(void)updateZoomUI { }
 
-// 0x0043ab50
+// 0x0043ab50 · 175 条指令
+// 消息：count → filmStripView → setHidden: → filmTitleLabel → setText: → stringWithFormat: → filmMetaLabel → filmThumbView
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_setAssociatedObject、_dispatch_get_global_queue、_objc_retain、_dispatch_async
 -(void)updateHistoryPreview { }
 
-// 0x0043b2fc
+// 0x0043b2fc · 1771 条指令
+// 字符串："rectangle.stack"、"circle.hexagongrid"、"sparkles"、"livephoto.slash"、"livephoto"
+// 消息：videoRecording → modeSwitching → livePhotoSwitching → printResultVisible → printAnimationActive → captureButton → setHidden: → saveButton
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutorelease、__Unwind_Resume
 -(void)updateActionButtons { }
 
-// 0x0043cdcc
+// 0x0043cdcc · 55 条指令
+// 消息：authorizationStatusForMediaType: → configureAfterAudioPermissionIfNeeded → statusLabel → setText: → requestAccessForMediaType:completionHandler:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)requestCameraAndStart { }
 
-// 0x0043cf58
+// 0x0043cf58 · 78 条指令
+// 字符串："v8@?0"
+// 消息：videoMode → recordAudio → authorizationStatusForMediaType: → configureSessionIfNeeded → requestAccessForMediaType:completionHandler:
+// 系统：_objc_retain、_objc_release
 -(void)configureAfterAudioPermissionIfNeeded { }
 
-// 0x0043d0fc
+// 0x0043d0fc · 34 条指令
+// 消息：recordAudio → requestedAudioAccess → setRequestedAudioAccess: → authorizationStatusForMediaType: → requestAccessForMediaType:completionHandler:
 -(void)requestAudioPermissionForVideoIfNeeded { }
 
-// 0x0043d1b4
+// 0x0043d1b4 · 137 条指令
+// 消息：statusLabel → setText: → captureButton → setEnabled: → setAlpha: → showToast:duration: → sessionConfigured → sessionStarting
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_dispatch_async
 -(void)showCameraDeniedState { }
 
-// 0x0043d274
+// 0x0043d274 · 89 条指令
+// 消息：sessionConfigured → sessionStarting → startSessionIfNeeded → setSessionStarting: → statusLabel → setText: → videoMode → selectedResolutionIndex
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_async
 -(void)configureSessionIfNeeded { }
 
-// 0x0043e7d8
--(id)frameRateRangeForFormat:(id)frameRateRangeForFormat fps:(long long)fps { return NULL; }
+// 0x0043e7d8 · 372 条指令
+// 消息：videoSupportedFrameRateRanges → countByEnumeratingWithState:objects:count: → minFrameRate → maxFrameRate → captureDevice → formats → formatDescription → session
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_autoreleaseReturnValue、_objc_enumerationMutation、_objc_retain、_objc_release、___stack_chk_fail、__Unwind_Resume、_objc_opt_class
+-(id)frameRateRangeForFormat:(id)a1 fps:(long long)a2 { return NULL; }
 
-// 0x0043e950
--(id)bestFormatForTargetHeight:(long long)bestFormatForTargetHeight fps:(long long)fps { return NULL; }
+// 0x0043e950 · 278 条指令
+// 消息：captureDevice → formats → countByEnumeratingWithState:objects:count: → formatDescription → session → maxZoom → currentZoom → videoMode
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation
+-(id)bestFormatForTargetHeight:(long long)a1 fps:(long long)a2 { return NULL; }
 
-// 0x0043ebb4
--(void)applyCapturePreferencesWithToast:(BOOL)applyCapturePreferencesWithToast { }
+// 0x0043ebb4 · 125 条指令
+// 消息：session → captureDevice → maxZoom → currentZoom → videoMode → photoOutput → selectedResolutionIndex → selectedFPSIndex
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_dispatch_async、_objc_release
+-(void)applyCapturePreferencesWithToast:(BOOL)a1 { }
 
-// 0x0043f1b0
+// 0x0043f1b0 · 29 条指令
+// 消息：cameraPosition
 -(long long)previewImageOrientation { return 0; }
 
-// 0x0043f278
+// 0x0043f278 · 44 条指令
+// 消息：closing → closeAnimationStarted → session → sessionQueue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)startSessionIfNeeded { }
 
-// 0x0043f37c
+// 0x0043f37c · 38 条指令
+// 消息：session → sessionQueue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)stopSession { }
 
-// 0x0043f468
+// 0x0043f468 · 59 条指令
+// 消息：session → sessionQueue → setSession: → setCaptureDevice: → setVideoInput: → setAudioInput: → setPhotoOutput: → setMovieOutput:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)stopSessionForDismissal { }
 
-// 0x0043f5c0
--(void)setZoomFactor:(double)setZoomFactor animated:(BOOL)animated { }
+// 0x0043f5c0 · 91 条指令
+// 消息：captureDevice → maxZoom → setCurrentZoom: → updateZoomUI → lastZoomPersistTime → setLastZoomPersistTime: → saveCameraPreferences → sessionQueue
+// 系统：_objc_retainAutoreleasedReturnValue、_CACurrentMediaTime、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_dispatch_async、_objc_release
+-(void)setZoomFactor:(double)a1 animated:(BOOL)a2 { }
 
-// 0x0043facc
+// 0x0043facc · 359 条指令
+// 字符串："v8@?0"
+// 消息：sessionStarting → modeSwitching → videoRecording → setModeSwitching: → view → layoutIfNeeded → session → previewLayer
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_objc_retainBlock、_dispatch_async
 -(void)rebuildSessionForCurrentZoom { }
 
-// 0x0044124c
--(void)applyLivePhotoEnabled:(BOOL)applyLivePhotoEnabled animated:(BOOL)animated { }
+// 0x0044124c · 29 条指令
+// 消息：videoRecording → modeSwitching → livePhotoSwitching → videoMode
+-(void)applyLivePhotoEnabled:(BOOL)a1 animated:(BOOL)a2 { }
 
-// 0x00441cf4
+// 0x00441cf4 · 105 条指令
+// 字符串："v8@?0"
+// 消息：session → recordAudio → audioInput → authorizationStatusForMediaType: → requestAccessForMediaType:completionHandler: → setAudioInput: → sessionQueue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retain、_dispatch_async
 -(void)ensureAudioInputForVideoIfNeeded { }
 
-// 0x004421ac
--(void)previewPinch:(id)previewPinch { }
+// 0x004421ac · 320 条指令
+// 字符串："sjj_inline_camera_controls_y_offset_v1"
+// 消息：modeSwitching → state → currentZoom → setPinchBaseZoom: → pinchBaseZoom → scale → setZoomFactor:animated: → saveCameraPreferences
+// 系统：_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_CGRectGetHeight、_exp
+-(void)previewPinch:(id)a1 { }
 
-// 0x004422bc
--(void)previewZoomPan:(id)previewZoomPan { }
+// 0x004422bc · 252 条指令
+// 字符串："sjj_inline_camera_controls_y_offset_v1"
+// 消息：modeSwitching → state → currentZoom → setPanBaseZoom: → previewView → locationInView: → setPanStartPoint: → translationInView:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectGetHeight、_exp、__Unwind_Resume
+-(void)previewZoomPan:(id)a1 { }
 
-// 0x004424b4
--(void)controlsPlatePan:(id)controlsPlatePan { }
+// 0x004424b4 · 126 条指令
+// 字符串："sjj_inline_camera_controls_y_offset_v1"
+// 消息：state → controlsYOffset → setControlsPanStartOffset: → view → translationInView: → controlsPanStartOffset → controlsMinYOffset → controlsMaxYOffset
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
+-(void)controlsPlatePan:(id)a1 { }
 
-// 0x004426a4
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer { return NO; }
+// 0x004426a4 · 2 条指令
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2 { return NO; }
 
-// 0x004426ac
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch { return NO; }
+// 0x004426ac · 301 条指令
+// 消息：view → controlsPlateView → outsideTapGesture → locationInView: → printResultVisible → printAnimationActive → printOverlayView → isHidden
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetWidth、_CGRectGetHeight
+-(BOOL)gestureRecognizer:(id)a1 shouldReceiveTouch:(id)a2 { return NO; }
 
-// 0x00442c7c
--(void)outsideBlankTap:(id)outsideBlankTap { }
+// 0x00442c7c · 101 条指令
+// 消息：state → printResultVisible → printAnimationActive → closeTap → printCloseTap → modeSwitching → value → setZoomFactor:animated:
+// 系统：_objc_release、__Unwind_Resume
+-(void)outsideBlankTap:(id)a1 { }
 
-// 0x00442cf8
--(void)zoomSliderChanged:(id)zoomSliderChanged { }
+// 0x00442cf8 · 70 条指令
+// 消息：modeSwitching → value → setZoomFactor:animated: → isTracking → saveCameraPreferences
+// 系统：_objc_release、__Unwind_Resume
+-(void)zoomSliderChanged:(id)a1 { }
 
-// 0x00442d70
--(void)zoomSliderFinished:(id)zoomSliderFinished { }
+// 0x00442d70 · 40 条指令
+// 消息：modeSwitching → value → setZoomFactor:animated: → saveCameraPreferences
+// 系统：_objc_release、__Unwind_Resume
+-(void)zoomSliderFinished:(id)a1 { }
 
-// 0x00442ddc
+// 0x00442ddc · 13 条指令
+// 消息：modeSwitching
 -(void)zoomQuickTap { }
 
-// 0x00442fd0
+// 0x00442fd0 · 9 条指令
+// 消息：modeSwitching
 -(void)zoomWideTap { }
 
-// 0x00443028
+// 0x00443028 · 9 条指令
+// 消息：modeSwitching
 -(void)zoomOneTap { }
 
-// 0x00443080
+// 0x00443080 · 11 条指令
+// 消息：modeSwitching
 -(void)zoomTeleTap { }
 
-// 0x0044311c
+// 0x0044311c · 11 条指令
+// 消息：modeSwitching
 -(void)photoModeTap { }
 
-// 0x00443230
+// 0x00443230 · 11 条指令
+// 消息：modeSwitching
 -(void)videoModeTap { }
 
-// 0x00443374
+// 0x00443374 · 20 条指令
+// 消息：videoRecording → modeSwitching → pendingPhotoCaptureActive → pendingPhotoStoreInFlight
 -(void)cameraSwitchTap { }
 
-// 0x004434e0
+// 0x004434e0 · 38 条指令
+// 消息：modeSwitching → videoMode → videoRecording → movieOutput → isRecording → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)audioTap { }
 
-// 0x00443674
+// 0x00443674 · 14 条指令
+// 消息：videoRecording → modeSwitching
 -(void)resolutionTap { }
 
-// 0x00443768
+// 0x00443768 · 12 条指令
+// 消息：videoRecording → modeSwitching
 -(void)fpsTap { }
 
-// 0x0044383c
+// 0x0044383c · 18 条指令
+// 消息：videoRecording → modeSwitching → livePhotoSwitching → videoMode
 -(void)livePhotoTap { }
 
-// 0x004438b4
+// 0x004438b4 · 366 条指令
+// 字符串："checkmark"、"image"
+// 消息：videoRecording → modeSwitching → alertControllerWithTitle:message:preferredStyle: → countByEnumeratingWithState:objects:count: → integerValue → stringWithFormat: → stringByAppendingString: → actionWithTitle:style:handler:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_retain、_objc_release
 -(void)themeTap { }
 
-// 0x0044434c
+// 0x0044434c · 70 条指令
+// 消息：alertControllerWithTitle:message:preferredStyle: → addTextFieldWithConfigurationHandler: → actionWithTitle:style:handler: → addAction: → presentViewController:animated:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)presentCustomWatermarkEditor { }
 
-// 0x00444764
--(id)printPreviewImageForItem:(id)printPreviewImageForItem fallback:(id)fallback { return NULL; }
+// 0x00444764 · 81 条指令
+// 消息：printPhotoCardView → frame
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)printPreviewImageForItem:(id)a1 fallback:(id)a2 { return NULL; }
 
-// 0x00444860
+// 0x00444860 · 18 条指令
+// 消息：printPhotoCardView → frame
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(struct CGRect)printCardFinalFrameInClip { return (struct CGRect){0}; }
 
-// 0x004448b8
--(struct CGRect)printCardStartFrameInClipFromFinal:(id)printCardStartFrameInClipFromFinal { return (struct CGRect){0}; }
+// 0x004448b8 · 66 条指令
+// 消息：printOverlayView → printSlotView → frame → printEjectClipView → convertRect:toView:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectGetMaxY、_CGRectGetHeight
+-(struct CGRect)printCardStartFrameInClipFromFinal:(id)a1 { return (struct CGRect){0}; }
 
-// 0x004449f0
+// 0x004449f0 · 274 条指令
+// 消息：printOverlayView → layer → removeAllAnimations → printSlotView → printEjectClipView → printPhotoCardView → printCloseButton → setPrintedHistoryItem:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)resetPrintStateForNextCapture { }
 
-// 0x00444ecc
--(void)presentPrintAnimationForHistoryItem:(id)presentPrintAnimationForHistoryItem image:(id)image { }
+// 0x00444ecc · 478 条指令
+// 消息：videoMode → closing → closeAnimationStarted → view → setNeedsLayout → layoutIfNeeded → setPrintedHistoryItem: → setPrintAnimationActive:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_CGAffineTransformMakeScale、_CGRectGetHeight
+-(void)presentPrintAnimationForHistoryItem:(id)a1 image:(id)a2 { }
 
-// 0x00445bb4
+// 0x00445bb4 · 244 条指令
+// 消息：printResultVisible → printAnimationActive → view → layoutIfNeeded → setPrintAnimationActive: → updateActionButtons → cameraShellView → bounds
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectGetHeight、_objc_alloc、_objc_retain
 -(void)printCloseTap { }
 
-// 0x00446504
+// 0x00446504 · 9 条指令
+// 消息：printAnimationActive
 -(void)printPhotoTap { }
 
-// 0x00446598
+// 0x00446598 · 156 条指令
+// 消息：printOverlayView → layer → removeAllAnimations → printSlotView → printPhotoCardView → setPrintAnimationActive: → setAlpha: → setHidden:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)sjj_inlineCameraMediaPreviewWillPresent { }
 
-// 0x00446864
+// 0x00446864 · 143 条指令
+// 消息：closing → resetPrintStateForNextCapture → captureButton → setEnabled: → setAlpha: → previewImageView → setImage: → setHidden:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)sjj_inlineCameraMediaPreviewDidDismiss { }
 
-// 0x00446bd8
+// 0x00446bd8 · 38 条指令
+// 消息：videoMode → toggleVideoRecording → capturePhoto → printAnimationActive → printResultVisible
 -(void)captureTap { }
 
-// 0x00446c30
+// 0x00446c30 · 16 条指令
+// 消息：printAnimationActive → printResultVisible
 -(void)capturePhoto { }
 
-// 0x004472e0
+// 0x004472e0 · 162 条指令
+// 消息：pendingPhotoStoreInFlight → pendingPhotoData → pendingPhotoImage → length → pendingLivePhotoVideoURL → pendingLivePhotoFinished → pendingLivePhotoWaitAttempts → setPendingLivePhotoWaitAttempts:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_dispatch_time、_dispatch_after、_objc_release、_objc_retain
 -(void)finishPendingPhotoCaptureIfReady { }
 
-// 0x00447c3c
+// 0x00447c3c · 185 条指令
+// 字符串："sjj-inline-camera-%@.mov"
+// 消息：videoRecording → movieOutput → isRecording → statusLabel → setText: → stopRecording → sessionConfigured → recordAudio
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_time、_dispatch_after、_NSTemporaryDirectory
 -(void)toggleVideoRecording { }
 
-// 0x0044806c
--(void)captureOutput:(id)captureOutput didFinishProcessingPhoto:(id)didFinishProcessingPhoto error:(id)error { }
+// 0x0044806c · 78 条指令
+// 消息：fileDataRepresentation → length → mainScreen → scale → imageWithData:scale:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_async
+-(void)captureOutput:(id)a1 didFinishProcessingPhoto:(id)a2 error:(id)a3 { }
 
-// 0x0044862c
--(void)captureOutput:(id)captureOutput didStartRecordingToOutputFileAtURL:(id)didStartRecordingToOutputFileAtURL fromConnections:(id)fromConnections { }
+// 0x0044862c · 20 条指令
+// 系统：_dispatch_async
+-(void)captureOutput:(id)a1 didStartRecordingToOutputFileAtURL:(id)a2 fromConnections:(id)a3 { }
 
-// 0x004486ec
--(void)captureOutput:(id)captureOutput didFinishRecordingToOutputFileAtURL:(id)didFinishRecordingToOutputFileAtURL fromConnections:(id)fromConnections error:(id)error { }
+// 0x004486ec · 63 条指令
+// 消息：userInfo → objectForKeyedSubscript: → boolValue
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_async
+-(void)captureOutput:(id)a1 didFinishRecordingToOutputFileAtURL:(id)a2 fromConnections:(id)a3 error:(id)a4 { }
 
-// 0x00448c50
+// 0x00448c50 · 225 条指令
+// 消息：historyTap → presentFrom: → firstObject → presentItem:from: → setPendingPhotoData: → setPendingPhotoImage: → setPendingPhotoCaptureActive: → setPendingLivePhotoFinished:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume
 -(void)saveTap { }
 
-// 0x00448c54
+// 0x00448c54 · 224 条指令
+// 消息：presentFrom: → firstObject → presentItem:from: → historyTap → setPendingPhotoData: → setPendingPhotoImage: → setPendingPhotoCaptureActive: → setPendingLivePhotoFinished:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume
 -(void)historyTap { }
 
-// 0x00448c64
+// 0x00448c64 · 220 条指令
+// 消息：firstObject → presentItem:from: → historyTap → setPendingPhotoData: → setPendingPhotoImage: → setPendingPhotoCaptureActive: → setPendingLivePhotoFinished: → setPendingPhotoStoreInFlight:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume
 -(void)filmPreviewTap { }
 
-// 0x00448d14
+// 0x00448d14 · 176 条指令
+// 消息：setPendingPhotoData: → setPendingPhotoImage: → setPendingPhotoCaptureActive: → setPendingLivePhotoFinished: → setPendingPhotoStoreInFlight: → previewImageView → setImage: → setHidden:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
 -(void)deleteTap { }
 
-// 0x00448e84
+// 0x00448e84 · 84 条指令
+// 消息：printResultVisible → printAnimationActive → videoRecording → movieOutput → isRecording → setDismissAfterRecordingStops: → stopRecording → printCloseTap
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)closeTap { }
 
-// 0x00448ffc
+// 0x00448ffc · 50 条指令
+// 消息：stopSession → priorStatusBarHidden → pendingLivePhotoVideoURL → defaultManager → removeItemAtURL:error: → defaultCenter → removeObserver:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)dealloc { }
 
-// 0x00449104
+// 0x00449104 · 667 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)dimmingControl { return NULL; }
 
-// 0x00449110
--(void)setDimmingControl:(id)setDimmingControl { }
+// 0x00449110 · 664 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setDimmingControl:(id)a1 { }
 
-// 0x00449120
+// 0x00449120 · 660 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)panelBlurView { return NULL; }
 
-// 0x0044912c
--(void)setPanelBlurView:(id)setPanelBlurView { }
+// 0x0044912c · 657 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPanelBlurView:(id)a1 { }
 
-// 0x0044913c
+// 0x0044913c · 653 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)cameraShellView { return NULL; }
 
-// 0x00449148
--(void)setCameraShellView:(id)setCameraShellView { }
+// 0x00449148 · 650 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setCameraShellView:(id)a1 { }
 
-// 0x00449158
+// 0x00449158 · 646 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)shellGlassBlurView { return NULL; }
 
-// 0x00449164
--(void)setShellGlassBlurView:(id)setShellGlassBlurView { }
+// 0x00449164 · 643 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setShellGlassBlurView:(id)a1 { }
 
-// 0x00449174
+// 0x00449174 · 639 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)shellGlassTintView { return NULL; }
 
-// 0x00449180
--(void)setShellGlassTintView:(id)setShellGlassTintView { }
+// 0x00449180 · 636 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setShellGlassTintView:(id)a1 { }
 
-// 0x00449190
+// 0x00449190 · 632 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)shellShadeLayer { return NULL; }
 
-// 0x0044919c
--(void)setShellShadeLayer:(id)setShellShadeLayer { }
+// 0x0044919c · 629 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setShellShadeLayer:(id)a1 { }
 
-// 0x004491ac
+// 0x004491ac · 625 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)controlsPlateView { return NULL; }
 
-// 0x004491b8
--(void)setControlsPlateView:(id)setControlsPlateView { }
+// 0x004491b8 · 622 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setControlsPlateView:(id)a1 { }
 
-// 0x004491c8
+// 0x004491c8 · 618 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)islandView { return NULL; }
 
-// 0x004491d4
--(void)setIslandView:(id)setIslandView { }
+// 0x004491d4 · 615 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setIslandView:(id)a1 { }
 
-// 0x004491e4
+// 0x004491e4 · 611 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)islandTitleLabel { return NULL; }
 
-// 0x004491f0
--(void)setIslandTitleLabel:(id)setIslandTitleLabel { }
+// 0x004491f0 · 608 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setIslandTitleLabel:(id)a1 { }
 
-// 0x00449200
+// 0x00449200 · 604 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)islandMetaLabel { return NULL; }
 
-// 0x0044920c
--(void)setIslandMetaLabel:(id)setIslandMetaLabel { }
+// 0x0044920c · 601 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setIslandMetaLabel:(id)a1 { }
 
-// 0x0044921c
+// 0x0044921c · 597 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)recordDotView { return NULL; }
 
-// 0x00449228
--(void)setRecordDotView:(id)setRecordDotView { }
+// 0x00449228 · 594 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setRecordDotView:(id)a1 { }
 
-// 0x00449238
+// 0x00449238 · 590 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)panelView { return NULL; }
 
-// 0x00449244
--(void)setPanelView:(id)setPanelView { }
+// 0x00449244 · 587 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPanelView:(id)a1 { }
 
-// 0x00449254
+// 0x00449254 · 583 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)previewView { return NULL; }
 
-// 0x00449260
--(void)setPreviewView:(id)setPreviewView { }
+// 0x00449260 · 580 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPreviewView:(id)a1 { }
 
-// 0x00449270
+// 0x00449270 · 576 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)previewImageView { return NULL; }
 
-// 0x0044927c
--(void)setPreviewImageView:(id)setPreviewImageView { }
+// 0x0044927c · 573 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPreviewImageView:(id)a1 { }
 
-// 0x0044928c
+// 0x0044928c · 569 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)modeBarView { return NULL; }
 
-// 0x00449298
--(void)setModeBarView:(id)setModeBarView { }
+// 0x00449298 · 566 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setModeBarView:(id)a1 { }
 
-// 0x004492a8
+// 0x004492a8 · 562 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)titleLabel { return NULL; }
 
-// 0x004492b4
--(void)setTitleLabel:(id)setTitleLabel { }
+// 0x004492b4 · 559 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setTitleLabel:(id)a1 { }
 
-// 0x004492c4
+// 0x004492c4 · 555 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)statusLabel { return NULL; }
 
-// 0x004492d0
--(void)setStatusLabel:(id)setStatusLabel { }
+// 0x004492d0 · 552 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setStatusLabel:(id)a1 { }
 
-// 0x004492e0
+// 0x004492e0 · 548 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomButton { return NULL; }
 
-// 0x004492ec
--(void)setZoomButton:(id)setZoomButton { }
+// 0x004492ec · 545 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomButton:(id)a1 { }
 
-// 0x004492fc
+// 0x004492fc · 541 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomSlider { return NULL; }
 
-// 0x00449308
--(void)setZoomSlider:(id)setZoomSlider { }
+// 0x00449308 · 538 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomSlider:(id)a1 { }
 
-// 0x00449318
+// 0x00449318 · 534 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomRailView { return NULL; }
 
-// 0x00449324
--(void)setZoomRailView:(id)setZoomRailView { }
+// 0x00449324 · 531 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomRailView:(id)a1 { }
 
-// 0x00449334
+// 0x00449334 · 527 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomWideButton { return NULL; }
 
-// 0x00449340
--(void)setZoomWideButton:(id)setZoomWideButton { }
+// 0x00449340 · 524 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomWideButton:(id)a1 { }
 
-// 0x00449350
+// 0x00449350 · 520 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomOneButton { return NULL; }
 
-// 0x0044935c
--(void)setZoomOneButton:(id)setZoomOneButton { }
+// 0x0044935c · 517 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomOneButton:(id)a1 { }
 
-// 0x0044936c
+// 0x0044936c · 513 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomTeleButton { return NULL; }
 
-// 0x00449378
--(void)setZoomTeleButton:(id)setZoomTeleButton { }
+// 0x00449378 · 510 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomTeleButton:(id)a1 { }
 
-// 0x00449388
+// 0x00449388 · 506 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomMinLabel { return NULL; }
 
-// 0x00449394
--(void)setZoomMinLabel:(id)setZoomMinLabel { }
+// 0x00449394 · 503 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomMinLabel:(id)a1 { }
 
-// 0x004493a4
+// 0x004493a4 · 499 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)zoomMaxLabel { return NULL; }
 
-// 0x004493b0
--(void)setZoomMaxLabel:(id)setZoomMaxLabel { }
+// 0x004493b0 · 496 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setZoomMaxLabel:(id)a1 { }
 
-// 0x004493c0
+// 0x004493c0 · 492 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)closeButton { return NULL; }
 
-// 0x004493cc
--(void)setCloseButton:(id)setCloseButton { }
+// 0x004493cc · 489 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setCloseButton:(id)a1 { }
 
-// 0x004493dc
+// 0x004493dc · 485 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)photoModeButton { return NULL; }
 
-// 0x004493e8
--(void)setPhotoModeButton:(id)setPhotoModeButton { }
+// 0x004493e8 · 482 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPhotoModeButton:(id)a1 { }
 
-// 0x004493f8
+// 0x004493f8 · 478 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)videoModeButton { return NULL; }
 
-// 0x00449404
--(void)setVideoModeButton:(id)setVideoModeButton { }
+// 0x00449404 · 475 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setVideoModeButton:(id)a1 { }
 
-// 0x00449414
+// 0x00449414 · 471 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)resolutionButton { return NULL; }
 
-// 0x00449420
--(void)setResolutionButton:(id)setResolutionButton { }
+// 0x00449420 · 468 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setResolutionButton:(id)a1 { }
 
-// 0x00449430
+// 0x00449430 · 464 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)fpsButton { return NULL; }
 
-// 0x0044943c
--(void)setFpsButton:(id)setFpsButton { }
+// 0x0044943c · 461 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFpsButton:(id)a1 { }
 
-// 0x0044944c
+// 0x0044944c · 457 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)captureButton { return NULL; }
 
-// 0x00449458
--(void)setCaptureButton:(id)setCaptureButton { }
+// 0x00449458 · 454 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setCaptureButton:(id)a1 { }
 
-// 0x00449468
+// 0x00449468 · 450 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)saveButton { return NULL; }
 
-// 0x00449474
--(void)setSaveButton:(id)setSaveButton { }
+// 0x00449474 · 447 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setSaveButton:(id)a1 { }
 
-// 0x00449484
+// 0x00449484 · 443 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)deleteButton { return NULL; }
 
-// 0x00449490
--(void)setDeleteButton:(id)setDeleteButton { }
+// 0x00449490 · 440 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setDeleteButton:(id)a1 { }
 
-// 0x004494a0
+// 0x004494a0 · 436 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)historyButton { return NULL; }
 
-// 0x004494ac
--(void)setHistoryButton:(id)setHistoryButton { }
+// 0x004494ac · 433 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setHistoryButton:(id)a1 { }
 
-// 0x004494bc
+// 0x004494bc · 429 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)cameraSwitchButton { return NULL; }
 
-// 0x004494c8
--(void)setCameraSwitchButton:(id)setCameraSwitchButton { }
+// 0x004494c8 · 426 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setCameraSwitchButton:(id)a1 { }
 
-// 0x004494d8
+// 0x004494d8 · 422 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)audioButton { return NULL; }
 
-// 0x004494e4
--(void)setAudioButton:(id)setAudioButton { }
+// 0x004494e4 · 419 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setAudioButton:(id)a1 { }
 
-// 0x004494f4
+// 0x004494f4 · 415 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)livePhotoButton { return NULL; }
 
-// 0x00449500
--(void)setLivePhotoButton:(id)setLivePhotoButton { }
+// 0x00449500 · 412 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setLivePhotoButton:(id)a1 { }
 
-// 0x00449510
+// 0x00449510 · 408 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)themeButton { return NULL; }
 
-// 0x0044951c
--(void)setThemeButton:(id)setThemeButton { }
+// 0x0044951c · 405 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setThemeButton:(id)a1 { }
 
-// 0x0044952c
+// 0x0044952c · 401 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)filmStripView { return NULL; }
 
-// 0x00449538
--(void)setFilmStripView:(id)setFilmStripView { }
+// 0x00449538 · 398 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFilmStripView:(id)a1 { }
 
-// 0x00449548
+// 0x00449548 · 394 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)filmBlurView { return NULL; }
 
-// 0x00449554
--(void)setFilmBlurView:(id)setFilmBlurView { }
+// 0x00449554 · 391 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFilmBlurView:(id)a1 { }
 
-// 0x00449564
+// 0x00449564 · 387 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)filmTintView { return NULL; }
 
-// 0x00449570
--(void)setFilmTintView:(id)setFilmTintView { }
+// 0x00449570 · 384 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFilmTintView:(id)a1 { }
 
-// 0x00449580
+// 0x00449580 · 380 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)filmThumbView { return NULL; }
 
-// 0x0044958c
--(void)setFilmThumbView:(id)setFilmThumbView { }
+// 0x0044958c · 377 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFilmThumbView:(id)a1 { }
 
-// 0x0044959c
+// 0x0044959c · 373 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)filmTitleLabel { return NULL; }
 
-// 0x004495a8
--(void)setFilmTitleLabel:(id)setFilmTitleLabel { }
+// 0x004495a8 · 370 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFilmTitleLabel:(id)a1 { }
 
-// 0x004495b8
+// 0x004495b8 · 366 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)filmMetaLabel { return NULL; }
 
-// 0x004495c4
--(void)setFilmMetaLabel:(id)setFilmMetaLabel { }
+// 0x004495c4 · 363 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setFilmMetaLabel:(id)a1 { }
 
-// 0x004495d4
+// 0x004495d4 · 359 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printOverlayView { return NULL; }
 
-// 0x004495e0
--(void)setPrintOverlayView:(id)setPrintOverlayView { }
+// 0x004495e0 · 356 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintOverlayView:(id)a1 { }
 
-// 0x004495f0
+// 0x004495f0 · 352 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printSlotView { return NULL; }
 
-// 0x004495fc
--(void)setPrintSlotView:(id)setPrintSlotView { }
+// 0x004495fc · 349 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintSlotView:(id)a1 { }
 
-// 0x0044960c
+// 0x0044960c · 345 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printEjectClipView { return NULL; }
 
-// 0x00449618
--(void)setPrintEjectClipView:(id)setPrintEjectClipView { }
+// 0x00449618 · 342 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintEjectClipView:(id)a1 { }
 
-// 0x00449628
+// 0x00449628 · 338 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printPhotoCardView { return NULL; }
 
-// 0x00449634
--(void)setPrintPhotoCardView:(id)setPrintPhotoCardView { }
+// 0x00449634 · 335 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintPhotoCardView:(id)a1 { }
 
-// 0x00449644
+// 0x00449644 · 331 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printPhotoImageView { return NULL; }
 
-// 0x00449650
--(void)setPrintPhotoImageView:(id)setPrintPhotoImageView { }
+// 0x00449650 · 328 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintPhotoImageView:(id)a1 { }
 
-// 0x00449660
+// 0x00449660 · 324 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printCaptionLabel { return NULL; }
 
-// 0x0044966c
--(void)setPrintCaptionLabel:(id)setPrintCaptionLabel { }
+// 0x0044966c · 321 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintCaptionLabel:(id)a1 { }
 
-// 0x0044967c
+// 0x0044967c · 317 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printCloseButton { return NULL; }
 
-// 0x00449688
--(void)setPrintCloseButton:(id)setPrintCloseButton { }
+// 0x00449688 · 314 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintCloseButton:(id)a1 { }
 
-// 0x00449698
+// 0x00449698 · 310 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printReturnShellView { return NULL; }
 
-// 0x004496a4
--(void)setPrintReturnShellView:(id)setPrintReturnShellView { }
+// 0x004496a4 · 307 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintReturnShellView:(id)a1 { }
 
-// 0x004496b4
+// 0x004496b4 · 303 条指令
+// 系统：_objc_setProperty_nonatomic_copy
 -(id)printedHistoryItem { return NULL; }
 
-// 0x004496c0
--(void)setPrintedHistoryItem:(id)setPrintedHistoryItem { }
+// 0x004496c0 · 300 条指令
+// 系统：_objc_setProperty_nonatomic_copy
+-(void)setPrintedHistoryItem:(id)a1 { }
 
-// 0x004496cc
+// 0x004496cc · 297 条指令
 -(id)session { return NULL; }
 
-// 0x004496d8
--(void)setSession:(id)setSession { }
+// 0x004496d8 · 294 条指令
+-(void)setSession:(id)a1 { }
 
-// 0x004496e8
+// 0x004496e8 · 290 条指令
 -(id)captureDevice { return NULL; }
 
-// 0x004496f4
--(void)setCaptureDevice:(id)setCaptureDevice { }
+// 0x004496f4 · 287 条指令
+-(void)setCaptureDevice:(id)a1 { }
 
-// 0x00449704
+// 0x00449704 · 283 条指令
 -(id)videoInput { return NULL; }
 
-// 0x00449710
--(void)setVideoInput:(id)setVideoInput { }
+// 0x00449710 · 280 条指令
+-(void)setVideoInput:(id)a1 { }
 
-// 0x00449720
+// 0x00449720 · 276 条指令
 -(id)audioInput { return NULL; }
 
-// 0x0044972c
--(void)setAudioInput:(id)setAudioInput { }
+// 0x0044972c · 273 条指令
+-(void)setAudioInput:(id)a1 { }
 
-// 0x0044973c
+// 0x0044973c · 269 条指令
 -(id)photoOutput { return NULL; }
 
-// 0x00449748
--(void)setPhotoOutput:(id)setPhotoOutput { }
+// 0x00449748 · 266 条指令
+-(void)setPhotoOutput:(id)a1 { }
 
-// 0x00449758
+// 0x00449758 · 262 条指令
 -(id)movieOutput { return NULL; }
 
-// 0x00449764
--(void)setMovieOutput:(id)setMovieOutput { }
+// 0x00449764 · 259 条指令
+-(void)setMovieOutput:(id)a1 { }
 
-// 0x00449774
+// 0x00449774 · 255 条指令
 -(id)previewLayer { return NULL; }
 
-// 0x00449780
--(void)setPreviewLayer:(id)setPreviewLayer { }
+// 0x00449780 · 252 条指令
+-(void)setPreviewLayer:(id)a1 { }
 
-// 0x00449790
+// 0x00449790 · 248 条指令
 -(id)controlsBlurView { return NULL; }
 
-// 0x0044979c
--(void)setControlsBlurView:(id)setControlsBlurView { }
+// 0x0044979c · 245 条指令
+-(void)setControlsBlurView:(id)a1 { }
 
-// 0x004497ac
+// 0x004497ac · 241 条指令
 -(id)controlsTintView { return NULL; }
 
-// 0x004497b8
--(void)setControlsTintView:(id)setControlsTintView { }
+// 0x004497b8 · 238 条指令
+-(void)setControlsTintView:(id)a1 { }
 
-// 0x004497c8
+// 0x004497c8 · 234 条指令
 -(id)outsideTapGesture { return NULL; }
 
-// 0x004497d4
--(void)setOutsideTapGesture:(id)setOutsideTapGesture { }
+// 0x004497d4 · 231 条指令
+-(void)setOutsideTapGesture:(id)a1 { }
 
-// 0x004497e4
+// 0x004497e4 · 227 条指令
 -(id)switchCoverBlurView { return NULL; }
 
-// 0x004497f0
--(void)setSwitchCoverBlurView:(id)setSwitchCoverBlurView { }
+// 0x004497f0 · 224 条指令
+-(void)setSwitchCoverBlurView:(id)a1 { }
 
-// 0x00449800
+// 0x00449800 · 220 条指令
 -(id)switchCoverImageView { return NULL; }
 
-// 0x0044980c
--(void)setSwitchCoverImageView:(id)setSwitchCoverImageView { }
+// 0x0044980c · 217 条指令
+-(void)setSwitchCoverImageView:(id)a1 { }
 
-// 0x0044981c
+// 0x0044981c · 213 条指令
 -(id)pendingLivePhotoVideoURL { return NULL; }
 
-// 0x00449828
--(void)setPendingLivePhotoVideoURL:(id)setPendingLivePhotoVideoURL { }
+// 0x00449828 · 210 条指令
+-(void)setPendingLivePhotoVideoURL:(id)a1 { }
 
-// 0x00449838
+// 0x00449838 · 206 条指令
 -(id)pendingPhotoData { return NULL; }
 
-// 0x00449844
--(void)setPendingPhotoData:(id)setPendingPhotoData { }
+// 0x00449844 · 203 条指令
+-(void)setPendingPhotoData:(id)a1 { }
 
-// 0x00449854
+// 0x00449854 · 199 条指令
 -(id)pendingPhotoImage { return NULL; }
 
-// 0x00449860
--(void)setPendingPhotoImage:(id)setPendingPhotoImage { }
+// 0x00449860 · 196 条指令
+-(void)setPendingPhotoImage:(id)a1 { }
 
-// 0x00449870
+// 0x00449870 · 192 条指令
 -(id)sessionQueue { return NULL; }
 
-// 0x0044987c
--(void)setSessionQueue:(id)setSessionQueue { }
+// 0x0044987c · 189 条指令
+-(void)setSessionQueue:(id)a1 { }
 
-// 0x0044988c
+// 0x0044988c · 185 条指令
 -(BOOL)sessionConfigured { return NO; }
 
-// 0x00449898
--(void)setSessionConfigured:(BOOL)setSessionConfigured { }
+// 0x00449898 · 182 条指令
+-(void)setSessionConfigured:(BOOL)a1 { }
 
-// 0x004498a4
+// 0x004498a4 · 179 条指令
 -(BOOL)sessionStarting { return NO; }
 
-// 0x004498b0
--(void)setSessionStarting:(BOOL)setSessionStarting { }
+// 0x004498b0 · 176 条指令
+-(void)setSessionStarting:(BOOL)a1 { }
 
-// 0x004498bc
+// 0x004498bc · 173 条指令
 -(BOOL)videoMode { return NO; }
 
-// 0x004498c8
--(void)setVideoMode:(BOOL)setVideoMode { }
+// 0x004498c8 · 170 条指令
+-(void)setVideoMode:(BOOL)a1 { }
 
-// 0x004498d4
+// 0x004498d4 · 167 条指令
 -(BOOL)recordAudio { return NO; }
 
-// 0x004498e0
--(void)setRecordAudio:(BOOL)setRecordAudio { }
+// 0x004498e0 · 164 条指令
+-(void)setRecordAudio:(BOOL)a1 { }
 
-// 0x004498ec
+// 0x004498ec · 161 条指令
 -(BOOL)livePhotoEnabled { return NO; }
 
-// 0x004498f8
--(void)setLivePhotoEnabled:(BOOL)setLivePhotoEnabled { }
+// 0x004498f8 · 158 条指令
+-(void)setLivePhotoEnabled:(BOOL)a1 { }
 
-// 0x00449904
+// 0x00449904 · 155 条指令
 -(BOOL)videoRecording { return NO; }
 
-// 0x00449910
--(void)setVideoRecording:(BOOL)setVideoRecording { }
+// 0x00449910 · 152 条指令
+-(void)setVideoRecording:(BOOL)a1 { }
 
-// 0x0044991c
+// 0x0044991c · 149 条指令
 -(BOOL)dismissAfterRecordingStops { return NO; }
 
-// 0x00449928
--(void)setDismissAfterRecordingStops:(BOOL)setDismissAfterRecordingStops { }
+// 0x00449928 · 146 条指令
+-(void)setDismissAfterRecordingStops:(BOOL)a1 { }
 
-// 0x00449934
+// 0x00449934 · 143 条指令
 -(BOOL)closing { return NO; }
 
-// 0x00449940
--(void)setClosing:(BOOL)setClosing { }
+// 0x00449940 · 140 条指令
+-(void)setClosing:(BOOL)a1 { }
 
-// 0x0044994c
+// 0x0044994c · 137 条指令
 -(BOOL)closeAnimationStarted { return NO; }
 
-// 0x00449958
--(void)setCloseAnimationStarted:(BOOL)setCloseAnimationStarted { }
+// 0x00449958 · 134 条指令
+-(void)setCloseAnimationStarted:(BOOL)a1 { }
 
-// 0x00449964
+// 0x00449964 · 131 条指令
 -(BOOL)didRunIslandAnimation { return NO; }
 
-// 0x00449970
--(void)setDidRunIslandAnimation:(BOOL)setDidRunIslandAnimation { }
+// 0x00449970 · 128 条指令
+-(void)setDidRunIslandAnimation:(BOOL)a1 { }
 
-// 0x0044997c
+// 0x0044997c · 125 条指令
 -(BOOL)islandOpenAnimating { return NO; }
 
-// 0x00449988
--(void)setIslandOpenAnimating:(BOOL)setIslandOpenAnimating { }
+// 0x00449988 · 122 条指令
+-(void)setIslandOpenAnimating:(BOOL)a1 { }
 
-// 0x00449994
+// 0x00449994 · 119 条指令
 -(BOOL)modeSwitching { return NO; }
 
-// 0x004499a0
--(void)setModeSwitching:(BOOL)setModeSwitching { }
+// 0x004499a0 · 116 条指令
+-(void)setModeSwitching:(BOOL)a1 { }
 
-// 0x004499ac
+// 0x004499ac · 113 条指令
 -(BOOL)livePhotoSwitching { return NO; }
 
-// 0x004499b8
--(void)setLivePhotoSwitching:(BOOL)setLivePhotoSwitching { }
+// 0x004499b8 · 110 条指令
+-(void)setLivePhotoSwitching:(BOOL)a1 { }
 
-// 0x004499c4
+// 0x004499c4 · 107 条指令
 -(BOOL)printAnimationActive { return NO; }
 
-// 0x004499d0
--(void)setPrintAnimationActive:(BOOL)setPrintAnimationActive { }
+// 0x004499d0 · 104 条指令
+-(void)setPrintAnimationActive:(BOOL)a1 { }
 
-// 0x004499dc
+// 0x004499dc · 101 条指令
 -(BOOL)printResultVisible { return NO; }
 
-// 0x004499e8
--(void)setPrintResultVisible:(BOOL)setPrintResultVisible { }
+// 0x004499e8 · 98 条指令
+-(void)setPrintResultVisible:(BOOL)a1 { }
 
-// 0x004499f4
+// 0x004499f4 · 95 条指令
 -(BOOL)priorStatusBarHidden { return NO; }
 
-// 0x00449a00
--(void)setPriorStatusBarHidden:(BOOL)setPriorStatusBarHidden { }
+// 0x00449a00 · 92 条指令
+-(void)setPriorStatusBarHidden:(BOOL)a1 { }
 
-// 0x00449a0c
+// 0x00449a0c · 89 条指令
 -(BOOL)pendingPhotoCaptureActive { return NO; }
 
-// 0x00449a18
--(void)setPendingPhotoCaptureActive:(BOOL)setPendingPhotoCaptureActive { }
+// 0x00449a18 · 86 条指令
+-(void)setPendingPhotoCaptureActive:(BOOL)a1 { }
 
-// 0x00449a24
+// 0x00449a24 · 83 条指令
 -(BOOL)pendingLivePhotoFinished { return NO; }
 
-// 0x00449a30
--(void)setPendingLivePhotoFinished:(BOOL)setPendingLivePhotoFinished { }
+// 0x00449a30 · 80 条指令
+-(void)setPendingLivePhotoFinished:(BOOL)a1 { }
 
-// 0x00449a3c
+// 0x00449a3c · 77 条指令
 -(BOOL)pendingPhotoStoreInFlight { return NO; }
 
-// 0x00449a48
--(void)setPendingPhotoStoreInFlight:(BOOL)setPendingPhotoStoreInFlight { }
+// 0x00449a48 · 74 条指令
+-(void)setPendingPhotoStoreInFlight:(BOOL)a1 { }
 
-// 0x00449a54
+// 0x00449a54 · 71 条指令
 -(long long)pendingLivePhotoWaitAttempts { return 0; }
 
-// 0x00449a60
--(void)setPendingLivePhotoWaitAttempts:(long long)setPendingLivePhotoWaitAttempts { }
+// 0x00449a60 · 68 条指令
+-(void)setPendingLivePhotoWaitAttempts:(long long)a1 { }
 
-// 0x00449a6c
+// 0x00449a6c · 65 条指令
 -(long long)selectedResolutionIndex { return 0; }
 
-// 0x00449a78
--(void)setSelectedResolutionIndex:(long long)setSelectedResolutionIndex { }
+// 0x00449a78 · 62 条指令
+-(void)setSelectedResolutionIndex:(long long)a1 { }
 
-// 0x00449a84
+// 0x00449a84 · 59 条指令
 -(long long)selectedFPSIndex { return 0; }
 
-// 0x00449a90
--(void)setSelectedFPSIndex:(long long)setSelectedFPSIndex { }
+// 0x00449a90 · 56 条指令
+-(void)setSelectedFPSIndex:(long long)a1 { }
 
-// 0x00449a9c
+// 0x00449a9c · 53 条指令
 -(long long)selectedThemeIndex { return 0; }
 
-// 0x00449aa8
--(void)setSelectedThemeIndex:(long long)setSelectedThemeIndex { }
+// 0x00449aa8 · 50 条指令
+-(void)setSelectedThemeIndex:(long long)a1 { }
 
-// 0x00449ab4
+// 0x00449ab4 · 47 条指令
 -(long long)selectedFilmWatermarkStyle { return 0; }
 
-// 0x00449ac0
--(void)setSelectedFilmWatermarkStyle:(long long)setSelectedFilmWatermarkStyle { }
+// 0x00449ac0 · 44 条指令
+-(void)setSelectedFilmWatermarkStyle:(long long)a1 { }
 
-// 0x00449acc
+// 0x00449acc · 41 条指令
 -(long long)cameraPosition { return 0; }
 
-// 0x00449ad8
--(void)setCameraPosition:(long long)setCameraPosition { }
+// 0x00449ad8 · 38 条指令
+-(void)setCameraPosition:(long long)a1 { }
 
-// 0x00449ae4
+// 0x00449ae4 · 35 条指令
 -(BOOL)requestedAudioAccess { return NO; }
 
-// 0x00449af0
--(void)setRequestedAudioAccess:(BOOL)setRequestedAudioAccess { }
+// 0x00449af0 · 32 条指令
+-(void)setRequestedAudioAccess:(BOOL)a1 { }
 
-// 0x00449afc
+// 0x00449afc · 29 条指令
 -(double)currentZoom { return 0; }
 
-// 0x00449b08
--(void)setCurrentZoom:(double)setCurrentZoom { }
+// 0x00449b08 · 26 条指令
+-(void)setCurrentZoom:(double)a1 { }
 
-// 0x00449b14
+// 0x00449b14 · 23 条指令
 -(double)maxZoom { return 0; }
 
-// 0x00449b20
--(void)setMaxZoom:(double)setMaxZoom { }
+// 0x00449b20 · 20 条指令
+-(void)setMaxZoom:(double)a1 { }
 
-// 0x00449b2c
+// 0x00449b2c · 17 条指令
 -(double)pinchBaseZoom { return 0; }
 
-// 0x00449b38
--(void)setPinchBaseZoom:(double)setPinchBaseZoom { }
+// 0x00449b38 · 14 条指令
+-(void)setPinchBaseZoom:(double)a1 { }
 
-// 0x00449b44
+// 0x00449b44 · 11 条指令
 -(double)panBaseZoom { return 0; }
 
-// 0x00449b50
--(void)setPanBaseZoom:(double)setPanBaseZoom { }
+// 0x00449b50 · 8 条指令
+-(void)setPanBaseZoom:(double)a1 { }
 
-// 0x00449b5c
+// 0x00449b5c · 5 条指令
 -(struct CGPoint)panStartPoint { return (struct CGPoint){0}; }
 
-// 0x00449b70
--(void)setPanStartPoint:(struct CGPoint)setPanStartPoint { }
+// 0x00449b70 · 5 条指令
+-(void)setPanStartPoint:(struct CGPoint)a1 { }
 
-// 0x00449b84
+// 0x00449b84 · 395 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 -(double)controlsYOffset { return 0; }
 
-// 0x00449b90
--(void)setControlsYOffset:(double)setControlsYOffset { }
+// 0x00449b90 · 392 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
+-(void)setControlsYOffset:(double)a1 { }
 
-// 0x00449b9c
+// 0x00449b9c · 389 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 -(double)controlsPanStartOffset { return 0; }
 
-// 0x00449ba8
--(void)setControlsPanStartOffset:(double)setControlsPanStartOffset { }
+// 0x00449ba8 · 386 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
+-(void)setControlsPanStartOffset:(double)a1 { }
 
-// 0x00449bb4
+// 0x00449bb4 · 383 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 -(double)controlsMinYOffset { return 0; }
 
-// 0x00449bc0
--(void)setControlsMinYOffset:(double)setControlsMinYOffset { }
+// 0x00449bc0 · 380 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
+-(void)setControlsMinYOffset:(double)a1 { }
 
-// 0x00449bcc
+// 0x00449bcc · 377 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 -(double)controlsMaxYOffset { return 0; }
 
-// 0x00449bd8
--(void)setControlsMaxYOffset:(double)setControlsMaxYOffset { }
+// 0x00449bd8 · 374 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
+-(void)setControlsMaxYOffset:(double)a1 { }
 
-// 0x00449be4
+// 0x00449be4 · 371 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 -(struct CGRect)islandOriginFrame { return (struct CGRect){0}; }
 
-// 0x00449bf0
--(void)setIslandOriginFrame:(struct CGRect)setIslandOriginFrame { }
+// 0x00449bf0 · 368 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
+-(void)setIslandOriginFrame:(struct CGRect)a1 { }
 
-// 0x00449bfc
+// 0x00449bfc · 365 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 -(double)lastZoomPersistTime { return 0; }
 
-// 0x00449c08
--(void)setLastZoomPersistTime:(double)setLastZoomPersistTime { }
+// 0x00449c08 · 362 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_storeStrong、_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
+-(void)setLastZoomPersistTime:(double)a1 { }
 
 @end

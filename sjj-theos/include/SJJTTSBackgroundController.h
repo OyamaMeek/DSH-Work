@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f0a8，父类 UITableViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,20 +25,20 @@
 
 @interface SJJTTSBackgroundController : UITableViewController <UIDocumentPickerDelegate>
 
--(id)init;
--(void)viewDidLoad;
--(void)closePage;
--(id)backgroundFiles;
--(id)uniqueBackgroundDestinationForSource:(id)uniqueBackgroundDestinationForSource;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(void)volumeChanged:(id)volumeChanged;
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
--(BOOL)tableView:(id)tableView canEditRowAtIndexPath:(id)canEditRowAtIndexPath;
--(void)tableView:(id)tableView commitEditingStyle:(long long)commitEditingStyle forRowAtIndexPath:(id)forRowAtIndexPath;
+-(id)init; // 0x005363b8
+-(void)viewDidLoad; // 0x005363dc
+-(void)closePage; // 0x00536480
+-(id)backgroundFiles; // 0x00536484
+-(id)uniqueBackgroundDestinationForSource:(id)a1; // 0x00536968
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x00536c3c
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x00536c44
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x00536d1c
+-(id)tableView:(id)a1 titleForFooterInSection:(long long)a2; // 0x00536d54
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x00536d78
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x005378d0
+-(void)volumeChanged:(id)a1; // 0x00537ec0
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2; // 0x00537f50
+-(BOOL)tableView:(id)a1 canEditRowAtIndexPath:(id)a2; // 0x005384b8
+-(void)tableView:(id)a1 commitEditingStyle:(long long)a2 forRowAtIndexPath:(id)a3; // 0x00538558
 
 @end

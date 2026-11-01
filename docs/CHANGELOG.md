@@ -598,3 +598,27 @@
 - **Git 提交**：`17b2bf1 feat: 把重建结果整理为可编译的 Theos 工程`；已推送至 `origin/main`。
 
 ---
+
+## [2026-11-01 22:05] Theos 工程补充详细注释并撰写插件开发教程
+
+- **需求/问题描述**：
+  > 加上详细注释顺便教我如何自己写出一个这样的插件
+
+- **实际实现的功能与改动**：
+  - [实现文件注释]：每个 `.m` 顶部写清类职责、来源地址、方法数量与对照方式；每个方法上方生成 3–5 行反汇编摘要（指令数、字符串常量、消息序列、系统调用），并保留原始地址；属性合成段加说明。
+  - [头文件注释]：每个头文件加类职责说明与地址反查命令，每个方法声明末尾标注原始偏移（137 个文件）。
+  - [手写注释]：`Tweak.xm` 逐段解释 `%ctor`/`%hook`/`%group` 与签名陷阱；`SJJTweakBootstrap` 说明启动四步；`SJJHookInstaller` 说明 runtime 三个 API 与探针模式；`Makefile` 逐变量注释架构、SDK、编译参数、框架与库。
+  - [类职责映射]：新增 `tools/sjj_re/roles.py`，40 个主要类给出手写职责，其余按类名后缀（View/Controller/Manager/Proxy/Box/State…）归类。
+  - [教程]：新增 `docs/tutorial/` 七篇——环境准备、逆向定位目标、写第一个 hook、设置面板与偏好、媒体能力、授权与防护对抗、打包发布与调试，共约 900 行，全部结合本工程的实际代码与踩坑。
+  - [验证]：133 个源文件 `clang -fsyntax-only` 0 错误；`make package` 重新构建通过，产出 `com.siwenjiajia.sjj_28.55-2+debug_iphoneos-arm.deb`（394 KB，arm64 + arm64e）。
+
+- **涉及文件**：
+  - `sjj-theos/include/`（137 个头文件，+注释）、`sjj-theos/src/`（131 个实现，+注释）
+  - `sjj-theos/Tweak.xm`、`Makefile`、`src/Hooks/*`、`README.md`
+  - `tools/sjj_re/roles.py`（新增，+80）、`gen_theos.py`、`gen_source.py`、`typeenc.py`
+  - `docs/tutorial/`（新增 8 个文件）
+  - `docs/CHANGELOG.md`、`memory/progress.md`、`context/2026/11/01/22-05-00/对话.md`
+
+- **Git 提交**：待提交
+
+---

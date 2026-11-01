@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d2f8，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,8 +25,8 @@
 
 @interface SJJExpandedHitContainerView : UIView
 
--(BOOL)sjj_shouldRouteExpandedHitSubviewToSelf:(id)sjj_shouldRouteExpandedHitSubviewToSelf;
--(BOOL)pointInside:(struct CGPoint)pointInside withEvent:(id)withEvent;
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
+-(BOOL)sjj_shouldRouteExpandedHitSubviewToSelf:(id)a1; // 0x00004000
+-(BOOL)pointInside:(struct CGPoint)a1 withEvent:(id)a2; // 0x00004150
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2; // 0x00004324
 
 @end

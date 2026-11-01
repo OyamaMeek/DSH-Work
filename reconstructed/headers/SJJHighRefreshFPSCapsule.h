@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f2d8，父类 UIButton
 //
 
+// 职责：由二进制重建的 UIButton 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,32 +45,32 @@
 
 @property (nonatomic) BOOL cyclingColors;
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(BOOL)pointInside:(struct CGPoint)pointInside withEvent:(id)withEvent;
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(BOOL)accessibilityActivate;
--(void)sjj_configurationTapped:(id)sjj_configurationTapped;
--(void)sjj_configurationLongPressed:(id)sjj_configurationLongPressed;
--(void)sjj_applyTopChannelMaterial;
--(void)layoutSubviews;
--(void)sjj_refreshConfigurationState;
--(void)sjj_updateColorsAtTime:(double)sjj_updateColorsAtTime;
--(void)sjj_applyAnimationFrameRateRange:(struct CAFrameRateRange)sjj_applyAnimationFrameRateRange;
--(void)didMoveToWindow;
--(void)sjj_updateIndicatorAnimation;
--(void)traitCollectionDidChange:(id)traitCollectionDidChange;
--(id)glassView;
--(void)setGlassView:(id)setGlassView;
--(id)pulseRing;
--(void)setPulseRing:(id)setPulseRing;
--(id)redMarker;
--(void)setRedMarker:(id)setRedMarker;
--(id)label;
--(void)setLabel:(id)setLabel;
--(long long)appliedMaterialMode;
--(void)setAppliedMaterialMode:(long long)setAppliedMaterialMode;
--(BOOL)cyclingColors;
--(void)setCyclingColors:(BOOL)setCyclingColors;
+-(id)initWithFrame:(struct CGRect)a1; // 0x0058f59c
+-(BOOL)pointInside:(struct CGPoint)a1 withEvent:(id)a2; // 0x0058ff4c
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2; // 0x0058fff0
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x00590028
+-(BOOL)accessibilityActivate; // 0x005900c8
+-(void)sjj_configurationTapped:(id)a1; // 0x00590504
+-(void)sjj_configurationLongPressed:(id)a1; // 0x00590554
+-(void)sjj_applyTopChannelMaterial; // 0x005905e4
+-(void)layoutSubviews; // 0x00590918
+-(void)sjj_refreshConfigurationState; // 0x00590d3c
+-(void)sjj_updateColorsAtTime:(double)a1; // 0x0059104c
+-(void)sjj_applyAnimationFrameRateRange:(struct CAFrameRateRange)a1; // 0x00591280
+-(void)didMoveToWindow; // 0x00591618
+-(void)sjj_updateIndicatorAnimation; // 0x00591658
+-(void)traitCollectionDidChange:(id)a1; // 0x00591ca0
+-(id)glassView; // 0x00591d14
+-(void)setGlassView:(id)a1; // 0x00591d20
+-(id)pulseRing; // 0x00591d30
+-(void)setPulseRing:(id)a1; // 0x00591d3c
+-(id)redMarker; // 0x00591d4c
+-(void)setRedMarker:(id)a1; // 0x00591d58
+-(id)label; // 0x00591d68
+-(void)setLabel:(id)a1; // 0x00591d74
+-(long long)appliedMaterialMode; // 0x00591d84
+-(void)setAppliedMaterialMode:(long long)a1; // 0x00591d90
+-(BOOL)cyclingColors; // 0x00591da4
+-(void)setCyclingColors:(BOOL)a1; // 0x00591db8
 
 @end

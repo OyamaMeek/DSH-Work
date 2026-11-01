@@ -4,6 +4,11 @@
 //  原始地址 0x00a2eb58，父类 UITableViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -29,15 +34,15 @@
 
 @property (copy, nonatomic) id /* block */ onPick;
 
--(void)viewDidLoad;
--(void)refreshSearchResults;
--(void)updateSearchResultsForSearchController:(id)updateSearchResultsForSearchController;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(id /* block */)onPick;
--(void)setOnPick:(id /* block */)setOnPick;
+-(void)viewDidLoad; // 0x004a7254
+-(void)refreshSearchResults; // 0x004a7764
+-(void)updateSearchResultsForSearchController:(id)a1; // 0x004a7bcc
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x004a7bd0
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x004a7bd8
+-(double)tableView:(id)a1 heightForRowAtIndexPath:(id)a2; // 0x004a7c58
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x004a7cb8
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x004a8178
+-(id /* block */)onPick; // 0x004a8300
+-(void)setOnPick:(id /* block */)a1; // 0x004a830c
 
 @end

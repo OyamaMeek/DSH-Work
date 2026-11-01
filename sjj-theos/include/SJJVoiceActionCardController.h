@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ef68，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -51,28 +56,28 @@
 
 @property (nonatomic) BOOL sjjOverlayAttached;
 
--(void)viewDidLoad;
--(void)beginInlineDownloadRename;
--(BOOL)commitInlineDownloadRenameIfNeeded;
--(void)commitInlineDownloadRename;
--(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn;
--(void)cancelCard;
--(void)dismissOverlayWithCompletion:(id /* block */)dismissOverlayWithCompletion;
--(id)cardTitle;
--(void)setCardTitle:(id)setCardTitle;
--(id)cardMessage;
--(void)setCardMessage:(id)setCardMessage;
--(id)downloadFileURL;
--(void)setDownloadFileURL:(id)setDownloadFileURL;
--(id /* block */)downloadFileRenameHandler;
--(void)setDownloadFileRenameHandler:(id /* block */)setDownloadFileRenameHandler;
--(id)actions;
--(void)setActions:(id)setActions;
--(BOOL)allowsBackgroundDismiss;
--(void)setAllowsBackgroundDismiss:(BOOL)setAllowsBackgroundDismiss;
--(id /* block */)dismissalHandler;
--(void)setDismissalHandler:(id /* block */)setDismissalHandler;
--(BOOL)sjjOverlayAttached;
--(void)setSjjOverlayAttached:(BOOL)setSjjOverlayAttached;
+-(void)viewDidLoad; // 0x0050fbf0
+-(void)beginInlineDownloadRename; // 0x00513090
+-(BOOL)commitInlineDownloadRenameIfNeeded; // 0x005135fc
+-(void)commitInlineDownloadRename; // 0x00513d28
+-(BOOL)textFieldShouldReturn:(id)a1; // 0x00513d2c
+-(void)cancelCard; // 0x00513d60
+-(void)dismissOverlayWithCompletion:(id /* block */)a1; // 0x00513dd4
+-(id)cardTitle; // 0x00513ffc
+-(void)setCardTitle:(id)a1; // 0x00514008
+-(id)cardMessage; // 0x00514014
+-(void)setCardMessage:(id)a1; // 0x00514020
+-(id)downloadFileURL; // 0x0051402c
+-(void)setDownloadFileURL:(id)a1; // 0x00514038
+-(id /* block */)downloadFileRenameHandler; // 0x00514048
+-(void)setDownloadFileRenameHandler:(id /* block */)a1; // 0x00514054
+-(id)actions; // 0x00514060
+-(void)setActions:(id)a1; // 0x0051406c
+-(BOOL)allowsBackgroundDismiss; // 0x00514078
+-(void)setAllowsBackgroundDismiss:(BOOL)a1; // 0x00514084
+-(id /* block */)dismissalHandler; // 0x00514090
+-(void)setDismissalHandler:(id /* block */)a1; // 0x0051409c
+-(BOOL)sjjOverlayAttached; // 0x005140a8
+-(void)setSjjOverlayAttached:(BOOL)a1; // 0x005140b4
 
 @end

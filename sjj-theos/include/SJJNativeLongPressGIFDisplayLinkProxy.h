@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f7b0，父类 NSObject
 //
 
+// 职责：原生长按 GIF 的 displayLink 代理。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,8 +30,8 @@
 
 @property (weak, nonatomic) SJJNativeLongPressGIFAnimator * target;
 
--(void)tick:(id)tick;
--(id)target;
--(void)setTarget:(id)setTarget;
+-(void)tick:(id)a1; // 0x005bcadc
+-(id)target; // 0x005bcb64
+-(void)setTarget:(id)a1; // 0x005bcb8c
 
 @end

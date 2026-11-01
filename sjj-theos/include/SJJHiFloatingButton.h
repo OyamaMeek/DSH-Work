@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e338，父类 UIButton
 //
 
+// 职责：按钮控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -82,67 +87,67 @@
 
 @property (strong, nonatomic) UIImageView * customClearIconView;
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(void)dealloc;
--(void)reloadCustomClearIconData:(id)reloadCustomClearIconData;
--(void)layoutSubviews;
--(void)reloadAppearance;
--(void)reloadPresentationTimers;
--(struct CGPoint)sjj_constrainedCenter:(struct CGPoint)sjj_constrainedCenter;
--(struct CGPoint)sjj_nearestEdgeCenter:(struct CGPoint)sjj_nearestEdgeCenter hiddenState:(BOOL)hiddenState;
--(void)sjj_hideToNearestEdge:(BOOL)sjj_hideToNearestEdge;
--(void)hideToEdgeForClearMode;
--(void)restoreFromEdgeHidden;
--(void)restoreFromClearMode;
--(void)applySelfHiddenForClearMode;
--(void)restoreSelfHiddenForClearMode;
--(void)savePosition;
--(void)loadPosition;
--(void)sjj_touchDown:(id)sjj_touchDown;
--(void)sjj_touchUp:(id)sjj_touchUp;
--(void)sjj_touchCancelled:(id)sjj_touchCancelled;
--(void)sjj_handleLongPress:(id)sjj_handleLongPress;
--(void)sjj_handlePan:(id)sjj_handlePan;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(long long)controlKind;
--(void)setControlKind:(long long)setControlKind;
--(id)manager;
--(void)setManager:(id)setManager;
--(id)materialView;
--(void)setMaterialView:(id)setMaterialView;
--(id)tintView;
--(void)setTintView:(id)setTintView;
--(id)edgeIndicatorView;
--(void)setEdgeIndicatorView:(id)setEdgeIndicatorView;
--(id)dimTimer;
--(void)setDimTimer:(id)setDimTimer;
--(id)edgeHideTimer;
--(void)setEdgeHideTimer:(id)setEdgeHideTimer;
--(BOOL)positionLocked;
--(void)setPositionLocked:(BOOL)setPositionLocked;
--(BOOL)edgeHidden;
--(void)setEdgeHidden:(BOOL)setEdgeHidden;
--(BOOL)edgeHiddenForClearMode;
--(void)setEdgeHiddenForClearMode:(BOOL)setEdgeHiddenForClearMode;
--(BOOL)selfHiddenForClearMode;
--(void)setSelfHiddenForClearMode:(BOOL)setSelfHiddenForClearMode;
--(BOOL)consumeNextTap;
--(void)setConsumeNextTap:(BOOL)setConsumeNextTap;
--(BOOL)longPressHandled;
--(void)setLongPressHandled:(BOOL)setLongPressHandled;
--(BOOL)panHandled;
--(void)setPanHandled:(BOOL)setPanHandled;
--(struct CGPoint)panStartCenter;
--(void)setPanStartCenter:(struct CGPoint)setPanStartCenter;
--(struct CGPoint)centerBeforeEdgeHide;
--(void)setCenterBeforeEdgeHide:(struct CGPoint)setCenterBeforeEdgeHide;
--(BOOL)hasCenterBeforeEdgeHide;
--(void)setHasCenterBeforeEdgeHide:(BOOL)setHasCenterBeforeEdgeHide;
--(id)customClearIconData;
--(void)setCustomClearIconData:(id)setCustomClearIconData;
--(id)customClearIconImage;
--(void)setCustomClearIconImage:(id)setCustomClearIconImage;
--(id)customClearIconView;
--(void)setCustomClearIconView:(id)setCustomClearIconView;
+-(id)initWithFrame:(struct CGRect)a1; // 0x003af650
+-(void)dealloc; // 0x003afbe4
+-(void)reloadCustomClearIconData:(id)a1; // 0x003afc94
+-(void)layoutSubviews; // 0x003b0544
+-(void)reloadAppearance; // 0x003b0d70
+-(void)reloadPresentationTimers; // 0x003b1e6c
+-(struct CGPoint)sjj_constrainedCenter:(struct CGPoint)a1; // 0x003b2448
+-(struct CGPoint)sjj_nearestEdgeCenter:(struct CGPoint)a1 hiddenState:(BOOL)a2; // 0x003b2590
+-(void)sjj_hideToNearestEdge:(BOOL)a1; // 0x003b2698
+-(void)hideToEdgeForClearMode; // 0x003b27bc
+-(void)restoreFromEdgeHidden; // 0x003b27f4
+-(void)restoreFromClearMode; // 0x003b28c0
+-(void)applySelfHiddenForClearMode; // 0x003b2988
+-(void)restoreSelfHiddenForClearMode; // 0x003b2a6c
+-(void)savePosition; // 0x003b2af8
+-(void)loadPosition; // 0x003b2ce8
+-(void)sjj_touchDown:(id)a1; // 0x003b2f68
+-(void)sjj_touchUp:(id)a1; // 0x003b30c4
+-(void)sjj_touchCancelled:(id)a1; // 0x003b31f8
+-(void)sjj_handleLongPress:(id)a1; // 0x003b3240
+-(void)sjj_handlePan:(id)a1; // 0x003b3470
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x003b37d4
+-(long long)controlKind; // 0x003b37dc
+-(void)setControlKind:(long long)a1; // 0x003b37e8
+-(id)manager; // 0x003b37fc
+-(void)setManager:(id)a1; // 0x003b382c
+-(id)materialView; // 0x003b3840
+-(void)setMaterialView:(id)a1; // 0x003b384c
+-(id)tintView; // 0x003b385c
+-(void)setTintView:(id)a1; // 0x003b3868
+-(id)edgeIndicatorView; // 0x003b3878
+-(void)setEdgeIndicatorView:(id)a1; // 0x003b3884
+-(id)dimTimer; // 0x003b3894
+-(void)setDimTimer:(id)a1; // 0x003b38a0
+-(id)edgeHideTimer; // 0x003b38b0
+-(void)setEdgeHideTimer:(id)a1; // 0x003b38bc
+-(BOOL)positionLocked; // 0x003b38cc
+-(void)setPositionLocked:(BOOL)a1; // 0x003b38d8
+-(BOOL)edgeHidden; // 0x003b38e4
+-(void)setEdgeHidden:(BOOL)a1; // 0x003b38f0
+-(BOOL)edgeHiddenForClearMode; // 0x003b38fc
+-(void)setEdgeHiddenForClearMode:(BOOL)a1; // 0x003b3908
+-(BOOL)selfHiddenForClearMode; // 0x003b3914
+-(void)setSelfHiddenForClearMode:(BOOL)a1; // 0x003b3920
+-(BOOL)consumeNextTap; // 0x003b392c
+-(void)setConsumeNextTap:(BOOL)a1; // 0x003b3938
+-(BOOL)longPressHandled; // 0x003b3944
+-(void)setLongPressHandled:(BOOL)a1; // 0x003b3950
+-(BOOL)panHandled; // 0x003b395c
+-(void)setPanHandled:(BOOL)a1; // 0x003b3968
+-(struct CGPoint)panStartCenter; // 0x003b3974
+-(void)setPanStartCenter:(struct CGPoint)a1; // 0x003b3980
+-(struct CGPoint)centerBeforeEdgeHide; // 0x003b398c
+-(void)setCenterBeforeEdgeHide:(struct CGPoint)a1; // 0x003b3998
+-(BOOL)hasCenterBeforeEdgeHide; // 0x003b39a4
+-(void)setHasCenterBeforeEdgeHide:(BOOL)a1; // 0x003b39b0
+-(id)customClearIconData; // 0x003b39bc
+-(void)setCustomClearIconData:(id)a1; // 0x003b39c8
+-(id)customClearIconImage; // 0x003b39d8
+-(void)setCustomClearIconImage:(id)a1; // 0x003b39e4
+-(id)customClearIconView; // 0x003b39f4
+-(void)setCustomClearIconView:(id)a1; // 0x003b3a00
 
 @end

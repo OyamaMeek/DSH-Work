@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e608，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -28,10 +33,10 @@
 
 @property (strong, nonatomic) NSHashTable * passthroughViews;
 
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
--(id)passthroughContainerView;
--(void)setPassthroughContainerView:(id)setPassthroughContainerView;
--(id)passthroughViews;
--(void)setPassthroughViews:(id)setPassthroughViews;
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2; // 0x0042b8a4
+-(id)passthroughContainerView; // 0x0042ba80
+-(void)setPassthroughContainerView:(id)a1; // 0x0042bab0
+-(id)passthroughViews; // 0x0042bac0
+-(void)setPassthroughViews:(id)a1; // 0x0042bacc
 
 @end

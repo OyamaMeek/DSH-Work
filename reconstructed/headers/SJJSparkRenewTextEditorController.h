@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ea18，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -36,20 +41,20 @@
 
 @property (copy, nonatomic) id /* block */ onSave;
 
--(void)viewDidLoad;
--(void)dealloc;
--(void)viewDidLayoutSubviews;
--(void)keyboardWillChange:(id)keyboardWillChange;
--(void)keyboardWillHide:(id)keyboardWillHide;
--(void)closeTap;
--(void)saveTap;
--(id)titleText;
--(void)setTitleText:(id)setTitleText;
--(id)hintText;
--(void)setHintText:(id)setHintText;
--(id)initialText;
--(void)setInitialText:(id)setInitialText;
--(id /* block */)onSave;
--(void)setOnSave:(id /* block */)setOnSave;
+-(void)viewDidLoad; // 0x004a45fc
+-(void)dealloc; // 0x004a4bac
+-(void)viewDidLayoutSubviews; // 0x004a4c48
+-(void)keyboardWillChange:(id)a1; // 0x004a4e48
+-(void)keyboardWillHide:(id)a1; // 0x004a5070
+-(void)closeTap; // 0x004a5174
+-(void)saveTap; // 0x004a5180
+-(id)titleText; // 0x004a524c
+-(void)setTitleText:(id)a1; // 0x004a5258
+-(id)hintText; // 0x004a5264
+-(void)setHintText:(id)a1; // 0x004a5270
+-(id)initialText; // 0x004a527c
+-(void)setInitialText:(id)a1; // 0x004a5288
+-(id /* block */)onSave; // 0x004a5294
+-(void)setOnSave:(id /* block */)a1; // 0x004a52a0
 
 @end

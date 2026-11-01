@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f008，父类 UIViewController
 //
 
+// 职责：视图控制器，负责页面生命周期与交互。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -47,26 +52,26 @@
 
 @property (nonatomic) BOOL sjjOverlayAttached;
 
--(void)viewDidLoad;
--(id)promptButton:(id)promptButton color:(id)color selector:(SEL)selector;
--(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn;
--(void)cancelPrompt;
--(void)confirmPrompt;
--(id)promptTitle;
--(void)setPromptTitle:(id)setPromptTitle;
--(id)promptMessage;
--(void)setPromptMessage:(id)setPromptMessage;
--(id)initialText;
--(void)setInitialText:(id)setInitialText;
--(id)placeholder;
--(void)setPlaceholder:(id)setPlaceholder;
--(long long)keyboardType;
--(void)setKeyboardType:(long long)setKeyboardType;
--(id /* block */)completion;
--(void)setCompletion:(id /* block */)setCompletion;
--(id /* block */)dismissalHandler;
--(void)setDismissalHandler:(id /* block */)setDismissalHandler;
--(BOOL)sjjOverlayAttached;
--(void)setSjjOverlayAttached:(BOOL)setSjjOverlayAttached;
+-(void)viewDidLoad; // 0x005143c0
+-(id)promptButton:(id)a1 color:(id)a2 selector:(SEL)a3; // 0x00515e08
+-(BOOL)textFieldShouldReturn:(id)a1; // 0x00515fd4
+-(void)cancelPrompt; // 0x00515fec
+-(void)confirmPrompt; // 0x00516048
+-(id)promptTitle; // 0x005161dc
+-(void)setPromptTitle:(id)a1; // 0x005161e8
+-(id)promptMessage; // 0x005161f4
+-(void)setPromptMessage:(id)a1; // 0x00516200
+-(id)initialText; // 0x0051620c
+-(void)setInitialText:(id)a1; // 0x00516218
+-(id)placeholder; // 0x00516224
+-(void)setPlaceholder:(id)a1; // 0x00516230
+-(long long)keyboardType; // 0x0051623c
+-(void)setKeyboardType:(long long)a1; // 0x00516248
+-(id /* block */)completion; // 0x0051625c
+-(void)setCompletion:(id /* block */)a1; // 0x00516268
+-(id /* block */)dismissalHandler; // 0x00516274
+-(void)setDismissalHandler:(id /* block */)a1; // 0x00516280
+-(BOOL)sjjOverlayAttached; // 0x0051628c
+-(void)setSjjOverlayAttached:(BOOL)a1; // 0x00516298
 
 @end

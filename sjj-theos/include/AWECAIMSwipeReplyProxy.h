@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fc10，父类 NSObject
 //
 
+// 职责：代理对象，转发或拦截宿主对象的消息。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,8 +25,8 @@
 
 @interface AWECAIMSwipeReplyProxy : NSObject <UIGestureRecognizerDelegate>
 
-+(id)shared;
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin;
--(void)handleCellPan:(id)handleCellPan;
++(id)shared; // 0x0060ddc0
+-(BOOL)gestureRecognizerShouldBegin:(id)a1; // 0x0060de78
+-(void)handleCellPan:(id)a1; // 0x0060dee0
 
 @end

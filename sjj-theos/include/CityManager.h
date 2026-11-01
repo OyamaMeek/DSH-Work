@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fb48，父类 NSObject
 //
 
+// 职责：城市/地区数据封装。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,12 +30,12 @@
 
 @property (strong, nonatomic) NSDictionary * cityCodeMap;
 
-+(id)sharedInstance;
-+(void)fetchLocationWithGeonameId:(id)fetchLocationWithGeonameId completionHandler:(id /* block */)completionHandler;
--(void)loadCityData;
--(id)getCityNameWithCode:(id)getCityNameWithCode;
--(id)getProvinceNameWithCode:(id)getProvinceNameWithCode;
--(id)cityCodeMap;
--(void)setCityCodeMap:(id)setCityCodeMap;
++(id)sharedInstance; // 0x0060cc24
++(void)fetchLocationWithGeonameId:(id)a1 completionHandler:(id /* block */)a2; // 0x0060ce3c
+-(void)loadCityData; // 0x0060ccc0
+-(id)getCityNameWithCode:(id)a1; // 0x0060cccc
+-(id)getProvinceNameWithCode:(id)a1; // 0x0060cd64
+-(id)cityCodeMap; // 0x0060d4b8
+-(void)setCityCodeMap:(id)a1; // 0x0060d4c0
 
 @end

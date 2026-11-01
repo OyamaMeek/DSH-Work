@@ -8,7 +8,7 @@
 // 0x005c3328  111 条指令
 // 消息: copy, pathExtension, lowercaseString, lastPathComponent, length, setTitle:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeStrong, _objc_release, _objc_retainAutoreleasedReturnValue
--(id)initWithFilePath:(id)initWithFilePath rootPath:(id)rootPath darkTheme:(BOOL)darkTheme { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithFilePath:(id)a1 rootPath:(id)a2 darkTheme:(BOOL)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c3534  253 条指令
 // 消息: colorWithWhite:alpha:, systemBackgroundColor, view, setBackgroundColor:, initWithTitle:style:target:action:, navigationItem, setRightBarButtonItem:, initWithFrame:, setNumberOfLines:, systemFontOfSize:weight:, setFont:, secondaryLabelColor, setTextColor:, addSubview:

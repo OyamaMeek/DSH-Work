@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e478，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,28 +39,28 @@
 
 @property (nonatomic) BOOL interfaceSuppressionActive;
 
--(void)viewDidLoad;
--(void)viewWillAppear:(BOOL)viewWillAppear;
--(void)dealloc;
--(void)setInterfaceSuppressionActive:(BOOL)setInterfaceSuppressionActive;
--(void)viewDidLayoutSubviews;
--(id)accentColor;
--(id)labelWithFrame:(struct CGRect)labelWithFrame text:(struct CGSize)text font:(id)font color:(id)color;
--(id)percentText:(double)percentText;
--(id)pointText:(double)pointText;
--(double)addSliderAtY:(double)addSliderAtY title:(id)title hint:(id)hint tag:(long long)tag min:(double)min max:(double)max value:(double)value percent:(BOOL)percent;
--(void)layoutPreviewWave;
--(void)rebuildContent;
--(void)sliderChanged:(id)sliderChanged;
--(void)sliderEnded:(id)sliderEnded;
--(void)resetDefaults;
--(void)close;
--(id)scrollView;
--(void)setScrollView:(id)setScrollView;
--(id)previewWave;
--(void)setPreviewWave:(id)setPreviewWave;
--(id)valueLabels;
--(void)setValueLabels:(id)setValueLabels;
--(BOOL)interfaceSuppressionActive;
+-(void)viewDidLoad; // 0x003d2bd4
+-(void)viewWillAppear:(BOOL)a1; // 0x003d2e64
+-(void)dealloc; // 0x003d2ea0
+-(void)setInterfaceSuppressionActive:(BOOL)a1; // 0x003d2f10
+-(void)viewDidLayoutSubviews; // 0x003d2f38
+-(id)accentColor; // 0x003d300c
+-(id)labelWithFrame:(struct CGRect)a1 text:(struct CGSize)a2 font:(id)a3 color:(id)a4; // 0x003d3044
+-(id)percentText:(double)a1; // 0x003d3170
+-(id)pointText:(double)a1; // 0x003d3198
+-(double)addSliderAtY:(double)a1 title:(id)a2 hint:(id)a3 tag:(long long)a4 min:(double)a5 max:(double)a6 value:(double)a7 percent:(BOOL)a8; // 0x003d31c8
+-(void)layoutPreviewWave; // 0x003d38d4
+-(void)rebuildContent; // 0x003d3b7c
+-(void)sliderChanged:(id)a1; // 0x003d4470
+-(void)sliderEnded:(id)a1; // 0x003d4780
+-(void)resetDefaults; // 0x003d4784
+-(void)close; // 0x003d49a8
+-(id)scrollView; // 0x003d49b4
+-(void)setScrollView:(id)a1; // 0x003d49c0
+-(id)previewWave; // 0x003d49d0
+-(void)setPreviewWave:(id)a1; // 0x003d49dc
+-(id)valueLabels; // 0x003d49ec
+-(void)setValueLabels:(id)a1; // 0x003d49f8
+-(BOOL)interfaceSuppressionActive; // 0x003d4a08
 
 @end

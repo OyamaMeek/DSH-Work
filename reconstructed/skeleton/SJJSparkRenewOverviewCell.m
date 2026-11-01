@@ -8,7 +8,7 @@
 // 0x004a6228  318 条指令
 // 消息: clearColor, setBackgroundColor:, setSelectionStyle:, initWithFrame:, layer, setCornerRadius:, setCornerCurve:, colorWithRed:green:blue:alpha:, setBorderWidth:, CGColor, setBorderColor:, contentView, addSubview:, systemFontOfSize:weight:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease, _objc_opt_new
--(id)initWithStyle:(long long)initWithStyle reuseIdentifier:(id)reuseIdentifier { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithStyle:(long long)a1 reuseIdentifier:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a6798  108 条指令
 // 消息: contentView, bounds, setFrame:, frame
@@ -19,7 +19,7 @@
 // 字符串: "last_sent_day", "yyyy-MM-dd", "--"
 // 消息: objectForKey:, objectForKeyedSubscript:, isEqualToString:, setText:, colorWithRed:green:blue:alpha:, setTextColor:, setBackgroundColor:, stringWithFormat:, date, currentCalendar, timeIntervalSinceNow, dateByAddingTimeInterval:, setCalendar:, localeWithLocaleIdentifier:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_opt_new
--(void)configureWithEnabled:(BOOL)configureWithEnabled { /* 重建骨架，语义见 pseudocode */ }
+-(void)configureWithEnabled:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a71e0  143 条指令
 // 消息: setTitle:, systemBackgroundColor, tableView, setBackgroundColor:, initWithSearchResultsController:, setSearchResultsUpdater:, setObscuresBackgroundDuringPresentation:, searchBar, setPlaceholder:, navigationItem, setSearchController:, setDefinesPresentationContext:

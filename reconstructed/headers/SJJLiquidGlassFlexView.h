@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f9b8，父类 UIVisualEffectView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,8 +30,8 @@
 
 @property (weak, nonatomic) UIView * flexSourceView;
 
--(id)_flexInteractionGestureView;
--(id)flexSourceView;
--(void)setFlexSourceView:(id)setFlexSourceView;
+-(id)_flexInteractionGestureView; // 0x005ed76c
+-(id)flexSourceView; // 0x005ed818
+-(void)setFlexSourceView:(id)a1; // 0x005ed848
 
 @end

@@ -18,12 +18,12 @@
 // 0x00387b5c  49 条指令
 // 消息: objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00387f48  182 条指令
 // 消息: dismissViewControllerAnimated:completion:, presenter, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, popoverPresentationController, view, setSourceView:, bounds, setSourceRect:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, _CGRectGetMidX, _CGRectGetMidY
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePickerControllerDidCancel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00387f58  178 条指令
 // 消息: presenter, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, popoverPresentationController, view, setSourceView:, bounds, setSourceRect:, presentViewController:animated:completion:
@@ -36,7 +36,7 @@
 
 // 0x003882f8  10 条指令
 // C 调用: _objc_storeWeak, _objc_destroyWeak
--(void)setHostController:(id)setHostController { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHostController:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00388304  7 条指令
 // C 调用: _objc_destroyWeak

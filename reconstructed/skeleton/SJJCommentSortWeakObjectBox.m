@@ -15,7 +15,7 @@
 // 字符串: "i", "checkmark"
 // 消息: setCountLimit:, setTotalCostLimit:, ephemeralSessionConfiguration, setRequestCachePolicy:, setTimeoutIntervalForRequest:, setHTTPMaximumConnectionsPerHost:, sessionWithConfiguration:, length, dictionaryWithObjects:forKeys:count:, mainScreen, scale, imageWithCGImage:scale:orientation:, layer, setCornerRadius:
 // C 调用: _objc_storeWeak, _objc_destroyWeak, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retainAutoreleasedReturnValue, __Unwind_Resume, _objc_retain, _CGImageSourceCreateWithData, _CGImageSourceCreateThumbnailAtIndex, _CFRelease
--(void)setObject:(id)setObject { /* 重建骨架，语义见 pseudocode */ }
+-(void)setObject:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00454b2c  598 条指令
 // 字符串: "i", "checkmark"

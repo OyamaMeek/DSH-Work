@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d5c8，父类 NSObject
 //
 
+// 职责：事件与结果处理。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,7 +25,7 @@
 
 @interface SJJVideoSaveFallbackHandler : NSObject
 
-+(id)shared;
--(void)video:(id)video didFinishSavingWithError:(id)didFinishSavingWithError contextInfo:(void *)contextInfo;
++(id)shared; // 0x000114ec
+-(void)video:(id)a1 didFinishSavingWithError:(id)a2 contextInfo:(void *)a3; // 0x00011578
 
 @end

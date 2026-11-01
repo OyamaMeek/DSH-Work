@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e720，父类 NSObject
 //
 
+// 职责：弱引用盒子，承载排序弹窗的宿主对象。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,7 +30,7 @@
 
 @property (weak, nonatomic) id object;
 
--(id)object;
--(void)setObject:(id)setObject;
+-(id)object; // 0x00454af8
+-(void)setObject:(id)a1; // 0x00454b20
 
 @end

@@ -9,38 +9,38 @@
 // 字符串: "sjj_glass_quick_drawer_custom_layout_v1", "UICornerConfiguration", "configurationWithUniformTopRadius:uniformBottomRadius:", "paintpalette.fill", "plus"
 // 消息: copy, dictionaryForKey:, dictionary, enumerateKeysAndObjectsUsingBlock:, clearColor, setBackgroundColor:, setOpaque:, buttonWithType:, setBackdropButton:, colorWithWhite:alpha:, backdropButton, setAccessibilityLabel:, addTarget:action:forControlEvents:, addSubview:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeStrong, _objc_release, _objc_storeWeak, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc, _NSClassFromString, _NSSelectorFromString, _objc_opt_respondsToSelector
--(id)initWithActionIDs:(id)initWithActionIDs host:(id)host { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithActionIDs:(id)a1 host:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035b478  57 条指令
 // 消息: materialView, userInterfaceStyle, traitCollection, applyStoredAppearance
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)traitCollectionDidChange:(id)traitCollectionDidChange { /* 重建骨架，语义见 pseudocode */ }
+-(void)traitCollectionDidChange:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035b588  399 条指令
 // 字符串: "nickname", "douyinID", "uid", "avatarURL"
 // 消息: setWorkDataMode:, copy, setWorkDataSnapshot:, objectForKeyedSubscript:, profileNameLabel, setText:, profileSignButton, stringWithFormat:, setTitle:forState:, setUserInteractionEnabled:, workDataUIDLabel, setHidden:, addButton, setAccessibilityLabel:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)configureWorkDataWithSnapshot:(id)configureWorkDataWithSnapshot { /* 重建骨架，语义见 pseudocode */ }
+-(void)configureWorkDataWithSnapshot:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035bf84  286 条指令
 // 消息: state, isWorkDataMode, profileAvatarView, image, showToast:duration:, view, text, currentTitle, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, generalPasteboard, setString:, notificationOccurred:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _UIImageWriteToSavedPhotosAlbum, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc_init, _objc_enumerationMutation, _objc_alloc
--(void)workDataAvatarLongPressed:(id)workDataAvatarLongPressed { /* 重建骨架，语义见 pseudocode */ }
+-(void)workDataAvatarLongPressed:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035c06c  228 条指令
 // 消息: showToast:duration:, state, view, text, currentTitle, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, generalPasteboard, setString:, notificationOccurred:, setUserInteractionEnabled:, gestureRecognizers, countByEnumeratingWithState:objects:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_alloc_init, __Unwind_Resume, _objc_enumerationMutation, _objc_alloc
--(void)workDataAvatar:(id)workDataAvatar didFinishSavingWithError:(id)didFinishSavingWithError contextInfo:(void *)contextInfo { /* 重建骨架，语义见 pseudocode */ }
+-(void)workDataAvatar:(id)a1 didFinishSavingWithError:(id)a2 contextInfo:(void *)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035c0a4  214 条指令
 // 消息: state, view, text, currentTitle, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, generalPasteboard, setString:, notificationOccurred:, showToast:duration:, setUserInteractionEnabled:, gestureRecognizers, countByEnumeratingWithState:objects:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_alloc_init, __Unwind_Resume, _objc_enumerationMutation, _objc_alloc
--(void)workDataCopyLongPressed:(id)workDataCopyLongPressed { /* 重建骨架，语义见 pseudocode */ }
+-(void)workDataCopyLongPressed:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035c2b0  83 条指令
 // 消息: setUserInteractionEnabled:, gestureRecognizers, countByEnumeratingWithState:objects:count:, delegate, initWithTarget:action:, setMinimumPressDuration:, setDelegate:, addGestureRecognizer:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _objc_alloc
--(void)installWorkDataCopyGestureOnView:(id)installWorkDataCopyGestureOnView { /* 重建骨架，语义见 pseudocode */ }
+-(void)installWorkDataCopyGestureOnView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035c44c  25 条指令
 // 消息: defaultCenter, removeObserver:
@@ -51,7 +51,7 @@
 // 字符串: "person.crop.circle.fill"
 // 消息: reloadProfileHeader, length, imageWithData:, profileAvatarView, setImage:, setTintColor:, setContentMode:, systemImageNamed:, imageWithRenderingMode:, secondaryLabelColor, profileNameLabel, setText:, profileSignButton, setTitle:forState:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_begin_catch, _objc_end_catch, __Unwind_Resume
--(void)profileHeaderDidChange:(id)profileHeaderDidChange { /* 重建骨架，语义见 pseudocode */ }
+-(void)profileHeaderDidChange:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035c4e8  279 条指令
 // 字符串: "person.crop.circle.fill"
@@ -66,7 +66,7 @@
 // 字符串: "%ld:%ld", "x", "y", "i", "w"
 // 消息: isCustomLayoutActive, set, dictionary, array, actionButtons, countByEnumeratingWithState:objects:count:, actionID, isEqualToString:, addObject:, customLayoutItems, objectForKeyedSubscript:, indexOfObject:, numberWithInteger:, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release
--(unsigned long long)reflowCustomLayoutPinnedActionID:(id)reflowCustomLayoutPinnedActionID { /* 重建骨架，语义见 pseudocode */ }
+-(unsigned long long)reflowCustomLayoutPinnedActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035da74  41 条指令
 // 消息: scrollView, bounds
@@ -77,7 +77,7 @@
 // 字符串: "paintpalette.fill", "checkmark"
 // 消息: isCustomLayoutActive, setActiveCustomActionID:, setActiveCustomButton:, reflowCustomLayoutPinnedActionID:, actionButtons, countByEnumeratingWithState:objects:count:, currentForegroundColor, setCustomEditing:foregroundColor:, addButton, setHidden:, paletteButton, configuration, setImage:, setConfiguration:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release
--(void)setCustomEditing:(BOOL)setCustomEditing { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomEditing:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035de04  29 条指令
 // 消息: setNeedsLayout, animateWithDuration:delay:options:animations:completion:
@@ -87,13 +87,13 @@
 // 字符串: "sjj_glass_quick_drawer_custom_layout_v1"
 // 消息: addButton, setFrame:, length, actionIDs, containsObject:, mutableCopy, addObject:, copy, setActionIDs:, actionButtons, initWithActionID:, addTarget:action:forControlEvents:, initWithTarget:action:, setMinimumPressDuration:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc, _objc_retain
--(void)addControlButtonLayout:(double)addControlButtonLayout { /* 重建骨架，语义见 pseudocode */ }
+-(void)addControlButtonLayout:(double)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035defc  232 条指令
 // 字符串: "sjj_glass_quick_drawer_custom_layout_v1"
 // 消息: length, actionIDs, containsObject:, mutableCopy, addObject:, copy, setActionIDs:, actionButtons, initWithActionID:, addTarget:action:forControlEvents:, initWithTarget:action:, setMinimumPressDuration:, setCancelsTouchesInView:, addGestureRecognizer:
 // C 调用: _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, __Unwind_Resume, _objc_retain
--(void)addActionIDToDrawer:(id)addActionIDToDrawer { /* 重建骨架，语义见 pseudocode */ }
+-(void)addActionIDToDrawer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035e1ec  44 条指令
 // 字符串: "sjj_glass_quick_drawer_custom_layout_v1"
@@ -104,13 +104,13 @@
 // 0x0035e2c4  177 条指令
 // 消息: isCustomLayoutActive, view, state, isCustomEditing, setCustomEditing:, setActiveCustomButton:, actionID, setActiveCustomActionID:, locationInView:, setCustomDragTouchOffset:, scrollView, bringSubviewToFront:, layer, setZPosition:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _CGAffineTransformMakeScale, _objc_retainAutorelease, _objc_opt_new
--(void)handleCustomMovePress:(id)handleCustomMovePress { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleCustomMovePress:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035ec2c  506 条指令
 // 字符串: "x"
 // 消息: isCustomLayoutActive, isCustomEditing, view, superview, state, setActiveCustomButton:, actionID, setActiveCustomActionID:, frame, setCustomResizeStartFrame:, customLayoutItems, objectForKeyedSubscript:, integerValue, scrollView
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _CGAffineTransformMakeScale, _objc_retainAutorelease
--(void)handleCustomResizePan:(id)handleCustomResizePan { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleCustomResizePan:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035f654  1205 条指令
 // 字符串: "CIGaussianBlur", "CIAreaAverage"
@@ -130,7 +130,7 @@
 
 // 0x00362bf4  178 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setActionIDs:(id)setActionIDs { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActionIDs:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362c00  175 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy
@@ -138,7 +138,7 @@
 
 // 0x00362c30  163 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setAnchorHost:(id)setAnchorHost { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAnchorHost:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362c40  159 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -146,7 +146,7 @@
 
 // 0x00362c4c  156 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setBackdropButton:(id)setBackdropButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackdropButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362c5c  152 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -154,7 +154,7 @@
 
 // 0x00362c68  149 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setSheetMotionView:(id)setSheetMotionView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSheetMotionView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362c78  145 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -162,7 +162,7 @@
 
 // 0x00362c84  142 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setBackgroundImageView:(id)setBackgroundImageView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundImageView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362c94  138 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -170,7 +170,7 @@
 
 // 0x00362ca0  135 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setBackgroundBlurView:(id)setBackgroundBlurView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundBlurView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362cb0  131 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -178,7 +178,7 @@
 
 // 0x00362cbc  128 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setWorkDataMediaScrimView:(id)setWorkDataMediaScrimView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataMediaScrimView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362ccc  124 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -186,7 +186,7 @@
 
 // 0x00362cd8  121 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setBackgroundPlayer:(id)setBackgroundPlayer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundPlayer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362ce8  117 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -194,7 +194,7 @@
 
 // 0x00362cf4  114 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setBackgroundPlayerLooper:(id)setBackgroundPlayerLooper { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundPlayerLooper:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362d04  110 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -202,7 +202,7 @@
 
 // 0x00362d10  107 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setBackgroundPlayerLayer:(id)setBackgroundPlayerLayer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundPlayerLayer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362d20  103 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -210,7 +210,7 @@
 
 // 0x00362d2c  100 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setPaletteButton:(id)setPaletteButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPaletteButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362d3c  96 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -218,7 +218,7 @@
 
 // 0x00362d48  93 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setAddButton:(id)setAddButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAddButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362d58  89 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -226,7 +226,7 @@
 
 // 0x00362d64  86 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setMaterialView:(id)setMaterialView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMaterialView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362d74  82 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -234,7 +234,7 @@
 
 // 0x00362d80  79 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setProfileAvatarView:(id)setProfileAvatarView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setProfileAvatarView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362d90  75 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -242,7 +242,7 @@
 
 // 0x00362d9c  72 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setProfileNameLabel:(id)setProfileNameLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setProfileNameLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362dac  68 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -250,7 +250,7 @@
 
 // 0x00362db8  65 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setProfileSignButton:(id)setProfileSignButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setProfileSignButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362dc8  61 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -258,7 +258,7 @@
 
 // 0x00362dd4  58 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setHeaderSeparatorView:(id)setHeaderSeparatorView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHeaderSeparatorView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362de4  54 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -266,7 +266,7 @@
 
 // 0x00362df0  51 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setScrollView:(id)setScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e00  47 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -274,7 +274,7 @@
 
 // 0x00362e0c  44 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setActionButtons:(id)setActionButtons { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActionButtons:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e18  41 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -282,7 +282,7 @@
 
 // 0x00362e24  38 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setCustomLayoutItems:(id)setCustomLayoutItems { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomLayoutItems:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e34  34 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -290,26 +290,26 @@
 
 // 0x00362e40  31 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setActiveCustomActionID:(id)setActiveCustomActionID { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveCustomActionID:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e4c  28 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue
 -(id)activeCustomButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e7c  16 条指令
--(void)setActiveCustomButton:(id)setActiveCustomButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveCustomButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e8c  12 条指令
 -(struct CGPoint)customDragTouchOffset { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362e98  9 条指令
--(void)setCustomDragTouchOffset:(struct CGPoint)setCustomDragTouchOffset { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomDragTouchOffset:(struct CGPoint)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362ea4  6 条指令
 -(struct CGRect)customResizeStartFrame { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362ebc  6 条指令
--(void)setCustomResizeStartFrame:(struct CGRect)setCustomResizeStartFrame { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomResizeStartFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362ed4  1543 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -321,7 +321,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setCustomResizeStartWidth:(long long)setCustomResizeStartWidth { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomResizeStartWidth:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362eec  1537 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -333,7 +333,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setCustomResizeStartHeight:(long long)setCustomResizeStartHeight { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomResizeStartHeight:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362f04  1531 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -345,7 +345,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setCustomLayoutRowCount:(unsigned long long)setCustomLayoutRowCount { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCustomLayoutRowCount:(unsigned long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362f1c  1525 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -363,7 +363,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setCurrentForegroundColor:(id)setCurrentForegroundColor { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCurrentForegroundColor:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362f44  1515 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -375,7 +375,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataMode:(BOOL)setWorkDataMode { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataMode:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362f5c  1509 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -387,7 +387,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataSnapshot:(id)setWorkDataSnapshot { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataSnapshot:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362f74  1503 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -399,7 +399,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataUIDLabel:(id)setWorkDataUIDLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataUIDLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362f90  1496 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -411,7 +411,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataBodyView:(id)setWorkDataBodyView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataBodyView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362fac  1489 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -423,7 +423,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataCloseButton:(id)setWorkDataCloseButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataCloseButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362fc8  1482 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -435,7 +435,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataCopyWeChatButton:(id)setWorkDataCopyWeChatButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataCopyWeChatButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00362fe4  1475 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -447,7 +447,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataCopyButton:(id)setWorkDataCopyButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataCopyButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00363000  1468 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -459,7 +459,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setWorkDataUsesCenteredFallback:(BOOL)setWorkDataUsesCenteredFallback { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWorkDataUsesCenteredFallback:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00363018  1462 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"
@@ -471,7 +471,7 @@
 // 字符串: "photo.on.rectangle", "ellipsis"
 // 消息: systemBackgroundColor, view, setBackgroundColor:, initWithFrame:, setTitleLabel:, titleLabel, setText:, setTextAlignment:, systemFontOfSize:weight:, setFont:, labelColor, setTextColor:, addSubview:, buttonWithType:
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease
--(void)setDidPlayWorkDataPresentationHaptic:(BOOL)setDidPlayWorkDataPresentationHaptic { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDidPlayWorkDataPresentationHaptic:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00363030  1456 条指令
 // 字符串: "photo.on.rectangle", "ellipsis"

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2de38，父类 UIButton
 //
 
+// 职责：按钮控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -28,16 +33,16 @@
 
 @property (strong, nonatomic) UIView * sjjFeedbackContentView;
 
--(void)sjjSetPressFeedbackPressed:(BOOL)sjjSetPressFeedbackPressed animated:(BOOL)animated;
--(void)setHighlighted:(BOOL)setHighlighted;
--(void)setUserInteractionEnabled:(BOOL)setUserInteractionEnabled;
--(void)didMoveToWindow;
--(BOOL)beginTrackingWithTouch:(id)beginTrackingWithTouch withEvent:(id)withEvent;
--(BOOL)continueTrackingWithTouch:(id)continueTrackingWithTouch withEvent:(id)withEvent;
--(void)endTrackingWithTouch:(id)endTrackingWithTouch withEvent:(id)withEvent;
--(struct CGPoint)sjjLastTouchPoint;
--(void)setSjjLastTouchPoint:(struct CGPoint)setSjjLastTouchPoint;
--(id)sjjFeedbackContentView;
--(void)setSjjFeedbackContentView:(id)setSjjFeedbackContentView;
+-(void)sjjSetPressFeedbackPressed:(BOOL)a1 animated:(BOOL)a2; // 0x00354ce4
+-(void)setHighlighted:(BOOL)a1; // 0x00354f50
+-(void)setUserInteractionEnabled:(BOOL)a1; // 0x00354fbc
+-(void)didMoveToWindow; // 0x0035500c
+-(BOOL)beginTrackingWithTouch:(id)a1 withEvent:(id)a2; // 0x00355070
+-(BOOL)continueTrackingWithTouch:(id)a1 withEvent:(id)a2; // 0x003550fc
+-(void)endTrackingWithTouch:(id)a1 withEvent:(id)a2; // 0x00355188
+-(struct CGPoint)sjjLastTouchPoint; // 0x00355218
+-(void)setSjjLastTouchPoint:(struct CGPoint)a1; // 0x00355224
+-(id)sjjFeedbackContentView; // 0x00355230
+-(void)setSjjFeedbackContentView:(id)a1; // 0x0035523c
 
 @end

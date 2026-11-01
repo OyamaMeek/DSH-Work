@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f3a0，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -31,11 +36,11 @@
 
 @property (nonatomic) double lastMovement;
 
--(struct CGPoint)offset;
--(void)setOffset:(struct CGPoint)setOffset;
--(struct CGPoint)presentationOffset;
--(void)setPresentationOffset:(struct CGPoint)setPresentationOffset;
--(double)lastMovement;
--(void)setLastMovement:(double)setLastMovement;
+-(struct CGPoint)offset; // 0x005931b0
+-(void)setOffset:(struct CGPoint)a1; // 0x005931b8
+-(struct CGPoint)presentationOffset; // 0x005931c0
+-(void)setPresentationOffset:(struct CGPoint)a1; // 0x005931c8
+-(double)lastMovement; // 0x005931d0
+-(void)setLastMovement:(double)a1; // 0x005931d8
 
 @end

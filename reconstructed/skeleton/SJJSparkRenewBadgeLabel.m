@@ -8,6 +8,6 @@
 // 0x004a5320  57 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
 // C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(id)initWithFrame:(struct CGRect)initWithFrame { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

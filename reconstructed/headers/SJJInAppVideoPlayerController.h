@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d668，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,29 +45,29 @@
     BOOL _downloadHintShown;
 }
 
-+(void)presentFromHost:(id)presentFromHost urlString:(id)urlString;
-+(void)presentFromHost:(id)presentFromHost urlString:(id)urlString startSeconds:(double)startSeconds;
--(id)initWithURLString:(id)initWithURLString;
--(id)initWithURLString:(id)initWithURLString startSeconds:(double)startSeconds;
--(void)viewDidLoad;
--(void)viewDidLayoutSubviews;
--(void)closeTap;
--(void)seekBackwardTap;
--(void)seekForwardTap;
--(void)playPauseTap;
--(void)speedTap;
--(void)speedHold:(id)speedHold;
--(id)currentPlayableURL;
--(void)downloadTap;
--(void)zoomInTap;
--(void)zoomOutTap;
--(void)handlePinch:(id)handlePinch;
--(void)applyZoomScale:(double)applyZoomScale;
--(void)seekByDelta:(double)seekByDelta;
--(void)progressTouchDown;
--(void)progressValueChanged;
--(void)progressTouchUp;
--(void)refreshTimeLabelForSecond:(double)refreshTimeLabelForSecond total:(double)total;
--(void)dealloc;
++(void)presentFromHost:(id)a1 urlString:(id)a2; // 0x0001cafc
++(void)presentFromHost:(id)a1 urlString:(id)a2 startSeconds:(double)a3; // 0x0001cb04
+-(id)initWithURLString:(id)a1; // 0x0001aa80
+-(id)initWithURLString:(id)a1 startSeconds:(double)a2; // 0x0001aa88
+-(void)viewDidLoad; // 0x0001ab74
+-(void)viewDidLayoutSubviews; // 0x0001b6c0
+-(void)closeTap; // 0x0001b9cc
+-(void)seekBackwardTap; // 0x0001b9e4
+-(void)seekForwardTap; // 0x0001b9ec
+-(void)playPauseTap; // 0x0001b9f4
+-(void)speedTap; // 0x0001bab4
+-(void)speedHold:(id)a1; // 0x0001bc5c
+-(id)currentPlayableURL; // 0x0001be34
+-(void)downloadTap; // 0x0001bf6c
+-(void)zoomInTap; // 0x0001c334
+-(void)zoomOutTap; // 0x0001c36c
+-(void)handlePinch:(id)a1; // 0x0001c3a0
+-(void)applyZoomScale:(double)a1; // 0x0001c444
+-(void)seekByDelta:(double)a1; // 0x0001c494
+-(void)progressTouchDown; // 0x0001c5e4
+-(void)progressValueChanged; // 0x0001c608
+-(void)progressTouchUp; // 0x0001c6ac
+-(void)refreshTimeLabelForSecond:(double)a1 total:(double)a2; // 0x0001c920
+-(void)dealloc; // 0x0001ca40
 
 @end

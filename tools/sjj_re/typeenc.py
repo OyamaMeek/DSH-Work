@@ -81,11 +81,11 @@ def method_signature(name, enc):
     segments = name.split(":")[:colon_count]
     first = segments[0] or "arg1"
     argtype = args[0] if args else "id"
-    out = "-(%s)%s:(%s)%s" % (ret, first, argtype, first)
+    out = "-(%s)%s:(%s)a1" % (ret, first, argtype)
     for i in range(1, colon_count):
         label = segments[i] if segments[i] else ("arg%d" % (i + 1))
         argtype = args[i] if i < len(args) else "id"
-        out += " %s:(%s)%s" % (label, argtype, label)
+        out += " %s:(%s)a%d" % (label, argtype, i + 1)
     return out
 
 

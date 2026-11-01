@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d938，父类 UIButton
 //
 
+// 职责：按钮控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,11 +30,11 @@
 
 @property (weak, nonatomic) UIView * sjjFeedbackView;
 
--(void)sjjSetPressFeedbackPressed:(BOOL)sjjSetPressFeedbackPressed animated:(BOOL)animated;
--(void)setHighlighted:(BOOL)setHighlighted;
--(void)setUserInteractionEnabled:(BOOL)setUserInteractionEnabled;
--(void)didMoveToWindow;
--(id)sjjFeedbackView;
--(void)setSjjFeedbackView:(id)setSjjFeedbackView;
+-(void)sjjSetPressFeedbackPressed:(BOOL)a1 animated:(BOOL)a2; // 0x002fe930
+-(void)setHighlighted:(BOOL)a1; // 0x002feb90
+-(void)setUserInteractionEnabled:(BOOL)a1; // 0x002fec00
+-(void)didMoveToWindow; // 0x002fec48
+-(id)sjjFeedbackView; // 0x002feca4
+-(void)setSjjFeedbackView:(id)a1; // 0x002fecd4
 
 @end

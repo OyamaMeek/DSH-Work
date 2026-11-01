@@ -6,18 +6,18 @@
 @implementation SJJHomeActionGlassInteractionTarget
 
 // 0x003337c0  7 条指令
--(void)handleMusicExpandTap:(id)handleMusicExpandTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleMusicExpandTap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333f90  4 条指令
--(void)handleMusicTouchDown:(id)handleMusicTouchDown { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleMusicTouchDown:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333fe8  27 条指令
 // 消息: state
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)handleProfileTap:(id)handleProfileTap { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleProfileTap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0033404c  2 条指令
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00334054  87 条指令
 // 消息: glassButton, view, locationInView:, state, setStartPoint:, setHighlighted:, setNeedsUpdateConfiguration, setTransform:
@@ -27,7 +27,7 @@
 // 0x0033407c  77 条指令
 // 消息: glassButton, view, locationInView:, state, setStartPoint:, setHighlighted:, setNeedsUpdateConfiguration, setTransform:
 // C 调用: _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setOwner:(id)setOwner { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOwner:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00334080  76 条指令
 // 消息: glassButton, view, locationInView:, state, setStartPoint:, setHighlighted:, setNeedsUpdateConfiguration, setTransform:

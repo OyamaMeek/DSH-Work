@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d528，父类 UIPanGestureRecognizer
 //
 
+// 职责：由二进制重建的 UIPanGestureRecognizer 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -26,13 +31,13 @@
     long long _sjjState;
 }
 
--(id)initWithView:(id)initWithView point:(struct CGPoint)point translation:(struct CGPoint)translation state:(long long)state;
--(long long)state;
--(id)view;
--(unsigned long long)numberOfTouches;
--(struct CGPoint)locationInView:(id)locationInView;
--(struct CGPoint)locationOfTouch:(unsigned long long)locationOfTouch inView:(id)inView;
--(struct CGPoint)translationInView:(id)translationInView;
--(struct CGPoint)velocityInView:(id)velocityInView;
+-(id)initWithView:(id)a1 point:(struct CGPoint)a2 translation:(struct CGPoint)a3 state:(long long)a4; // 0x0001072c
+-(long long)state; // 0x000107f8
+-(id)view; // 0x00010804
+-(unsigned long long)numberOfTouches; // 0x00010834
+-(struct CGPoint)locationInView:(id)a1; // 0x0001083c
+-(struct CGPoint)locationOfTouch:(unsigned long long)a1 inView:(id)a2; // 0x00010904
+-(struct CGPoint)translationInView:(id)a1; // 0x0001090c
+-(struct CGPoint)velocityInView:(id)a1; // 0x00010920
 
 @end

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d8c0，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,6 +25,6 @@
 
 @interface SJJLROwnerDouyinAutoFollowObserver : NSObject
 
--(void)handleAppLifecycleTrigger:(id)handleAppLifecycleTrigger;
+-(void)handleAppLifecycleTrigger:(id)a1; // 0x002eede0
 
 @end

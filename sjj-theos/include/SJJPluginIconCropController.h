@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e0b8，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,18 +39,18 @@
 
 @property (strong, nonatomic) UIImageView * imageView;
 
--(void)viewDidLoad;
--(id)viewForZoomingInScrollView:(id)viewForZoomingInScrollView;
--(void)viewDidLayoutSubviews;
--(void)resetCrop;
--(void)saveCrop;
--(id)sourceImage;
--(void)setSourceImage:(id)setSourceImage;
--(id /* block */)completion;
--(void)setCompletion:(id /* block */)setCompletion;
--(id)scrollView;
--(void)setScrollView:(id)setScrollView;
--(id)imageView;
--(void)setImageView:(id)setImageView;
+-(void)viewDidLoad; // 0x003869ac
+-(id)viewForZoomingInScrollView:(id)a1; // 0x00387210
+-(void)viewDidLayoutSubviews; // 0x0038723c
+-(void)resetCrop; // 0x00387474
+-(void)saveCrop; // 0x00387544
+-(id)sourceImage; // 0x003878c0
+-(void)setSourceImage:(id)a1; // 0x003878cc
+-(id /* block */)completion; // 0x003878dc
+-(void)setCompletion:(id /* block */)a1; // 0x003878e8
+-(id)scrollView; // 0x003878f4
+-(void)setScrollView:(id)a1; // 0x00387900
+-(id)imageView; // 0x00387910
+-(void)setImageView:(id)a1; // 0x0038791c
 
 @end

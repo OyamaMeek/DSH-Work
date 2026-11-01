@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e090，父类 NSObject
 //
 
+// 职责：协调器，负责多个组件之间的流程编排。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,30 +45,30 @@
 
 @property (copy, nonatomic) NSString * temporaryExportPath;
 
--(id)presenter;
--(void)finishPicker;
--(void)removeTemporaryExport;
--(void)presentMenu;
--(void)presentExportOptions;
--(void)confirmClear;
--(void)clearConfiguration;
--(void)exportConfiguration;
--(void)exportConfigurationIncludingDeviceMetadata:(BOOL)exportConfigurationIncludingDeviceMetadata;
--(void)presentImporter;
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
--(void)documentPickerWasCancelled:(id)documentPickerWasCancelled;
--(void)importData:(id)importData;
--(id)hostController;
--(void)setHostController:(id)setHostController;
--(BOOL)exporting;
--(void)setExporting:(BOOL)setExporting;
--(BOOL)includeDeviceMetadataForExport;
--(void)setIncludeDeviceMetadataForExport:(BOOL)setIncludeDeviceMetadataForExport;
--(BOOL)pickerActive;
--(void)setPickerActive:(BOOL)setPickerActive;
--(BOOL)operationInProgress;
--(void)setOperationInProgress:(BOOL)setOperationInProgress;
--(id)temporaryExportPath;
--(void)setTemporaryExportPath:(id)setTemporaryExportPath;
+-(id)presenter; // 0x0037bdb0
+-(void)finishPicker; // 0x0037be5c
+-(void)removeTemporaryExport; // 0x0037be84
+-(void)presentMenu; // 0x0037bf4c
+-(void)presentExportOptions; // 0x0037c6d0
+-(void)confirmClear; // 0x0037cb68
+-(void)clearConfiguration; // 0x0037ce40
+-(void)exportConfiguration; // 0x0037d270
+-(void)exportConfigurationIncludingDeviceMetadata:(BOOL)a1; // 0x0037d274
+-(void)presentImporter; // 0x0037eba4
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2; // 0x0037ed80
+-(void)documentPickerWasCancelled:(id)a1; // 0x0037f300
+-(void)importData:(id)a1; // 0x0037f340
+-(id)hostController; // 0x00380930
+-(void)setHostController:(id)a1; // 0x00380958
+-(BOOL)exporting; // 0x00380964
+-(void)setExporting:(BOOL)a1; // 0x0038096c
+-(BOOL)includeDeviceMetadataForExport; // 0x00380974
+-(void)setIncludeDeviceMetadataForExport:(BOOL)a1; // 0x0038097c
+-(BOOL)pickerActive; // 0x00380984
+-(void)setPickerActive:(BOOL)a1; // 0x0038098c
+-(BOOL)operationInProgress; // 0x00380994
+-(void)setOperationInProgress:(BOOL)a1; // 0x0038099c
+-(id)temporaryExportPath; // 0x003809a4
+-(void)setTemporaryExportPath:(id)a1; // 0x003809ac
 
 @end

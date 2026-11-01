@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e3d8，父类 NSObject
 //
 
+// 职责：账号快速切换代理。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,13 +25,13 @@
 
 @interface SJJAccountQuickSwitchProxy : NSObject
 
-+(id)shared;
--(void)handleLongPress:(id)handleLongPress;
--(id)presentFromView:(id)presentFromView tabBar:(id)tabBar;
--(void)updateSlidingSelectionForGesture:(id)updateSlidingSelectionForGesture;
--(void)finishSlidingSelectionForGesture:(id)finishSlidingSelectionForGesture cancelled:(BOOL)cancelled;
--(void)handleDismiss:(id)handleDismiss;
--(void)handleCancel:(id)handleCancel;
--(void)handleAccountTap:(id)handleAccountTap;
++(id)shared; // 0x003b8110
+-(void)handleLongPress:(id)a1; // 0x003b819c
+-(id)presentFromView:(id)a1 tabBar:(id)a2; // 0x003b8a24
+-(void)updateSlidingSelectionForGesture:(id)a1; // 0x003c2074
+-(void)finishSlidingSelectionForGesture:(id)a1 cancelled:(BOOL)a2; // 0x003c2784
+-(void)handleDismiss:(id)a1; // 0x003c2aec
+-(void)handleCancel:(id)a1; // 0x003c2bf0
+-(void)handleAccountTap:(id)a1; // 0x003c2cd0
 
 @end

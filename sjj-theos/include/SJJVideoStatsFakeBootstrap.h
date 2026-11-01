@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ec20，父类 NSObject
 //
 
+// 职责：视频数据伪装入口，启动时注入伪造统计。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,6 +25,6 @@
 
 @interface SJJVideoStatsFakeBootstrap : NSObject
 
-+(void)load;
++(void)load; // 0x004b27b8
 
 @end

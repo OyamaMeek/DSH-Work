@@ -6,6 +6,6 @@
 @implementation SJJGlassQuickResizeHandleView
 
 // 0x003565f8  9 条指令
--(BOOL)pointInside:(struct CGPoint)pointInside withEvent:(id)withEvent { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)pointInside:(struct CGPoint)a1 withEvent:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

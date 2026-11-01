@@ -1,1702 +1,2947 @@
 // siwenjiajiaPanel.m
-// 由反汇编重建的骨架实现；方法体保留为最小可编译实现，语义见 reconstructed/walkthrough
+// 设置面板主控制器：二级页承载、开关/滑块/颜色配置、SVIP 装饰入口、授权页。563 个方法，占全部方法的 14%。
+//
+// 来源：siwenjiajia.dylib 中 0x00a2d730 处的类对象，父类 UIView，563 个实例方法、0 个类方法。
+// 本文件是可编译骨架：方法体返回零值，注释给出反汇编摘要（字符串常量、消息序列、系统调用）。
+// 完整伪代码见 reconstructed/pseudocode/siwenjiajiaPanel.m，按注释里的地址对照。
 
 #import "siwenjiajiaPanel.h"
 
 @implementation siwenjiajiaPanel
 
-@synthesize hash;
-@synthesize superclass;
-@synthesize description;
-@synthesize debugDescription;
-
-// 0x004d860c
+// 0x004d860c · 410 条指令
+// 字符串：", "、"sjj_nickname_text_scale_v1"
+// 消息：whitespaceAndNewlineCharacterSet → mutableCopy → addCharactersInString: → componentsSeparatedByCharactersInSet: → array → set → countByEnumeratingWithState:objects:count: → stringByTrimmingCharactersInSet:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_autoreleaseReturnValue、___stack_chk_fail
 -(void)openHiddenFriendSettingsPage { }
 
-// 0x0008a750
--(id)addSectionCardInView:(id)addSectionCardInView y:(double)y height:(double)height { return NULL; }
+// 0x0008a750 · 412 条指令
+// 消息：bounds → initWithFrame: → colorWithWhite:alpha: → colorWithAlphaComponent: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve:
+// 系统：_objc_retain、_objc_alloc、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retainAutorelease、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)addSectionCardInView:(id)a1 y:(double)a2 height:(double)a3 { return NULL; }
 
-// 0x0008b2d4
--(void)attachPressAnimation:(id)attachPressAnimation { }
+// 0x0008b2d4 · 243 条指令
+// 消息：viewWithTag: → initWithFrame: → setTag: → setUserInteractionEnabled: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、_objc_enumerationMutation、_objc_retainBlock
+-(void)attachPressAnimation:(id)a1 { }
 
-// 0x0008b2d8
--(void)sjjApplyBaseTabVisualStateInWrap:(id)sjjApplyBaseTabVisualStateInWrap animated:(BOOL)animated { }
+// 0x0008b2d8 · 242 条指令
+// 消息：viewWithTag: → initWithFrame: → setTag: → setUserInteractionEnabled: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、_objc_enumerationMutation、_objc_retainBlock
+-(void)sjjApplyBaseTabVisualStateInWrap:(id)a1 animated:(BOOL)a2 { }
 
-// 0x0008bb30
--(void)buttonPressDown:(id)buttonPressDown { }
+// 0x0008bb30 · 10 条指令
+// 消息：setTransform:
+-(void)buttonPressDown:(id)a1 { }
 
-// 0x0008bb58
--(void)buttonPressUp:(id)buttonPressUp { }
+// 0x0008bb58 · 10 条指令
+// 消息：setTransform:
+-(void)buttonPressUp:(id)a1 { }
 
-// 0x0008bb80
+// 0x0008bb80 · 92 条指令
+// 消息：count → objectAtIndexedSubscript: → integerValue → viewWithTag: → setAlpha: → setTransform: → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGAffineTransformMakeTranslation、_CGAffineTransformMakeScale、_CGAffineTransformConcat、_objc_retain
 -(void)playCardEntryAnimation { }
 
-// 0x0008bd50
--(void)sectionTabTapped:(id)sectionTabTapped { }
+// 0x0008bd50 · 125 条指令
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → tag → viewWithTag: → boolValue → contentOffset → setContentOffset:animated: → sjjRestoreCurrentPanelInteractionStateSoon → applySubmenuInContent:scroll:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_release、_objc_enumerationMutation
+-(void)sectionTabTapped:(id)a1 { }
 
-// 0x0008c014
--(void)baseSubTabTapped:(id)baseSubTabTapped { }
+// 0x0008c014 · 110 条指令
+// 字符串："v8@?0"
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → tag → isAliasSVIPUnlocked → superview → viewWithTag: → sjjApplyBaseTabVisualStateInWrap:animated:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_dispatch_time、_dispatch_after
+-(void)baseSubTabTapped:(id)a1 { }
 
-// 0x0008c230
--(void)videoCategoryTabTapped:(id)videoCategoryTabTapped { }
+// 0x0008c230 · 79 条指令
+// 字符串："v8@?0"
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → tag → isAliasSVIPUnlocked
+// 系统：_objc_retain、_dispatch_async、_objc_release
+-(void)videoCategoryTabTapped:(id)a1 { }
 
-// 0x0008c3b4
--(void)videoCategorySegmentChanged:(id)videoCategorySegmentChanged { }
+// 0x0008c3b4 · 98 条指令
+// 字符串："v8@?0"
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → isAliasSVIPUnlocked → count → selectedSegmentIndex → objectAtIndexedSubscript: → integerValue
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_async
+-(void)videoCategorySegmentChanged:(id)a1 { }
 
-// 0x0008c59c
--(id)featureToggleTitleForTag:(long long)featureToggleTitleForTag { return NULL; }
+// 0x0008c59c · 1118 条指令
+// 消息：objectForKeyedSubscript: → count → objectAtIndexedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)featureToggleTitleForTag:(long long)a1 { return NULL; }
 
-// 0x0008ddf4
--(BOOL)featureSwitchStateForTag:(long long)featureSwitchStateForTag known:(BOOL *)known { return NO; }
+// 0x0008ddf4 · 188 条指令
+// 字符串："gkdr_swj_xiaoxiao_red_packet_enabled"、"sjj_spark_renew_enabled"、"gkdr_swj_xiaoxiao_red_packet_auto_reply_enabled"
+// 消息：sjjConfiguredFeatureSwitchStateForTag:known:
+-(BOOL)featureSwitchStateForTag:(long long)a1 known:(BOOL *)a2 { return NO; }
 
-// 0x0008ddf8
--(BOOL)sjjConfiguredFeatureSwitchStateForTag:(long long)sjjConfiguredFeatureSwitchStateForTag known:(BOOL *)known { return NO; }
+// 0x0008ddf8 · 187 条指令
+// 字符串："gkdr_swj_xiaoxiao_red_packet_enabled"、"sjj_spark_renew_enabled"、"gkdr_swj_xiaoxiao_red_packet_auto_reply_enabled"
+-(BOOL)sjjConfiguredFeatureSwitchStateForTag:(long long)a1 known:(BOOL *)a2 { return NO; }
 
-// 0x0008f888
--(id)featureSwitchHelpHintForTag:(long long)featureSwitchHelpHintForTag title:(id)title { return NULL; }
+// 0x0008f888 · 804 条指令
+// 消息：length → featureToggleTitleForTag: → stringWithFormat:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)featureSwitchHelpHintForTag:(long long)a1 title:(id)a2 { return NULL; }
 
-// 0x000908bc
--(id)featureSwitchHelpGuideForTag:(long long)featureSwitchHelpGuideForTag { return NULL; }
+// 0x000908bc · 1350 条指令
+// 字符串："i"、"category"、"fold"、"section"、"keywords"
+// 消息：stringWithFormat: → numberWithInteger: → numberWithBool: → dictionaryWithObjects:forKeys:count: → mutableCopy → setObject:forKeyedSubscript: → copy → lowercaseString
+// 系统：_objc_autoreleaseReturnValue、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、___stack_chk_fail、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass
+-(id)featureSwitchHelpGuideForTag:(long long)a1 { return NULL; }
 
-// 0x0009128c
--(id)featureSearchRoutingForSwitchTag:(long long)featureSearchRoutingForSwitchTag { return NULL; }
+// 0x0009128c · 722 条指令
+// 字符串："i"、"category"、"fold"、"section"、"keywords"
+// 消息：numberWithInteger: → numberWithBool: → dictionaryWithObjects:forKeys:count: → mutableCopy → setObject:forKeyedSubscript: → copy → lowercaseString → whitespaceAndNewlineCharacterSet
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、_objc_retain、___stack_chk_fail、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass
+-(id)featureSearchRoutingForSwitchTag:(long long)a1 { return NULL; }
 
-// 0x00091b00
--(id)sjjFeatureSearchNormalizedText:(id)sjjFeatureSearchNormalizedText { return NULL; }
+// 0x00091b00 · 181 条指令
+// 消息：lowercaseString → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → countByEnumeratingWithState:objects:count: → stringByReplacingOccurrencesOfString:withString: → length → containsString: → sjjFeatureSearchNormalizedText:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_autoreleaseReturnValue、___stack_chk_fail
+-(id)sjjFeatureSearchNormalizedText:(id)a1 { return NULL; }
 
-// 0x00091cb8
--(BOOL)featureSearchText:(id)featureSearchText matchesQuery:(id)matchesQuery normalizedQuery:(id)normalizedQuery { return NO; }
+// 0x00091cb8 · 71 条指令
+// 消息：length → lowercaseString → containsString: → sjjFeatureSearchNormalizedText:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release
+-(BOOL)featureSearchText:(id)a1 matchesQuery:(id)a2 normalizedQuery:(id)a3 { return NO; }
 
-// 0x00091e1c
+// 0x00091e1c · 1671 条指令
+// 字符串："q"、"target_tag"、"switch_%ld"、"keywords"、"category"
+// 消息：array → featureToggleTitleForTag: → length → numberWithInteger: → addObject: → copy → featureSearchAutoSwitchTags → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_opt_respondsToSelector
 -(id)featureSearchAutoSwitchTags { return NULL; }
 
-// 0x00092018
+// 0x00092018 · 1544 条指令
+// 字符串："target_tag"、"switch_%ld"、"keywords"、"category"、"i"
+// 消息：array → featureSearchAutoSwitchTags → integerValue → featureToggleTitleForTag: → length → featureSearchRoutingForSwitchTag: → objectForKeyedSubscript: → addObjectsFromArray:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_opt_respondsToSelector、_objc_autoreleaseReturnValue、___stack_chk_fail
 -(id)featureSearchAutoSwitchEntries { return NULL; }
 
-// 0x000927d0
+// 0x000927d0 · 1050 条指令
+// 字符串："hidden_friend"、"keywords"、"category"、"fold"、"i"
+// 消息：numberWithInteger: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → array → set → featureSearchAutoSwitchEntries → countByEnumeratingWithState:objects:count: → featureSearchSupplementalEntries
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail、__Unwind_Resume、_objc_retain、_objc_retainBlock、_objc_enumerationMutation
 -(id)featureSearchSupplementalEntries { return NULL; }
 
-// 0x00092a70
+// 0x00092a70 · 882 条指令
+// 字符串："switch_%ld"、"vip"、"category"、"target_tag"、"fold"
+// 消息：array → set → featureSearchAutoSwitchEntries → countByEnumeratingWithState:objects:count: → featureSearchSupplementalEntries → copy → objectForKeyedSubscript: → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_retainBlock、_objc_enumerationMutation、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail、__Unwind_Resume
 -(id)featureSearchIndex { return NULL; }
 
-// 0x00092f50
--(id)featureSearchResultsForQuery:(id)featureSearchResultsForQuery { return NULL; }
+// 0x00092f50 · 570 条指令
+// 字符串："vip"、"category"、"target_tag"、"fold"
+// 消息：whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → lowercaseString → length → sjjFeatureSearchNormalizedText: → isAliasSVIPUnlocked → array → featureSearchIndex
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_autoreleaseReturnValue、___stack_chk_fail
+-(id)featureSearchResultsForQuery:(id)a1 { return NULL; }
 
-// 0x0009343c
--(void)focusFeatureSearchEntry:(id)focusFeatureSearchEntry { }
+// 0x0009343c · 255 条指令
+// 字符串："target_tag"、"fold"
+// 消息：viewWithTag: → objectForKeyedSubscript: → integerValue → superview → bounds → convertRect:fromView: → contentInset → adjustedContentInset
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_CGRectGetHeight、_CGRectGetMidY、_objc_retainAutorelease
+-(void)focusFeatureSearchEntry:(id)a1 { }
 
-// 0x00093b4c
--(void)applyFeatureSearchEntry:(id)applyFeatureSearchEntry { }
+// 0x00093b4c · 144 条指令
+// 字符串："category"、"fold"
+// 消息：objectForKeyedSubscript: → integerValue → isAliasSVIPUnlocked → showToast:duration:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_time、_dispatch_after
+-(void)applyFeatureSearchEntry:(id)a1 { }
 
-// 0x00094004
--(void)performFeatureSearchQuery:(id)performFeatureSearchQuery { }
+// 0x00094004 · 271 条指令
+// 字符串："open_secondary"
+// 消息：whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → length → featureSearchResultsForQuery: → count → array → showToast:duration:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)performFeatureSearchQuery:(id)a1 { }
 
-// 0x00094670
+// 0x00094670 · 30 条指令
+// 消息：sjjActivateInlineFeatureSearchFromPull
+// 系统：_CFAbsoluteTimeGetCurrent
 -(void)openFeatureSearchFromPull { }
 
-// 0x000946e8
+// 0x000946e8 · 95 条指令
+// 消息：sjjSetInlineFeatureSearchActive:animated: → viewWithTag: → setText: → setAlpha: → setTransform:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation、_objc_initWeak、_objc_copyWeak、_dispatch_after、_objc_destroyWeak
 -(void)sjjActivateInlineFeatureSearchFromPull { }
 
-// 0x000949b0
--(void)sjjSetInlineFeatureSearchActive:(BOOL)sjjSetInlineFeatureSearchActive animated:(BOOL)animated { }
+// 0x000949b0 · 245 条指令
+// 消息：viewWithTag: → setUserInteractionEnabled: → setEnabled: → setHidden: → sjjUpdateSearchDotPullProgress:armed:animated: → resignFirstResponder → setText: → sjjHideInlineSearchResultsAnimated:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retain、_objc_initWeak、_objc_copyWeak
+-(void)sjjSetInlineFeatureSearchActive:(BOOL)a1 animated:(BOOL)a2 { }
 
-// 0x00094bc8
--(void)sjjInlineSearchTextChanged:(id)sjjInlineSearchTextChanged { }
+// 0x00094bc8 · 111 条指令
+// 消息：sjjHideInlineSearchResultsAnimated: → text → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → resignFirstResponder → length → showToast:duration:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak
+-(void)sjjInlineSearchTextChanged:(id)a1 { }
 
-// 0x00094c30
--(void)sjjInlineSearchReturn:(id)sjjInlineSearchReturn { }
+// 0x00094c30 · 85 条指令
+// 消息：text → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → resignFirstResponder → length → sjjHideInlineSearchResultsAnimated: → showToast:duration:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_copyWeak、_dispatch_after、_objc_destroyWeak
+-(void)sjjInlineSearchReturn:(id)a1 { }
 
-// 0x00094e60
--(void)sjjInlineSearchCancelTapped:(id)sjjInlineSearchCancelTapped { }
+// 0x00094e60 · 704 条指令
+// 消息：sjjSetInlineFeatureSearchActive:animated: → applyFeatureSearchEntry: → viewWithTag: → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → sjjHideInlineSearchResultsAnimated: → length
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_CGRectGetWidth、_CGRectGetMaxY
+-(void)sjjInlineSearchCancelTapped:(id)a1 { }
 
-// 0x00094e6c
--(void)sjjInlineSearchResultTapped:(id)sjjInlineSearchResultTapped { }
+// 0x00094e6c · 701 条指令
+// 消息：sjjSetInlineFeatureSearchActive:animated: → applyFeatureSearchEntry: → viewWithTag: → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → sjjHideInlineSearchResultsAnimated: → length
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_CGRectGetWidth、_CGRectGetMaxY
+-(void)sjjInlineSearchResultTapped:(id)a1 { }
 
-// 0x00094ef0
--(void)sjjShowInlineSearchResultsForQuery:(id)sjjShowInlineSearchResultsForQuery { }
+// 0x00094ef0 · 668 条指令
+// 消息：viewWithTag: → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → sjjHideInlineSearchResultsAnimated: → length → featureSearchResultsForQuery: → bounds
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_CGRectGetWidth、_CGRectGetMaxY、_CGRectGetHeight、_objc_alloc
+-(void)sjjShowInlineSearchResultsForQuery:(id)a1 { }
 
-// 0x00095ba0
--(void)sjjHideInlineSearchResultsAnimated:(BOOL)sjjHideInlineSearchResultsAnimated { }
+// 0x00095ba0 · 69 条指令
+// 消息：viewWithTag: → animateWithDuration:delay:options:animations:completion: → removeFromSuperview
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_objc_retainBlock、_objc_release
+-(void)sjjHideInlineSearchResultsAnimated:(BOOL)a1 { }
 
-// 0x00095d38
--(void)sjjUpdateSearchDotPullProgress:(double)sjjUpdateSearchDotPullProgress armed:(BOOL)armed animated:(BOOL)animated { }
+// 0x00095d38 · 316 条指令
+// 消息：viewWithTag: → bounds → colorWithAlphaComponent: → clearColor → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetWidth、_CGRectGetHeight、_objc_release、_objc_retain、_objc_retainBlock
+-(void)sjjUpdateSearchDotPullProgress:(double)a1 armed:(BOOL)a2 animated:(BOOL)a3 { }
 
-// 0x00096c40
--(void)sjjResetSearchDotAnimated:(BOOL)sjjResetSearchDotAnimated { }
+// 0x00096c40 · 107 条指令
+// 消息：sjjUpdateSearchDotPullProgress:armed:animated: → viewWithTag: → resignFirstResponder → setText: → sjjHideInlineSearchResultsAnimated: → featureSwitchStateForTag:known: → setTag: → setOn:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_opt_new
+-(void)sjjResetSearchDotAnimated:(BOOL)a1 { }
 
-// 0x00096c50
+// 0x00096c50 · 103 条指令
+// 消息：viewWithTag: → resignFirstResponder → setText: → sjjHideInlineSearchResultsAnimated: → sjjUpdateSearchDotPullProgress:armed:animated: → featureSwitchStateForTag:known: → setTag: → setOn:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_opt_new
 -(void)sjjPrepareInlineFeatureSearchForPanelDismiss { }
 
-// 0x00096d70
--(void)toggleFeatureSwitchTag:(long long)toggleFeatureSwitchTag { }
+// 0x00096d70 · 31 条指令
+// 消息：featureSwitchStateForTag:known: → setTag: → setOn: → swChange:
+// 系统：_objc_opt_new、_objc_release
+-(void)toggleFeatureSwitchTag:(long long)a1 { }
 
-// 0x00096dfc
+// 0x00096dfc · 75 条指令
+// 字符串："block"
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)confirmRestoreDefaultFont { }
 
-// 0x00096f80
+// 0x00096f80 · 381 条指令
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → count → objectAtIndexedSubscript: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_retain、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)openFontManagementMenu { }
 
-// 0x000978e8
+// 0x000978e8 · 118 条指令
+// 字符串："instantDismiss"
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)configurePanelCustomBackground { }
 
-// 0x00097d2c
+// 0x00097d2c · 89 条指令
+// 消息：applySVIPPanelVisualsLiveIfPossible → showToast:duration: → length → floatValue → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue
 -(void)clearPanelCustomBackground { }
 
-// 0x00097dc8
+// 0x00097dc8 · 50 条指令
+// 消息：length → floatValue → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureNicknameTextScale { }
 
-// 0x000980a0
+// 0x000980a0 · 83 条指令
+// 字符串："sjj_nickname_caption_vertical_offset_manually_adjusted_v1"、"sjj_nickname_caption_vertical_offset_v1"、"sjj_nickname_caption_horizontal_offset_v1"
+// 消息：removeObjectForKey: → setBool:forKey: → setFloat:forKey: → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_dispatch_async
 -(void)resetNicknameCaptionLayoutDefaults { }
 
-// 0x0009818c
+// 0x0009818c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openRightElementScaleSettingsPage { }
 
-// 0x00098328
+// 0x00098328 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openBottomTabBarHeightSettingsPage { }
 
-// 0x0009840c
+// 0x0009840c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openTransparencySettingsPage { }
 
-// 0x00098558
+// 0x00098558 · 22 条指令
 -(void)openVideoFullScreenSettingsPage { }
 
-// 0x00098650
+// 0x00098650 · 130 条指令
+// 字符串："block"
+// 消息：currentTopViewController → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
 -(void)configureVideoFullScreenCommentScaleMode { }
 
-// 0x00098968
+// 0x00098968 · 174 条指令
+// 消息：openGlassTabBarSettingsPage → sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion: → currentTopViewController → alertControllerWithTitle:message:preferredStyle: → actionWithTitle:style:handler: → addAction: → setPreferredAction: → presentViewController:animated:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retain、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)sjjOpenGlassTabBarSettingsPageFromMainFeature { }
 
-// 0x000989c0
--(void)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion:(id /* block */)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion { }
+// 0x000989c0 · 152 条指令
+// 消息：openGlassTabBarSettingsPage → currentTopViewController → alertControllerWithTitle:message:preferredStyle: → actionWithTitle:style:handler: → addAction: → setPreferredAction: → presentViewController:animated:completion: → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retain、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
+-(void)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion:(id /* block */)a1 { }
 
-// 0x00098ec0
+// 0x00098ec0 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openGlassTabBarSettingsPage { }
 
-// 0x00099f74
+// 0x00099f74 · 122 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureFloatingAudioVisualizerPosition { }
 
-// 0x0009a254
+// 0x0009a254 · 122 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureFloatingAudioVisualizerScope { }
 
-// 0x0009a534
+// 0x0009a534 · 125 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureFloatingAudioVisualizerStyle { }
 
-// 0x0009bbb8
+// 0x0009bbb8 · 122 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarCircleRole { }
 
-// 0x0009be9c
+// 0x0009be9c · 122 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarCircleSide { }
 
-// 0x0009c180
+// 0x0009c180 · 122 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarCollapsePosition { }
 
-// 0x0009c464
+// 0x0009c464 · 158 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_enumerationMutation、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)configureGlassTabBarFollowMode { }
 
-// 0x0009c838
+// 0x0009c838 · 122 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarThemeMode { }
 
-// 0x0009cb1c
+// 0x0009cb1c · 149 条指令
+// 字符串："destructive"、"block"
+// 消息：currentTopViewController → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_retainBlock、_objc_retain、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarSelectedColor { }
 
-// 0x0009cfd0
+// 0x0009cfd0 · 149 条指令
+// 字符串："destructive"、"block"
+// 消息：currentTopViewController → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_retainBlock、_objc_retain、_objc_release、_objc_destroyWeak
 -(void)configureHomeTopGlassSelectedColor { }
 
-// 0x0009d484
+// 0x0009d484 · 121 条指令
+// 消息：currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarIconStyle { }
 
-// 0x0009d764
+// 0x0009d764 · 122 条指令
+// 消息：currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureHomeActionGlassIconStyle { }
 
-// 0x0009da48
+// 0x0009da48 · 121 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_destroyWeak
 -(void)configureGlassTabBarDisplayStyle { }
 
-// 0x0009dd28
+// 0x0009dd28 · 158 条指令
+// 消息：currentTopViewController → setWithArray: → array → length → containsObject: → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_release、_objc_enumerationMutation、_objc_retain、_objc_copyWeak、_objc_destroyWeak
 -(void)configureGlassQuickActions { }
 
-// 0x0009e168
+// 0x0009e168 · 22 条指令
 -(void)openVideoProgressStyleSettingsPage { }
 
-// 0x0009e5fc
+// 0x0009e5fc · 22 条指令
 -(void)openDanmakuColorSettingsPage { }
 
-// 0x0009e7c4
+// 0x0009e7c4 · 39 条指令
+// 消息：sjjPresentPanelColorPickerWithTitle:currentHex:saveBlock:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureDanmakuPortColor { }
 
-// 0x0009e900
+// 0x0009e900 · 74 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureDanmakuColorMode { }
 
-// 0x0009eb08
+// 0x0009eb08 · 162 条指令
+// 消息：showToast:duration: → currentTopViewController → array → isEqualToString: → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
 -(void)resetDanmakuColorToDefault { }
 
-// 0x0009eb68
+// 0x0009eb68 · 138 条指令
+// 消息：currentTopViewController → array → isEqualToString: → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject: → countByEnumeratingWithState:objects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
 -(void)openDefaultLiveQualitySettingsPage { }
 
-// 0x0009ee74
+// 0x0009ee74 · 22 条指令
 -(void)openLiveAutoLikeSettingsPage { }
 
-// 0x0009f0ac
+// 0x0009f0ac · 122 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_initWeak、_objc_retainAutoreleasedReturnValue、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)configureLiveAutoLike { }
 
-// 0x0009f688
+// 0x0009f688 · 35 条指令
+// 消息：sjjRefreshSecondarySettingsPageContentInPlace
 -(void)stopLiveAutoLike { }
 
-// 0x0009f6bc
+// 0x0009f6bc · 22 条指令
 -(void)openAreaDisplaySettingsPage { }
 
-// 0x0009f7ec
+// 0x0009f7ec · 291 条指令
+// 消息：currentTopViewController → arrayWithObject: → array → count → lastObject → removeLastObject → text → isEqualToString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retain、_CGRectGetWidth、_CGRectGetHeight、_CGRectGetMidX
 -(void)sjjPresentVideoFullScreenConflictWarning { }
 
-// 0x0009fec8
+// 0x0009fec8 · 22 条指令
 -(void)openQuickCopyCaptionSettingsPage { }
 
-// 0x0009ff88
+// 0x0009ff88 · 109 条指令
+// 字符串："block"
+// 消息：currentTopViewController → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureQuickCopyCaptionMode { }
 
-// 0x000a02a8
+// 0x000a02a8 · 22 条指令
 -(void)openNicknameCaptionColorSettingsPage { }
 
-// 0x000a046c
+// 0x000a046c · 146 条指令
+// 字符串："toggle"、"on"、"placeholder"、"text"
+// 消息：currentTopViewController → numberWithBool: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)openMessageExactTimeSettingsPage { }
 
-// 0x000a0a4c
+// 0x000a0a4c · 134 条指令
+// 字符串："#FFFFFF"
+// 消息：sjjPresentPanelColorPickerWithTitle:currentHex:saveBlock: → length → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain
 -(void)configureNicknameCaptionPortColor { }
 
-// 0x000a0b3c
+// 0x000a0b3c · 74 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureNicknameCaptionRainbowMode { }
 
-// 0x000a0d44
+// 0x000a0d44 · 45 条指令
+// 消息：showToast:duration:
 -(void)resetNicknameCaptionColorToDefault { }
 
-// 0x000a0da0
+// 0x000a0da0 · 22 条指令
 -(void)openRecommendPageFilterSettingsPage { }
 
-// 0x000a1274
+// 0x000a1274 · 74 条指令
+// 字符串："v20@?0B8@"NSError"12"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureRecommendLowLikes { }
 
-// 0x000a14e4
+// 0x000a14e4 · 62 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureRecommendUsers { }
 
-// 0x000a16d0
+// 0x000a16d0 · 62 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureRecommendCaptionWords { }
 
-// 0x000a18bc
+// 0x000a18bc · 62 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureRecommendPropWords { }
 
-// 0x000a1aa8
+// 0x000a1aa8 · 22 条指令
 -(void)openSpecifiedTimeFilterSettingsPage { }
 
-// 0x000a1bec
+// 0x000a1bec · 73 条指令
+// 字符串："v20@?0B8@"NSError"12"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSpecifiedTimeDays { }
 
-// 0x000a1e40
+// 0x000a1e40 · 234 条指令
+// 字符串："file"
+// 消息：currentTopViewController → array → objectForKeyedSubscript: → defaultManager → fileExistsAtPath: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_retain
 -(void)openFeedIconCustomizationSettingsPage { }
 
-// 0x000a2558
+// 0x000a2558 · 51 条指令
+// 消息：isSourceTypeAvailable: → setSourceType: → setAllowsEditing: → shared → setOnImageDataPicked: → setOnPickerDismissed: → setDelegate:
+// 系统：_objc_opt_new、_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)pickFeedIconFromAlbum { }
 
-// 0x000a27a8
+// 0x000a27a8 · 41 条指令
+// 消息：sjjPresentPanelColorPickerWithTitle:currentHex:saveBlock:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureAreaPortColor { }
 
-// 0x000a28dc
+// 0x000a28dc · 22 条指令
 -(void)openVideoProgressTimeSettingsPage { }
 
-// 0x000a2c9c
+// 0x000a2c9c · 163 条指令
+// 字符串："destructive"、"block"
+// 消息：currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoProgressTimePositionMode { }
 
-// 0x000a310c
+// 0x000a310c · 163 条指令
+// 字符串："destructive"、"block"
+// 消息：currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoProgressTimeStyleMode { }
 
-// 0x000a351c
+// 0x000a351c · 104 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → length → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureVideoProgressTimeTextColor { }
 
-// 0x000a3a5c
+// 0x000a3a5c · 104 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → length → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureVideoProgressTimeBadgeColor { }
 
-// 0x000a4240
+// 0x000a4240 · 177 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：showToast:duration: → currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy
+// 系统：_objc_release、_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)resetVideoProgressTimeColorsToDefault { }
 
-// 0x000a429c
+// 0x000a429c · 154 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoProgressStyleMode { }
 
-// 0x000a4698
+// 0x000a4698 · 104 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → length → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureVideoProgressMinimumColor { }
 
-// 0x000a4b24
+// 0x000a4b24 · 104 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → length → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureVideoProgressMaximumColor { }
 
-// 0x000a4fb0
+// 0x000a4fb0 · 96 条指令
+// 字符串："6 - 260"
+// 消息：showToast:duration: → currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_release、_objc_retainAutoreleasedReturnValue
 -(void)resetVideoProgressColorsToDefault { }
 
-// 0x000a5018
+// 0x000a5018 · 70 条指令
+// 字符串："6 - 260"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureVideoProgressThumbSize { }
 
-// 0x000a52d4
+// 0x000a52d4 · 163 条指令
+// 字符串："destructive"、"block"
+// 消息：currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoProgressThumbPositionMode { }
 
-// 0x000a56e0
+// 0x000a56e0 · 181 条指令
+// 字符串："subtitle"、"destructive"、"instantDismiss"、"block"
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → length
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)configureVideoProgressThumbImage { }
 
-// 0x000a5b80
+// 0x000a5b80 · 390 条指令
+// 消息：chooseImage → showToast:duration: → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickVideoProgressThumbImageFromAlbum { }
 
-// 0x000a5be4
+// 0x000a5be4 · 365 条指令
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickVideoProgressThumbImageFromFile { }
 
-// 0x000a5dd8
+// 0x000a5dd8 · 240 条指令
+// 消息：showToast:duration: → size → defaultFormat → setOpaque: → scale → mainScreen → setScale: → initWithSize:format:
+// 系统：_objc_release、_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_alloc、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
 -(void)clearVideoProgressThumbImage { }
 
-// 0x000a5e6c
--(void)applyPanelCustomBackgroundImage:(id)applyPanelCustomBackgroundImage { }
+// 0x000a5e6c · 203 条指令
+// 消息：size → defaultFormat → setOpaque: → scale → mainScreen → setScale: → initWithSize:format: → imageWithActions:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_alloc、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
+-(void)applyPanelCustomBackgroundImage:(id)a1 { }
 
-// 0x000a6230
--(void)presentPanelBackgroundCropperForImage:(id)presentPanelBackgroundCropperForImage { }
+// 0x000a6230 · 64 条指令
+// 消息：currentTopViewController → setModalPresentationStyle: → setSourceImage: → setCompletion: → presentViewController:animated:completion: → showToast:duration:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_opt_new、_objc_initWeak、_objc_destroyWeak、_objc_release
+-(void)presentPanelBackgroundCropperForImage:(id)a1 { }
 
-// 0x000a63f8
--(void)applyMessagePageBackgroundImage:(id)applyMessagePageBackgroundImage { }
+// 0x000a63f8 · 194 条指令
+// 消息：length → showToast:duration: → sjjRefreshSecondarySettingsPageContentInPlace → currentTopViewController → setModalPresentationStyle: → setSourceImage: → setHintText: → view
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation、_UIImagePNGRepresentation、_objc_release、__Unwind_Resume、_objc_opt_new
+-(void)applyMessagePageBackgroundImage:(id)a1 { }
 
-// 0x000a6548
--(void)presentMessagePageBackgroundCropperForImage:(id)presentMessagePageBackgroundCropperForImage { }
+// 0x000a6548 · 110 条指令
+// 消息：currentTopViewController → setModalPresentationStyle: → setSourceImage: → setHintText: → view → bounds → setTargetAspectRatio: → showToast:duration:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_opt_new、_objc_release、_CGRectGetWidth、_CGRectGetHeight、_objc_initWeak
+-(void)presentMessagePageBackgroundCropperForImage:(id)a1 { }
 
-// 0x000a67e4
+// 0x000a67e4 · 162 条指令
+// 消息：currentTopViewController → count → array → objectAtIndexedSubscript: → objectForKeyedSubscript: → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_retain、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)openFontDeleteMenu { }
 
-// 0x000a6bf8
+// 0x000a6bf8 · 879 条指令
+// 消息：sharedApplication → windows → isKeyWindow → rootViewController → presentedViewController → isBeingDismissed → presentingViewController → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_retain、_objc_autoreleaseReturnValue、___stack_chk_fail、__Unwind_Resume、_objc_opt_class
 -(id)currentTopViewController { return NULL; }
 
-// 0x000a6e4c
--(void)sjjPresentSecondarySettingsPageWithTitle:(id)sjjPresentSecondarySettingsPageWithTitle subtitle:(id)subtitle tintTag:(long long)tintTag builder:(id /* block */)builder { }
+// 0x000a6e4c · 730 条指令
+// 消息：currentTopViewController → view → window → sjjPausePanelDecorativeAnimationsBrieflyForInteraction → numberWithInteger: → copy → bounds → initWithFrame:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_setAssociatedObject、_objc_alloc、_CGRectGetWidth
+-(void)sjjPresentSecondarySettingsPageWithTitle:(id)a1 subtitle:(id)a2 tintTag:(long long)a3 builder:(id /* block */)a4 { }
 
-// 0x000a8a38
+// 0x000a8a38 · 14 条指令
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release
 -(BOOL)sjjHasRestorableSecondarySettingsPage { return NO; }
 
-// 0x000a8a70
+// 0x000a8a70 · 248 条指令
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → window → bounds → initWithFrame: → integerValue → frame → setFrame: → contentOffset
+// 系统：_objc_setAssociatedObject、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_CGRectGetWidth、_objc_alloc
 -(void)sjjClearSecondarySettingsPageContext { }
 
-// 0x000a8b00
+// 0x000a8b00 · 212 条指令
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → window → bounds → initWithFrame: → integerValue → frame → setFrame: → contentOffset
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_CGRectGetWidth、_objc_alloc、_objc_opt_respondsToSelector
 -(void)sjjRefreshSecondarySettingsPageContentInPlace { }
 
-// 0x000a908c
--(void)sjjRestoreSecondarySettingsPageAnimated:(BOOL)sjjRestoreSecondarySettingsPageAnimated { }
+// 0x000a908c · 167 条指令
+// 字符串："v8@?0"
+// 消息：integerValue → length → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder: → currentTopViewController → sjjClearSecondarySettingsPageContext → dismissViewControllerAnimated:completion:
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_respondsToSelector、_objc_release、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)sjjRestoreSecondarySettingsPageAnimated:(BOOL)a1 { }
 
-// 0x000a91dc
--(void)dismissSJJSecondarySettingsPage:(id)dismissSJJSecondarySettingsPage { }
+// 0x000a91dc · 83 条指令
+// 字符串："v8@?0"
+// 消息：currentTopViewController → sjjClearSecondarySettingsPageContext → dismissViewControllerAnimated:completion:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_dispatch_after
+-(void)dismissSJJSecondarySettingsPage:(id)a1 { }
 
-// 0x000a9328
--(id)sjjPanelOrSecondaryViewWithTag:(long long)sjjPanelOrSecondaryViewWithTag { return NULL; }
+// 0x000a9328 · 296 条指令
+// 消息：viewWithTag: → sjjPanelOrSecondaryViewWithTag: → showToast:duration: → state → sjjConfigureHighRefresh → currentTopViewController → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_retain
+-(id)sjjPanelOrSecondaryViewWithTag:(long long)a1 { return NULL; }
 
-// 0x000a93d4
--(id)sjjValueLabelForSlider:(id)sjjValueLabelForSlider valueTag:(long long)valueTag { return NULL; }
+// 0x000a93d4 · 253 条指令
+// 消息：sjjPanelOrSecondaryViewWithTag: → showToast:duration: → state → sjjConfigureHighRefresh → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)sjjValueLabelForSlider:(id)a1 valueTag:(long long)a2 { return NULL; }
 
-// 0x000a94b4
--(id)sjjPreviewViewForSlider:(id)sjjPreviewViewForSlider valueTag:(long long)valueTag { return NULL; }
+// 0x000a94b4 · 197 条指令
+// 消息：sjjPanelOrSecondaryViewWithTag: → showToast:duration: → state → sjjConfigureHighRefresh → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)sjjPreviewViewForSlider:(id)a1 valueTag:(long long)a2 { return NULL; }
 
-// 0x000a9554
+// 0x000a9554 · 157 条指令
+// 消息：showToast:duration: → state → sjjConfigureHighRefresh → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue
 -(void)sjjToggleHighRefreshFPSDisplay { }
 
-// 0x000a959c
--(void)sjjHighRefreshTitleLongPress:(id)sjjHighRefreshTitleLongPress { }
+// 0x000a959c · 139 条指令
+// 消息：state → sjjConfigureHighRefresh → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue
+-(void)sjjHighRefreshTitleLongPress:(id)a1 { }
 
-// 0x000a9610
+// 0x000a9610 · 110 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)sjjConfigureHighRefresh { }
 
-// 0x000a9870
--(SEL)sjjSecondarySettingsActionForSwitchTag:(long long)sjjSecondarySettingsActionForSwitchTag { return NULL; }
+// 0x000a9870 · 19 条指令
+-(SEL)sjjSecondarySettingsActionForSwitchTag:(long long)a1 { return NULL; }
 
-// 0x000a9f1c
--(id)sjjSecondarySettingsHintForSwitchTag:(long long)sjjSecondarySettingsHintForSwitchTag { return NULL; }
+// 0x000a9f1c · 449 条指令
+// 消息：stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)sjjSecondarySettingsHintForSwitchTag:(long long)a1 { return NULL; }
 
-// 0x000aa65c
+// 0x000aa65c · 158 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_retainBlock、_objc_retain、_objc_release、_objc_destroyWeak
 -(void)configureSJJHDRBlockMode { }
 
-// 0x000aab18
+// 0x000aab18 · 22 条指令
 -(void)openAutoCommentSettingsPage { }
 
-// 0x000ab240
+// 0x000ab240 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openAdFilterSettingsPage { }
 
-// 0x000ab370
+// 0x000ab370 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openModernLongPressSettingsPage { }
 
-// 0x000ab54c
+// 0x000ab54c · 154 条指令
+// 字符串："title"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
 -(void)configureModernLongPressStyle { }
 
-// 0x000ab94c
+// 0x000ab94c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openTitleCustomizationSettingsPage { }
 
-// 0x000abd50
+// 0x000abd50 · 249 条指令
+// 消息：currentTopViewController → orderedSetWithArray: → setWithObjects: → allKeys → length → containsObject: → addObject: → array
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_initWeak、_objc_retain、_objc_copyWeak、_objc_destroyWeak
 -(void)presentTopBarTitleColorManager { }
 
-// 0x000ac298
--(void)presentTopBarTitleColorEditorForSource:(id)presentTopBarTitleColorEditorForSource { }
+// 0x000ac298 · 276 条指令
+// 消息：currentTopViewController → length → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
+-(void)presentTopBarTitleColorEditorForSource:(id)a1 { }
 
-// 0x000acb64
+// 0x000acb64 · 324 条指令
+// 字符串："key"、"action"
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → count → arrayWithCapacity: → objectForKeyedSubscript: → length → whitespaceAndNewlineCharacterSet
+// 系统：_objc_retainAutoreleasedReturnValue、_NSStringFromSelector、_objc_release、_objc_initWeak、_objc_retain、_objc_enumerationMutation、_NSSelectorFromString、_objc_copyWeak
 -(void)presentBottomBarTitleCustomizationManager { }
 
-// 0x000ad258
+// 0x000ad258 · 217 条指令
+// 字符串："%@ -> %@"
+// 消息：presentTopBarTitleCustomizationManager → currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → allKeys → sortedArrayUsingSelector:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_retain、_objc_enumerationMutation、_objc_destroyWeak
 -(void)configureTopBarTitleCustomization { }
 
-// 0x000ad25c
+// 0x000ad25c · 216 条指令
+// 字符串："%@ -> %@"
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → allKeys → sortedArrayUsingSelector: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_retain、_objc_enumerationMutation、_objc_destroyWeak
 -(void)presentTopBarTitleCustomizationManager { }
 
-// 0x000ada38
--(void)presentTopBarTitleCustomizationEditorForSource:(id)presentTopBarTitleCustomizationEditorForSource replacement:(id)replacement { }
+// 0x000ada38 · 191 条指令
+// 消息：currentTopViewController → length → objectForKeyedSubscript: → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → copy
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_release、_objc_copyWeak、_objc_destroyWeak
+-(void)presentTopBarTitleCustomizationEditorForSource:(id)a1 replacement:(id)a2 { }
 
-// 0x000ae188
--(void)sjjConfigureSingleTitleCustomizationWithTitle:(id)sjjConfigureSingleTitleCustomizationWithTitle key:(id)key placeholder:(id)placeholder { }
+// 0x000ae188 · 118 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
+-(void)sjjConfigureSingleTitleCustomizationWithTitle:(id)a1 key:(id)a2 placeholder:(id)a3 { }
 
-// 0x000ae560
+// 0x000ae560 · 108 条指令
+// 消息：sjjConfigureSingleTitleCustomizationWithTitle:key:placeholder: → sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)configureHomeTitleCustomization { }
 
-// 0x000ae580
+// 0x000ae580 · 100 条指令
+// 消息：sjjConfigureSingleTitleCustomizationWithTitle:key:placeholder: → sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)configureFriendsTitleCustomization { }
 
-// 0x000ae5a0
+// 0x000ae5a0 · 92 条指令
+// 消息：sjjConfigureSingleTitleCustomizationWithTitle:key:placeholder: → sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)configureMessagesTitleCustomization { }
 
-// 0x000ae5c0
+// 0x000ae5c0 · 84 条指令
+// 消息：sjjConfigureSingleTitleCustomizationWithTitle:key:placeholder: → sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)configureMineTitleCustomization { }
 
-// 0x000ae5e0
+// 0x000ae5e0 · 76 条指令
+// 消息：sjjConfigureSingleTitleCustomizationWithTitle:key:placeholder: → sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)configureCommentPlaceholderCustomization { }
 
-// 0x000ae600
+// 0x000ae600 · 68 条指令
+// 消息：sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)resetAllTitleCustomization { }
 
-// 0x000ae6b0
+// 0x000ae6b0 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openTopBarRemovalSettingsPage { }
 
-// 0x000ae8c8
--(void)sjjOpenInterfaceHideSettingsPageForGroup:(id)sjjOpenInterfaceHideSettingsPageForGroup title:(id)title subtitle:(id)subtitle { }
+// 0x000ae8c8 · 34 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_retain、_objc_release
+-(void)sjjOpenInterfaceHideSettingsPageForGroup:(id)a1 title:(id)a2 subtitle:(id)a3 { }
 
-// 0x000aec24
+// 0x000aec24 · 64 条指令
+// 消息：sjjOpenInterfaceHideSettingsPageForGroup:title:subtitle: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openLowBarHideSettingsPage { }
 
-// 0x000aec44
+// 0x000aec44 · 56 条指令
+// 消息：sjjOpenInterfaceHideSettingsPageForGroup:title:subtitle: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openVideoInterfaceHideSettingsPage { }
 
-// 0x000aec64
+// 0x000aec64 · 48 条指令
+// 消息：sjjOpenInterfaceHideSettingsPageForGroup:title:subtitle: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openMessagePageHideSettingsPage { }
 
-// 0x000aec84
+// 0x000aec84 · 40 条指令
+// 消息：sjjOpenInterfaceHideSettingsPageForGroup:title:subtitle: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openMinePageHideSettingsPage { }
 
-// 0x000aeca4
+// 0x000aeca4 · 32 条指令
+// 消息：sjjOpenInterfaceHideSettingsPageForGroup:title:subtitle: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openLiveInterfaceHideSettingsPage { }
 
-// 0x000aecc4
+// 0x000aecc4 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openCommentLongPressHideSettingsPage { }
 
-// 0x000aeed0
+// 0x000aeed0 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openVideoLongPressHideSettingsPage { }
 
-// 0x000af140
+// 0x000af140 · 94 条指令
+// 消息：dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureVideoLongPressCustomHideItems { }
 
-// 0x000af3f0
+// 0x000af3f0 · 22 条指令
 -(void)openBlueCommentSettingsPage { }
 
-// 0x000af554
+// 0x000af554 · 22 条指令
 -(void)openCommentBlurSettingsPage { }
 
-// 0x000af668
+// 0x000af668 · 22 条指令
 -(void)openCommentRoundedCornersSettingsPage { }
 
-// 0x000af7fc
+// 0x000af7fc · 38 条指令
+// 消息：sjjRefreshSecondarySettingsPageContentInPlace
 -(void)resetCommentBlurCornerRadius { }
 
-// 0x000af83c
+// 0x000af83c · 22 条指令
 -(void)openCommentSortSettingsPage { }
 
-// 0x000afae0
+// 0x000afae0 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openDoubleTapDownloadSettingsPage { }
 
-// 0x000afedc
+// 0x000afedc · 63 条指令
+// 字符串："10 - 30"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureDoubleTapHistoryMaxCount { }
 
-// 0x000b018c
+// 0x000b018c · 25 条指令
+// 消息：openDoubleTapDownloadSettingsPage → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openDoubleTapFeatureSettingsPage { }
 
-// 0x000b0190
+// 0x000b0190 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openVideoPopupTransitionSettingsPage { }
 
-// 0x000b0340
+// 0x000b0340 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openVideoTimeCapsuleSettingsPage { }
 
-// 0x000b057c
+// 0x000b057c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openSideDockSettingsPage { }
 
-// 0x000b1ffc
+// 0x000b1ffc · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openSaveNotifySettingsPage { }
 
-// 0x000b24ac
+// 0x000b24ac · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openAntiRecallSettingsPage { }
 
-// 0x000b26b0
+// 0x000b26b0 · 44 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
 -(void)openTextToSpeechSettingsPage { }
 
-// 0x000b2700
+// 0x000b2700 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openNativeLongPressSettingsPage { }
 
-// 0x000b2aa8
+// 0x000b2aa8 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openProfileAccessLockSettingsPage { }
 
-// 0x000b2c4c
+// 0x000b2c4c · 22 条指令
 -(void)openAutoCacheCleanSettingsPage { }
 
-// 0x000b2cdc
+// 0x000b2cdc · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openIOS26GlassScopeSettingsPage { }
 
-// 0x000b2ec4
+// 0x000b2ec4 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openLegacyDoubleTapGlassSettingsPage { }
 
-// 0x000b3060
+// 0x000b3060 · 22 条指令
 -(void)openPanelBackgroundBlurSettingsPage { }
 
-// 0x000b320c
+// 0x000b320c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openMessagePageBackgroundSettingsPage { }
 
-// 0x000b33b8
+// 0x000b33b8 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openInnerNotificationGlassSettingsPage { }
 
-// 0x000b34f4
+// 0x000b34f4 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openAppNotificationGlassSettingsPage { }
 
-// 0x000b3614
+// 0x000b3614 · 114 条指令
+// 字符串："instantDismiss"
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)configureMessagePageBackground { }
 
-// 0x000b3918
+// 0x000b3918 · 47 条指令
+// 消息：sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)clearMessagePageBackground { }
 
-// 0x000b3974
+// 0x000b3974 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openCommentBackgroundSettingsPage { }
 
-// 0x000b3b20
+// 0x000b3b20 · 114 条指令
+// 字符串："instantDismiss"
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)configureCommentBackground { }
 
-// 0x000b3e24
--(void)applyCommentBackgroundImage:(id)applyCommentBackgroundImage { }
+// 0x000b3e24 · 127 条指令
+// 消息：length → showToast:duration: → sjjRefreshSecondarySettingsPageContentInPlace
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation、_UIImagePNGRepresentation、_objc_release、__Unwind_Resume
+-(void)applyCommentBackgroundImage:(id)a1 { }
 
-// 0x000b3f74
+// 0x000b3f74 · 43 条指令
+// 消息：sjjRefreshSecondarySettingsPageContentInPlace → showToast:duration:
 -(void)clearCommentBackground { }
 
-// 0x000b3fc8
+// 0x000b3fc8 · 22 条指令
 -(void)openDynamicIslandHaloSettingsPage { }
 
-// 0x000b42e4
+// 0x000b42e4 · 22 条指令
 -(void)openMeteorShowerSettingsPage { }
 
-// 0x000b4460
+// 0x000b4460 · 22 条指令
 -(void)openRedPacketSettingsPage { }
 
-// 0x000b4b8c
+// 0x000b4b8c · 22 条指令
 -(void)openSVIPAIVideoRobotSettingsPage { }
 
-// 0x000b53f4
+// 0x000b53f4 · 22 条指令
 -(void)openSVIPAutoPrivateMessageSettingsPage { }
 
-// 0x000b5724
+// 0x000b5724 · 22 条指令
 -(void)openVideoQualityProSettingsPage { }
 
-// 0x000b5a18
+// 0x000b5a18 · 22 条指令
 -(void)openFeedSmoothSwipeSettingsPage { }
 
-// 0x000b5d8c
+// 0x000b5d8c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openAccountQuickSwitchSettingsPage { }
 
-// 0x000b5e98
+// 0x000b5e98 · 22 条指令
 -(void)openExternalThemeSettingsPage { }
 
-// 0x000b6034
+// 0x000b6034 · 22 条指令
 -(void)openFontManagementSettingsPage { }
 
-// 0x000b6270
+// 0x000b6270 · 100 条指令
+// 消息：countByEnumeratingWithState:objects:count: → integerValue → applyFoldToggleInPlaceForTag:animated: → viewWithTag: → setContentOffset:animated: → sjjCullMainPanelOffscreenViewsForScrollView:force:
+// 系统：_objc_enumerationMutation、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
 -(void)sjjCollapseFoldGroupsBeforeGuide { }
 
-// 0x000b6420
+// 0x000b6420 · 678 条指令
+// 字符串："CFBundleVersion"、"%@ (%@)"、"94406244690"、"disabled"、"destructive"
+// 消息：currentTopViewController → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → length → mainBundle → objectForInfoDictionaryKey: → isEqualToString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)showPanelVersionInfo { }
 
-// 0x000b7fdc
--(void)showProfileEditorWithTitle:(id)showProfileEditorWithTitle current:(id)current saveBlock:(id /* block */)saveBlock { }
+// 0x000b7fdc · 94 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)showProfileEditorWithTitle:(id)a1 current:(id)a2 saveBlock:(id /* block */)a3 { }
 
-// 0x000b82bc
+// 0x000b82bc · 600 条指令
+// 字符串："sjj_panel_profile_account_did_change_v1"、"#"、"placeholder"、"text"
+// 消息：showProfileEditorWithTitle:current:saveBlock: → defaultCenter → postNotificationName:object: → length → count → stringWithFormat: → currentTopViewController → setTitle:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_storeStrong、_objc_retain、_objc_retainAutoreleaseReturnValue、_objc_autoreleaseReturnValue、_objc_opt_new
 -(void)editProfileName { }
 
-// 0x000b8370
+// 0x000b8370 · 555 条指令
+// 字符串："sjj_panel_profile_account_did_change_v1"、"#"、"placeholder"、"text"
+// 消息：showProfileEditorWithTitle:current:saveBlock: → defaultCenter → postNotificationName:object: → length → count → stringWithFormat: → currentTopViewController → setTitle:
+// 系统：_objc_retain、_objc_storeStrong、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retainAutoreleaseReturnValue、_objc_autoreleaseReturnValue、_objc_opt_new
 -(void)editProfileSign { }
 
-// 0x000b8444
+// 0x000b8444 · 502 条指令
+// 字符串："#"、"placeholder"、"text"
+// 消息：length → count → stringWithFormat: → currentTopViewController → setTitle: → setSupportsAlpha: → setSelectedColor: → setDelegate:
+// 系统：_objc_retainAutoreleaseReturnValue、_objc_retainAutoreleasedReturnValue、_objc_autoreleaseReturnValue、_objc_retain、_objc_opt_new、_objc_release、_objc_setAssociatedObject、__Unwind_Resume
 -(id)sjjPanelProfileNameColorStatusTitle { return NULL; }
 
-// 0x000b8484
+// 0x000b8484 · 486 条指令
+// 字符串："#"、"placeholder"、"text"
+// 消息：length → count → stringWithFormat: → currentTopViewController → setTitle: → setSupportsAlpha: → setSelectedColor: → setDelegate:
+// 系统：_objc_retainAutoreleaseReturnValue、_objc_retainAutoreleasedReturnValue、_objc_autoreleaseReturnValue、_objc_retain、_objc_opt_new、_objc_release、_objc_setAssociatedObject、__Unwind_Resume
 -(id)sjjPanelProfileSignColorStatusTitle { return NULL; }
 
-// 0x000b84c4
+// 0x000b84c4 · 470 条指令
+// 字符串："#"、"placeholder"、"text"
+// 消息：count → stringWithFormat: → currentTopViewController → length → setTitle: → setSupportsAlpha: → setSelectedColor: → setDelegate:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_autoreleaseReturnValue、_objc_retain、_objc_opt_new、_objc_release、_objc_setAssociatedObject、__Unwind_Resume、__Block_object_assign
 -(id)sjjPanelTitleReplacementStatusTitle { return NULL; }
 
-// 0x000b851c
--(void)sjjPresentPanelColorPickerWithTitle:(id)sjjPresentPanelColorPickerWithTitle currentHex:(id)currentHex saveBlock:(id /* block */)saveBlock { }
+// 0x000b851c · 448 条指令
+// 字符串："#"、"placeholder"、"text"
+// 消息：currentTopViewController → length → setTitle: → setSupportsAlpha: → setSelectedColor: → setDelegate: → copy → presentViewController:animated:completion:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_new、_objc_release、_objc_setAssociatedObject、__Unwind_Resume、_objc_autoreleaseReturnValue、__Block_object_assign
+-(void)sjjPresentPanelColorPickerWithTitle:(id)a1 currentHex:(id)a2 saveBlock:(id /* block */)a3 { }
 
-// 0x000b8878
--(void)colorPickerViewControllerDidFinish:(id)colorPickerViewControllerDidFinish { }
+// 0x000b8878 · 233 条指令
+// 字符串："placeholder"、"text"
+// 消息：selectedColor → currentTopViewController → length → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → copy
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
+-(void)colorPickerViewControllerDidFinish:(id)a1 { }
 
-// 0x000b895c
--(void)presentPanelTitleReplacementEditorForSource:(id)presentPanelTitleReplacementEditorForSource replacement:(id)replacement { }
+// 0x000b895c · 176 条指令
+// 字符串："placeholder"、"text"
+// 消息：currentTopViewController → length → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → copy
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
+-(void)presentPanelTitleReplacementEditorForSource:(id)a1 replacement:(id)a2 { }
 
-// 0x000b90e8
+// 0x000b90e8 · 216 条指令
+// 字符串："%@ -> %@"
+// 消息：currentTopViewController → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → allKeys → sortedArrayUsingSelector: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_retain、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)presentPanelTitleReplacementManager { }
 
-// 0x000b9604
+// 0x000b9604 · 125 条指令
+// 消息：currentTopViewController → length → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configurePanelProfileNameColor { }
 
-// 0x000b9a2c
+// 0x000b9a2c · 114 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → length → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)configureDoubleTapProfileHeaderNameColor { }
 
-// 0x000b9ea4
+// 0x000b9ea4 · 173 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → array → countByEnumeratingWithState:objects:count: → containsObject: → count → stringWithFormat: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_retain、_objc_release
 -(void)configureDoubleTapQuickAppLaunchItems { }
 
-// 0x000ba770
+// 0x000ba770 · 112 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → length → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)configurePanelProfileSignColor { }
 
-// 0x000bab54
+// 0x000bab54 · 375 条指令
+// 字符串："title"、"v8@?0"、"default"、"%@%@  %@"
+// 消息：presentPanelTitleReplacementManager → currentTopViewController → array → numberWithBool: → copy → dictionaryWithObjects:forKeys:count: → addObject: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_destroyWeak
 -(void)configurePanelTitleTextReplacement { }
 
-// 0x000bab58
+// 0x000bab58 · 374 条指令
+// 字符串："title"、"v8@?0"、"default"、"%@%@  %@"
+// 消息：currentTopViewController → array → numberWithBool: → copy → dictionaryWithObjects:forKeys:count: → addObject: → objectForKeyedSubscript: → longLongValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_destroyWeak
 -(void)sjjPresentVideoStatsFakeSettings { }
 
-// 0x000bb9f8
--(void)sjjEditVideoStatsFakeField:(id)sjjEditVideoStatsFakeField { }
+// 0x000bb9f8 · 297 条指令
+// 字符串："default"、"text"、"q"、"v40@?0@"NSString"8^B16@"NSString"24B32B36"
+// 消息：currentTopViewController → objectForKeyedSubscript: → longLongValue → length → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → copy
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
+-(void)sjjEditVideoStatsFakeField:(id)a1 { }
 
-// 0x000bc358
--(void)sjjPresentAdaptiveDarkModePickerWithTitle:(id)sjjPresentAdaptiveDarkModePickerWithTitle currentMode:(long long)currentMode saveKey:(id)saveKey storage:(long long *)storage { }
+// 0x000bc358 · 201 条指令
+// 字符串："title"
+// 消息：currentTopViewController → length → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringWithFormat: → copy
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)sjjPresentAdaptiveDarkModePickerWithTitle:(id)a1 currentMode:(long long)a2 saveKey:(id)a3 storage:(long long *)a4 { }
 
-// 0x000bc82c
+// 0x000bc82c · 174 条指令
+// 字符串："sjj_adaptive_dark_capsule_mode_v1"、"sjj_adaptive_dark_side_dock_mode_v1"、"sjj_adaptive_dark_video_popup_mode_v1"
+// 消息：configureAdaptiveDarkDoubleTapPanelMode → currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)configureAdaptiveDarkCapsuleMode { }
 
-// 0x000bc848
+// 0x000bc848 · 167 条指令
+// 字符串："sjj_adaptive_dark_side_dock_mode_v1"、"sjj_adaptive_dark_video_popup_mode_v1"
+// 消息：configureAdaptiveDarkDoubleTapPanelMode → currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)configureAdaptiveDarkSideDockMode { }
 
-// 0x000bc864
+// 0x000bc864 · 160 条指令
+// 字符串："sjj_adaptive_dark_video_popup_mode_v1"
+// 消息：configureAdaptiveDarkDoubleTapPanelMode → currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)configureAdaptiveDarkDoubleTapPanelMode { }
 
-// 0x000bc880
+// 0x000bc880 · 153 条指令
+// 消息：configureAdaptiveDarkDoubleTapPanelMode → currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)configureAdaptiveDarkVideoPopupMode { }
 
-// 0x000bc884
+// 0x000bc884 · 152 条指令
+// 消息：currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)configureProfileAccessLockMode { }
 
-// 0x000bcdb8
+// 0x000bcdb8 · 595 条指令
+// 字符串："seed"、"app"、"%@|%@|profile_access_lock"、"mqqapi://card/show_pslcard?src_type=internal&version=1&uin=%@"、"https://wpa.qq.com/msgrd?v=3&uin=%@&site=qq&menu=yes"
+// 消息：currentTopViewController → length → showToast:duration: → count → objectAtIndexedSubscript: → text → isEqualToString: → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release、__Unwind_Resume、_objc_storeStrong、_objc_opt_class、_objc_opt_isKindOfClass、_objc_autoreleaseReturnValue
 -(void)configureProfileAccessLockPassword { }
 
-// 0x000bd290
+// 0x000bd290 · 285 条指令
+// 字符串："mqqapi://card/show_pslcard?src_type=internal&version=1&uin=%@"、"https://wpa.qq.com/msgrd?v=3&uin=%@&site=qq&menu=yes"、"sjj1."、"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_."、"%C"
+// 消息：stringWithFormat: → URLWithString: → sharedApplication → canOpenURL: → openURL:options:completionHandler: → generalPasteboard → string → length
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain
 -(void)chooseProfileAvatar { }
 
-// 0x000bd29c
+// 0x000bd29c · 282 条指令
+// 字符串："mqqapi://card/show_pslcard?src_type=internal&version=1&uin=%@"、"https://wpa.qq.com/msgrd?v=3&uin=%@&site=qq&menu=yes"、"sjj1."、"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_."、"%C"
+// 消息：stringWithFormat: → URLWithString: → sharedApplication → canOpenURL: → openURL:options:completionHandler: → generalPasteboard → string → length
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain
 -(void)contactAuthorQQ { }
 
-// 0x000bd47c
+// 0x000bd47c · 162 条指令
+// 字符串："sjj1."、"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_."、"%C"
+// 消息：generalPasteboard → string → length → whitespaceAndNewlineCharacterSet → componentsSeparatedByCharactersInSet: → componentsJoinedByString: → rangeOfString: → characterSetWithCharactersInString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)pasteAuthCode { }
 
-// 0x000bd7c4
--(void)showGeneratedAuthCode:(id)showGeneratedAuthCode { }
+// 0x000bd7c4 · 57 条指令
+// 消息：length → currentTopViewController
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)showGeneratedAuthCode:(id)a1 { }
 
-// 0x000bd92c
+// 0x000bd92c · 149 条指令
+// 字符串："text"、"q"、"sjj.orb.rotate"
+// 消息：showToast:duration: → generalPasteboard → setString: → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain
 -(void)generateAuthCodeForUser { }
 
-// 0x000bd948
+// 0x000bd948 · 142 条指令
+// 字符串："text"、"q"、"sjj.orb.rotate"
+// 消息：generalPasteboard → setString: → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_retain
 -(void)copyDeviceCode { }
 
-// 0x000bda08
+// 0x000bda08 · 94 条指令
+// 字符串："text"、"q"、"sjj.orb.rotate"
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)manualAuthInput { }
 
-// 0x000be2f4
+// 0x000be2f4 · 366 条指令
+// 字符串："gkdr_video_interface_parse_api_2"、"placeholder"、"text"、"keyboard"、"q"
+// 消息：navigationController → pushViewController:animated: → initWithRootViewController: → presentViewController:animated:completion: → setSeedUserAvatarData: → setModalPresentationStyle: → currentTopViewController → stringForKey:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc_init、_objc_release、_objc_alloc、__Unwind_Resume
 -(void)openAIReplySettingsTool { }
 
-// 0x000be414
+// 0x000be414 · 294 条指令
+// 字符串："gkdr_video_interface_parse_api_2"、"placeholder"、"text"、"keyboard"、"q"
+// 消息：setSeedUserAvatarData: → navigationController → pushViewController:animated: → initWithRootViewController: → presentViewController:animated:completion: → setModalPresentationStyle: → currentTopViewController → stringForKey:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc_init、_objc_release、_objc_alloc、__Unwind_Resume
 -(void)openAIReplyTool { }
 
-// 0x000be558
+// 0x000be558 · 213 条指令
+// 字符串："gkdr_video_interface_parse_api_2"、"placeholder"、"text"、"keyboard"、"q"
+// 消息：navigationController → pushViewController:animated: → initWithRootViewController: → setModalPresentationStyle: → presentViewController:animated:completion: → currentTopViewController → stringForKey: → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、__Unwind_Resume
 -(void)openSparkRenewTool { }
 
-// 0x000be658
+// 0x000be658 · 149 条指令
+// 字符串："gkdr_video_interface_parse_api_2"、"placeholder"、"text"、"keyboard"、"q"
+// 消息：currentTopViewController → stringForKey: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
 -(void)openWarmthFeatureTool { }
 
-// 0x000be6a8
--(void)sideDockAIHubTap:(id)sideDockAIHubTap { }
+// 0x000be6a8 · 129 条指令
+// 字符串："gkdr_video_interface_parse_api_2"、"placeholder"、"text"、"keyboard"、"q"
+// 消息：currentTopViewController → stringForKey: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)sideDockAIHubTap:(id)a1 { }
 
-// 0x000be6ac
+// 0x000be6ac · 128 条指令
+// 字符串："gkdr_video_interface_parse_api_2"、"placeholder"、"text"、"keyboard"、"q"
+// 消息：currentTopViewController → stringForKey: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureVideoParseAPI { }
 
-// 0x000bf4a8
+// 0x000bf4a8 · 111 条指令
+// 字符串："q"、"secure"、"TikHub Key"
+// 消息：currentTopViewController → length → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retainBlock、_objc_release
 -(void)configureWorkDataAPIToken { }
 
-// 0x000bf81c
+// 0x000bf81c · 306 条指令
+// 消息：currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAlbumSaveDetailContent { }
 
-// 0x000bffc0
+// 0x000bffc0 · 447 条指令
+// 消息：currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_retainBlock、_objc_retain、_objc_release、_objc_destroyWeak、__Block_object_dispose
 -(void)configureAlbumSaveTarget { }
 
-// 0x000c60b8
+// 0x000c60b8 · 146 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoPopupAnimation { }
 
-// 0x000c63e4
+// 0x000c63e4 · 146 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureInteractionAnimationSpeed { }
 
-// 0x000c6724
+// 0x000c6724 · 223 条指令
+// 字符串："mode"、"i"
+// 消息：currentTopViewController → array → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureFeedSmoothSwipeSpeed { }
 
-// 0x000c6ca4
+// 0x000c6ca4 · 74 条指令
+// 消息：currentTopViewController → alertControllerWithTitle:message:preferredStyle: → addTextFieldWithConfigurationHandler: → actionWithTitle:style:handler: → addAction: → presentViewController:animated:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)promptFeedSmoothSwipeCustomSpeed { }
 
-// 0x000c708c
+// 0x000c708c · 357 条指令
+// 字符串："name"、"mode"、"i"、"destructive"
+// 消息：currentTopViewController → array → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_retain、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_copyWeak
 -(void)configureFeedSmoothSwipeBackground { }
 
-// 0x000c79d4
+// 0x000c79d4 · 37 条指令
+// 消息：sjjPresentPanelColorPickerWithTitle:currentHex:saveBlock:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_destroyWeak
 -(void)configureFeedSmoothSwipeBackgroundColor { }
 
-// 0x000c7bc0
+// 0x000c7bc0 · 200 条指令
+// 消息：chooseImage → showToast:duration: → size → defaultFormat → setOpaque: → mainScreen → scale → setScale:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
 -(void)pickFeedSmoothSwipeBackgroundImage { }
 
-// 0x000c7c24
--(void)applyFeedSmoothSwipeBackgroundImage:(id)applyFeedSmoothSwipeBackgroundImage { }
+// 0x000c7c24 · 175 条指令
+// 消息：size → showToast:duration: → defaultFormat → setOpaque: → mainScreen → scale → setScale: → initWithSize:format:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
+-(void)applyFeedSmoothSwipeBackgroundImage:(id)a1 { }
 
-// 0x000c7fb8
+// 0x000c7fb8 · 146 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoPopupMorphStyle { }
 
-// 0x000c82dc
+// 0x000c82dc · 145 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureInAppWebPresentation { }
 
-// 0x000c8604
--(void)presentDoubleTapActionPickerWithTitle:(id)presentDoubleTapActionPickerWithTitle current:(long long)current save:(id /* block */)save { }
+// 0x000c8604 · 129 条指令
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
+-(void)presentDoubleTapActionPickerWithTitle:(id)a1 current:(long long)a2 save:(id /* block */)a3 { }
 
-// 0x000c8908
+// 0x000c8908 · 50 条指令
+// 消息：firstObject → objectForKeyedSubscript: → integerValue → presentDoubleTapActionPickerWithTitle:current:save:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release
 -(void)configureDoubleTapUpperAction { }
 
-// 0x000c8a68
+// 0x000c8a68 · 179 条指令
+// 字符串："x"、"y"、"action"、"enabled"、"scale"
+// 消息：count → mutableCopy → UUID → UUIDString → stringWithFormat: → numberWithDouble: → numberWithInt: → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)configureDoubleTapLowerAction { }
 
-// 0x000c8e74
+// 0x000c8e74 · 136 条指令
+// 字符串："points"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → boolValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
 -(void)configureDoubleTapQuickMode { }
 
-// 0x000c9234
+// 0x000c9234 · 107 条指令
+// 字符串："destructive"
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureDoubleTapPanelButtons { }
 
-// 0x000c9460
--(void)addDoubleTapIndicatorWithAction:(long long)addDoubleTapIndicatorWithAction { }
+// 0x000c9460 · 177 条指令
+// 字符串："x"、"y"、"action"、"enabled"、"scale"
+// 消息：mutableCopy → array → count → UUID → UUIDString → stringWithFormat: → numberWithDouble: → numberWithInteger:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)addDoubleTapIndicatorWithAction:(long long)a1 { }
 
-// 0x000c97e8
+// 0x000c97e8 · 328 条指令
+// 字符串："block"、"title"、"subtitle"、"destructive"
+// 消息：currentTopViewController → mutableCopy → array → copy → dictionaryWithObjects:forKeys:count: → count → objectAtIndexedSubscript: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retain
 -(void)configureDoubleTapSplitIndicators { }
 
-// 0x000ca1e4
+// 0x000ca1e4 · 162 条指令
+// 字符串："placeholder"、"text"、"keyboard"、"q"
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureDoubleTapCustomWebButton { }
 
-// 0x000cab7c
+// 0x000cab7c · 189 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → stringWithFormat: → uppercaseString → length
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
 -(void)configureDoubleTapPanelAccentColor { }
 
-// 0x000cafa4
+// 0x000cafa4 · 189 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → stringWithFormat: → uppercaseString → length
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
 -(void)configureVideoCapsuleAccentColor { }
 
-// 0x000cb3cc
+// 0x000cb3cc · 298 条指令
+// 字符串："subtitle"、"mode"、"i"、"title"、"destructive"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → array → objectForKeyedSubscript: → integerValue → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoCapsuleSuccessEffect { }
 
-// 0x000cba08
+// 0x000cba08 · 298 条指令
+// 字符串："subtitle"、"mode"、"i"、"title"、"destructive"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → array → objectForKeyedSubscript: → integerValue → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoCapsuleFailureEffect { }
 
-// 0x000cc044
+// 0x000cc044 · 116 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSaveNotifyTone { }
 
-// 0x000cc2b8
+// 0x000cc2b8 · 254 条指令
+// 字符串："subtitle"、"v16@?0@"NSArray"8"
+// 消息：currentTopViewController → length → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → stringByAppendingString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_retain、_objc_destroyWeak
 -(void)configureSideDockWakeSlideHoverSound { }
 
-// 0x000cc940
+// 0x000cc940 · 180 条指令
+// 字符串："subtitle"
+// 消息：currentTopViewController → length → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)configureSideDockShakeSound { }
 
-// 0x000cce14
+// 0x000cce14 · 62 条指令
+// 消息：currentTopViewController → length → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAntiRecallBadgeText { }
 
-// 0x000cd0ec
+// 0x000cd0ec · 195 条指令
+// 字符串："#9AA0A6"
+// 消息：currentTopViewController → array → uppercaseString → copy → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → stringWithFormat: → isEqualToString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain
 -(void)configureAntiRecallBadgeColor { }
 
-// 0x000cd518
+// 0x000cd518 · 147 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureAntiRecallBadgePosition { }
 
-// 0x000cd848
+// 0x000cd848 · 167 条指令
+// 字符串："0.75,1,1.25,1.5,2"、"q"、"toggle"、"on"
+// 消息：currentTopViewController → length → dictionaryWithObjects:forKeys:count: → numberWithBool: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
 -(void)configureLocalTransferAmount { }
 
-// 0x000cd8b4
+// 0x000cd8b4 · 140 条指令
+// 字符串："0.75,1,1.25,1.5,2"、"q"、"toggle"、"on"
+// 消息：currentTopViewController → length → dictionaryWithObjects:forKeys:count: → numberWithBool: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
 -(void)configureClownMessageHint { }
 
-// 0x000cd920
+// 0x000cd920 · 113 条指令
+// 字符串："0.75,1,1.25,1.5,2"、"q"、"toggle"、"on"
+// 消息：currentTopViewController → length → dictionaryWithObjects:forKeys:count: → numberWithBool: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configurePlaybackSpeedOptions { }
 
-// 0x000cea84
+// 0x000cea84 · 103 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSWJRedPacketTiming { }
 
-// 0x000cf0bc
+// 0x000cf0bc · 272 条指令
+// 字符串："text"、"keyboard"、"q"、"1"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSWJRedPacketRules { }
 
-// 0x000d035c
+// 0x000d035c · 98 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → dictionaryWithObjects:forKeys:count: → stringWithFormat: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSWJRedPacketAutoReply { }
 
-// 0x000d0870
+// 0x000d0870 · 154 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureAutoCommentMode { }
 
-// 0x000d0bbc
+// 0x000d0bbc · 191 条指令
+// 字符串："tier"、"v16@?0@"NSArray"8"
+// 消息：currentTopViewController → isAliasSVIPUnlocked → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → numberWithBool:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoQualityProTier { }
 
-// 0x000d0fdc
+// 0x000d0fdc · 153 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureAutoCommentTriggerMode { }
 
-// 0x000d13a4
+// 0x000d13a4 · 57 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoCommentPresetText { }
 
-// 0x000d16f8
+// 0x000d16f8 · 56 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoCommentRandomPool { }
 
-// 0x000d1950
+// 0x000d1950 · 225 条指令
+// 字符串："prompt"
+// 消息：currentTopViewController → array → objectForKeyedSubscript: → length → isEqualToString: → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_enumerationMutation、_objc_release
 -(void)configureAutoCommentAIPrompt { }
 
-// 0x000d211c
+// 0x000d211c · 130 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
 -(void)configureAutoCommentBoundary { }
 
-// 0x000d24d8
+// 0x000d24d8 · 61 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoCommentRedLine { }
 
-// 0x000d2b44
+// 0x000d2b44 · 68 条指令
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoCommentDelay { }
 
-// 0x000d2df0
+// 0x000d2df0 · 62 条指令
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureCommentSortPrecisePageCount { }
 
-// 0x000d30b8
+// 0x000d30b8 · 62 条指令
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureCommentSortSilentPreloadPageCount { }
 
-// 0x000d3380
+// 0x000d3380 · 165 条指令
+// 字符串："destructive"、"instantDismiss"、"1.20"
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)configureAutoCommentImage { }
 
-// 0x000d3958
+// 0x000d3958 · 64 条指令
+// 字符串："swjj"
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureBlueCommentPrefix { }
 
-// 0x000d3c70
+// 0x000d3c70 · 61 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoPrivateMessageText { }
 
-// 0x000d3f1c
+// 0x000d3f1c · 72 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoPrivateMessageDelay { }
 
-// 0x000d420c
+// 0x000d420c · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openMiniAppRewardBypassSettingsPage { }
 
-// 0x000d432c
+// 0x000d432c · 161 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureMiniAppRewardBypassMode { }
 
-// 0x000d471c
+// 0x000d471c · 146 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureProfileBatchDownloadMode { }
 
-// 0x000d4a7c
+// 0x000d4a7c · 144 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureMeteorShowerStyle { }
 
-// 0x000d4dc4
+// 0x000d4dc4 · 145 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureDynamicIslandInnerParticleStyle { }
 
-// 0x000d5110
+// 0x000d5110 · 146 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureDynamicIslandHaloStarRainbowGlowStyle { }
 
-// 0x000d5440
+// 0x000d5440 · 213 条指令
+// 字符串："placeholder"、"text"、"keyboard"、"q"
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureDynamicIslandHaloAdvancedTuning { }
 
-// 0x000d5db0
+// 0x000d5db0 · 63 条指令
+// 消息：currentTopViewController → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureVideoTimeCapsulePairSpacing { }
 
-// 0x000d6080
+// 0x000d6080 · 172 条指令
+// 字符串："style"、"v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureVideoTimeCapsuleStyle { }
 
-// 0x000d65cc
+// 0x000d65cc · 180 条指令
+// 字符串："destructive"、"block"
+// 消息：showToast:duration: → currentTopViewController → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureTopToastStyle { }
 
-// 0x000d6608
+// 0x000d6608 · 165 条指令
+// 字符串："destructive"、"block"
+// 消息：currentTopViewController → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSideDockWakeSwipeAction { }
 
-// 0x000d69ec
+// 0x000d69ec · 114 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSideDockWakeSpeedStep { }
 
-// 0x000d6c58
+// 0x000d6c58 · 194 条指令
+// 字符串："%@ %@%@"、"title"
+// 消息：currentTopViewController → array → objectForKeyedSubscript: → isEqualToString: → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_retain、_objc_release
 -(void)configureSideDockWakeColor { }
 
-// 0x000d7280
--(id)sjjHiFloatingSymbol:(id)sjjHiFloatingSymbol { return NULL; }
+// 0x000d7280 · 255 条指令
+// 消息：configurationWithPointSize:weight: → systemImageNamed:withConfiguration: → imageWithRenderingMode: → bounds → initWithFrame: → colorWithAlphaComponent: → setBackgroundColor: → layer
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_objc_alloc
+-(id)sjjHiFloatingSymbol:(id)a1 { return NULL; }
 
-// 0x000d734c
--(void)sjjAddHiFloatingGroupBackground:(id)sjjAddHiFloatingGroupBackground fromY:(double)fromY toY:(double)toY { }
+// 0x000d734c · 204 条指令
+// 消息：bounds → initWithFrame: → colorWithAlphaComponent: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve: → setBorderWidth:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_alloc、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retainAutorelease
+-(void)sjjAddHiFloatingGroupBackground:(id)a1 fromY:(double)a2 toY:(double)a3 { }
 
-// 0x000d7584
--(double)sjjAddHiFloatingSectionTitle:(id)sjjAddHiFloatingSectionTitle inView:(id)inView y:(double)y { return 0; }
+// 0x000d7584 · 62 条指令
+// 消息：bounds → initWithFrame: → setText: → setTextColor: → systemFontOfSize:weight: → setFont: → addSubview:
+// 系统：_objc_retain、_objc_alloc、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release
+-(double)sjjAddHiFloatingSectionTitle:(id)a1 inView:(id)a2 y:(double)a3 { return 0; }
 
-// 0x000d76b8
--(void)sjjAddHiFloatingRowDivider:(id)sjjAddHiFloatingRowDivider { }
+// 0x000d76b8 · 288 条指令
+// 消息：mainScreen → scale → bounds → initWithFrame: → colorWithAlphaComponent: → setBackgroundColor: → setUserInteractionEnabled: → addSubview:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_CGRectGetHeight、_CGRectGetWidth、__Unwind_Resume、_CGAffineTransformMakeScale
+-(void)sjjAddHiFloatingRowDivider:(id)a1 { }
 
-// 0x000d7844
--(double)sjjAddHiFloatingSwitchRow:(id)sjjAddHiFloatingSwitchRow y:(double)y title:(id)title symbol:(id)symbol key:(id)key { return 0; }
+// 0x000d7844 · 189 条指令
+// 消息：bounds → initWithFrame: → clearColor → setBackgroundColor: → addSubview: → sjjHiFloatingSymbol: → initWithImage: → setFrame:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、_CGAffineTransformMakeScale、_objc_setAssociatedObject
+-(double)sjjAddHiFloatingSwitchRow:(id)a1 y:(double)a2 title:(id)a3 symbol:(id)a4 key:(id)a5 { return 0; }
 
-// 0x000d7c84
--(double)sjjAddHiFloatingActionRow:(id)sjjAddHiFloatingActionRow y:(double)y title:(id)title detail:(id)detail symbol:(id)symbol action:(SEL)action { return 0; }
+// 0x000d7c84 · 228 条指令
+// 消息：bounds → buttonWithType: → setFrame: → clearColor → setBackgroundColor: → addTarget:action:forControlEvents: → attachPressAnimation: → addSubview:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc
+-(double)sjjAddHiFloatingActionRow:(id)a1 y:(double)a2 title:(id)a3 detail:(id)a4 symbol:(id)a5 action:(SEL)a6 { return 0; }
 
-// 0x000d80e4
--(double)sjjAddHiFloatingSegment:(id)sjjAddHiFloatingSegment y:(double)y items:(id)items selected:(long long)selected action:(SEL)action { return 0; }
+// 0x000d80e4 · 150 条指令
+// 消息：initWithItems: → bounds → setFrame: → count → setSelectedSegmentIndex: → colorWithAlphaComponent: → setSelectedSegmentTintColor: → systemFontOfSize:weight:
+// 系统：_objc_retain、_objc_alloc、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release
+-(double)sjjAddHiFloatingSegment:(id)a1 y:(double)a2 items:(id)a3 selected:(long long)a4 action:(SEL)a5 { return 0; }
 
-// 0x000d83f0
--(double)sjjAddHiClearScreenSwitchRow:(id)sjjAddHiClearScreenSwitchRow y:(double)y title:(id)title symbol:(id)symbol option:(long long)option { return 0; }
+// 0x000d83f0 · 174 条指令
+// 消息：bounds → initWithFrame: → addSubview: → sjjHiFloatingSymbol: → initWithImage: → setFrame: → setContentMode: → setTintColor:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_setAssociatedObject
+-(double)sjjAddHiClearScreenSwitchRow:(id)a1 y:(double)a2 title:(id)a3 symbol:(id)a4 option:(long long)a5 { return 0; }
 
-// 0x000d8744
--(void)sjjHiFloatingSettingsTabChanged:(id)sjjHiFloatingSettingsTabChanged { }
+// 0x000d8744 · 230 条指令
+// 字符串："AudioQueueStart"
+// 消息：selectedSegmentIndex → sjjRefreshSecondarySettingsPageContentInPlace → isOn → length → setBool:forKey: → isEqualToString: → showToast:duration: → setOn:animated:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)sjjHiFloatingSettingsTabChanged:(id)a1 { }
 
-// 0x000d87e0
--(void)sjjHiClearScreenSettingsTabChanged:(id)sjjHiClearScreenSettingsTabChanged { }
+// 0x000d87e0 · 191 条指令
+// 字符串："AudioQueueStart"
+// 消息：selectedSegmentIndex → sjjRefreshSecondarySettingsPageContentInPlace → isOn → length → setBool:forKey: → isEqualToString: → showToast:duration: → setOn:animated:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)sjjHiClearScreenSettingsTabChanged:(id)a1 { }
 
-// 0x000d887c
--(void)sjjHiFloatingSwitchChanged:(id)sjjHiFloatingSwitchChanged { }
+// 0x000d887c · 152 条指令
+// 字符串："AudioQueueStart"
+// 消息：isOn → length → setBool:forKey: → isEqualToString: → showToast:duration: → setOn:animated: → boolForKey:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume
+-(void)sjjHiFloatingSwitchChanged:(id)a1 { }
 
-// 0x000d8b0c
--(void)sjjHiClearScreenSwitchChanged:(id)sjjHiClearScreenSwitchChanged { }
+// 0x000d8b0c · 191 条指令
+// 字符串："30"
+// 消息：isOn → integerValue → setOn:animated: → sjjRefreshSecondarySettingsPageContentInPlace → objectForKey: → doubleForKey: → stringWithFormat: → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_respondsToSelector、_objc_release、__Unwind_Resume
+-(void)sjjHiClearScreenSwitchChanged:(id)a1 { }
 
-// 0x000d8c50
+// 0x000d8c50 · 110 条指令
+// 字符串："30"
+// 消息：objectForKey: → doubleForKey: → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)configureHiFloatingHideSeconds { }
 
-// 0x000d8f9c
+// 0x000d8f9c · 108 条指令
+// 字符串："38"
+// 消息：objectForKey: → doubleForKey: → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)configureHiFloatingSpeedSize { }
 
-// 0x000d92d8
+// 0x000d92d8 · 107 条指令
+// 字符串："42"
+// 消息：objectForKey: → doubleForKey: → stringWithFormat: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)configureHiFloatingClearSize { }
 
-// 0x000d960c
--(BOOL)sjjStoreHiFloatingClearIconData:(id)sjjStoreHiFloatingClearIconData { return NO; }
+// 0x000d960c · 43 条指令
+// 消息：length → showToast:duration:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_objc_release
+-(BOOL)sjjStoreHiFloatingClearIconData:(id)a1 { return NO; }
 
-// 0x000d98c8
+// 0x000d98c8 · 300 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)pickHiFloatingClearIconFromAlbum { }
 
-// 0x000d98d4
+// 0x000d98d4 · 297 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)pickHiFloatingClearIconFromFile { }
 
-// 0x000d9a5c
+// 0x000d9a5c · 199 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：length → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → arrayWithArray: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)configureHiFloatingCustomClearIcon { }
 
-// 0x000da008
+// 0x000da008 · 91 条指令
+// 消息：integerForKey: → array → enumerateObjectsUsingBlock:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)configureHiFloatingClearIcon { }
 
-// 0x000da45c
+// 0x000da45c · 68 条指令
+// 消息：showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_destroyWeak
 -(void)resetHiFloatingSpeedPosition { }
 
-// 0x000da498
+// 0x000da498 · 53 条指令
+// 消息：showToast:duration: → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_destroyWeak
 -(void)resetHiFloatingClearPosition { }
 
-// 0x000da4d4
+// 0x000da4d4 · 38 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_destroyWeak
 -(void)configureHiFloatingControls { }
 
-// 0x000dab5c
+// 0x000dab5c · 38 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_destroyWeak
 -(void)configureClearScreenOptions { }
 
-// 0x000dade0
+// 0x000dade0 · 188 条指令
+// 字符串："%@ %@%@"
+// 消息：currentTopViewController → array → length → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_retain
 -(void)configureSideDockIconTintColor { }
 
-// 0x000db238
+// 0x000db238 · 132 条指令
+// 字符串："v16@?0@"NSArray"8"、"v"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
 -(void)configureSideDockWakeGestureSensitivity { }
 
-// 0x000db588
+// 0x000db588 · 194 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → stringWithFormat: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureSideDockPetSkin { }
 
-// 0x000dbb1c
+// 0x000dbb1c · 143 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureSideDockPetPersonality { }
 
-// 0x000dbebc
+// 0x000dbebc · 143 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureSideDockPetDockStyle { }
 
-// 0x000dc254
+// 0x000dc254 · 143 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureSideDockGyroFollowDirection { }
 
-// 0x000dc764
+// 0x000dc764 · 279 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureUpperPanelButtons { }
 
-// 0x000dc7ec
+// 0x000dc7ec · 245 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureLowerPanelButtons { }
 
-// 0x000dc874
+// 0x000dc874 · 211 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureSideDockButtons { }
 
-// 0x000dc8fc
+// 0x000dc8fc · 177 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureNativeLongPressPluginPosition { }
 
-// 0x000dccc8
+// 0x000dccc8 · 248 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：currentTopViewController → length → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)configureNativeLongPressMenuContent { }
 
-// 0x000dcd50
+// 0x000dcd50 · 214 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：currentTopViewController → length → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)configureNativeLongPressListStyle { }
 
-// 0x000dcdd8
+// 0x000dcdd8 · 180 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：currentTopViewController → length → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)configureNativeLongPressBackgroundImage { }
 
-// 0x000dd278
+// 0x000dd278 · 423 条指令
+// 消息：chooseImage → showToast:duration: → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickNativeLongPressBackgroundImageFromAlbum { }
 
-// 0x000dd2dc
+// 0x000dd2dc · 398 条指令
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickNativeLongPressBackgroundImageFromFile { }
 
-// 0x000dd4a8
--(void)applyNativeLongPressBackgroundImageData:(id)applyNativeLongPressBackgroundImageData { }
+// 0x000dd4a8 · 283 条指令
+// 消息：length → imageWithData: → showToast:duration: → applyNativeLongPressBackgroundImageData: → currentTopViewController → setModalPresentationStyle: → setSourceImage: → mainScreen
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
+-(void)applyNativeLongPressBackgroundImageData:(id)a1 { }
 
-// 0x000dd5fc
--(void)applyNativeLongPressBackgroundImage:(id)applyNativeLongPressBackgroundImage { }
+// 0x000dd5fc · 198 条指令
+// 消息：length → applyNativeLongPressBackgroundImageData: → showToast:duration: → currentTopViewController → setModalPresentationStyle: → setSourceImage: → mainScreen → bounds
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation、_objc_retainAutoreleasedReturnValue、_UIImagePNGRepresentation、_objc_release、__Unwind_Resume
+-(void)applyNativeLongPressBackgroundImage:(id)a1 { }
 
-// 0x000dd6dc
--(void)presentNativeLongPressBackgroundCropperForImage:(id)presentNativeLongPressBackgroundCropperForImage { }
+// 0x000dd6dc · 142 条指令
+// 消息：currentTopViewController → setModalPresentationStyle: → setSourceImage: → mainScreen → bounds → showToast:duration: → setTargetAspectRatio: → setHintText:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_opt_new、_objc_release、_CGRectGetWidth、_CGRectGetHeight、_objc_initWeak
+-(void)presentNativeLongPressBackgroundCropperForImage:(id)a1 { }
 
-// 0x000dd9ec
+// 0x000dd9ec · 201 条指令
+// 消息：currentTopViewController → array → length → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_enumerationMutation、_objc_release、_objc_copyWeak、_objc_destroyWeak
 -(void)configureNativeLongPressButtonBackgrounds { }
 
-// 0x000ddf50
--(void)configureNativeLongPressButtonBackgroundForID:(id)configureNativeLongPressButtonBackgroundForID { }
+// 0x000ddf50 · 233 条指令
+// 字符串："subtitle"、"instantDismiss"
+// 消息：currentTopViewController → length → array → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
+-(void)configureNativeLongPressButtonBackgroundForID:(id)a1 { }
 
-// 0x000de690
+// 0x000de690 · 466 条指令
+// 消息：length → chooseImage → showToast:duration: → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_alloc、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickNativeLongPressButtonBackgroundFromAlbum { }
 
-// 0x000de760
+// 0x000de760 · 414 条指令
+// 消息：length → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickNativeLongPressButtonBackgroundFromFile { }
 
-// 0x000de978
--(void)applyNativeLongPressButtonBackgroundData:(id)applyNativeLongPressButtonBackgroundData itemID:(id)itemID { }
+// 0x000de978 · 280 条指令
+// 消息：length → imageWithData: → showToast:duration: → applyNativeLongPressButtonBackgroundData:itemID: → currentTopViewController → setModalPresentationStyle: → setSourceImage: → setTargetAspectRatio:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
+-(void)applyNativeLongPressButtonBackgroundData:(id)a1 itemID:(id)a2 { }
 
-// 0x000deb10
--(void)applyNativeLongPressButtonBackgroundImage:(id)applyNativeLongPressButtonBackgroundImage itemID:(id)itemID { }
+// 0x000deb10 · 178 条指令
+// 消息：length → applyNativeLongPressButtonBackgroundData:itemID: → showToast:duration: → currentTopViewController → setModalPresentationStyle: → setSourceImage: → setTargetAspectRatio: → setHintText:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation、_objc_retainAutoreleasedReturnValue、_UIImagePNGRepresentation、_objc_release、__Unwind_Resume
+-(void)applyNativeLongPressButtonBackgroundImage:(id)a1 itemID:(id)a2 { }
 
-// 0x000dec28
--(void)presentNativeLongPressButtonBackgroundCropperForImage:(id)presentNativeLongPressButtonBackgroundCropperForImage itemID:(id)itemID { }
+// 0x000dec28 · 108 条指令
+// 消息：length → currentTopViewController → setModalPresentationStyle: → setSourceImage: → setTargetAspectRatio: → setHintText: → copy → setCompletion:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_opt_new、_objc_initWeak、_objc_copyWeak、_objc_release
+-(void)presentNativeLongPressButtonBackgroundCropperForImage:(id)a1 itemID:(id)a2 { }
 
-// 0x000deee0
+// 0x000deee0 · 142 条指令
+// 消息：currentTopViewController → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_enumerationMutation、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)configureNativeLongPressImageSlot { }
 
-// 0x000df21c
--(void)configureNativeLongPressImageSlotForID:(id)configureNativeLongPressImageSlotForID { }
+// 0x000df21c · 240 条指令
+// 字符串："image_slot"、"subtitle"、"destructive"、"instantDismiss"、"t"
+// 消息：currentTopViewController → isEqualToString: → length → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
+-(void)configureNativeLongPressImageSlotForID:(id)a1 { }
 
-// 0x000df888
+// 0x000df888 · 501 条指令
+// 消息：chooseImage → showToast:duration: → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection:
+// 系统：_objc_release、_objc_retainAutoreleasedReturnValue、_objc_alloc、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickNativeLongPressImageSlotFromAlbum { }
 
-// 0x000df91c
+// 0x000df91c · 464 条指令
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → length
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation
 -(void)pickNativeLongPressImageSlotFromFile { }
 
-// 0x000dfb34
--(void)applyNativeLongPressImageSlotData:(id)applyNativeLongPressImageSlotData slotID:(id)slotID { }
+// 0x000dfb34 · 330 条指令
+// 消息：length → showToast:duration: → imageWithData: → stringWithFormat: → applyNativeLongPressImageSlotData:slotID: → currentTopViewController → setModalPresentationStyle: → setSourceImage:
+// 系统：_objc_retain、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、__Unwind_Resume、_UIImageJPEGRepresentation、_UIImagePNGRepresentation
+-(void)applyNativeLongPressImageSlotData:(id)a1 slotID:(id)a2 { }
 
-// 0x000dfd74
--(void)applyNativeLongPressImageSlotImage:(id)applyNativeLongPressImageSlotImage slotID:(id)slotID { }
+// 0x000dfd74 · 186 条指令
+// 消息：length → applyNativeLongPressImageSlotData:slotID: → showToast:duration: → currentTopViewController → setModalPresentationStyle: → setSourceImage: → setTargetAspectRatio: → setHintText:
+// 系统：_objc_retain、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_UIImageJPEGRepresentation、_objc_retainAutoreleasedReturnValue、_UIImagePNGRepresentation、__Unwind_Resume
+-(void)applyNativeLongPressImageSlotImage:(id)a1 slotID:(id)a2 { }
 
-// 0x000dfea8
--(void)presentNativeLongPressImageSlotCropperForImage:(id)presentNativeLongPressImageSlotCropperForImage slotID:(id)slotID { }
+// 0x000dfea8 · 109 条指令
+// 消息：currentTopViewController → setModalPresentationStyle: → setSourceImage: → setTargetAspectRatio: → setHintText: → copy → setCompletion: → setCancelCompletion:
+// 系统：_objc_retain、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_opt_new、_objc_initWeak、_objc_copyWeak
+-(void)presentNativeLongPressImageSlotCropperForImage:(id)a1 slotID:(id)a2 { }
 
-// 0x000e0220
--(void)presentNativeLongPressImageSlotCropperForGIFData:(id)presentNativeLongPressImageSlotCropperForGIFData slotID:(id)slotID { }
+// 0x000e0220 · 145 条指令
+// 消息：currentTopViewController → setModalPresentationStyle: → setSourceImage: → setTargetAspectRatio: → setHintText: → copy → setRectCompletion: → setCancelCompletion:
+// 系统：_objc_retain、_objc_release、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_opt_new、_objc_initWeak、_objc_copyWeak
+-(void)presentNativeLongPressImageSlotCropperForGIFData:(id)a1 slotID:(id)a2 { }
 
-// 0x000e0d08
+// 0x000e0d08 · 209 条指令
+// 消息：currentTopViewController → array → objectForKeyedSubscript: → length → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_copyWeak、_objc_retain
 -(void)configureNativeLongPressMenuTitles { }
 
-// 0x000e1614
+// 0x000e1614 · 210 条指令
+// 字符串："subtitle"、"v16@?0@"NSArray"8"
+// 消息：currentTopViewController → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → count → stringWithFormat: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)configureNativeLongPressPluginLayoutMode { }
 
-// 0x000e1aac
+// 0x000e1aac · 64 条指令
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureNativeLongPressRowLayoutRule { }
 
-// 0x000e1dcc
+// 0x000e1dcc · 215 条指令
+// 字符串："v16@?0@"NSArray"8"
+// 消息：currentTopViewController → count → array → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count: → addObject: → objectAtIndexedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)configureSideDockDividerPosition { }
 
-// 0x000e2480
+// 0x000e2480 · 311 条指令
+// 字符串："timer"
+// 消息：currentTopViewController → isAliasSVIPUnlocked → showToast:duration: → array → isEqualToString: → length → bytes → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_enumerationMutation、_objc_retain、_objc_retainAutorelease
 -(void)configureSideDockSubCapsuleButtons { }
 
-// 0x000e2508
+// 0x000e2508 · 277 条指令
+// 字符串："timer"
+// 消息：currentTopViewController → isAliasSVIPUnlocked → showToast:duration: → array → isEqualToString: → length → bytes → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_enumerationMutation、_objc_retain、_objc_retainAutorelease
 -(void)configureAudioWaveSettings { }
 
-// 0x000e2560
+// 0x000e2560 · 255 条指令
+// 字符串："timer"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → showToast:duration: → array → isEqualToString: → length → bytes → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_enumerationMutation、_objc_retain、_objc_retainAutorelease
 -(void)openFrequencyInteractionPanel { }
 
-// 0x000e25fc
+// 0x000e25fc · 216 条指令
+// 字符串："timer"
+// 消息：currentTopViewController → array → isEqualToString: → length → bytes → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_retain、_objc_release、_objc_retainAutorelease
 -(void)configureSideDockIcons { }
 
-// 0x000e2ae0
--(void)configureSideDockIconForActionID:(id)configureSideDockIconForActionID { }
+// 0x000e2ae0 · 249 条指令
+// 字符串："instantDismiss"
+// 消息：length → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → stringWithFormat:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)configureSideDockIconForActionID:(id)a1 { }
 
-// 0x000e3054
--(void)promptSideDockSymbolForActionID:(id)promptSideDockSymbolForActionID { }
+// 0x000e3054 · 110 条指令
+// 字符串："symbol"、"text"、"q"、"SF Symbol"
+// 消息：length → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)promptSideDockSymbolForActionID:(id)a1 { }
 
-// 0x000e3058
--(void)promptSideDockSymbolForActionID:(id)promptSideDockSymbolForActionID selectedState:(BOOL)selectedState { }
+// 0x000e3058 · 109 条指令
+// 字符串："symbol"、"text"、"q"、"SF Symbol"
+// 消息：length → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)promptSideDockSymbolForActionID:(id)a1 selectedState:(BOOL)a2 { }
 
-// 0x000e35bc
--(void)pickSideDockIconFromAlbumForActionID:(id)pickSideDockIconFromAlbumForActionID { }
+// 0x000e35bc · 304 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：length → isSourceTypeAvailable: → copy → chooseImage → showToast:duration: → array → typeWithIdentifier: → addObject:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_alloc
+-(void)pickSideDockIconFromAlbumForActionID:(id)a1 { }
 
-// 0x000e35c0
--(void)pickSideDockIconFromAlbumForActionID:(id)pickSideDockIconFromAlbumForActionID selectedState:(BOOL)selectedState { }
+// 0x000e35c0 · 303 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：length → isSourceTypeAvailable: → copy → chooseImage → showToast:duration: → array → typeWithIdentifier: → addObject:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_alloc
+-(void)pickSideDockIconFromAlbumForActionID:(id)a1 selectedState:(BOOL)a2 { }
 
-// 0x000e3680
--(void)pickSideDockIconFromFileForActionID:(id)pickSideDockIconFromFileForActionID { }
+// 0x000e3680 · 255 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：length → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → copy → setDelegate: → setAllowsMultipleSelection:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume
+-(void)pickSideDockIconFromFileForActionID:(id)a1 { }
 
-// 0x000e3684
--(void)pickSideDockIconFromFileForActionID:(id)pickSideDockIconFromFileForActionID selectedState:(BOOL)selectedState { }
+// 0x000e3684 · 254 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：length → array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → copy → setDelegate: → setAllowsMultipleSelection:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume
+-(void)pickSideDockIconFromFileForActionID:(id)a1 selectedState:(BOOL)a2 { }
 
-// 0x000e38dc
+// 0x000e38dc · 104 条指令
+// 字符串："text"、"keyboard"、"q"
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSideDockAppLaunch { }
 
-// 0x000e3f68
+// 0x000e3f68 · 832 条指令
+// 字符串："direct_share_friend"、"direct_share_friend_1"、"direct_share_friend_2"、"direct_share_friend_3"、"direct_share_friend_4"
+// 消息：configureSideDockDirectShareFriendForActionID: → currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
 -(void)configureSideDockPrimaryDirectShareFriend { }
 
-// 0x000e3f74
+// 0x000e3f74 · 829 条指令
+// 字符串："direct_share_friend_1"、"direct_share_friend_2"、"direct_share_friend_3"、"direct_share_friend_4"、"direct_share_friend_5"
+// 消息：configureSideDockDirectShareFriendForActionID: → currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
 -(void)configureSideDockDirectShareFriend { }
 
-// 0x000e3f80
+// 0x000e3f80 · 826 条指令
+// 字符串："direct_share_friend_2"、"direct_share_friend_3"、"direct_share_friend_4"、"direct_share_friend_5"、"direct_share_friend"
+// 消息：configureSideDockDirectShareFriendForActionID: → currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
 -(void)configureSideDockDirectShareFriend2 { }
 
-// 0x000e3f8c
+// 0x000e3f8c · 823 条指令
+// 字符串："direct_share_friend_3"、"direct_share_friend_4"、"direct_share_friend_5"、"direct_share_friend"、"dispatcherManager.context"
+// 消息：configureSideDockDirectShareFriendForActionID: → currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
 -(void)configureSideDockDirectShareFriend3 { }
 
-// 0x000e3f98
+// 0x000e3f98 · 820 条指令
+// 字符串："direct_share_friend_4"、"direct_share_friend_5"、"direct_share_friend"、"dispatcherManager.context"、"viewModel.context"
+// 消息：configureSideDockDirectShareFriendForActionID: → currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
 -(void)configureSideDockDirectShareFriend4 { }
 
-// 0x000e3fa4
+// 0x000e3fa4 · 817 条指令
+// 字符串："direct_share_friend_5"、"direct_share_friend"、"dispatcherManager.context"、"viewModel.context"、"interactor.context"
+// 消息：configureSideDockDirectShareFriendForActionID: → currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
 -(void)configureSideDockDirectShareFriend5 { }
 
-// 0x000e3fb0
--(void)configureSideDockDirectShareFriendForActionID:(id)configureSideDockDirectShareFriendForActionID { }
+// 0x000e3fb0 · 814 条指令
+// 字符串："direct_share_friend"、"dispatcherManager.context"、"viewModel.context"、"interactor.context"
+// 消息：currentTopViewController → showToast:duration: → isEqualToString: → set → array → count → objectAtIndexedSubscript: → firstObject
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release、__Unwind_Resume、_objc_retainBlock、_objc_opt_respondsToSelector、_objc_enumerationMutation
+-(void)configureSideDockDirectShareFriendForActionID:(id)a1 { }
 
-// 0x000e4ed0
+// 0x000e4ed0 · 116 条指令
+// 字符串："placeholder"、"text"、"keyboard"、"q"
+// 消息：currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureAutoGroupAuthorization { }
 
-// 0x000e54b0
+// 0x000e54b0 · 67 条指令
+// 消息：editProfileName → state → editProfileSign → isAliasSVIPUnlocked → showToast:duration:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume
 -(void)showCurrentGroupIdentifiers { }
 
-// 0x000e54b4
--(void)nameTap:(id)nameTap { }
+// 0x000e54b4 · 66 条指令
+// 消息：editProfileName → state → editProfileSign → isAliasSVIPUnlocked → showToast:duration:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume
+-(void)nameTap:(id)a1 { }
 
-// 0x000e54b8
--(void)nameLongPress:(id)nameLongPress { }
+// 0x000e54b8 · 65 条指令
+// 消息：state → editProfileName → editProfileSign → isAliasSVIPUnlocked → showToast:duration:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume
+-(void)nameLongPress:(id)a1 { }
 
-// 0x000e5514
--(void)signTap:(id)signTap { }
+// 0x000e5514 · 42 条指令
+// 消息：editProfileSign → state → isAliasSVIPUnlocked → showToast:duration:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume
+-(void)signTap:(id)a1 { }
 
-// 0x000e5518
--(void)signLongPress:(id)signLongPress { }
+// 0x000e5518 · 41 条指令
+// 消息：state → editProfileSign → isAliasSVIPUnlocked → showToast:duration:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume
+-(void)signLongPress:(id)a1 { }
 
-// 0x000e5574
--(void)accountLabelTap:(id)accountLabelTap { }
+// 0x000e5574 · 18 条指令
+// 消息：isAliasSVIPUnlocked → showToast:duration:
+-(void)accountLabelTap:(id)a1 { }
 
-// 0x000e55bc
--(void)accountLabelLongPress:(id)accountLabelLongPress { }
+// 0x000e55bc · 185 条指令
+// 字符串："title"
+// 消息：state → presentAliasBadgeStyleSelector → isAliasSVIPUnlocked → currentTopViewController → array → count → objectAtIndexedSubscript: → objectForKeyedSubscript:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)accountLabelLongPress:(id)a1 { }
 
-// 0x000e5618
+// 0x000e5618 · 162 条指令
+// 字符串："title"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → array → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → stringByAppendingString: → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retain
 -(void)presentAliasBadgeStyleSelector { }
 
-// 0x000e5acc
--(void)ensureAliasAccountLabelGestures:(id)ensureAliasAccountLabelGestures { }
+// 0x000e5acc · 128 条指令
+// 消息：gestureRecognizers → copy → countByEnumeratingWithState:objects:count: → removeGestureRecognizer: → initWithTarget:action: → setMinimumPressDuration: → addGestureRecognizer: → requireGestureRecognizerToFail:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_alloc
+-(void)ensureAliasAccountLabelGestures:(id)a1 { }
 
-// 0x000e5d3c
+// 0x000e5d3c · 1138 条指令
+// 字符串："SVIP"、"sjj.svip.badge.glowPulse"
+// 消息：isAliasSVIPUnlocked → sjjUpdateVisibleSummaryActionWithTitle:status:subtitle: → showToast:duration: → aliasSVIPBadgeFrameInAvatarBounds: → colorWithRed:green:blue:alpha: → CGColor → arrayWithObjects:count: → clearColor
+// 系统：_CGRectGetWidth、_CGRectGetHeight、_CGRectIntegral、_objc_retainAutoreleasedReturnValue、_objc_retainAutorelease、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail
 -(void)toggleAliasSVIPPendant { }
 
-// 0x000e5de4
--(struct CGRect)aliasSVIPBadgeFrameInAvatarBounds:(id)aliasSVIPBadgeFrameInAvatarBounds { return (struct CGRect){0}; }
+// 0x000e5de4 · 1096 条指令
+// 字符串："SVIP"、"sjj.svip.badge.glowPulse"
+// 消息：aliasSVIPBadgeFrameInAvatarBounds: → colorWithRed:green:blue:alpha: → CGColor → arrayWithObjects:count: → clearColor → blackColor → layer → sublayers
+// 系统：_CGRectGetWidth、_CGRectGetHeight、_CGRectIntegral、_objc_retainAutoreleasedReturnValue、_objc_retainAutorelease、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail
+-(struct CGRect)aliasSVIPBadgeFrameInAvatarBounds:(id)a1 { return (struct CGRect){0}; }
 
-// 0x000e5e78
--(struct CGRect)aliasSVIPBadgePreviewFrameInAvatarBounds:(id)aliasSVIPBadgePreviewFrameInAvatarBounds { return (struct CGRect){0}; }
+// 0x000e5e78 · 1059 条指令
+// 字符串："SVIP"、"sjj.svip.badge.glowPulse"
+// 消息：aliasSVIPBadgeFrameInAvatarBounds: → colorWithRed:green:blue:alpha: → CGColor → arrayWithObjects:count: → clearColor → blackColor → layer → sublayers
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retainAutorelease、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail、__Unwind_Resume、_objc_retain、_objc_enumerationMutation
+-(struct CGRect)aliasSVIPBadgePreviewFrameInAvatarBounds:(id)a1 { return (struct CGRect){0}; }
 
-// 0x000e5e7c
+// 0x000e5e7c · 1058 条指令
+// 字符串："SVIP"、"sjj.svip.badge.glowPulse"
+// 消息：colorWithRed:green:blue:alpha: → CGColor → arrayWithObjects:count: → clearColor → blackColor → layer → sublayers → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retainAutorelease、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail、__Unwind_Resume、_objc_retain、_objc_enumerationMutation
 -(id)aliasSVIPBadgeAppearance { return NULL; }
 
-// 0x000e6674
--(void)decorateSVIPBadgeView:(id)decorateSVIPBadgeView { }
+// 0x000e6674 · 548 条指令
+// 字符串："SVIP"、"sjj.svip.badge.glowPulse"
+// 消息：layer → sublayers → copy → removeFromSuperlayer → subviews → removeFromSuperview → aliasSVIPBadgeAppearance → count
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_retainAutorelease、_CGRectInset、_CGRectGetWidth、_objc_alloc
+-(void)decorateSVIPBadgeView:(id)a1 { }
 
-// 0x000e71e8
--(void)decorateSVIPAvatarFrame:(id)decorateSVIPAvatarFrame withInnerContainer:(id)withInnerContainer previewMode:(BOOL)previewMode { }
+// 0x000e71e8 · 1313 条指令
+// 字符串："sjj.avatar.frame.shift"、"sjj.avatar.inner.shift"、"transform.rotation"、"sjj.avatar.orbit.spin"
+// 消息：layer → sublayers → copy → removeFromSuperlayer → clearColor → setBackgroundColor: → setBorderWidth: → CGColor
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_retainAutorelease、_CGRectGetWidth、_CGRectInset
+-(void)decorateSVIPAvatarFrame:(id)a1 withInnerContainer:(id)a2 previewMode:(BOOL)a3 { }
 
-// 0x000e8b30
+// 0x000e8b30 · 20 条指令
+// 消息：isAliasSVIPUnlocked → length
 -(BOOL)isAliasSVIPUnlocked { return NO; }
 
-// 0x000e8b34
+// 0x000e8b34 · 19 条指令
+// 消息：isAliasSVIPUnlocked → length
 -(BOOL)shouldShowSVIPSection { return NO; }
 
-// 0x000e8b80
+// 0x000e8b80 · 3 条指令
 -(double)effectiveSVIPPanelBlurAmount { return 0; }
 
-// 0x000e8b8c
+// 0x000e8b8c · 3 条指令
 -(double)effectiveSVIPPanelOpacity { return 0; }
 
-// 0x000e8b98
+// 0x000e8b98 · 3 条指令
 -(double)effectiveSVIPGroupOpacity { return 0; }
 
-// 0x000e8ba4
+// 0x000e8ba4 · 3 条指令
 -(double)effectiveSVIPGroupBlurAmount { return 0; }
 
-// 0x000e8bb0
+// 0x000e8bb0 · 2048 条指令
+// 字符串："section.base"
+// 消息：effectiveSVIPPanelOpacity → effectiveSVIPPanelBlurAmount → effectiveSVIPGroupOpacity → effectiveSVIPGroupBlurAmount → viewWithTag: → layer → cornerRadius → clearColor
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retainAutorelease、_objc_retain、_objc_opt_respondsToSelector、_objc_msgSend
 -(void)applySVIPPanelVisualsLiveIfPossible { }
 
-// 0x000ed460
--(void)sjjSetMainPanelScrollPerformanceMode:(BOOL)sjjSetMainPanelScrollPerformanceMode forScrollView:(id)forScrollView { }
+// 0x000ed460 · 35 条指令
+// 消息：tag → boolValue
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)sjjSetMainPanelScrollPerformanceMode:(BOOL)a1 forScrollView:(id)a2 { }
 
-// 0x000ed464
--(BOOL)sjjIsMainPanelScrollDragPerformanceActiveForScrollView:(id)sjjIsMainPanelScrollDragPerformanceActiveForScrollView { return NO; }
+// 0x000ed464 · 34 条指令
+// 消息：tag → boolValue
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release
+-(BOOL)sjjIsMainPanelScrollDragPerformanceActiveForScrollView:(id)a1 { return NO; }
 
-// 0x000ed50c
--(void)sjjSetMainPanelLiveBlurReducedForScrolling:(BOOL)sjjSetMainPanelLiveBlurReducedForScrolling { }
+// 0x000ed50c · 434 条指令
+// 字符串："opaque"、"q"、"minimumAlpha"
+// 消息：dictionary → begin → setDisableActions: → countByEnumeratingWithState:objects:count: → integerValue → viewWithTag: → isHidden → alpha
+// 系统：_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation、_objc_release、_objc_setAssociatedObject
+-(void)sjjSetMainPanelLiveBlurReducedForScrolling:(BOOL)a1 { }
 
-// 0x000edfec
--(void)sjjBeginMainPanelScrollDragPerformanceForScrollView:(id)sjjBeginMainPanelScrollDragPerformanceForScrollView { }
+// 0x000edfec · 113 条指令
+// 消息：tag → unsignedIntegerValue → numberWithUnsignedInteger:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_setAssociatedObject
+-(void)sjjBeginMainPanelScrollDragPerformanceForScrollView:(id)a1 { }
 
-// 0x000ee064
--(void)sjjScheduleMainPanelLiveBlurRestoreForScrollView:(id)sjjScheduleMainPanelLiveBlurRestoreForScrollView { }
+// 0x000ee064 · 83 条指令
+// 消息：tag → unsignedIntegerValue → numberWithUnsignedInteger:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_setAssociatedObject、_objc_initWeak
+-(void)sjjScheduleMainPanelLiveBlurRestoreForScrollView:(id)a1 { }
 
-// 0x000ee2e8
--(void)sjjFinishMainPanelScrollDragPerformanceForScrollView:(id)sjjFinishMainPanelScrollDragPerformanceForScrollView { }
+// 0x000ee2e8 · 461 条指令
+// 消息：tag → viewWithTag: → unsignedIntegerValue → numberWithUnsignedInteger: → sjjIsMainPanelScrollDragPerformanceActiveForScrollView: → sjjSetMainPanelLiveBlurReducedForScrolling: → count → arrayWithCapacity:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_getAssociatedObject、_objc_setAssociatedObject
+-(void)sjjFinishMainPanelScrollDragPerformanceForScrollView:(id)a1 { }
 
-// 0x000ee358
+// 0x000ee358 · 433 条指令
+// 消息：viewWithTag: → unsignedIntegerValue → numberWithUnsignedInteger: → sjjIsMainPanelScrollDragPerformanceActiveForScrollView: → sjjSetMainPanelLiveBlurReducedForScrolling: → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_release、_objc_setAssociatedObject、__Unwind_Resume、_objc_retain
 -(void)sjjCancelMainPanelScrollDragPerformance { }
 
-// 0x000ee468
--(id)sjjMainPanelVisualContainersForScrollView:(id)sjjMainPanelVisualContainersForScrollView { return NULL; }
+// 0x000ee468 · 365 条指令
+// 消息：viewWithTag: → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → superview → addObject: → array → subviews
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_getAssociatedObject、_objc_enumerationMutation、_objc_release、_objc_setAssociatedObject
+-(id)sjjMainPanelVisualContainersForScrollView:(id)a1 { return NULL; }
 
-// 0x000ee870
--(void)sjjApplyMainPanelTransientScrollReduction:(BOOL)sjjApplyMainPanelTransientScrollReduction forScrollView:(id)forScrollView { }
+// 0x000ee870 · 107 条指令
+// 消息：allObjects → countByEnumeratingWithState:objects:count:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release
+-(void)sjjApplyMainPanelTransientScrollReduction:(BOOL)a1 forScrollView:(id)a2 { }
 
-// 0x000eeb9c
--(BOOL)sjjIsPanelOwnedScrollView:(id)sjjIsPanelOwnedScrollView { return NO; }
+// 0x000eeb9c · 30 条指令
+// 消息：tag
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
+-(BOOL)sjjIsPanelOwnedScrollView:(id)a1 { return NO; }
 
-// 0x000eec28
+// 0x000eec28 · 2 条指令
 -(void)sjjPausePanelDecorativeAnimationsBrieflyForInteraction { }
 
-// 0x000eec2c
--(void)sjjSetPanelDecorativeAnimationsPausedForScrolling:(BOOL)sjjSetPanelDecorativeAnimationsPausedForScrolling { }
+// 0x000eec2c · 2 条指令
+-(void)sjjSetPanelDecorativeAnimationsPausedForScrolling:(BOOL)a1 { }
 
-// 0x000eec30
+// 0x000eec30 · 261 条指令
+// 消息：sjjCancelMainPanelScrollDragPerformance → viewWithTag: → isHidden → containsObject: → setHidden: → removeObject: → addObject: → tag
+// 系统：_objc_setAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retain、_objc_enumerationMutation
 -(void)sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling { }
 
-// 0x000eec34
+// 0x000eec34 · 260 条指令
+// 消息：sjjCancelMainPanelScrollDragPerformance → viewWithTag: → isHidden → containsObject: → setHidden: → removeObject: → addObject: → tag
+// 系统：_objc_setAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retain、_objc_enumerationMutation
 -(void)sjjRemovePanelDecorativeAnimations { }
 
-// 0x000eecf8
--(void)sjjSetPanelCullHidden:(BOOL)sjjSetPanelCullHidden forView:(id)forView content:(id)content hiddenSet:(id)hiddenSet { }
+// 0x000eecf8 · 211 条指令
+// 消息：isHidden → containsObject: → setHidden: → removeObject: → addObject: → tag → viewWithTag: → sjjIsFoldExpandedForTag:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_NSStringFromClass
+-(void)sjjSetPanelCullHidden:(BOOL)a1 forView:(id)a2 content:(id)a3 hiddenSet:(id)a4 { }
 
-// 0x000eedf0
--(void)sjjRestoreFoldContainerChildren:(id)sjjRestoreFoldContainerChildren { }
+// 0x000eedf0 · 149 条指令
+// 消息：tag → viewWithTag: → sjjIsFoldExpandedForTag: → subviews → hasPrefix: → setHidden: → setUserInteractionEnabled:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_NSStringFromClass
+-(void)sjjRestoreFoldContainerChildren:(id)a1 { }
 
-// 0x000ef0b0
+// 0x000ef0b0 · 31 条指令
+// 系统：_objc_initWeak、_dispatch_after、_objc_destroyWeak
 -(void)sjjRestoreCurrentPanelInteractionStateSoon { }
 
-// 0x000ef208
--(BOOL)sjjUpdateVisibleSummaryActionWithTitle:(id)sjjUpdateVisibleSummaryActionWithTitle status:(id)status subtitle:(id)subtitle { return NO; }
+// 0x000ef208 · 154 条指令
+// 消息：length → subviews → copy → isEqualToString: → setText:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_getAssociatedObject
+-(BOOL)sjjUpdateVisibleSummaryActionWithTitle:(id)a1 status:(id)a2 subtitle:(id)a3 { return NO; }
 
-// 0x000ef51c
+// 0x000ef51c · 256 条指令
+// 字符串："views"、"height"
+// 消息：viewWithTag: → integerValue → dictionaryWithCapacity: → array → subviews → copy → sjjShouldPreservePanelSubviewDuringContentRefresh: → addObject:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_release、_objc_setAssociatedObject、_objc_enumerationMutation、_CGRectGetHeight
 -(BOOL)sjjSwitchVideoCategoryContentIfPossible { return NO; }
 
-// 0x000eff08
--(BOOL)sjjShouldKeepPanelSubviewStableDuringContentSwap:(id)sjjShouldKeepPanelSubviewStableDuringContentSwap { return NO; }
+// 0x000eff08 · 32 条指令
+// 消息：tag
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
+-(BOOL)sjjShouldKeepPanelSubviewStableDuringContentSwap:(id)a1 { return NO; }
 
-// 0x000effa8
--(BOOL)sjjShouldPreservePanelSubviewDuringContentRefresh:(id)sjjShouldPreservePanelSubviewDuringContentRefresh { return NO; }
+// 0x000effa8 · 25 条指令
+// 消息：tag
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
+-(BOOL)sjjShouldPreservePanelSubviewDuringContentRefresh:(id)a1 { return NO; }
 
-// 0x000f0020
--(void)sjjCullMainPanelSubviewsInContainer:(id)sjjCullMainPanelSubviewsInContainer visibleMinY:(double)visibleMinY visibleMaxY:(double)visibleMaxY content:(id)content hiddenSet:(id)hiddenSet { }
+// 0x000f0020 · 109 条指令
+// 消息：frame → subviews → countByEnumeratingWithState:objects:count: → tag → sjjSetPanelCullHidden:forView:content:hiddenSet:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetMinY、_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_CGRectGetMaxY、_objc_release
+-(void)sjjCullMainPanelSubviewsInContainer:(id)a1 visibleMinY:(double)a2 visibleMaxY:(double)a3 content:(id)a4 hiddenSet:(id)a5 { }
 
-// 0x000f0230
--(void)sjjUpdateFoldRenderBucketsForScrollView:(id)sjjUpdateFoldRenderBucketsForScrollView force:(BOOL)force { }
+// 0x000f0230 · 516 条指令
+// 字符串："_"
+// 消息：tag → sjjUpdateFoldRenderBucketsForScrollView:force: → sjjCullPanelOwnedOffscreenLayersForScrollView:force: → sjjIsPanelOwnedScrollView: → sjjMainPanelHasCulledViewsForScrollView: → sjjRestoreMainPanelCulledViewsForScrollView: → sjjIsMainPanelScrollDragPerformanceActiveForScrollView: → contentSize
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_CGRectGetHeight、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue
+-(void)sjjUpdateFoldRenderBucketsForScrollView:(id)a1 force:(BOOL)a2 { }
 
-// 0x000f0294
--(void)sjjCullMainPanelOffscreenViewsForScrollView:(id)sjjCullMainPanelOffscreenViewsForScrollView force:(BOOL)force { }
+// 0x000f0294 · 491 条指令
+// 字符串："_"
+// 消息：sjjUpdateFoldRenderBucketsForScrollView:force: → sjjCullPanelOwnedOffscreenLayersForScrollView:force: → sjjIsPanelOwnedScrollView: → tag → sjjMainPanelHasCulledViewsForScrollView: → sjjRestoreMainPanelCulledViewsForScrollView: → sjjIsMainPanelScrollDragPerformanceActiveForScrollView: → contentSize
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetHeight、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue
+-(void)sjjCullMainPanelOffscreenViewsForScrollView:(id)a1 force:(BOOL)a2 { }
 
-// 0x000f0300
--(void)sjjCullPanelOwnedOffscreenLayersForScrollView:(id)sjjCullPanelOwnedOffscreenLayersForScrollView force:(BOOL)force { }
+// 0x000f0300 · 464 条指令
+// 字符串："_"
+// 消息：sjjIsPanelOwnedScrollView: → tag → sjjMainPanelHasCulledViewsForScrollView: → sjjRestoreMainPanelCulledViewsForScrollView: → sjjIsMainPanelScrollDragPerformanceActiveForScrollView: → contentSize → bounds → contentOffset
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetHeight、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_setAssociatedObject、_objc_release
+-(void)sjjCullPanelOwnedOffscreenLayersForScrollView:(id)a1 force:(BOOL)a2 { }
 
-// 0x000f0c04
--(BOOL)sjjMainPanelHasCulledViewsForScrollView:(id)sjjMainPanelHasCulledViewsForScrollView { return NO; }
+// 0x000f0c04 · 55 条指令
+// 消息：viewWithTag: → count
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_getAssociatedObject、_objc_release
+-(BOOL)sjjMainPanelHasCulledViewsForScrollView:(id)a1 { return NO; }
 
-// 0x000f0d18
--(void)sjjRestoreMainPanelCulledViewsForScrollView:(id)sjjRestoreMainPanelCulledViewsForScrollView { }
+// 0x000f0d18 · 160 条指令
+// 消息：viewWithTag: → count → copy → countByEnumeratingWithState:objects:count: → layer → setHidden: → removeAllObjects
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_getAssociatedObject、_objc_enumerationMutation、_objc_release、_objc_setAssociatedObject
+-(void)sjjRestoreMainPanelCulledViewsForScrollView:(id)a1 { }
 
-// 0x000f13ac
+// 0x000f13ac · 3 条指令
 -(double)effectiveSVIPPanelWidthScale { return 0; }
 
-// 0x000f13b8
+// 0x000f13b8 · 3 条指令
 -(double)effectiveSVIPPanelHeightScale { return 0; }
 
-// 0x000f13c4
--(void)presentSVIPStyleSelectorWithTitle:(id)presentSVIPStyleSelectorWithTitle key:(id)key currentValue:(long long)currentValue labels:(id)labels toastPrefix:(id)toastPrefix { }
+// 0x000f13c4 · 109 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → count → array → enumerateObjectsUsingBlock: → showToast:duration:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
+-(void)presentSVIPStyleSelectorWithTitle:(id)a1 key:(id)a2 currentValue:(long long)a3 labels:(id)a4 toastPrefix:(id)a5 { }
 
-// 0x000f190c
+// 0x000f190c · 188 条指令
+// 字符串："badge_glow"、"style"
+// 消息：presentSVIPStyleSelectorWithTitle:key:currentValue:labels:toastPrefix: → isAliasSVIPUnlocked → currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)chooseSVIPBadgeGlowStyle { }
 
-// 0x000f1938
+// 0x000f1938 · 177 条指令
+// 字符串："style"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
 -(void)chooseSVIPAvatarEffectStyle { }
 
-// 0x000f1e08
+// 0x000f1e08 · 382 条指令
+// 字符串："panel_aura"、"persona"
+// 消息：presentSVIPStyleSelectorWithTitle:key:currentValue:labels:toastPrefix: → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → length → showToast:duration: → isAliasSVIPUnlocked → defaultPersona
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain
 -(void)chooseSVIPPanelAuraStyle { }
 
-// 0x000f1e34
+// 0x000f1e34 · 371 条指令
+// 字符串："persona"
+// 消息：whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → copy → length → showToast:duration: → isAliasSVIPUnlocked → defaultPersona → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain
 -(id)svipOpeningSignatureText { return NULL; }
 
-// 0x000f1f00
+// 0x000f1f00 · 320 条指令
+// 字符串："persona"
+// 消息：showToast:duration: → isAliasSVIPUnlocked → defaultPersona → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → count → objectAtIndexedSubscript: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain
 -(void)toggleSVIPDynamicSign { }
 
-// 0x000f1f40
+// 0x000f1f40 · 304 条指令
+// 字符串："persona"
+// 消息：showToast:duration: → isAliasSVIPUnlocked → defaultPersona → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → count → objectAtIndexedSubscript: → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain
 -(void)chooseSVIPDynamicSignStyle { }
 
-// 0x000f1f80
--(void)applySVIPAIReplyPresetByIndex:(long long)applySVIPAIReplyPresetByIndex { }
+// 0x000f1f80 · 288 条指令
+// 字符串："persona"
+// 消息：isAliasSVIPUnlocked → defaultPersona → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count: → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain
+-(void)applySVIPAIReplyPresetByIndex:(long long)a1 { }
 
-// 0x000f25e0
+// 0x000f25e0 · 173 条指令
+// 字符串："subtitle"、"block"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)openSVIPAIReplyPresetSelector { }
 
-// 0x000f29bc
+// 0x000f29bc · 86 条指令
+// 消息：isAliasSVIPUnlocked → showToast:duration: → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)importSVIPAIImagePreset { }
 
-// 0x000f2a14
+// 0x000f2a14 · 64 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSVIPAIVideoRobotRule { }
 
-// 0x000f2fe8
+// 0x000f2fe8 · 88 条指令
+// 消息：isAliasSVIPUnlocked → currentTopViewController → stringWithFormat: → showToast:duration: → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release
 -(void)configureSVIPAIVideoRobotPostFlowSkipDelay { }
 
-// 0x000f33d4
+// 0x000f33d4 · 466 条指令
+// 字符串："destructive"、"block"
+// 消息：isAliasSVIPUnlocked → length → showToast:duration: → configureSVIPAIVideoRobotRule → sjjUpdateVisibleSummaryActionWithTitle:status:subtitle: → disableSVIPCapsuleStyle → enableSVIPCapsuleStyle → stringWithFormat:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)testSVIPAIVideoRobotNow { }
 
-// 0x000f34b8
+// 0x000f34b8 · 409 条指令
+// 字符串："destructive"、"block"
+// 消息：isAliasSVIPUnlocked → sjjUpdateVisibleSummaryActionWithTitle:status:subtitle: → showToast:duration: → disableSVIPCapsuleStyle → enableSVIPCapsuleStyle → stringWithFormat: → currentTopViewController → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)enableSVIPCapsuleStyle { }
 
-// 0x000f3540
+// 0x000f3540 · 375 条指令
+// 字符串："destructive"、"block"
+// 消息：sjjUpdateVisibleSummaryActionWithTitle:status:subtitle: → showToast:duration: → isAliasSVIPUnlocked → disableSVIPCapsuleStyle → enableSVIPCapsuleStyle → stringWithFormat: → currentTopViewController → copy
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)disableSVIPCapsuleStyle { }
 
-// 0x000f35b4
+// 0x000f35b4 · 346 条指令
+// 字符串："destructive"、"block"
+// 消息：isAliasSVIPUnlocked → disableSVIPCapsuleStyle → showToast:duration: → enableSVIPCapsuleStyle → stringWithFormat: → currentTopViewController → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
 -(void)toggleSVIPCapsuleStyleCardAction { }
 
-// 0x000f3648
--(void)applySVIPSmartPresetByIndex:(long long)applySVIPSmartPresetByIndex { }
+// 0x000f3648 · 309 条指令
+// 字符串："destructive"、"block"
+// 消息：isAliasSVIPUnlocked → showToast:duration: → stringWithFormat: → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak
+-(void)applySVIPSmartPresetByIndex:(long long)a1 { }
 
-// 0x000f37cc
+// 0x000f37cc · 212 条指令
+// 字符串："destructive"、"block"
+// 消息：isAliasSVIPUnlocked → currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
 -(void)openSVIPSmartPresetSelector { }
 
-// 0x000f3da8
--(void)playSVIPEntranceAnimationForContainer:(id)playSVIPEntranceAnimationForContainer header:(id)header avatarFrame:(id)avatarFrame badge:(id)badge { }
+// 0x000f3da8 · 60 条指令
+// 消息：isAliasSVIPUnlocked → setAlpha: → setTransform:
+// 系统：_objc_retain、_objc_release
+-(void)playSVIPEntranceAnimationForContainer:(id)a1 header:(id)a2 avatarFrame:(id)a3 badge:(id)a4 { }
 
-// 0x000f3ec0
+// 0x000f3ec0 · 1972 条指令
+// 字符串："%d|%ld|%@|%.1f"、"borderColor"、"prefixColor"、"valueColor"、"valueGlowColor"
+// 消息：sharedApplication → applicationState → viewWithTag: → superview → frame → sjjProfileHeaderTrailingReservedWidth → bounds → length
+// 系统：_objc_retainAutoreleasedReturnValue、_CFAbsoluteTimeGetCurrent、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetMaxX、_CGRectGetMinX、_CGRectGetWidth、_objc_retain
 -(void)applyAliasAccountLabelLivePreview { }
 
-// 0x000f66fc
+// 0x000f66fc · 306 条指令
+// 消息：viewWithTag: → superview → removeFromSuperview → addSubview: → bounds → aliasSVIPBadgeFrameInAvatarBounds: → setFrame: → setHidden:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectInset、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume、_objc_retain、_objc_enumerationMutation
 -(void)applyAliasSVIPBadgeLivePreview { }
 
-// 0x000f6990
--(void)ensureAliasSVIPBadgeLongPressDragGesture:(id)ensureAliasSVIPBadgeLongPressDragGesture { }
+// 0x000f6990 · 141 条指令
+// 消息：tag → gestureRecognizers → copy → countByEnumeratingWithState:objects:count: → removeGestureRecognizer: → initWithTarget:action: → setMinimumPressDuration: → setAllowableMovement:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_alloc
+-(void)ensureAliasSVIPBadgeLongPressDragGesture:(id)a1 { }
 
-// 0x000f6c28
--(void)aliasSVIPHeaderBadgeLongPressed:(id)aliasSVIPHeaderBadgeLongPressed { }
+// 0x000f6c28 · 258 条指令
+// 字符串："v8@?0"
+// 消息：view → superview → tag → viewWithTag: → isAliasSVIPUnlocked → locationInView: → frame → state
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release、_CGRectGetWidth、_CGRectGetHeight、_CGRectGetMinX、_CGRectGetMinY、_objc_setAssociatedObject
+-(void)aliasSVIPHeaderBadgeLongPressed:(id)a1 { }
 
-// 0x000f705c
+// 0x000f705c · 509 条指令
+// 字符串："0"、"1"、"frame"、"hidden"
+// 消息：isAliasSVIPUnlocked → applyAliasSVIPBadgeLivePreview → showToast:duration: → state → chooseProfileAvatar → subviews → count → objectAtIndexedSubscript:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_setAssociatedObject、_objc_enumerationMutation、_objc_autoreleaseReturnValue、___stack_chk_fail
 -(void)resetAliasSVIPBadgePosition { }
 
-// 0x000f70cc
--(void)avatarLongPress:(id)avatarLongPress { }
+// 0x000f70cc · 481 条指令
+// 字符串："0"、"1"、"frame"、"hidden"
+// 消息：state → chooseProfileAvatar → subviews → count → objectAtIndexedSubscript: → tag → setAccessibilityIdentifier: → stringWithCapacity:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_setAssociatedObject、_objc_enumerationMutation、_objc_autoreleaseReturnValue、___stack_chk_fail
+-(void)avatarLongPress:(id)a1 { }
 
-// 0x000f7128
--(void)markViewsInContent:(id)markViewsInContent fromIndex:(long long)fromIndex sectionKey:(id)sectionKey { }
+// 0x000f7128 · 458 条指令
+// 字符串："0"、"1"、"frame"、"hidden"
+// 消息：subviews → count → objectAtIndexedSubscript: → tag → setAccessibilityIdentifier: → stringWithCapacity: → countByEnumeratingWithState:objects:count: → integerValue
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_setAssociatedObject、__Unwind_Resume、_objc_enumerationMutation、_objc_autoreleaseReturnValue、___stack_chk_fail
+-(void)markViewsInContent:(id)a1 fromIndex:(long long)a2 sectionKey:(id)a3 { }
 
-// 0x000f7280
+// 0x000f7280 · 372 条指令
+// 字符串："0"、"1"、"frame"、"hidden"
+// 消息：count → stringWithCapacity: → countByEnumeratingWithState:objects:count: → integerValue → sjjIsFoldExpandedForTag: → appendString: → length → objectForKeyedSubscript:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_enumerationMutation、_objc_release、_objc_autoreleaseReturnValue、___stack_chk_fail、__Unwind_Resume、_objc_getAssociatedObject
 -(id)sjjFoldStateSignature { return NULL; }
 
-// 0x000f73d4
--(BOOL)sjjApplyFoldSnapshotIfPossibleInContent:(id)sjjApplyFoldSnapshotIfPossibleInContent scroll:(id)scroll activeKey:(id)activeKey { return NO; }
+// 0x000f73d4 · 287 条指令
+// 字符串："frame"、"hidden"
+// 消息：length → count → objectForKeyedSubscript: → sjjFoldStateSignature → superview → accessibilityIdentifier → isEqualToString: → isDescendantOfView:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_enumerationMutation、_objc_opt_respondsToSelector
+-(BOOL)sjjApplyFoldSnapshotIfPossibleInContent:(id)a1 scroll:(id)a2 activeKey:(id)a3 { return NO; }
 
-// 0x000f7974
--(void)sjjCacheCurrentFoldSnapshotInContent:(id)sjjCacheCurrentFoldSnapshotInContent scroll:(id)scroll { }
+// 0x000f7974 · 349 条指令
+// 字符串："view"、"entries"、"contentHeight"
+// 消息：length → objectForKeyedSubscript: → count → arrayWithCapacity: → countByEnumeratingWithState:objects:count: → accessibilityIdentifier → isEqualToString: → tag
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation、_objc_release、_CGRectGetMaxY
+-(void)sjjCacheCurrentFoldSnapshotInContent:(id)a1 scroll:(id)a2 { }
 
-// 0x000f8074
--(void)sjjScheduleFoldSnapshotCacheInContent:(id)sjjScheduleFoldSnapshotCacheInContent scroll:(id)scroll { }
+// 0x000f8074 · 112 条指令
+// 消息：isTracking → isDragging → isDecelerating → unsignedIntegerValue → numberWithUnsignedInteger:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_setAssociatedObject、_objc_initWeak
+-(void)sjjScheduleFoldSnapshotCacheInContent:(id)a1 scroll:(id)a2 { }
 
-// 0x000f83b0
--(void)applySubmenuInContent:(id)applySubmenuInContent scroll:(id)scroll { }
+// 0x000f83b0 · 823 条指令
+// 字符串："frame"、"view"、"entries"、"contentHeight"
+// 消息：count → objectAtIndexedSubscript: → dictionary → subviews → countByEnumeratingWithState:objects:count: → tag → accessibilityIdentifier → length
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_getAssociatedObject、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation、_objc_release、_CGRectGetMinY
+-(void)applySubmenuInContent:(id)a1 scroll:(id)a2 { }
 
-// 0x000f937c
--(void)sjjEnsureLazyPanelPageBuiltForIndex:(long long)sjjEnsureLazyPanelPageBuiltForIndex { }
+// 0x000f937c · 12 条指令
+-(void)sjjEnsureLazyPanelPageBuiltForIndex:(long long)a1 { }
 
-// 0x000f96ac
--(void)sjjRebuildSupportersPageWithAnimationsEnabled:(BOOL)sjjRebuildSupportersPageWithAnimationsEnabled { }
+// 0x000f96ac · 363 条指令
+// 字符串："sjj.panel.pageDotPulse"
+// 消息：viewWithTag: → boolValue → bounds → frame → subviews → indexOfObject: → sjjBuildSupportersPageViewWithFrame:panelWidth:panelHeight: → setTag:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_getAssociatedObject、_CGRectGetWidth、_CGRectGetHeight、_objc_release、_objc_setAssociatedObject
+-(void)sjjRebuildSupportersPageWithAnimationsEnabled:(BOOL)a1 { }
 
-// 0x000f99f8
--(void)sjjUpdatePanelPageUIForIndex:(long long)sjjUpdatePanelPageUIForIndex animated:(BOOL)animated { }
+// 0x000f99f8 · 152 条指令
+// 字符串："sjj.panel.pageDotPulse"
+// 消息：viewWithTag: → subviews → tag → colorWithAlphaComponent: → layer → removeAnimationForKey: → sjjUpdatePanelPageAnimationBudgetForIndex:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_retain、_objc_retainBlock
+-(void)sjjUpdatePanelPageUIForIndex:(long long)a1 animated:(BOOL)a2 { }
 
-// 0x000fa02c
--(void)sjjUpdatePanelPageAnimationBudgetForIndex:(long long)sjjUpdatePanelPageAnimationBudgetForIndex { }
+// 0x000fa02c · 62 条指令
+// 消息：sjjEnsureLazyPanelPageBuiltForIndex: → viewWithTag: → sjjRebuildSupportersPageWithAnimationsEnabled:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume
+-(void)sjjUpdatePanelPageAnimationBudgetForIndex:(long long)a1 { }
 
-// 0x000fa118
+// 0x000fa118 · 3 条指令
 -(double)sjjProfileHeaderTrailingReservedWidth { return 0; }
 
-// 0x000fa124
--(void)sjjUpdateProfileSecretEntryUIForPage:(long long)sjjUpdateProfileSecretEntryUIForPage { }
+// 0x000fa124 · 157 条指令
+// 消息：viewWithTag: → setCurrentPage: → sjjSetSecretLabVisible:animated: → setHidden: → setAlpha: → setTransform:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_CGAffineTransformMakeTranslation
+-(void)sjjUpdateProfileSecretEntryUIForPage:(long long)a1 { }
 
-// 0x000fa1a0
--(void)sjjSetProfileSecretPage:(long long)sjjSetProfileSecretPage animated:(BOOL)animated { }
+// 0x000fa1a0 · 126 条指令
+// 消息：sjjSetSecretLabVisible:animated: → viewWithTag: → setHidden: → setAlpha: → setTransform:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation、_objc_release
+-(void)sjjSetProfileSecretPage:(long long)a1 animated:(BOOL)a2 { }
 
-// 0x000fa1ac
--(void)sjjApplySecretLabTransitionProgress:(double)sjjApplySecretLabTransitionProgress { }
+// 0x000fa1ac · 123 条指令
+// 消息：viewWithTag: → setHidden: → setAlpha: → setTransform:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation、_objc_release
+-(void)sjjApplySecretLabTransitionProgress:(double)a1 { }
 
-// 0x000fa3dc
--(void)sjjApplyProfileRightPlaceholderTransitionProgress:(double)sjjApplyProfileRightPlaceholderTransitionProgress { }
+// 0x000fa3dc · 127 条指令
+// 消息：viewWithTag: → setHidden: → setAlpha: → setTransform:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation、_objc_release
+-(void)sjjApplyProfileRightPlaceholderTransitionProgress:(double)a1 { }
 
-// 0x000fa61c
--(void)sjjRequestSecretLabUnlockIfNeeded:(id /* block */)sjjRequestSecretLabUnlockIfNeeded { }
+// 0x000fa61c · 258 条指令
+// 消息：viewWithTag: → setHidden: → setAlpha: → setTransform: → sjjUpdateProfileSecretEntryUIForPage: → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation
+-(void)sjjRequestSecretLabUnlockIfNeeded:(id /* block */)a1 { }
 
-// 0x000fa674
--(void)sjjSetSecretLabVisible:(BOOL)sjjSetSecretLabVisible animated:(BOOL)animated { }
+// 0x000fa674 · 236 条指令
+// 消息：viewWithTag: → setHidden: → setAlpha: → setTransform: → sjjUpdateProfileSecretEntryUIForPage: → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation、_objc_release、_objc_retain
+-(void)sjjSetSecretLabVisible:(BOOL)a1 animated:(BOOL)a2 { }
 
-// 0x000fac0c
--(void)sjjSetProfileRightPlaceholderVisible:(BOOL)sjjSetProfileRightPlaceholderVisible animated:(BOOL)animated { }
+// 0x000fac0c · 231 条指令
+// 消息：viewWithTag: → sjjUpdateProfileSecretEntryUIForPage: → setHidden: → setAlpha: → setTransform: → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGAffineTransformMakeTranslation、_objc_release、_objc_retain
+-(void)sjjSetProfileRightPlaceholderVisible:(BOOL)a1 animated:(BOOL)a2 { }
 
-// 0x000fb1a0
--(void)handleProfileSecretSwipe:(id)handleProfileSecretSwipe { }
+// 0x000fb1a0 · 1930 条指令
+// 字符串："sjj_panel_profile_message_board_text"
+// 消息：state → view → tag → direction → sjjSetSecretLabVisible:animated: → sjjSetProfileRightPlaceholderVisible:animated: → initWithFrame: → clearColor
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_alloc、_CGRectGetWidth
+-(void)handleProfileSecretSwipe:(id)a1 { }
 
-// 0x000fb2d4
--(id)sjjBuildProfileRightPlaceholderPageWithFrame:(struct CGRect)sjjBuildProfileRightPlaceholderPageWithFrame { return NULL; }
+// 0x000fb2d4 · 1853 条指令
+// 字符串："sjj_panel_profile_message_board_text"
+// 消息：initWithFrame: → clearColor → setBackgroundColor: → setOpaque: → bounds → layer → setFrame: → colorWithRed:green:blue:alpha:
+// 系统：_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectGetWidth、_CGRectGetHeight、_objc_retainAutorelease、_objc_retain、_CGRectGetMaxY
+-(id)sjjBuildProfileRightPlaceholderPageWithFrame:(struct CGRect)a1 { return NULL; }
 
-// 0x000fc938
--(void)sjjDismissProfileMessageBoardKeyboard:(id)sjjDismissProfileMessageBoardKeyboard { }
+// 0x000fc938 · 420 条指令
+// 字符串："sjj_panel_profile_message_board_text"
+// 消息：viewWithTag: → endEditing: → text → setObject:forKey: → synchronize → length → setHidden: → resignFirstResponder
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、__Unwind_Resume、_objc_retain、_CGRectGetWidth、_objc_getAssociatedObject
+-(void)sjjDismissProfileMessageBoardKeyboard:(id)a1 { }
 
-// 0x000fc9ac
--(void)sjjProfileMessageBoardTextChanged:(id)sjjProfileMessageBoardTextChanged { }
+// 0x000fc9ac · 391 条指令
+// 字符串："sjj_panel_profile_message_board_text"
+// 消息：viewWithTag: → text → setObject:forKey: → synchronize → length → setHidden: → resignFirstResponder → showToast:duration:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_CGRectGetWidth、_objc_getAssociatedObject
+-(void)sjjProfileMessageBoardTextChanged:(id)a1 { }
 
-// 0x000fcb84
--(void)textViewDidChange:(id)textViewDidChange { }
+// 0x000fcb84 · 273 条指令
+// 消息：tag → sjjProfileMessageBoardTextChanged: → view → bounds → translationInView: → state → sjjApplyProfileRightPlaceholderTransitionProgress: → velocityInView:
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetWidth、_objc_getAssociatedObject
+-(void)textViewDidChange:(id)a1 { }
 
-// 0x000fcbe4
--(void)handleProfileSecretPan:(id)handleProfileSecretPan { }
+// 0x000fcbe4 · 249 条指令
+// 消息：view → tag → bounds → translationInView: → state → sjjApplyProfileRightPlaceholderTransitionProgress: → velocityInView: → sjjSetProfileRightPlaceholderVisible:animated:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetWidth、_objc_release、__Unwind_Resume、_objc_getAssociatedObject
+-(void)handleProfileSecretPan:(id)a1 { }
 
-// 0x000fceec
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin { return NO; }
+// 0x000fceec · 55 条指令
+// 消息：boolValue → view → velocityInView:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
+-(BOOL)gestureRecognizerShouldBegin:(id)a1 { return NO; }
 
-// 0x000fcffc
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer { return NO; }
+// 0x000fcffc · 71 条指令
+// 消息：boolValue → view
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2 { return NO; }
 
-// 0x000fd15c
--(id)sjjBuildProfileSecretPageWithFrame:(struct CGRect)sjjBuildProfileSecretPageWithFrame { return NULL; }
+// 0x000fd15c · 1923 条指令
+// 字符串："infoPage"、"eyebrow"、"currentVersion"、"body"、"historyTitle"
+// 消息：initWithFrame: → setTag: → clearColor → setBackgroundColor: → setOpaque: → bounds → setAutoresizingMask: → setAlwaysBounceVertical:
+// 系统：_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、_CGRectGetWidth、_objc_retainAutorelease、_CGRectGetHeight、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)sjjBuildProfileSecretPageWithFrame:(struct CGRect)a1 { return NULL; }
 
-// 0x000fd95c
--(id)sjjBuildInfoPageScrollWithFrame:(struct CGRect)sjjBuildInfoPageScrollWithFrame panelWidth:(struct CGSize)panelWidth panelHeight:(id)panelHeight { return NULL; }
+// 0x000fd95c · 1411 条指令
+// 字符串："infoPage"、"eyebrow"、"currentVersion"、"body"、"historyTitle"
+// 消息：initWithFrame: → setShowsVerticalScrollIndicator: → setIndicatorStyle: → setDelegate: → setContentInset: → clearColor → setBackgroundColor: → addSubview:
+// 系统：_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain、_objc_retainBlock、_CGRectGetHeight、_objc_autoreleaseReturnValue、__Unwind_Resume
+-(id)sjjBuildInfoPageScrollWithFrame:(struct CGRect)a1 panelWidth:(struct CGSize)a2 panelHeight:(id)a3 { return NULL; }
 
-// 0x000fefa4
--(id)sjjBuildSupportersPageViewWithFrame:(struct CGRect)sjjBuildSupportersPageViewWithFrame panelWidth:(struct CGSize)panelWidth panelHeight:(id)panelHeight { return NULL; }
+// 0x000fefa4 · 2048 条指令
+// 字符串："supportPage"、"subtitle"、"badgeText"、"S"、"eyebrow"
+// 消息：initWithFrame: → clearColor → setBackgroundColor: → layer → bounds → setFrame: → setCornerRadius: → colorWithRed:green:blue:alpha:
+// 系统：_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retainAutorelease、_CGRectInset、_CGRectGetMaxY、_CGAffineTransformMakeRotation、_CGRectGetWidth
+-(id)sjjBuildSupportersPageViewWithFrame:(struct CGRect)a1 panelWidth:(struct CGSize)a2 panelHeight:(id)a3 { return NULL; }
 
-// 0x00103c18
--(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)sjjSyncVideoQualityPageIndicatorForScrollView { }
+// 0x00103c18 · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：tag → viewWithTag: → bounds → contentOffset → numberOfPages → setCurrentPage: → sjjIsPanelOwnedScrollView: → sjjCullPanelOwnedOffscreenLayersForScrollView:force:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_CGRectGetWidth、_objc_release、__Unwind_Resume、_objc_getAssociatedObject
+-(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)a1 { }
 
-// 0x00103d50
--(void)scrollViewDidScroll:(id)scrollViewDidScroll { }
+// 0x00103d50 · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：sjjIsPanelOwnedScrollView: → tag → sjjCullPanelOwnedOffscreenLayersForScrollView:force: → sjjSyncVideoQualityPageIndicatorForScrollView: → bounds → contentOffset → sjjUpdateProfileSecretEntryUIForPage: → sjjUpdateFoldRenderBucketsForScrollView:force:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth、_objc_release、__Unwind_Resume、_objc_msgSendSuper2、_CGRectGetHeight
+-(void)scrollViewDidScroll:(id)a1 { }
 
-// 0x00103f58
--(void)scrollViewDidEndDecelerating:(id)scrollViewDidEndDecelerating { }
+// 0x00103f58 · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：tag → sjjSyncVideoQualityPageIndicatorForScrollView: → contentOffset → bounds → sjjUpdateProfileSecretEntryUIForPage: → sjjFinishMainPanelScrollDragPerformanceForScrollView: → sjjResetSearchDotAnimated: → sjjUpdatePanelPageUIForIndex:animated:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_release、__Unwind_Resume、_objc_msgSendSuper2、_objc_retainAutoreleasedReturnValue、_CGRectGetHeight、_objc_alloc
+-(void)scrollViewDidEndDecelerating:(id)a1 { }
 
-// 0x001040fc
--(void)scrollViewDidEndDragging:(id)scrollViewDidEndDragging willDecelerate:(BOOL)willDecelerate { }
+// 0x001040fc · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：tag → sjjSyncVideoQualityPageIndicatorForScrollView: → contentOffset → bounds → sjjUpdateProfileSecretEntryUIForPage: → sjjFinishMainPanelScrollDragPerformanceForScrollView: → sjjUpdatePanelPageUIForIndex:animated: → sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling
+// 系统：_objc_retain、_CGRectGetWidth、_objc_release、__Unwind_Resume、_objc_msgSendSuper2、_objc_retainAutoreleasedReturnValue、_CGRectGetHeight、_objc_alloc
+-(void)scrollViewDidEndDragging:(id)a1 willDecelerate:(BOOL)a2 { }
 
-// 0x00104334
--(void)scrollViewDidEndScrollingAnimation:(id)scrollViewDidEndScrollingAnimation { }
+// 0x00104334 · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：tag → sjjSyncVideoQualityPageIndicatorForScrollView: → contentOffset → bounds → sjjUpdateProfileSecretEntryUIForPage: → sjjUpdatePanelPageUIForIndex:animated: → sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling → sjjIsPanelOwnedScrollView:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_release、__Unwind_Resume、_objc_msgSendSuper2、_objc_retainAutoreleasedReturnValue、_CGRectGetHeight、_objc_alloc
+-(void)scrollViewDidEndScrollingAnimation:(id)a1 { }
 
-// 0x00104480
--(void)scrollViewWillBeginDragging:(id)scrollViewWillBeginDragging { }
+// 0x00104480 · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：tag → sjjBeginMainPanelScrollDragPerformanceForScrollView: → sjjIsPanelOwnedScrollView: → sjjCullPanelOwnedOffscreenLayersForScrollView:force: → clearColor → setBackgroundColor: → setUserInteractionEnabled: → effectiveSVIPPanelOpacity
+// 系统：_objc_retain、_objc_release、__Unwind_Resume、_objc_msgSendSuper2、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth、_CGRectGetHeight、_objc_alloc
+-(void)scrollViewWillBeginDragging:(id)a1 { }
 
-// 0x00104504
--(id)initWithFrame:(struct CGRect)initWithFrame { return NULL; }
+// 0x00104504 · 2048 条指令
+// 字符串："sjj.svip.panelAura.opacity"、"chevron.down"、"xmark"
+// 消息：clearColor → setBackgroundColor: → setUserInteractionEnabled: → effectiveSVIPPanelOpacity → effectiveSVIPPanelBlurAmount → effectiveSVIPGroupOpacity → effectiveSVIPGroupBlurAmount → isAliasSVIPUnlocked
+// 系统：_objc_msgSendSuper2、_objc_retain、_objc_release、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth、_CGRectGetHeight、_objc_alloc、_objc_retainAutorelease
+-(id)initWithFrame:(struct CGRect)a1 { return NULL; }
 
-// 0x001152a0
--(double)addSwitch:(id)addSwitch y:(double)y title:(id)title tag:(long long)tag on:(BOOL)on { return 0; }
+// 0x001152a0 · 1032 条指令
+// 字符串："i"
+// 消息：sjjConfiguredFeatureSwitchStateForTag:known: → featureSwitchHelpHintForTag:title: → stringByAppendingString: → sjjSecondarySettingsActionForSwitchTag: → sjjSecondarySettingsHintForSwitchTag: → length → bounds → systemFontOfSize:weight:
+// 系统：_objc_retain、_objc_release、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth、_objc_alloc、_objc_retainAutorelease、_CGRectGetMaxY、_CGRectGetMaxX
+-(double)addSwitch:(id)a1 y:(double)a2 title:(id)a3 tag:(long long)a4 on:(BOOL)a5 { return 0; }
 
-// 0x001169e4
--(void)sjjSwitchVisualStateChanged:(id)sjjSwitchVisualStateChanged { }
+// 0x001169e4 · 178 条指令
+// 消息：superview → tag → viewWithTag: → isOn → isHidden → alpha → setHidden: → setAlpha:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retainBlock
+-(void)sjjSwitchVisualStateChanged:(id)a1 { }
 
-// 0x001169ec
--(void)sjjSyncSwitchHelpButtonForSwitch:(id)sjjSyncSwitchHelpButtonForSwitch animated:(BOOL)animated { }
+// 0x001169ec · 176 条指令
+// 消息：superview → tag → viewWithTag: → isOn → isHidden → alpha → setHidden: → setAlpha:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_retainBlock
+-(void)sjjSyncSwitchHelpButtonForSwitch:(id)a1 animated:(BOOL)a2 { }
 
-// 0x00116dc4
--(void)sjjShowSwitchHelp:(id)sjjShowSwitchHelp { }
+// 0x00116dc4 · 713 条指令
+// 字符串："  "
+// 消息：integerValue → featureSwitchHelpGuideForTag: → array → length → stringWithFormat: → addObject: → count → componentsJoinedByString:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_opt_respondsToSelector、_objc_alloc
+-(void)sjjShowSwitchHelp:(id)a1 { }
 
-// 0x00117bd0
--(double)addFlatSecondarySettingsActionRow:(id)addFlatSecondarySettingsActionRow y:(double)y title:(id)title status:(id)status action:(SEL)action { return 0; }
+// 0x00117bd0 · 383 条指令
+// 消息：bounds → buttonWithType: → setFrame: → clearColor → setBackgroundColor: → setAccessibilityLabel: → setAccessibilityValue: → addTarget:action:forControlEvents:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_objc_retainAutorelease
+-(double)addFlatSecondarySettingsActionRow:(id)a1 y:(double)a2 title:(id)a3 status:(id)a4 action:(SEL)a5 { return 0; }
 
-// 0x00118354
--(double)addSummaryActionButton:(id)addSummaryActionButton y:(double)y title:(id)title status:(id)status subtitle:(id)subtitle action:(SEL)action { return 0; }
+// 0x00118354 · 521 条指令
+// 消息：subviews → lastObject → bounds → systemFontOfSize:weight: → length → dictionaryWithObjects:forKeys:count: → boundingRectWithSize:options:attributes:context: → buttonWithType:
+// 系统：_objc_retain、_objc_release、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation、_CGRectGetWidth、_objc_retainAutorelease
+-(double)addSummaryActionButton:(id)a1 y:(double)a2 title:(id)a3 status:(id)a4 subtitle:(id)a5 action:(SEL)a6 { return 0; }
 
-// 0x00118dbc
--(double)addCompactAIActionRow:(id)addCompactAIActionRow y:(double)y title:(id)title subtitle:(id)subtitle symbolName:(id)symbolName action:(SEL)action { return 0; }
+// 0x00118dbc · 412 条指令
+// 消息：bounds → systemFontOfSize:weight: → length → dictionaryWithObjects:forKeys:count: → buttonWithType: → setFrame: → clearColor → colorWithAlphaComponent:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth、_objc_release、_objc_retainAutorelease、_objc_alloc
+-(double)addCompactAIActionRow:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 symbolName:(id)a5 action:(SEL)a6 { return 0; }
 
-// 0x00119644
--(id)sjjFindSummaryActionButtonWithTitle:(id)sjjFindSummaryActionButtonWithTitle inContainer:(id)inContainer { return NULL; }
+// 0x00119644 · 728 条指令
+// 字符串："internal"、"title"、"sjj.side.pet.glowRing.opacity"、"api"
+// 消息：length → subviews → reverseObjectEnumerator → allObjects → isEqualToString: → sjjFindSummaryActionButtonWithTitle:inContainer: → bounds → objectForKeyedSubscript:
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_getAssociatedObject、_objc_autoreleaseReturnValue
+-(id)sjjFindSummaryActionButtonWithTitle:(id)a1 inContainer:(id)a2 { return NULL; }
 
-// 0x001198ac
--(double)addParseAPIActionButton:(id)addParseAPIActionButton y:(double)y { return 0; }
+// 0x001198ac · 574 条指令
+// 字符串："internal"、"title"、"sjj.side.pet.glowRing.opacity"、"api"
+// 消息：bounds → objectForKeyedSubscript: → boolValue → stringWithFormat: → array → countByEnumeratingWithState:objects:count: → length → addObject:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_alloc_init
+-(double)addParseAPIActionButton:(id)a1 y:(double)a2 { return 0; }
 
-// 0x0011a468
--(double)addBetaUpdateContentCard:(id)addBetaUpdateContentCard y:(double)y { return 0; }
+// 0x0011a468 · 392 条指令
+// 消息：bounds → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → length → stringWithFormat: → systemFontOfSize:weight: → dictionaryWithObjects:forKeys:count: → boundingRectWithSize:options:attributes:context:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_objc_retainAutorelease
+-(double)addBetaUpdateContentCard:(id)a1 y:(double)a2 { return 0; }
 
-// 0x0011ac70
--(id)buildConfigActionCardWithFrame:(struct CGRect)buildConfigActionCardWithFrame title:(struct CGSize)title status:(id)status subtitle:(id)subtitle action:(id)action { return NULL; }
+// 0x0011ac70 · 430 条指令
+// 消息：buttonWithType: → setFrame: → clearColor → colorWithAlphaComponent: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retainAutorelease、_objc_alloc、_CGRectGetWidth、_CGRectGetHeight、_objc_autoreleaseReturnValue
+-(id)buildConfigActionCardWithFrame:(struct CGRect)a1 title:(struct CGSize)a2 status:(id)a3 subtitle:(id)a4 action:(id)a5 { return NULL; }
 
-// 0x0011b208
--(double)sjjConfigActionCardHeightForSubtitle:(id)sjjConfigActionCardHeightForSubtitle width:(double)width { return 0; }
+// 0x0011b208 · 72 条指令
+// 消息：systemFontOfSize:weight: → length → dictionaryWithObjects:forKeys:count: → boundingRectWithSize:options:attributes:context:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release
+-(double)sjjConfigActionCardHeightForSubtitle:(id)a1 width:(double)a2 { return 0; }
 
-// 0x0011b374
--(double)addTwoColumnConfigCardsInView:(id)addTwoColumnConfigCardsInView y:(double)y leftTitle:(id)leftTitle leftStatus:(id)leftStatus leftSubtitle:(id)leftSubtitle leftAction:(SEL)leftAction rightTitle:(id)rightTitle rightStatus:(id)rightStatus rightSubtitle:(id)rightSubtitle rightAction:(SEL)rightAction { return 0; }
+// 0x0011b374 · 117 条指令
+// 消息：bounds → sjjConfigActionCardHeightForSubtitle:width: → buildConfigActionCardWithFrame:title:status:subtitle:action: → addSubview:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release
+-(double)addTwoColumnConfigCardsInView:(id)a1 y:(double)a2 leftTitle:(id)a3 leftStatus:(id)a4 leftSubtitle:(id)a5 leftAction:(SEL)a6 rightTitle:(id)a7 rightStatus:(id)a8 rightSubtitle:(id)a9 rightAction:(SEL)a10 { return 0; }
 
-// 0x0011b5b8
--(double)addBottomAreaDividerInView:(id)addBottomAreaDividerInView y:(double)y { return 0; }
+// 0x0011b5b8 · 636 条指令
+// 消息：frame → setFrame: → clearColor → colorWithAlphaComponent: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_CGRectGetMidX、_objc_release、_objc_retainAutorelease、__Unwind_Resume、_CGRectGetWidth、_objc_alloc
+-(double)addBottomAreaDividerInView:(id)a1 y:(double)a2 { return 0; }
 
-// 0x0011b5bc
--(void)applyFlatStyleIfNeededForButtonRow:(id)applyFlatStyleIfNeededForButtonRow { }
+// 0x0011b5bc · 635 条指令
+// 消息：frame → setFrame: → clearColor → colorWithAlphaComponent: → setBackgroundColor: → layer → setCornerRadius: → setCornerCurve:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_CGRectGetMidX、_objc_release、_objc_retainAutorelease、__Unwind_Resume、_CGRectGetWidth、_objc_alloc
+-(void)applyFlatStyleIfNeededForButtonRow:(id)a1 { }
 
-// 0x0011b91c
--(double)addSubFoldGroupHeader:(id)addSubFoldGroupHeader y:(double)y title:(id)title subtitle:(id)subtitle tag:(long long)tag expanded:(BOOL)expanded { return 0; }
+// 0x0011b91c · 419 条指令
+// 消息：bounds → initWithFrame: → setTag: → clearColor → setBackgroundColor: → addSubview: → systemFontOfSize:weight: → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retain、_objc_release、_CGRectGetWidth、_objc_alloc、_objc_retainAutoreleasedReturnValue、_objc_retainAutorelease、_CGRectGetMaxX
+-(double)addSubFoldGroupHeader:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 tag:(long long)a5 expanded:(BOOL)a6 { return 0; }
 
-// 0x0011d394
--(double)addFoldGroupHeader:(id)addFoldGroupHeader y:(double)y title:(id)title subtitle:(id)subtitle tag:(long long)tag expanded:(BOOL)expanded { return 0; }
+// 0x0011d394 · 212 条指令
+// 消息：bounds → buttonWithType: → setFrame: → clearColor → setBackgroundColor: → layer → setCornerRadius: → setBorderWidth:
+// 系统：_objc_retain、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_objc_setAssociatedObject
+-(double)addFoldGroupHeader:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 tag:(long long)a5 expanded:(BOOL)a6 { return 0; }
 
-// 0x0011da04
--(BOOL)sjjIsFoldExpandedForTag:(long long)sjjIsFoldExpandedForTag { return NO; }
+// 0x0011da04 · 81 条指令
+-(BOOL)sjjIsFoldExpandedForTag:(long long)a1 { return NO; }
 
-// 0x0011dbb4
--(void)sjjUpdateFoldHeaderForButton:(id)sjjUpdateFoldHeaderForButton expanded:(BOOL)expanded { }
+// 0x0011dbb4 · 81 条指令
+// 消息：length → setHidden:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume
+-(void)sjjUpdateFoldHeaderForButton:(id)a1 expanded:(BOOL)a2 { }
 
-// 0x0011dcf4
--(void)sjjPersistFoldStateForTag:(long long)sjjPersistFoldStateForTag { }
+// 0x0011dcf4 · 942 条指令
+// 字符串："v8@?0"
+// 消息：viewWithTag: → superview → sjjRestoreMainPanelCulledViewsForScrollView: → array → count → countByEnumeratingWithState:objects:count: → addObject: → subviews
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_getAssociatedObject、_objc_retain、_objc_enumerationMutation、_objc_setAssociatedObject
+-(void)sjjPersistFoldStateForTag:(long long)a1 { }
 
-// 0x0011dcf8
--(BOOL)applyFoldToggleInPlaceForTag:(long long)applyFoldToggleInPlaceForTag animated:(BOOL)animated { return NO; }
+// 0x0011dcf8 · 941 条指令
+// 字符串："v8@?0"
+// 消息：viewWithTag: → superview → sjjRestoreMainPanelCulledViewsForScrollView: → array → count → countByEnumeratingWithState:objects:count: → addObject: → subviews
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_getAssociatedObject、_objc_retain、_objc_enumerationMutation、_objc_setAssociatedObject
+-(BOOL)applyFoldToggleInPlaceForTag:(long long)a1 animated:(BOOL)a2 { return NO; }
 
-// 0x001219cc
--(double)addUnifiedSliderCard:(id)addUnifiedSliderCard y:(double)y title:(id)title hint:(id)hint tag:(long long)tag valueTag:(long long)valueTag min:(double)min max:(double)max value:(double)value displayPercent:(BOOL)displayPercent { return 0; }
+// 0x001219cc · 469 条指令
+// 字符串："%.0f pt"
+// 消息：bounds → systemFontOfSize:weight: → dictionaryWithObjects:forKeys:count: → boundingRectWithSize:options:attributes:context: → initWithFrame: → clearColor → setBackgroundColor: → colorWithAlphaComponent:
+// 系统：_objc_retain、_objc_release、_CGRectGetWidth、_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_retainAutorelease、_objc_setAssociatedObject
+-(double)addUnifiedSliderCard:(id)a1 y:(double)a2 title:(id)a3 hint:(id)a4 tag:(long long)a5 valueTag:(long long)a6 min:(double)a7 max:(double)a8 value:(double)a9 displayPercent:(BOOL)a10 { return 0; }
 
-// 0x00122358
--(void)groupFoldTapped:(id)groupFoldTapped { }
+// 0x00122358 · 247 条指令
+// 消息：sjjPausePanelDecorativeAnimationsBrieflyForInteraction → tag → viewWithTag: → boolValue → sjjIsFoldExpandedForTag: → sjjPersistFoldStateForTag: → applyFoldToggleInPlaceForTag:animated: → performWithoutAnimation:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_getAssociatedObject、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_objc_release
+-(void)groupFoldTapped:(id)a1 { }
 
-// 0x00122820
--(void)applyPanelThemeMode:(long long)applyPanelThemeMode { }
+// 0x00122820 · 150 条指令
+// 消息：showToast:duration: → synchronize → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_begin_catch、_objc_end_catch、__Unwind_Resume、_objc_retain、_objc_initWeak、_objc_copyWeak
+-(void)applyPanelThemeMode:(long long)a1 { }
 
-// 0x0012293c
--(void)sjjPresentPanelThemePasswordPromptForMode:(long long)sjjPresentPanelThemePasswordPromptForMode title:(id)title password:(id)password successToast:(id)successToast { }
+// 0x0012293c · 79 条指令
+// 消息：currentTopViewController
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_copyWeak、_objc_release、_objc_destroyWeak
+-(void)sjjPresentPanelThemePasswordPromptForMode:(long long)a1 title:(id)a2 password:(id)a3 successToast:(id)a4 { }
 
-// 0x00122c60
+// 0x00122c60 · 505 条指令
+// 字符串："arrow.uturn.backward"、"m"、"paintpalette"
+// 消息：array → isAliasSVIPUnlocked → objectAtIndexedSubscript: → stringWithFormat: → systemImageNamed: → actionWithTitle:image:identifier:handler: → addObject: → countByEnumeratingWithState:objects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_unsafeClaimAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_opt_class、_objc_opt_isKindOfClass、_objc_autoreleaseReturnValue、___stack_chk_fail
 -(id)sjjPanelThemeMenuElements { return NULL; }
 
-// 0x00123128
--(void)sjjPresentSystemThemeActionSheetFromSourceView:(id)sjjPresentSystemThemeActionSheetFromSourceView { }
+// 0x00123128 · 199 条指令
+// 字符串："m"
+// 消息：currentTopViewController → alertControllerWithTitle:message:preferredStyle: → isAliasSVIPUnlocked → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → integerValue → stringByAppendingString: → actionWithTitle:style:handler:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_unsafeClaimAutoreleasedReturnValue、_objc_enumerationMutation、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass
+-(void)sjjPresentSystemThemeActionSheetFromSourceView:(id)a1 { }
 
-// 0x0012356c
--(void)sjjHandlePanelThemeMenuLongPress:(id)sjjHandlePanelThemeMenuLongPress { }
+// 0x0012356c · 89 条指令
+// 字符串："_presentMenuAtLocation:"
+// 消息：state → view → interactions → countByEnumeratingWithState:objects:count: → locationInView: → sjjPresentSystemThemeActionSheetFromSourceView:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation、_NSSelectorFromString、_objc_opt_respondsToSelector、_objc_msgSend
+-(void)sjjHandlePanelThemeMenuLongPress:(id)a1 { }
 
-// 0x00123728
--(id)contextMenuInteraction:(id)contextMenuInteraction configurationForMenuAtLocation:(struct CGPoint)configurationForMenuAtLocation { return NULL; }
+// 0x00123728 · 312 条指令
+// 字符串："t"、"m"
+// 消息：view → tag → configurationWithIdentifier:previewProvider:actionProvider: → sjjPanelThemeMenuElements → menuWithTitle:children: → state → currentTopViewController → array
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_autoreleaseReturnValue、__Unwind_Resume、_objc_retain、_objc_unsafeClaimAutoreleasedReturnValue、_objc_enumerationMutation、__Block_object_dispose
+-(id)contextMenuInteraction:(id)a1 configurationForMenuAtLocation:(struct CGPoint)a2 { return NULL; }
 
-// 0x00123868
--(void)collapseButtonLongPress:(id)collapseButtonLongPress { }
+// 0x00123868 · 232 条指令
+// 字符串："t"、"m"
+// 消息：state → currentTopViewController → array → isAliasSVIPUnlocked → objectAtIndexedSubscript: → stringWithFormat: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_unsafeClaimAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、__Block_object_dispose
+-(void)collapseButtonLongPress:(id)a1 { }
 
-// 0x00124158
--(void)swChange:(id)swChange { }
+// 0x00124158 · 375 条指令
+// 字符串："sjj_auto_play_feature_enabled_v1"、"sjj_auto_play_active_v1"
+// 消息：isOn → tag → setOn: → showToast:duration: → setBool:forKey: → boolForKey: → sjjConfiguredFeatureSwitchStateForTag:known: → setOn:animated:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_copyWeak、_objc_destroyWeak、_dispatch_after
+-(void)swChange:(id)a1 { }
 
-// 0x00130124
--(void)sliderAdjustBegan:(id)sliderAdjustBegan { }
+// 0x00130124 · 786 条指令
+// 字符串："sjj.side.panelPreview"
+// 消息：sjjSetPanelDecorativeAnimationsPausedForScrolling: → tag → layer → removeAllAnimations → removeFromSuperview → isMainThread → safeAreaInsets → bounds
+// 系统：_objc_retain、_objc_storeWeak、_objc_release、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_CGRectGetWidth
+-(void)sliderAdjustBegan:(id)a1 { }
 
-// 0x00130ed0
--(void)sliderChange:(id)sliderChange { }
+// 0x00130ed0 · 2048 条指令
+// 字符串："%.2fG"、"sjj_nickname_caption_vertical_offset_manually_adjusted_v1"
+// 消息：isTracking → isHighlighted → tag → value → sjjValueLabelForSlider:valueTag: → stringWithFormat: → setText: → applySVIPPanelVisualsLiveIfPossible
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_loadWeakRetained、_objc_release
+-(void)sliderChange:(id)a1 { }
 
-// 0x00136ea4
--(void)sliderAdjustEnded:(id)sliderAdjustEnded { }
+// 0x00136ea4 · 136 条指令
+// 消息：sliderChange: → tag → sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling → applySVIPPanelVisualsLiveIfPossible → layer → removeAllAnimations → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_retain、_objc_storeWeak、_objc_release、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue
+-(void)sliderAdjustEnded:(id)a1 { }
 
-// 0x00137194
--(void)selectFontItem:(id)selectFontItem { }
+// 0x00137194 · 498 条指令
+// 消息：tag → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → length → dataWithContentsOfFile: → showToast:duration: → defaultManager
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_storeStrong、_objc_release、__Unwind_Resume、_objc_autoreleaseReturnValue
+-(void)selectFontItem:(id)a1 { }
 
-// 0x0013749c
+// 0x0013749c · 304 条指令
+// 消息：showToast:duration: → tag → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → length → defaultManager → removeItemAtPath:error:
+// 系统：_objc_release、_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume
 -(void)restoreDefaultFont { }
 
-// 0x0013750c
--(void)deleteFontItem:(id)deleteFontItem { }
+// 0x0013750c · 276 条指令
+// 消息：tag → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → length → defaultManager → removeItemAtPath:error: → removeObjectAtIndex:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume
+-(void)deleteFontItem:(id)a1 { }
 
-// 0x00137754
--(void)fontItemLongPress:(id)fontItemLongPress { }
+// 0x00137754 · 130 条指令
+// 消息：state → view → tag → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → copy → dictionaryWithObjects:forKeys:count:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)fontItemLongPress:(id)a1 { }
 
-// 0x00137a58
+// 0x00137a58 · 568 条指令
+// 字符串："public.truetype-font"、"public.opentype-font"、"public.font"、"public.zip-archive"、"public.audio"
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain
 -(void)chooseCustomFontFile { }
 
-// 0x00137c48
+// 0x00137c48 · 444 条指令
+// 字符串："public.zip-archive"、"public.audio"、"public.mp3"、"public.mpeg-4-audio"、"com.microsoft.waveform-audio"
+// 消息：typeWithIdentifier: → array → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain
 -(void)importExternalThemeZipFile { }
 
-// 0x00137d90
+// 0x00137d90 · 362 条指令
+// 字符串："public.audio"、"public.mp3"、"public.mpeg-4-audio"、"com.microsoft.waveform-audio"、"com.apple.coreaudio-format"
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain
 -(void)pickSideDockShakeSoundFromFile { }
 
-// 0x00137fdc
+// 0x00137fdc · 215 条指令
+// 字符串："public.audio"、"public.mp3"、"public.mpeg-4-audio"、"com.microsoft.waveform-audio"、"com.apple.coreaudio-format"
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → setModalPresentationStyle: → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、__Unwind_Resume、_objc_retain
 -(void)pickSideDockWakeSlideHoverSoundFromFile { }
 
-// 0x00138228
+// 0x00138228 · 68 条指令
+// 消息：currentTopViewController → sjjOpenDocumentsBackupMenuUnlocked → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release、__Unwind_Resume
 -(void)openPluginConfigBackupMenu { }
 
-// 0x001382d4
+// 0x001382d4 · 25 条指令
+// 消息：sjjOpenDocumentsBackupMenuUnlocked → sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)openDocumentsBackupMenu { }
 
-// 0x001382d8
+// 0x001382d8 · 24 条指令
+// 消息：sjjPresentSecondarySettingsPageWithTitle:subtitle:tintTag:builder:
 -(void)sjjOpenDocumentsBackupMenuUnlocked { }
 
-// 0x001383d8
+// 0x001383d8 · 65 条指令
+// 消息：sjjExportDocumentsBackupUnlocked → currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release、_objc_initWeak、_dispatch_get_global_queue、_dispatch_async、_objc_destroyWeak
 -(void)sjjExportDocumentsBackup { }
 
-// 0x001383dc
+// 0x001383dc · 64 条指令
+// 消息：currentTopViewController
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release、_objc_initWeak、_dispatch_get_global_queue、_dispatch_async、_objc_destroyWeak
 -(void)sjjExportDocumentsBackupUnlocked { }
 
-// 0x0013a1dc
+// 0x0013a1dc · 2048 条指令
+// 字符串："public.zip-archive"、"com.pkware.zip-archive"、"import"、"sjj_documents_backup_import_%@"、"documents_backup.zip"
+// 消息：array → typeWithIdentifier: → addObject: → initForOpeningContentTypes:asCopy: → setDelegate: → setAllowsMultipleSelection: → currentTopViewController → showToast:duration:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_alloc、_objc_release、_objc_retain、__Unwind_Resume、_objc_opt_class、_objc_opt_isKindOfClass、_NSTemporaryDirectory
 -(void)sjjImportDocumentsBackup { }
 
-// 0x0013a414
--(void)sjjImportDocumentsBackupData:(id)sjjImportDocumentsBackupData sourceName:(id)sourceName { }
+// 0x0013a414 · 2048 条指令
+// 字符串："import"、"sjj_documents_backup_import_%@"、"documents_backup.zip"、"unzipped"、"manifest.json"
+// 消息：length → defaultManager → removeItemAtPath:error: → sjjPresentDocumentsBackupImportConfirmationForData:sourceName:manifest: → showToast:duration: → UUID → UUIDString → stringWithFormat:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、__Unwind_Resume、_NSTemporaryDirectory、_objc_enumerationMutation
+-(void)sjjImportDocumentsBackupData:(id)a1 sourceName:(id)a2 { }
 
-// 0x0013c060
--(void)sjjPresentDocumentsBackupImportConfirmationForData:(id)sjjPresentDocumentsBackupImportConfirmationForData sourceName:(id)sourceName manifest:(id)manifest { }
+// 0x0013c060 · 609 条指令
+// 字符串："created_at_text"、"created_at"、"file_count"、"name"、"sjj_documents_backup_zip_v1"
+// 消息：currentTopViewController → stringValue → whitespaceAndNewlineCharacterSet → stringByTrimmingCharactersInSet: → length → objectForKeyedSubscript: → doubleValue → unsignedIntegerValue
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_initWeak、_objc_opt_class、_objc_opt_isKindOfClass、_objc_opt_respondsToSelector、_objc_begin_catch
+-(void)sjjPresentDocumentsBackupImportConfirmationForData:(id)a1 sourceName:(id)a2 manifest:(id)a3 { }
 
-// 0x0013ccd8
--(void)sjjStartDocumentsBackupRestoreWithData:(id)sjjStartDocumentsBackupRestoreWithData sourceName:(id)sourceName { }
+// 0x0013ccd8 · 994 条指令
+// 字符串："target_dir"、"frontier_qos"、"Preferences"、"bullet-"、".plist"
+// 消息：count → array → countByEnumeratingWithState:objects:count: → objectForKeyedSubscript: → length → defaultManager → set → isEqualToString:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_enumerationMutation、_objc_release
+-(void)sjjStartDocumentsBackupRestoreWithData:(id)a1 sourceName:(id)a2 { }
 
-// 0x0013e3b4
+// 0x0013e3b4 · 291 条指令
+// 消息：length → count → objectAtIndexedSubscript: → objectForKeyedSubscript: → boolValue → defaultManager → fileExistsAtPath:isDirectory: → stringWithFormat:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_retain
 -(void)sjjContinueDocumentsBackupRestoreSession { }
 
-// 0x0013fd0c
+// 0x0013fd0c · 1256 条指令
+// 字符串："image_slot_1"、"data"
+// 消息：currentTopViewController → showToast:duration: → imagesFilter → setFilter: → setSelectionLimit: → setPreferredAssetRepresentationMode: → initWithConfiguration: → numberWithInteger:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_objc_release、__Unwind_Resume、_dispatch_after、_dispatch_async、_objc_alloc_init、_objc_alloc
 -(void)sjjPresentDocumentsBackupRestoreFinishedRestartPrompt { }
 
-// 0x0013fe58
+// 0x0013fe58 · 1173 条指令
+// 字符串："image_slot_1"、"data"
+// 消息：currentTopViewController → imagesFilter → setFilter: → setSelectionLimit: → setPreferredAssetRepresentationMode: → initWithConfiguration: → numberWithInteger: → setDelegate:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume、_objc_alloc_init、_objc_alloc、_objc_setAssociatedObject、_objc_retain、_objc_opt_class
 -(void)openDataFileManager { }
 
-// 0x0013feb0
+// 0x0013feb0 · 1151 条指令
+// 字符串："image_slot_1"、"data"
+// 消息：imagesFilter → setFilter: → setSelectionLimit: → setPreferredAssetRepresentationMode: → initWithConfiguration: → numberWithInteger: → setDelegate: → setModalPresentationStyle:
+// 系统：_objc_alloc_init、_objc_retainAutoreleasedReturnValue、_objc_release、_objc_alloc、_objc_setAssociatedObject、__Unwind_Resume、_objc_retain、_objc_opt_class
 -(void)chooseImage { }
 
-// 0x00140028
--(void)sjjHandlePickedImageData:(id)sjjHandlePickedImageData image:(id)image target:(long long)target { }
+// 0x00140028 · 1057 条指令
+// 字符串："image_slot_1"、"data"
+// 消息：copy → length → showToast:duration: → sjjStoreHiFloatingClearIconData: → imageWithData: → applyFeedSmoothSwipeBackgroundImage: → presentPanelBackgroundCropperForImage: → mainScreen
+// 系统：_objc_retain、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retainAutoreleasedReturnValue、_objc_storeStrong、_objc_release、_objc_loadWeakRetained、__Unwind_Resume
+-(void)sjjHandlePickedImageData:(id)a1 image:(id)a2 target:(long long)a3 { }
 
-// 0x00140f28
--(void)picker:(id)picker didFinishPicking:(id)didFinishPicking { }
+// 0x00140f28 · 97 条指令
+// 消息：integerValue → dismissViewControllerAnimated:completion: → firstObject
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_respondsToSelector、_objc_opt_class、_objc_opt_isKindOfClass、_objc_initWeak、_objc_copyWeak
+-(void)picker:(id)a1 didFinishPicking:(id)a2 { }
 
-// 0x001412a0
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo { }
+// 0x001412a0 · 1296 条指令
+// 字符串："v8@?0"、"image_slot_1"
+// 消息：integerValue → copy → length → dismissViewControllerAnimated:completion: → objectForKeyedSubscript: → setNetworkAccessAllowed: → setVersion: → setDeliveryMode:
+// 系统：_objc_retain、_objc_getAssociatedObject、_objc_retainAutoreleasedReturnValue、_objc_opt_respondsToSelector、_objc_retainBlock、_objc_opt_class、_objc_opt_isKindOfClass、_objc_opt_new
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2 { }
 
-// 0x00144630
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel { }
+// 0x00144630 · 152 条指令
+// 消息：dismissViewControllerAnimated:completion: → firstObject → startAccessingSecurityScopedResource → dataWithContentsOfURL:options:error: → length → dataWithData: → stopAccessingSecurityScopedResource → copy
+// 系统：_objc_release、_objc_retain、_objc_retainAutoreleasedReturnValue
+-(void)imagePickerControllerDidCancel:(id)a1 { }
 
-// 0x00144684
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs { }
+// 0x00144684 · 131 条指令
+// 消息：firstObject → startAccessingSecurityScopedResource → dataWithContentsOfURL:options:error: → length → dataWithData: → stopAccessingSecurityScopedResource → copy → showToast:duration:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2 { }
 
-// 0x00145ca8
--(void)documentPickerWasCancelled:(id)documentPickerWasCancelled { }
+// 0x00145ca8 · 179 条指令
+// 消息：sjjPrepareInlineFeatureSearchForPanelDismiss → sjjRemovePanelDecorativeAnimations → isMainThread → invalidate → setUserInteractionEnabled: → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_release、_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_dispatch_async、_objc_retainBlock
+-(void)documentPickerWasCancelled:(id)a1 { }
 
-// 0x00145cf0
+// 0x00145cf0 · 161 条指令
+// 消息：sjjPrepareInlineFeatureSearchForPanelDismiss → sjjRemovePanelDecorativeAnimations → isMainThread → invalidate → setUserInteractionEnabled: → animateWithDuration:delay:options:animations:completion:
+// 系统：_objc_opt_class、_objc_opt_isKindOfClass、_objc_retain、_dispatch_async、_objc_retainBlock、_objc_release
 -(void)closePanel { }
 
-// 0x00145fcc
+// 0x00145fcc · 82 条指令
+// 消息：currentTopViewController → copy → dictionaryWithObjects:forKeys:count: → arrayWithObjects:count:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_initWeak、_objc_release、_objc_destroyWeak
 -(void)killDouyinFromPanel { }
 
-// 0x001461f0
+// 0x001461f0 · 342 条指令
+// 字符串："title"、"subtitle"、"block"、"%@://message/private?uid=%@"、"v16@?0@"NSArray"8"
+// 消息：showToast:duration: → array → copy → dictionaryWithObjects:forKeys:count: → addObject: → stringWithFormat: → countByEnumeratingWithState:objects:count: → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_retain
 -(void)openSVIPTimedCloseSetup { }
 
-// 0x0014623c
+// 0x0014623c · 323 条指令
+// 字符串："title"、"subtitle"、"block"、"%@://message/private?uid=%@"、"v16@?0@"NSArray"8"
+// 消息：array → copy → dictionaryWithObjects:forKeys:count: → addObject: → showToast:duration: → stringWithFormat: → countByEnumeratingWithState:objects:count: → integerValue
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_objc_enumerationMutation、_objc_retain
 -(void)openSVIPIdleAutoCloseSetup { }
 
-// 0x00146888
+// 0x00146888 · 21 条指令
+// 消息：length
 -(void)openSVIPBetaChannel { }
 
 @end

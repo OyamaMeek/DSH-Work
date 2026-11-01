@@ -7,7 +7,7 @@
 
 // 0x0001072c  47 条指令
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeWeak, _objc_release
--(id)initWithView:(id)initWithView point:(struct CGPoint)point translation:(struct CGPoint)translation state:(long long)state { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithView:(id)a1 point:(struct CGPoint)a2 translation:(struct CGPoint)a3 state:(long long)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000107f8  17 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue
@@ -23,17 +23,17 @@
 // 0x0001083c  44 条指令
 // 消息: convertPoint:toView:
 // C 调用: _objc_retain, _objc_loadWeakRetained, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(struct CGPoint)locationInView:(id)locationInView { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGPoint)locationInView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010904  7 条指令
 // 消息: locationInView:
--(struct CGPoint)locationOfTouch:(unsigned long long)locationOfTouch inView:(id)inView { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGPoint)locationOfTouch:(unsigned long long)a1 inView:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001090c  5 条指令
--(struct CGPoint)translationInView:(id)translationInView { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGPoint)translationInView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010920  6 条指令
--(struct CGPoint)velocityInView:(id)velocityInView { /* 重建骨架，语义见 pseudocode */ }
+-(struct CGPoint)velocityInView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010938  494 条指令
 // 消息: sjjHandleProgressTimeLabelTap:rightSide:, state, view, doubleValue, bounds, showToast:duration:, null, isHidden, alpha, layer, sharedApplication, windows

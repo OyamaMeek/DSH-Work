@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e298，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -31,13 +36,13 @@
 
 @property (nonatomic) BOOL selected;
 
--(id)initWithKind:(id)initWithKind darkMode:(BOOL)darkMode;
--(void)setKind:(id)setKind;
--(void)setDarkMode:(BOOL)setDarkMode;
--(void)setSelected:(BOOL)setSelected;
--(void)drawRect:(struct CGRect)drawRect;
--(id)kind;
--(BOOL)darkMode;
--(BOOL)selected;
+-(id)initWithKind:(id)a1 darkMode:(BOOL)a2; // 0x003986a4
+-(void)setKind:(id)a1; // 0x003987bc
+-(void)setDarkMode:(BOOL)a1; // 0x00398824
+-(void)setSelected:(BOOL)a1; // 0x00398830
+-(void)drawRect:(struct CGRect)a1; // 0x0039883c
+-(id)kind; // 0x0039ac40
+-(BOOL)darkMode; // 0x0039ac54
+-(BOOL)selected; // 0x0039ac60
 
 @end

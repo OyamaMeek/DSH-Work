@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d460，父类 NSObject
 //
 
+// 职责：displayLink 的弱引用代理，避免循环引用。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,8 +30,8 @@
 
 @property (weak, nonatomic) id target;
 
--(void)displayLinkDidFire:(id)displayLinkDidFire;
--(id)target;
--(void)setTarget:(id)setTarget;
+-(void)displayLinkDidFire:(id)a1; // 0x0000fcc8
+-(id)target; // 0x0000fd60
+-(void)setTarget:(id)a1; // 0x0000fd88
 
 @end

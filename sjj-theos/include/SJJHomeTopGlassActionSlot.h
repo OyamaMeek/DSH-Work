@@ -4,6 +4,11 @@
 //  原始地址 0x00a2daa0，父类 UIView
 //
 
+// 职责：由二进制重建的 UIView 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,14 +39,14 @@
 
 @property (nonatomic) BOOL search;
 
--(void)sjj_menuTapped:(id)sjj_menuTapped;
--(id)glassButton;
--(void)setGlassButton:(id)setGlassButton;
--(id)nativeOwner;
--(void)setNativeOwner:(id)setNativeOwner;
--(id)searchSourceImage;
--(void)setSearchSourceImage:(id)setSearchSourceImage;
--(BOOL)search;
--(void)setSearch:(BOOL)setSearch;
+-(void)sjj_menuTapped:(id)a1; // 0x00321c50
+-(id)glassButton; // 0x0032223c
+-(void)setGlassButton:(id)a1; // 0x00322248
+-(id)nativeOwner; // 0x00322258
+-(void)setNativeOwner:(id)a1; // 0x00322288
+-(id)searchSourceImage; // 0x00322298
+-(void)setSearchSourceImage:(id)a1; // 0x003222c8
+-(BOOL)search; // 0x003222d8
+-(void)setSearch:(BOOL)a1; // 0x003222e4
 
 @end

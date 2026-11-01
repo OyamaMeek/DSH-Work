@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f2b0，父类 NSObject
 //
 
+// 职责：全屏附加栏背景状态容器。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -43,19 +48,19 @@
 
 @property (nonatomic) BOOL applying;
 
--(id)bar;
--(void)setBar:(id)setBar;
--(id)views;
--(void)setViews:(id)setViews;
--(id)targetHeight;
--(void)setTargetHeight:(id)setTargetHeight;
--(BOOL)editing;
--(void)setEditing:(BOOL)setEditing;
--(BOOL)dismissing;
--(void)setDismissing:(BOOL)setDismissing;
--(id)editingView;
--(void)setEditingView:(id)setEditingView;
--(BOOL)applying;
--(void)setApplying:(BOOL)setApplying;
+-(id)bar; // 0x0057fbdc
+-(void)setBar:(id)a1; // 0x0057fc04
+-(id)views; // 0x0057fc10
+-(void)setViews:(id)a1; // 0x0057fc18
+-(id)targetHeight; // 0x0057fc24
+-(void)setTargetHeight:(id)a1; // 0x0057fc2c
+-(BOOL)editing; // 0x0057fc38
+-(void)setEditing:(BOOL)a1; // 0x0057fc40
+-(BOOL)dismissing; // 0x0057fc48
+-(void)setDismissing:(BOOL)a1; // 0x0057fc50
+-(id)editingView; // 0x0057fc58
+-(void)setEditingView:(id)a1; // 0x0057fc80
+-(BOOL)applying; // 0x0057fc8c
+-(void)setApplying:(BOOL)a1; // 0x0057fc94
 
 @end

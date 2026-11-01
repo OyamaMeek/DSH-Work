@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f508，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -37,28 +42,28 @@
 
 @property (strong, nonatomic) NSURLSessionDataTask * statisticsTask;
 
--(id)initWithSnapshot:(id)initWithSnapshot;
--(id)metricValueLabel:(id)metricValueLabel;
--(id)metricTileWithTitle:(id)metricTileWithTitle valueLabel:(id)valueLabel;
--(id)detailsTile;
--(id)metricGrid;
--(void)copyLabelLongPressed:(id)copyLabelLongPressed;
--(void)installCopyGesturesInView:(id)installCopyGesturesInView;
--(double)contentHeightForWidth:(double)contentHeightForWidth;
--(void)updatePlaybackText:(id)updatePlaybackText;
--(void)fetchPlaybackCount;
--(id)copyText;
--(void)copyAll;
--(void)dealloc;
--(id)snapshot;
--(void)setSnapshot:(id)setSnapshot;
--(id)stack;
--(void)setStack:(id)setStack;
--(id)playValueLabel;
--(void)setPlayValueLabel:(id)setPlayValueLabel;
--(id)playbackText;
--(void)setPlaybackText:(id)setPlaybackText;
--(id)statisticsTask;
--(void)setStatisticsTask:(id)setStatisticsTask;
+-(id)initWithSnapshot:(id)a1; // 0x0059f310
+-(id)metricValueLabel:(id)a1; // 0x005a00dc
+-(id)metricTileWithTitle:(id)a1 valueLabel:(id)a2; // 0x005a01cc
+-(id)detailsTile; // 0x005a0804
+-(id)metricGrid; // 0x005a1088
+-(void)copyLabelLongPressed:(id)a1; // 0x005a1830
+-(void)installCopyGesturesInView:(id)a1; // 0x005a19cc
+-(double)contentHeightForWidth:(double)a1; // 0x005a1b98
+-(void)updatePlaybackText:(id)a1; // 0x005a1c20
+-(void)fetchPlaybackCount; // 0x005a1cdc
+-(id)copyText; // 0x005a22a4
+-(void)copyAll; // 0x005a28dc
+-(void)dealloc; // 0x005a2994
+-(id)snapshot; // 0x005a2a20
+-(void)setSnapshot:(id)a1; // 0x005a2a2c
+-(id)stack; // 0x005a2a38
+-(void)setStack:(id)a1; // 0x005a2a44
+-(id)playValueLabel; // 0x005a2a54
+-(void)setPlayValueLabel:(id)a1; // 0x005a2a60
+-(id)playbackText; // 0x005a2a70
+-(void)setPlaybackText:(id)a1; // 0x005a2a7c
+-(id)statisticsTask; // 0x005a2a88
+-(void)setStatisticsTask:(id)a1; // 0x005a2a94
 
 @end

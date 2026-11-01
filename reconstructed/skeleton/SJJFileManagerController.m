@@ -8,7 +8,7 @@
 // 0x005c4c68  96 条指令
 // 消息: isEqualToString:, lastPathComponent, setTitle:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_storeStrong
--(id)initWithRootPath:(id)initWithRootPath currentPath:(id)currentPath darkTheme:(BOOL)darkTheme { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithRootPath:(id)a1 currentPath:(id)a2 darkTheme:(BOOL)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c4ed4  216 条指令
 // 消息: colorWithWhite:alpha:, systemBackgroundColor, view, setBackgroundColor:, navigationItem, setLargeTitleDisplayMode:, navigationController, viewControllers, firstObject, setLeftBarButtonItem:, initWithBarButtonSystemItem:target:action:, arrayWithObjects:count:, setRightBarButtonItems:, initWithFrame:
@@ -18,7 +18,7 @@
 // 0x005c52e4  34 条指令
 // 消息: count, reloadItems, updateToolbar
 // C 调用: _objc_msgSendSuper2, _CFAbsoluteTimeGetCurrent
--(void)viewWillAppear:(BOOL)viewWillAppear { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewWillAppear:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c536c  50 条指令
 // 消息: view, bounds, setFrame:, setTableHeaderView:
@@ -45,7 +45,7 @@
 // 字符串: "isSymlink", "date", "size", "path"
 // 消息: objectForKeyedSubscript:, boolValue, stringFromDate:, stringWithFormat:, unsignedLongLongValue, indexPathsForSelectedRows, array, visibleItems, countByEnumeratingWithState:objects:count:, row, count, objectAtIndexedSubscript:, addObject:, copy
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_autoreleaseReturnValue, _dispatch_once, __Unwind_Resume, _objc_enumerationMutation, ___stack_chk_fail, _objc_alloc
--(id)subtitleForItem:(id)subtitleForItem { /* 重建骨架，语义见 pseudocode */ }
+-(id)subtitleForItem:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c63c0  307 条指令
 // 字符串: "path"
@@ -77,7 +77,7 @@
 // 字符串: "roomConfig", "v16@?0@"UITextField"8"
 // 消息: alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)promptCreateDirectory:(BOOL)promptCreateDirectory { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptCreateDirectory:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c7740  146 条指令
 // 字符串: "public.item", "public.data"
@@ -88,61 +88,61 @@
 // 0x005c788c  63 条指令
 // 消息: count, copy
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _dispatch_get_global_queue, _objc_retainAutoreleasedReturnValue, _dispatch_async, _objc_release
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs { /* 重建骨架，语义见 pseudocode */ }
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c7cf4  2 条指令
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView { /* 重建骨架，语义见 pseudocode */ }
+-(long long)numberOfSectionsInTableView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c7cfc  14 条指令
 // 消息: visibleItems, count
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection { /* 重建骨架，语义见 pseudocode */ }
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c7d44  1054 条指令
 // 字符串: "SJJFMCell", "isSymlink", "folder.fill", "link", "doc.fill", "path"
 // 消息: visibleItems, count, stringWithFormat:, dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, textLabel, setText:, subtitleForItem:, detailTextLabel, systemFontOfSize:weight:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_autoreleaseReturnValue, _objc_retain, _objc_release, __Unwind_Resume, _objc_alloc, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetMidX
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c7d90  1035 条指令
 // 字符串: "SJJFMCell", "isSymlink", "folder.fill", "link", "doc.fill", "path"
 // 消息: visibleItems, count, stringWithFormat:, dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, textLabel, setText:, subtitleForItem:, detailTextLabel, systemFontOfSize:weight:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_alloc, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetMidX
--(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)a1 titleForFooterInSection:(long long)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c7ea8  965 条指令
 // 字符串: "SJJFMCell", "isSymlink", "folder.fill", "link", "doc.fill", "path"
 // 消息: dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, visibleItems, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, textLabel, setText:, subtitleForItem:, detailTextLabel, systemFontOfSize:weight:, setFont:, colorWithWhite:alpha:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _CGRectGetMidX
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c847c  592 条指令
 // 字符串: "path", "isSymlink", "zip"
 // 消息: isEditing, updateToolbar, deselectRowAtIndexPath:animated:, visibleItems, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, showToast:duration:, initWithRootPath:currentPath:darkTheme:, navigationController, pushViewController:animated:, cellForRowAtIndexPath:, showActionsForPath:sourceView:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc, __Unwind_Resume, _CGRectGetMidX
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c8700  431 条指令
 // 字符串: "path", "zip"
 // 消息: visibleItems, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, cellForRowAtIndexPath:, showActionsForPath:sourceView:, defaultManager, fileExistsAtPath:isDirectory:, lastPathComponent, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, pathExtension, lowercaseString, isEqualToString:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _CGRectGetMidX
--(void)tableView:(id)tableView accessoryButtonTappedForRowWithIndexPath:(id)accessoryButtonTappedForRowWithIndexPath { /* 重建骨架，语义见 pseudocode */ }
+-(void)tableView:(id)a1 accessoryButtonTappedForRowWithIndexPath:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c8858  345 条指令
 // 字符串: "zip"
 // 消息: defaultManager, fileExistsAtPath:isDirectory:, lastPathComponent, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, pathExtension, lowercaseString, isEqualToString:, addAction:, view, popoverPresentationController, setSourceView:, bounds, setSourceRect:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetMidX
--(void)showActionsForPath:(id)showActionsForPath sourceView:(id)sourceView { /* 重建骨架，语义见 pseudocode */ }
+-(void)showActionsForPath:(id)a1 sourceView:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c909c  150 条指令
 // 消息: initWithFilePath:rootPath:darkTheme:, navigationController, pushViewController:animated:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain
--(void)editFile:(id)editFile { /* 重建骨架，语义见 pseudocode */ }
+-(void)editFile:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c9168  99 条指令
 // 消息: alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release
--(void)promptRenamePath:(id)promptRenamePath { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptRenamePath:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c9620  117 条指令
 // 消息: selectedPaths, count, deletePaths:, showToast:duration:, stringWithFormat:, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
@@ -152,7 +152,7 @@
 // 0x005c9698  87 条指令
 // 消息: count, stringWithFormat:, alertControllerWithTitle:message:preferredStyle:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)deletePaths:(id)deletePaths { /* 重建骨架，语义见 pseudocode */ }
+-(void)deletePaths:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c9860  168 条指令
 // 字符串: "roomConfig"
@@ -170,12 +170,12 @@
 // 字符串: "roomConfig"
 // 消息: count, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:, showToast:duration:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)promptTargetDirectoryForMove:(BOOL)promptTargetDirectoryForMove paths:(id)paths { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptTargetDirectoryForMove:(BOOL)a1 paths:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005c9e3c  94 条指令
 // 消息: copy
 // C 调用: _objc_retain, _objc_release, _dispatch_get_global_queue, _objc_retainAutoreleasedReturnValue, _dispatch_async
--(void)performBatchPaths:(id)performBatchPaths operation:(id)operation targetDirectory:(id)targetDirectory { /* 重建骨架，语义见 pseudocode */ }
+-(void)performBatchPaths:(id)a1 operation:(id)a2 targetDirectory:(id)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ca4b0  160 条指令
 // 消息: selectedPaths, count, createZipFromPaths:outputInCurrentDirectory:shareAfter:completion:, showToast:duration:, sharePaths:, copy
@@ -190,35 +190,35 @@
 // 0x005ca5ac  97 条指令
 // 消息: copy
 // C 调用: _objc_retain, _objc_release, _NSTemporaryDirectory, _objc_retainAutoreleasedReturnValue, _dispatch_get_global_queue, _dispatch_async
--(void)createZipFromPaths:(id)createZipFromPaths outputInCurrentDirectory:(BOOL)outputInCurrentDirectory shareAfter:(BOOL)shareAfter completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
+-(void)createZipFromPaths:(id)a1 outputInCurrentDirectory:(BOOL)a2 shareAfter:(BOOL)a3 completion:(id /* block */)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005cac9c  72 条指令
 // 消息: count, firstObject, defaultManager, fileExistsAtPath:isDirectory:, createZipFromPaths:outputInCurrentDirectory:shareAfter:completion:, fileURLWithPath:, presentShareForURL:cleanupPath:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)sharePaths:(id)sharePaths { /* 重建骨架，语义见 pseudocode */ }
+-(void)sharePaths:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005cae94  111 条指令
 // 消息: arrayWithObjects:count:, initWithActivityItems:applicationActivities:, setCompletionWithItemsHandler:, view, popoverPresentationController, setSourceView:, bounds, setSourceRect:, presentViewController:animated:completion:
 // C 调用: _objc_retain, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetMidX
--(void)presentShareForURL:(id)presentShareForURL cleanupPath:(id)cleanupPath { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentShareForURL:(id)a1 cleanupPath:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005cb158  80 条指令
 // 字符串: "unzipped"
 // 消息: lastPathComponent, stringByDeletingPathExtension, length
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_get_global_queue, _objc_retain, _dispatch_async
--(void)extractZipAtPath:(id)extractZipAtPath { /* 重建骨架，语义见 pseudocode */ }
+-(void)extractZipAtPath:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005cb440  238 条指令
 // 字符串: "MM-dd HH:mm"
 // 消息: applyFilter, resignFirstResponder, topViewController, presentedViewController, length, initWithRootPath:currentPath:darkTheme:, initWithRootViewController:, setModalPresentationStyle:, navigationBar, setPrefersLargeTitles:, presentViewController:animated:completion:, showToast:duration:, setWithArray:, setDateFormat:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _NSHomeDirectory, _objc_alloc, __Unwind_Resume, _objc_opt_new
--(void)searchBar:(id)searchBar textDidChange:(id)textDidChange { /* 重建骨架，语义见 pseudocode */ }
+-(void)searchBar:(id)a1 textDidChange:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005cb490  218 条指令
 // 字符串: "MM-dd HH:mm"
 // 消息: resignFirstResponder, topViewController, presentedViewController, length, initWithRootPath:currentPath:darkTheme:, initWithRootViewController:, setModalPresentationStyle:, navigationBar, setPrefersLargeTitles:, presentViewController:animated:completion:, showToast:duration:, setWithArray:, setDateFormat:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _NSHomeDirectory, _objc_alloc, __Unwind_Resume, _objc_opt_new
--(void)searchBarSearchButtonClicked:(id)searchBarSearchButtonClicked { /* 重建骨架，语义见 pseudocode */ }
+-(void)searchBarSearchButtonClicked:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005cb498  216 条指令
 // 字符串: "MM-dd HH:mm"

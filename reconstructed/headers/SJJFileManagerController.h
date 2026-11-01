@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f878，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,45 +39,45 @@
     BOOL _loadingItems;
 }
 
--(id)initWithRootPath:(id)initWithRootPath currentPath:(id)currentPath darkTheme:(BOOL)darkTheme;
--(void)viewDidLoad;
--(void)viewWillAppear:(BOOL)viewWillAppear;
--(void)viewDidLayoutSubviews;
--(id)visibleItems;
--(void)reloadItems;
--(void)applyFilter;
--(id)subtitleForItem:(id)subtitleForItem;
--(id)selectedPaths;
--(void)updateToolbar;
--(void)closeTap;
--(void)toggleEdit;
--(void)addTap;
--(void)promptCreateDirectory:(BOOL)promptCreateDirectory;
--(void)importFiles;
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(void)tableView:(id)tableView accessoryButtonTappedForRowWithIndexPath:(id)accessoryButtonTappedForRowWithIndexPath;
--(void)showActionsForPath:(id)showActionsForPath sourceView:(id)sourceView;
--(void)editFile:(id)editFile;
--(void)promptRenamePath:(id)promptRenamePath;
--(void)deleteSelected;
--(void)deletePaths:(id)deletePaths;
--(void)moveSelected;
--(void)copySelected;
--(void)promptTargetDirectoryForMove:(BOOL)promptTargetDirectoryForMove paths:(id)paths;
--(void)performBatchPaths:(id)performBatchPaths operation:(id)operation targetDirectory:(id)targetDirectory;
--(void)zipSelected;
--(void)exportSelected;
--(void)createZipFromPaths:(id)createZipFromPaths outputInCurrentDirectory:(BOOL)outputInCurrentDirectory shareAfter:(BOOL)shareAfter completion:(id /* block */)completion;
--(void)sharePaths:(id)sharePaths;
--(void)presentShareForURL:(id)presentShareForURL cleanupPath:(id)cleanupPath;
--(void)extractZipAtPath:(id)extractZipAtPath;
--(void)searchBar:(id)searchBar textDidChange:(id)textDidChange;
--(void)searchBarSearchButtonClicked:(id)searchBarSearchButtonClicked;
+-(id)initWithRootPath:(id)a1 currentPath:(id)a2 darkTheme:(BOOL)a3; // 0x005c4c68
+-(void)viewDidLoad; // 0x005c4ed4
+-(void)viewWillAppear:(BOOL)a1; // 0x005c52e4
+-(void)viewDidLayoutSubviews; // 0x005c536c
+-(id)visibleItems; // 0x005c5444
+-(void)reloadItems; // 0x005c5468
+-(void)applyFilter; // 0x005c5e14
+-(id)subtitleForItem:(id)a1; // 0x005c6144
+-(id)selectedPaths; // 0x005c63c0
+-(void)updateToolbar; // 0x005c6660
+-(void)closeTap; // 0x005c6940
+-(void)toggleEdit; // 0x005c694c
+-(void)addTap; // 0x005c69a0
+-(void)promptCreateDirectory:(BOOL)a1; // 0x005c6d14
+-(void)importFiles; // 0x005c7740
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2; // 0x005c788c
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x005c7cf4
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x005c7cfc
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x005c7d44
+-(id)tableView:(id)a1 titleForFooterInSection:(long long)a2; // 0x005c7d90
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x005c7ea8
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x005c847c
+-(void)tableView:(id)a1 accessoryButtonTappedForRowWithIndexPath:(id)a2; // 0x005c8700
+-(void)showActionsForPath:(id)a1 sourceView:(id)a2; // 0x005c8858
+-(void)editFile:(id)a1; // 0x005c909c
+-(void)promptRenamePath:(id)a1; // 0x005c9168
+-(void)deleteSelected; // 0x005c9620
+-(void)deletePaths:(id)a1; // 0x005c9698
+-(void)moveSelected; // 0x005c9860
+-(void)copySelected; // 0x005c98c0
+-(void)promptTargetDirectoryForMove:(BOOL)a1 paths:(id)a2; // 0x005c9920
+-(void)performBatchPaths:(id)a1 operation:(id)a2 targetDirectory:(id)a3; // 0x005c9e3c
+-(void)zipSelected; // 0x005ca4b0
+-(void)exportSelected; // 0x005ca534
+-(void)createZipFromPaths:(id)a1 outputInCurrentDirectory:(BOOL)a2 shareAfter:(BOOL)a3 completion:(id /* block */)a4; // 0x005ca5ac
+-(void)sharePaths:(id)a1; // 0x005cac9c
+-(void)presentShareForURL:(id)a1 cleanupPath:(id)a2; // 0x005cae94
+-(void)extractZipAtPath:(id)a1; // 0x005cb158
+-(void)searchBar:(id)a1 textDidChange:(id)a2; // 0x005cb440
+-(void)searchBarSearchButtonClicked:(id)a1; // 0x005cb490
 
 @end

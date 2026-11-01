@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f5a8，父类 UIViewController
 //
 
+// 职责：作品数据外观设置：数值颜色、图标、加载动画。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -118,93 +123,93 @@
 
 @property (strong, nonatomic) UIButton * doneButton;
 
--(void)viewDidLoad;
--(id)buttonWithTitle:(id)buttonWithTitle;
--(void)viewDidLayoutSubviews;
--(void)styleChanged:(id)styleChanged;
--(void)colorTapped;
--(void)colorPickerViewControllerDidSelectColor:(id)colorPickerViewControllerDidSelectColor;
--(void)colorPickerViewControllerDidFinish:(id)colorPickerViewControllerDidFinish;
--(void)loadingGlowChanged:(id)loadingGlowChanged;
--(void)loadingGlowStyleChanged:(id)loadingGlowStyleChanged;
--(void)loadingGlowWidthChanged:(id)loadingGlowWidthChanged;
--(void)loadingHapticSwitchChanged:(id)loadingHapticSwitchChanged;
--(void)loadingHapticChanged:(id)loadingHapticChanged;
--(void)loadingHapticSpeedChanged:(id)loadingHapticSpeedChanged;
--(void)loadingGlowColorTapped;
--(void)hapticChanged:(id)hapticChanged;
--(void)hapticSwitchChanged:(id)hapticSwitchChanged;
--(void)hapticStyleChanged:(id)hapticStyleChanged;
--(void)hapticPreview:(id)hapticPreview;
--(void)updateLoadingGlowColorButton;
--(void)tokenTapped;
--(void)websiteTapped;
--(void)wechatChanged:(id)wechatChanged;
--(void)refreshTokenTitle;
--(void)doneTapped;
--(id)settingsScrollView;
--(void)setSettingsScrollView:(id)setSettingsScrollView;
--(id)settingsContentView;
--(void)setSettingsContentView:(id)setSettingsContentView;
--(id)titleLabel;
--(void)setTitleLabel:(id)setTitleLabel;
--(id)styleTitleLabel;
--(void)setStyleTitleLabel:(id)setStyleTitleLabel;
--(id)styleControl;
--(void)setStyleControl:(id)setStyleControl;
--(id)colorButton;
--(void)setColorButton:(id)setColorButton;
--(id)tokenButton;
--(void)setTokenButton:(id)setTokenButton;
--(id)websiteButton;
--(void)setWebsiteButton:(id)setWebsiteButton;
--(id)wechatTitleLabel;
--(void)setWechatTitleLabel:(id)setWechatTitleLabel;
--(id)wechatSwitch;
--(void)setWechatSwitch:(id)setWechatSwitch;
--(id)loadingGlowTitleLabel;
--(void)setLoadingGlowTitleLabel:(id)setLoadingGlowTitleLabel;
--(id)loadingGlowHintLabel;
--(void)setLoadingGlowHintLabel:(id)setLoadingGlowHintLabel;
--(id)loadingGlowSwitch;
--(void)setLoadingGlowSwitch:(id)setLoadingGlowSwitch;
--(id)loadingGlowStyleControl;
--(void)setLoadingGlowStyleControl:(id)setLoadingGlowStyleControl;
--(id)loadingGlowColorButton;
--(void)setLoadingGlowColorButton:(id)setLoadingGlowColorButton;
--(id)loadingGlowWidthTitleLabel;
--(void)setLoadingGlowWidthTitleLabel:(id)setLoadingGlowWidthTitleLabel;
--(id)loadingGlowWidthValueLabel;
--(void)setLoadingGlowWidthValueLabel:(id)setLoadingGlowWidthValueLabel;
--(id)loadingGlowWidthSlider;
--(void)setLoadingGlowWidthSlider:(id)setLoadingGlowWidthSlider;
--(id)loadingHapticTitleLabel;
--(void)setLoadingHapticTitleLabel:(id)setLoadingHapticTitleLabel;
--(id)loadingHapticValueLabel;
--(void)setLoadingHapticValueLabel:(id)setLoadingHapticValueLabel;
--(id)loadingHapticSwitch;
--(void)setLoadingHapticSwitch:(id)setLoadingHapticSwitch;
--(id)loadingHapticSlider;
--(void)setLoadingHapticSlider:(id)setLoadingHapticSlider;
--(id)loadingHapticSpeedTitleLabel;
--(void)setLoadingHapticSpeedTitleLabel:(id)setLoadingHapticSpeedTitleLabel;
--(id)loadingHapticSpeedValueLabel;
--(void)setLoadingHapticSpeedValueLabel:(id)setLoadingHapticSpeedValueLabel;
--(id)loadingHapticSpeedSlider;
--(void)setLoadingHapticSpeedSlider:(id)setLoadingHapticSpeedSlider;
--(id)hapticTitleLabel;
--(void)setHapticTitleLabel:(id)setHapticTitleLabel;
--(id)hapticValueLabel;
--(void)setHapticValueLabel:(id)setHapticValueLabel;
--(id)hapticSwitch;
--(void)setHapticSwitch:(id)setHapticSwitch;
--(id)hapticStyleControl;
--(void)setHapticStyleControl:(id)setHapticStyleControl;
--(id)hapticSlider;
--(void)setHapticSlider:(id)setHapticSlider;
--(BOOL)selectingLoadingGlowColor;
--(void)setSelectingLoadingGlowColor:(BOOL)setSelectingLoadingGlowColor;
--(id)doneButton;
--(void)setDoneButton:(id)setDoneButton;
+-(void)viewDidLoad; // 0x005a97cc
+-(id)buttonWithTitle:(id)a1; // 0x005abd18
+-(void)viewDidLayoutSubviews; // 0x005abe9c
+-(void)styleChanged:(id)a1; // 0x005ac6cc
+-(void)colorTapped; // 0x005ac7b4
+-(void)colorPickerViewControllerDidSelectColor:(id)a1; // 0x005ac8a4
+-(void)colorPickerViewControllerDidFinish:(id)a1; // 0x005ac994
+-(void)loadingGlowChanged:(id)a1; // 0x005ac9ec
+-(void)loadingGlowStyleChanged:(id)a1; // 0x005aca7c
+-(void)loadingGlowWidthChanged:(id)a1; // 0x005acad0
+-(void)loadingHapticSwitchChanged:(id)a1; // 0x005acb9c
+-(void)loadingHapticChanged:(id)a1; // 0x005acccc
+-(void)loadingHapticSpeedChanged:(id)a1; // 0x005acd9c
+-(void)loadingGlowColorTapped; // 0x005aceb4
+-(void)hapticChanged:(id)a1; // 0x005acf5c
+-(void)hapticSwitchChanged:(id)a1; // 0x005ad02c
+-(void)hapticStyleChanged:(id)a1; // 0x005ad124
+-(void)hapticPreview:(id)a1; // 0x005ad178
+-(void)updateLoadingGlowColorButton; // 0x005ad1d0
+-(void)tokenTapped; // 0x005ad2e4
+-(void)websiteTapped; // 0x005ad690
+-(void)wechatChanged:(id)a1; // 0x005ad73c
+-(void)refreshTokenTitle; // 0x005ad78c
+-(void)doneTapped; // 0x005adaf0
+-(id)settingsScrollView; // 0x005adaf4
+-(void)setSettingsScrollView:(id)a1; // 0x005adb00
+-(id)settingsContentView; // 0x005adb10
+-(void)setSettingsContentView:(id)a1; // 0x005adb1c
+-(id)titleLabel; // 0x005adb2c
+-(void)setTitleLabel:(id)a1; // 0x005adb38
+-(id)styleTitleLabel; // 0x005adb48
+-(void)setStyleTitleLabel:(id)a1; // 0x005adb54
+-(id)styleControl; // 0x005adb64
+-(void)setStyleControl:(id)a1; // 0x005adb70
+-(id)colorButton; // 0x005adb80
+-(void)setColorButton:(id)a1; // 0x005adb8c
+-(id)tokenButton; // 0x005adb9c
+-(void)setTokenButton:(id)a1; // 0x005adba8
+-(id)websiteButton; // 0x005adbb8
+-(void)setWebsiteButton:(id)a1; // 0x005adbc4
+-(id)wechatTitleLabel; // 0x005adbd4
+-(void)setWechatTitleLabel:(id)a1; // 0x005adbe0
+-(id)wechatSwitch; // 0x005adbf0
+-(void)setWechatSwitch:(id)a1; // 0x005adbfc
+-(id)loadingGlowTitleLabel; // 0x005adc0c
+-(void)setLoadingGlowTitleLabel:(id)a1; // 0x005adc18
+-(id)loadingGlowHintLabel; // 0x005adc28
+-(void)setLoadingGlowHintLabel:(id)a1; // 0x005adc34
+-(id)loadingGlowSwitch; // 0x005adc44
+-(void)setLoadingGlowSwitch:(id)a1; // 0x005adc50
+-(id)loadingGlowStyleControl; // 0x005adc60
+-(void)setLoadingGlowStyleControl:(id)a1; // 0x005adc6c
+-(id)loadingGlowColorButton; // 0x005adc7c
+-(void)setLoadingGlowColorButton:(id)a1; // 0x005adc88
+-(id)loadingGlowWidthTitleLabel; // 0x005adc98
+-(void)setLoadingGlowWidthTitleLabel:(id)a1; // 0x005adca4
+-(id)loadingGlowWidthValueLabel; // 0x005adcb4
+-(void)setLoadingGlowWidthValueLabel:(id)a1; // 0x005adcc0
+-(id)loadingGlowWidthSlider; // 0x005adcd0
+-(void)setLoadingGlowWidthSlider:(id)a1; // 0x005adcdc
+-(id)loadingHapticTitleLabel; // 0x005adcec
+-(void)setLoadingHapticTitleLabel:(id)a1; // 0x005adcf8
+-(id)loadingHapticValueLabel; // 0x005add08
+-(void)setLoadingHapticValueLabel:(id)a1; // 0x005add14
+-(id)loadingHapticSwitch; // 0x005add24
+-(void)setLoadingHapticSwitch:(id)a1; // 0x005add30
+-(id)loadingHapticSlider; // 0x005add40
+-(void)setLoadingHapticSlider:(id)a1; // 0x005add4c
+-(id)loadingHapticSpeedTitleLabel; // 0x005add5c
+-(void)setLoadingHapticSpeedTitleLabel:(id)a1; // 0x005add68
+-(id)loadingHapticSpeedValueLabel; // 0x005add78
+-(void)setLoadingHapticSpeedValueLabel:(id)a1; // 0x005add84
+-(id)loadingHapticSpeedSlider; // 0x005add94
+-(void)setLoadingHapticSpeedSlider:(id)a1; // 0x005adda0
+-(id)hapticTitleLabel; // 0x005addb0
+-(void)setHapticTitleLabel:(id)a1; // 0x005addbc
+-(id)hapticValueLabel; // 0x005addcc
+-(void)setHapticValueLabel:(id)a1; // 0x005addd8
+-(id)hapticSwitch; // 0x005adde8
+-(void)setHapticSwitch:(id)a1; // 0x005addf4
+-(id)hapticStyleControl; // 0x005ade04
+-(void)setHapticStyleControl:(id)a1; // 0x005ade10
+-(id)hapticSlider; // 0x005ade20
+-(void)setHapticSlider:(id)a1; // 0x005ade2c
+-(BOOL)selectingLoadingGlowColor; // 0x005ade3c
+-(void)setSelectingLoadingGlowColor:(BOOL)a1; // 0x005ade48
+-(id)doneButton; // 0x005ade54
+-(void)setDoneButton:(id)a1; // 0x005ade60
 
 @end

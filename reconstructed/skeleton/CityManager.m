@@ -15,13 +15,13 @@
 // 字符串: "0000", "SWJGeonamesUsername", "your_username", "com.SWJ.geonames.api.error"
 // 消息: length, cityCodeMap, objectForKeyedSubscript:, substringToIndex:, stringByAppendingString:, standardUserDefaults, stringForKey:, URLQueryAllowedCharacterSet, stringByAddingPercentEncodingWithAllowedCharacters:, stringWithFormat:, URLWithString:, sharedSession, dataTaskWithURL:completionHandler:, resume
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue
--(id)getCityNameWithCode:(id)getCityNameWithCode { /* 重建骨架，语义见 pseudocode */ }
+-(id)getCityNameWithCode:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060cd64  285 条指令
 // 字符串: "0000", "SWJGeonamesUsername", "your_username", "com.SWJ.geonames.api.error"
 // 消息: length, substringToIndex:, stringByAppendingString:, cityCodeMap, objectForKeyedSubscript:, standardUserDefaults, stringForKey:, URLQueryAllowedCharacterSet, stringByAddingPercentEncodingWithAllowedCharacters:, stringWithFormat:, URLWithString:, sharedSession, dataTaskWithURL:completionHandler:, resume
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue
--(id)getProvinceNameWithCode:(id)getProvinceNameWithCode { /* 重建骨架，语义见 pseudocode */ }
+-(id)getProvinceNameWithCode:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060d4b8  2 条指令
 -(id)cityCodeMap { /* 重建骨架，语义见 pseudocode */ }
@@ -29,7 +29,7 @@
 // 0x0060d4c0  68 条指令
 // 消息: dataWithLength:, mutableBytes, initWithData:encoding:, copy
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _objc_alloc, _objc_retain, _objc_release
--(void)setCityCodeMap:(id)setCityCodeMap { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCityCodeMap:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060d4cc  65 条指令
 // 消息: dataWithLength:, mutableBytes, initWithData:encoding:, copy
@@ -46,6 +46,6 @@
 // 字符串: "SWJGeonamesUsername", "your_username", "com.SWJ.geonames.api.error"
 // 消息: length, standardUserDefaults, stringForKey:, URLQueryAllowedCharacterSet, stringByAddingPercentEncodingWithAllowedCharacters:, stringWithFormat:, URLWithString:, sharedSession, dataTaskWithURL:completionHandler:, resume, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
-+(void)fetchLocationWithGeonameId:(id)fetchLocationWithGeonameId completionHandler:(id /* block */)completionHandler { /* 重建骨架，语义见 pseudocode */ }
++(void)fetchLocationWithGeonameId:(id)a1 completionHandler:(id /* block */)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

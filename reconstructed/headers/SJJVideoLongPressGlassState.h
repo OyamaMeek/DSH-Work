@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f8f0，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -28,9 +33,9 @@
 
 @property (nonatomic) long long overrideStyle;
 
--(id)effect;
--(void)setEffect:(id)setEffect;
--(long long)overrideStyle;
--(void)setOverrideStyle:(long long)setOverrideStyle;
+-(id)effect; // 0x005e2670
+-(void)setEffect:(id)a1; // 0x005e2678
+-(long long)overrideStyle; // 0x005e2684
+-(void)setOverrideStyle:(long long)a1; // 0x005e2688
 
 @end

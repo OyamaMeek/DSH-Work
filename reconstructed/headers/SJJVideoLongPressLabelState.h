@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f990，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -37,15 +42,15 @@
 
 @property (nonatomic) BOOL masksToBounds;
 
--(id)shadowColor;
--(void)setShadowColor:(id)setShadowColor;
--(float)shadowOpacity;
--(void)setShadowOpacity:(float)setShadowOpacity;
--(double)shadowRadius;
--(void)setShadowRadius:(double)setShadowRadius;
--(struct CGSize)shadowOffset;
--(void)setShadowOffset:(struct CGSize)setShadowOffset;
--(BOOL)masksToBounds;
--(void)setMasksToBounds:(BOOL)setMasksToBounds;
+-(id)shadowColor; // 0x005e2714
+-(void)setShadowColor:(id)a1; // 0x005e2718
+-(float)shadowOpacity; // 0x005e271c
+-(void)setShadowOpacity:(float)a1; // 0x005e2724
+-(double)shadowRadius; // 0x005e272c
+-(void)setShadowRadius:(double)a1; // 0x005e2734
+-(struct CGSize)shadowOffset; // 0x005e273c
+-(void)setShadowOffset:(struct CGSize)a1; // 0x005e2744
+-(BOOL)masksToBounds; // 0x005e274c
+-(void)setMasksToBounds:(BOOL)a1; // 0x005e2754
 
 @end

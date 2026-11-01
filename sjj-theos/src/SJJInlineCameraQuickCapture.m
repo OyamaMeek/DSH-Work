@@ -1,10 +1,15 @@
 // SJJInlineCameraQuickCapture.m
-// 由反汇编重建的骨架实现；方法体保留为最小可编译实现，语义见 reconstructed/walkthrough
+// 相机快速拍摄：AVCapturePhotoOutput / MovieFileOutput 回调。
+//
+// 来源：siwenjiajia.dylib 中 0x00a2e6a8 处的类对象，父类 NSObject，58 个实例方法、1 个类方法。
+// 本文件是可编译骨架：方法体返回零值，注释给出反汇编摘要（字符串常量、消息序列、系统调用）。
+// 完整伪代码见 reconstructed/pseudocode/SJJInlineCameraQuickCapture.m，按注释里的地址对照。
 
 #import "SJJInlineCameraQuickCapture.h"
 
 @implementation SJJInlineCameraQuickCapture
 
+// 属性合成：ivar 沿用二进制里的 _name 命名，保持与原始布局一致
 @synthesize session = _session;
 @synthesize captureDevice = _captureDevice;
 @synthesize videoInput = _videoInput;
@@ -26,183 +31,221 @@
 @synthesize pendingPhotoStoreInFlight = _pendingPhotoStoreInFlight;
 @synthesize requestedAudioAccess = _requestedAudioAccess;
 @synthesize pendingLivePhotoWaitAttempts = _pendingLivePhotoWaitAttempts;
-@synthesize hash;
-@synthesize superclass;
-@synthesize description;
-@synthesize debugDescription;
 
-// 0x0044a148
+// 0x0044a148 · 26 条指令
+// 字符串："com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_msgSendSuper2、_dispatch_queue_create、_objc_release
 -(id)init { return NULL; }
 
-// 0x0044a1b0
--(void)triggerFromHost:(id)triggerFromHost sourceView:(id)sourceView { }
+// 0x0044a1b0 · 29 条指令
+// 系统：_objc_retain、_dispatch_async、_objc_release
+-(void)triggerFromHost:(id)a1 sourceView:(id)a2 { }
 
-// 0x0044a4dc
--(BOOL)consumeTapIfRecordingFromSourceView:(id)consumeTapIfRecordingFromSourceView { return NO; }
+// 0x0044a4dc · 71 条指令
+// 消息：recording → movieOutput → isRecording → sourceView → setSourceView: → stopQuickVideoAndSave → savingVideo → configuring
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_release、_CFAbsoluteTimeGetCurrent
+-(BOOL)consumeTapIfRecordingFromSourceView:(id)a1 { return NO; }
 
-// 0x0044a634
--(void)requestCameraAccessWithCompletion:(id /* block */)requestCameraAccessWithCompletion { }
+// 0x0044a634 · 53 条指令
+// 字符串："v8@?0"
+// 消息：authorizationStatusForMediaType: → requestAccessForMediaType:completionHandler:
+// 系统：_objc_retain、_objc_release
+-(void)requestCameraAccessWithCompletion:(id /* block */)a1 { }
 
-// 0x0044a7b0
+// 0x0044a7b0 · 34 条指令
+// 消息：requestedAudioAccess → setRequestedAudioAccess: → authorizationStatusForMediaType: → requestAccessForMediaType:completionHandler:
 -(void)requestAudioAccessForVideoIfNeeded { }
 
-// 0x0044a868
--(void)configureQuickSessionForVideo:(BOOL)configureQuickSessionForVideo completion:(id /* block */)completion { }
+// 0x0044a868 · 81 条指令
+// 消息：setConfiguring: → authorizationStatusForMediaType: → requestAudioAccessForVideoIfNeeded → sessionQueue
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_dispatch_async、_objc_release
+-(void)configureQuickSessionForVideo:(BOOL)a1 completion:(id /* block */)a2 { }
 
-// 0x0044afa4
--(void)captureQuickPhotoFromSource:(id)captureQuickPhotoFromSource { }
+// 0x0044afa4 · 19 条指令
+// 消息：requestCameraAccessWithCompletion:
+-(void)captureQuickPhotoFromSource:(id)a1 { }
 
-// 0x0044b31c
+// 0x0044b31c · 126 条指令
+// 消息：pendingPhotoStoreInFlight → pendingPhotoData → pendingPhotoImage → length → pendingLivePhotoVideoURL → pendingLivePhotoFinished → pendingLivePhotoWaitAttempts → setPendingLivePhotoWaitAttempts:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_dispatch_time、_dispatch_after、_objc_retain、_objc_release
 -(void)finishPendingQuickPhotoCaptureIfReady { }
 
-// 0x0044bb0c
--(void)startQuickVideoFromSource:(id)startQuickVideoFromSource { }
+// 0x0044bb0c · 29 条指令
+// 消息：requestCameraAccessWithCompletion:
+// 系统：_objc_retain、_objc_release
+-(void)startQuickVideoFromSource:(id)a1 { }
 
-// 0x0044ce64
--(id)targetWindowForSource:(id)targetWindowForSource { return NULL; }
+// 0x0044ce64 · 154 条指令
+// 消息：window → sharedApplication → windows → isKeyWindow → isHidden → alpha → firstObject → savingVideo
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_opt_class、_objc_opt_isKindOfClass、_objc_release、_objc_enumerationMutation、_objc_autoreleaseReturnValue、___stack_chk_fail
+-(id)targetWindowForSource:(id)a1 { return NULL; }
 
-// 0x0044d0a0
+// 0x0044d0a0 · 11 条指令
+// 消息：savingVideo
 -(void)stopQuickVideoAndSave { }
 
-// 0x0044d1c0
--(void)cleanupSessionAndIndicator:(BOOL)cleanupSessionAndIndicator { }
+// 0x0044d1c0 · 108 条指令
+// 消息：session → sessionQueue → setSession: → setCaptureDevice: → setVideoInput: → setAudioInput: → setPhotoOutput: → setMovieOutput:
+// 系统：_objc_retainAutoreleasedReturnValue、_objc_retain、_dispatch_async、_objc_release
+-(void)cleanupSessionAndIndicator:(BOOL)a1 { }
 
-// 0x0044d3f8
--(void)captureOutput:(id)captureOutput didFinishProcessingPhoto:(id)didFinishProcessingPhoto error:(id)error { }
+// 0x0044d3f8 · 78 条指令
+// 消息：fileDataRepresentation → length → mainScreen → scale → imageWithData:scale:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_async
+-(void)captureOutput:(id)a1 didFinishProcessingPhoto:(id)a2 error:(id)a3 { }
 
-// 0x0044d7b0
--(void)captureOutput:(id)captureOutput didStartRecordingToOutputFileAtURL:(id)didStartRecordingToOutputFileAtURL fromConnections:(id)fromConnections { }
+// 0x0044d7b0 · 20 条指令
+// 系统：_dispatch_async
+-(void)captureOutput:(id)a1 didStartRecordingToOutputFileAtURL:(id)a2 fromConnections:(id)a3 { }
 
-// 0x0044d86c
--(void)captureOutput:(id)captureOutput didFinishRecordingToOutputFileAtURL:(id)didFinishRecordingToOutputFileAtURL fromConnections:(id)fromConnections error:(id)error { }
+// 0x0044d86c · 63 条指令
+// 消息：userInfo → objectForKeyedSubscript: → boolValue
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、_dispatch_async
+-(void)captureOutput:(id)a1 didFinishRecordingToOutputFileAtURL:(id)a2 fromConnections:(id)a3 error:(id)a4 { }
 
-// 0x0044db54
+// 0x0044db54 · 2 条指令
 -(id)session { return NULL; }
 
-// 0x0044db5c
--(void)setSession:(id)setSession { }
+// 0x0044db5c · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setSession:(id)a1 { }
 
-// 0x0044db68
+// 0x0044db68 · 2 条指令
 -(id)captureDevice { return NULL; }
 
-// 0x0044db70
--(void)setCaptureDevice:(id)setCaptureDevice { }
+// 0x0044db70 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setCaptureDevice:(id)a1 { }
 
-// 0x0044db7c
+// 0x0044db7c · 2 条指令
 -(id)videoInput { return NULL; }
 
-// 0x0044db84
--(void)setVideoInput:(id)setVideoInput { }
+// 0x0044db84 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setVideoInput:(id)a1 { }
 
-// 0x0044db90
+// 0x0044db90 · 2 条指令
 -(id)audioInput { return NULL; }
 
-// 0x0044db98
--(void)setAudioInput:(id)setAudioInput { }
+// 0x0044db98 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setAudioInput:(id)a1 { }
 
-// 0x0044dba4
+// 0x0044dba4 · 2 条指令
 -(id)photoOutput { return NULL; }
 
-// 0x0044dbac
--(void)setPhotoOutput:(id)setPhotoOutput { }
+// 0x0044dbac · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setPhotoOutput:(id)a1 { }
 
-// 0x0044dbb8
+// 0x0044dbb8 · 2 条指令
 -(id)movieOutput { return NULL; }
 
-// 0x0044dbc0
--(void)setMovieOutput:(id)setMovieOutput { }
+// 0x0044dbc0 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setMovieOutput:(id)a1 { }
 
-// 0x0044dbcc
+// 0x0044dbcc · 2 条指令
 -(id)sessionQueue { return NULL; }
 
-// 0x0044dbd4
--(void)setSessionQueue:(id)setSessionQueue { }
+// 0x0044dbd4 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setSessionQueue:(id)a1 { }
 
-// 0x0044dbe0
+// 0x0044dbe0 · 2 条指令
 -(id)recordedVideoURL { return NULL; }
 
-// 0x0044dbe8
--(void)setRecordedVideoURL:(id)setRecordedVideoURL { }
+// 0x0044dbe8 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setRecordedVideoURL:(id)a1 { }
 
-// 0x0044dbf4
+// 0x0044dbf4 · 2 条指令
 -(id)pendingLivePhotoVideoURL { return NULL; }
 
-// 0x0044dbfc
--(void)setPendingLivePhotoVideoURL:(id)setPendingLivePhotoVideoURL { }
+// 0x0044dbfc · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setPendingLivePhotoVideoURL:(id)a1 { }
 
-// 0x0044dc08
+// 0x0044dc08 · 2 条指令
 -(id)pendingPhotoData { return NULL; }
 
-// 0x0044dc10
--(void)setPendingPhotoData:(id)setPendingPhotoData { }
+// 0x0044dc10 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setPendingPhotoData:(id)a1 { }
 
-// 0x0044dc1c
+// 0x0044dc1c · 2 条指令
 -(id)pendingPhotoImage { return NULL; }
 
-// 0x0044dc24
--(void)setPendingPhotoImage:(id)setPendingPhotoImage { }
+// 0x0044dc24 · 5 条指令
+// 系统：_objc_storeStrong
+-(void)setPendingPhotoImage:(id)a1 { }
 
-// 0x0044dc30
+// 0x0044dc30 · 2 条指令
 -(id)sourceSnapshot { return NULL; }
 
-// 0x0044dc38
--(void)setSourceSnapshot:(id)setSourceSnapshot { }
+// 0x0044dc38 · 18 条指令
+// 系统：_objc_storeStrong、_objc_loadWeakRetained、_objc_autoreleaseReturnValue、_objc_storeWeak
+-(void)setSourceSnapshot:(id)a1 { }
 
-// 0x0044dc44
+// 0x0044dc44 · 15 条指令
+// 系统：_objc_loadWeakRetained、_objc_autoreleaseReturnValue、_objc_storeWeak
 -(id)sourceView { return NULL; }
 
-// 0x0044dc6c
--(void)setSourceView:(id)setSourceView { }
+// 0x0044dc6c · 5 条指令
+// 系统：_objc_storeWeak
+-(void)setSourceView:(id)a1 { }
 
-// 0x0044dc78
+// 0x0044dc78 · 2 条指令
 -(BOOL)configuring { return NO; }
 
-// 0x0044dc80
--(void)setConfiguring:(BOOL)setConfiguring { }
+// 0x0044dc80 · 2 条指令
+-(void)setConfiguring:(BOOL)a1 { }
 
-// 0x0044dc88
+// 0x0044dc88 · 2 条指令
 -(BOOL)recording { return NO; }
 
-// 0x0044dc90
--(void)setRecording:(BOOL)setRecording { }
+// 0x0044dc90 · 2 条指令
+-(void)setRecording:(BOOL)a1 { }
 
-// 0x0044dc98
+// 0x0044dc98 · 2 条指令
 -(BOOL)savingVideo { return NO; }
 
-// 0x0044dca0
--(void)setSavingVideo:(BOOL)setSavingVideo { }
+// 0x0044dca0 · 2 条指令
+-(void)setSavingVideo:(BOOL)a1 { }
 
-// 0x0044dca8
+// 0x0044dca8 · 2 条指令
 -(BOOL)pendingPhotoCaptureActive { return NO; }
 
-// 0x0044dcb0
--(void)setPendingPhotoCaptureActive:(BOOL)setPendingPhotoCaptureActive { }
+// 0x0044dcb0 · 2 条指令
+-(void)setPendingPhotoCaptureActive:(BOOL)a1 { }
 
-// 0x0044dcb8
+// 0x0044dcb8 · 2 条指令
 -(BOOL)pendingLivePhotoFinished { return NO; }
 
-// 0x0044dcc0
--(void)setPendingLivePhotoFinished:(BOOL)setPendingLivePhotoFinished { }
+// 0x0044dcc0 · 2 条指令
+-(void)setPendingLivePhotoFinished:(BOOL)a1 { }
 
-// 0x0044dcc8
+// 0x0044dcc8 · 2 条指令
 -(BOOL)pendingPhotoStoreInFlight { return NO; }
 
-// 0x0044dcd0
--(void)setPendingPhotoStoreInFlight:(BOOL)setPendingPhotoStoreInFlight { }
+// 0x0044dcd0 · 2 条指令
+-(void)setPendingPhotoStoreInFlight:(BOOL)a1 { }
 
-// 0x0044dcd8
+// 0x0044dcd8 · 2 条指令
 -(BOOL)requestedAudioAccess { return NO; }
 
-// 0x0044dce0
--(void)setRequestedAudioAccess:(BOOL)setRequestedAudioAccess { }
+// 0x0044dce0 · 2 条指令
+-(void)setRequestedAudioAccess:(BOOL)a1 { }
 
-// 0x0044dce8
+// 0x0044dce8 · 2 条指令
 -(long long)pendingLivePhotoWaitAttempts { return 0; }
 
-// 0x0044dcf0
--(void)setPendingLivePhotoWaitAttempts:(long long)setPendingLivePhotoWaitAttempts { }
+// 0x0044dcf0 · 2 条指令
+-(void)setPendingLivePhotoWaitAttempts:(long long)a1 { }
 
-// 0x0044a090
+// 0x0044a090 · 72 条指令
+// 字符串："v8@?0"、"com.siwenjiajia.inlineCamera.quick"
+// 系统：_objc_retainAutoreleaseReturnValue、_dispatch_once、_objc_alloc_init、_objc_release、_objc_msgSendSuper2、_dispatch_queue_create
 +(id)shared { return NULL; }
 
 @end

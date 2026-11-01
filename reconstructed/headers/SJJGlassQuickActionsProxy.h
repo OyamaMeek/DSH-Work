@@ -4,6 +4,11 @@
 //  原始地址 0x00a2dff0，父类 NSObject
 //
 
+// 职责：代理对象，转发或拦截宿主对象的消息。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,27 +30,27 @@
 
 @property (weak, nonatomic) SJJGlassQuickActionsDrawerView * workDataColorDrawer;
 
--(void)shortcutKeyTapped:(id)shortcutKeyTapped;
--(void)directShareKeyTapped:(id)directShareKeyTapped;
--(void)directShareKeyTouchBegan:(id)directShareKeyTouchBegan;
--(void)directShareKeyTouchFinished:(id)directShareKeyTouchFinished;
--(void)directShareKeyLongPressed:(id)directShareKeyLongPressed;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(void)dismissButtonTapped:(id)dismissButtonTapped;
--(id)workDataPresenter;
--(void)presentWorkDataTokenEditor;
--(void)presentWorkDataSettingsForDrawer:(id)presentWorkDataSettingsForDrawer button:(id)button;
--(void)colorPickerViewControllerDidSelectColor:(id)colorPickerViewControllerDidSelectColor;
--(void)colorPickerViewControllerDidFinish:(id)colorPickerViewControllerDidFinish;
--(void)paletteButtonTapped:(id)paletteButtonTapped;
--(void)addControlButtonTapped:(id)addControlButtonTapped;
--(void)profileSignButtonTapped:(id)profileSignButtonTapped;
--(void)workDataCloseTapped:(id)workDataCloseTapped;
--(void)workDataCopyTapped:(id)workDataCopyTapped;
--(void)workDataCopyWeChatTapped:(id)workDataCopyWeChatTapped;
--(void)actionButtonTapped:(id)actionButtonTapped;
--(id)workDataColorDrawer;
--(void)setWorkDataColorDrawer:(id)setWorkDataColorDrawer;
+-(void)shortcutKeyTapped:(id)a1; // 0x00368dac
+-(void)directShareKeyTapped:(id)a1; // 0x003696ac
+-(void)directShareKeyTouchBegan:(id)a1; // 0x00369708
+-(void)directShareKeyTouchFinished:(id)a1; // 0x00369794
+-(void)directShareKeyLongPressed:(id)a1; // 0x003697f4
+-(BOOL)gestureRecognizer:(id)a1 shouldReceiveTouch:(id)a2; // 0x0036a8ec
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x0036a9e4
+-(void)dismissButtonTapped:(id)a1; // 0x0036a9fc
+-(id)workDataPresenter; // 0x0036aa20
+-(void)presentWorkDataTokenEditor; // 0x0036aba4
+-(void)presentWorkDataSettingsForDrawer:(id)a1 button:(id)a2; // 0x0036af8c
+-(void)colorPickerViewControllerDidSelectColor:(id)a1; // 0x0036afe4
+-(void)colorPickerViewControllerDidFinish:(id)a1; // 0x0036b0b0
+-(void)paletteButtonTapped:(id)a1; // 0x0036b108
+-(void)addControlButtonTapped:(id)a1; // 0x0036b4dc
+-(void)profileSignButtonTapped:(id)a1; // 0x0036bc44
+-(void)workDataCloseTapped:(id)a1; // 0x0036bcb0
+-(void)workDataCopyTapped:(id)a1; // 0x0036bcb4
+-(void)workDataCopyWeChatTapped:(id)a1; // 0x0036bd50
+-(void)actionButtonTapped:(id)a1; // 0x0036c17c
+-(id)workDataColorDrawer; // 0x0036c554
+-(void)setWorkDataColorDrawer:(id)a1; // 0x0036c57c
 
 @end

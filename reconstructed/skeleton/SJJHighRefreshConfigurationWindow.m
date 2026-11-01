@@ -11,6 +11,6 @@
 // 0x005931e8  145 条指令
 // 消息: isHidden, alpha, isUserInteractionEnabled, window, convertPoint:fromView:, hitTest:withEvent:, isMainThread, setHidden:
 // C 调用: _objc_retain, _objc_loadWeakRetained, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_getAssociatedObject, _CGRectIsEmpty, _dispatch_async
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent { /* 重建骨架，语义见 pseudocode */ }
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

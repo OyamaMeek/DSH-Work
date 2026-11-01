@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fc60，父类 NSObject
 //
 
+// 职责：代理对象，转发或拦截宿主对象的消息。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,10 +25,10 @@
 
 @interface AWECAIMQuickActionDismissProxy : NSObject <UIGestureRecognizerDelegate>
 
-+(id)shared;
--(void)handleOutsideTap:(id)handleOutsideTap;
--(void)handleQuickActionButtonTap:(id)handleQuickActionButtonTap;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
++(id)shared; // 0x0060f8d4
+-(void)handleOutsideTap:(id)a1; // 0x0060f98c
+-(void)handleQuickActionButtonTap:(id)a1; // 0x0060fab0
+-(BOOL)gestureRecognizer:(id)a1 shouldReceiveTouch:(id)a2; // 0x0060fb0c
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x0060fc58
 
 @end

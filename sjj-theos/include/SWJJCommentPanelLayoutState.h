@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e950，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -31,11 +36,11 @@
 
 @property (nonatomic) BOOL syncing;
 
--(id)header;
--(void)setHeader:(id)setHeader;
--(id)frames;
--(void)setFrames:(id)setFrames;
--(BOOL)syncing;
--(void)setSyncing:(BOOL)setSyncing;
+-(id)header; // 0x00473730
+-(void)setHeader:(id)a1; // 0x00473758
+-(id)frames; // 0x00473764
+-(void)setFrames:(id)a1; // 0x0047376c
+-(BOOL)syncing; // 0x00473778
+-(void)setSyncing:(BOOL)a1; // 0x00473780
 
 @end

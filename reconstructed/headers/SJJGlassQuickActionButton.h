@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ded8，父类 UIButton
 //
 
+// 职责：按钮控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -52,30 +57,30 @@
 
 @property (strong, nonatomic) UIColor * baseBorderColor;
 
--(void)refreshIconStyle;
--(id)initWithActionID:(id)initWithActionID;
--(void)layoutSubviews;
--(void)applyCustomMediaAppearance:(BOOL)applyCustomMediaAppearance prefersDarkForeground:(BOOL)prefersDarkForeground;
--(void)setCustomEditing:(BOOL)setCustomEditing foregroundColor:(id)foregroundColor;
--(id)actionID;
--(void)setActionID:(id)setActionID;
--(id)actionIconView;
--(void)setActionIconView:(id)setActionIconView;
--(id)actionTitleLabel;
--(void)setActionTitleLabel:(id)setActionTitleLabel;
--(id)actionSubtitleLabel;
--(void)setActionSubtitleLabel:(id)setActionSubtitleLabel;
--(id)chevronView;
--(void)setChevronView:(id)setChevronView;
--(id)resizeHandleView;
--(void)setResizeHandleView:(id)setResizeHandleView;
--(id)resizeHandleShapeLayer;
--(void)setResizeHandleShapeLayer:(id)setResizeHandleShapeLayer;
--(BOOL)isCustomEditing;
--(void)setCustomEditing:(BOOL)setCustomEditing;
--(double)baseBorderWidth;
--(void)setBaseBorderWidth:(double)setBaseBorderWidth;
--(id)baseBorderColor;
--(void)setBaseBorderColor:(id)setBaseBorderColor;
+-(void)refreshIconStyle; // 0x00356648
+-(id)initWithActionID:(id)a1; // 0x003568b0
+-(void)layoutSubviews; // 0x003571c4
+-(void)applyCustomMediaAppearance:(BOOL)a1 prefersDarkForeground:(BOOL)a2; // 0x00357750
+-(void)setCustomEditing:(BOOL)a1 foregroundColor:(id)a2; // 0x00357da8
+-(id)actionID; // 0x00358168
+-(void)setActionID:(id)a1; // 0x00358174
+-(id)actionIconView; // 0x00358180
+-(void)setActionIconView:(id)a1; // 0x0035818c
+-(id)actionTitleLabel; // 0x0035819c
+-(void)setActionTitleLabel:(id)a1; // 0x003581a8
+-(id)actionSubtitleLabel; // 0x003581b8
+-(void)setActionSubtitleLabel:(id)a1; // 0x003581c4
+-(id)chevronView; // 0x003581d4
+-(void)setChevronView:(id)a1; // 0x003581e0
+-(id)resizeHandleView; // 0x003581f0
+-(void)setResizeHandleView:(id)a1; // 0x003581fc
+-(id)resizeHandleShapeLayer; // 0x0035820c
+-(void)setResizeHandleShapeLayer:(id)a1; // 0x00358218
+-(BOOL)isCustomEditing; // 0x00358228
+-(void)setCustomEditing:(BOOL)a1; // 0x00358234
+-(double)baseBorderWidth; // 0x00358240
+-(void)setBaseBorderWidth:(double)a1; // 0x00358254
+-(id)baseBorderColor; // 0x00358268
+-(void)setBaseBorderColor:(id)a1; // 0x00358274
 
 @end

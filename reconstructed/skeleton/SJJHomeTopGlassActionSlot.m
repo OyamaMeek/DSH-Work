@@ -7,7 +7,7 @@
 
 // 0x00321c50  9 条指令
 // 消息: search
--(void)sjj_menuTapped:(id)sjj_menuTapped { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_menuTapped:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0032223c  90 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
@@ -17,7 +17,7 @@
 // 0x00322248  87 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong
--(void)setGlassButton:(id)setGlassButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setGlassButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322258  83 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
@@ -27,7 +27,7 @@
 // 0x00322288  71 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_destroyWeak, _objc_storeStrong
--(void)setNativeOwner:(id)setNativeOwner { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNativeOwner:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322298  67 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
@@ -37,7 +37,7 @@
 // 0x003222c8  55 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
 // C 调用: _objc_destroyWeak, _objc_storeStrong
--(void)setSearchSourceImage:(id)setSearchSourceImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSearchSourceImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003222d8  51 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
@@ -47,7 +47,7 @@
 // 0x003222e4  48 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
 // C 调用: _objc_destroyWeak, _objc_storeStrong
--(void)setSearch:(BOOL)setSearch { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSearch:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003222f0  45 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha

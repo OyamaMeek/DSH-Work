@@ -20,3 +20,5 @@
 - ObjC 方法声明的 label 之间不能加冒号：`-(void)a:(id)x b:(id)y` 正确，`a:(id)x:(id)y` 会被解析成空标签并产生 `a:::` 这类重复 selector。
 - Theos 工程里自定义头文件目录要同时加到 CFLAGS 的 -I，Tweak.xm 才能 #import 到 src/Hooks 下的头。
 - Theos 可用 Xcode 自带 SDK：把 `$(xcrun --sdk iphoneos --show-sdk-path)` 软链到 $THEOS/sdks/iPhoneOS18.5.sdk，无需另外下载 SDK。
+- 生成器给上千个方法加注释时，注释内容要来自反汇编摘要而不是模板句，否则读起来和没有注释一样；摘要至少给指令数、字符串、消息序列。
+- 教程要绑定真实文件路径与真实数字（文件数、方法数、deb 大小），否则读者无法验证自己是否走对。

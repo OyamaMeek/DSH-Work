@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ec98，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,9 +30,9 @@
 
 @property (weak, nonatomic) UIScrollView * scrollView;
 
--(id)initWithScrollView:(id)initWithScrollView;
--(void)sjj_handlePan:(id)sjj_handlePan;
--(id)scrollView;
--(void)setScrollView:(id)setScrollView;
+-(id)initWithScrollView:(id)a1; // 0x004bc01c
+-(void)sjj_handlePan:(id)a1; // 0x004bc098
+-(id)scrollView; // 0x004bc838
+-(void)setScrollView:(id)a1; // 0x004bc860
 
 @end

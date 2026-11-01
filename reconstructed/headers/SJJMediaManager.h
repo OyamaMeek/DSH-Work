@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d618，父类 NSObject
 //
 
+// 职责：媒体管线：URLSession 下载、音视频合并、标准 MP4 转码、LivePhoto 落盘、批量保存。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,46 +39,46 @@
 
 @property (strong, nonatomic) NSMutableDictionary * downloadFileNameMap;
 
-+(id)sharedManager;
-+(BOOL)videoHasAudio:(id)videoHasAudio;
-+(void)mergeVideo:(id)mergeVideo withAudio:(id)withAudio completion:(id /* block */)completion;
-+(void)downloadAudioAndMergeWithVideo:(id)downloadAudioAndMergeWithVideo audioURL:(id)audioURL completion:(id /* block */)completion;
-+(void)transcodeVideoToStandardMP4:(id)transcodeVideoToStandardMP4 completion:(id /* block */)completion;
-+(void)downloadURLToTemp:(id)downloadURLToTemp completion:(id /* block */)completion;
-+(void)downloadURLToTemp:(id)downloadURLToTemp preferredFileName:(id)preferredFileName completion:(id /* block */)completion;
-+(void)saveImageFile:(id)saveImageFile completion:(id /* block */)completion;
-+(void)saveVideoFile:(id)saveVideoFile completion:(id /* block */)completion;
-+(void)downloadMedia:(id)downloadMedia mediaType:(long long)mediaType audio:(id)audio completion:(id /* block */)completion;
-+(void)downloadMedia:(id)downloadMedia mediaType:(long long)mediaType audio:(id)audio fileName:(id)fileName completion:(id /* block */)completion;
-+(id)contentIdentifierMetadataItem:(id)contentIdentifierMetadataItem;
-+(id)stillImageTimeWriterInput;
-+(id)stillImageTimeMetadataItem;
-+(BOOL)writeImageMetadataForLivePhoto:(id)writeImageMetadataForLivePhoto output:(id)output identifier:(id)identifier;
-+(BOOL)writeVideoMetadataForLivePhoto:(id)writeVideoMetadataForLivePhoto output:(id)output identifier:(id)identifier;
-+(void)saveLivePhotoFromImageFile:(id)saveLivePhotoFromImageFile videoFile:(id)videoFile completion:(id /* block */)completion;
-+(void)saveLivePhotoFallbackPairFromImageFile:(id)saveLivePhotoFallbackPairFromImageFile videoFile:(id)videoFile completion:(id /* block */)completion;
-+(void)downloadLivePhoto:(id)downloadLivePhoto videoURL:(id)videoURL completion:(id /* block */)completion;
-+(void)downloadLivePhoto:(id)downloadLivePhoto videoURL:(id)videoURL fileNameBase:(id)fileNameBase completion:(id /* block */)completion;
-+(void)downloadAllImages:(id)downloadAllImages;
-+(void)downloadAllLivePhotos:(id)downloadAllLivePhotos;
--(id)init;
--(void)setCompletionBlock:(id)setCompletionBlock forDownloadID:(id)forDownloadID;
--(void)associateFileURL:(id)associateFileURL withDownloadID:(id)withDownloadID;
--(id)downloadIDForFileURL:(id)downloadIDForFileURL;
--(void)replaceFileURL:(id)replaceFileURL withFileURL:(id)withFileURL;
--(void)removeMappingsForDownloadID:(id)removeMappingsForDownloadID;
--(void)finalizeDownloadWithID:(id)finalizeDownloadWithID success:(BOOL)success fileURL:(id)fileURL;
--(void)finalizeDownloadWithFileURL:(id)finalizeDownloadWithFileURL success:(BOOL)success;
--(void)URLSession:(id)URLSession downloadTask:(id)downloadTask didFinishDownloadingToURL:(id)didFinishDownloadingToURL;
--(void)URLSession:(id)URLSession downloadTask:(id)downloadTask didWriteData:(long long)didWriteData totalBytesWritten:(long long)totalBytesWritten totalBytesExpectedToWrite:(long long)totalBytesExpectedToWrite;
--(void)URLSession:(id)URLSession task:(id)task didCompleteWithError:(id)didCompleteWithError;
--(id)downloadTasks;
--(void)setDownloadTasks:(id)setDownloadTasks;
--(id)completionBlocks;
--(void)setCompletionBlocks:(id)setCompletionBlocks;
--(id)filePathToDownloadID;
--(void)setFilePathToDownloadID:(id)setFilePathToDownloadID;
--(id)downloadFileNameMap;
--(void)setDownloadFileNameMap:(id)setDownloadFileNameMap;
++(id)sharedManager; // 0x00011d20
++(BOOL)videoHasAudio:(id)a1; // 0x00012610
++(void)mergeVideo:(id)a1 withAudio:(id)a2 completion:(id /* block */)a3; // 0x000126e4
++(void)downloadAudioAndMergeWithVideo:(id)a1 audioURL:(id)a2 completion:(id /* block */)a3; // 0x00012fc8
++(void)transcodeVideoToStandardMP4:(id)a1 completion:(id /* block */)a2; // 0x0001352c
++(void)downloadURLToTemp:(id)a1 completion:(id /* block */)a2; // 0x00015064
++(void)downloadURLToTemp:(id)a1 preferredFileName:(id)a2 completion:(id /* block */)a3; // 0x00015070
++(void)saveImageFile:(id)a1 completion:(id /* block */)a2; // 0x00015418
++(void)saveVideoFile:(id)a1 completion:(id /* block */)a2; // 0x00015924
++(void)downloadMedia:(id)a1 mediaType:(long long)a2 audio:(id)a3 completion:(id /* block */)a4; // 0x00015ce8
++(void)downloadMedia:(id)a1 mediaType:(long long)a2 audio:(id)a3 fileName:(id)a4 completion:(id /* block */)a5; // 0x00015cf4
++(id)contentIdentifierMetadataItem:(id)a1; // 0x00016b58
++(id)stillImageTimeWriterInput; // 0x00016c04
++(id)stillImageTimeMetadataItem; // 0x00016d4c
++(BOOL)writeImageMetadataForLivePhoto:(id)a1 output:(id)a2 identifier:(id)a3; // 0x00016de4
++(BOOL)writeVideoMetadataForLivePhoto:(id)a1 output:(id)a2 identifier:(id)a3; // 0x00017064
++(void)saveLivePhotoFromImageFile:(id)a1 videoFile:(id)a2 completion:(id /* block */)a3; // 0x00018148
++(void)saveLivePhotoFallbackPairFromImageFile:(id)a1 videoFile:(id)a2 completion:(id /* block */)a3; // 0x00018a34
++(void)downloadLivePhoto:(id)a1 videoURL:(id)a2 completion:(id /* block */)a3; // 0x00018d6c
++(void)downloadLivePhoto:(id)a1 videoURL:(id)a2 fileNameBase:(id)a3 completion:(id /* block */)a4; // 0x0001995c
++(void)downloadAllImages:(id)a1; // 0x0001a628
++(void)downloadAllLivePhotos:(id)a1; // 0x0001a768
+-(id)init; // 0x00011dd8
+-(void)setCompletionBlock:(id)a1 forDownloadID:(id)a2; // 0x00011ebc
+-(void)associateFileURL:(id)a1 withDownloadID:(id)a2; // 0x00011fa8
+-(id)downloadIDForFileURL:(id)a1; // 0x000120bc
+-(void)replaceFileURL:(id)a1 withFileURL:(id)a2; // 0x000121bc
+-(void)removeMappingsForDownloadID:(id)a1; // 0x000122ec
+-(void)finalizeDownloadWithID:(id)a1 success:(BOOL)a2 fileURL:(id)a3; // 0x000124a4
+-(void)finalizeDownloadWithFileURL:(id)a1 success:(BOOL)a2; // 0x0001257c
+-(void)URLSession:(id)a1 downloadTask:(id)a2 didFinishDownloadingToURL:(id)a3; // 0x00018d78
+-(void)URLSession:(id)a1 downloadTask:(id)a2 didWriteData:(long long)a3 totalBytesWritten:(long long)a4 totalBytesExpectedToWrite:(long long)a5; // 0x00019564
+-(void)URLSession:(id)a1 task:(id)a2 didCompleteWithError:(id)a3; // 0x0001965c
+-(id)downloadTasks; // 0x0001a9e0
+-(void)setDownloadTasks:(id)a1; // 0x0001a9e8
+-(id)completionBlocks; // 0x0001a9f4
+-(void)setCompletionBlocks:(id)a1; // 0x0001a9fc
+-(id)filePathToDownloadID; // 0x0001aa08
+-(void)setFilePathToDownloadID:(id)a1; // 0x0001aa10
+-(id)downloadFileNameMap; // 0x0001aa1c
+-(void)setDownloadFileNameMap:(id)a1; // 0x0001aa24
 
 @end

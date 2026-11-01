@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f7d8，父类 NSObject
 //
 
+// 职责：动画驱动。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,22 +45,22 @@
 
 @property (strong, nonatomic) CADisplayLink * displayLink;
 
--(id)initWithImageView:(id)initWithImageView image:(id)image;
--(void)tick:(id)tick;
--(void)start;
--(void)stop;
--(void)dealloc;
--(id)imageView;
--(void)setImageView:(id)setImageView;
--(id)frames;
--(void)setFrames:(id)setFrames;
--(double)frameDuration;
--(void)setFrameDuration:(double)setFrameDuration;
--(unsigned long long)frameIndex;
--(void)setFrameIndex:(unsigned long long)setFrameIndex;
--(double)lastTimestamp;
--(void)setLastTimestamp:(double)setLastTimestamp;
--(id)displayLink;
--(void)setDisplayLink:(id)setDisplayLink;
+-(id)initWithImageView:(id)a1 image:(id)a2; // 0x005bcb98
+-(void)tick:(id)a1; // 0x005bcd38
+-(void)start; // 0x005bcf60
+-(void)stop; // 0x005bd0d0
+-(void)dealloc; // 0x005bd138
+-(id)imageView; // 0x005bd1ac
+-(void)setImageView:(id)a1; // 0x005bd1d4
+-(id)frames; // 0x005bd1d8
+-(void)setFrames:(id)a1; // 0x005bd1e0
+-(double)frameDuration; // 0x005bd1e8
+-(void)setFrameDuration:(double)a1; // 0x005bd1f0
+-(unsigned long long)frameIndex; // 0x005bd1f8
+-(void)setFrameIndex:(unsigned long long)a1; // 0x005bd200
+-(double)lastTimestamp; // 0x005bd208
+-(void)setLastTimestamp:(double)a1; // 0x005bd210
+-(id)displayLink; // 0x005bd218
+-(void)setDisplayLink:(id)a1; // 0x005bd220
 
 @end

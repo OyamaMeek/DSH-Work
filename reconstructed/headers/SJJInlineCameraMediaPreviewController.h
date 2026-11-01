@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e568，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -88,60 +93,60 @@
 
 @property (nonatomic) BOOL liveMotionPlayback;
 
-+(void)presentItem:(id)presentItem from:(id)from;
--(void)viewDidLoad;
--(void)layoutLivePhotoFrameMaskWithPixelRect:(struct CGRect)layoutLivePhotoFrameMaskWithPixelRect;
--(void)liveMotionDidReachEnd:(id)liveMotionDidReachEnd;
--(void)viewDidLayoutSubviews;
--(void)viewDidAppear:(BOOL)viewDidAppear;
--(void)closeTap;
--(void)restoreInlineCameraBackdropIfNeeded;
--(void)saveTap;
--(void)copyTap;
--(void)dealloc;
--(id)item;
--(void)setItem:(id)setItem;
--(id)overlayControl;
--(void)setOverlayControl:(id)setOverlayControl;
--(id)blurView;
--(void)setBlurView:(id)setBlurView;
--(id)backgroundTintView;
--(void)setBackgroundTintView:(id)setBackgroundTintView;
--(id)cardView;
--(void)setCardView:(id)setCardView;
--(id)mediaContainerView;
--(void)setMediaContainerView:(id)setMediaContainerView;
--(id)imageView;
--(void)setImageView:(id)setImageView;
--(id)livePhotoView;
--(void)setLivePhotoView:(id)setLivePhotoView;
--(id)livePhotoFrameMaskView;
--(void)setLivePhotoFrameMaskView:(id)setLivePhotoFrameMaskView;
--(id)liveMotionLayer;
--(void)setLiveMotionLayer:(id)setLiveMotionLayer;
--(id)titleLabel;
--(void)setTitleLabel:(id)setTitleLabel;
--(id)subtitleLabel;
--(void)setSubtitleLabel:(id)setSubtitleLabel;
--(id)closeButton;
--(void)setCloseButton:(id)setCloseButton;
--(id)saveButton;
--(void)setSaveButton:(id)setSaveButton;
--(id)clipboardButton;
--(void)setClipboardButton:(id)setClipboardButton;
--(id)playerController;
--(void)setPlayerController:(id)setPlayerController;
--(id)player;
--(void)setPlayer:(id)setPlayer;
--(id)previewImage;
--(void)setPreviewImage:(id)setPreviewImage;
--(id)restoreBackdropTarget;
--(void)setRestoreBackdropTarget:(id)setRestoreBackdropTarget;
--(BOOL)didRestoreBackdrop;
--(void)setDidRestoreBackdrop:(BOOL)setDidRestoreBackdrop;
--(struct CGRect)liveMotionPixelRect;
--(void)setLiveMotionPixelRect:(struct CGRect)setLiveMotionPixelRect;
--(BOOL)liveMotionPlayback;
--(void)setLiveMotionPlayback:(BOOL)setLiveMotionPlayback;
++(void)presentItem:(id)a1 from:(id)a2; // 0x00421048
+-(void)viewDidLoad; // 0x00421804
+-(void)layoutLivePhotoFrameMaskWithPixelRect:(struct CGRect)a1; // 0x00424e5c
+-(void)liveMotionDidReachEnd:(id)a1; // 0x00425458
+-(void)viewDidLayoutSubviews; // 0x0042559c
+-(void)viewDidAppear:(BOOL)a1; // 0x00426300
+-(void)closeTap; // 0x004264d8
+-(void)restoreInlineCameraBackdropIfNeeded; // 0x00426668
+-(void)saveTap; // 0x00426700
+-(void)copyTap; // 0x00426d14
+-(void)dealloc; // 0x0042709c
+-(id)item; // 0x0042713c
+-(void)setItem:(id)a1; // 0x00427148
+-(id)overlayControl; // 0x00427154
+-(void)setOverlayControl:(id)a1; // 0x00427160
+-(id)blurView; // 0x00427170
+-(void)setBlurView:(id)a1; // 0x0042717c
+-(id)backgroundTintView; // 0x0042718c
+-(void)setBackgroundTintView:(id)a1; // 0x00427198
+-(id)cardView; // 0x004271a8
+-(void)setCardView:(id)a1; // 0x004271b4
+-(id)mediaContainerView; // 0x004271c4
+-(void)setMediaContainerView:(id)a1; // 0x004271d0
+-(id)imageView; // 0x004271e0
+-(void)setImageView:(id)a1; // 0x004271ec
+-(id)livePhotoView; // 0x004271fc
+-(void)setLivePhotoView:(id)a1; // 0x00427208
+-(id)livePhotoFrameMaskView; // 0x00427218
+-(void)setLivePhotoFrameMaskView:(id)a1; // 0x00427224
+-(id)liveMotionLayer; // 0x00427234
+-(void)setLiveMotionLayer:(id)a1; // 0x00427240
+-(id)titleLabel; // 0x00427250
+-(void)setTitleLabel:(id)a1; // 0x0042725c
+-(id)subtitleLabel; // 0x0042726c
+-(void)setSubtitleLabel:(id)a1; // 0x00427278
+-(id)closeButton; // 0x00427288
+-(void)setCloseButton:(id)a1; // 0x00427294
+-(id)saveButton; // 0x004272a4
+-(void)setSaveButton:(id)a1; // 0x004272b0
+-(id)clipboardButton; // 0x004272c0
+-(void)setClipboardButton:(id)a1; // 0x004272cc
+-(id)playerController; // 0x004272dc
+-(void)setPlayerController:(id)a1; // 0x004272e8
+-(id)player; // 0x004272f8
+-(void)setPlayer:(id)a1; // 0x00427304
+-(id)previewImage; // 0x00427314
+-(void)setPreviewImage:(id)a1; // 0x00427320
+-(id)restoreBackdropTarget; // 0x00427330
+-(void)setRestoreBackdropTarget:(id)a1; // 0x00427360
+-(BOOL)didRestoreBackdrop; // 0x00427370
+-(void)setDidRestoreBackdrop:(BOOL)a1; // 0x0042737c
+-(struct CGRect)liveMotionPixelRect; // 0x00427388
+-(void)setLiveMotionPixelRect:(struct CGRect)a1; // 0x00427394
+-(BOOL)liveMotionPlayback; // 0x004273a0
+-(void)setLiveMotionPlayback:(BOOL)a1; // 0x004273ac
 
 @end

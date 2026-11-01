@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fa58，父类 UIView
 //
 
+// 职责：轻提示组件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -61,41 +66,41 @@
 
 @property (nonatomic) BOOL allowSuccessAnimation;
 
-+(void)showSuccessToastWithMessage:(id)showSuccessToastWithMessage;
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(void)setProgress:(float)setProgress;
--(void)show;
--(void)dismiss;
--(void)handleTap:(id)handleTap;
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
--(void)showSuccessAnimation:(id /* block */)showSuccessAnimation;
--(void)showCancelAnimation:(id /* block */)showCancelAnimation;
--(void)showSuccessToastWithMessage:(id)showSuccessToastWithMessage completion:(id /* block */)completion;
--(void)directlyShowSuccessAnimation:(id /* block */)directlyShowSuccessAnimation;
--(id)containerView;
--(void)setContainerView:(id)setContainerView;
--(id)progressBarBackground;
--(void)setProgressBarBackground:(id)setProgressBarBackground;
--(id)progressBar;
--(void)setProgressBar:(id)setProgressBar;
--(id /* block */)cancelBlock;
--(void)setCancelBlock:(id /* block */)setCancelBlock;
--(BOOL)isCancelled;
--(void)setIsCancelled:(BOOL)setIsCancelled;
--(BOOL)allowSuccessAnimation;
--(void)setAllowSuccessAnimation:(BOOL)setAllowSuccessAnimation;
--(id)progressLayer;
--(void)setProgressLayer:(id)setProgressLayer;
--(id)percentLabel;
--(void)setPercentLabel:(id)setPercentLabel;
--(float)progress;
--(id)blurEffectView;
--(void)setBlurEffectView:(id)setBlurEffectView;
--(id)checkmarkLayer;
--(void)setCheckmarkLayer:(id)setCheckmarkLayer;
--(id)progressView;
--(void)setProgressView:(id)setProgressView;
--(BOOL)isShowingSuccessAnimation;
--(void)setIsShowingSuccessAnimation:(BOOL)setIsShowingSuccessAnimation;
++(void)showSuccessToastWithMessage:(id)a1; // 0x00606874
+-(id)initWithFrame:(struct CGRect)a1; // 0x006046a0
+-(void)setProgress:(float)a1; // 0x00604dc0
+-(void)show; // 0x00604f24
+-(void)dismiss; // 0x00605014
+-(void)handleTap:(id)a1; // 0x006051fc
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2; // 0x00605278
+-(void)showSuccessAnimation:(id /* block */)a1; // 0x00605364
+-(void)showCancelAnimation:(id /* block */)a1; // 0x00605ef0
+-(void)showSuccessToastWithMessage:(id)a1 completion:(id /* block */)a2; // 0x00606910
+-(void)directlyShowSuccessAnimation:(id /* block */)a1; // 0x00606bcc
+-(id)containerView; // 0x00607398
+-(void)setContainerView:(id)a1; // 0x006073a4
+-(id)progressBarBackground; // 0x006073b4
+-(void)setProgressBarBackground:(id)a1; // 0x006073c0
+-(id)progressBar; // 0x006073d0
+-(void)setProgressBar:(id)a1; // 0x006073dc
+-(id /* block */)cancelBlock; // 0x006073ec
+-(void)setCancelBlock:(id /* block */)a1; // 0x006073f8
+-(BOOL)isCancelled; // 0x00607404
+-(void)setIsCancelled:(BOOL)a1; // 0x00607410
+-(BOOL)allowSuccessAnimation; // 0x0060741c
+-(void)setAllowSuccessAnimation:(BOOL)a1; // 0x00607428
+-(id)progressLayer; // 0x00607434
+-(void)setProgressLayer:(id)a1; // 0x00607440
+-(id)percentLabel; // 0x00607450
+-(void)setPercentLabel:(id)a1; // 0x0060745c
+-(float)progress; // 0x0060746c
+-(id)blurEffectView; // 0x00607480
+-(void)setBlurEffectView:(id)a1; // 0x0060748c
+-(id)checkmarkLayer; // 0x0060749c
+-(void)setCheckmarkLayer:(id)a1; // 0x006074a8
+-(id)progressView; // 0x006074b8
+-(void)setProgressView:(id)a1; // 0x006074c4
+-(BOOL)isShowingSuccessAnimation; // 0x006074d4
+-(void)setIsShowingSuccessAnimation:(BOOL)a1; // 0x006074e0
 
 @end

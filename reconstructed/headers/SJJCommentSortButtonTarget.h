@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e888，父类 NSObject
 //
 
+// 职责：回调目标对象。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,10 +25,10 @@
 
 @interface SJJCommentSortButtonTarget : NSObject
 
-+(id)sharedTarget;
--(void)sortButtonTapped:(id)sortButtonTapped;
--(void)summaryCloseTapped:(id)summaryCloseTapped;
--(void)summaryCopyTapped:(id)summaryCopyTapped;
--(void)mediaBatchCancelTapped:(id)mediaBatchCancelTapped;
++(id)sharedTarget; // 0x0045c8e0
+-(void)sortButtonTapped:(id)a1; // 0x0045c968
+-(void)summaryCloseTapped:(id)a1; // 0x0045ddd0
+-(void)summaryCopyTapped:(id)a1; // 0x0045e118
+-(void)mediaBatchCancelTapped:(id)a1; // 0x0045e2b4
 
 @end

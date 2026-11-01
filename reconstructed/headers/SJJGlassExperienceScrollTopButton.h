@@ -4,6 +4,11 @@
 //  原始地址 0x00a2da00，父类 UIButton
 //
 
+// 职责：按钮控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -28,10 +33,10 @@
 
 @property (weak, nonatomic) UIVisualEffectView * liquidSurface;
 
--(void)sjj_scrollToTop:(id)sjj_scrollToTop;
--(id)list;
--(void)setList:(id)setList;
--(id)liquidSurface;
--(void)setLiquidSurface:(id)setLiquidSurface;
+-(void)sjj_scrollToTop:(id)a1; // 0x00300950
+-(id)list; // 0x003009d0
+-(void)setList:(id)a1; // 0x00300a00
+-(id)liquidSurface; // 0x00300a10
+-(void)setLiquidSurface:(id)a1; // 0x00300a40
 
 @end

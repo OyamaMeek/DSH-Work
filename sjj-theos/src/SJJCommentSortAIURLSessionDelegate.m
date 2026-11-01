@@ -1,16 +1,18 @@
 // SJJCommentSortAIURLSessionDelegate.m
-// 由反汇编重建的骨架实现；方法体保留为最小可编译实现，语义见 reconstructed/walkthrough
+// 由二进制重建的 NSObject 子类。
+//
+// 来源：siwenjiajia.dylib 中 0x00a2e810 处的类对象，父类 NSObject，1 个实例方法、0 个类方法。
+// 本文件是可编译骨架：方法体返回零值，注释给出反汇编摘要（字符串常量、消息序列、系统调用）。
+// 完整伪代码见 reconstructed/pseudocode/SJJCommentSortAIURLSessionDelegate.m，按注释里的地址对照。
 
 #import "SJJCommentSortAIURLSessionDelegate.h"
 
 @implementation SJJCommentSortAIURLSessionDelegate
 
-@synthesize hash;
-@synthesize superclass;
-@synthesize description;
-@synthesize debugDescription;
-
-// 0x0045973c
--(void)URLSession:(id)URLSession task:(id)task didReceiveChallenge:(id)didReceiveChallenge completionHandler:(id /* block */)completionHandler { }
+// 0x0045973c · 147 条指令
+// 字符串："SWJJCommentSortEnabled"
+// 消息：protectionSpace → serverTrust → authenticationMethod → isEqualToString: → credentialForTrust: → boolForKey:
+// 系统：_objc_retain、_objc_retainAutoreleasedReturnValue、_objc_release、__Unwind_Resume
+-(void)URLSession:(id)a1 task:(id)a2 didReceiveChallenge:(id)a3 completionHandler:(id /* block */)a4 { }
 
 @end

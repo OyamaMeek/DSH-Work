@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d870，父类 NSObject
 //
 
+// 职责：事件与结果处理。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,10 +30,10 @@
 
 @property (weak, nonatomic) UIImageView * previewImageView;
 
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(id)shouldRequireFailureOfGestureRecognizer;
--(void)handleLongPress:(id)handleLongPress;
--(id)previewImageView;
--(void)setPreviewImageView:(id)setPreviewImageView;
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x002ece74
+-(BOOL)gestureRecognizer:(id)a1 shouldRequireFailureOfGestureRecognizer:(id)a2; // 0x002ece7c
+-(void)handleLongPress:(id)a1; // 0x002ece84
+-(id)previewImageView; // 0x002ed25c
+-(void)setPreviewImageView:(id)a1; // 0x002ed284
 
 @end

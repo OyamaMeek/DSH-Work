@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f940，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,13 +39,13 @@
 
 @property (nonatomic) BOOL opaque;
 
--(id)backgroundColor;
--(void)setBackgroundColor:(id)setBackgroundColor;
--(id)layerBackgroundColor;
--(void)setLayerBackgroundColor:(id)setLayerBackgroundColor;
--(BOOL)hadLayerBackgroundColor;
--(void)setHadLayerBackgroundColor:(BOOL)setHadLayerBackgroundColor;
--(BOOL)opaque;
--(void)setOpaque:(BOOL)setOpaque;
+-(id)backgroundColor; // 0x005e2698
+-(void)setBackgroundColor:(id)a1; // 0x005e269c
+-(id)layerBackgroundColor; // 0x005e26a0
+-(void)setLayerBackgroundColor:(id)a1; // 0x005e26a8
+-(BOOL)hadLayerBackgroundColor; // 0x005e26b4
+-(void)setHadLayerBackgroundColor:(BOOL)a1; // 0x005e26bc
+-(BOOL)opaque; // 0x005e26c4
+-(void)setOpaque:(BOOL)a1; // 0x005e26cc
 
 @end

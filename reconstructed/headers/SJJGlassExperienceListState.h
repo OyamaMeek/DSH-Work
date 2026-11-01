@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d9b0，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -94,53 +99,53 @@
 
 @property (nonatomic) BOOL applying;
 
--(struct CGRect)nativeFrame;
--(void)setNativeFrame:(struct CGRect)setNativeFrame;
--(struct CGRect)appliedFrame;
--(void)setAppliedFrame:(struct CGRect)setAppliedFrame;
--(struct UIEdgeInsets)nativeContentInset;
--(void)setNativeContentInset:(struct UIEdgeInsets)setNativeContentInset;
--(struct UIEdgeInsets)nativeIndicatorInsets;
--(void)setNativeIndicatorInsets:(struct UIEdgeInsets)setNativeIndicatorInsets;
--(id)controllerView;
--(void)setControllerView:(id)setControllerView;
--(id)list;
--(void)setList:(id)setList;
--(id)searchBar;
--(void)setSearchBar:(id)setSearchBar;
--(struct CGRect)nativeSearchFrame;
--(void)setNativeSearchFrame:(struct CGRect)setNativeSearchFrame;
--(double)searchBarOffsetY;
--(void)setSearchBarOffsetY:(double)setSearchBarOffsetY;
--(BOOL)searchFrameCaptured;
--(void)setSearchFrameCaptured:(BOOL)setSearchFrameCaptured;
--(double)topContentPull;
--(void)setTopContentPull:(double)setTopContentPull;
--(BOOL)topContentPullCaptured;
--(void)setTopContentPullCaptured:(BOOL)setTopContentPullCaptured;
--(BOOL)detailHandoffActive;
--(void)setDetailHandoffActive:(BOOL)setDetailHandoffActive;
--(id)searchLiquidSurface;
--(void)setSearchLiquidSurface:(id)setSearchLiquidSurface;
--(id)nativeSearchBackgroundColor;
--(void)setNativeSearchBackgroundColor:(id)setNativeSearchBackgroundColor;
--(id)nativeSearchBorderColor;
--(void)setNativeSearchBorderColor:(id)setNativeSearchBorderColor;
--(double)nativeSearchCornerRadius;
--(void)setNativeSearchCornerRadius:(double)setNativeSearchCornerRadius;
--(double)nativeSearchBorderWidth;
--(void)setNativeSearchBorderWidth:(double)setNativeSearchBorderWidth;
--(BOOL)nativeSearchClipsToBounds;
--(void)setNativeSearchClipsToBounds:(BOOL)setNativeSearchClipsToBounds;
--(id)nativeSearchShapeLayer;
--(void)setNativeSearchShapeLayer:(id)setNativeSearchShapeLayer;
--(BOOL)nativeSearchShapeHidden;
--(void)setNativeSearchShapeHidden:(BOOL)setNativeSearchShapeHidden;
--(BOOL)searchAppearanceCaptured;
--(void)setSearchAppearanceCaptured:(BOOL)setSearchAppearanceCaptured;
--(id)scrollTopFallback;
--(void)setScrollTopFallback:(id)setScrollTopFallback;
--(BOOL)applying;
--(void)setApplying:(BOOL)setApplying;
+-(struct CGRect)nativeFrame; // 0x00300658
+-(void)setNativeFrame:(struct CGRect)a1; // 0x00300664
+-(struct CGRect)appliedFrame; // 0x00300670
+-(void)setAppliedFrame:(struct CGRect)a1; // 0x0030067c
+-(struct UIEdgeInsets)nativeContentInset; // 0x00300688
+-(void)setNativeContentInset:(struct UIEdgeInsets)a1; // 0x00300694
+-(struct UIEdgeInsets)nativeIndicatorInsets; // 0x003006a0
+-(void)setNativeIndicatorInsets:(struct UIEdgeInsets)a1; // 0x003006ac
+-(id)controllerView; // 0x003006b8
+-(void)setControllerView:(id)a1; // 0x003006e0
+-(id)list; // 0x003006ec
+-(void)setList:(id)a1; // 0x00300714
+-(id)searchBar; // 0x00300720
+-(void)setSearchBar:(id)a1; // 0x00300748
+-(struct CGRect)nativeSearchFrame; // 0x00300754
+-(void)setNativeSearchFrame:(struct CGRect)a1; // 0x00300760
+-(double)searchBarOffsetY; // 0x0030076c
+-(void)setSearchBarOffsetY:(double)a1; // 0x00300774
+-(BOOL)searchFrameCaptured; // 0x0030077c
+-(void)setSearchFrameCaptured:(BOOL)a1; // 0x00300784
+-(double)topContentPull; // 0x0030078c
+-(void)setTopContentPull:(double)a1; // 0x00300794
+-(BOOL)topContentPullCaptured; // 0x0030079c
+-(void)setTopContentPullCaptured:(BOOL)a1; // 0x003007a4
+-(BOOL)detailHandoffActive; // 0x003007ac
+-(void)setDetailHandoffActive:(BOOL)a1; // 0x003007b4
+-(id)searchLiquidSurface; // 0x003007bc
+-(void)setSearchLiquidSurface:(id)a1; // 0x003007e4
+-(id)nativeSearchBackgroundColor; // 0x003007f0
+-(void)setNativeSearchBackgroundColor:(id)a1; // 0x003007f8
+-(id)nativeSearchBorderColor; // 0x00300804
+-(void)setNativeSearchBorderColor:(id)a1; // 0x0030080c
+-(double)nativeSearchCornerRadius; // 0x00300818
+-(void)setNativeSearchCornerRadius:(double)a1; // 0x00300820
+-(double)nativeSearchBorderWidth; // 0x00300828
+-(void)setNativeSearchBorderWidth:(double)a1; // 0x00300830
+-(BOOL)nativeSearchClipsToBounds; // 0x00300838
+-(void)setNativeSearchClipsToBounds:(BOOL)a1; // 0x00300840
+-(id)nativeSearchShapeLayer; // 0x00300848
+-(void)setNativeSearchShapeLayer:(id)a1; // 0x00300870
+-(BOOL)nativeSearchShapeHidden; // 0x0030087c
+-(void)setNativeSearchShapeHidden:(BOOL)a1; // 0x00300884
+-(BOOL)searchAppearanceCaptured; // 0x0030088c
+-(void)setSearchAppearanceCaptured:(BOOL)a1; // 0x00300894
+-(id)scrollTopFallback; // 0x0030089c
+-(void)setScrollTopFallback:(id)a1; // 0x003008c4
+-(BOOL)applying; // 0x003008d0
+-(void)setApplying:(BOOL)a1; // 0x003008d8
 
 @end

@@ -15,7 +15,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak
--(void)setOriginalView:(id)setOriginalView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0033334c  99 条指令
 // 字符串: "v8@?0"
@@ -27,7 +27,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak
--(void)setHostView:(id)setHostView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHostView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0033338c  83 条指令
 // 字符串: "v8@?0"
@@ -39,7 +39,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak
--(void)setOriginalHostClipsToBounds:(BOOL)setOriginalHostClipsToBounds { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalHostClipsToBounds:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003333a4  77 条指令
 // 字符串: "v8@?0"
@@ -51,7 +51,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak
--(void)setGlassButton:(id)setGlassButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setGlassButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003333c0  70 条指令
 // 字符串: "v8@?0"
@@ -63,7 +63,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak
--(void)setHasRenderedAppearance:(BOOL)setHasRenderedAppearance { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHasRenderedAppearance:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003333d8  64 条指令
 // 字符串: "v8@?0"
@@ -75,7 +75,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak
--(void)setRenderedClearMaterial:(BOOL)setRenderedClearMaterial { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRenderedClearMaterial:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003333f0  58 条指令
 // 字符串: "v8@?0"

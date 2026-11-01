@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f058，父类 UIViewController
 //
 
+// 职责：语音包管理：音色列表、试听、替换路径、TTS 参数。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -136,137 +141,137 @@
 
 @property (copy, nonatomic) NSString * playingPath;
 
--(id)initForCommentSelectionWithCompletion:(id /* block */)initForCommentSelectionWithCompletion;
--(id)initForVoiceEmojiSelectionWithCompletion:(id /* block */)initForVoiceEmojiSelectionWithCompletion;
--(id)initForExternalAudioSelectionWithTitle:(id)initForExternalAudioSelectionWithTitle completion:(id /* block */)completion;
--(void)viewDidLoad;
--(void)viewDidLayoutSubviews;
--(void)buildSystemManagerUI;
--(void)viewDidAppear:(BOOL)viewDidAppear;
--(void)viewDidDisappear:(BOOL)viewDidDisappear;
--(void)buildManagerUI;
--(id)managerIconButton:(id)managerIconButton action:(SEL)action;
--(id)managerCapsuleButton:(id)managerCapsuleButton symbol:(id)symbol action:(SEL)action color:(id)color;
--(BOOL)isAtRootDirectory;
--(void)reloadVoiceFiles;
--(void)searchTextChanged:(id)searchTextChanged;
--(void)searchBar:(id)searchBar textDidChange:(id)textDidChange;
--(void)searchBarSearchButtonClicked:(id)searchBarSearchButtonClicked;
--(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(BOOL)isSystemManagementIndexPath:(id)isSystemManagementIndexPath;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(id)voiceActionsViewForPath:(id)voiceActionsViewForPath;
--(void)previewRowButtonTapped:(id)previewRowButtonTapped;
--(void)sendRowButtonTapped:(id)sendRowButtonTapped;
--(void)chooseVoiceEmojiPath:(id)chooseVoiceEmojiPath;
--(void)chooseCommentVoicePath:(id)chooseCommentVoicePath;
--(void)presentPromptTitle:(id)presentPromptTitle message:(id)message initial:(id)initial placeholder:(id)placeholder keyboard:(long long)keyboard completion:(id /* block */)completion;
--(void)presentActionCardTitle:(id)presentActionCardTitle actions:(id)actions;
--(void)showItemActionsForPath:(id)showItemActionsForPath;
--(void)showFolderActionsForPath:(id)showFolderActionsForPath;
--(id)tableView:(id)tableView contextMenuConfigurationForRowAtIndexPath:(id)contextMenuConfigurationForRowAtIndexPath point:(struct CGPoint)point;
--(id)tableView:(id)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(id)trailingSwipeActionsConfigurationForRowAtIndexPath;
--(void)showCreateMenu;
--(id)safeName:(id)safeName fallback:(id)fallback;
--(id)uniqueDestinationForName:(id)uniqueDestinationForName inDirectory:(id)inDirectory;
--(void)createFolder;
--(void)renamePath:(id)renamePath;
--(void)confirmSendPath:(id)confirmSendPath;
--(void)confirmDeletePaths:(id)confirmDeletePaths;
--(void)toggleSelectionMode;
--(void)refreshBottomBar;
--(void)selectAllVisible;
--(void)deleteSelected;
--(id)availableFolderPaths;
--(void)moveSelected;
--(void)playPath:(id)playPath;
--(void)audioPlayerDidFinishPlaying:(id)audioPlayerDidFinishPlaying successfully:(BOOL)successfully;
--(void)audioPlayerDecodeErrorDidOccur:(id)audioPlayerDecodeErrorDidOccur error:(id)error;
--(void)sendPath:(id)sendPath;
--(void)importVoice;
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
--(void)setVoiceDuration;
--(void)closePage;
--(id)tableView;
--(void)setTableView:(id)setTableView;
--(id)searchField;
--(void)setSearchField:(id)setSearchField;
--(id)searchContainer;
--(void)setSearchContainer:(id)setSearchContainer;
--(id)systemSearchBar;
--(void)setSystemSearchBar:(id)setSystemSearchBar;
--(id)headerView;
--(void)setHeaderView:(id)setHeaderView;
--(id)bottomBar;
--(void)setBottomBar:(id)setBottomBar;
--(id)titleLabel;
--(void)setTitleLabel:(id)setTitleLabel;
--(id)pathLabel;
--(void)setPathLabel:(id)setPathLabel;
--(id)emptyLabel;
--(void)setEmptyLabel:(id)setEmptyLabel;
--(id)selectButton;
--(void)setSelectButton:(id)setSelectButton;
--(id)importButton;
--(void)setImportButton:(id)setImportButton;
--(id)folderButton;
--(void)setFolderButton:(id)setFolderButton;
--(id)durationButton;
--(void)setDurationButton:(id)setDurationButton;
--(id)quickActionsView;
--(void)setQuickActionsView:(id)setQuickActionsView;
--(id)selectAllButton;
--(void)setSelectAllButton:(id)setSelectAllButton;
--(id)moveButton;
--(void)setMoveButton:(id)setMoveButton;
--(id)removeButton;
--(void)setRemoveButton:(id)setRemoveButton;
--(id)backgroundGradient;
--(void)setBackgroundGradient:(id)setBackgroundGradient;
--(id)nativeSelectItem;
--(void)setNativeSelectItem:(id)setNativeSelectItem;
--(id)nativeSelectAllItem;
--(void)setNativeSelectAllItem:(id)setNativeSelectAllItem;
--(id)nativeMoveItem;
--(void)setNativeMoveItem:(id)setNativeMoveItem;
--(id)nativeDeleteItem;
--(void)setNativeDeleteItem:(id)setNativeDeleteItem;
--(id)items;
--(void)setItems:(id)setItems;
--(id)currentDirectory;
--(void)setCurrentDirectory:(id)setCurrentDirectory;
--(id)query;
--(void)setQuery:(id)setQuery;
--(id)selectedPaths;
--(void)setSelectedPaths:(id)setSelectedPaths;
--(BOOL)selectionMode;
--(void)setSelectionMode:(BOOL)setSelectionMode;
--(BOOL)commentSelectionMode;
--(void)setCommentSelectionMode:(BOOL)setCommentSelectionMode;
--(id /* block */)commentSelectionHandler;
--(void)setCommentSelectionHandler:(id /* block */)setCommentSelectionHandler;
--(BOOL)voiceEmojiSelectionMode;
--(void)setVoiceEmojiSelectionMode:(BOOL)setVoiceEmojiSelectionMode;
--(id /* block */)voiceEmojiSelectionHandler;
--(void)setVoiceEmojiSelectionHandler:(id /* block */)setVoiceEmojiSelectionHandler;
--(BOOL)externalAudioSelectionMode;
--(void)setExternalAudioSelectionMode:(BOOL)setExternalAudioSelectionMode;
--(id)externalAudioSelectionTitle;
--(void)setExternalAudioSelectionTitle:(id)setExternalAudioSelectionTitle;
--(id /* block */)externalAudioSelectionHandler;
--(void)setExternalAudioSelectionHandler:(id /* block */)setExternalAudioSelectionHandler;
--(id)conversationID;
--(void)setConversationID:(id)setConversationID;
--(id)conversation;
--(void)setConversation:(id)setConversation;
--(id)player;
--(void)setPlayer:(id)setPlayer;
--(id)playingPath;
--(void)setPlayingPath:(id)setPlayingPath;
+-(id)initForCommentSelectionWithCompletion:(id /* block */)a1; // 0x00516338
+-(id)initForVoiceEmojiSelectionWithCompletion:(id /* block */)a1; // 0x005163f0
+-(id)initForExternalAudioSelectionWithTitle:(id)a1 completion:(id /* block */)a2; // 0x005164a8
+-(void)viewDidLoad; // 0x005165a8
+-(void)viewDidLayoutSubviews; // 0x005168d0
+-(void)buildSystemManagerUI; // 0x00516aa0
+-(void)viewDidAppear:(BOOL)a1; // 0x005180a8
+-(void)viewDidDisappear:(BOOL)a1; // 0x005180e8
+-(void)buildManagerUI; // 0x0051813c
+-(id)managerIconButton:(id)a1 action:(SEL)a2; // 0x0051da18
+-(id)managerCapsuleButton:(id)a1 symbol:(id)a2 action:(SEL)a3 color:(id)a4; // 0x0051dbcc
+-(BOOL)isAtRootDirectory; // 0x0051ddf8
+-(void)reloadVoiceFiles; // 0x0051de6c
+-(void)searchTextChanged:(id)a1; // 0x0051eeb0
+-(void)searchBar:(id)a1 textDidChange:(id)a2; // 0x0051ef3c
+-(void)searchBarSearchButtonClicked:(id)a1; // 0x0051efa0
+-(BOOL)textFieldShouldReturn:(id)a1; // 0x0051efa8
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x0051efc4
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x0051efcc
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x0051f014
+-(BOOL)isSystemManagementIndexPath:(id)a1; // 0x0051f074
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x0051f07c
+-(double)tableView:(id)a1 heightForRowAtIndexPath:(id)a2; // 0x0051f9f0
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x0051fa34
+-(id)voiceActionsViewForPath:(id)a1; // 0x0051fe18
+-(void)previewRowButtonTapped:(id)a1; // 0x0052043c
+-(void)sendRowButtonTapped:(id)a1; // 0x005204a8
+-(void)chooseVoiceEmojiPath:(id)a1; // 0x005206a0
+-(void)chooseCommentVoicePath:(id)a1; // 0x00520808
+-(void)presentPromptTitle:(id)a1 message:(id)a2 initial:(id)a3 placeholder:(id)a4 keyboard:(long long)a5 completion:(id /* block */)a6; // 0x005212d8
+-(void)presentActionCardTitle:(id)a1 actions:(id)a2; // 0x00521430
+-(void)showItemActionsForPath:(id)a1; // 0x00521508
+-(void)showFolderActionsForPath:(id)a1; // 0x00521be0
+-(id)tableView:(id)a1 contextMenuConfigurationForRowAtIndexPath:(id)a2 point:(struct CGPoint)a3; // 0x00522250
+-(id)tableView:(id)a1 trailingSwipeActionsConfigurationForRowAtIndexPath:(id)a2; // 0x00522cd0
+-(void)showCreateMenu; // 0x00523218
+-(id)safeName:(id)a1 fallback:(id)a2; // 0x00523550
+-(id)uniqueDestinationForName:(id)a1 inDirectory:(id)a2; // 0x00523630
+-(void)createFolder; // 0x00523804
+-(void)renamePath:(id)a1; // 0x00523a50
+-(void)confirmSendPath:(id)a1; // 0x00523f34
+-(void)confirmDeletePaths:(id)a1; // 0x005242b8
+-(void)toggleSelectionMode; // 0x005247f8
+-(void)refreshBottomBar; // 0x00524874
+-(void)selectAllVisible; // 0x00524fcc
+-(void)deleteSelected; // 0x00525334
+-(id)availableFolderPaths; // 0x005253f0
+-(void)moveSelected; // 0x00525684
+-(void)playPath:(id)a1; // 0x00525d04
+-(void)audioPlayerDidFinishPlaying:(id)a1 successfully:(BOOL)a2; // 0x0052603c
+-(void)audioPlayerDecodeErrorDidOccur:(id)a1 error:(id)a2; // 0x0052609c
+-(void)sendPath:(id)a1; // 0x00526168
+-(void)importVoice; // 0x00526450
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2; // 0x0052655c
+-(void)setVoiceDuration; // 0x00526f88
+-(void)closePage; // 0x00527244
+-(id)tableView; // 0x005272ac
+-(void)setTableView:(id)a1; // 0x005272b8
+-(id)searchField; // 0x005272c8
+-(void)setSearchField:(id)a1; // 0x005272d4
+-(id)searchContainer; // 0x005272e4
+-(void)setSearchContainer:(id)a1; // 0x005272f0
+-(id)systemSearchBar; // 0x00527300
+-(void)setSystemSearchBar:(id)a1; // 0x0052730c
+-(id)headerView; // 0x0052731c
+-(void)setHeaderView:(id)a1; // 0x00527328
+-(id)bottomBar; // 0x00527338
+-(void)setBottomBar:(id)a1; // 0x00527344
+-(id)titleLabel; // 0x00527354
+-(void)setTitleLabel:(id)a1; // 0x00527360
+-(id)pathLabel; // 0x00527370
+-(void)setPathLabel:(id)a1; // 0x0052737c
+-(id)emptyLabel; // 0x0052738c
+-(void)setEmptyLabel:(id)a1; // 0x00527398
+-(id)selectButton; // 0x005273a8
+-(void)setSelectButton:(id)a1; // 0x005273b4
+-(id)importButton; // 0x005273c4
+-(void)setImportButton:(id)a1; // 0x005273d0
+-(id)folderButton; // 0x005273e0
+-(void)setFolderButton:(id)a1; // 0x005273ec
+-(id)durationButton; // 0x005273fc
+-(void)setDurationButton:(id)a1; // 0x00527408
+-(id)quickActionsView; // 0x00527418
+-(void)setQuickActionsView:(id)a1; // 0x00527424
+-(id)selectAllButton; // 0x00527434
+-(void)setSelectAllButton:(id)a1; // 0x00527440
+-(id)moveButton; // 0x00527450
+-(void)setMoveButton:(id)a1; // 0x0052745c
+-(id)removeButton; // 0x0052746c
+-(void)setRemoveButton:(id)a1; // 0x00527478
+-(id)backgroundGradient; // 0x00527488
+-(void)setBackgroundGradient:(id)a1; // 0x00527494
+-(id)nativeSelectItem; // 0x005274a4
+-(void)setNativeSelectItem:(id)a1; // 0x005274b0
+-(id)nativeSelectAllItem; // 0x005274c0
+-(void)setNativeSelectAllItem:(id)a1; // 0x005274cc
+-(id)nativeMoveItem; // 0x005274dc
+-(void)setNativeMoveItem:(id)a1; // 0x005274e8
+-(id)nativeDeleteItem; // 0x005274f8
+-(void)setNativeDeleteItem:(id)a1; // 0x00527504
+-(id)items; // 0x00527514
+-(void)setItems:(id)a1; // 0x00527520
+-(id)currentDirectory; // 0x0052752c
+-(void)setCurrentDirectory:(id)a1; // 0x00527538
+-(id)query; // 0x00527544
+-(void)setQuery:(id)a1; // 0x00527550
+-(id)selectedPaths; // 0x0052755c
+-(void)setSelectedPaths:(id)a1; // 0x00527568
+-(BOOL)selectionMode; // 0x00527578
+-(void)setSelectionMode:(BOOL)a1; // 0x00527584
+-(BOOL)commentSelectionMode; // 0x00527590
+-(void)setCommentSelectionMode:(BOOL)a1; // 0x0052759c
+-(id /* block */)commentSelectionHandler; // 0x005275a8
+-(void)setCommentSelectionHandler:(id /* block */)a1; // 0x005275b4
+-(BOOL)voiceEmojiSelectionMode; // 0x005275c0
+-(void)setVoiceEmojiSelectionMode:(BOOL)a1; // 0x005275cc
+-(id /* block */)voiceEmojiSelectionHandler; // 0x005275d8
+-(void)setVoiceEmojiSelectionHandler:(id /* block */)a1; // 0x005275e4
+-(BOOL)externalAudioSelectionMode; // 0x005275f0
+-(void)setExternalAudioSelectionMode:(BOOL)a1; // 0x005275fc
+-(id)externalAudioSelectionTitle; // 0x00527608
+-(void)setExternalAudioSelectionTitle:(id)a1; // 0x00527614
+-(id /* block */)externalAudioSelectionHandler; // 0x00527620
+-(void)setExternalAudioSelectionHandler:(id /* block */)a1; // 0x0052762c
+-(id)conversationID; // 0x00527638
+-(void)setConversationID:(id)a1; // 0x00527644
+-(id)conversation; // 0x00527650
+-(void)setConversation:(id)a1; // 0x0052765c
+-(id)player; // 0x0052766c
+-(void)setPlayer:(id)a1; // 0x00527678
+-(id)playingPath; // 0x00527688
+-(void)setPlayingPath:(id)a1; // 0x00527694
 
 @end

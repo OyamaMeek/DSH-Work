@@ -4,6 +4,11 @@
 //  原始地址 0x00a2dd20，父类 NSObject
 //
 
+// 职责：回调目标对象。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,11 +30,11 @@
 
 @property (weak, nonatomic) UIView * owner;
 
--(void)handleMusicExpandTap:(id)handleMusicExpandTap;
--(void)handleMusicTouchDown:(id)handleMusicTouchDown;
--(void)handleProfileTap:(id)handleProfileTap;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(id)owner;
--(void)setOwner:(id)setOwner;
+-(void)handleMusicExpandTap:(id)a1; // 0x003337c0
+-(void)handleMusicTouchDown:(id)a1; // 0x00333f90
+-(void)handleProfileTap:(id)a1; // 0x00333fe8
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x0033404c
+-(id)owner; // 0x00334054
+-(void)setOwner:(id)a1; // 0x0033407c
 
 @end

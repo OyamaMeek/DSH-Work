@@ -8,17 +8,17 @@
 // 0x00354ce4  116 条指令
 // 消息: sjjFeedbackContentView, window, animateWithDuration:delay:options:animations:completion:, layer, removeAllAnimations, setTransform:, animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _CGAffineTransformMakeScale, _objc_release, _objc_retain
--(void)sjjSetPressFeedbackPressed:(BOOL)sjjSetPressFeedbackPressed animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetPressFeedbackPressed:(BOOL)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00354f50  27 条指令
 // 消息: isHighlighted, sjjSetPressFeedbackPressed:animated:
 // C 调用: _objc_msgSendSuper2
--(void)setHighlighted:(BOOL)setHighlighted { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHighlighted:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00354fbc  20 条指令
 // 消息: sjjSetPressFeedbackPressed:animated:
 // C 调用: _objc_msgSendSuper2
--(void)setUserInteractionEnabled:(BOOL)setUserInteractionEnabled { /* 重建骨架，语义见 pseudocode */ }
+-(void)setUserInteractionEnabled:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035500c  25 条指令
 // 消息: window, sjjSetPressFeedbackPressed:animated:
@@ -28,17 +28,17 @@
 // 0x00355070  29 条指令
 // 消息: locationInView:, setSjjLastTouchPoint:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_release
--(BOOL)beginTrackingWithTouch:(id)beginTrackingWithTouch withEvent:(id)withEvent { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)beginTrackingWithTouch:(id)a1 withEvent:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003550fc  29 条指令
 // 消息: locationInView:, setSjjLastTouchPoint:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_release
--(BOOL)continueTrackingWithTouch:(id)continueTrackingWithTouch withEvent:(id)withEvent { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)continueTrackingWithTouch:(id)a1 withEvent:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00355188  30 条指令
 // 消息: locationInView:, setSjjLastTouchPoint:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_release
--(void)endTrackingWithTouch:(id)endTrackingWithTouch withEvent:(id)withEvent { /* 重建骨架，语义见 pseudocode */ }
+-(void)endTrackingWithTouch:(id)a1 withEvent:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00355218  30 条指令
 // C 调用: _objc_storeStrong
@@ -46,7 +46,7 @@
 
 // 0x00355224  27 条指令
 // C 调用: _objc_storeStrong
--(void)setSjjLastTouchPoint:(struct CGPoint)setSjjLastTouchPoint { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSjjLastTouchPoint:(struct CGPoint)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00355230  24 条指令
 // C 调用: _objc_storeStrong
@@ -54,7 +54,7 @@
 
 // 0x0035523c  21 条指令
 // C 调用: _objc_storeStrong
--(void)setSjjFeedbackContentView:(id)setSjjFeedbackContentView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSjjFeedbackContentView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0035524c  17 条指令
 // C 调用: _objc_storeStrong

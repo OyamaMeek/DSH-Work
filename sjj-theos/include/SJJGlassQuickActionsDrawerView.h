@@ -4,6 +4,11 @@
 //  原始地址 0x00a2df28，父类 UIView
 //
 
+// 职责：玻璃快捷抽屉：布局、背景、模糊与手势。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -136,102 +141,102 @@
 
 @property (nonatomic) BOOL didPlayWorkDataPresentationHaptic;
 
--(id)initWithActionIDs:(id)initWithActionIDs host:(id)host;
--(void)traitCollectionDidChange:(id)traitCollectionDidChange;
--(void)configureWorkDataWithSnapshot:(id)configureWorkDataWithSnapshot;
--(void)workDataAvatarLongPressed:(id)workDataAvatarLongPressed;
--(void)workDataAvatar:(id)workDataAvatar didFinishSavingWithError:(id)didFinishSavingWithError contextInfo:(void *)contextInfo;
--(void)workDataCopyLongPressed:(id)workDataCopyLongPressed;
--(void)installWorkDataCopyGestureOnView:(id)installWorkDataCopyGestureOnView;
--(void)dealloc;
--(void)profileHeaderDidChange:(id)profileHeaderDidChange;
--(void)reloadProfileHeader;
--(BOOL)isCustomLayoutActive;
--(unsigned long long)reflowCustomLayoutPinnedActionID:(id)reflowCustomLayoutPinnedActionID;
--(double)customGridCellWidth;
--(void)setCustomEditing:(BOOL)setCustomEditing;
--(void)animateCustomLayout;
--(void)addControlButtonLayout:(double)addControlButtonLayout;
--(void)addActionIDToDrawer:(id)addActionIDToDrawer;
--(void)persistCustomLayout;
--(void)handleCustomMovePress:(id)handleCustomMovePress;
--(void)handleCustomResizePan:(id)handleCustomResizePan;
--(void)applyStoredAppearance;
--(void)layoutSubviews;
--(id)actionIDs;
--(void)setActionIDs:(id)setActionIDs;
--(id)anchorHost;
--(void)setAnchorHost:(id)setAnchorHost;
--(id)backdropButton;
--(void)setBackdropButton:(id)setBackdropButton;
--(id)sheetMotionView;
--(void)setSheetMotionView:(id)setSheetMotionView;
--(id)backgroundImageView;
--(void)setBackgroundImageView:(id)setBackgroundImageView;
--(id)backgroundBlurView;
--(void)setBackgroundBlurView:(id)setBackgroundBlurView;
--(id)workDataMediaScrimView;
--(void)setWorkDataMediaScrimView:(id)setWorkDataMediaScrimView;
--(id)backgroundPlayer;
--(void)setBackgroundPlayer:(id)setBackgroundPlayer;
--(id)backgroundPlayerLooper;
--(void)setBackgroundPlayerLooper:(id)setBackgroundPlayerLooper;
--(id)backgroundPlayerLayer;
--(void)setBackgroundPlayerLayer:(id)setBackgroundPlayerLayer;
--(id)paletteButton;
--(void)setPaletteButton:(id)setPaletteButton;
--(id)addButton;
--(void)setAddButton:(id)setAddButton;
--(id)materialView;
--(void)setMaterialView:(id)setMaterialView;
--(id)profileAvatarView;
--(void)setProfileAvatarView:(id)setProfileAvatarView;
--(id)profileNameLabel;
--(void)setProfileNameLabel:(id)setProfileNameLabel;
--(id)profileSignButton;
--(void)setProfileSignButton:(id)setProfileSignButton;
--(id)headerSeparatorView;
--(void)setHeaderSeparatorView:(id)setHeaderSeparatorView;
--(id)scrollView;
--(void)setScrollView:(id)setScrollView;
--(id)actionButtons;
--(void)setActionButtons:(id)setActionButtons;
--(id)customLayoutItems;
--(void)setCustomLayoutItems:(id)setCustomLayoutItems;
--(id)activeCustomActionID;
--(void)setActiveCustomActionID:(id)setActiveCustomActionID;
--(id)activeCustomButton;
--(void)setActiveCustomButton:(id)setActiveCustomButton;
--(struct CGPoint)customDragTouchOffset;
--(void)setCustomDragTouchOffset:(struct CGPoint)setCustomDragTouchOffset;
--(struct CGRect)customResizeStartFrame;
--(void)setCustomResizeStartFrame:(struct CGRect)setCustomResizeStartFrame;
--(long long)customResizeStartWidth;
--(void)setCustomResizeStartWidth:(long long)setCustomResizeStartWidth;
--(long long)customResizeStartHeight;
--(void)setCustomResizeStartHeight:(long long)setCustomResizeStartHeight;
--(unsigned long long)customLayoutRowCount;
--(void)setCustomLayoutRowCount:(unsigned long long)setCustomLayoutRowCount;
--(BOOL)isCustomEditing;
--(id)currentForegroundColor;
--(void)setCurrentForegroundColor:(id)setCurrentForegroundColor;
--(BOOL)isWorkDataMode;
--(void)setWorkDataMode:(BOOL)setWorkDataMode;
--(id)workDataSnapshot;
--(void)setWorkDataSnapshot:(id)setWorkDataSnapshot;
--(id)workDataUIDLabel;
--(void)setWorkDataUIDLabel:(id)setWorkDataUIDLabel;
--(id)workDataBodyView;
--(void)setWorkDataBodyView:(id)setWorkDataBodyView;
--(id)workDataCloseButton;
--(void)setWorkDataCloseButton:(id)setWorkDataCloseButton;
--(id)workDataCopyWeChatButton;
--(void)setWorkDataCopyWeChatButton:(id)setWorkDataCopyWeChatButton;
--(id)workDataCopyButton;
--(void)setWorkDataCopyButton:(id)setWorkDataCopyButton;
--(BOOL)workDataUsesCenteredFallback;
--(void)setWorkDataUsesCenteredFallback:(BOOL)setWorkDataUsesCenteredFallback;
--(BOOL)didPlayWorkDataPresentationHaptic;
--(void)setDidPlayWorkDataPresentationHaptic:(BOOL)setDidPlayWorkDataPresentationHaptic;
+-(id)initWithActionIDs:(id)a1 host:(id)a2; // 0x00358330
+-(void)traitCollectionDidChange:(id)a1; // 0x0035b478
+-(void)configureWorkDataWithSnapshot:(id)a1; // 0x0035b588
+-(void)workDataAvatarLongPressed:(id)a1; // 0x0035bf84
+-(void)workDataAvatar:(id)a1 didFinishSavingWithError:(id)a2 contextInfo:(void *)a3; // 0x0035c06c
+-(void)workDataCopyLongPressed:(id)a1; // 0x0035c0a4
+-(void)installWorkDataCopyGestureOnView:(id)a1; // 0x0035c2b0
+-(void)dealloc; // 0x0035c44c
+-(void)profileHeaderDidChange:(id)a1; // 0x0035c4e4
+-(void)reloadProfileHeader; // 0x0035c4e8
+-(BOOL)isCustomLayoutActive; // 0x0035c928
+-(unsigned long long)reflowCustomLayoutPinnedActionID:(id)a1; // 0x0035c99c
+-(double)customGridCellWidth; // 0x0035da74
+-(void)setCustomEditing:(BOOL)a1; // 0x0035db38
+-(void)animateCustomLayout; // 0x0035de04
+-(void)addControlButtonLayout:(double)a1; // 0x0035de84
+-(void)addActionIDToDrawer:(id)a1; // 0x0035defc
+-(void)persistCustomLayout; // 0x0035e1ec
+-(void)handleCustomMovePress:(id)a1; // 0x0035e2c4
+-(void)handleCustomResizePan:(id)a1; // 0x0035ec2c
+-(void)applyStoredAppearance; // 0x0035f654
+-(void)layoutSubviews; // 0x003614e0
+-(id)actionIDs; // 0x00362be8
+-(void)setActionIDs:(id)a1; // 0x00362bf4
+-(id)anchorHost; // 0x00362c00
+-(void)setAnchorHost:(id)a1; // 0x00362c30
+-(id)backdropButton; // 0x00362c40
+-(void)setBackdropButton:(id)a1; // 0x00362c4c
+-(id)sheetMotionView; // 0x00362c5c
+-(void)setSheetMotionView:(id)a1; // 0x00362c68
+-(id)backgroundImageView; // 0x00362c78
+-(void)setBackgroundImageView:(id)a1; // 0x00362c84
+-(id)backgroundBlurView; // 0x00362c94
+-(void)setBackgroundBlurView:(id)a1; // 0x00362ca0
+-(id)workDataMediaScrimView; // 0x00362cb0
+-(void)setWorkDataMediaScrimView:(id)a1; // 0x00362cbc
+-(id)backgroundPlayer; // 0x00362ccc
+-(void)setBackgroundPlayer:(id)a1; // 0x00362cd8
+-(id)backgroundPlayerLooper; // 0x00362ce8
+-(void)setBackgroundPlayerLooper:(id)a1; // 0x00362cf4
+-(id)backgroundPlayerLayer; // 0x00362d04
+-(void)setBackgroundPlayerLayer:(id)a1; // 0x00362d10
+-(id)paletteButton; // 0x00362d20
+-(void)setPaletteButton:(id)a1; // 0x00362d2c
+-(id)addButton; // 0x00362d3c
+-(void)setAddButton:(id)a1; // 0x00362d48
+-(id)materialView; // 0x00362d58
+-(void)setMaterialView:(id)a1; // 0x00362d64
+-(id)profileAvatarView; // 0x00362d74
+-(void)setProfileAvatarView:(id)a1; // 0x00362d80
+-(id)profileNameLabel; // 0x00362d90
+-(void)setProfileNameLabel:(id)a1; // 0x00362d9c
+-(id)profileSignButton; // 0x00362dac
+-(void)setProfileSignButton:(id)a1; // 0x00362db8
+-(id)headerSeparatorView; // 0x00362dc8
+-(void)setHeaderSeparatorView:(id)a1; // 0x00362dd4
+-(id)scrollView; // 0x00362de4
+-(void)setScrollView:(id)a1; // 0x00362df0
+-(id)actionButtons; // 0x00362e00
+-(void)setActionButtons:(id)a1; // 0x00362e0c
+-(id)customLayoutItems; // 0x00362e18
+-(void)setCustomLayoutItems:(id)a1; // 0x00362e24
+-(id)activeCustomActionID; // 0x00362e34
+-(void)setActiveCustomActionID:(id)a1; // 0x00362e40
+-(id)activeCustomButton; // 0x00362e4c
+-(void)setActiveCustomButton:(id)a1; // 0x00362e7c
+-(struct CGPoint)customDragTouchOffset; // 0x00362e8c
+-(void)setCustomDragTouchOffset:(struct CGPoint)a1; // 0x00362e98
+-(struct CGRect)customResizeStartFrame; // 0x00362ea4
+-(void)setCustomResizeStartFrame:(struct CGRect)a1; // 0x00362ebc
+-(long long)customResizeStartWidth; // 0x00362ed4
+-(void)setCustomResizeStartWidth:(long long)a1; // 0x00362ee0
+-(long long)customResizeStartHeight; // 0x00362eec
+-(void)setCustomResizeStartHeight:(long long)a1; // 0x00362ef8
+-(unsigned long long)customLayoutRowCount; // 0x00362f04
+-(void)setCustomLayoutRowCount:(unsigned long long)a1; // 0x00362f10
+-(BOOL)isCustomEditing; // 0x00362f1c
+-(id)currentForegroundColor; // 0x00362f28
+-(void)setCurrentForegroundColor:(id)a1; // 0x00362f34
+-(BOOL)isWorkDataMode; // 0x00362f44
+-(void)setWorkDataMode:(BOOL)a1; // 0x00362f50
+-(id)workDataSnapshot; // 0x00362f5c
+-(void)setWorkDataSnapshot:(id)a1; // 0x00362f68
+-(id)workDataUIDLabel; // 0x00362f74
+-(void)setWorkDataUIDLabel:(id)a1; // 0x00362f80
+-(id)workDataBodyView; // 0x00362f90
+-(void)setWorkDataBodyView:(id)a1; // 0x00362f9c
+-(id)workDataCloseButton; // 0x00362fac
+-(void)setWorkDataCloseButton:(id)a1; // 0x00362fb8
+-(id)workDataCopyWeChatButton; // 0x00362fc8
+-(void)setWorkDataCopyWeChatButton:(id)a1; // 0x00362fd4
+-(id)workDataCopyButton; // 0x00362fe4
+-(void)setWorkDataCopyButton:(id)a1; // 0x00362ff0
+-(BOOL)workDataUsesCenteredFallback; // 0x00363000
+-(void)setWorkDataUsesCenteredFallback:(BOOL)a1; // 0x0036300c
+-(BOOL)didPlayWorkDataPresentationHaptic; // 0x00363018
+-(void)setDidPlayWorkDataPresentationHaptic:(BOOL)a1; // 0x00363024
 
 @end

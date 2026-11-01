@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e248，父类 NSObject
 //
 
+// 职责：代理对象，转发或拦截宿主对象的消息。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -28,12 +33,12 @@
 
 @property (copy, nonatomic) id /* block */ onPickerDismissed;
 
-+(id)shared;
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel;
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo;
--(id /* block */)onImageDataPicked;
--(void)setOnImageDataPicked:(id /* block */)setOnImageDataPicked;
--(id /* block */)onPickerDismissed;
--(void)setOnPickerDismissed:(id /* block */)setOnPickerDismissed;
++(id)shared; // 0x003949b4
+-(void)imagePickerControllerDidCancel:(id)a1; // 0x00394a40
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2; // 0x00394b3c
+-(id /* block */)onImageDataPicked; // 0x00394dd8
+-(void)setOnImageDataPicked:(id /* block */)a1; // 0x00394de0
+-(id /* block */)onPickerDismissed; // 0x00394de8
+-(void)setOnPickerDismissed:(id /* block */)a1; // 0x00394df0
 
 @end

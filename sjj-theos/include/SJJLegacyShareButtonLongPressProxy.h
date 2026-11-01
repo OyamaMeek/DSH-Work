@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d348，父类 NSObject
 //
 
+// 职责：代理对象，转发或拦截宿主对象的消息。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,9 +25,9 @@
 
 @interface SJJLegacyShareButtonLongPressProxy : NSObject <UIGestureRecognizerDelegate>
 
-+(id)sharedProxy;
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(void)handleShareButtonLongPress:(id)handleShareButtonLongPress;
++(id)sharedProxy; // 0x00004594
+-(BOOL)gestureRecognizerShouldBegin:(id)a1; // 0x00004620
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x000046b8
+-(void)handleShareButtonLongPress:(id)a1; // 0x000046c0
 
 @end

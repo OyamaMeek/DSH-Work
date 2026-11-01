@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d708，父类 NSObject
 //
 
+// 职责：全局入口：窗口与视频区域的手势、胶囊按钮、更新提示、弹窗调度。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,140 +25,140 @@
 
 @interface siwenjiajiaEntryHandler : NSObject <UIGestureRecognizerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIDocumentPickerDelegate, PHPickerViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, RPPreviewViewControllerDelegate>
 
-+(id)shared;
--(void)sideDockAIHubTap:(id)sideDockAIHubTap;
--(void)configureDoubleTapProfileHeaderNameColor;
--(void)configureDoubleTapQuickAppLaunchItems;
--(void)configureDoubleTapPanelDarkModeFromPopup;
--(void)handleSJJElegantModalButtonTap:(id)handleSJJElegantModalButtonTap;
--(void)handleSJJPackageUpdateCapsuleTap:(id)handleSJJPackageUpdateCapsuleTap;
--(void)handleSJJElegantModalCardPan:(id)handleSJJElegantModalCardPan;
--(void)handleSJJElegantModalBackgroundTap:(id)handleSJJElegantModalBackgroundTap;
--(void)handleSJJElegantModalDoneTap:(id)handleSJJElegantModalDoneTap;
--(void)openPanelAction;
--(void)handleWindowDoubleTap:(id)handleWindowDoubleTap;
--(void)handleImageDetailDoubleTap:(id)handleImageDetailDoubleTap;
--(void)handleVideoCapsuleTaskTap:(id)handleVideoCapsuleTaskTap;
--(void)handleVideoCapsuleLongPress:(id)handleVideoCapsuleLongPress;
--(void)handleVideoCapsuleDoubleTap:(id)handleVideoCapsuleDoubleTap;
--(void)handleVideoCapsuleDownloadDisplayLink:(id)handleVideoCapsuleDownloadDisplayLink;
--(void)previewControllerDidFinish:(id)previewControllerDidFinish;
--(void)previewController:(id)previewController didFinishWithActivityTypes:(id)didFinishWithActivityTypes;
--(void)handleVideoTimeCapsulePan:(id)handleVideoTimeCapsulePan;
--(void)handleVideoTimeCapsuleLongPress:(id)handleVideoTimeCapsuleLongPress;
--(void)handleVideoSystemCapsuleTap:(id)handleVideoSystemCapsuleTap;
--(void)handleVideoSystemCapsulePress:(id)handleVideoSystemCapsulePress;
--(void)dismissVideoSystemCapsulePanelBackground:(id)dismissVideoSystemCapsulePanelBackground;
--(void)handleVideoSystemPanelButtonTap:(id)handleVideoSystemPanelButtonTap;
--(void)handleVideoSystemPanelBrightnessChanged:(id)handleVideoSystemPanelBrightnessChanged;
--(void)handleVideoSystemPanelBrightnessCommit:(id)handleVideoSystemPanelBrightnessCommit;
--(void)handleVideoSystemPanelVolumeChanged:(id)handleVideoSystemPanelVolumeChanged;
--(void)handleVideoSystemPanelVolumeCommit:(id)handleVideoSystemPanelVolumeCommit;
--(void)handleDoubleTapSplitIndicatorTap:(id)handleDoubleTapSplitIndicatorTap;
--(void)handleDoubleTapIndicatorCompactEditorAction:(id)handleDoubleTapIndicatorCompactEditorAction;
--(void)handleDoubleTapIndicatorEditShieldTap:(id)handleDoubleTapIndicatorEditShieldTap;
--(void)handleDoubleTapSplitIndicatorFinishEditing:(id)handleDoubleTapSplitIndicatorFinishEditing;
--(void)handleDoubleTapSplitIndicatorPan:(id)handleDoubleTapSplitIndicatorPan;
--(void)handleDoubleTapSplitIndicatorPinch:(id)handleDoubleTapSplitIndicatorPinch;
--(void)handleDoubleTapSplitIndicatorWindowPinch:(id)handleDoubleTapSplitIndicatorWindowPinch;
--(void)handleVideoControlPan:(id)handleVideoControlPan;
--(void)handleDoubleTapSystemControlTap:(id)handleDoubleTapSystemControlTap;
--(void)handleDoubleTapSystemControlPan:(id)handleDoubleTapSystemControlPan;
--(void)handleDoubleTapQuickAppLaunchTap:(id)handleDoubleTapQuickAppLaunchTap;
--(void)handleVideoQualityCopyLinkOpenWeChat:(id)handleVideoQualityCopyLinkOpenWeChat;
--(void)handleVideoQualityWeChatIconLongPress:(id)handleVideoQualityWeChatIconLongPress;
--(void)confirmVideoDownloadPopup:(id)confirmVideoDownloadPopup;
--(void)cancelVideoDownloadPopup:(id)cancelVideoDownloadPopup;
--(void)handleVideoPopupAction:(id)handleVideoPopupAction;
--(void)handleVideoPopupActionTag:(long long)handleVideoPopupActionTag;
--(void)handleVideoPopupButtonLongPress:(id)handleVideoPopupButtonLongPress;
--(void)handleVideoPopupMenuLongPress:(id)handleVideoPopupMenuLongPress;
--(void)sideDockSaveLongPress:(id)sideDockSaveLongPress;
--(void)sideDockAudioLongPress:(id)sideDockAudioLongPress;
--(void)sideDockAvatarLongPress:(id)sideDockAvatarLongPress;
--(void)handleVideoQualitySelect:(id)handleVideoQualitySelect;
--(void)handleVideoOtherQualitiesEntry:(id)handleVideoOtherQualitiesEntry;
--(void)handleVideoQualityPageControlChanged:(id)handleVideoQualityPageControlChanged;
--(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)sjjSyncVideoQualityPageIndicatorForScrollView;
--(void)scrollViewDidScroll:(id)scrollViewDidScroll;
--(void)scrollViewDidEndDecelerating:(id)scrollViewDidEndDecelerating;
--(void)scrollViewDidEndDragging:(id)scrollViewDidEndDragging willDecelerate:(BOOL)willDecelerate;
--(void)scrollViewDidEndScrollingAnimation:(id)scrollViewDidEndScrollingAnimation;
--(void)handleVideoPopupAvatarTap:(id)handleVideoPopupAvatarTap;
--(void)handleVideoPopupNicknameTap:(id)handleVideoPopupNicknameTap;
--(void)handleVideoPopupSignTap:(id)handleVideoPopupSignTap;
--(void)presentDoubleTapPanelRenameInputForButton:(id)presentDoubleTapPanelRenameInputForButton renameID:(id)renameID defaultTitle:(id)defaultTitle;
--(void)handleVideoPopupMenuTap:(id)handleVideoPopupMenuTap;
--(void)showVideoPopupMenuFirstUseHintFromButton:(id)showVideoPopupMenuFirstUseHintFromButton;
--(void)configureVideoPopupMorphStyle;
--(void)configureVideoPopupMenuButtonImage;
--(void)configureDoubleTapPanelAccentColorForPopup;
--(void)pickVideoPopupMenuButtonImageFromAlbum;
--(void)pickVideoPopupMenuButtonImageFromFile;
--(void)pickVideoQualityWeChatIconFromAlbum;
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo;
--(void)picker:(id)picker didFinishPicking:(id)didFinishPicking;
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel;
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
--(void)documentPickerWasCancelled:(id)documentPickerWasCancelled;
--(void)handleVideoPopupConfigActionTag:(long long)handleVideoPopupConfigActionTag;
--(void)configureVideoPopupCopyLinkInfo;
--(void)presentDoubleTapHistorySheetWithVideoURL:(id)presentDoubleTapHistorySheetWithVideoURL controller:(id)controller awemeModel:(id)awemeModel mode:(long long)mode reopenOnClear:(BOOL)reopenOnClear;
--(void)presentDoubleTapHistorySheetWithVideoURL:(id)presentDoubleTapHistorySheetWithVideoURL controller:(id)controller awemeModel:(id)awemeModel mode:(long long)mode reopenOnClear:(BOOL)reopenOnClear keyword:(id)keyword;
--(void)closeVideoPopupHistoryPanel:(id)closeVideoPopupHistoryPanel;
--(void)handleVideoPopupHistorySearchTap:(id)handleVideoPopupHistorySearchTap;
--(void)handleVideoPopupHistorySearchReturn:(id)handleVideoPopupHistorySearchReturn;
--(void)handleVideoPopupHistoryClearTap:(id)handleVideoPopupHistoryClearTap;
--(void)handleVideoPopupHistoryItemTap:(id)handleVideoPopupHistoryItemTap;
--(void)presentBGMMaterialSheet;
--(void)handleVideoPopupConfigSliderChanged:(id)handleVideoPopupConfigSliderChanged;
--(void)handleVideoPopupConfigSliderCommit:(id)handleVideoPopupConfigSliderCommit;
--(void)refreshVideoPopupConfigLivePreview;
--(id)currentDoubleTapConfigSnapshot;
--(BOOL)applyDoubleTapConfigSnapshot:(id)applyDoubleTapConfigSnapshot errorText:(id *)errorText;
--(void)toggleSideDockMenu:(id)toggleSideDockMenu;
--(void)sideDockAvatarTap:(id)sideDockAvatarTap;
--(void)sideDockLike:(id)sideDockLike;
--(void)sideDockComment:(id)sideDockComment;
--(void)sideDockShare:(id)sideDockShare;
--(void)sideDockNotInterested:(id)sideDockNotInterested;
--(void)sideDockTimerBomb:(id)sideDockTimerBomb;
--(void)sideDockMemo:(id)sideDockMemo;
--(void)sideDockDirectShareLongPress:(id)sideDockDirectShareLongPress;
--(void)presentSideDockAIVideoRobotRuleInputFromButton:(id)presentSideDockAIVideoRobotRuleInputFromButton controller:(id)controller awemeModel:(id)awemeModel;
--(void)presentSideDockAIVideoRobotQuickConfigFromButton:(id)presentSideDockAIVideoRobotQuickConfigFromButton controller:(id)controller awemeModel:(id)awemeModel;
--(void)sideDockAIVideoRobotLongPress:(id)sideDockAIVideoRobotLongPress;
--(void)sideDockPlaybackSpeedLongPress:(id)sideDockPlaybackSpeedLongPress;
--(void)sideDockInlineCameraLongPress:(id)sideDockInlineCameraLongPress;
--(void)sideDockCustomActionTap:(id)sideDockCustomActionTap;
--(void)sideDockSubCapsuleBackgroundTap:(id)sideDockSubCapsuleBackgroundTap;
--(void)sideDockWakeHandleTap:(id)sideDockWakeHandleTap;
--(void)sideDockTouchDown:(id)sideDockTouchDown;
--(void)sideDockTouchUp:(id)sideDockTouchUp;
--(void)sideDockButtonPressDown:(id)sideDockButtonPressDown;
--(void)sideDockButtonPressUp:(id)sideDockButtonPressUp;
--(void)resetSideDockWakeLockVisualsForView:(id)resetSideDockWakeLockVisualsForView animated:(BOOL)animated;
--(void)performSideDockWakeSlideActionID:(id)performSideDockWakeSlideActionID sourceView:(id)sourceView;
--(void)sideDockWakePositionEditDoneTap:(id)sideDockWakePositionEditDoneTap;
--(void)sideDockWakeHandleLongPress:(id)sideDockWakeHandleLongPress;
--(void)handleSideDockPan:(id)handleSideDockPan;
--(void)handleVideoPopupPan:(id)handleVideoPopupPan;
--(void)handleVideoQualityPopupPan:(id)handleVideoQualityPopupPan;
--(void)handleProfileBatchEntryTap:(id)handleProfileBatchEntryTap;
--(void)handleProfileBatchSelectAllTap:(id)handleProfileBatchSelectAllTap;
--(void)handleProfileBatchDownloadTap:(id)handleProfileBatchDownloadTap;
--(void)handleProfileBatchCloseTap:(id)handleProfileBatchCloseTap;
--(void)handleProfileBatchCellToggleTap:(id)handleProfileBatchCellToggleTap;
--(void)handleProfileBatchPanelFilterTap:(id)handleProfileBatchPanelFilterTap;
--(void)handleProfileBatchPanelItemTap:(id)handleProfileBatchPanelItemTap;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(void)glassButtonDown:(id)glassButtonDown;
--(void)glassButtonUp:(id)glassButtonUp;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch;
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin;
++(id)shared; // 0x000206bc
+-(void)sideDockAIHubTap:(id)a1; // 0x00084bf0
+-(void)configureDoubleTapProfileHeaderNameColor; // 0x00020744
+-(void)configureDoubleTapQuickAppLaunchItems; // 0x00020880
+-(void)configureDoubleTapPanelDarkModeFromPopup; // 0x0002091c
+-(void)handleSJJElegantModalButtonTap:(id)a1; // 0x00020f00
+-(void)handleSJJPackageUpdateCapsuleTap:(id)a1; // 0x00023058
+-(void)handleSJJElegantModalCardPan:(id)a1; // 0x00025930
+-(void)handleSJJElegantModalBackgroundTap:(id)a1; // 0x0002606c
+-(void)handleSJJElegantModalDoneTap:(id)a1; // 0x00026224
+-(void)openPanelAction; // 0x00026240
+-(void)handleWindowDoubleTap:(id)a1; // 0x00026264
+-(void)handleImageDetailDoubleTap:(id)a1; // 0x00027854
+-(void)handleVideoCapsuleTaskTap:(id)a1; // 0x00029ccc
+-(void)handleVideoCapsuleLongPress:(id)a1; // 0x0002a9d0
+-(void)handleVideoCapsuleDoubleTap:(id)a1; // 0x0002ad64
+-(void)handleVideoCapsuleDownloadDisplayLink:(id)a1; // 0x0002ae00
+-(void)previewControllerDidFinish:(id)a1; // 0x0002af18
+-(void)previewController:(id)a1 didFinishWithActivityTypes:(id)a2; // 0x0002afb4
+-(void)handleVideoTimeCapsulePan:(id)a1; // 0x0002afb8
+-(void)handleVideoTimeCapsuleLongPress:(id)a1; // 0x0002d304
+-(void)handleVideoSystemCapsuleTap:(id)a1; // 0x0002d7b4
+-(void)handleVideoSystemCapsulePress:(id)a1; // 0x0002d890
+-(void)dismissVideoSystemCapsulePanelBackground:(id)a1; // 0x0002db8c
+-(void)handleVideoSystemPanelButtonTap:(id)a1; // 0x0002dce8
+-(void)handleVideoSystemPanelBrightnessChanged:(id)a1; // 0x0002effc
+-(void)handleVideoSystemPanelBrightnessCommit:(id)a1; // 0x0002f0e4
+-(void)handleVideoSystemPanelVolumeChanged:(id)a1; // 0x0002f1d4
+-(void)handleVideoSystemPanelVolumeCommit:(id)a1; // 0x0002f2ac
+-(void)handleDoubleTapSplitIndicatorTap:(id)a1; // 0x0002f38c
+-(void)handleDoubleTapIndicatorCompactEditorAction:(id)a1; // 0x00030044
+-(void)handleDoubleTapIndicatorEditShieldTap:(id)a1; // 0x00030ba8
+-(void)handleDoubleTapSplitIndicatorFinishEditing:(id)a1; // 0x00030c40
+-(void)handleDoubleTapSplitIndicatorPan:(id)a1; // 0x00030e1c
+-(void)handleDoubleTapSplitIndicatorPinch:(id)a1; // 0x0003126c
+-(void)handleDoubleTapSplitIndicatorWindowPinch:(id)a1; // 0x00031bfc
+-(void)handleVideoControlPan:(id)a1; // 0x000322d4
+-(void)handleDoubleTapSystemControlTap:(id)a1; // 0x000322d8
+-(void)handleDoubleTapSystemControlPan:(id)a1; // 0x00032940
+-(void)handleDoubleTapQuickAppLaunchTap:(id)a1; // 0x00033024
+-(void)handleVideoQualityCopyLinkOpenWeChat:(id)a1; // 0x000332c0
+-(void)handleVideoQualityWeChatIconLongPress:(id)a1; // 0x000336c0
+-(void)confirmVideoDownloadPopup:(id)a1; // 0x00033720
+-(void)cancelVideoDownloadPopup:(id)a1; // 0x00033cc0
+-(void)handleVideoPopupAction:(id)a1; // 0x00033cf0
+-(void)handleVideoPopupActionTag:(long long)a1; // 0x00036c24
+-(void)handleVideoPopupButtonLongPress:(id)a1; // 0x000394e0
+-(void)handleVideoPopupMenuLongPress:(id)a1; // 0x0003dde0
+-(void)sideDockSaveLongPress:(id)a1; // 0x0004cfcc
+-(void)sideDockAudioLongPress:(id)a1; // 0x0004da68
+-(void)sideDockAvatarLongPress:(id)a1; // 0x0004e0ec
+-(void)handleVideoQualitySelect:(id)a1; // 0x0004e6d8
+-(void)handleVideoOtherQualitiesEntry:(id)a1; // 0x0004f3a8
+-(void)handleVideoQualityPageControlChanged:(id)a1; // 0x00051730
+-(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)a1; // 0x00051878
+-(void)scrollViewDidScroll:(id)a1; // 0x000519b0
+-(void)scrollViewDidEndDecelerating:(id)a1; // 0x00051a0c
+-(void)scrollViewDidEndDragging:(id)a1 willDecelerate:(BOOL)a2; // 0x00051b64
+-(void)scrollViewDidEndScrollingAnimation:(id)a1; // 0x00051bd8
+-(void)handleVideoPopupAvatarTap:(id)a1; // 0x00051c38
+-(void)handleVideoPopupNicknameTap:(id)a1; // 0x00052c30
+-(void)handleVideoPopupSignTap:(id)a1; // 0x00054a60
+-(void)presentDoubleTapPanelRenameInputForButton:(id)a1 renameID:(id)a2 defaultTitle:(id)a3; // 0x00054cb8
+-(void)handleVideoPopupMenuTap:(id)a1; // 0x00055528
+-(void)showVideoPopupMenuFirstUseHintFromButton:(id)a1; // 0x00055608
+-(void)configureVideoPopupMorphStyle; // 0x00055fe0
+-(void)configureVideoPopupMenuButtonImage; // 0x000562f4
+-(void)configureDoubleTapPanelAccentColorForPopup; // 0x00058068
+-(void)pickVideoPopupMenuButtonImageFromAlbum; // 0x0005854c
+-(void)pickVideoPopupMenuButtonImageFromFile; // 0x00058664
+-(void)pickVideoQualityWeChatIconFromAlbum; // 0x00058814
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2; // 0x0005892c
+-(void)picker:(id)a1 didFinishPicking:(id)a2; // 0x00059264
+-(void)imagePickerControllerDidCancel:(id)a1; // 0x00059d40
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2; // 0x00059dc0
+-(void)documentPickerWasCancelled:(id)a1; // 0x00059fb4
+-(void)handleVideoPopupConfigActionTag:(long long)a1; // 0x00059fd0
+-(void)configureVideoPopupCopyLinkInfo; // 0x0005c2e0
+-(void)presentDoubleTapHistorySheetWithVideoURL:(id)a1 controller:(id)a2 awemeModel:(id)a3 mode:(long long)a4 reopenOnClear:(BOOL)a5; // 0x0005c878
+-(void)presentDoubleTapHistorySheetWithVideoURL:(id)a1 controller:(id)a2 awemeModel:(id)a3 mode:(long long)a4 reopenOnClear:(BOOL)a5 keyword:(id)a6; // 0x0005c880
+-(void)closeVideoPopupHistoryPanel:(id)a1; // 0x00060de8
+-(void)handleVideoPopupHistorySearchTap:(id)a1; // 0x000610ac
+-(void)handleVideoPopupHistorySearchReturn:(id)a1; // 0x00061228
+-(void)handleVideoPopupHistoryClearTap:(id)a1; // 0x00061230
+-(void)handleVideoPopupHistoryItemTap:(id)a1; // 0x00061308
+-(void)presentBGMMaterialSheet; // 0x000617a4
+-(void)handleVideoPopupConfigSliderChanged:(id)a1; // 0x000617c0
+-(void)handleVideoPopupConfigSliderCommit:(id)a1; // 0x00061b0c
+-(void)refreshVideoPopupConfigLivePreview; // 0x00061b30
+-(id)currentDoubleTapConfigSnapshot; // 0x0006497c
+-(BOOL)applyDoubleTapConfigSnapshot:(id)a1 errorText:(id *)a2; // 0x0006594c
+-(void)toggleSideDockMenu:(id)a1; // 0x00067044
+-(void)sideDockAvatarTap:(id)a1; // 0x00067048
+-(void)sideDockLike:(id)a1; // 0x000670b8
+-(void)sideDockComment:(id)a1; // 0x00067684
+-(void)sideDockShare:(id)a1; // 0x000678b4
+-(void)sideDockNotInterested:(id)a1; // 0x00067ff4
+-(void)sideDockTimerBomb:(id)a1; // 0x00069064
+-(void)sideDockMemo:(id)a1; // 0x000690b4
+-(void)sideDockDirectShareLongPress:(id)a1; // 0x00069224
+-(void)presentSideDockAIVideoRobotRuleInputFromButton:(id)a1 controller:(id)a2 awemeModel:(id)a3; // 0x0006d684
+-(void)presentSideDockAIVideoRobotQuickConfigFromButton:(id)a1 controller:(id)a2 awemeModel:(id)a3; // 0x0006de34
+-(void)sideDockAIVideoRobotLongPress:(id)a1; // 0x0006fc94
+-(void)sideDockPlaybackSpeedLongPress:(id)a1; // 0x0006fe2c
+-(void)sideDockInlineCameraLongPress:(id)a1; // 0x0006ffe8
+-(void)sideDockCustomActionTap:(id)a1; // 0x000701c4
+-(void)sideDockSubCapsuleBackgroundTap:(id)a1; // 0x000758d0
+-(void)sideDockWakeHandleTap:(id)a1; // 0x00075928
+-(void)sideDockTouchDown:(id)a1; // 0x00075ba8
+-(void)sideDockTouchUp:(id)a1; // 0x00075bdc
+-(void)sideDockButtonPressDown:(id)a1; // 0x00075c38
+-(void)sideDockButtonPressUp:(id)a1; // 0x000767a0
+-(void)resetSideDockWakeLockVisualsForView:(id)a1 animated:(BOOL)a2; // 0x00076880
+-(void)performSideDockWakeSlideActionID:(id)a1 sourceView:(id)a2; // 0x000772f0
+-(void)sideDockWakePositionEditDoneTap:(id)a1; // 0x000775c4
+-(void)sideDockWakeHandleLongPress:(id)a1; // 0x00077674
+-(void)handleSideDockPan:(id)a1; // 0x00079890
+-(void)handleVideoPopupPan:(id)a1; // 0x0007bf40
+-(void)handleVideoQualityPopupPan:(id)a1; // 0x0007c254
+-(void)handleProfileBatchEntryTap:(id)a1; // 0x0007c578
+-(void)handleProfileBatchSelectAllTap:(id)a1; // 0x0007dbfc
+-(void)handleProfileBatchDownloadTap:(id)a1; // 0x0007f208
+-(void)handleProfileBatchCloseTap:(id)a1; // 0x0007ffdc
+-(void)handleProfileBatchCellToggleTap:(id)a1; // 0x0007ffe0
+-(void)handleProfileBatchPanelFilterTap:(id)a1; // 0x00080828
+-(void)handleProfileBatchPanelItemTap:(id)a1; // 0x000808b4
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x00080a84
+-(double)tableView:(id)a1 heightForRowAtIndexPath:(id)a2; // 0x00080ae4
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x00080af0
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x00081f7c
+-(void)glassButtonDown:(id)a1; // 0x00082144
+-(void)glassButtonUp:(id)a1; // 0x00082250
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x0008233c
+-(BOOL)gestureRecognizer:(id)a1 shouldReceiveTouch:(id)a2; // 0x00082b10
+-(BOOL)gestureRecognizerShouldBegin:(id)a1; // 0x00084658
 
 @end

@@ -11,65 +11,65 @@
 
 // 0x00322408  5 条指令
 // C 调用: _objc_storeWeak
--(void)setImageView:(id)setImageView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322414  2 条指令
 -(id)sourceImage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0032241c  5 条指令
 // C 调用: _objc_storeStrong
--(void)setSourceImage:(id)setSourceImage { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSourceImage:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322428  2 条指令
 -(id)originalAnimationImages { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322430  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setOriginalAnimationImages:(id)setOriginalAnimationImages { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalAnimationImages:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322438  2 条指令
 -(id)originalHighlightedAnimationImages { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322440  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setOriginalHighlightedAnimationImages:(id)setOriginalHighlightedAnimationImages { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalHighlightedAnimationImages:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322448  2 条指令
 -(id)frames { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322450  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setFrames:(id)setFrames { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFrames:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322458  2 条指令
 -(double)originalAnimationDuration { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322460  2 条指令
--(void)setOriginalAnimationDuration:(double)setOriginalAnimationDuration { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalAnimationDuration:(double)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322468  2 条指令
 -(long long)originalAnimationRepeatCount { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322470  2 条指令
--(void)setOriginalAnimationRepeatCount:(long long)setOriginalAnimationRepeatCount { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalAnimationRepeatCount:(long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322478  2 条指令
 -(BOOL)originallyAnimating { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322480  2 条指令
--(void)setOriginallyAnimating:(BOOL)setOriginallyAnimating { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginallyAnimating:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322488  2 条指令
 -(BOOL)usesAvatar { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322490  2 条指令
--(void)setUsesAvatar:(BOOL)setUsesAvatar { /* 重建骨架，语义见 pseudocode */ }
+-(void)setUsesAvatar:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00322498  2 条指令
 -(unsigned long long)avatarGeneration { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003224a0  2 条指令
--(void)setAvatarGeneration:(unsigned long long)setAvatarGeneration { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAvatarGeneration:(unsigned long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003224a8  55 条指令
 // 字符串: "UIButtonConfiguration", "glassButtonConfiguration", "clearGlassButtonConfiguration"

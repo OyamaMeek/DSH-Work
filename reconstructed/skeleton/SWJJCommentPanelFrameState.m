@@ -11,19 +11,19 @@
 
 // 0x004736ec  6 条指令
 // C 调用: _objc_storeWeak
--(void)setParent:(id)setParent { /* 重建骨架，语义见 pseudocode */ }
+-(void)setParent:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004736f8  3 条指令
 -(struct CGRect)nativeFrame { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00473704  3 条指令
--(void)setNativeFrame:(struct CGRect)setNativeFrame { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNativeFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00473710  3 条指令
 -(struct CGRect)appliedFrame { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0047371c  3 条指令
--(void)setAppliedFrame:(struct CGRect)setAppliedFrame { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAppliedFrame:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00473728  17 条指令
 // C 调用: _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeWeak

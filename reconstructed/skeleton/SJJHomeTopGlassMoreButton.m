@@ -7,6 +7,6 @@
 
 // 0x00322348  23 条指令
 // 消息: isHidden, isUserInteractionEnabled, alpha
--(BOOL)pointInside:(struct CGPoint)pointInside withEvent:(id)withEvent { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)pointInside:(struct CGPoint)a1 withEvent:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e5b8，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -49,39 +54,39 @@
 
 @property (strong, nonatomic) NSCache * thumbnailCache;
 
-+(void)presentFrom:(id)presentFrom;
--(void)viewDidLoad;
--(void)viewDidLayoutSubviews;
--(void)refreshSubtitle;
--(void)historyDidChange;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)tableView:(id)tableView willDisplayCell:(id)willDisplayCell forRowAtIndexPath:(id)forRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(void)saveHistoryButtonTap:(id)saveHistoryButtonTap;
--(void)deleteHistoryButtonTap:(id)deleteHistoryButtonTap;
--(BOOL)tableView:(id)tableView canEditRowAtIndexPath:(id)canEditRowAtIndexPath;
--(void)tableView:(id)tableView commitEditingStyle:(long long)commitEditingStyle forRowAtIndexPath:(id)forRowAtIndexPath;
--(id)tableView:(id)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(id)titleForDeleteConfirmationButtonForRowAtIndexPath;
--(void)closeTap;
--(void)dealloc;
--(id)dimmingControl;
--(void)setDimmingControl:(id)setDimmingControl;
--(id)blurView;
--(void)setBlurView:(id)setBlurView;
--(id)panelView;
--(void)setPanelView:(id)setPanelView;
--(id)titleLabel;
--(void)setTitleLabel:(id)setTitleLabel;
--(id)subtitleLabel;
--(void)setSubtitleLabel:(id)setSubtitleLabel;
--(id)closeButton;
--(void)setCloseButton:(id)setCloseButton;
--(id)tableView;
--(void)setTableView:(id)setTableView;
--(id)items;
--(void)setItems:(id)setItems;
--(id)thumbnailCache;
--(void)setThumbnailCache:(id)setThumbnailCache;
++(void)presentFrom:(id)a1; // 0x00427510
+-(void)viewDidLoad; // 0x00427720
+-(void)viewDidLayoutSubviews; // 0x00428698
+-(void)refreshSubtitle; // 0x00428a9c
+-(void)historyDidChange; // 0x00428b8c
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x00428c34
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x00428cc4
+-(void)tableView:(id)a1 willDisplayCell:(id)a2 forRowAtIndexPath:(id)a3; // 0x0042ab50
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x0042ab54
+-(void)saveHistoryButtonTap:(id)a1; // 0x0042ac84
+-(void)deleteHistoryButtonTap:(id)a1; // 0x0042ae50
+-(BOOL)tableView:(id)a1 canEditRowAtIndexPath:(id)a2; // 0x0042b42c
+-(void)tableView:(id)a1 commitEditingStyle:(long long)a2 forRowAtIndexPath:(id)a3; // 0x0042b4f4
+-(id)tableView:(id)a1 titleForDeleteConfirmationButtonForRowAtIndexPath:(id)a2; // 0x0042b664
+-(void)closeTap; // 0x0042b670
+-(void)dealloc; // 0x0042b678
+-(id)dimmingControl; // 0x0042b6f0
+-(void)setDimmingControl:(id)a1; // 0x0042b6fc
+-(id)blurView; // 0x0042b70c
+-(void)setBlurView:(id)a1; // 0x0042b718
+-(id)panelView; // 0x0042b728
+-(void)setPanelView:(id)a1; // 0x0042b734
+-(id)titleLabel; // 0x0042b744
+-(void)setTitleLabel:(id)a1; // 0x0042b750
+-(id)subtitleLabel; // 0x0042b760
+-(void)setSubtitleLabel:(id)a1; // 0x0042b76c
+-(id)closeButton; // 0x0042b77c
+-(void)setCloseButton:(id)a1; // 0x0042b788
+-(id)tableView; // 0x0042b798
+-(void)setTableView:(id)a1; // 0x0042b7a4
+-(id)items; // 0x0042b7b4
+-(void)setItems:(id)a1; // 0x0042b7c0
+-(id)thumbnailCache; // 0x0042b7cc
+-(void)setThumbnailCache:(id)a1; // 0x0042b7d8
 
 @end

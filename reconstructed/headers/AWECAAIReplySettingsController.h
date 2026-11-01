@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fcd8，父类 UIViewController
 //
 
+// 职责：AI 回复设置页：开关、延迟、白名单、人设编辑。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -193,161 +198,161 @@
 
 @property (strong, nonatomic) NSArray * personaMemoList;
 
--(void)viewDidLoad;
--(void)endEdit;
--(void)reloadMemoList;
--(id)card:(struct CGRect)card;
--(id)field:(id)field value:(id)value secure:(BOOL)secure;
--(id)apiKeyAccessoryView;
--(void)updateAPIKeyVisibilityButtonAppearance;
--(void)toggleAPIKeyVisibility;
--(id)fieldCard:(struct CGRect)fieldCard title:(struct CGSize)title field:(id)field;
--(id)resolvedEndpoint;
--(BOOL)isPearModelPickerUnlocked;
--(void)pickPearAPIChatModel:(id)pickPearAPIChatModel;
--(void)presentPearModelPickerPasswordFromButton:(id)presentPearModelPickerPasswordFromButton;
--(void)pickOpenAIChatModel:(id)pickOpenAIChatModel;
--(void)presentPearAPIChatModelSheetFromButton:(id)presentPearAPIChatModelSheetFromButton;
--(void)addCurrentPersonaToMemo;
--(void)pickPersonaMemo;
--(id)normalizedIDListFromText:(id)normalizedIDListFromText;
--(void)pickAutoReplyPersona;
--(void)directSwitchChanged:(id)directSwitchChanged;
--(void)showAutoReplyWhitelistGuide;
--(void)autoReplySwitchChanged:(id)autoReplySwitchChanged;
--(void)successTextSwitchChanged:(id)successTextSwitchChanged;
--(void)previewAutoReplyEffects;
--(void)proactiveChatSwitchChanged:(id)proactiveChatSwitchChanged;
--(void)proactiveRandomSwitchChanged:(id)proactiveRandomSwitchChanged;
--(void)autoReplyDelayModeChanged:(id)autoReplyDelayModeChanged;
--(id)normalizedStylePoolFromText:(id)normalizedStylePoolFromText;
--(id)normalizedPhraseListFromText:(id)normalizedPhraseListFromText;
--(id)normalizedSuccessTextPoolFromText:(id)normalizedSuccessTextPoolFromText;
--(void)refreshAutoReplyLogs;
--(void)clearAutoReplyLogs;
--(id)legacySnapshotKeys;
--(id)allAIPersistedKeys;
--(void)applySnapshotDictionary:(id)applySnapshotDictionary keys:(id)keys;
--(void)exportConfigSnapshot;
--(void)importConfigSnapshot;
--(void)saveConfig;
--(void)saveAndTest;
--(void)setTesting:(BOOL)setTesting;
--(void)testAI;
--(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn;
--(id)scrollView;
--(void)setScrollView:(id)setScrollView;
--(id)providerField;
--(void)setProviderField:(id)setProviderField;
--(id)baseURLField;
--(void)setBaseURLField:(id)setBaseURLField;
--(id)apiKeyField;
--(void)setApiKeyField:(id)setApiKeyField;
--(id)apiKeyVisibilityButton;
--(void)setApiKeyVisibilityButton:(id)setApiKeyVisibilityButton;
--(id)modelField;
--(void)setModelField:(id)setModelField;
--(id)replyLengthField;
--(void)setReplyLengthField:(id)setReplyLengthField;
--(id)personaView;
--(void)setPersonaView:(id)setPersonaView;
--(id)boundaryControl;
--(void)setBoundaryControl:(id)setBoundaryControl;
--(id)directSwitch;
--(void)setDirectSwitch:(id)setDirectSwitch;
--(id)loadingHintSwitch;
--(void)setLoadingHintSwitch:(id)setLoadingHintSwitch;
--(id)sentHintSwitch;
--(void)setSentHintSwitch:(id)setSentHintSwitch;
--(id)autoReplySwitch;
--(void)setAutoReplySwitch:(id)setAutoReplySwitch;
--(id)autoReplyGroupSwitch;
--(void)setAutoReplyGroupSwitch:(id)setAutoReplyGroupSwitch;
--(id)autoReplyPrivateSwitch;
--(void)setAutoReplyPrivateSwitch:(id)setAutoReplyPrivateSwitch;
--(id)autoReplyRequireTargetSwitch;
--(void)setAutoReplyRequireTargetSwitch:(id)setAutoReplyRequireTargetSwitch;
--(id)autoReplyTextOnlySwitch;
--(void)setAutoReplyTextOnlySwitch:(id)setAutoReplyTextOnlySwitch;
--(id)autoReplyTodayOnlySwitch;
--(void)setAutoReplyTodayOnlySwitch:(id)setAutoReplyTodayOnlySwitch;
--(id)autoReplyMentionOnlySwitch;
--(void)setAutoReplyMentionOnlySwitch:(id)setAutoReplyMentionOnlySwitch;
--(id)autoReplyContinuousSwitch;
--(void)setAutoReplyContinuousSwitch:(id)setAutoReplyContinuousSwitch;
--(id)autoReplyGroupBypassWhitelistSwitch;
--(void)setAutoReplyGroupBypassWhitelistSwitch:(id)setAutoReplyGroupBypassWhitelistSwitch;
--(id)autoReplyDelayModeControl;
--(void)setAutoReplyDelayModeControl:(id)setAutoReplyDelayModeControl;
--(id)autoReplyDelayField;
--(void)setAutoReplyDelayField:(id)setAutoReplyDelayField;
--(id)autoReplyCooldownField;
--(void)setAutoReplyCooldownField:(id)setAutoReplyCooldownField;
--(id)autoReplyWhitelistField;
--(void)setAutoReplyWhitelistField:(id)setAutoReplyWhitelistField;
--(id)autoReplyIndicatorSizeField;
--(void)setAutoReplyIndicatorSizeField:(id)setAutoReplyIndicatorSizeField;
--(id)commentAIButtonSizeField;
--(void)setCommentAIButtonSizeField:(id)setCommentAIButtonSizeField;
--(id)commentAIDraftSwitch;
--(void)setCommentAIDraftSwitch:(id)setCommentAIDraftSwitch;
--(id)autoReplyEffectLevelControl;
--(void)setAutoReplyEffectLevelControl:(id)setAutoReplyEffectLevelControl;
--(id)autoReplySuccessTextSwitch;
--(void)setAutoReplySuccessTextSwitch:(id)setAutoReplySuccessTextSwitch;
--(id)autoReplySuccessTextPoolView;
--(void)setAutoReplySuccessTextPoolView:(id)setAutoReplySuccessTextPoolView;
--(id)autoReplyEffectPreviewButton;
--(void)setAutoReplyEffectPreviewButton:(id)setAutoReplyEffectPreviewButton;
--(id)autoReplyPersonaButton;
--(void)setAutoReplyPersonaButton:(id)setAutoReplyPersonaButton;
--(id)autoReplyRandomDelaySwitch;
--(void)setAutoReplyRandomDelaySwitch:(id)setAutoReplyRandomDelaySwitch;
--(id)autoReplyDelayMinField;
--(void)setAutoReplyDelayMinField:(id)setAutoReplyDelayMinField;
--(id)autoReplyDelayMaxField;
--(void)setAutoReplyDelayMaxField:(id)setAutoReplyDelayMaxField;
--(id)autoReplyStyleRotationSwitch;
--(void)setAutoReplyStyleRotationSwitch:(id)setAutoReplyStyleRotationSwitch;
--(id)autoReplyFastModeSwitch;
--(void)setAutoReplyFastModeSwitch:(id)setAutoReplyFastModeSwitch;
--(id)autoReplyStylePoolView;
--(void)setAutoReplyStylePoolView:(id)setAutoReplyStylePoolView;
--(id)autoReplyLogView;
--(void)setAutoReplyLogView:(id)setAutoReplyLogView;
--(id)quickPhrasesView;
--(void)setQuickPhrasesView:(id)setQuickPhrasesView;
--(id)contextSummarySwitch;
--(void)setContextSummarySwitch:(id)setContextSummarySwitch;
--(id)dndSwitch;
--(void)setDndSwitch:(id)setDndSwitch;
--(id)dndStartHourField;
--(void)setDndStartHourField:(id)setDndStartHourField;
--(id)dndEndHourField;
--(void)setDndEndHourField:(id)setDndEndHourField;
--(id)proactiveChatSwitch;
--(void)setProactiveChatSwitch:(id)setProactiveChatSwitch;
--(id)proactivePrivateSwitch;
--(void)setProactivePrivateSwitch:(id)setProactivePrivateSwitch;
--(id)proactiveGroupSwitch;
--(void)setProactiveGroupSwitch:(id)setProactiveGroupSwitch;
--(id)proactiveChatIntervalField;
--(void)setProactiveChatIntervalField:(id)setProactiveChatIntervalField;
--(id)proactiveWhitelistField;
--(void)setProactiveWhitelistField:(id)setProactiveWhitelistField;
--(id)proactiveRandomIntervalSwitch;
--(void)setProactiveRandomIntervalSwitch:(id)setProactiveRandomIntervalSwitch;
--(id)proactiveRandomMinField;
--(void)setProactiveRandomMinField:(id)setProactiveRandomMinField;
--(id)proactiveRandomMaxField;
--(void)setProactiveRandomMaxField:(id)setProactiveRandomMaxField;
--(id)memoSelectButton;
--(void)setMemoSelectButton:(id)setMemoSelectButton;
--(id)testButton;
--(void)setTestButton:(id)setTestButton;
--(id)autoReplyWhitelistGuideButton;
--(void)setAutoReplyWhitelistGuideButton:(id)setAutoReplyWhitelistGuideButton;
--(id)personaMemoList;
--(void)setPersonaMemoList:(id)setPersonaMemoList;
+-(void)viewDidLoad; // 0x00630550
+-(void)endEdit; // 0x00635e90
+-(void)reloadMemoList; // 0x00635ed4
+-(id)card:(struct CGRect)a1; // 0x00635f78
+-(id)field:(id)a1 value:(id)a2 secure:(BOOL)a3; // 0x006360bc
+-(id)apiKeyAccessoryView; // 0x006363bc
+-(void)updateAPIKeyVisibilityButtonAppearance; // 0x00636534
+-(void)toggleAPIKeyVisibility; // 0x00636744
+-(id)fieldCard:(struct CGRect)a1 title:(struct CGSize)a2 field:(id)a3; // 0x00636844
+-(id)resolvedEndpoint; // 0x00636954
+-(BOOL)isPearModelPickerUnlocked; // 0x006369dc
+-(void)pickPearAPIChatModel:(id)a1; // 0x00636a34
+-(void)presentPearModelPickerPasswordFromButton:(id)a1; // 0x00636a94
+-(void)pickOpenAIChatModel:(id)a1; // 0x00636e88
+-(void)presentPearAPIChatModelSheetFromButton:(id)a1; // 0x00637110
+-(void)addCurrentPersonaToMemo; // 0x006373fc
+-(void)pickPersonaMemo; // 0x006375ac
+-(id)normalizedIDListFromText:(id)a1; // 0x0063797c
+-(void)pickAutoReplyPersona; // 0x00637ad4
+-(void)directSwitchChanged:(id)a1; // 0x00637ecc
+-(void)showAutoReplyWhitelistGuide; // 0x00637ed0
+-(void)autoReplySwitchChanged:(id)a1; // 0x00638040
+-(void)successTextSwitchChanged:(id)a1; // 0x00638600
+-(void)previewAutoReplyEffects; // 0x0063869c
+-(void)proactiveChatSwitchChanged:(id)a1; // 0x006387f0
+-(void)proactiveRandomSwitchChanged:(id)a1; // 0x00638978
+-(void)autoReplyDelayModeChanged:(id)a1; // 0x00638a34
+-(id)normalizedStylePoolFromText:(id)a1; // 0x00638ad4
+-(id)normalizedPhraseListFromText:(id)a1; // 0x00638c40
+-(id)normalizedSuccessTextPoolFromText:(id)a1; // 0x00638dac
+-(void)refreshAutoReplyLogs; // 0x00638f18
+-(void)clearAutoReplyLogs; // 0x0063900c
+-(id)legacySnapshotKeys; // 0x006390a8
+-(id)allAIPersistedKeys; // 0x006397c4
+-(void)applySnapshotDictionary:(id)a1 keys:(id)a2; // 0x00639a20
+-(void)exportConfigSnapshot; // 0x00639c28
+-(void)importConfigSnapshot; // 0x00639f10
+-(void)saveConfig; // 0x0063a2ec
+-(void)saveAndTest; // 0x0063b4d8
+-(void)setTesting:(BOOL)a1; // 0x0063b50c
+-(void)testAI; // 0x0063b5cc
+-(BOOL)textFieldShouldReturn:(id)a1; // 0x0063bb5c
+-(id)scrollView; // 0x0063bb78
+-(void)setScrollView:(id)a1; // 0x0063bb84
+-(id)providerField; // 0x0063bb94
+-(void)setProviderField:(id)a1; // 0x0063bba0
+-(id)baseURLField; // 0x0063bbb0
+-(void)setBaseURLField:(id)a1; // 0x0063bbbc
+-(id)apiKeyField; // 0x0063bbcc
+-(void)setApiKeyField:(id)a1; // 0x0063bbd8
+-(id)apiKeyVisibilityButton; // 0x0063bbe8
+-(void)setApiKeyVisibilityButton:(id)a1; // 0x0063bbf4
+-(id)modelField; // 0x0063bc04
+-(void)setModelField:(id)a1; // 0x0063bc10
+-(id)replyLengthField; // 0x0063bc20
+-(void)setReplyLengthField:(id)a1; // 0x0063bc2c
+-(id)personaView; // 0x0063bc3c
+-(void)setPersonaView:(id)a1; // 0x0063bc48
+-(id)boundaryControl; // 0x0063bc58
+-(void)setBoundaryControl:(id)a1; // 0x0063bc64
+-(id)directSwitch; // 0x0063bc74
+-(void)setDirectSwitch:(id)a1; // 0x0063bc80
+-(id)loadingHintSwitch; // 0x0063bc90
+-(void)setLoadingHintSwitch:(id)a1; // 0x0063bc9c
+-(id)sentHintSwitch; // 0x0063bcac
+-(void)setSentHintSwitch:(id)a1; // 0x0063bcb8
+-(id)autoReplySwitch; // 0x0063bcc8
+-(void)setAutoReplySwitch:(id)a1; // 0x0063bcd4
+-(id)autoReplyGroupSwitch; // 0x0063bce4
+-(void)setAutoReplyGroupSwitch:(id)a1; // 0x0063bcf0
+-(id)autoReplyPrivateSwitch; // 0x0063bd00
+-(void)setAutoReplyPrivateSwitch:(id)a1; // 0x0063bd0c
+-(id)autoReplyRequireTargetSwitch; // 0x0063bd1c
+-(void)setAutoReplyRequireTargetSwitch:(id)a1; // 0x0063bd28
+-(id)autoReplyTextOnlySwitch; // 0x0063bd38
+-(void)setAutoReplyTextOnlySwitch:(id)a1; // 0x0063bd44
+-(id)autoReplyTodayOnlySwitch; // 0x0063bd54
+-(void)setAutoReplyTodayOnlySwitch:(id)a1; // 0x0063bd60
+-(id)autoReplyMentionOnlySwitch; // 0x0063bd70
+-(void)setAutoReplyMentionOnlySwitch:(id)a1; // 0x0063bd7c
+-(id)autoReplyContinuousSwitch; // 0x0063bd8c
+-(void)setAutoReplyContinuousSwitch:(id)a1; // 0x0063bd98
+-(id)autoReplyGroupBypassWhitelistSwitch; // 0x0063bda8
+-(void)setAutoReplyGroupBypassWhitelistSwitch:(id)a1; // 0x0063bdb4
+-(id)autoReplyDelayModeControl; // 0x0063bdc4
+-(void)setAutoReplyDelayModeControl:(id)a1; // 0x0063bdd0
+-(id)autoReplyDelayField; // 0x0063bde0
+-(void)setAutoReplyDelayField:(id)a1; // 0x0063bdec
+-(id)autoReplyCooldownField; // 0x0063bdfc
+-(void)setAutoReplyCooldownField:(id)a1; // 0x0063be08
+-(id)autoReplyWhitelistField; // 0x0063be18
+-(void)setAutoReplyWhitelistField:(id)a1; // 0x0063be24
+-(id)autoReplyIndicatorSizeField; // 0x0063be34
+-(void)setAutoReplyIndicatorSizeField:(id)a1; // 0x0063be40
+-(id)commentAIButtonSizeField; // 0x0063be50
+-(void)setCommentAIButtonSizeField:(id)a1; // 0x0063be5c
+-(id)commentAIDraftSwitch; // 0x0063be6c
+-(void)setCommentAIDraftSwitch:(id)a1; // 0x0063be78
+-(id)autoReplyEffectLevelControl; // 0x0063be88
+-(void)setAutoReplyEffectLevelControl:(id)a1; // 0x0063be94
+-(id)autoReplySuccessTextSwitch; // 0x0063bea4
+-(void)setAutoReplySuccessTextSwitch:(id)a1; // 0x0063beb0
+-(id)autoReplySuccessTextPoolView; // 0x0063bec0
+-(void)setAutoReplySuccessTextPoolView:(id)a1; // 0x0063becc
+-(id)autoReplyEffectPreviewButton; // 0x0063bedc
+-(void)setAutoReplyEffectPreviewButton:(id)a1; // 0x0063bee8
+-(id)autoReplyPersonaButton; // 0x0063bef8
+-(void)setAutoReplyPersonaButton:(id)a1; // 0x0063bf04
+-(id)autoReplyRandomDelaySwitch; // 0x0063bf14
+-(void)setAutoReplyRandomDelaySwitch:(id)a1; // 0x0063bf20
+-(id)autoReplyDelayMinField; // 0x0063bf30
+-(void)setAutoReplyDelayMinField:(id)a1; // 0x0063bf3c
+-(id)autoReplyDelayMaxField; // 0x0063bf4c
+-(void)setAutoReplyDelayMaxField:(id)a1; // 0x0063bf58
+-(id)autoReplyStyleRotationSwitch; // 0x0063bf68
+-(void)setAutoReplyStyleRotationSwitch:(id)a1; // 0x0063bf74
+-(id)autoReplyFastModeSwitch; // 0x0063bf84
+-(void)setAutoReplyFastModeSwitch:(id)a1; // 0x0063bf90
+-(id)autoReplyStylePoolView; // 0x0063bfa0
+-(void)setAutoReplyStylePoolView:(id)a1; // 0x0063bfac
+-(id)autoReplyLogView; // 0x0063bfbc
+-(void)setAutoReplyLogView:(id)a1; // 0x0063bfc8
+-(id)quickPhrasesView; // 0x0063bfd8
+-(void)setQuickPhrasesView:(id)a1; // 0x0063bfe4
+-(id)contextSummarySwitch; // 0x0063bff4
+-(void)setContextSummarySwitch:(id)a1; // 0x0063c000
+-(id)dndSwitch; // 0x0063c010
+-(void)setDndSwitch:(id)a1; // 0x0063c01c
+-(id)dndStartHourField; // 0x0063c02c
+-(void)setDndStartHourField:(id)a1; // 0x0063c038
+-(id)dndEndHourField; // 0x0063c048
+-(void)setDndEndHourField:(id)a1; // 0x0063c054
+-(id)proactiveChatSwitch; // 0x0063c064
+-(void)setProactiveChatSwitch:(id)a1; // 0x0063c070
+-(id)proactivePrivateSwitch; // 0x0063c080
+-(void)setProactivePrivateSwitch:(id)a1; // 0x0063c08c
+-(id)proactiveGroupSwitch; // 0x0063c09c
+-(void)setProactiveGroupSwitch:(id)a1; // 0x0063c0a8
+-(id)proactiveChatIntervalField; // 0x0063c0b8
+-(void)setProactiveChatIntervalField:(id)a1; // 0x0063c0c4
+-(id)proactiveWhitelistField; // 0x0063c0d4
+-(void)setProactiveWhitelistField:(id)a1; // 0x0063c0e0
+-(id)proactiveRandomIntervalSwitch; // 0x0063c0f0
+-(void)setProactiveRandomIntervalSwitch:(id)a1; // 0x0063c0fc
+-(id)proactiveRandomMinField; // 0x0063c10c
+-(void)setProactiveRandomMinField:(id)a1; // 0x0063c118
+-(id)proactiveRandomMaxField; // 0x0063c128
+-(void)setProactiveRandomMaxField:(id)a1; // 0x0063c134
+-(id)memoSelectButton; // 0x0063c144
+-(void)setMemoSelectButton:(id)a1; // 0x0063c150
+-(id)testButton; // 0x0063c160
+-(void)setTestButton:(id)a1; // 0x0063c16c
+-(id)autoReplyWhitelistGuideButton; // 0x0063c17c
+-(void)setAutoReplyWhitelistGuideButton:(id)a1; // 0x0063c188
+-(id)personaMemoList; // 0x0063c198
+-(void)setPersonaMemoList:(id)a1; // 0x0063c1a4
 
 @end

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ef18，父类 UITableViewCell
 //
 
+// 职责：列表单元视图。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,19 +45,19 @@
 
 @property (strong, nonatomic) UIImageView * trailingIconView;
 
--(id)initWithStyle:(long long)initWithStyle reuseIdentifier:(id)reuseIdentifier;
--(void)configureName:(id)configureName meta:(id)meta symbol:(id)symbol accent:(id)accent selected:(BOOL)selected selectable:(BOOL)selectable;
--(id)cardView;
--(void)setCardView:(id)setCardView;
--(id)iconPlate;
--(void)setIconPlate:(id)setIconPlate;
--(id)itemIconView;
--(void)setItemIconView:(id)setItemIconView;
--(id)nameLabel;
--(void)setNameLabel:(id)setNameLabel;
--(id)metaLabel;
--(void)setMetaLabel:(id)setMetaLabel;
--(id)trailingIconView;
--(void)setTrailingIconView:(id)setTrailingIconView;
+-(id)initWithStyle:(long long)a1 reuseIdentifier:(id)a2; // 0x0050d894
+-(void)configureName:(id)a1 meta:(id)a2 symbol:(id)a3 accent:(id)a4 selected:(BOOL)a5 selectable:(BOOL)a6; // 0x0050f2d0
+-(id)cardView; // 0x0050fac4
+-(void)setCardView:(id)a1; // 0x0050fad0
+-(id)iconPlate; // 0x0050fae0
+-(void)setIconPlate:(id)a1; // 0x0050faec
+-(id)itemIconView; // 0x0050fafc
+-(void)setItemIconView:(id)a1; // 0x0050fb08
+-(id)nameLabel; // 0x0050fb18
+-(void)setNameLabel:(id)a1; // 0x0050fb24
+-(id)metaLabel; // 0x0050fb34
+-(void)setMetaLabel:(id)a1; // 0x0050fb40
+-(id)trailingIconView; // 0x0050fb50
+-(void)setTrailingIconView:(id)a1; // 0x0050fb5c
 
 @end

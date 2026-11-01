@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d780，父类 UIViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -52,31 +57,31 @@
 
 @property (copy, nonatomic) NSString * hintText;
 
--(double)resolvedTargetAspectRatio;
--(void)viewDidLoad;
--(void)viewDidLayoutSubviews;
--(id)viewForZoomingInScrollView:(id)viewForZoomingInScrollView;
--(void)handleCancel;
--(void)handleDone;
--(id)sourceImage;
--(void)setSourceImage:(id)setSourceImage;
--(id /* block */)completion;
--(void)setCompletion:(id /* block */)setCompletion;
--(id /* block */)rectCompletion;
--(void)setRectCompletion:(id /* block */)setRectCompletion;
--(id /* block */)cancelCompletion;
--(void)setCancelCompletion:(id /* block */)setCancelCompletion;
--(id)scrollView;
--(void)setScrollView:(id)setScrollView;
--(id)imageView;
--(void)setImageView:(id)setImageView;
--(id)overlayMaskLayer;
--(void)setOverlayMaskLayer:(id)setOverlayMaskLayer;
--(BOOL)didSetupInitialLayout;
--(void)setDidSetupInitialLayout:(BOOL)setDidSetupInitialLayout;
--(double)targetAspectRatio;
--(void)setTargetAspectRatio:(double)setTargetAspectRatio;
--(id)hintText;
--(void)setHintText:(id)setHintText;
+-(double)resolvedTargetAspectRatio; // 0x00084c88
+-(void)viewDidLoad; // 0x00084e3c
+-(void)viewDidLayoutSubviews; // 0x00085514
+-(id)viewForZoomingInScrollView:(id)a1; // 0x00085b60
+-(void)handleCancel; // 0x00085c08
+-(void)handleDone; // 0x00085cb0
+-(id)sourceImage; // 0x000863ec
+-(void)setSourceImage:(id)a1; // 0x000863f8
+-(id /* block */)completion; // 0x00086408
+-(void)setCompletion:(id /* block */)a1; // 0x00086414
+-(id /* block */)rectCompletion; // 0x00086420
+-(void)setRectCompletion:(id /* block */)a1; // 0x0008642c
+-(id /* block */)cancelCompletion; // 0x00086438
+-(void)setCancelCompletion:(id /* block */)a1; // 0x00086444
+-(id)scrollView; // 0x00086450
+-(void)setScrollView:(id)a1; // 0x0008645c
+-(id)imageView; // 0x0008646c
+-(void)setImageView:(id)a1; // 0x00086478
+-(id)overlayMaskLayer; // 0x00086488
+-(void)setOverlayMaskLayer:(id)a1; // 0x00086494
+-(BOOL)didSetupInitialLayout; // 0x000864a4
+-(void)setDidSetupInitialLayout:(BOOL)a1; // 0x000864b8
+-(double)targetAspectRatio; // 0x000864cc
+-(void)setTargetAspectRatio:(double)a1; // 0x000864e0
+-(id)hintText; // 0x000864f4
+-(void)setHintText:(id)a1; // 0x00086500
 
 @end

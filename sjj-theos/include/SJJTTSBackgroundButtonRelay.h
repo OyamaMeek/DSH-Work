@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f1c0，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -31,15 +36,15 @@
 
 @property (nonatomic) struct CGPoint panStartCenter;
 
--(void)openBackgroundSettings;
--(void)closeQuickVoicePicker;
--(void)dragButton:(id)dragButton;
--(void)openQuickVoicePicker:(id)openQuickVoicePicker;
--(id)owner;
--(void)setOwner:(id)setOwner;
--(id)button;
--(void)setButton:(id)setButton;
--(struct CGPoint)panStartCenter;
--(void)setPanStartCenter:(struct CGPoint)setPanStartCenter;
+-(void)openBackgroundSettings; // 0x0053ba80
+-(void)closeQuickVoicePicker; // 0x0053bcd0
+-(void)dragButton:(id)a1; // 0x0053bd54
+-(void)openQuickVoicePicker:(id)a1; // 0x0053c0e0
+-(id)owner; // 0x0053c838
+-(void)setOwner:(id)a1; // 0x0053c860
+-(id)button; // 0x0053c86c
+-(void)setButton:(id)a1; // 0x0053c894
+-(struct CGPoint)panStartCenter; // 0x0053c8a0
+-(void)setPanStartCenter:(struct CGPoint)a1; // 0x0053c8a8
 
 @end

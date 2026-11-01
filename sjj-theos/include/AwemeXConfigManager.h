@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ece8，父类 NSObject
 //
 
+// 职责：抖音配置读取封装。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -35,18 +40,18 @@
 
 @property (strong, nonatomic) NSHashTable * g_chapterControllers;
 
-+(id)shared;
--(id)g_filteredUserIDs;
--(void)setG_filteredUserIDs:(id)setG_filteredUserIDs;
--(id)g_filteredGroupIDs;
--(void)setG_filteredGroupIDs:(id)setG_filteredGroupIDs;
--(BOOL)g_isSecondFriendHidden;
--(void)setG_isSecondFriendHidden:(BOOL)setG_isSecondFriendHidden;
--(id)allChatModels2;
--(void)setAllChatModels2:(id)setAllChatModels2;
--(id)knownFriendObjects;
--(void)setKnownFriendObjects:(id)setKnownFriendObjects;
--(id)g_chapterControllers;
--(void)setG_chapterControllers:(id)setG_chapterControllers;
++(id)shared; // 0x004cc4b4
+-(id)g_filteredUserIDs; // 0x004d074c
+-(void)setG_filteredUserIDs:(id)a1; // 0x004d0758
+-(id)g_filteredGroupIDs; // 0x004d0764
+-(void)setG_filteredGroupIDs:(id)a1; // 0x004d0770
+-(BOOL)g_isSecondFriendHidden; // 0x004d077c
+-(void)setG_isSecondFriendHidden:(BOOL)a1; // 0x004d07c8
+-(id)allChatModels2; // 0x004d0830
+-(void)setAllChatModels2:(id)a1; // 0x004d08c4
+-(id)knownFriendObjects; // 0x004d08d0
+-(void)setKnownFriendObjects:(id)a1; // 0x004d0964
+-(id)g_chapterControllers; // 0x004cc540
+-(void)setG_chapterControllers:(id)a1; // 0x004cc548
 
 @end

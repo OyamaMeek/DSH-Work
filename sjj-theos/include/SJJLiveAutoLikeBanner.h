@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f6e8，父类 UIView
 //
 
+// 职责：由二进制重建的 UIView 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -28,12 +33,12 @@
 
 @property (nonatomic) unsigned long long runToken;
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(void)stopRunLongPressed:(id)stopRunLongPressed;
--(BOOL)accessibilityActivate;
--(id)countLabel;
--(void)setCountLabel:(id)setCountLabel;
--(unsigned long long)runToken;
--(void)setRunToken:(unsigned long long)setRunToken;
+-(id)initWithFrame:(struct CGRect)a1; // 0x005b7574
+-(void)stopRunLongPressed:(id)a1; // 0x005b7dcc
+-(BOOL)accessibilityActivate; // 0x005b7e94
+-(id)countLabel; // 0x005b7eb0
+-(void)setCountLabel:(id)a1; // 0x005b7ebc
+-(unsigned long long)runToken; // 0x005b7ed0
+-(void)setRunToken:(unsigned long long)a1; // 0x005b7edc
 
 @end

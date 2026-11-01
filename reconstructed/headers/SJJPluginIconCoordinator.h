@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e130，父类 NSObject
 //
 
+// 职责：插件图标协调器：图标资源与状态同步。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,12 +30,12 @@
 
 @property (weak, nonatomic) UIViewController * hostController;
 
--(id)presenter;
--(void)presentPicker;
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo;
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel;
--(void)presentMenu;
--(id)hostController;
--(void)setHostController:(id)setHostController;
+-(id)presenter; // 0x003879a4
+-(void)presentPicker; // 0x00387a50
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2; // 0x00387b5c
+-(void)imagePickerControllerDidCancel:(id)a1; // 0x00387f48
+-(void)presentMenu; // 0x00387f58
+-(id)hostController; // 0x003882d0
+-(void)setHostController:(id)a1; // 0x003882f8
 
 @end

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ea90，父类 UILabel
 //
 
+// 职责：文本控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,6 +25,6 @@
 
 @interface SJJSparkRenewBadgeLabel : UILabel
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
+-(id)initWithFrame:(struct CGRect)a1; // 0x004a5320
 
 @end

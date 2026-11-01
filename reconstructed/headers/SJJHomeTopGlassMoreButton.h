@@ -4,6 +4,11 @@
 //  原始地址 0x00a2db40，父类 UIButton
 //
 
+// 职责：按钮控件。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,6 +25,6 @@
 
 @interface SJJHomeTopGlassMoreButton : UIButton
 
--(BOOL)pointInside:(struct CGPoint)pointInside withEvent:(id)withEvent;
+-(BOOL)pointInside:(struct CGPoint)a1 withEvent:(id)a2; // 0x00322348
 
 @end

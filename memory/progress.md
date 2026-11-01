@@ -1,10 +1,9 @@
-# siwenjiajia.dylib 重建与 Theos 工程进度
+# siwenjiajia 重建、Theos 工程与教程进度
 
-- [x] 重建 137 类接口、4012 方法伪代码、索引与 5 篇 walkthrough（上一阶段）。
-- [x] 生成 `sjj-theos` Theos 工程：137 头文件、131 个可编译实现骨架、入口与钩子安装器。
-- [x] 修正类型编码解析、多参数方法声明、weak ivar、C 数组 ivar、跨类前向声明。
-- [x] 逐文件语法检查 133 个源文件 0 错误。
-- [x] `make package` 完整构建通过，产出 406 KB deb（arm64 + arm64e fat dylib）。
-- [ ] 功能实现待填：按 walkthrough 顺序补授权、面板、媒体、AI 四个模块。
-- [ ] 真机安装与运行未验证（无 iPhone 设备）。
+- [x] 重建 137 类接口、4012 方法伪代码、索引与 5 篇 walkthrough。
+- [x] 生成可编译的 Theos 工程，双架构构建通过（deb 394 KB）。
+- [x] 补充详细注释：头文件类职责与地址、实现文件反汇编摘要、手写 Tweak.xm/Makefile/Hooks 注释。
+- [x] 撰写 7 篇教程：环境、定位、hook、面板、媒体、授权、发布。
+- [x] 重新构建验证：133 文件语法 0 错误，make package 通过。
+- [ ] 功能实现仍为骨架；真机安装与运行未验证（无 iPhone 设备）。
 - [x] 记录 CHANGELOG、归档对话、提交推送。

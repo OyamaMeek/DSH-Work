@@ -9,6 +9,6 @@
 // 字符串: "SWJJCommentSortEnabled"
 // 消息: protectionSpace, serverTrust, authenticationMethod, isEqualToString:, credentialForTrust:, boolForKey:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
--(void)URLSession:(id)URLSession task:(id)task didReceiveChallenge:(id)didReceiveChallenge completionHandler:(id /* block */)completionHandler { /* 重建骨架，语义见 pseudocode */ }
+-(void)URLSession:(id)a1 task:(id)a2 didReceiveChallenge:(id)a3 completionHandler:(id /* block */)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

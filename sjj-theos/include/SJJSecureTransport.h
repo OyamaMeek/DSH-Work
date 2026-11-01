@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e018，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,9 +25,9 @@
 
 @interface SJJSecureTransport : NSObject
 
-+(id)shared;
--(id)dataTaskWithURL:(id)dataTaskWithURL completionHandler:(id /* block */)completionHandler;
--(id)uploadTaskWithRequest:(id)uploadTaskWithRequest fromData:(id)fromData completionHandler:(id /* block */)completionHandler;
--(id)dataTaskWithRequest:(id)dataTaskWithRequest completionHandler:(id /* block */)completionHandler;
++(id)shared; // 0x0037676c
+-(id)dataTaskWithURL:(id)a1 completionHandler:(id /* block */)a2; // 0x003767f8
+-(id)uploadTaskWithRequest:(id)a1 fromData:(id)a2 completionHandler:(id /* block */)a3; // 0x003768a4
+-(id)dataTaskWithRequest:(id)a1 completionHandler:(id /* block */)a2; // 0x0037696c
 
 @end

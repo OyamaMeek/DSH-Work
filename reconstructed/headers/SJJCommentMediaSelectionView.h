@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e798，父类 UIControl
 //
 
+// 职责：评论媒体选择视图：图片/语音模式切换与选择。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -37,20 +42,20 @@
     double _cellWidth;
 }
 
--(id)initWithItems:(id)initWithItems controller:(id)controller;
--(void)presentInHostView:(id)presentInHostView;
--(void)scrollViewDidScroll:(id)scrollViewDidScroll;
--(void)updateVisibleCells;
--(void)updateScrollThumb;
--(void)scrollThumbPanned:(id)scrollThumbPanned;
--(id)footerButtonWithTitle:(id)footerButtonWithTitle frame:(struct CGRect)frame primary:(struct CGSize)primary;
--(void)cellTapped:(id)cellTapped;
--(void)selectAllTapped:(id)selectAllTapped;
--(void)downloadTapped:(id)downloadTapped;
--(void)backgroundTapped:(id)backgroundTapped;
--(void)closeTapped:(id)closeTapped;
--(void)dismissAnimated:(BOOL)dismissAnimated completion:(id /* block */)completion;
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
--(void)updateSelectionUI;
+-(id)initWithItems:(id)a1 controller:(id)a2; // 0x004564d4
+-(void)presentInHostView:(id)a1; // 0x00456770
+-(void)scrollViewDidScroll:(id)a1; // 0x004576f0
+-(void)updateVisibleCells; // 0x00457724
+-(void)updateScrollThumb; // 0x00457bb4
+-(void)scrollThumbPanned:(id)a1; // 0x00457dc8
+-(id)footerButtonWithTitle:(id)a1 frame:(struct CGRect)a2 primary:(struct CGSize)a3; // 0x004580a4
+-(void)cellTapped:(id)a1; // 0x004582d0
+-(void)selectAllTapped:(id)a1; // 0x004583b4
+-(void)downloadTapped:(id)a1; // 0x00458530
+-(void)backgroundTapped:(id)a1; // 0x00459160
+-(void)closeTapped:(id)a1; // 0x00459174
+-(void)dismissAnimated:(BOOL)a1 completion:(id /* block */)a2; // 0x004591ac
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2; // 0x004594a4
+-(void)updateSelectionUI; // 0x004594f0
 
 @end

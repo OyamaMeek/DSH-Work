@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d730，父类 UIView
 //
 
+// 职责：设置面板主控制器：二级页承载、开关/滑块/颜色配置、SVIP 装饰入口、授权页。563 个方法，占全部方法的 14%。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,568 +25,568 @@
 
 @interface siwenjiajiaPanel : UIView <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIDocumentPickerDelegate, PHPickerViewControllerDelegate, UIScrollViewDelegate, UIColorPickerViewControllerDelegate, UIGestureRecognizerDelegate, UITextViewDelegate>
 
--(void)openHiddenFriendSettingsPage;
--(id)addSectionCardInView:(id)addSectionCardInView y:(double)y height:(double)height;
--(void)attachPressAnimation:(id)attachPressAnimation;
--(void)sjjApplyBaseTabVisualStateInWrap:(id)sjjApplyBaseTabVisualStateInWrap animated:(BOOL)animated;
--(void)buttonPressDown:(id)buttonPressDown;
--(void)buttonPressUp:(id)buttonPressUp;
--(void)playCardEntryAnimation;
--(void)sectionTabTapped:(id)sectionTabTapped;
--(void)baseSubTabTapped:(id)baseSubTabTapped;
--(void)videoCategoryTabTapped:(id)videoCategoryTabTapped;
--(void)videoCategorySegmentChanged:(id)videoCategorySegmentChanged;
--(id)featureToggleTitleForTag:(long long)featureToggleTitleForTag;
--(BOOL)featureSwitchStateForTag:(long long)featureSwitchStateForTag known:(BOOL *)known;
--(BOOL)sjjConfiguredFeatureSwitchStateForTag:(long long)sjjConfiguredFeatureSwitchStateForTag known:(BOOL *)known;
--(id)featureSwitchHelpHintForTag:(long long)featureSwitchHelpHintForTag title:(id)title;
--(id)featureSwitchHelpGuideForTag:(long long)featureSwitchHelpGuideForTag;
--(id)featureSearchRoutingForSwitchTag:(long long)featureSearchRoutingForSwitchTag;
--(id)sjjFeatureSearchNormalizedText:(id)sjjFeatureSearchNormalizedText;
--(BOOL)featureSearchText:(id)featureSearchText matchesQuery:(id)matchesQuery normalizedQuery:(id)normalizedQuery;
--(id)featureSearchAutoSwitchTags;
--(id)featureSearchAutoSwitchEntries;
--(id)featureSearchSupplementalEntries;
--(id)featureSearchIndex;
--(id)featureSearchResultsForQuery:(id)featureSearchResultsForQuery;
--(void)focusFeatureSearchEntry:(id)focusFeatureSearchEntry;
--(void)applyFeatureSearchEntry:(id)applyFeatureSearchEntry;
--(void)performFeatureSearchQuery:(id)performFeatureSearchQuery;
--(void)openFeatureSearchFromPull;
--(void)sjjActivateInlineFeatureSearchFromPull;
--(void)sjjSetInlineFeatureSearchActive:(BOOL)sjjSetInlineFeatureSearchActive animated:(BOOL)animated;
--(void)sjjInlineSearchTextChanged:(id)sjjInlineSearchTextChanged;
--(void)sjjInlineSearchReturn:(id)sjjInlineSearchReturn;
--(void)sjjInlineSearchCancelTapped:(id)sjjInlineSearchCancelTapped;
--(void)sjjInlineSearchResultTapped:(id)sjjInlineSearchResultTapped;
--(void)sjjShowInlineSearchResultsForQuery:(id)sjjShowInlineSearchResultsForQuery;
--(void)sjjHideInlineSearchResultsAnimated:(BOOL)sjjHideInlineSearchResultsAnimated;
--(void)sjjUpdateSearchDotPullProgress:(double)sjjUpdateSearchDotPullProgress armed:(BOOL)armed animated:(BOOL)animated;
--(void)sjjResetSearchDotAnimated:(BOOL)sjjResetSearchDotAnimated;
--(void)sjjPrepareInlineFeatureSearchForPanelDismiss;
--(void)toggleFeatureSwitchTag:(long long)toggleFeatureSwitchTag;
--(void)confirmRestoreDefaultFont;
--(void)openFontManagementMenu;
--(void)configurePanelCustomBackground;
--(void)clearPanelCustomBackground;
--(void)configureNicknameTextScale;
--(void)resetNicknameCaptionLayoutDefaults;
--(void)openRightElementScaleSettingsPage;
--(void)openBottomTabBarHeightSettingsPage;
--(void)openTransparencySettingsPage;
--(void)openVideoFullScreenSettingsPage;
--(void)configureVideoFullScreenCommentScaleMode;
--(void)sjjOpenGlassTabBarSettingsPageFromMainFeature;
--(void)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion:(id /* block */)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion;
--(void)openGlassTabBarSettingsPage;
--(void)configureFloatingAudioVisualizerPosition;
--(void)configureFloatingAudioVisualizerScope;
--(void)configureFloatingAudioVisualizerStyle;
--(void)configureGlassTabBarCircleRole;
--(void)configureGlassTabBarCircleSide;
--(void)configureGlassTabBarCollapsePosition;
--(void)configureGlassTabBarFollowMode;
--(void)configureGlassTabBarThemeMode;
--(void)configureGlassTabBarSelectedColor;
--(void)configureHomeTopGlassSelectedColor;
--(void)configureGlassTabBarIconStyle;
--(void)configureHomeActionGlassIconStyle;
--(void)configureGlassTabBarDisplayStyle;
--(void)configureGlassQuickActions;
--(void)openVideoProgressStyleSettingsPage;
--(void)openDanmakuColorSettingsPage;
--(void)configureDanmakuPortColor;
--(void)configureDanmakuColorMode;
--(void)resetDanmakuColorToDefault;
--(void)openDefaultLiveQualitySettingsPage;
--(void)openLiveAutoLikeSettingsPage;
--(void)configureLiveAutoLike;
--(void)stopLiveAutoLike;
--(void)openAreaDisplaySettingsPage;
--(void)sjjPresentVideoFullScreenConflictWarning;
--(void)openQuickCopyCaptionSettingsPage;
--(void)configureQuickCopyCaptionMode;
--(void)openNicknameCaptionColorSettingsPage;
--(void)openMessageExactTimeSettingsPage;
--(void)configureNicknameCaptionPortColor;
--(void)configureNicknameCaptionRainbowMode;
--(void)resetNicknameCaptionColorToDefault;
--(void)openRecommendPageFilterSettingsPage;
--(void)configureRecommendLowLikes;
--(void)configureRecommendUsers;
--(void)configureRecommendCaptionWords;
--(void)configureRecommendPropWords;
--(void)openSpecifiedTimeFilterSettingsPage;
--(void)configureSpecifiedTimeDays;
--(void)openFeedIconCustomizationSettingsPage;
--(void)pickFeedIconFromAlbum;
--(void)configureAreaPortColor;
--(void)openVideoProgressTimeSettingsPage;
--(void)configureVideoProgressTimePositionMode;
--(void)configureVideoProgressTimeStyleMode;
--(void)configureVideoProgressTimeTextColor;
--(void)configureVideoProgressTimeBadgeColor;
--(void)resetVideoProgressTimeColorsToDefault;
--(void)configureVideoProgressStyleMode;
--(void)configureVideoProgressMinimumColor;
--(void)configureVideoProgressMaximumColor;
--(void)resetVideoProgressColorsToDefault;
--(void)configureVideoProgressThumbSize;
--(void)configureVideoProgressThumbPositionMode;
--(void)configureVideoProgressThumbImage;
--(void)pickVideoProgressThumbImageFromAlbum;
--(void)pickVideoProgressThumbImageFromFile;
--(void)clearVideoProgressThumbImage;
--(void)applyPanelCustomBackgroundImage:(id)applyPanelCustomBackgroundImage;
--(void)presentPanelBackgroundCropperForImage:(id)presentPanelBackgroundCropperForImage;
--(void)applyMessagePageBackgroundImage:(id)applyMessagePageBackgroundImage;
--(void)presentMessagePageBackgroundCropperForImage:(id)presentMessagePageBackgroundCropperForImage;
--(void)openFontDeleteMenu;
--(id)currentTopViewController;
--(void)sjjPresentSecondarySettingsPageWithTitle:(id)sjjPresentSecondarySettingsPageWithTitle subtitle:(id)subtitle tintTag:(long long)tintTag builder:(id /* block */)builder;
--(BOOL)sjjHasRestorableSecondarySettingsPage;
--(void)sjjClearSecondarySettingsPageContext;
--(void)sjjRefreshSecondarySettingsPageContentInPlace;
--(void)sjjRestoreSecondarySettingsPageAnimated:(BOOL)sjjRestoreSecondarySettingsPageAnimated;
--(void)dismissSJJSecondarySettingsPage:(id)dismissSJJSecondarySettingsPage;
--(id)sjjPanelOrSecondaryViewWithTag:(long long)sjjPanelOrSecondaryViewWithTag;
--(id)sjjValueLabelForSlider:(id)sjjValueLabelForSlider valueTag:(long long)valueTag;
--(id)sjjPreviewViewForSlider:(id)sjjPreviewViewForSlider valueTag:(long long)valueTag;
--(void)sjjToggleHighRefreshFPSDisplay;
--(void)sjjHighRefreshTitleLongPress:(id)sjjHighRefreshTitleLongPress;
--(void)sjjConfigureHighRefresh;
--(SEL)sjjSecondarySettingsActionForSwitchTag:(long long)sjjSecondarySettingsActionForSwitchTag;
--(id)sjjSecondarySettingsHintForSwitchTag:(long long)sjjSecondarySettingsHintForSwitchTag;
--(void)configureSJJHDRBlockMode;
--(void)openAutoCommentSettingsPage;
--(void)openAdFilterSettingsPage;
--(void)openModernLongPressSettingsPage;
--(void)configureModernLongPressStyle;
--(void)openTitleCustomizationSettingsPage;
--(void)presentTopBarTitleColorManager;
--(void)presentTopBarTitleColorEditorForSource:(id)presentTopBarTitleColorEditorForSource;
--(void)presentBottomBarTitleCustomizationManager;
--(void)configureTopBarTitleCustomization;
--(void)presentTopBarTitleCustomizationManager;
--(void)presentTopBarTitleCustomizationEditorForSource:(id)presentTopBarTitleCustomizationEditorForSource replacement:(id)replacement;
--(void)sjjConfigureSingleTitleCustomizationWithTitle:(id)sjjConfigureSingleTitleCustomizationWithTitle key:(id)key placeholder:(id)placeholder;
--(void)configureHomeTitleCustomization;
--(void)configureFriendsTitleCustomization;
--(void)configureMessagesTitleCustomization;
--(void)configureMineTitleCustomization;
--(void)configureCommentPlaceholderCustomization;
--(void)resetAllTitleCustomization;
--(void)openTopBarRemovalSettingsPage;
--(void)sjjOpenInterfaceHideSettingsPageForGroup:(id)sjjOpenInterfaceHideSettingsPageForGroup title:(id)title subtitle:(id)subtitle;
--(void)openLowBarHideSettingsPage;
--(void)openVideoInterfaceHideSettingsPage;
--(void)openMessagePageHideSettingsPage;
--(void)openMinePageHideSettingsPage;
--(void)openLiveInterfaceHideSettingsPage;
--(void)openCommentLongPressHideSettingsPage;
--(void)openVideoLongPressHideSettingsPage;
--(void)configureVideoLongPressCustomHideItems;
--(void)openBlueCommentSettingsPage;
--(void)openCommentBlurSettingsPage;
--(void)openCommentRoundedCornersSettingsPage;
--(void)resetCommentBlurCornerRadius;
--(void)openCommentSortSettingsPage;
--(void)openDoubleTapDownloadSettingsPage;
--(void)configureDoubleTapHistoryMaxCount;
--(void)openDoubleTapFeatureSettingsPage;
--(void)openVideoPopupTransitionSettingsPage;
--(void)openVideoTimeCapsuleSettingsPage;
--(void)openSideDockSettingsPage;
--(void)openSaveNotifySettingsPage;
--(void)openAntiRecallSettingsPage;
--(void)openTextToSpeechSettingsPage;
--(void)openNativeLongPressSettingsPage;
--(void)openProfileAccessLockSettingsPage;
--(void)openAutoCacheCleanSettingsPage;
--(void)openIOS26GlassScopeSettingsPage;
--(void)openLegacyDoubleTapGlassSettingsPage;
--(void)openPanelBackgroundBlurSettingsPage;
--(void)openMessagePageBackgroundSettingsPage;
--(void)openInnerNotificationGlassSettingsPage;
--(void)openAppNotificationGlassSettingsPage;
--(void)configureMessagePageBackground;
--(void)clearMessagePageBackground;
--(void)openCommentBackgroundSettingsPage;
--(void)configureCommentBackground;
--(void)applyCommentBackgroundImage:(id)applyCommentBackgroundImage;
--(void)clearCommentBackground;
--(void)openDynamicIslandHaloSettingsPage;
--(void)openMeteorShowerSettingsPage;
--(void)openRedPacketSettingsPage;
--(void)openSVIPAIVideoRobotSettingsPage;
--(void)openSVIPAutoPrivateMessageSettingsPage;
--(void)openVideoQualityProSettingsPage;
--(void)openFeedSmoothSwipeSettingsPage;
--(void)openAccountQuickSwitchSettingsPage;
--(void)openExternalThemeSettingsPage;
--(void)openFontManagementSettingsPage;
--(void)sjjCollapseFoldGroupsBeforeGuide;
--(void)showPanelVersionInfo;
--(void)showProfileEditorWithTitle:(id)showProfileEditorWithTitle current:(id)current saveBlock:(id /* block */)saveBlock;
--(void)editProfileName;
--(void)editProfileSign;
--(id)sjjPanelProfileNameColorStatusTitle;
--(id)sjjPanelProfileSignColorStatusTitle;
--(id)sjjPanelTitleReplacementStatusTitle;
--(void)sjjPresentPanelColorPickerWithTitle:(id)sjjPresentPanelColorPickerWithTitle currentHex:(id)currentHex saveBlock:(id /* block */)saveBlock;
--(void)colorPickerViewControllerDidFinish:(id)colorPickerViewControllerDidFinish;
--(void)presentPanelTitleReplacementEditorForSource:(id)presentPanelTitleReplacementEditorForSource replacement:(id)replacement;
--(void)presentPanelTitleReplacementManager;
--(void)configurePanelProfileNameColor;
--(void)configureDoubleTapProfileHeaderNameColor;
--(void)configureDoubleTapQuickAppLaunchItems;
--(void)configurePanelProfileSignColor;
--(void)configurePanelTitleTextReplacement;
--(void)sjjPresentVideoStatsFakeSettings;
--(void)sjjEditVideoStatsFakeField:(id)sjjEditVideoStatsFakeField;
--(void)sjjPresentAdaptiveDarkModePickerWithTitle:(id)sjjPresentAdaptiveDarkModePickerWithTitle currentMode:(long long)currentMode saveKey:(id)saveKey storage:(long long *)storage;
--(void)configureAdaptiveDarkCapsuleMode;
--(void)configureAdaptiveDarkSideDockMode;
--(void)configureAdaptiveDarkDoubleTapPanelMode;
--(void)configureAdaptiveDarkVideoPopupMode;
--(void)configureProfileAccessLockMode;
--(void)configureProfileAccessLockPassword;
--(void)chooseProfileAvatar;
--(void)contactAuthorQQ;
--(void)pasteAuthCode;
--(void)showGeneratedAuthCode:(id)showGeneratedAuthCode;
--(void)generateAuthCodeForUser;
--(void)copyDeviceCode;
--(void)manualAuthInput;
--(void)openAIReplySettingsTool;
--(void)openAIReplyTool;
--(void)openSparkRenewTool;
--(void)openWarmthFeatureTool;
--(void)sideDockAIHubTap:(id)sideDockAIHubTap;
--(void)configureVideoParseAPI;
--(void)configureWorkDataAPIToken;
--(void)configureAlbumSaveDetailContent;
--(void)configureAlbumSaveTarget;
--(void)configureVideoPopupAnimation;
--(void)configureInteractionAnimationSpeed;
--(void)configureFeedSmoothSwipeSpeed;
--(void)promptFeedSmoothSwipeCustomSpeed;
--(void)configureFeedSmoothSwipeBackground;
--(void)configureFeedSmoothSwipeBackgroundColor;
--(void)pickFeedSmoothSwipeBackgroundImage;
--(void)applyFeedSmoothSwipeBackgroundImage:(id)applyFeedSmoothSwipeBackgroundImage;
--(void)configureVideoPopupMorphStyle;
--(void)configureInAppWebPresentation;
--(void)presentDoubleTapActionPickerWithTitle:(id)presentDoubleTapActionPickerWithTitle current:(long long)current save:(id /* block */)save;
--(void)configureDoubleTapUpperAction;
--(void)configureDoubleTapLowerAction;
--(void)configureDoubleTapQuickMode;
--(void)configureDoubleTapPanelButtons;
--(void)addDoubleTapIndicatorWithAction:(long long)addDoubleTapIndicatorWithAction;
--(void)configureDoubleTapSplitIndicators;
--(void)configureDoubleTapCustomWebButton;
--(void)configureDoubleTapPanelAccentColor;
--(void)configureVideoCapsuleAccentColor;
--(void)configureVideoCapsuleSuccessEffect;
--(void)configureVideoCapsuleFailureEffect;
--(void)configureSaveNotifyTone;
--(void)configureSideDockWakeSlideHoverSound;
--(void)configureSideDockShakeSound;
--(void)configureAntiRecallBadgeText;
--(void)configureAntiRecallBadgeColor;
--(void)configureAntiRecallBadgePosition;
--(void)configureLocalTransferAmount;
--(void)configureClownMessageHint;
--(void)configurePlaybackSpeedOptions;
--(void)configureSWJRedPacketTiming;
--(void)configureSWJRedPacketRules;
--(void)configureSWJRedPacketAutoReply;
--(void)configureAutoCommentMode;
--(void)configureVideoQualityProTier;
--(void)configureAutoCommentTriggerMode;
--(void)configureAutoCommentPresetText;
--(void)configureAutoCommentRandomPool;
--(void)configureAutoCommentAIPrompt;
--(void)configureAutoCommentBoundary;
--(void)configureAutoCommentRedLine;
--(void)configureAutoCommentDelay;
--(void)configureCommentSortPrecisePageCount;
--(void)configureCommentSortSilentPreloadPageCount;
--(void)configureAutoCommentImage;
--(void)configureBlueCommentPrefix;
--(void)configureAutoPrivateMessageText;
--(void)configureAutoPrivateMessageDelay;
--(void)openMiniAppRewardBypassSettingsPage;
--(void)configureMiniAppRewardBypassMode;
--(void)configureProfileBatchDownloadMode;
--(void)configureMeteorShowerStyle;
--(void)configureDynamicIslandInnerParticleStyle;
--(void)configureDynamicIslandHaloStarRainbowGlowStyle;
--(void)configureDynamicIslandHaloAdvancedTuning;
--(void)configureVideoTimeCapsulePairSpacing;
--(void)configureVideoTimeCapsuleStyle;
--(void)configureTopToastStyle;
--(void)configureSideDockWakeSwipeAction;
--(void)configureSideDockWakeSpeedStep;
--(void)configureSideDockWakeColor;
--(id)sjjHiFloatingSymbol:(id)sjjHiFloatingSymbol;
--(void)sjjAddHiFloatingGroupBackground:(id)sjjAddHiFloatingGroupBackground fromY:(double)fromY toY:(double)toY;
--(double)sjjAddHiFloatingSectionTitle:(id)sjjAddHiFloatingSectionTitle inView:(id)inView y:(double)y;
--(void)sjjAddHiFloatingRowDivider:(id)sjjAddHiFloatingRowDivider;
--(double)sjjAddHiFloatingSwitchRow:(id)sjjAddHiFloatingSwitchRow y:(double)y title:(id)title symbol:(id)symbol key:(id)key;
--(double)sjjAddHiFloatingActionRow:(id)sjjAddHiFloatingActionRow y:(double)y title:(id)title detail:(id)detail symbol:(id)symbol action:(SEL)action;
--(double)sjjAddHiFloatingSegment:(id)sjjAddHiFloatingSegment y:(double)y items:(id)items selected:(long long)selected action:(SEL)action;
--(double)sjjAddHiClearScreenSwitchRow:(id)sjjAddHiClearScreenSwitchRow y:(double)y title:(id)title symbol:(id)symbol option:(long long)option;
--(void)sjjHiFloatingSettingsTabChanged:(id)sjjHiFloatingSettingsTabChanged;
--(void)sjjHiClearScreenSettingsTabChanged:(id)sjjHiClearScreenSettingsTabChanged;
--(void)sjjHiFloatingSwitchChanged:(id)sjjHiFloatingSwitchChanged;
--(void)sjjHiClearScreenSwitchChanged:(id)sjjHiClearScreenSwitchChanged;
--(void)configureHiFloatingHideSeconds;
--(void)configureHiFloatingSpeedSize;
--(void)configureHiFloatingClearSize;
--(BOOL)sjjStoreHiFloatingClearIconData:(id)sjjStoreHiFloatingClearIconData;
--(void)pickHiFloatingClearIconFromAlbum;
--(void)pickHiFloatingClearIconFromFile;
--(void)configureHiFloatingCustomClearIcon;
--(void)configureHiFloatingClearIcon;
--(void)resetHiFloatingSpeedPosition;
--(void)resetHiFloatingClearPosition;
--(void)configureHiFloatingControls;
--(void)configureClearScreenOptions;
--(void)configureSideDockIconTintColor;
--(void)configureSideDockWakeGestureSensitivity;
--(void)configureSideDockPetSkin;
--(void)configureSideDockPetPersonality;
--(void)configureSideDockPetDockStyle;
--(void)configureSideDockGyroFollowDirection;
--(void)configureUpperPanelButtons;
--(void)configureLowerPanelButtons;
--(void)configureSideDockButtons;
--(void)configureNativeLongPressPluginPosition;
--(void)configureNativeLongPressMenuContent;
--(void)configureNativeLongPressListStyle;
--(void)configureNativeLongPressBackgroundImage;
--(void)pickNativeLongPressBackgroundImageFromAlbum;
--(void)pickNativeLongPressBackgroundImageFromFile;
--(void)applyNativeLongPressBackgroundImageData:(id)applyNativeLongPressBackgroundImageData;
--(void)applyNativeLongPressBackgroundImage:(id)applyNativeLongPressBackgroundImage;
--(void)presentNativeLongPressBackgroundCropperForImage:(id)presentNativeLongPressBackgroundCropperForImage;
--(void)configureNativeLongPressButtonBackgrounds;
--(void)configureNativeLongPressButtonBackgroundForID:(id)configureNativeLongPressButtonBackgroundForID;
--(void)pickNativeLongPressButtonBackgroundFromAlbum;
--(void)pickNativeLongPressButtonBackgroundFromFile;
--(void)applyNativeLongPressButtonBackgroundData:(id)applyNativeLongPressButtonBackgroundData itemID:(id)itemID;
--(void)applyNativeLongPressButtonBackgroundImage:(id)applyNativeLongPressButtonBackgroundImage itemID:(id)itemID;
--(void)presentNativeLongPressButtonBackgroundCropperForImage:(id)presentNativeLongPressButtonBackgroundCropperForImage itemID:(id)itemID;
--(void)configureNativeLongPressImageSlot;
--(void)configureNativeLongPressImageSlotForID:(id)configureNativeLongPressImageSlotForID;
--(void)pickNativeLongPressImageSlotFromAlbum;
--(void)pickNativeLongPressImageSlotFromFile;
--(void)applyNativeLongPressImageSlotData:(id)applyNativeLongPressImageSlotData slotID:(id)slotID;
--(void)applyNativeLongPressImageSlotImage:(id)applyNativeLongPressImageSlotImage slotID:(id)slotID;
--(void)presentNativeLongPressImageSlotCropperForImage:(id)presentNativeLongPressImageSlotCropperForImage slotID:(id)slotID;
--(void)presentNativeLongPressImageSlotCropperForGIFData:(id)presentNativeLongPressImageSlotCropperForGIFData slotID:(id)slotID;
--(void)configureNativeLongPressMenuTitles;
--(void)configureNativeLongPressPluginLayoutMode;
--(void)configureNativeLongPressRowLayoutRule;
--(void)configureSideDockDividerPosition;
--(void)configureSideDockSubCapsuleButtons;
--(void)configureAudioWaveSettings;
--(void)openFrequencyInteractionPanel;
--(void)configureSideDockIcons;
--(void)configureSideDockIconForActionID:(id)configureSideDockIconForActionID;
--(void)promptSideDockSymbolForActionID:(id)promptSideDockSymbolForActionID;
--(void)promptSideDockSymbolForActionID:(id)promptSideDockSymbolForActionID selectedState:(BOOL)selectedState;
--(void)pickSideDockIconFromAlbumForActionID:(id)pickSideDockIconFromAlbumForActionID;
--(void)pickSideDockIconFromAlbumForActionID:(id)pickSideDockIconFromAlbumForActionID selectedState:(BOOL)selectedState;
--(void)pickSideDockIconFromFileForActionID:(id)pickSideDockIconFromFileForActionID;
--(void)pickSideDockIconFromFileForActionID:(id)pickSideDockIconFromFileForActionID selectedState:(BOOL)selectedState;
--(void)configureSideDockAppLaunch;
--(void)configureSideDockPrimaryDirectShareFriend;
--(void)configureSideDockDirectShareFriend;
--(void)configureSideDockDirectShareFriend2;
--(void)configureSideDockDirectShareFriend3;
--(void)configureSideDockDirectShareFriend4;
--(void)configureSideDockDirectShareFriend5;
--(void)configureSideDockDirectShareFriendForActionID:(id)configureSideDockDirectShareFriendForActionID;
--(void)configureAutoGroupAuthorization;
--(void)showCurrentGroupIdentifiers;
--(void)nameTap:(id)nameTap;
--(void)nameLongPress:(id)nameLongPress;
--(void)signTap:(id)signTap;
--(void)signLongPress:(id)signLongPress;
--(void)accountLabelTap:(id)accountLabelTap;
--(void)accountLabelLongPress:(id)accountLabelLongPress;
--(void)presentAliasBadgeStyleSelector;
--(void)ensureAliasAccountLabelGestures:(id)ensureAliasAccountLabelGestures;
--(void)toggleAliasSVIPPendant;
--(struct CGRect)aliasSVIPBadgeFrameInAvatarBounds:(id)aliasSVIPBadgeFrameInAvatarBounds;
--(struct CGRect)aliasSVIPBadgePreviewFrameInAvatarBounds:(id)aliasSVIPBadgePreviewFrameInAvatarBounds;
--(id)aliasSVIPBadgeAppearance;
--(void)decorateSVIPBadgeView:(id)decorateSVIPBadgeView;
--(void)decorateSVIPAvatarFrame:(id)decorateSVIPAvatarFrame withInnerContainer:(id)withInnerContainer previewMode:(BOOL)previewMode;
--(BOOL)isAliasSVIPUnlocked;
--(BOOL)shouldShowSVIPSection;
--(double)effectiveSVIPPanelBlurAmount;
--(double)effectiveSVIPPanelOpacity;
--(double)effectiveSVIPGroupOpacity;
--(double)effectiveSVIPGroupBlurAmount;
--(void)applySVIPPanelVisualsLiveIfPossible;
--(void)sjjSetMainPanelScrollPerformanceMode:(BOOL)sjjSetMainPanelScrollPerformanceMode forScrollView:(id)forScrollView;
--(BOOL)sjjIsMainPanelScrollDragPerformanceActiveForScrollView:(id)sjjIsMainPanelScrollDragPerformanceActiveForScrollView;
--(void)sjjSetMainPanelLiveBlurReducedForScrolling:(BOOL)sjjSetMainPanelLiveBlurReducedForScrolling;
--(void)sjjBeginMainPanelScrollDragPerformanceForScrollView:(id)sjjBeginMainPanelScrollDragPerformanceForScrollView;
--(void)sjjScheduleMainPanelLiveBlurRestoreForScrollView:(id)sjjScheduleMainPanelLiveBlurRestoreForScrollView;
--(void)sjjFinishMainPanelScrollDragPerformanceForScrollView:(id)sjjFinishMainPanelScrollDragPerformanceForScrollView;
--(void)sjjCancelMainPanelScrollDragPerformance;
--(id)sjjMainPanelVisualContainersForScrollView:(id)sjjMainPanelVisualContainersForScrollView;
--(void)sjjApplyMainPanelTransientScrollReduction:(BOOL)sjjApplyMainPanelTransientScrollReduction forScrollView:(id)forScrollView;
--(BOOL)sjjIsPanelOwnedScrollView:(id)sjjIsPanelOwnedScrollView;
--(void)sjjPausePanelDecorativeAnimationsBrieflyForInteraction;
--(void)sjjSetPanelDecorativeAnimationsPausedForScrolling:(BOOL)sjjSetPanelDecorativeAnimationsPausedForScrolling;
--(void)sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling;
--(void)sjjRemovePanelDecorativeAnimations;
--(void)sjjSetPanelCullHidden:(BOOL)sjjSetPanelCullHidden forView:(id)forView content:(id)content hiddenSet:(id)hiddenSet;
--(void)sjjRestoreFoldContainerChildren:(id)sjjRestoreFoldContainerChildren;
--(void)sjjRestoreCurrentPanelInteractionStateSoon;
--(BOOL)sjjUpdateVisibleSummaryActionWithTitle:(id)sjjUpdateVisibleSummaryActionWithTitle status:(id)status subtitle:(id)subtitle;
--(BOOL)sjjSwitchVideoCategoryContentIfPossible;
--(BOOL)sjjShouldKeepPanelSubviewStableDuringContentSwap:(id)sjjShouldKeepPanelSubviewStableDuringContentSwap;
--(BOOL)sjjShouldPreservePanelSubviewDuringContentRefresh:(id)sjjShouldPreservePanelSubviewDuringContentRefresh;
--(void)sjjCullMainPanelSubviewsInContainer:(id)sjjCullMainPanelSubviewsInContainer visibleMinY:(double)visibleMinY visibleMaxY:(double)visibleMaxY content:(id)content hiddenSet:(id)hiddenSet;
--(void)sjjUpdateFoldRenderBucketsForScrollView:(id)sjjUpdateFoldRenderBucketsForScrollView force:(BOOL)force;
--(void)sjjCullMainPanelOffscreenViewsForScrollView:(id)sjjCullMainPanelOffscreenViewsForScrollView force:(BOOL)force;
--(void)sjjCullPanelOwnedOffscreenLayersForScrollView:(id)sjjCullPanelOwnedOffscreenLayersForScrollView force:(BOOL)force;
--(BOOL)sjjMainPanelHasCulledViewsForScrollView:(id)sjjMainPanelHasCulledViewsForScrollView;
--(void)sjjRestoreMainPanelCulledViewsForScrollView:(id)sjjRestoreMainPanelCulledViewsForScrollView;
--(double)effectiveSVIPPanelWidthScale;
--(double)effectiveSVIPPanelHeightScale;
--(void)presentSVIPStyleSelectorWithTitle:(id)presentSVIPStyleSelectorWithTitle key:(id)key currentValue:(long long)currentValue labels:(id)labels toastPrefix:(id)toastPrefix;
--(void)chooseSVIPBadgeGlowStyle;
--(void)chooseSVIPAvatarEffectStyle;
--(void)chooseSVIPPanelAuraStyle;
--(id)svipOpeningSignatureText;
--(void)toggleSVIPDynamicSign;
--(void)chooseSVIPDynamicSignStyle;
--(void)applySVIPAIReplyPresetByIndex:(long long)applySVIPAIReplyPresetByIndex;
--(void)openSVIPAIReplyPresetSelector;
--(void)importSVIPAIImagePreset;
--(void)configureSVIPAIVideoRobotRule;
--(void)configureSVIPAIVideoRobotPostFlowSkipDelay;
--(void)testSVIPAIVideoRobotNow;
--(void)enableSVIPCapsuleStyle;
--(void)disableSVIPCapsuleStyle;
--(void)toggleSVIPCapsuleStyleCardAction;
--(void)applySVIPSmartPresetByIndex:(long long)applySVIPSmartPresetByIndex;
--(void)openSVIPSmartPresetSelector;
--(void)playSVIPEntranceAnimationForContainer:(id)playSVIPEntranceAnimationForContainer header:(id)header avatarFrame:(id)avatarFrame badge:(id)badge;
--(void)applyAliasAccountLabelLivePreview;
--(void)applyAliasSVIPBadgeLivePreview;
--(void)ensureAliasSVIPBadgeLongPressDragGesture:(id)ensureAliasSVIPBadgeLongPressDragGesture;
--(void)aliasSVIPHeaderBadgeLongPressed:(id)aliasSVIPHeaderBadgeLongPressed;
--(void)resetAliasSVIPBadgePosition;
--(void)avatarLongPress:(id)avatarLongPress;
--(void)markViewsInContent:(id)markViewsInContent fromIndex:(long long)fromIndex sectionKey:(id)sectionKey;
--(id)sjjFoldStateSignature;
--(BOOL)sjjApplyFoldSnapshotIfPossibleInContent:(id)sjjApplyFoldSnapshotIfPossibleInContent scroll:(id)scroll activeKey:(id)activeKey;
--(void)sjjCacheCurrentFoldSnapshotInContent:(id)sjjCacheCurrentFoldSnapshotInContent scroll:(id)scroll;
--(void)sjjScheduleFoldSnapshotCacheInContent:(id)sjjScheduleFoldSnapshotCacheInContent scroll:(id)scroll;
--(void)applySubmenuInContent:(id)applySubmenuInContent scroll:(id)scroll;
--(void)sjjEnsureLazyPanelPageBuiltForIndex:(long long)sjjEnsureLazyPanelPageBuiltForIndex;
--(void)sjjRebuildSupportersPageWithAnimationsEnabled:(BOOL)sjjRebuildSupportersPageWithAnimationsEnabled;
--(void)sjjUpdatePanelPageUIForIndex:(long long)sjjUpdatePanelPageUIForIndex animated:(BOOL)animated;
--(void)sjjUpdatePanelPageAnimationBudgetForIndex:(long long)sjjUpdatePanelPageAnimationBudgetForIndex;
--(double)sjjProfileHeaderTrailingReservedWidth;
--(void)sjjUpdateProfileSecretEntryUIForPage:(long long)sjjUpdateProfileSecretEntryUIForPage;
--(void)sjjSetProfileSecretPage:(long long)sjjSetProfileSecretPage animated:(BOOL)animated;
--(void)sjjApplySecretLabTransitionProgress:(double)sjjApplySecretLabTransitionProgress;
--(void)sjjApplyProfileRightPlaceholderTransitionProgress:(double)sjjApplyProfileRightPlaceholderTransitionProgress;
--(void)sjjRequestSecretLabUnlockIfNeeded:(id /* block */)sjjRequestSecretLabUnlockIfNeeded;
--(void)sjjSetSecretLabVisible:(BOOL)sjjSetSecretLabVisible animated:(BOOL)animated;
--(void)sjjSetProfileRightPlaceholderVisible:(BOOL)sjjSetProfileRightPlaceholderVisible animated:(BOOL)animated;
--(void)handleProfileSecretSwipe:(id)handleProfileSecretSwipe;
--(id)sjjBuildProfileRightPlaceholderPageWithFrame:(struct CGRect)sjjBuildProfileRightPlaceholderPageWithFrame;
--(void)sjjDismissProfileMessageBoardKeyboard:(id)sjjDismissProfileMessageBoardKeyboard;
--(void)sjjProfileMessageBoardTextChanged:(id)sjjProfileMessageBoardTextChanged;
--(void)textViewDidChange:(id)textViewDidChange;
--(void)handleProfileSecretPan:(id)handleProfileSecretPan;
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
--(id)sjjBuildProfileSecretPageWithFrame:(struct CGRect)sjjBuildProfileSecretPageWithFrame;
--(id)sjjBuildInfoPageScrollWithFrame:(struct CGRect)sjjBuildInfoPageScrollWithFrame panelWidth:(struct CGSize)panelWidth panelHeight:(id)panelHeight;
--(id)sjjBuildSupportersPageViewWithFrame:(struct CGRect)sjjBuildSupportersPageViewWithFrame panelWidth:(struct CGSize)panelWidth panelHeight:(id)panelHeight;
--(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)sjjSyncVideoQualityPageIndicatorForScrollView;
--(void)scrollViewDidScroll:(id)scrollViewDidScroll;
--(void)scrollViewDidEndDecelerating:(id)scrollViewDidEndDecelerating;
--(void)scrollViewDidEndDragging:(id)scrollViewDidEndDragging willDecelerate:(BOOL)willDecelerate;
--(void)scrollViewDidEndScrollingAnimation:(id)scrollViewDidEndScrollingAnimation;
--(void)scrollViewWillBeginDragging:(id)scrollViewWillBeginDragging;
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(double)addSwitch:(id)addSwitch y:(double)y title:(id)title tag:(long long)tag on:(BOOL)on;
--(void)sjjSwitchVisualStateChanged:(id)sjjSwitchVisualStateChanged;
--(void)sjjSyncSwitchHelpButtonForSwitch:(id)sjjSyncSwitchHelpButtonForSwitch animated:(BOOL)animated;
--(void)sjjShowSwitchHelp:(id)sjjShowSwitchHelp;
--(double)addFlatSecondarySettingsActionRow:(id)addFlatSecondarySettingsActionRow y:(double)y title:(id)title status:(id)status action:(SEL)action;
--(double)addSummaryActionButton:(id)addSummaryActionButton y:(double)y title:(id)title status:(id)status subtitle:(id)subtitle action:(SEL)action;
--(double)addCompactAIActionRow:(id)addCompactAIActionRow y:(double)y title:(id)title subtitle:(id)subtitle symbolName:(id)symbolName action:(SEL)action;
--(id)sjjFindSummaryActionButtonWithTitle:(id)sjjFindSummaryActionButtonWithTitle inContainer:(id)inContainer;
--(double)addParseAPIActionButton:(id)addParseAPIActionButton y:(double)y;
--(double)addBetaUpdateContentCard:(id)addBetaUpdateContentCard y:(double)y;
--(id)buildConfigActionCardWithFrame:(struct CGRect)buildConfigActionCardWithFrame title:(struct CGSize)title status:(id)status subtitle:(id)subtitle action:(id)action;
--(double)sjjConfigActionCardHeightForSubtitle:(id)sjjConfigActionCardHeightForSubtitle width:(double)width;
--(double)addTwoColumnConfigCardsInView:(id)addTwoColumnConfigCardsInView y:(double)y leftTitle:(id)leftTitle leftStatus:(id)leftStatus leftSubtitle:(id)leftSubtitle leftAction:(SEL)leftAction rightTitle:(id)rightTitle rightStatus:(id)rightStatus rightSubtitle:(id)rightSubtitle rightAction:(SEL)rightAction;
--(double)addBottomAreaDividerInView:(id)addBottomAreaDividerInView y:(double)y;
--(void)applyFlatStyleIfNeededForButtonRow:(id)applyFlatStyleIfNeededForButtonRow;
--(double)addSubFoldGroupHeader:(id)addSubFoldGroupHeader y:(double)y title:(id)title subtitle:(id)subtitle tag:(long long)tag expanded:(BOOL)expanded;
--(double)addFoldGroupHeader:(id)addFoldGroupHeader y:(double)y title:(id)title subtitle:(id)subtitle tag:(long long)tag expanded:(BOOL)expanded;
--(BOOL)sjjIsFoldExpandedForTag:(long long)sjjIsFoldExpandedForTag;
--(void)sjjUpdateFoldHeaderForButton:(id)sjjUpdateFoldHeaderForButton expanded:(BOOL)expanded;
--(void)sjjPersistFoldStateForTag:(long long)sjjPersistFoldStateForTag;
--(BOOL)applyFoldToggleInPlaceForTag:(long long)applyFoldToggleInPlaceForTag animated:(BOOL)animated;
--(double)addUnifiedSliderCard:(id)addUnifiedSliderCard y:(double)y title:(id)title hint:(id)hint tag:(long long)tag valueTag:(long long)valueTag min:(double)min max:(double)max value:(double)value displayPercent:(BOOL)displayPercent;
--(void)groupFoldTapped:(id)groupFoldTapped;
--(void)applyPanelThemeMode:(long long)applyPanelThemeMode;
--(void)sjjPresentPanelThemePasswordPromptForMode:(long long)sjjPresentPanelThemePasswordPromptForMode title:(id)title password:(id)password successToast:(id)successToast;
--(id)sjjPanelThemeMenuElements;
--(void)sjjPresentSystemThemeActionSheetFromSourceView:(id)sjjPresentSystemThemeActionSheetFromSourceView;
--(void)sjjHandlePanelThemeMenuLongPress:(id)sjjHandlePanelThemeMenuLongPress;
--(id)contextMenuInteraction:(id)contextMenuInteraction configurationForMenuAtLocation:(struct CGPoint)configurationForMenuAtLocation;
--(void)collapseButtonLongPress:(id)collapseButtonLongPress;
--(void)swChange:(id)swChange;
--(void)sliderAdjustBegan:(id)sliderAdjustBegan;
--(void)sliderChange:(id)sliderChange;
--(void)sliderAdjustEnded:(id)sliderAdjustEnded;
--(void)selectFontItem:(id)selectFontItem;
--(void)restoreDefaultFont;
--(void)deleteFontItem:(id)deleteFontItem;
--(void)fontItemLongPress:(id)fontItemLongPress;
--(void)chooseCustomFontFile;
--(void)importExternalThemeZipFile;
--(void)pickSideDockShakeSoundFromFile;
--(void)pickSideDockWakeSlideHoverSoundFromFile;
--(void)openPluginConfigBackupMenu;
--(void)openDocumentsBackupMenu;
--(void)sjjOpenDocumentsBackupMenuUnlocked;
--(void)sjjExportDocumentsBackup;
--(void)sjjExportDocumentsBackupUnlocked;
--(void)sjjImportDocumentsBackup;
--(void)sjjImportDocumentsBackupData:(id)sjjImportDocumentsBackupData sourceName:(id)sourceName;
--(void)sjjPresentDocumentsBackupImportConfirmationForData:(id)sjjPresentDocumentsBackupImportConfirmationForData sourceName:(id)sourceName manifest:(id)manifest;
--(void)sjjStartDocumentsBackupRestoreWithData:(id)sjjStartDocumentsBackupRestoreWithData sourceName:(id)sourceName;
--(void)sjjContinueDocumentsBackupRestoreSession;
--(void)sjjPresentDocumentsBackupRestoreFinishedRestartPrompt;
--(void)openDataFileManager;
--(void)chooseImage;
--(void)sjjHandlePickedImageData:(id)sjjHandlePickedImageData image:(id)image target:(long long)target;
--(void)picker:(id)picker didFinishPicking:(id)didFinishPicking;
--(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo;
--(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel;
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
--(void)documentPickerWasCancelled:(id)documentPickerWasCancelled;
--(void)closePanel;
--(void)killDouyinFromPanel;
--(void)openSVIPTimedCloseSetup;
--(void)openSVIPIdleAutoCloseSetup;
--(void)openSVIPBetaChannel;
+-(void)openHiddenFriendSettingsPage; // 0x004d860c
+-(id)addSectionCardInView:(id)a1 y:(double)a2 height:(double)a3; // 0x0008a750
+-(void)attachPressAnimation:(id)a1; // 0x0008b2d4
+-(void)sjjApplyBaseTabVisualStateInWrap:(id)a1 animated:(BOOL)a2; // 0x0008b2d8
+-(void)buttonPressDown:(id)a1; // 0x0008bb30
+-(void)buttonPressUp:(id)a1; // 0x0008bb58
+-(void)playCardEntryAnimation; // 0x0008bb80
+-(void)sectionTabTapped:(id)a1; // 0x0008bd50
+-(void)baseSubTabTapped:(id)a1; // 0x0008c014
+-(void)videoCategoryTabTapped:(id)a1; // 0x0008c230
+-(void)videoCategorySegmentChanged:(id)a1; // 0x0008c3b4
+-(id)featureToggleTitleForTag:(long long)a1; // 0x0008c59c
+-(BOOL)featureSwitchStateForTag:(long long)a1 known:(BOOL *)a2; // 0x0008ddf4
+-(BOOL)sjjConfiguredFeatureSwitchStateForTag:(long long)a1 known:(BOOL *)a2; // 0x0008ddf8
+-(id)featureSwitchHelpHintForTag:(long long)a1 title:(id)a2; // 0x0008f888
+-(id)featureSwitchHelpGuideForTag:(long long)a1; // 0x000908bc
+-(id)featureSearchRoutingForSwitchTag:(long long)a1; // 0x0009128c
+-(id)sjjFeatureSearchNormalizedText:(id)a1; // 0x00091b00
+-(BOOL)featureSearchText:(id)a1 matchesQuery:(id)a2 normalizedQuery:(id)a3; // 0x00091cb8
+-(id)featureSearchAutoSwitchTags; // 0x00091e1c
+-(id)featureSearchAutoSwitchEntries; // 0x00092018
+-(id)featureSearchSupplementalEntries; // 0x000927d0
+-(id)featureSearchIndex; // 0x00092a70
+-(id)featureSearchResultsForQuery:(id)a1; // 0x00092f50
+-(void)focusFeatureSearchEntry:(id)a1; // 0x0009343c
+-(void)applyFeatureSearchEntry:(id)a1; // 0x00093b4c
+-(void)performFeatureSearchQuery:(id)a1; // 0x00094004
+-(void)openFeatureSearchFromPull; // 0x00094670
+-(void)sjjActivateInlineFeatureSearchFromPull; // 0x000946e8
+-(void)sjjSetInlineFeatureSearchActive:(BOOL)a1 animated:(BOOL)a2; // 0x000949b0
+-(void)sjjInlineSearchTextChanged:(id)a1; // 0x00094bc8
+-(void)sjjInlineSearchReturn:(id)a1; // 0x00094c30
+-(void)sjjInlineSearchCancelTapped:(id)a1; // 0x00094e60
+-(void)sjjInlineSearchResultTapped:(id)a1; // 0x00094e6c
+-(void)sjjShowInlineSearchResultsForQuery:(id)a1; // 0x00094ef0
+-(void)sjjHideInlineSearchResultsAnimated:(BOOL)a1; // 0x00095ba0
+-(void)sjjUpdateSearchDotPullProgress:(double)a1 armed:(BOOL)a2 animated:(BOOL)a3; // 0x00095d38
+-(void)sjjResetSearchDotAnimated:(BOOL)a1; // 0x00096c40
+-(void)sjjPrepareInlineFeatureSearchForPanelDismiss; // 0x00096c50
+-(void)toggleFeatureSwitchTag:(long long)a1; // 0x00096d70
+-(void)confirmRestoreDefaultFont; // 0x00096dfc
+-(void)openFontManagementMenu; // 0x00096f80
+-(void)configurePanelCustomBackground; // 0x000978e8
+-(void)clearPanelCustomBackground; // 0x00097d2c
+-(void)configureNicknameTextScale; // 0x00097dc8
+-(void)resetNicknameCaptionLayoutDefaults; // 0x000980a0
+-(void)openRightElementScaleSettingsPage; // 0x0009818c
+-(void)openBottomTabBarHeightSettingsPage; // 0x00098328
+-(void)openTransparencySettingsPage; // 0x0009840c
+-(void)openVideoFullScreenSettingsPage; // 0x00098558
+-(void)configureVideoFullScreenCommentScaleMode; // 0x00098650
+-(void)sjjOpenGlassTabBarSettingsPageFromMainFeature; // 0x00098968
+-(void)sjjConfirmGlassTabBarEnableAndOpenSettingsWithCompletion:(id /* block */)a1; // 0x000989c0
+-(void)openGlassTabBarSettingsPage; // 0x00098ec0
+-(void)configureFloatingAudioVisualizerPosition; // 0x00099f74
+-(void)configureFloatingAudioVisualizerScope; // 0x0009a254
+-(void)configureFloatingAudioVisualizerStyle; // 0x0009a534
+-(void)configureGlassTabBarCircleRole; // 0x0009bbb8
+-(void)configureGlassTabBarCircleSide; // 0x0009be9c
+-(void)configureGlassTabBarCollapsePosition; // 0x0009c180
+-(void)configureGlassTabBarFollowMode; // 0x0009c464
+-(void)configureGlassTabBarThemeMode; // 0x0009c838
+-(void)configureGlassTabBarSelectedColor; // 0x0009cb1c
+-(void)configureHomeTopGlassSelectedColor; // 0x0009cfd0
+-(void)configureGlassTabBarIconStyle; // 0x0009d484
+-(void)configureHomeActionGlassIconStyle; // 0x0009d764
+-(void)configureGlassTabBarDisplayStyle; // 0x0009da48
+-(void)configureGlassQuickActions; // 0x0009dd28
+-(void)openVideoProgressStyleSettingsPage; // 0x0009e168
+-(void)openDanmakuColorSettingsPage; // 0x0009e5fc
+-(void)configureDanmakuPortColor; // 0x0009e7c4
+-(void)configureDanmakuColorMode; // 0x0009e900
+-(void)resetDanmakuColorToDefault; // 0x0009eb08
+-(void)openDefaultLiveQualitySettingsPage; // 0x0009eb68
+-(void)openLiveAutoLikeSettingsPage; // 0x0009ee74
+-(void)configureLiveAutoLike; // 0x0009f0ac
+-(void)stopLiveAutoLike; // 0x0009f688
+-(void)openAreaDisplaySettingsPage; // 0x0009f6bc
+-(void)sjjPresentVideoFullScreenConflictWarning; // 0x0009f7ec
+-(void)openQuickCopyCaptionSettingsPage; // 0x0009fec8
+-(void)configureQuickCopyCaptionMode; // 0x0009ff88
+-(void)openNicknameCaptionColorSettingsPage; // 0x000a02a8
+-(void)openMessageExactTimeSettingsPage; // 0x000a046c
+-(void)configureNicknameCaptionPortColor; // 0x000a0a4c
+-(void)configureNicknameCaptionRainbowMode; // 0x000a0b3c
+-(void)resetNicknameCaptionColorToDefault; // 0x000a0d44
+-(void)openRecommendPageFilterSettingsPage; // 0x000a0da0
+-(void)configureRecommendLowLikes; // 0x000a1274
+-(void)configureRecommendUsers; // 0x000a14e4
+-(void)configureRecommendCaptionWords; // 0x000a16d0
+-(void)configureRecommendPropWords; // 0x000a18bc
+-(void)openSpecifiedTimeFilterSettingsPage; // 0x000a1aa8
+-(void)configureSpecifiedTimeDays; // 0x000a1bec
+-(void)openFeedIconCustomizationSettingsPage; // 0x000a1e40
+-(void)pickFeedIconFromAlbum; // 0x000a2558
+-(void)configureAreaPortColor; // 0x000a27a8
+-(void)openVideoProgressTimeSettingsPage; // 0x000a28dc
+-(void)configureVideoProgressTimePositionMode; // 0x000a2c9c
+-(void)configureVideoProgressTimeStyleMode; // 0x000a310c
+-(void)configureVideoProgressTimeTextColor; // 0x000a351c
+-(void)configureVideoProgressTimeBadgeColor; // 0x000a3a5c
+-(void)resetVideoProgressTimeColorsToDefault; // 0x000a4240
+-(void)configureVideoProgressStyleMode; // 0x000a429c
+-(void)configureVideoProgressMinimumColor; // 0x000a4698
+-(void)configureVideoProgressMaximumColor; // 0x000a4b24
+-(void)resetVideoProgressColorsToDefault; // 0x000a4fb0
+-(void)configureVideoProgressThumbSize; // 0x000a5018
+-(void)configureVideoProgressThumbPositionMode; // 0x000a52d4
+-(void)configureVideoProgressThumbImage; // 0x000a56e0
+-(void)pickVideoProgressThumbImageFromAlbum; // 0x000a5b80
+-(void)pickVideoProgressThumbImageFromFile; // 0x000a5be4
+-(void)clearVideoProgressThumbImage; // 0x000a5dd8
+-(void)applyPanelCustomBackgroundImage:(id)a1; // 0x000a5e6c
+-(void)presentPanelBackgroundCropperForImage:(id)a1; // 0x000a6230
+-(void)applyMessagePageBackgroundImage:(id)a1; // 0x000a63f8
+-(void)presentMessagePageBackgroundCropperForImage:(id)a1; // 0x000a6548
+-(void)openFontDeleteMenu; // 0x000a67e4
+-(id)currentTopViewController; // 0x000a6bf8
+-(void)sjjPresentSecondarySettingsPageWithTitle:(id)a1 subtitle:(id)a2 tintTag:(long long)a3 builder:(id /* block */)a4; // 0x000a6e4c
+-(BOOL)sjjHasRestorableSecondarySettingsPage; // 0x000a8a38
+-(void)sjjClearSecondarySettingsPageContext; // 0x000a8a70
+-(void)sjjRefreshSecondarySettingsPageContentInPlace; // 0x000a8b00
+-(void)sjjRestoreSecondarySettingsPageAnimated:(BOOL)a1; // 0x000a908c
+-(void)dismissSJJSecondarySettingsPage:(id)a1; // 0x000a91dc
+-(id)sjjPanelOrSecondaryViewWithTag:(long long)a1; // 0x000a9328
+-(id)sjjValueLabelForSlider:(id)a1 valueTag:(long long)a2; // 0x000a93d4
+-(id)sjjPreviewViewForSlider:(id)a1 valueTag:(long long)a2; // 0x000a94b4
+-(void)sjjToggleHighRefreshFPSDisplay; // 0x000a9554
+-(void)sjjHighRefreshTitleLongPress:(id)a1; // 0x000a959c
+-(void)sjjConfigureHighRefresh; // 0x000a9610
+-(SEL)sjjSecondarySettingsActionForSwitchTag:(long long)a1; // 0x000a9870
+-(id)sjjSecondarySettingsHintForSwitchTag:(long long)a1; // 0x000a9f1c
+-(void)configureSJJHDRBlockMode; // 0x000aa65c
+-(void)openAutoCommentSettingsPage; // 0x000aab18
+-(void)openAdFilterSettingsPage; // 0x000ab240
+-(void)openModernLongPressSettingsPage; // 0x000ab370
+-(void)configureModernLongPressStyle; // 0x000ab54c
+-(void)openTitleCustomizationSettingsPage; // 0x000ab94c
+-(void)presentTopBarTitleColorManager; // 0x000abd50
+-(void)presentTopBarTitleColorEditorForSource:(id)a1; // 0x000ac298
+-(void)presentBottomBarTitleCustomizationManager; // 0x000acb64
+-(void)configureTopBarTitleCustomization; // 0x000ad258
+-(void)presentTopBarTitleCustomizationManager; // 0x000ad25c
+-(void)presentTopBarTitleCustomizationEditorForSource:(id)a1 replacement:(id)a2; // 0x000ada38
+-(void)sjjConfigureSingleTitleCustomizationWithTitle:(id)a1 key:(id)a2 placeholder:(id)a3; // 0x000ae188
+-(void)configureHomeTitleCustomization; // 0x000ae560
+-(void)configureFriendsTitleCustomization; // 0x000ae580
+-(void)configureMessagesTitleCustomization; // 0x000ae5a0
+-(void)configureMineTitleCustomization; // 0x000ae5c0
+-(void)configureCommentPlaceholderCustomization; // 0x000ae5e0
+-(void)resetAllTitleCustomization; // 0x000ae600
+-(void)openTopBarRemovalSettingsPage; // 0x000ae6b0
+-(void)sjjOpenInterfaceHideSettingsPageForGroup:(id)a1 title:(id)a2 subtitle:(id)a3; // 0x000ae8c8
+-(void)openLowBarHideSettingsPage; // 0x000aec24
+-(void)openVideoInterfaceHideSettingsPage; // 0x000aec44
+-(void)openMessagePageHideSettingsPage; // 0x000aec64
+-(void)openMinePageHideSettingsPage; // 0x000aec84
+-(void)openLiveInterfaceHideSettingsPage; // 0x000aeca4
+-(void)openCommentLongPressHideSettingsPage; // 0x000aecc4
+-(void)openVideoLongPressHideSettingsPage; // 0x000aeed0
+-(void)configureVideoLongPressCustomHideItems; // 0x000af140
+-(void)openBlueCommentSettingsPage; // 0x000af3f0
+-(void)openCommentBlurSettingsPage; // 0x000af554
+-(void)openCommentRoundedCornersSettingsPage; // 0x000af668
+-(void)resetCommentBlurCornerRadius; // 0x000af7fc
+-(void)openCommentSortSettingsPage; // 0x000af83c
+-(void)openDoubleTapDownloadSettingsPage; // 0x000afae0
+-(void)configureDoubleTapHistoryMaxCount; // 0x000afedc
+-(void)openDoubleTapFeatureSettingsPage; // 0x000b018c
+-(void)openVideoPopupTransitionSettingsPage; // 0x000b0190
+-(void)openVideoTimeCapsuleSettingsPage; // 0x000b0340
+-(void)openSideDockSettingsPage; // 0x000b057c
+-(void)openSaveNotifySettingsPage; // 0x000b1ffc
+-(void)openAntiRecallSettingsPage; // 0x000b24ac
+-(void)openTextToSpeechSettingsPage; // 0x000b26b0
+-(void)openNativeLongPressSettingsPage; // 0x000b2700
+-(void)openProfileAccessLockSettingsPage; // 0x000b2aa8
+-(void)openAutoCacheCleanSettingsPage; // 0x000b2c4c
+-(void)openIOS26GlassScopeSettingsPage; // 0x000b2cdc
+-(void)openLegacyDoubleTapGlassSettingsPage; // 0x000b2ec4
+-(void)openPanelBackgroundBlurSettingsPage; // 0x000b3060
+-(void)openMessagePageBackgroundSettingsPage; // 0x000b320c
+-(void)openInnerNotificationGlassSettingsPage; // 0x000b33b8
+-(void)openAppNotificationGlassSettingsPage; // 0x000b34f4
+-(void)configureMessagePageBackground; // 0x000b3614
+-(void)clearMessagePageBackground; // 0x000b3918
+-(void)openCommentBackgroundSettingsPage; // 0x000b3974
+-(void)configureCommentBackground; // 0x000b3b20
+-(void)applyCommentBackgroundImage:(id)a1; // 0x000b3e24
+-(void)clearCommentBackground; // 0x000b3f74
+-(void)openDynamicIslandHaloSettingsPage; // 0x000b3fc8
+-(void)openMeteorShowerSettingsPage; // 0x000b42e4
+-(void)openRedPacketSettingsPage; // 0x000b4460
+-(void)openSVIPAIVideoRobotSettingsPage; // 0x000b4b8c
+-(void)openSVIPAutoPrivateMessageSettingsPage; // 0x000b53f4
+-(void)openVideoQualityProSettingsPage; // 0x000b5724
+-(void)openFeedSmoothSwipeSettingsPage; // 0x000b5a18
+-(void)openAccountQuickSwitchSettingsPage; // 0x000b5d8c
+-(void)openExternalThemeSettingsPage; // 0x000b5e98
+-(void)openFontManagementSettingsPage; // 0x000b6034
+-(void)sjjCollapseFoldGroupsBeforeGuide; // 0x000b6270
+-(void)showPanelVersionInfo; // 0x000b6420
+-(void)showProfileEditorWithTitle:(id)a1 current:(id)a2 saveBlock:(id /* block */)a3; // 0x000b7fdc
+-(void)editProfileName; // 0x000b82bc
+-(void)editProfileSign; // 0x000b8370
+-(id)sjjPanelProfileNameColorStatusTitle; // 0x000b8444
+-(id)sjjPanelProfileSignColorStatusTitle; // 0x000b8484
+-(id)sjjPanelTitleReplacementStatusTitle; // 0x000b84c4
+-(void)sjjPresentPanelColorPickerWithTitle:(id)a1 currentHex:(id)a2 saveBlock:(id /* block */)a3; // 0x000b851c
+-(void)colorPickerViewControllerDidFinish:(id)a1; // 0x000b8878
+-(void)presentPanelTitleReplacementEditorForSource:(id)a1 replacement:(id)a2; // 0x000b895c
+-(void)presentPanelTitleReplacementManager; // 0x000b90e8
+-(void)configurePanelProfileNameColor; // 0x000b9604
+-(void)configureDoubleTapProfileHeaderNameColor; // 0x000b9a2c
+-(void)configureDoubleTapQuickAppLaunchItems; // 0x000b9ea4
+-(void)configurePanelProfileSignColor; // 0x000ba770
+-(void)configurePanelTitleTextReplacement; // 0x000bab54
+-(void)sjjPresentVideoStatsFakeSettings; // 0x000bab58
+-(void)sjjEditVideoStatsFakeField:(id)a1; // 0x000bb9f8
+-(void)sjjPresentAdaptiveDarkModePickerWithTitle:(id)a1 currentMode:(long long)a2 saveKey:(id)a3 storage:(long long *)a4; // 0x000bc358
+-(void)configureAdaptiveDarkCapsuleMode; // 0x000bc82c
+-(void)configureAdaptiveDarkSideDockMode; // 0x000bc848
+-(void)configureAdaptiveDarkDoubleTapPanelMode; // 0x000bc864
+-(void)configureAdaptiveDarkVideoPopupMode; // 0x000bc880
+-(void)configureProfileAccessLockMode; // 0x000bc884
+-(void)configureProfileAccessLockPassword; // 0x000bcdb8
+-(void)chooseProfileAvatar; // 0x000bd290
+-(void)contactAuthorQQ; // 0x000bd29c
+-(void)pasteAuthCode; // 0x000bd47c
+-(void)showGeneratedAuthCode:(id)a1; // 0x000bd7c4
+-(void)generateAuthCodeForUser; // 0x000bd92c
+-(void)copyDeviceCode; // 0x000bd948
+-(void)manualAuthInput; // 0x000bda08
+-(void)openAIReplySettingsTool; // 0x000be2f4
+-(void)openAIReplyTool; // 0x000be414
+-(void)openSparkRenewTool; // 0x000be558
+-(void)openWarmthFeatureTool; // 0x000be658
+-(void)sideDockAIHubTap:(id)a1; // 0x000be6a8
+-(void)configureVideoParseAPI; // 0x000be6ac
+-(void)configureWorkDataAPIToken; // 0x000bf4a8
+-(void)configureAlbumSaveDetailContent; // 0x000bf81c
+-(void)configureAlbumSaveTarget; // 0x000bffc0
+-(void)configureVideoPopupAnimation; // 0x000c60b8
+-(void)configureInteractionAnimationSpeed; // 0x000c63e4
+-(void)configureFeedSmoothSwipeSpeed; // 0x000c6724
+-(void)promptFeedSmoothSwipeCustomSpeed; // 0x000c6ca4
+-(void)configureFeedSmoothSwipeBackground; // 0x000c708c
+-(void)configureFeedSmoothSwipeBackgroundColor; // 0x000c79d4
+-(void)pickFeedSmoothSwipeBackgroundImage; // 0x000c7bc0
+-(void)applyFeedSmoothSwipeBackgroundImage:(id)a1; // 0x000c7c24
+-(void)configureVideoPopupMorphStyle; // 0x000c7fb8
+-(void)configureInAppWebPresentation; // 0x000c82dc
+-(void)presentDoubleTapActionPickerWithTitle:(id)a1 current:(long long)a2 save:(id /* block */)a3; // 0x000c8604
+-(void)configureDoubleTapUpperAction; // 0x000c8908
+-(void)configureDoubleTapLowerAction; // 0x000c8a68
+-(void)configureDoubleTapQuickMode; // 0x000c8e74
+-(void)configureDoubleTapPanelButtons; // 0x000c9234
+-(void)addDoubleTapIndicatorWithAction:(long long)a1; // 0x000c9460
+-(void)configureDoubleTapSplitIndicators; // 0x000c97e8
+-(void)configureDoubleTapCustomWebButton; // 0x000ca1e4
+-(void)configureDoubleTapPanelAccentColor; // 0x000cab7c
+-(void)configureVideoCapsuleAccentColor; // 0x000cafa4
+-(void)configureVideoCapsuleSuccessEffect; // 0x000cb3cc
+-(void)configureVideoCapsuleFailureEffect; // 0x000cba08
+-(void)configureSaveNotifyTone; // 0x000cc044
+-(void)configureSideDockWakeSlideHoverSound; // 0x000cc2b8
+-(void)configureSideDockShakeSound; // 0x000cc940
+-(void)configureAntiRecallBadgeText; // 0x000cce14
+-(void)configureAntiRecallBadgeColor; // 0x000cd0ec
+-(void)configureAntiRecallBadgePosition; // 0x000cd518
+-(void)configureLocalTransferAmount; // 0x000cd848
+-(void)configureClownMessageHint; // 0x000cd8b4
+-(void)configurePlaybackSpeedOptions; // 0x000cd920
+-(void)configureSWJRedPacketTiming; // 0x000cea84
+-(void)configureSWJRedPacketRules; // 0x000cf0bc
+-(void)configureSWJRedPacketAutoReply; // 0x000d035c
+-(void)configureAutoCommentMode; // 0x000d0870
+-(void)configureVideoQualityProTier; // 0x000d0bbc
+-(void)configureAutoCommentTriggerMode; // 0x000d0fdc
+-(void)configureAutoCommentPresetText; // 0x000d13a4
+-(void)configureAutoCommentRandomPool; // 0x000d16f8
+-(void)configureAutoCommentAIPrompt; // 0x000d1950
+-(void)configureAutoCommentBoundary; // 0x000d211c
+-(void)configureAutoCommentRedLine; // 0x000d24d8
+-(void)configureAutoCommentDelay; // 0x000d2b44
+-(void)configureCommentSortPrecisePageCount; // 0x000d2df0
+-(void)configureCommentSortSilentPreloadPageCount; // 0x000d30b8
+-(void)configureAutoCommentImage; // 0x000d3380
+-(void)configureBlueCommentPrefix; // 0x000d3958
+-(void)configureAutoPrivateMessageText; // 0x000d3c70
+-(void)configureAutoPrivateMessageDelay; // 0x000d3f1c
+-(void)openMiniAppRewardBypassSettingsPage; // 0x000d420c
+-(void)configureMiniAppRewardBypassMode; // 0x000d432c
+-(void)configureProfileBatchDownloadMode; // 0x000d471c
+-(void)configureMeteorShowerStyle; // 0x000d4a7c
+-(void)configureDynamicIslandInnerParticleStyle; // 0x000d4dc4
+-(void)configureDynamicIslandHaloStarRainbowGlowStyle; // 0x000d5110
+-(void)configureDynamicIslandHaloAdvancedTuning; // 0x000d5440
+-(void)configureVideoTimeCapsulePairSpacing; // 0x000d5db0
+-(void)configureVideoTimeCapsuleStyle; // 0x000d6080
+-(void)configureTopToastStyle; // 0x000d65cc
+-(void)configureSideDockWakeSwipeAction; // 0x000d6608
+-(void)configureSideDockWakeSpeedStep; // 0x000d69ec
+-(void)configureSideDockWakeColor; // 0x000d6c58
+-(id)sjjHiFloatingSymbol:(id)a1; // 0x000d7280
+-(void)sjjAddHiFloatingGroupBackground:(id)a1 fromY:(double)a2 toY:(double)a3; // 0x000d734c
+-(double)sjjAddHiFloatingSectionTitle:(id)a1 inView:(id)a2 y:(double)a3; // 0x000d7584
+-(void)sjjAddHiFloatingRowDivider:(id)a1; // 0x000d76b8
+-(double)sjjAddHiFloatingSwitchRow:(id)a1 y:(double)a2 title:(id)a3 symbol:(id)a4 key:(id)a5; // 0x000d7844
+-(double)sjjAddHiFloatingActionRow:(id)a1 y:(double)a2 title:(id)a3 detail:(id)a4 symbol:(id)a5 action:(SEL)a6; // 0x000d7c84
+-(double)sjjAddHiFloatingSegment:(id)a1 y:(double)a2 items:(id)a3 selected:(long long)a4 action:(SEL)a5; // 0x000d80e4
+-(double)sjjAddHiClearScreenSwitchRow:(id)a1 y:(double)a2 title:(id)a3 symbol:(id)a4 option:(long long)a5; // 0x000d83f0
+-(void)sjjHiFloatingSettingsTabChanged:(id)a1; // 0x000d8744
+-(void)sjjHiClearScreenSettingsTabChanged:(id)a1; // 0x000d87e0
+-(void)sjjHiFloatingSwitchChanged:(id)a1; // 0x000d887c
+-(void)sjjHiClearScreenSwitchChanged:(id)a1; // 0x000d8b0c
+-(void)configureHiFloatingHideSeconds; // 0x000d8c50
+-(void)configureHiFloatingSpeedSize; // 0x000d8f9c
+-(void)configureHiFloatingClearSize; // 0x000d92d8
+-(BOOL)sjjStoreHiFloatingClearIconData:(id)a1; // 0x000d960c
+-(void)pickHiFloatingClearIconFromAlbum; // 0x000d98c8
+-(void)pickHiFloatingClearIconFromFile; // 0x000d98d4
+-(void)configureHiFloatingCustomClearIcon; // 0x000d9a5c
+-(void)configureHiFloatingClearIcon; // 0x000da008
+-(void)resetHiFloatingSpeedPosition; // 0x000da45c
+-(void)resetHiFloatingClearPosition; // 0x000da498
+-(void)configureHiFloatingControls; // 0x000da4d4
+-(void)configureClearScreenOptions; // 0x000dab5c
+-(void)configureSideDockIconTintColor; // 0x000dade0
+-(void)configureSideDockWakeGestureSensitivity; // 0x000db238
+-(void)configureSideDockPetSkin; // 0x000db588
+-(void)configureSideDockPetPersonality; // 0x000dbb1c
+-(void)configureSideDockPetDockStyle; // 0x000dbebc
+-(void)configureSideDockGyroFollowDirection; // 0x000dc254
+-(void)configureUpperPanelButtons; // 0x000dc764
+-(void)configureLowerPanelButtons; // 0x000dc7ec
+-(void)configureSideDockButtons; // 0x000dc874
+-(void)configureNativeLongPressPluginPosition; // 0x000dc8fc
+-(void)configureNativeLongPressMenuContent; // 0x000dccc8
+-(void)configureNativeLongPressListStyle; // 0x000dcd50
+-(void)configureNativeLongPressBackgroundImage; // 0x000dcdd8
+-(void)pickNativeLongPressBackgroundImageFromAlbum; // 0x000dd278
+-(void)pickNativeLongPressBackgroundImageFromFile; // 0x000dd2dc
+-(void)applyNativeLongPressBackgroundImageData:(id)a1; // 0x000dd4a8
+-(void)applyNativeLongPressBackgroundImage:(id)a1; // 0x000dd5fc
+-(void)presentNativeLongPressBackgroundCropperForImage:(id)a1; // 0x000dd6dc
+-(void)configureNativeLongPressButtonBackgrounds; // 0x000dd9ec
+-(void)configureNativeLongPressButtonBackgroundForID:(id)a1; // 0x000ddf50
+-(void)pickNativeLongPressButtonBackgroundFromAlbum; // 0x000de690
+-(void)pickNativeLongPressButtonBackgroundFromFile; // 0x000de760
+-(void)applyNativeLongPressButtonBackgroundData:(id)a1 itemID:(id)a2; // 0x000de978
+-(void)applyNativeLongPressButtonBackgroundImage:(id)a1 itemID:(id)a2; // 0x000deb10
+-(void)presentNativeLongPressButtonBackgroundCropperForImage:(id)a1 itemID:(id)a2; // 0x000dec28
+-(void)configureNativeLongPressImageSlot; // 0x000deee0
+-(void)configureNativeLongPressImageSlotForID:(id)a1; // 0x000df21c
+-(void)pickNativeLongPressImageSlotFromAlbum; // 0x000df888
+-(void)pickNativeLongPressImageSlotFromFile; // 0x000df91c
+-(void)applyNativeLongPressImageSlotData:(id)a1 slotID:(id)a2; // 0x000dfb34
+-(void)applyNativeLongPressImageSlotImage:(id)a1 slotID:(id)a2; // 0x000dfd74
+-(void)presentNativeLongPressImageSlotCropperForImage:(id)a1 slotID:(id)a2; // 0x000dfea8
+-(void)presentNativeLongPressImageSlotCropperForGIFData:(id)a1 slotID:(id)a2; // 0x000e0220
+-(void)configureNativeLongPressMenuTitles; // 0x000e0d08
+-(void)configureNativeLongPressPluginLayoutMode; // 0x000e1614
+-(void)configureNativeLongPressRowLayoutRule; // 0x000e1aac
+-(void)configureSideDockDividerPosition; // 0x000e1dcc
+-(void)configureSideDockSubCapsuleButtons; // 0x000e2480
+-(void)configureAudioWaveSettings; // 0x000e2508
+-(void)openFrequencyInteractionPanel; // 0x000e2560
+-(void)configureSideDockIcons; // 0x000e25fc
+-(void)configureSideDockIconForActionID:(id)a1; // 0x000e2ae0
+-(void)promptSideDockSymbolForActionID:(id)a1; // 0x000e3054
+-(void)promptSideDockSymbolForActionID:(id)a1 selectedState:(BOOL)a2; // 0x000e3058
+-(void)pickSideDockIconFromAlbumForActionID:(id)a1; // 0x000e35bc
+-(void)pickSideDockIconFromAlbumForActionID:(id)a1 selectedState:(BOOL)a2; // 0x000e35c0
+-(void)pickSideDockIconFromFileForActionID:(id)a1; // 0x000e3680
+-(void)pickSideDockIconFromFileForActionID:(id)a1 selectedState:(BOOL)a2; // 0x000e3684
+-(void)configureSideDockAppLaunch; // 0x000e38dc
+-(void)configureSideDockPrimaryDirectShareFriend; // 0x000e3f68
+-(void)configureSideDockDirectShareFriend; // 0x000e3f74
+-(void)configureSideDockDirectShareFriend2; // 0x000e3f80
+-(void)configureSideDockDirectShareFriend3; // 0x000e3f8c
+-(void)configureSideDockDirectShareFriend4; // 0x000e3f98
+-(void)configureSideDockDirectShareFriend5; // 0x000e3fa4
+-(void)configureSideDockDirectShareFriendForActionID:(id)a1; // 0x000e3fb0
+-(void)configureAutoGroupAuthorization; // 0x000e4ed0
+-(void)showCurrentGroupIdentifiers; // 0x000e54b0
+-(void)nameTap:(id)a1; // 0x000e54b4
+-(void)nameLongPress:(id)a1; // 0x000e54b8
+-(void)signTap:(id)a1; // 0x000e5514
+-(void)signLongPress:(id)a1; // 0x000e5518
+-(void)accountLabelTap:(id)a1; // 0x000e5574
+-(void)accountLabelLongPress:(id)a1; // 0x000e55bc
+-(void)presentAliasBadgeStyleSelector; // 0x000e5618
+-(void)ensureAliasAccountLabelGestures:(id)a1; // 0x000e5acc
+-(void)toggleAliasSVIPPendant; // 0x000e5d3c
+-(struct CGRect)aliasSVIPBadgeFrameInAvatarBounds:(id)a1; // 0x000e5de4
+-(struct CGRect)aliasSVIPBadgePreviewFrameInAvatarBounds:(id)a1; // 0x000e5e78
+-(id)aliasSVIPBadgeAppearance; // 0x000e5e7c
+-(void)decorateSVIPBadgeView:(id)a1; // 0x000e6674
+-(void)decorateSVIPAvatarFrame:(id)a1 withInnerContainer:(id)a2 previewMode:(BOOL)a3; // 0x000e71e8
+-(BOOL)isAliasSVIPUnlocked; // 0x000e8b30
+-(BOOL)shouldShowSVIPSection; // 0x000e8b34
+-(double)effectiveSVIPPanelBlurAmount; // 0x000e8b80
+-(double)effectiveSVIPPanelOpacity; // 0x000e8b8c
+-(double)effectiveSVIPGroupOpacity; // 0x000e8b98
+-(double)effectiveSVIPGroupBlurAmount; // 0x000e8ba4
+-(void)applySVIPPanelVisualsLiveIfPossible; // 0x000e8bb0
+-(void)sjjSetMainPanelScrollPerformanceMode:(BOOL)a1 forScrollView:(id)a2; // 0x000ed460
+-(BOOL)sjjIsMainPanelScrollDragPerformanceActiveForScrollView:(id)a1; // 0x000ed464
+-(void)sjjSetMainPanelLiveBlurReducedForScrolling:(BOOL)a1; // 0x000ed50c
+-(void)sjjBeginMainPanelScrollDragPerformanceForScrollView:(id)a1; // 0x000edfec
+-(void)sjjScheduleMainPanelLiveBlurRestoreForScrollView:(id)a1; // 0x000ee064
+-(void)sjjFinishMainPanelScrollDragPerformanceForScrollView:(id)a1; // 0x000ee2e8
+-(void)sjjCancelMainPanelScrollDragPerformance; // 0x000ee358
+-(id)sjjMainPanelVisualContainersForScrollView:(id)a1; // 0x000ee468
+-(void)sjjApplyMainPanelTransientScrollReduction:(BOOL)a1 forScrollView:(id)a2; // 0x000ee870
+-(BOOL)sjjIsPanelOwnedScrollView:(id)a1; // 0x000eeb9c
+-(void)sjjPausePanelDecorativeAnimationsBrieflyForInteraction; // 0x000eec28
+-(void)sjjSetPanelDecorativeAnimationsPausedForScrolling:(BOOL)a1; // 0x000eec2c
+-(void)sjjSchedulePanelDecorativeAnimationsResumeAfterScrolling; // 0x000eec30
+-(void)sjjRemovePanelDecorativeAnimations; // 0x000eec34
+-(void)sjjSetPanelCullHidden:(BOOL)a1 forView:(id)a2 content:(id)a3 hiddenSet:(id)a4; // 0x000eecf8
+-(void)sjjRestoreFoldContainerChildren:(id)a1; // 0x000eedf0
+-(void)sjjRestoreCurrentPanelInteractionStateSoon; // 0x000ef0b0
+-(BOOL)sjjUpdateVisibleSummaryActionWithTitle:(id)a1 status:(id)a2 subtitle:(id)a3; // 0x000ef208
+-(BOOL)sjjSwitchVideoCategoryContentIfPossible; // 0x000ef51c
+-(BOOL)sjjShouldKeepPanelSubviewStableDuringContentSwap:(id)a1; // 0x000eff08
+-(BOOL)sjjShouldPreservePanelSubviewDuringContentRefresh:(id)a1; // 0x000effa8
+-(void)sjjCullMainPanelSubviewsInContainer:(id)a1 visibleMinY:(double)a2 visibleMaxY:(double)a3 content:(id)a4 hiddenSet:(id)a5; // 0x000f0020
+-(void)sjjUpdateFoldRenderBucketsForScrollView:(id)a1 force:(BOOL)a2; // 0x000f0230
+-(void)sjjCullMainPanelOffscreenViewsForScrollView:(id)a1 force:(BOOL)a2; // 0x000f0294
+-(void)sjjCullPanelOwnedOffscreenLayersForScrollView:(id)a1 force:(BOOL)a2; // 0x000f0300
+-(BOOL)sjjMainPanelHasCulledViewsForScrollView:(id)a1; // 0x000f0c04
+-(void)sjjRestoreMainPanelCulledViewsForScrollView:(id)a1; // 0x000f0d18
+-(double)effectiveSVIPPanelWidthScale; // 0x000f13ac
+-(double)effectiveSVIPPanelHeightScale; // 0x000f13b8
+-(void)presentSVIPStyleSelectorWithTitle:(id)a1 key:(id)a2 currentValue:(long long)a3 labels:(id)a4 toastPrefix:(id)a5; // 0x000f13c4
+-(void)chooseSVIPBadgeGlowStyle; // 0x000f190c
+-(void)chooseSVIPAvatarEffectStyle; // 0x000f1938
+-(void)chooseSVIPPanelAuraStyle; // 0x000f1e08
+-(id)svipOpeningSignatureText; // 0x000f1e34
+-(void)toggleSVIPDynamicSign; // 0x000f1f00
+-(void)chooseSVIPDynamicSignStyle; // 0x000f1f40
+-(void)applySVIPAIReplyPresetByIndex:(long long)a1; // 0x000f1f80
+-(void)openSVIPAIReplyPresetSelector; // 0x000f25e0
+-(void)importSVIPAIImagePreset; // 0x000f29bc
+-(void)configureSVIPAIVideoRobotRule; // 0x000f2a14
+-(void)configureSVIPAIVideoRobotPostFlowSkipDelay; // 0x000f2fe8
+-(void)testSVIPAIVideoRobotNow; // 0x000f33d4
+-(void)enableSVIPCapsuleStyle; // 0x000f34b8
+-(void)disableSVIPCapsuleStyle; // 0x000f3540
+-(void)toggleSVIPCapsuleStyleCardAction; // 0x000f35b4
+-(void)applySVIPSmartPresetByIndex:(long long)a1; // 0x000f3648
+-(void)openSVIPSmartPresetSelector; // 0x000f37cc
+-(void)playSVIPEntranceAnimationForContainer:(id)a1 header:(id)a2 avatarFrame:(id)a3 badge:(id)a4; // 0x000f3da8
+-(void)applyAliasAccountLabelLivePreview; // 0x000f3ec0
+-(void)applyAliasSVIPBadgeLivePreview; // 0x000f66fc
+-(void)ensureAliasSVIPBadgeLongPressDragGesture:(id)a1; // 0x000f6990
+-(void)aliasSVIPHeaderBadgeLongPressed:(id)a1; // 0x000f6c28
+-(void)resetAliasSVIPBadgePosition; // 0x000f705c
+-(void)avatarLongPress:(id)a1; // 0x000f70cc
+-(void)markViewsInContent:(id)a1 fromIndex:(long long)a2 sectionKey:(id)a3; // 0x000f7128
+-(id)sjjFoldStateSignature; // 0x000f7280
+-(BOOL)sjjApplyFoldSnapshotIfPossibleInContent:(id)a1 scroll:(id)a2 activeKey:(id)a3; // 0x000f73d4
+-(void)sjjCacheCurrentFoldSnapshotInContent:(id)a1 scroll:(id)a2; // 0x000f7974
+-(void)sjjScheduleFoldSnapshotCacheInContent:(id)a1 scroll:(id)a2; // 0x000f8074
+-(void)applySubmenuInContent:(id)a1 scroll:(id)a2; // 0x000f83b0
+-(void)sjjEnsureLazyPanelPageBuiltForIndex:(long long)a1; // 0x000f937c
+-(void)sjjRebuildSupportersPageWithAnimationsEnabled:(BOOL)a1; // 0x000f96ac
+-(void)sjjUpdatePanelPageUIForIndex:(long long)a1 animated:(BOOL)a2; // 0x000f99f8
+-(void)sjjUpdatePanelPageAnimationBudgetForIndex:(long long)a1; // 0x000fa02c
+-(double)sjjProfileHeaderTrailingReservedWidth; // 0x000fa118
+-(void)sjjUpdateProfileSecretEntryUIForPage:(long long)a1; // 0x000fa124
+-(void)sjjSetProfileSecretPage:(long long)a1 animated:(BOOL)a2; // 0x000fa1a0
+-(void)sjjApplySecretLabTransitionProgress:(double)a1; // 0x000fa1ac
+-(void)sjjApplyProfileRightPlaceholderTransitionProgress:(double)a1; // 0x000fa3dc
+-(void)sjjRequestSecretLabUnlockIfNeeded:(id /* block */)a1; // 0x000fa61c
+-(void)sjjSetSecretLabVisible:(BOOL)a1 animated:(BOOL)a2; // 0x000fa674
+-(void)sjjSetProfileRightPlaceholderVisible:(BOOL)a1 animated:(BOOL)a2; // 0x000fac0c
+-(void)handleProfileSecretSwipe:(id)a1; // 0x000fb1a0
+-(id)sjjBuildProfileRightPlaceholderPageWithFrame:(struct CGRect)a1; // 0x000fb2d4
+-(void)sjjDismissProfileMessageBoardKeyboard:(id)a1; // 0x000fc938
+-(void)sjjProfileMessageBoardTextChanged:(id)a1; // 0x000fc9ac
+-(void)textViewDidChange:(id)a1; // 0x000fcb84
+-(void)handleProfileSecretPan:(id)a1; // 0x000fcbe4
+-(BOOL)gestureRecognizerShouldBegin:(id)a1; // 0x000fceec
+-(BOOL)gestureRecognizer:(id)a1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)a2; // 0x000fcffc
+-(id)sjjBuildProfileSecretPageWithFrame:(struct CGRect)a1; // 0x000fd15c
+-(id)sjjBuildInfoPageScrollWithFrame:(struct CGRect)a1 panelWidth:(struct CGSize)a2 panelHeight:(id)a3; // 0x000fd95c
+-(id)sjjBuildSupportersPageViewWithFrame:(struct CGRect)a1 panelWidth:(struct CGSize)a2 panelHeight:(id)a3; // 0x000fefa4
+-(void)sjjSyncVideoQualityPageIndicatorForScrollView:(id)a1; // 0x00103c18
+-(void)scrollViewDidScroll:(id)a1; // 0x00103d50
+-(void)scrollViewDidEndDecelerating:(id)a1; // 0x00103f58
+-(void)scrollViewDidEndDragging:(id)a1 willDecelerate:(BOOL)a2; // 0x001040fc
+-(void)scrollViewDidEndScrollingAnimation:(id)a1; // 0x00104334
+-(void)scrollViewWillBeginDragging:(id)a1; // 0x00104480
+-(id)initWithFrame:(struct CGRect)a1; // 0x00104504
+-(double)addSwitch:(id)a1 y:(double)a2 title:(id)a3 tag:(long long)a4 on:(BOOL)a5; // 0x001152a0
+-(void)sjjSwitchVisualStateChanged:(id)a1; // 0x001169e4
+-(void)sjjSyncSwitchHelpButtonForSwitch:(id)a1 animated:(BOOL)a2; // 0x001169ec
+-(void)sjjShowSwitchHelp:(id)a1; // 0x00116dc4
+-(double)addFlatSecondarySettingsActionRow:(id)a1 y:(double)a2 title:(id)a3 status:(id)a4 action:(SEL)a5; // 0x00117bd0
+-(double)addSummaryActionButton:(id)a1 y:(double)a2 title:(id)a3 status:(id)a4 subtitle:(id)a5 action:(SEL)a6; // 0x00118354
+-(double)addCompactAIActionRow:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 symbolName:(id)a5 action:(SEL)a6; // 0x00118dbc
+-(id)sjjFindSummaryActionButtonWithTitle:(id)a1 inContainer:(id)a2; // 0x00119644
+-(double)addParseAPIActionButton:(id)a1 y:(double)a2; // 0x001198ac
+-(double)addBetaUpdateContentCard:(id)a1 y:(double)a2; // 0x0011a468
+-(id)buildConfigActionCardWithFrame:(struct CGRect)a1 title:(struct CGSize)a2 status:(id)a3 subtitle:(id)a4 action:(id)a5; // 0x0011ac70
+-(double)sjjConfigActionCardHeightForSubtitle:(id)a1 width:(double)a2; // 0x0011b208
+-(double)addTwoColumnConfigCardsInView:(id)a1 y:(double)a2 leftTitle:(id)a3 leftStatus:(id)a4 leftSubtitle:(id)a5 leftAction:(SEL)a6 rightTitle:(id)a7 rightStatus:(id)a8 rightSubtitle:(id)a9 rightAction:(SEL)a10; // 0x0011b374
+-(double)addBottomAreaDividerInView:(id)a1 y:(double)a2; // 0x0011b5b8
+-(void)applyFlatStyleIfNeededForButtonRow:(id)a1; // 0x0011b5bc
+-(double)addSubFoldGroupHeader:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 tag:(long long)a5 expanded:(BOOL)a6; // 0x0011b91c
+-(double)addFoldGroupHeader:(id)a1 y:(double)a2 title:(id)a3 subtitle:(id)a4 tag:(long long)a5 expanded:(BOOL)a6; // 0x0011d394
+-(BOOL)sjjIsFoldExpandedForTag:(long long)a1; // 0x0011da04
+-(void)sjjUpdateFoldHeaderForButton:(id)a1 expanded:(BOOL)a2; // 0x0011dbb4
+-(void)sjjPersistFoldStateForTag:(long long)a1; // 0x0011dcf4
+-(BOOL)applyFoldToggleInPlaceForTag:(long long)a1 animated:(BOOL)a2; // 0x0011dcf8
+-(double)addUnifiedSliderCard:(id)a1 y:(double)a2 title:(id)a3 hint:(id)a4 tag:(long long)a5 valueTag:(long long)a6 min:(double)a7 max:(double)a8 value:(double)a9 displayPercent:(BOOL)a10; // 0x001219cc
+-(void)groupFoldTapped:(id)a1; // 0x00122358
+-(void)applyPanelThemeMode:(long long)a1; // 0x00122820
+-(void)sjjPresentPanelThemePasswordPromptForMode:(long long)a1 title:(id)a2 password:(id)a3 successToast:(id)a4; // 0x0012293c
+-(id)sjjPanelThemeMenuElements; // 0x00122c60
+-(void)sjjPresentSystemThemeActionSheetFromSourceView:(id)a1; // 0x00123128
+-(void)sjjHandlePanelThemeMenuLongPress:(id)a1; // 0x0012356c
+-(id)contextMenuInteraction:(id)a1 configurationForMenuAtLocation:(struct CGPoint)a2; // 0x00123728
+-(void)collapseButtonLongPress:(id)a1; // 0x00123868
+-(void)swChange:(id)a1; // 0x00124158
+-(void)sliderAdjustBegan:(id)a1; // 0x00130124
+-(void)sliderChange:(id)a1; // 0x00130ed0
+-(void)sliderAdjustEnded:(id)a1; // 0x00136ea4
+-(void)selectFontItem:(id)a1; // 0x00137194
+-(void)restoreDefaultFont; // 0x0013749c
+-(void)deleteFontItem:(id)a1; // 0x0013750c
+-(void)fontItemLongPress:(id)a1; // 0x00137754
+-(void)chooseCustomFontFile; // 0x00137a58
+-(void)importExternalThemeZipFile; // 0x00137c48
+-(void)pickSideDockShakeSoundFromFile; // 0x00137d90
+-(void)pickSideDockWakeSlideHoverSoundFromFile; // 0x00137fdc
+-(void)openPluginConfigBackupMenu; // 0x00138228
+-(void)openDocumentsBackupMenu; // 0x001382d4
+-(void)sjjOpenDocumentsBackupMenuUnlocked; // 0x001382d8
+-(void)sjjExportDocumentsBackup; // 0x001383d8
+-(void)sjjExportDocumentsBackupUnlocked; // 0x001383dc
+-(void)sjjImportDocumentsBackup; // 0x0013a1dc
+-(void)sjjImportDocumentsBackupData:(id)a1 sourceName:(id)a2; // 0x0013a414
+-(void)sjjPresentDocumentsBackupImportConfirmationForData:(id)a1 sourceName:(id)a2 manifest:(id)a3; // 0x0013c060
+-(void)sjjStartDocumentsBackupRestoreWithData:(id)a1 sourceName:(id)a2; // 0x0013ccd8
+-(void)sjjContinueDocumentsBackupRestoreSession; // 0x0013e3b4
+-(void)sjjPresentDocumentsBackupRestoreFinishedRestartPrompt; // 0x0013fd0c
+-(void)openDataFileManager; // 0x0013fe58
+-(void)chooseImage; // 0x0013feb0
+-(void)sjjHandlePickedImageData:(id)a1 image:(id)a2 target:(long long)a3; // 0x00140028
+-(void)picker:(id)a1 didFinishPicking:(id)a2; // 0x00140f28
+-(void)imagePickerController:(id)a1 didFinishPickingMediaWithInfo:(id)a2; // 0x001412a0
+-(void)imagePickerControllerDidCancel:(id)a1; // 0x00144630
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2; // 0x00144684
+-(void)documentPickerWasCancelled:(id)a1; // 0x00145ca8
+-(void)closePanel; // 0x00145cf0
+-(void)killDouyinFromPanel; // 0x00145fcc
+-(void)openSVIPTimedCloseSetup; // 0x001461f0
+-(void)openSVIPIdleAutoCloseSetup; // 0x0014623c
+-(void)openSVIPBetaChannel; // 0x00146888
 
 @end

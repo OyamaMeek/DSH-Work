@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f1e8，父类 UITableViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,23 +30,23 @@
 
 @property (strong, nonatomic) UISegmentedControl * providerControl;
 
--(id)init;
--(void)viewDidLoad;
--(void)closePage;
--(void)savePage;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection;
--(id)textCellWithTitle:(id)textCellWithTitle key:(id)key placeholder:(id)placeholder secure:(BOOL)secure keyboard:(long long)keyboard;
--(id)ratioCellWithTitle:(id)ratioCellWithTitle key:(id)key;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(void)providerChanged:(id)providerChanged;
--(void)fieldChanged:(id)fieldChanged;
--(void)ratioChanged:(id)ratioChanged;
--(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn;
--(id)providerControl;
--(void)setProviderControl:(id)setProviderControl;
+-(id)init; // 0x0053cfec
+-(void)viewDidLoad; // 0x0053d010
+-(void)closePage; // 0x0053d10c
+-(void)savePage; // 0x0053d170
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x0053d1f0
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x0053d1f8
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x0053d24c
+-(id)tableView:(id)a1 titleForFooterInSection:(long long)a2; // 0x0053d358
+-(id)textCellWithTitle:(id)a1 key:(id)a2 placeholder:(id)a3 secure:(BOOL)a4 keyboard:(long long)a5; // 0x0053d37c
+-(id)ratioCellWithTitle:(id)a1 key:(id)a2; // 0x0053d884
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x0053dd50
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x0053e814
+-(void)providerChanged:(id)a1; // 0x0053ebd8
+-(void)fieldChanged:(id)a1; // 0x0053ecb4
+-(void)ratioChanged:(id)a1; // 0x0053edb8
+-(BOOL)textFieldShouldReturn:(id)a1; // 0x0053ee70
+-(id)providerControl; // 0x0053ee8c
+-(void)setProviderControl:(id)a1; // 0x0053ee98
 
 @end

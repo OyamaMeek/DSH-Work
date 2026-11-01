@@ -4,6 +4,11 @@
 //  原始地址 0x00a2eba8，父类 UITableViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,30 +25,30 @@
 
 @interface SJJSparkRenewController : UITableViewController
 
--(void)openTargetDetail:(id)openTargetDetail;
--(void)viewDidLoad;
--(void)viewWillAppear:(BOOL)viewWillAppear;
--(void)closeTap;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)toggleEnabled:(id)toggleEnabled;
--(void)openConversationPicker;
--(void)presentTimeEditor;
--(void)presentDefaultMessageEditor;
--(void)presentRandomDelayEditor;
--(void)addOrUpdateLatestConversation;
--(void)runTodayTasksNow;
--(void)promptEditTargetName:(id)promptEditTargetName;
--(void)promptEditTargetMessage:(id)promptEditTargetMessage;
--(void)sendSingleTargetNow:(id)sendSingleTargetNow;
--(void)removeTarget:(id)removeTarget;
--(void)presentTargetActions:(id)presentTargetActions;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(BOOL)tableView:(id)tableView canEditRowAtIndexPath:(id)canEditRowAtIndexPath;
--(void)tableView:(id)tableView commitEditingStyle:(long long)commitEditingStyle forRowAtIndexPath:(id)forRowAtIndexPath;
+-(void)openTargetDetail:(id)a1; // 0x004a8378
+-(void)viewDidLoad; // 0x004a855c
+-(void)viewWillAppear:(BOOL)a1; // 0x004a8684
+-(void)closeTap; // 0x004a87ec
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x004a88b4
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x004a88bc
+-(double)tableView:(id)a1 heightForRowAtIndexPath:(id)a2; // 0x004a88e4
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x004a8974
+-(id)tableView:(id)a1 titleForFooterInSection:(long long)a2; // 0x004a8990
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x004a8a54
+-(void)toggleEnabled:(id)a1; // 0x004a9740
+-(void)openConversationPicker; // 0x004a9884
+-(void)presentTimeEditor; // 0x004a9888
+-(void)presentDefaultMessageEditor; // 0x004a9dcc
+-(void)presentRandomDelayEditor; // 0x004aa068
+-(void)addOrUpdateLatestConversation; // 0x004aa9cc
+-(void)runTodayTasksNow; // 0x004aac18
+-(void)promptEditTargetName:(id)a1; // 0x004aac74
+-(void)promptEditTargetMessage:(id)a1; // 0x004ab150
+-(void)sendSingleTargetNow:(id)a1; // 0x004ab660
+-(void)removeTarget:(id)a1; // 0x004ab7ec
+-(void)presentTargetActions:(id)a1; // 0x004aba64
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x004aba68
+-(BOOL)tableView:(id)a1 canEditRowAtIndexPath:(id)a2; // 0x004abc74
+-(void)tableView:(id)a1 commitEditingStyle:(long long)a2 forRowAtIndexPath:(id)a3; // 0x004abcd4
 
 @end

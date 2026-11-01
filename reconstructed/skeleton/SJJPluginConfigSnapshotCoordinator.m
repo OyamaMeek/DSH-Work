@@ -54,7 +54,7 @@
 // 0x0037d274  65 条指令
 // 消息: operationInProgress, showToast:duration:, setOperationInProgress:, setIncludeDeviceMetadataForExport:, showLoadingHUD:
 // C 调用: _dispatch_time, _dispatch_get_global_queue, _objc_retainAutoreleasedReturnValue, _dispatch_after, _objc_release
--(void)exportConfigurationIncludingDeviceMetadata:(BOOL)exportConfigurationIncludingDeviceMetadata { /* 重建骨架，语义见 pseudocode */ }
+-(void)exportConfigurationIncludingDeviceMetadata:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0037eba4  96 条指令
 // 字符串: "json", "zip"
@@ -65,17 +65,17 @@
 // 0x0037ed80  169 条指令
 // 消息: exporting, setExporting:, removeTemporaryExport, finishPicker, showToast:duration:, firstObject, startAccessingSecurityScopedResource, dataWithContentsOfURL:options:error:, length, dataWithData:, stopAccessingSecurityScopedResource, lastPathComponent, localizedDescription
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _dispatch_time, _objc_copyWeak, _dispatch_after, _objc_destroyWeak
--(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs { /* 重建骨架，语义见 pseudocode */ }
+-(void)documentPicker:(id)a1 didPickDocumentsAtURLs:(id)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0037f300  84 条指令
 // 消息: setExporting:, removeTemporaryExport, finishPicker, operationInProgress, showToast:duration:, setOperationInProgress:, showLoadingHUD:
 // C 调用: _objc_retain, _dispatch_time, _dispatch_get_global_queue, _objc_retainAutoreleasedReturnValue, _dispatch_after, _objc_release
--(void)documentPickerWasCancelled:(id)documentPickerWasCancelled { /* 重建骨架，语义见 pseudocode */ }
+-(void)documentPickerWasCancelled:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0037f340  68 条指令
 // 消息: operationInProgress, showToast:duration:, setOperationInProgress:, showLoadingHUD:
 // C 调用: _objc_retain, _dispatch_time, _dispatch_get_global_queue, _objc_retainAutoreleasedReturnValue, _dispatch_after, _objc_release
--(void)importData:(id)importData { /* 重建骨架，语义见 pseudocode */ }
+-(void)importData:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00380930  15 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeWeak
@@ -83,31 +83,31 @@
 
 // 0x00380958  5 条指令
 // C 调用: _objc_storeWeak
--(void)setHostController:(id)setHostController { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHostController:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00380964  2 条指令
 -(BOOL)exporting { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0038096c  2 条指令
--(void)setExporting:(BOOL)setExporting { /* 重建骨架，语义见 pseudocode */ }
+-(void)setExporting:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00380974  2 条指令
 -(BOOL)includeDeviceMetadataForExport { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0038097c  2 条指令
--(void)setIncludeDeviceMetadataForExport:(BOOL)setIncludeDeviceMetadataForExport { /* 重建骨架，语义见 pseudocode */ }
+-(void)setIncludeDeviceMetadataForExport:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00380984  2 条指令
 -(BOOL)pickerActive { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0038098c  2 条指令
--(void)setPickerActive:(BOOL)setPickerActive { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPickerActive:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00380994  2 条指令
 -(BOOL)operationInProgress { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0038099c  2 条指令
--(void)setOperationInProgress:(BOOL)setOperationInProgress { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOperationInProgress:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003809a4  2 条指令
 -(id)temporaryExportPath { /* 重建骨架，语义见 pseudocode */ }
@@ -115,7 +115,7 @@
 // 0x003809ac  50 条指令
 // 消息: pickerActive
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retain, _dispatch_async, _objc_release
--(void)setTemporaryExportPath:(id)setTemporaryExportPath { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTemporaryExportPath:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003809b4  48 条指令
 // 消息: pickerActive

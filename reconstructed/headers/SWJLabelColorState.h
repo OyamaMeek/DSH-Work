@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fad0，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,13 +39,13 @@
 
 @property (nonatomic) double fontSize;
 
--(id)textSignature;
--(void)setTextSignature:(id)setTextSignature;
--(id)colorKey;
--(void)setColorKey:(id)setColorKey;
--(id)fontName;
--(void)setFontName:(id)setFontName;
--(double)fontSize;
--(void)setFontSize:(double)setFontSize;
+-(id)textSignature; // 0x006079ac
+-(void)setTextSignature:(id)a1; // 0x006079b4
+-(id)colorKey; // 0x006079bc
+-(void)setColorKey:(id)a1; // 0x006079c4
+-(id)fontName; // 0x006079cc
+-(void)setFontName:(id)a1; // 0x006079d4
+-(double)fontSize; // 0x006079dc
+-(void)setFontSize:(double)a1; // 0x006079e4
 
 @end

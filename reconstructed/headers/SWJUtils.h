@@ -4,6 +4,11 @@
 //  原始地址 0x00a2faf8，父类 NSObject
 //
 
+// 职责：旧命名空间的工具函数集合。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,41 +25,41 @@
 
 @interface SWJUtils : NSObject
 
-+(void)processAndApplyIPLocationToLabel:(id)processAndApplyIPLocationToLabel forModel:(id)forModel withLabelColor:(id)withLabelColor;
-+(id)fallbackLocationFromIPAttribution:(id)fallbackLocationFromIPAttribution;
-+(id)displayLocationForGeoNamesError:(id)displayLocationForGeoNamesError model:(id)model;
-+(id)getActiveWindow;
-+(id)topView;
-+(id)firstAvailableViewControllerFromView:(id)firstAvailableViewControllerFromView;
-+(id)findViewControllerOfClass:(Class)findViewControllerOfClass inViewController:(id)inViewController;
-+(id)findAncestorResponderOfClass:(Class)findAncestorResponderOfClass fromView:(id)fromView;
-+(id)findAllSubviewsOfClass:(Class)findAllSubviewsOfClass inContainer:(id)inContainer;
-+(id)findSubviewOfClass:(Class)findSubviewOfClass inContainer:(id)inContainer;
-+(id)nearestCommonSuperviewOfViews:(id)nearestCommonSuperviewOfViews;
-+(BOOL)containsSubviewOfClass:(Class)containsSubviewOfClass inContainer:(id)inContainer;
-+(void)clearBackgroundRecursivelyInView:(id)clearBackgroundRecursivelyInView;
-+(void)showToast:(id)showToast;
-+(BOOL)isDarkMode;
-+(id)formattedSize:(unsigned long long)formattedSize;
-+(unsigned long long)directorySizeAtPath:(id)directorySizeAtPath;
-+(void)removeAllContentsAtPath:(id)removeAllContentsAtPath;
-+(id)cacheDirectory;
-+(void)clearCacheDirectory;
-+(id)cachePathForFilename:(id)cachePathForFilename;
-+(void)initialize;
-+(void)applyTextColorRecursively:(id)applyTextColorRecursively inView:(id)inView shouldExcludeViewBlock:(id /* block */)shouldExcludeViewBlock;
-+(void)applyColorSettingsToLabel:(id)applyColorSettingsToLabel colorHexString:(id)colorHexString;
-+(void)applyStrokeToLabel:(id)applyStrokeToLabel strokeColor:(id)strokeColor strokeWidth:(double)strokeWidth;
-+(void)applyShadowToLabel:(id)applyShadowToLabel shadow:(id)shadow;
-+(id)colorFromSchemeHexString:(id)colorFromSchemeHexString targetWidth:(double)targetWidth;
-+(id)layerFromSchemeHexString:(id)layerFromSchemeHexString frame:(struct CGRect)frame;
-+(id)_nearestCommonSuperviewOfView:(id)_nearestCommonSuperviewOfView andView:(id)andView;
-+(BOOL)_traverseViewHierarchy:(id)_traverseViewHierarchy forClass:(Class)forClass usingBlock:(id /* block */)usingBlock;
-+(id)_colorFromHexString:(id)_colorFromHexString;
-+(id)_randomColor;
-+(id)_rotatedRainbowColorsForIndex:(unsigned long long)_rotatedRainbowColorsForIndex;
-+(id)_staticGradientColorsForHexString:(id)_staticGradientColorsForHexString;
-+(id)_imageWithGradientColors:(id)_imageWithGradientColors size:(struct CGSize)size;
-+(long long)compareVersion:(id)compareVersion toVersion:(id)toVersion;
++(void)processAndApplyIPLocationToLabel:(id)a1 forModel:(id)a2 withLabelColor:(id)a3; // 0x00607a38
++(id)fallbackLocationFromIPAttribution:(id)a1; // 0x00608a68
++(id)displayLocationForGeoNamesError:(id)a1 model:(id)a2; // 0x00608c7c
++(id)getActiveWindow; // 0x00608ef4
++(id)topView; // 0x00609344
++(id)firstAvailableViewControllerFromView:(id)a1; // 0x006093e8
++(id)findViewControllerOfClass:(Class)a1 inViewController:(id)a2; // 0x00609484
++(id)findAncestorResponderOfClass:(Class)a1 fromView:(id)a2; // 0x006095d0
++(id)findAllSubviewsOfClass:(Class)a1 inContainer:(id)a2; // 0x00609688
++(id)findSubviewOfClass:(Class)a1 inContainer:(id)a2; // 0x006097d4
++(id)nearestCommonSuperviewOfViews:(id)a1; // 0x00609970
++(BOOL)containsSubviewOfClass:(Class)a1 inContainer:(id)a2; // 0x00609ab8
++(void)clearBackgroundRecursivelyInView:(id)a1; // 0x00609aec
++(void)showToast:(id)a1; // 0x00609c68
++(BOOL)isDarkMode; // 0x00609ce0
++(id)formattedSize:(unsigned long long)a1; // 0x00609dc0
++(unsigned long long)directorySizeAtPath:(id)a1; // 0x00609e74
++(void)removeAllContentsAtPath:(id)a1; // 0x0060a108
++(id)cacheDirectory; // 0x0060a3d0
++(void)clearCacheDirectory; // 0x0060a49c
++(id)cachePathForFilename:(id)a1; // 0x0060a4e4
++(void)initialize; // 0x0060a558
++(void)applyTextColorRecursively:(id)a1 inView:(id)a2 shouldExcludeViewBlock:(id /* block */)a3; // 0x0060a778
++(void)applyColorSettingsToLabel:(id)a1 colorHexString:(id)a2; // 0x0060a8f8
++(void)applyStrokeToLabel:(id)a1 strokeColor:(id)a2 strokeWidth:(double)a3; // 0x0060afd0
++(void)applyShadowToLabel:(id)a1 shadow:(id)a2; // 0x0060b13c
++(id)colorFromSchemeHexString:(id)a1 targetWidth:(double)a2; // 0x0060b240
++(id)layerFromSchemeHexString:(id)a1 frame:(struct CGRect)a2; // 0x0060b794
++(id)_nearestCommonSuperviewOfView:(id)a1 andView:(id)a2; // 0x0060bccc
++(BOOL)_traverseViewHierarchy:(id)a1 forClass:(Class)a2 usingBlock:(id /* block */)a3; // 0x0060bdf0
++(id)_colorFromHexString:(id)a1; // 0x0060bf24
++(id)_randomColor; // 0x0060c15c
++(id)_rotatedRainbowColorsForIndex:(unsigned long long)a1; // 0x0060c1e4
++(id)_staticGradientColorsForHexString:(id)a1; // 0x0060c2b0
++(id)_imageWithGradientColors:(id)a1 size:(struct CGSize)a2; // 0x0060c4d4
++(long long)compareVersion:(id)a1 toVersion:(id)a2; // 0x0060c714
 
 @end

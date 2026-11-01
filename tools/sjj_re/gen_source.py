@@ -58,7 +58,14 @@ HEADER_NOTE = """//
 
 def write_header(cls):
     name = cls["name"]
+    from roles import describe
+
     lines = [HEADER_NOTE % (name + ".h", cls["address"], cls["superclass"] or "NSObject")]
+    lines.append("// 职责：%s" % describe(name, cls["superclass"]))
+    lines.append("//")
+    lines.append("// 方法末尾的地址是该实现在 dylib 中的原始偏移；")
+    lines.append("// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib")
+    lines.append("")
     lines.append("#import <Foundation/Foundation.h>")
     lines.append("#import <UIKit/UIKit.h>")
     lines.append("#import <PhotosUI/PhotosUI.h>")
@@ -101,10 +108,10 @@ def write_header(cls):
     methods = []
     for m in cls["class_methods"]:
         if m["name"] and not m["name"].startswith(".") and "{?" not in (m["types"] or ""):
-            methods.append("+" + method_signature(m["name"], m["types"])[1:] + ";")
+            methods.append("+" + method_signature(m["name"], m["types"])[1:] + "; // 0x%08x" % m["imp"])
     for m in cls["methods"]:
         if m["name"] and not m["name"].startswith(".") and "{?" not in (m["types"] or ""):
-            methods.append(method_signature(m["name"], m["types"]) + ";")
+            methods.append(method_signature(m["name"], m["types"]) + "; // 0x%08x" % m["imp"])
     if methods:
         lines.append("")
         lines.extend(methods)

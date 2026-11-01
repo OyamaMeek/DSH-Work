@@ -4,6 +4,11 @@
 //  原始地址 0x00a2dc80，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -43,19 +48,19 @@
 
 @property (nonatomic) BOOL renderedClearMaterial;
 
--(id)originalView;
--(void)setOriginalView:(id)setOriginalView;
--(id)sourceImageView;
--(void)setSourceImageView:(id)setSourceImageView;
--(id)glassButton;
--(void)setGlassButton:(id)setGlassButton;
--(id)menuButton;
--(void)setMenuButton:(id)setMenuButton;
--(id)hiddenSourceRecords;
--(void)setHiddenSourceRecords:(id)setHiddenSourceRecords;
--(BOOL)hasRenderedAppearance;
--(void)setHasRenderedAppearance:(BOOL)setHasRenderedAppearance;
--(BOOL)renderedClearMaterial;
--(void)setRenderedClearMaterial:(BOOL)setRenderedClearMaterial;
+-(id)originalView; // 0x00333194
+-(void)setOriginalView:(id)a1; // 0x003331c4
+-(id)sourceImageView; // 0x003331d4
+-(void)setSourceImageView:(id)a1; // 0x00333204
+-(id)glassButton; // 0x00333214
+-(void)setGlassButton:(id)a1; // 0x00333220
+-(id)menuButton; // 0x00333230
+-(void)setMenuButton:(id)a1; // 0x0033323c
+-(id)hiddenSourceRecords; // 0x0033324c
+-(void)setHiddenSourceRecords:(id)a1; // 0x00333258
+-(BOOL)hasRenderedAppearance; // 0x00333268
+-(void)setHasRenderedAppearance:(BOOL)a1; // 0x00333274
+-(BOOL)renderedClearMaterial; // 0x00333280
+-(void)setRenderedClearMaterial:(BOOL)a1; // 0x0033328c
 
 @end

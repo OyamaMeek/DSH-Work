@@ -8,7 +8,7 @@
 // 0x0000fdc0  59 条指令
 // 消息: copy
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeWeak, _objc_storeStrong, _objc_release
--(id)initWithLayer:(id)initWithLayer sourceData:(id)sourceData frames:(id)frames delays:(id)delays { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithLayer:(id)a1 sourceData:(id)a2 frames:(id)a3 delays:(id)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0000fedc  13 条指令
 // 消息: stop
@@ -27,66 +27,66 @@
 // 0x000101cc  286 条指令
 // 消息: layer, frames, count, delays, lastTimestamp, timestamp, setLastTimestamp:, elapsedInFrame, setElapsedInFrame:, frameIndex, objectAtIndexedSubscript:, doubleValue, setFrameIndex:, stop
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)displayLinkDidFire:(id)displayLinkDidFire { /* 重建骨架，语义见 pseudocode */ }
+-(void)displayLinkDidFire:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010610  13 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue
 -(id)layer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010638  3 条指令
--(void)setLayer:(id)setLayer { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLayer:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001063c  2 条指令
 -(id)frames { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010644  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setFrames:(id)setFrames { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFrames:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001064c  2 条指令
 -(id)delays { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010654  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setDelays:(id)setDelays { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDelays:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001065c  2 条指令
 -(id)sourceData { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010664  3 条指令
--(void)setSourceData:(id)setSourceData { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSourceData:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010668  2 条指令
 -(id)displayLink { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010670  5 条指令
 // C 调用: _objc_storeStrong
--(void)setDisplayLink:(id)setDisplayLink { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDisplayLink:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001067c  2 条指令
 -(id)displayLinkProxy { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010684  5 条指令
 // C 调用: _objc_storeStrong
--(void)setDisplayLinkProxy:(id)setDisplayLinkProxy { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDisplayLinkProxy:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010690  2 条指令
 -(unsigned long long)frameIndex { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00010698  2 条指令
--(void)setFrameIndex:(unsigned long long)setFrameIndex { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFrameIndex:(unsigned long long)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000106a0  2 条指令
 -(double)lastTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000106a8  2 条指令
--(void)setLastTimestamp:(double)setLastTimestamp { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLastTimestamp:(double)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000106b0  2 条指令
 -(double)elapsedInFrame { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000106b8  2 条指令
--(void)setElapsedInFrame:(double)setElapsedInFrame { /* 重建骨架，语义见 pseudocode */ }
+-(void)setElapsedInFrame:(double)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000106c0  74 条指令
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_retain, _objc_msgSendSuper2, _objc_storeWeak, _objc_release

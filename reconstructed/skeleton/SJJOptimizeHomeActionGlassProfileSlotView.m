@@ -15,7 +15,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak
--(void)setOriginalView:(id)setOriginalView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOriginalView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003331d4  193 条指令
 // 字符串: "v8@?0"
@@ -27,7 +27,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setSourceImageView:(id)setSourceImageView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSourceImageView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333214  177 条指令
 // 字符串: "v8@?0"
@@ -39,7 +39,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setGlassButton:(id)setGlassButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setGlassButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333230  170 条指令
 // 字符串: "v8@?0"
@@ -51,7 +51,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setMenuButton:(id)setMenuButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMenuButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0033324c  163 条指令
 // 字符串: "v8@?0"
@@ -63,7 +63,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setHiddenSourceRecords:(id)setHiddenSourceRecords { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHiddenSourceRecords:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333268  156 条指令
 // 字符串: "v8@?0"
@@ -75,7 +75,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setHasRenderedAppearance:(BOOL)setHasRenderedAppearance { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHasRenderedAppearance:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333280  150 条指令
 // 字符串: "v8@?0"
@@ -87,7 +87,7 @@
 // 字符串: "v8@?0"
 // 消息: isMainThread
 // C 调用: _objc_storeStrong, _objc_destroyWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setRenderedClearMaterial:(BOOL)setRenderedClearMaterial { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRenderedClearMaterial:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00333298  144 条指令
 // 字符串: "v8@?0"

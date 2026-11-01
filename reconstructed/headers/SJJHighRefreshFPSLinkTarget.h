@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f440，父类 NSObject
 //
 
+// 职责：高刷新率帧率显示的 CADisplayLink 目标对象。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -41,19 +46,19 @@
 
 @property (nonatomic) double lastReadoutTimestamp;
 
--(void)resetSamples;
--(void)sjj_displayLinkTick:(id)sjj_displayLinkTick;
--(double)lastTimestamp;
--(void)setLastTimestamp:(double)setLastTimestamp;
--(unsigned long long)sampleCount;
--(void)setSampleCount:(unsigned long long)setSampleCount;
--(unsigned long long)sampleIndex;
--(void)setSampleIndex:(unsigned long long)setSampleIndex;
--(double)displayedFPS;
--(void)setDisplayedFPS:(double)setDisplayedFPS;
--(double)presentationTimestamp;
--(void)setPresentationTimestamp:(double)setPresentationTimestamp;
--(double)lastReadoutTimestamp;
--(void)setLastReadoutTimestamp:(double)setLastReadoutTimestamp;
+-(void)resetSamples; // 0x00593afc
+-(void)sjj_displayLinkTick:(id)a1; // 0x00593b44
+-(double)lastTimestamp; // 0x00594128
+-(void)setLastTimestamp:(double)a1; // 0x00594130
+-(unsigned long long)sampleCount; // 0x00594138
+-(void)setSampleCount:(unsigned long long)a1; // 0x00594140
+-(unsigned long long)sampleIndex; // 0x00594148
+-(void)setSampleIndex:(unsigned long long)a1; // 0x00594150
+-(double)displayedFPS; // 0x00594158
+-(void)setDisplayedFPS:(double)a1; // 0x00594160
+-(double)presentationTimestamp; // 0x00594168
+-(void)setPresentationTimestamp:(double)a1; // 0x00594170
+-(double)lastReadoutTimestamp; // 0x00594178
+-(void)setLastReadoutTimestamp:(double)a1; // 0x00594180
 
 @end

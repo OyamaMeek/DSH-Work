@@ -13,7 +13,7 @@
 // 0x005abd18  580 条指令
 // 消息: buttonWithType:, setTitle:forState:, systemFontOfSize:weight:, titleLabel, setFont:, secondarySystemBackgroundColor, setBackgroundColor:, labelColor, setTitleColor:forState:, layer, setCornerRadius:, view, bounds, safeAreaInsets
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _CGRectGetWidth
--(id)buttonWithTitle:(id)buttonWithTitle { /* 重建骨架，语义见 pseudocode */ }
+-(id)buttonWithTitle:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005abe9c  483 条指令
 // 消息: view, bounds, safeAreaInsets, settingsScrollView, setFrame:, settingsContentView, setContentSize:, titleLabel, styleTitleLabel, styleControl, colorButton, tokenButton, websiteButton, wechatTitleLabel
@@ -24,7 +24,7 @@
 // 字符串: "TikHub Key"
 // 消息: selectedSegmentIndex, whiteColor, setSelectingLoadingGlowColor:, setSupportsAlpha:, colorWithWhite:alpha:, setSelectedColor:, setDelegate:, selectingLoadingGlowColor, selectedColor, loadingGlowStyleControl, setSelectedSegmentIndex:, updateLoadingGlowColorButton, colorPickerViewControllerDidSelectColor:, isOn
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_new
--(void)styleChanged:(id)styleChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)styleChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ac7b4  820 条指令
 // 字符串: "TikHub Key"
@@ -36,49 +36,49 @@
 // 字符串: "TikHub Key"
 // 消息: selectingLoadingGlowColor, selectedColor, loadingGlowStyleControl, setSelectedSegmentIndex:, updateLoadingGlowColorButton, colorPickerViewControllerDidSelectColor:, setSelectingLoadingGlowColor:, isOn, showToast:duration:, selectedSegmentIndex, value, stringWithFormat:, loadingGlowWidthValueLabel, setText:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain, _objc_opt_new
--(void)colorPickerViewControllerDidSelectColor:(id)colorPickerViewControllerDidSelectColor { /* 重建骨架，语义见 pseudocode */ }
+-(void)colorPickerViewControllerDidSelectColor:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ac994  700 条指令
 // 字符串: "TikHub Key"
 // 消息: colorPickerViewControllerDidSelectColor:, setSelectingLoadingGlowColor:, isOn, showToast:duration:, selectedSegmentIndex, updateLoadingGlowColorButton, value, stringWithFormat:, loadingGlowWidthValueLabel, setText:, loadingHapticSlider, loadingHapticSpeedSlider, loadingHapticValueLabel, setAlpha:
 // C 调用: _objc_release, __Unwind_Resume, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_new
--(void)colorPickerViewControllerDidFinish:(id)colorPickerViewControllerDidFinish { /* 重建骨架，语义见 pseudocode */ }
+-(void)colorPickerViewControllerDidFinish:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ac9ec  678 条指令
 // 字符串: "TikHub Key"
 // 消息: isOn, showToast:duration:, selectedSegmentIndex, updateLoadingGlowColorButton, value, stringWithFormat:, loadingGlowWidthValueLabel, setText:, loadingHapticSlider, loadingHapticSpeedSlider, loadingHapticValueLabel, setAlpha:, loadingHapticSpeedValueLabel, setSelectingLoadingGlowColor:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_opt_new
--(void)loadingGlowChanged:(id)loadingGlowChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)loadingGlowChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005aca7c  642 条指令
 // 字符串: "TikHub Key"
 // 消息: selectedSegmentIndex, updateLoadingGlowColorButton, value, stringWithFormat:, loadingGlowWidthValueLabel, setText:, isOn, loadingHapticSlider, loadingHapticSpeedSlider, loadingHapticValueLabel, setAlpha:, loadingHapticSpeedValueLabel, setSelectingLoadingGlowColor:, setSupportsAlpha:
 // C 调用: _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_opt_new, _objc_retain
--(void)loadingGlowStyleChanged:(id)loadingGlowStyleChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)loadingGlowStyleChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005acad0  621 条指令
 // 字符串: "TikHub Key"
 // 消息: value, stringWithFormat:, loadingGlowWidthValueLabel, setText:, isOn, loadingHapticSlider, loadingHapticSpeedSlider, loadingHapticValueLabel, setAlpha:, loadingHapticSpeedValueLabel, setSelectingLoadingGlowColor:, setSupportsAlpha:, setSelectedColor:, setDelegate:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_new, _objc_retain
--(void)loadingGlowWidthChanged:(id)loadingGlowWidthChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)loadingGlowWidthChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005acb9c  570 条指令
 // 字符串: "TikHub Key"
 // 消息: isOn, loadingHapticSlider, loadingHapticSpeedSlider, loadingHapticValueLabel, setAlpha:, loadingHapticSpeedValueLabel, value, stringWithFormat:, setText:, setSelectingLoadingGlowColor:, setSupportsAlpha:, setSelectedColor:, setDelegate:, hapticValueLabel
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_new, _objc_retain
--(void)loadingHapticSwitchChanged:(id)loadingHapticSwitchChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)loadingHapticSwitchChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005acccc  494 条指令
 // 字符串: "TikHub Key"
 // 消息: value, stringWithFormat:, loadingHapticValueLabel, setText:, loadingHapticSpeedValueLabel, setSelectingLoadingGlowColor:, setSupportsAlpha:, setSelectedColor:, setDelegate:, hapticValueLabel, isOn, hapticSlider, hapticStyleControl, setAlpha:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_new, _objc_retain
--(void)loadingHapticChanged:(id)loadingHapticChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)loadingHapticChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005acd9c  442 条指令
 // 字符串: "TikHub Key"
 // 消息: value, stringWithFormat:, loadingHapticSpeedValueLabel, setText:, setSelectingLoadingGlowColor:, setSupportsAlpha:, setSelectedColor:, setDelegate:, hapticValueLabel, isOn, hapticSlider, hapticStyleControl, setAlpha:, selectedSegmentIndex
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_new, _objc_retain
--(void)loadingHapticSpeedChanged:(id)loadingHapticSpeedChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)loadingHapticSpeedChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005aceb4  372 条指令
 // 字符串: "TikHub Key"
@@ -90,25 +90,25 @@
 // 字符串: "TikHub Key"
 // 消息: value, stringWithFormat:, hapticValueLabel, setText:, isOn, hapticSlider, hapticStyleControl, setAlpha:, selectedSegmentIndex, colorWithAlphaComponent:, loadingGlowColorButton, setBackgroundColor:, setTitle:forState:, alertControllerWithTitle:message:preferredStyle:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain
--(void)hapticChanged:(id)hapticChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)hapticChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ad02c  278 条指令
 // 字符串: "TikHub Key"
 // 消息: isOn, hapticSlider, hapticStyleControl, hapticValueLabel, setAlpha:, selectedSegmentIndex, value, colorWithAlphaComponent:, loadingGlowColorButton, setBackgroundColor:, setTitle:forState:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain
--(void)hapticSwitchChanged:(id)hapticSwitchChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)hapticSwitchChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ad124  216 条指令
 // 字符串: "TikHub Key"
 // 消息: selectedSegmentIndex, value, colorWithAlphaComponent:, loadingGlowColorButton, setBackgroundColor:, setTitle:forState:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue
--(void)hapticStyleChanged:(id)hapticStyleChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)hapticStyleChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ad178  195 条指令
 // 字符串: "TikHub Key"
 // 消息: value, colorWithAlphaComponent:, loadingGlowColorButton, setBackgroundColor:, setTitle:forState:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue
--(void)hapticPreview:(id)hapticPreview { /* 重建骨架，语义见 pseudocode */ }
+-(void)hapticPreview:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ad1d0  173 条指令
 // 字符串: "TikHub Key"
@@ -132,7 +132,7 @@
 // 字符串: "work_data"
 // 消息: isOn, length, tokenButton, setTitle:forState:, updateLoadingGlowColorButton, stringWithFormat:, loadingGlowWidthValueLabel, setText:, loadingHapticValueLabel, loadingHapticSwitch, setAlpha:, loadingHapticSpeedValueLabel, hapticValueLabel, hapticSwitch
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume, _objc_retainAutoreleasedReturnValue, _objc_storeStrong, _objc_enumerationMutation, _dispatch_async
--(void)wechatChanged:(id)wechatChanged { /* 重建骨架，语义见 pseudocode */ }
+-(void)wechatChanged:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ad78c  698 条指令
 // 字符串: "work_data"
@@ -156,7 +156,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setSettingsScrollView:(id)setSettingsScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSettingsScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adb10  473 条指令
 // 字符串: "work_data"
@@ -168,7 +168,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setSettingsContentView:(id)setSettingsContentView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSettingsContentView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adb2c  466 条指令
 // 字符串: "work_data"
@@ -180,7 +180,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setTitleLabel:(id)setTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adb48  459 条指令
 // 字符串: "work_data"
@@ -192,7 +192,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setStyleTitleLabel:(id)setStyleTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setStyleTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adb64  452 条指令
 // 字符串: "work_data"
@@ -204,7 +204,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setStyleControl:(id)setStyleControl { /* 重建骨架，语义见 pseudocode */ }
+-(void)setStyleControl:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adb80  445 条指令
 // 字符串: "work_data"
@@ -216,7 +216,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setColorButton:(id)setColorButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setColorButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adb9c  438 条指令
 // 字符串: "work_data"
@@ -228,7 +228,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setTokenButton:(id)setTokenButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTokenButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adbb8  431 条指令
 // 字符串: "work_data"
@@ -240,7 +240,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setWebsiteButton:(id)setWebsiteButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWebsiteButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adbd4  424 条指令
 // 字符串: "work_data"
@@ -252,7 +252,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setWechatTitleLabel:(id)setWechatTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWechatTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adbf0  417 条指令
 // 字符串: "work_data"
@@ -264,7 +264,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setWechatSwitch:(id)setWechatSwitch { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWechatSwitch:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adc0c  410 条指令
 // 字符串: "work_data"
@@ -276,7 +276,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowTitleLabel:(id)setLoadingGlowTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adc28  403 条指令
 // 字符串: "work_data"
@@ -288,7 +288,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowHintLabel:(id)setLoadingGlowHintLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowHintLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adc44  396 条指令
 // 字符串: "work_data"
@@ -300,7 +300,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowSwitch:(id)setLoadingGlowSwitch { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowSwitch:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adc60  389 条指令
 // 字符串: "work_data"
@@ -312,7 +312,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowStyleControl:(id)setLoadingGlowStyleControl { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowStyleControl:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adc7c  382 条指令
 // 字符串: "work_data"
@@ -324,7 +324,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowColorButton:(id)setLoadingGlowColorButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowColorButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adc98  375 条指令
 // 字符串: "work_data"
@@ -336,7 +336,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowWidthTitleLabel:(id)setLoadingGlowWidthTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowWidthTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adcb4  368 条指令
 // 字符串: "work_data"
@@ -348,7 +348,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowWidthValueLabel:(id)setLoadingGlowWidthValueLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowWidthValueLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adcd0  361 条指令
 // 字符串: "work_data"
@@ -360,7 +360,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingGlowWidthSlider:(id)setLoadingGlowWidthSlider { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingGlowWidthSlider:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adcec  354 条指令
 // 字符串: "work_data"
@@ -372,7 +372,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticTitleLabel:(id)setLoadingHapticTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005add08  347 条指令
 // 字符串: "work_data"
@@ -384,7 +384,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticValueLabel:(id)setLoadingHapticValueLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticValueLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005add24  340 条指令
 // 字符串: "work_data"
@@ -396,7 +396,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticSwitch:(id)setLoadingHapticSwitch { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticSwitch:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005add40  333 条指令
 // 字符串: "work_data"
@@ -408,7 +408,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticSlider:(id)setLoadingHapticSlider { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticSlider:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005add5c  326 条指令
 // 字符串: "work_data"
@@ -420,7 +420,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticSpeedTitleLabel:(id)setLoadingHapticSpeedTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticSpeedTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005add78  319 条指令
 // 字符串: "work_data"
@@ -432,7 +432,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticSpeedValueLabel:(id)setLoadingHapticSpeedValueLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticSpeedValueLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005add94  312 条指令
 // 字符串: "work_data"
@@ -444,7 +444,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setLoadingHapticSpeedSlider:(id)setLoadingHapticSpeedSlider { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLoadingHapticSpeedSlider:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005addb0  305 条指令
 // 字符串: "work_data"
@@ -456,7 +456,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setHapticTitleLabel:(id)setHapticTitleLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHapticTitleLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005addcc  298 条指令
 // 字符串: "work_data"
@@ -468,7 +468,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setHapticValueLabel:(id)setHapticValueLabel { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHapticValueLabel:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005adde8  291 条指令
 // 字符串: "work_data"
@@ -480,7 +480,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setHapticSwitch:(id)setHapticSwitch { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHapticSwitch:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ade04  284 条指令
 // 字符串: "work_data"
@@ -492,7 +492,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setHapticStyleControl:(id)setHapticStyleControl { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHapticStyleControl:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ade20  277 条指令
 // 字符串: "work_data"
@@ -504,7 +504,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setHapticSlider:(id)setHapticSlider { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHapticSlider:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ade3c  270 条指令
 // 字符串: "work_data"
@@ -516,7 +516,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setSelectingLoadingGlowColor:(BOOL)setSelectingLoadingGlowColor { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelectingLoadingGlowColor:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ade54  264 条指令
 // 字符串: "work_data"
@@ -528,7 +528,7 @@
 // 字符串: "work_data"
 // 消息: isMainThread, count, countByEnumeratingWithState:objects:count:, isEqualToString:
 // C 调用: _objc_storeStrong, _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _dispatch_async
--(void)setDoneButton:(id)setDoneButton { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDoneButton:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005ade70  257 条指令
 // 字符串: "work_data"

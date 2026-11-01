@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e978，父类 UITableViewController
 //
 
+// 职责：控制器，负责协调数据与界面。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,14 +25,14 @@
 
 @interface SJJWarmthSettingsController : UITableViewController
 
--(void)viewDidLoad;
--(void)close;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(id)switchCellWithTitle:(id)switchCellWithTitle detail:(id)detail key:(id)key fallback:(BOOL)fallback tag:(long long)tag;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)switchChanged:(id)switchChanged;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
+-(void)viewDidLoad; // 0x0047ffd0
+-(void)close; // 0x004800f4
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x00480100
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x00480108
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x00480118
+-(id)switchCellWithTitle:(id)a1 detail:(id)a2 key:(id)a3 fallback:(BOOL)a4 tag:(long long)a5; // 0x00480144
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x00480314
+-(void)switchChanged:(id)a1; // 0x004805bc
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x004806cc
 
 @end

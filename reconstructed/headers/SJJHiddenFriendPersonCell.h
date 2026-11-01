@@ -4,6 +4,11 @@
 //  原始地址 0x00a2ed88，父类 UITableViewCell
 //
 
+// 职责：列表单元视图。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,16 +39,16 @@
 
 @property (copy, nonatomic) NSString * sjjRepresentedAvatarURL;
 
--(id)initWithStyle:(long long)initWithStyle reuseIdentifier:(id)reuseIdentifier;
--(void)prepareForReuse;
--(void)sjj_configureWithEntry:(id)sjj_configureWithEntry selected:(BOOL)selected;
--(id)sjjAvatarView;
--(void)setSjjAvatarView:(id)setSjjAvatarView;
--(id)sjjNameLabel;
--(void)setSjjNameLabel:(id)setSjjNameLabel;
--(id)sjjSelectionView;
--(void)setSjjSelectionView:(id)setSjjSelectionView;
--(id)sjjRepresentedAvatarURL;
--(void)setSjjRepresentedAvatarURL:(id)setSjjRepresentedAvatarURL;
+-(id)initWithStyle:(long long)a1 reuseIdentifier:(id)a2; // 0x004d133c
+-(void)prepareForReuse; // 0x004d2184
+-(void)sjj_configureWithEntry:(id)a1 selected:(BOOL)a2; // 0x004d2250
+-(id)sjjAvatarView; // 0x004d29e8
+-(void)setSjjAvatarView:(id)a1; // 0x004d29f4
+-(id)sjjNameLabel; // 0x004d2a04
+-(void)setSjjNameLabel:(id)a1; // 0x004d2a10
+-(id)sjjSelectionView; // 0x004d2a20
+-(void)setSjjSelectionView:(id)a1; // 0x004d2a2c
+-(id)sjjRepresentedAvatarURL; // 0x004d2a3c
+-(void)setSjjRepresentedAvatarURL:(id)a1; // 0x004d2a48
 
 @end

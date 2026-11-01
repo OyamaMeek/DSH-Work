@@ -11,7 +11,7 @@
 
 // 0x004bc014  29 条指令
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeWeak, _objc_release
--(void)setScrollView:(id)setScrollView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setScrollView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004bc018  28 条指令
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeWeak, _objc_release

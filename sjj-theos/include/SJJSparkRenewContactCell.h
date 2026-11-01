@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e9f0，父类 UITableViewCell
 //
 
+// 职责：续火花联系人列表单元。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -27,9 +32,9 @@
     SJJSparkRenewBadgeLabel * _secondaryBadge;
 }
 
--(id)initWithStyle:(long long)initWithStyle reuseIdentifier:(id)reuseIdentifier;
--(void)layoutSubviews;
--(void)configureBadge:(id)configureBadge text:(id)text;
--(void)configureWithName:(id)configureWithName subtitle:(id)subtitle avatarURL:(id)avatarURL seed:(id)seed primaryBadge:(id)primaryBadge secondaryBadge:(id)secondaryBadge alreadyAdded:(BOOL)alreadyAdded;
+-(id)initWithStyle:(long long)a1 reuseIdentifier:(id)a2; // 0x004a5434
+-(void)layoutSubviews; // 0x004a58c4
+-(void)configureBadge:(id)a1 text:(id)a2; // 0x004a5c30
+-(void)configureWithName:(id)a1 subtitle:(id)a2 avatarURL:(id)a3 seed:(id)a4 primaryBadge:(id)a5 secondaryBadge:(id)a6 alreadyAdded:(BOOL)a7; // 0x004a5f38
 
 @end

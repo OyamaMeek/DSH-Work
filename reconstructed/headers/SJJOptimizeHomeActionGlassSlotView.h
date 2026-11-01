@@ -4,6 +4,11 @@
 //  原始地址 0x00a2dc30，父类 UIView
 //
 
+// 职责：自定义视图，负责绘制与布局。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -61,31 +66,31 @@
 
 @property (strong, nonatomic) UIView * selectionTransitionOverlay;
 
--(id)originalView;
--(void)setOriginalView:(id)setOriginalView;
--(id)sourceImageView;
--(void)setSourceImageView:(id)setSourceImageView;
--(long long)actionKind;
--(void)setActionKind:(long long)setActionKind;
--(id)systemGlassButton;
--(void)setSystemGlassButton:(id)setSystemGlassButton;
--(id)hiddenSourceRecords;
--(void)setHiddenSourceRecords:(id)setHiddenSourceRecords;
--(BOOL)hasRenderedAppearance;
--(void)setHasRenderedAppearance:(BOOL)setHasRenderedAppearance;
--(BOOL)renderedSelected;
--(void)setRenderedSelected:(BOOL)setRenderedSelected;
--(long long)renderedKind;
--(void)setRenderedKind:(long long)setRenderedKind;
--(double)renderedButtonScale;
--(void)setRenderedButtonScale:(double)setRenderedButtonScale;
--(BOOL)renderedClearMaterial;
--(void)setRenderedClearMaterial:(BOOL)setRenderedClearMaterial;
--(long long)renderedIconStyle;
--(void)setRenderedIconStyle:(long long)setRenderedIconStyle;
--(unsigned long long)selectionAnimationGeneration;
--(void)setSelectionAnimationGeneration:(unsigned long long)setSelectionAnimationGeneration;
--(id)selectionTransitionOverlay;
--(void)setSelectionTransitionOverlay:(id)setSelectionTransitionOverlay;
+-(id)originalView; // 0x00332f7c
+-(void)setOriginalView:(id)a1; // 0x00332fac
+-(id)sourceImageView; // 0x00332fbc
+-(void)setSourceImageView:(id)a1; // 0x00332fec
+-(long long)actionKind; // 0x00332ffc
+-(void)setActionKind:(long long)a1; // 0x00333008
+-(id)systemGlassButton; // 0x00333014
+-(void)setSystemGlassButton:(id)a1; // 0x00333020
+-(id)hiddenSourceRecords; // 0x00333030
+-(void)setHiddenSourceRecords:(id)a1; // 0x0033303c
+-(BOOL)hasRenderedAppearance; // 0x0033304c
+-(void)setHasRenderedAppearance:(BOOL)a1; // 0x00333058
+-(BOOL)renderedSelected; // 0x00333064
+-(void)setRenderedSelected:(BOOL)a1; // 0x00333070
+-(long long)renderedKind; // 0x0033307c
+-(void)setRenderedKind:(long long)a1; // 0x00333088
+-(double)renderedButtonScale; // 0x00333094
+-(void)setRenderedButtonScale:(double)a1; // 0x003330a8
+-(BOOL)renderedClearMaterial; // 0x003330bc
+-(void)setRenderedClearMaterial:(BOOL)a1; // 0x003330c8
+-(long long)renderedIconStyle; // 0x003330d4
+-(void)setRenderedIconStyle:(long long)a1; // 0x003330e0
+-(unsigned long long)selectionAnimationGeneration; // 0x003330ec
+-(void)setSelectionAnimationGeneration:(unsigned long long)a1; // 0x003330f8
+-(id)selectionTransitionOverlay; // 0x00333104
+-(void)setSelectionTransitionOverlay:(id)a1; // 0x00333110
 
 @end

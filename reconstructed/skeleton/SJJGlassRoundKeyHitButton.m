@@ -9,17 +9,17 @@
 // 字符串: "sjj.glass.roundKey.press"
 // 消息: sjjFeedbackView, window, animateWithDuration:delay:options:animations:completion:, layer, removeAnimationForKey:, setTransform:, animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _CGAffineTransformMakeScale, _objc_release, _objc_retain
--(void)sjjSetPressFeedbackPressed:(BOOL)sjjSetPressFeedbackPressed animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSetPressFeedbackPressed:(BOOL)a1 animated:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x002feb90  28 条指令
 // 消息: isHighlighted, sjjSetPressFeedbackPressed:animated:
 // C 调用: _objc_msgSendSuper2
--(void)setHighlighted:(BOOL)setHighlighted { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHighlighted:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x002fec00  18 条指令
 // 消息: sjjSetPressFeedbackPressed:animated:
 // C 调用: _objc_msgSendSuper2
--(void)setUserInteractionEnabled:(BOOL)setUserInteractionEnabled { /* 重建骨架，语义见 pseudocode */ }
+-(void)setUserInteractionEnabled:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x002fec48  23 条指令
 // 消息: window, sjjSetPressFeedbackPressed:animated:
@@ -32,7 +32,7 @@
 
 // 0x002fecd4  10 条指令
 // C 调用: _objc_destroyWeak
--(void)setSjjFeedbackView:(id)setSjjFeedbackView { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSjjFeedbackView:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x002fece4  6 条指令
 // C 调用: _objc_destroyWeak

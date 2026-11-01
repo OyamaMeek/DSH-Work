@@ -4,6 +4,11 @@
 //  原始地址 0x00a2edd8，父类 UITableViewController
 //
 
+// 职责：视图控制器，负责页面生命周期与交互。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,16 +30,16 @@
 
 @property (copy, nonatomic) NSArray * sjjSections;
 
--(void)viewDidLoad;
--(void)viewWillAppear:(BOOL)viewWillAppear;
--(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
--(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
--(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
--(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection;
--(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
--(void)sjj_optionChanged:(id)sjj_optionChanged;
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
--(id)sjjSections;
--(void)setSjjSections:(id)setSjjSections;
+-(void)viewDidLoad; // 0x004d2ac0
+-(void)viewWillAppear:(BOOL)a1; // 0x004d2df8
+-(long long)numberOfSectionsInTableView:(id)a1; // 0x004d2e68
+-(long long)tableView:(id)a1 numberOfRowsInSection:(long long)a2; // 0x004d2eb0
+-(id)tableView:(id)a1 titleForHeaderInSection:(long long)a2; // 0x004d2f30
+-(id)tableView:(id)a1 titleForFooterInSection:(long long)a2; // 0x004d2f68
+-(id)tableView:(id)a1 cellForRowAtIndexPath:(id)a2; // 0x004d2f70
+-(void)sjj_optionChanged:(id)a1; // 0x004d3640
+-(void)tableView:(id)a1 didSelectRowAtIndexPath:(id)a2; // 0x004d411c
+-(id)sjjSections; // 0x004d45bc
+-(void)setSjjSections:(id)a1; // 0x004d45c8
 
 @end

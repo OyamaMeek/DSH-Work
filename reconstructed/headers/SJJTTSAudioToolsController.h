@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f148，父类 UIViewController
 //
 
+// 职责：TTS 音频工具：音色、音高、试听。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -34,18 +39,18 @@
 
 @property (strong, nonatomic) UIViewController * visibleController;
 
--(void)viewDidLoad;
--(void)closeTools;
--(void)tabChanged:(id)tabChanged;
--(void)showBackgroundTab;
--(void)showController:(id)showController animated:(BOOL)animated;
--(id)tabControl;
--(void)setTabControl:(id)setTabControl;
--(id)backgroundController;
--(void)setBackgroundController:(id)setBackgroundController;
--(id)composerController;
--(void)setComposerController:(id)setComposerController;
--(id)visibleController;
--(void)setVisibleController:(id)setVisibleController;
+-(void)viewDidLoad; // 0x0053adcc
+-(void)closeTools; // 0x0053b038
+-(void)tabChanged:(id)a1; // 0x0053b03c
+-(void)showBackgroundTab; // 0x0053b0e4
+-(void)showController:(id)a1 animated:(BOOL)a2; // 0x0053b168
+-(id)tabControl; // 0x0053b9a4
+-(void)setTabControl:(id)a1; // 0x0053b9b0
+-(id)backgroundController; // 0x0053b9c0
+-(void)setBackgroundController:(id)a1; // 0x0053b9cc
+-(id)composerController; // 0x0053b9dc
+-(void)setComposerController:(id)a1; // 0x0053b9e8
+-(id)visibleController; // 0x0053b9f8
+-(void)setVisibleController:(id)a1; // 0x0053ba04
 
 @end

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2eea0，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,24 +25,24 @@
 
 @interface SJJPrivacyRecordUploadGuard : NSObject
 
-+(BOOL)isProfileVisitRecordUploadDisabled;
-+(BOOL)isAwemeViewRecordUploadDisabled;
-+(BOOL)shouldBlockURLString:(id)shouldBlockURLString;
-+(BOOL)shouldBlockRequestObject:(id)shouldBlockRequestObject;
-+(BOOL)shouldBlockAwemeViewRecordURLString:(id)shouldBlockAwemeViewRecordURLString;
-+(BOOL)markTaskForBlockingIfNeeded:(id)markTaskForBlockingIfNeeded requestObject:(id)requestObject;
-+(BOOL)isTaskMarkedForBlocking:(id)isTaskMarkedForBlocking;
-+(BOOL)cancelTaskIfPossible:(id)cancelTaskIfPossible;
-+(void)invokeCancelledCompletionIfPossible:(id)invokeCancelledCompletionIfPossible;
-+(unsigned long long)enabledUploadMask;
-+(BOOL)shouldBlockUploadKind:(unsigned long long)shouldBlockUploadKind enabledMask:(unsigned long long)enabledMask;
-+(unsigned long long)uploadKindForURLString:(id)uploadKindForURLString;
-+(unsigned long long)uploadKindForNormalizedPath:(id)uploadKindForNormalizedPath;
-+(BOOL)normalizedPath:(id)normalizedPath matchesMarker:(id)matchesMarker;
-+(id)normalizedPathFromURLString:(id)normalizedPathFromURLString;
-+(id)valueForSelector:(SEL)valueForSelector fromObject:(id)fromObject;
-+(BOOL)objectContainsBlockedUpload:(id)objectContainsBlockedUpload enabledMask:(unsigned long long)enabledMask depth:(unsigned long long)depth visited:(id)visited;
-+(BOOL)collectionContainsBlockedUpload:(id)collectionContainsBlockedUpload enabledMask:(unsigned long long)enabledMask depth:(unsigned long long)depth visited:(id)visited;
-+(BOOL)isBlockObject:(id)isBlockObject;
++(BOOL)isProfileVisitRecordUploadDisabled; // 0x00505344
++(BOOL)isAwemeViewRecordUploadDisabled; // 0x00505348
++(BOOL)shouldBlockURLString:(id)a1; // 0x0050534c
++(BOOL)shouldBlockRequestObject:(id)a1; // 0x005053b0
++(BOOL)shouldBlockAwemeViewRecordURLString:(id)a1; // 0x00505438
++(BOOL)markTaskForBlockingIfNeeded:(id)a1 requestObject:(id)a2; // 0x00505484
++(BOOL)isTaskMarkedForBlocking:(id)a1; // 0x00505510
++(BOOL)cancelTaskIfPossible:(id)a1; // 0x00505580
++(void)invokeCancelledCompletionIfPossible:(id)a1; // 0x005055f0
++(unsigned long long)enabledUploadMask; // 0x00505700
++(BOOL)shouldBlockUploadKind:(unsigned long long)a1 enabledMask:(unsigned long long)a2; // 0x00505738
++(unsigned long long)uploadKindForURLString:(id)a1; // 0x00505754
++(unsigned long long)uploadKindForNormalizedPath:(id)a1; // 0x00505894
++(BOOL)normalizedPath:(id)a1 matchesMarker:(id)a2; // 0x00505930
++(id)normalizedPathFromURLString:(id)a1; // 0x005059f0
++(id)valueForSelector:(SEL)a1 fromObject:(id)a2; // 0x00505c00
++(BOOL)objectContainsBlockedUpload:(id)a1 enabledMask:(unsigned long long)a2 depth:(unsigned long long)a3 visited:(id)a4; // 0x00505d28
++(BOOL)collectionContainsBlockedUpload:(id)a1 enabledMask:(unsigned long long)a2 depth:(unsigned long long)a3 visited:(id)a4; // 0x005060e8
++(BOOL)isBlockObject:(id)a1; // 0x0050626c
 
 @end

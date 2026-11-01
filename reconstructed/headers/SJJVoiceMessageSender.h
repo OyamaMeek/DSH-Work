@@ -4,6 +4,11 @@
 //  原始地址 0x00a2eec8，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -25,15 +30,15 @@
 
 @property (strong, nonatomic) id sdkRoot;
 
-+(id)sharedSender;
--(id)init;
--(void)finish:(id /* block */)finish success:(BOOL)success error:(id)error;
--(void)uploadAndSendVoiceWithURL:(id)uploadAndSendVoiceWithURL conversation:(id)conversation conversationID:(id)conversationID completion:(id /* block */)completion;
--(void)uploadAndSendVoiceEmojiWithURL:(id)uploadAndSendVoiceEmojiWithURL conversation:(id)conversation conversationID:(id)conversationID imageID:(id)imageID imageURL:(id)imageURL width:(id)width height:(id)height completion:(id /* block */)completion;
--(id)resourceDictionaryFromUploadResponse:(id)resourceDictionaryFromUploadResponse;
--(id)newTIMXOSendMessage;
--(void)uploadM4AURL:(id)uploadM4AURL conversation:(id)conversation conversationID:(id)conversationID emojiPayload:(id)emojiPayload completion:(id /* block */)completion;
--(id)sdkRoot;
--(void)setSdkRoot:(id)setSdkRoot;
++(id)sharedSender; // 0x00509b40
+-(id)init; // 0x00509bc8
+-(void)finish:(id /* block */)a1 success:(BOOL)a2 error:(id)a3; // 0x00509c74
+-(void)uploadAndSendVoiceWithURL:(id)a1 conversation:(id)a2 conversationID:(id)a3 completion:(id /* block */)a4; // 0x00509d44
+-(void)uploadAndSendVoiceEmojiWithURL:(id)a1 conversation:(id)a2 conversationID:(id)a3 imageID:(id)a4 imageURL:(id)a5 width:(id)a6 height:(id)a7 completion:(id /* block */)a8; // 0x0050a5d0
+-(id)resourceDictionaryFromUploadResponse:(id)a1; // 0x0050a8bc
+-(id)newTIMXOSendMessage; // 0x0050ad3c
+-(void)uploadM4AURL:(id)a1 conversation:(id)a2 conversationID:(id)a3 emojiPayload:(id)a4 completion:(id /* block */)a5; // 0x0050ae64
+-(id)sdkRoot; // 0x0050d874
+-(void)setSdkRoot:(id)a1; // 0x0050d87c
 
 @end

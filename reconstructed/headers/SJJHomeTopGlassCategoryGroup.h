@@ -4,6 +4,11 @@
 //  原始地址 0x00a2dbe0，父类 UIView
 //
 
+// 职责：由二进制重建的 UIView 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -76,48 +81,48 @@
 
 @property (nonatomic) struct CGRect lastPresentationFrame;
 
--(long long)sjj_visibleCount;
--(void)sjj_categoryTapped:(id)sjj_categoryTapped;
--(void)sjj_selectDefinitionAtIndex:(long long)sjj_selectDefinitionAtIndex;
--(void)sjj_panned:(id)sjj_panned;
--(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin;
--(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch;
--(void)sjj_indicatorTick:(id)sjj_indicatorTick;
--(id)backgroundGlass;
--(void)setBackgroundGlass:(id)setBackgroundGlass;
--(id)selectionPill;
--(void)setSelectionPill:(id)setSelectionPill;
--(id)moreButton;
--(void)setMoreButton:(id)setMoreButton;
--(id)moreSeparator;
--(void)setMoreSeparator:(id)setMoreSeparator;
--(id)definitions;
--(void)setDefinitions:(id)setDefinitions;
--(id)buttons;
--(void)setButtons:(id)setButtons;
--(long long)selectedIndex;
--(void)setSelectedIndex:(long long)setSelectedIndex;
--(long long)windowStart;
--(void)setWindowStart:(long long)setWindowStart;
--(BOOL)windowAnimationInFlight;
--(void)setWindowAnimationInFlight:(BOOL)setWindowAnimationInFlight;
--(BOOL)userBrowsingWindow;
--(void)setUserBrowsingWindow:(BOOL)setUserBrowsingWindow;
--(id)menuSignature;
--(void)setMenuSignature:(id)setMenuSignature;
--(id)selectionLockedTitle;
--(void)setSelectionLockedTitle:(id)setSelectionLockedTitle;
--(double)selectionIndicatorXAtCommit;
--(void)setSelectionIndicatorXAtCommit:(double)setSelectionIndicatorXAtCommit;
--(double)selectionCommitTime;
--(void)setSelectionCommitTime:(double)setSelectionCommitTime;
--(id)nativeIndicator;
--(void)setNativeIndicator:(id)setNativeIndicator;
--(id)indicatorDisplayLink;
--(void)setIndicatorDisplayLink:(id)setIndicatorDisplayLink;
--(double)indicatorDeadline;
--(void)setIndicatorDeadline:(double)setIndicatorDeadline;
--(struct CGRect)lastPresentationFrame;
--(void)setLastPresentationFrame:(struct CGRect)setLastPresentationFrame;
+-(long long)sjj_visibleCount; // 0x00322f08
+-(void)sjj_categoryTapped:(id)a1; // 0x00322fa8
+-(void)sjj_selectDefinitionAtIndex:(long long)a1; // 0x00323004
+-(void)sjj_panned:(id)a1; // 0x00325500
+-(BOOL)gestureRecognizerShouldBegin:(id)a1; // 0x00325c2c
+-(BOOL)gestureRecognizer:(id)a1 shouldReceiveTouch:(id)a2; // 0x00325cbc
+-(void)sjj_indicatorTick:(id)a1; // 0x00325e68
+-(id)backgroundGlass; // 0x00326a40
+-(void)setBackgroundGlass:(id)a1; // 0x00326a4c
+-(id)selectionPill; // 0x00326a5c
+-(void)setSelectionPill:(id)a1; // 0x00326a68
+-(id)moreButton; // 0x00326a78
+-(void)setMoreButton:(id)a1; // 0x00326a84
+-(id)moreSeparator; // 0x00326a94
+-(void)setMoreSeparator:(id)a1; // 0x00326aa0
+-(id)definitions; // 0x00326ab0
+-(void)setDefinitions:(id)a1; // 0x00326abc
+-(id)buttons; // 0x00326ac8
+-(void)setButtons:(id)a1; // 0x00326ad4
+-(long long)selectedIndex; // 0x00326ae4
+-(void)setSelectedIndex:(long long)a1; // 0x00326af0
+-(long long)windowStart; // 0x00326afc
+-(void)setWindowStart:(long long)a1; // 0x00326b08
+-(BOOL)windowAnimationInFlight; // 0x00326b14
+-(void)setWindowAnimationInFlight:(BOOL)a1; // 0x00326b20
+-(BOOL)userBrowsingWindow; // 0x00326b2c
+-(void)setUserBrowsingWindow:(BOOL)a1; // 0x00326b38
+-(id)menuSignature; // 0x00326b44
+-(void)setMenuSignature:(id)a1; // 0x00326b50
+-(id)selectionLockedTitle; // 0x00326b5c
+-(void)setSelectionLockedTitle:(id)a1; // 0x00326b68
+-(double)selectionIndicatorXAtCommit; // 0x00326b74
+-(void)setSelectionIndicatorXAtCommit:(double)a1; // 0x00326b80
+-(double)selectionCommitTime; // 0x00326b8c
+-(void)setSelectionCommitTime:(double)a1; // 0x00326b98
+-(id)nativeIndicator; // 0x00326ba4
+-(void)setNativeIndicator:(id)a1; // 0x00326bd4
+-(id)indicatorDisplayLink; // 0x00326be4
+-(void)setIndicatorDisplayLink:(id)a1; // 0x00326bf0
+-(double)indicatorDeadline; // 0x00326c00
+-(void)setIndicatorDeadline:(double)a1; // 0x00326c0c
+-(struct CGRect)lastPresentationFrame; // 0x00326c18
+-(void)setLastPresentationFrame:(struct CGRect)a1; // 0x00326c30
 
 @end

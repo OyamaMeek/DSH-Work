@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e748，父类 UIControl
 //
 
+// 职责：列表单元视图。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,21 +45,21 @@
 
 @property (strong, nonatomic) NSURLSessionDataTask * thumbnailTask;
 
-+(id)thumbnailCache;
-+(id)thumbnailSession;
-+(id)thumbnailImageFromData:(id)thumbnailImageFromData;
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(void)layoutSubviews;
--(void)configureWithItem:(id)configureWithItem index:(unsigned long long)index selected:(BOOL)selected;
--(void)prepareForReuse;
--(void)setChecked:(BOOL)setChecked;
--(id)item;
--(void)setItem:(id)setItem;
--(unsigned long long)itemIndex;
--(void)setItemIndex:(unsigned long long)setItemIndex;
--(id)representedURLString;
--(void)setRepresentedURLString:(id)setRepresentedURLString;
--(id)thumbnailTask;
--(void)setThumbnailTask:(id)setThumbnailTask;
++(id)thumbnailCache; // 0x00454b34
++(id)thumbnailSession; // 0x00454be0
++(id)thumbnailImageFromData:(id)a1; // 0x00454cd0
+-(id)initWithFrame:(struct CGRect)a1; // 0x00454ea0
+-(void)layoutSubviews; // 0x004554fc
+-(void)configureWithItem:(id)a1 index:(unsigned long long)a2 selected:(BOOL)a3; // 0x0045568c
+-(void)prepareForReuse; // 0x00456188
+-(void)setChecked:(BOOL)a1; // 0x00456218
+-(id)item; // 0x004563a8
+-(void)setItem:(id)a1; // 0x004563b4
+-(unsigned long long)itemIndex; // 0x004563c4
+-(void)setItemIndex:(unsigned long long)a1; // 0x004563d0
+-(id)representedURLString; // 0x004563e4
+-(void)setRepresentedURLString:(id)a1; // 0x004563f0
+-(id)thumbnailTask; // 0x004563fc
+-(void)setThumbnailTask:(id)a1; // 0x00456408
 
 @end

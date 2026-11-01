@@ -4,6 +4,11 @@
 //  原始地址 0x00a2eb08，父类 UITableViewCell
 //
 
+// 职责：列表单元视图。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -27,8 +32,8 @@
     UILabel * _messageLabel;
 }
 
--(id)initWithStyle:(long long)initWithStyle reuseIdentifier:(id)reuseIdentifier;
--(void)layoutSubviews;
--(void)configureWithEnabled:(BOOL)configureWithEnabled;
+-(id)initWithStyle:(long long)a1 reuseIdentifier:(id)a2; // 0x004a6228
+-(void)layoutSubviews; // 0x004a6798
+-(void)configureWithEnabled:(BOOL)a1; // 0x004a6968
 
 @end

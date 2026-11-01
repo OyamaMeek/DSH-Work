@@ -4,6 +4,11 @@
 //  原始地址 0x00a2fb98，父类 NSObject
 //
 
+// 职责：由二进制重建的 NSObject 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -37,20 +42,20 @@
 
 @property (nonatomic, getter=isRunning) BOOL running;
 
--(id)init;
--(void)startWithInterval:(double)startWithInterval leeway:(double)leeway queue:(id)queue repeats:(BOOL)repeats handler:(id /* block */)handler;
--(void)cancel;
--(void)cancelLocked;
--(BOOL)isRunning;
--(void)dealloc;
--(void)setRunning:(BOOL)setRunning;
--(id)internalTimer;
--(void)setInternalTimer:(id)setInternalTimer;
--(BOOL)resumed;
--(void)setResumed:(BOOL)setResumed;
--(id /* block */)internalHandler;
--(void)setInternalHandler:(id /* block */)setInternalHandler;
--(id)synchronizationQueue;
--(void)setSynchronizationQueue:(id)setSynchronizationQueue;
+-(id)init; // 0x0060d5e4
+-(void)startWithInterval:(double)a1 leeway:(double)a2 queue:(id)a3 repeats:(BOOL)a4 handler:(id /* block */)a5; // 0x0060d664
+-(void)cancel; // 0x0060da30
+-(void)cancelLocked; // 0x0060dac4
+-(BOOL)isRunning; // 0x0060db84
+-(void)dealloc; // 0x0060dc94
+-(void)setRunning:(BOOL)a1; // 0x0060dd24
+-(id)internalTimer; // 0x0060dd2c
+-(void)setInternalTimer:(id)a1; // 0x0060dd34
+-(BOOL)resumed; // 0x0060dd40
+-(void)setResumed:(BOOL)a1; // 0x0060dd48
+-(id /* block */)internalHandler; // 0x0060dd50
+-(void)setInternalHandler:(id /* block */)a1; // 0x0060dd58
+-(id)synchronizationQueue; // 0x0060dd60
+-(void)setSynchronizationQueue:(id)a1; // 0x0060dd68
 
 @end

@@ -25,6 +25,15 @@ sjj-theos/
 └── layout/                      预留的资源与 DEBIAN 目录
 ```
 
+## 注释说明
+
+- 每个头文件顶部有类职责说明，每个方法末尾标注原始地址。
+- 每个实现文件顶部写清来源地址、方法数量与对照方式；每个方法上方给出 3–5 行反汇编摘要：
+  指令数、字符串常量、消息序列、系统调用。
+- `Tweak.xm`、`Makefile`、`src/Hooks/*` 是手写注释，逐行解释 Logos 语法、链接参数与 runtime API。
+
+配套教程在 [docs/tutorial/](../docs/tutorial/README.md)，七篇从环境搭建讲到发布排障。
+
 ## 构建
 
 ```bash

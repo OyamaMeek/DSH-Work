@@ -4,6 +4,11 @@
 //  原始地址 0x00a2e900，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -31,11 +36,11 @@
 
 @property (nonatomic) struct CGRect appliedFrame;
 
--(id)parent;
--(void)setParent:(id)setParent;
--(struct CGRect)nativeFrame;
--(void)setNativeFrame:(struct CGRect)setNativeFrame;
--(struct CGRect)appliedFrame;
--(void)setAppliedFrame:(struct CGRect)setAppliedFrame;
+-(id)parent; // 0x004736c4
+-(void)setParent:(id)a1; // 0x004736ec
+-(struct CGRect)nativeFrame; // 0x004736f8
+-(void)setNativeFrame:(struct CGRect)a1; // 0x00473704
+-(struct CGRect)appliedFrame; // 0x00473710
+-(void)setAppliedFrame:(struct CGRect)a1; // 0x0047371c
 
 @end

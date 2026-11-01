@@ -4,6 +4,11 @@
 //  原始地址 0x00a2db90，父类 NSObject
 //
 
+// 职责：状态容器，承载一帧界面所需的快照数据。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -52,25 +57,25 @@
 
 @property (nonatomic) unsigned long long avatarGeneration;
 
--(id)imageView;
--(void)setImageView:(id)setImageView;
--(id)sourceImage;
--(void)setSourceImage:(id)setSourceImage;
--(id)originalAnimationImages;
--(void)setOriginalAnimationImages:(id)setOriginalAnimationImages;
--(id)originalHighlightedAnimationImages;
--(void)setOriginalHighlightedAnimationImages:(id)setOriginalHighlightedAnimationImages;
--(id)frames;
--(void)setFrames:(id)setFrames;
--(double)originalAnimationDuration;
--(void)setOriginalAnimationDuration:(double)setOriginalAnimationDuration;
--(long long)originalAnimationRepeatCount;
--(void)setOriginalAnimationRepeatCount:(long long)setOriginalAnimationRepeatCount;
--(BOOL)originallyAnimating;
--(void)setOriginallyAnimating:(BOOL)setOriginallyAnimating;
--(BOOL)usesAvatar;
--(void)setUsesAvatar:(BOOL)setUsesAvatar;
--(unsigned long long)avatarGeneration;
--(void)setAvatarGeneration:(unsigned long long)setAvatarGeneration;
+-(id)imageView; // 0x003223e0
+-(void)setImageView:(id)a1; // 0x00322408
+-(id)sourceImage; // 0x00322414
+-(void)setSourceImage:(id)a1; // 0x0032241c
+-(id)originalAnimationImages; // 0x00322428
+-(void)setOriginalAnimationImages:(id)a1; // 0x00322430
+-(id)originalHighlightedAnimationImages; // 0x00322438
+-(void)setOriginalHighlightedAnimationImages:(id)a1; // 0x00322440
+-(id)frames; // 0x00322448
+-(void)setFrames:(id)a1; // 0x00322450
+-(double)originalAnimationDuration; // 0x00322458
+-(void)setOriginalAnimationDuration:(double)a1; // 0x00322460
+-(long long)originalAnimationRepeatCount; // 0x00322468
+-(void)setOriginalAnimationRepeatCount:(long long)a1; // 0x00322470
+-(BOOL)originallyAnimating; // 0x00322478
+-(void)setOriginallyAnimating:(BOOL)a1; // 0x00322480
+-(BOOL)usesAvatar; // 0x00322488
+-(void)setUsesAvatar:(BOOL)a1; // 0x00322490
+-(unsigned long long)avatarGeneration; // 0x00322498
+-(void)setAvatarGeneration:(unsigned long long)a1; // 0x003224a0
 
 @end

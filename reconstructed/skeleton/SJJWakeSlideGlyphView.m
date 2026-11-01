@@ -8,31 +8,31 @@
 // 0x003986a4  59 条指令
 // 消息: copy, clearColor, setBackgroundColor:, setContentMode:, setUserInteractionEnabled:, setOpaque:
 // C 调用: _objc_msgSendSuper2, _objc_release, _objc_retainAutoreleasedReturnValue
--(id)initWithKind:(id)initWithKind darkMode:(BOOL)darkMode { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithKind:(id)a1 darkMode:(BOOL)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003987bc  240 条指令
 // 字符串: "sparkles", "heart"
 // 消息: copy, setNeedsDisplay, bounds, darkMode, selected, kind, isEqualToString:, bezierPath, moveToPoint:, addCurveToPoint:controlPoint1:controlPoint2:
 // C 调用: _objc_release, __Unwind_Resume, _CGRectInset, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutoreleasedReturnValue, _objc_retain
--(void)setKind:(id)setKind { /* 重建骨架，语义见 pseudocode */ }
+-(void)setKind:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00398824  214 条指令
 // 字符串: "sparkles", "heart"
 // 消息: bounds, darkMode, selected, kind, isEqualToString:, bezierPath, moveToPoint:, addCurveToPoint:controlPoint1:controlPoint2:
 // C 调用: _CGRectInset, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release
--(void)setDarkMode:(BOOL)setDarkMode { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDarkMode:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00398830  211 条指令
 // 字符串: "sparkles", "heart"
 // 消息: bounds, darkMode, selected, kind, isEqualToString:, bezierPath, moveToPoint:, addCurveToPoint:controlPoint1:controlPoint2:
 // C 调用: _CGRectInset, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release
--(void)setSelected:(BOOL)setSelected { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelected:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0039883c  208 条指令
 // 字符串: "sparkles", "heart"
 // 消息: bounds, darkMode, selected, kind, isEqualToString:, bezierPath, moveToPoint:, addCurveToPoint:controlPoint1:controlPoint2:
 // C 调用: _CGRectInset, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release
--(void)drawRect:(struct CGRect)drawRect { /* 重建骨架，语义见 pseudocode */ }
+-(void)drawRect:(struct CGRect)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0039ac40  5 条指令
 -(id)kind { /* 重建骨架，语义见 pseudocode */ }

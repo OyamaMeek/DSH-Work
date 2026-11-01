@@ -4,6 +4,11 @@
 //  原始地址 0x00a2d398，父类 NSObject
 //
 
+// 职责：代理对象，转发或拦截宿主对象的消息。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,8 +25,8 @@
 
 @interface SJJLegacyShareAvatarOverlayProxy : NSObject
 
-+(id)sharedProxy;
--(void)dismissOverlay:(id)dismissOverlay;
--(void)handleAvatarTap:(id)handleAvatarTap;
++(id)sharedProxy; // 0x00004724
+-(void)dismissOverlay:(id)a1; // 0x000047b0
+-(void)handleAvatarTap:(id)a1; // 0x00004954
 
 @end

@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f3f0，父类 UIWindow
 //
 
+// 职责：自定义窗口。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -20,7 +25,7 @@
 
 @interface SJJHighRefreshConfigurationWindow : UIWindow
 
--(BOOL)canBecomeKeyWindow;
--(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
+-(BOOL)canBecomeKeyWindow; // 0x005931e0
+-(id)hitTest:(struct CGPoint)a1 withEvent:(id)a2; // 0x005931e8
 
 @end

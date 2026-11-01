@@ -32,7 +32,7 @@
 // 字符串: "/"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, length, rangeOfString:options:, hasSuffix:, substringToIndex:, componentsWithString:, host, containsString:, setQuery:, setFragment:, path, isEqualToString:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue
-+(id)endpointFromBaseURL:(id)endpointFromBaseURL { /* 重建骨架，语义见 pseudocode */ }
++(id)endpointFromBaseURL:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0063dc78  4 条指令
 +(id)pearAPIChatBaseURL { /* 重建骨架，语义见 pseudocode */ }
@@ -267,60 +267,60 @@
 // 字符串: "empty text", "%@  %@", "role", "system", "content", "top_p"
 // 消息: generateReplyForText:personaOverride:sessionKey:completion:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, integerForKey:, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, effectivePersona, stringWithFormat:, arrayWithObject:, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _arc4random_uniform
-+(void)generateReplyForText:(id)generateReplyForText completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateReplyForText:(id)a1 completion:(id /* block */)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0063fbac  846 条指令
 // 字符串: "empty text", "%@  %@", "role", "system", "content", "top_p"
 // 消息: generateReplyForText:personaOverride:sessionKey:completion:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, integerForKey:, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, effectivePersona, stringWithFormat:, arrayWithObject:, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _arc4random_uniform
-+(void)generateReplyForText:(id)generateReplyForText personaOverride:(id)personaOverride completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateReplyForText:(id)a1 personaOverride:(id)a2 completion:(id /* block */)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0063fbb4  844 条指令
 // 字符串: "empty text", "%@  %@", "role", "system", "content", "top_p"
 // 消息: generateReplyForText:personaOverride:sessionKey:completion:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, integerForKey:, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, effectivePersona, stringWithFormat:, arrayWithObject:, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _arc4random_uniform
-+(void)generateReplyForText:(id)generateReplyForText sessionKey:(id)sessionKey completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateReplyForText:(id)a1 sessionKey:(id)a2 completion:(id /* block */)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0063fbc4  840 条指令
 // 字符串: "empty text", "%@  %@", "role", "system", "content", "top_p"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, integerForKey:, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, effectivePersona, stringWithFormat:, arrayWithObject:, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:, addObject:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _arc4random_uniform
-+(void)generateReplyForText:(id)generateReplyForText personaOverride:(id)personaOverride sessionKey:(id)sessionKey completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateReplyForText:(id)a1 personaOverride:(id)a2 sessionKey:(id)a3 completion:(id /* block */)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00642110  580 条指令
 // 字符串: "%@ %@", "role", "system", "content", "top_p", "frequency_penalty"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, URLWithString:, autoReplyPersona, stringWithFormat:, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, dataWithJSONObject:options:error:, requestWithURL:, setHTTPMethod:, setTimeoutInterval:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass
-+(void)generateFastAutoReplyForText:(id)generateFastAutoReplyForText personaOverride:(id)personaOverride sessionKey:(id)sessionKey completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateFastAutoReplyForText:(id)a1 personaOverride:(id)a2 sessionKey:(id)a3 completion:(id /* block */)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006431c8  636 条指令
 // 字符串: "%@  %@", "empty text", "role", "system", "content", "model"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, objectForKey:, integerForKey:, stringWithFormat:, generateReplyForText:personaOverride:sessionKey:completion:, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, arrayWithObjects:count:, dictionaryWithDictionary:, setObject:forKeyedSubscript:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
-+(void)generateReplyForText:(id)generateReplyForText personaOverride:(id)personaOverride scene:(long long)scene sessionKey:(id)sessionKey completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateReplyForText:(id)a1 personaOverride:(id)a2 scene:(long long)a3 sessionKey:(id)a4 completion:(id /* block */)a5 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00644358  707 条指令
 // 字符串: "empty image", "data:image/jpeg;base64,%@", "role", "system", "content", "4"
 // 消息: generateVisionReplyForImageData:prompt:sessionKey:completion:, length, stringForKey:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, integerForKey:, effectivePersona, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, stringWithFormat:, base64EncodedStringWithOptions:, arrayWithObject:, countByEnumeratingWithState:objects:count:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation
-+(void)generateVisionReplyForImageData:(id)generateVisionReplyForImageData prompt:(id)prompt completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateVisionReplyForImageData:(id)a1 prompt:(id)a2 completion:(id /* block */)a3 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00644364  704 条指令
 // 字符串: "empty image", "data:image/jpeg;base64,%@", "role", "system", "content", "4"
 // 消息: length, stringForKey:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, copy, integerForKey:, effectivePersona, dictionaryWithObjects:forKeys:count:, errorWithDomain:code:userInfo:, stringWithFormat:, base64EncodedStringWithOptions:, arrayWithObject:, countByEnumeratingWithState:objects:count:, objectForKeyedSubscript:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation
-+(void)generateVisionReplyForImageData:(id)generateVisionReplyForImageData prompt:(id)prompt sessionKey:(id)sessionKey completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateVisionReplyForImageData:(id)a1 prompt:(id)a2 sessionKey:(id)a3 completion:(id /* block */)a4 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00645584  605 条指令
 // 字符串: "gpt-image-", "chatgpt-image-latest", "empty prompt", "missing config", "dall-e-", "/"
 // 消息: whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, stringForKey:, copy, lowercaseString, hasPrefix:, isEqualToString:, defaultImageModelName, containsString:, stringByReplacingOccurrencesOfString:withString:, hasSuffix:, substringToIndex:, componentsWithString:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
-+(void)generateImageForPrompt:(id)generateImageForPrompt completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
++(void)generateImageForPrompt:(id)a1 completion:(id /* block */)a2 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00646774  2048 条指令
 // 字符串: "g8iVa4sply+G0s8erNWnbd7Tflrf0Cih0ojo73wr/YbtGJLJRk3gc7yeuR4p", "LYXoHKQtkL6/utlHxk0InV6nvSz7vyge+M8W9CU+", "XFWX21w6fiGMYMCG26tZ2zi+X3+7", "R506xrMOr/pWTbL03emU", "L/Axwzo+M7Q=", "iw5mky9JTbG0"
 // 消息: dataWithLength:, mutableBytes, copy, length, initWithBase64EncodedString:options:, bytes
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _objc_alloc, _objc_release
-+(void)clearConversationForSessionKey:(id)clearConversationForSessionKey { /* 重建骨架，语义见 pseudocode */ }
++(void)clearConversationForSessionKey:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 @end

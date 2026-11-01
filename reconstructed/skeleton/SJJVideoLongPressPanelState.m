@@ -9,26 +9,26 @@
 -(id)backgroundColor { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e269c  3 条指令
--(void)setBackgroundColor:(id)setBackgroundColor { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundColor:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26a0  2 条指令
 -(id)layerBackgroundColor { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26a8  5 条指令
 // C 调用: _objc_storeStrong
--(void)setLayerBackgroundColor:(id)setLayerBackgroundColor { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLayerBackgroundColor:(id)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26b4  2 条指令
 -(BOOL)hadLayerBackgroundColor { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26bc  2 条指令
--(void)setHadLayerBackgroundColor:(BOOL)setHadLayerBackgroundColor { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHadLayerBackgroundColor:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26c4  2 条指令
 -(BOOL)opaque { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26cc  2 条指令
--(void)setOpaque:(BOOL)setOpaque { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOpaque:(BOOL)a1 { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005e26d4  20 条指令
 // C 调用: _objc_storeStrong

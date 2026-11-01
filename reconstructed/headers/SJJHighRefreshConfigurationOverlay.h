@@ -4,6 +4,11 @@
 //  原始地址 0x00a2f328，父类 UIControl
 //
 
+// 职责：由二进制重建的 UIControl 子类。
+//
+// 方法末尾的地址是该实现在 dylib 中的原始偏移；
+// 反查：objdump -d --start-address=0xADDR --stop-address=0xADDR+0x40 siwenjiajia.dylib
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
@@ -40,21 +45,21 @@
 
 @property (strong, nonatomic) UIButton * closeButton;
 
--(id)initWithFrame:(struct CGRect)initWithFrame;
--(void)layoutSubviews;
--(void)sjj_selectMode:(id)sjj_selectMode;
--(void)sjj_close:(id)sjj_close;
--(id)panel;
--(void)setPanel:(id)setPanel;
--(id)titleLabel;
--(void)setTitleLabel:(id)setTitleLabel;
--(id)detailLabel;
--(void)setDetailLabel:(id)setDetailLabel;
--(id)optionsView;
--(void)setOptionsView:(id)setOptionsView;
--(id)modeButtons;
--(void)setModeButtons:(id)setModeButtons;
--(id)closeButton;
--(void)setCloseButton:(id)setCloseButton;
+-(id)initWithFrame:(struct CGRect)a1; // 0x00591e38
+-(void)layoutSubviews; // 0x00592910
+-(void)sjj_selectMode:(id)a1; // 0x00592d68
+-(void)sjj_close:(id)a1; // 0x00593074
+-(id)panel; // 0x0059307c
+-(void)setPanel:(id)a1; // 0x00593088
+-(id)titleLabel; // 0x00593098
+-(void)setTitleLabel:(id)a1; // 0x005930a4
+-(id)detailLabel; // 0x005930b4
+-(void)setDetailLabel:(id)a1; // 0x005930c0
+-(id)optionsView; // 0x005930d0
+-(void)setOptionsView:(id)a1; // 0x005930dc
+-(id)modeButtons; // 0x005930ec
+-(void)setModeButtons:(id)a1; // 0x005930f8
+-(id)closeButton; // 0x00593108
+-(void)setCloseButton:(id)a1; // 0x00593114
 
 @end
