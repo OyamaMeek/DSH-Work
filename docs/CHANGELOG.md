@@ -572,6 +572,6 @@
   - `tools/sjj_re/`（新增 7 个脚本：objc_meta.py、typeenc.py、binary.py、gen_source.py、gen_pdc_source.py、gen_index.py、gen_r2_pdc.py、gen_r2_funcs.py、stats.py、lint_headers.py）
   - `memory/progress.md`、`memory/gotchas.md`、`docs/CHANGELOG.md`、`context/2026/11/01/17-30-00/对话.md`
 
-- **Git 提交**：待提交
+- **Git 提交**：`245859e feat: 重建 siwenjiajia.dylib 的 ObjC 接口、伪代码与关键流程解读`；已推送至 `origin/main`。
 
 ---
