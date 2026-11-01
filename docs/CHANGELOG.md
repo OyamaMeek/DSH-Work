@@ -619,6 +619,6 @@
   - `docs/tutorial/`（新增 8 个文件）
   - `docs/CHANGELOG.md`、`memory/progress.md`、`context/2026/11/01/22-05-00/对话.md`
 
-- **Git 提交**：待提交
+- **Git 提交**：`6f1c76e docs: 为 Theos 工程补详细注释并新增插件开发教程`；已推送至 `origin/main`。
 
 ---
