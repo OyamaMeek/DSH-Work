@@ -23,12 +23,12 @@
 // 0x004a4e48  117 条指令
 // 消息: userInfo, objectForKeyedSubscript:, CGRectValue, view, convertRect:fromView:, bounds, doubleValue, animateWithDuration:animations:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetMaxY, _CGRectGetMinY
--(void)keyboardWillChange:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)keyboardWillChange:(id)keyboardWillChange { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a5070  54 条指令
 // 消息: userInfo, objectForKeyedSubscript:, doubleValue, animateWithDuration:animations:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)keyboardWillHide:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)keyboardWillHide:(id)keyboardWillHide { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a5174  164 条指令
 // 消息: dismissViewControllerAnimated:completion:, onSave, text, systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
@@ -48,7 +48,7 @@
 // 0x004a5258  107 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setTitleText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTitleText:(id)setTitleText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a5264  104 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
@@ -58,7 +58,7 @@
 // 0x004a5270  101 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setHintText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHintText:(id)setHintText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a527c  98 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
@@ -68,7 +68,7 @@
 // 0x004a5288  95 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setInitialText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setInitialText:(id)setInitialText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a5294  92 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
@@ -78,7 +78,7 @@
 // 0x004a52a0  89 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setOnSave:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOnSave:(id /* block */)setOnSave { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a52ac  86 条指令
 // 消息: systemFontOfSize:weight:, setFont:, setTextAlignment:, layer, setCornerRadius:, setMasksToBounds:

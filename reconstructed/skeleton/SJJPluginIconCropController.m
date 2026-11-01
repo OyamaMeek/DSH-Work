@@ -13,7 +13,7 @@
 // 0x00387210  132 条指令
 // 消息: imageView, scrollView, zoomScale, minimumZoomScale, view, bounds, setFrame:, setContentSize:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_autoreleaseReturnValue, _objc_msgSendSuper2, _objc_release, _CGRectGetWidth, _CGRectGetHeight
--(id)viewForZoomingInScrollView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)viewForZoomingInScrollView:(id)viewForZoomingInScrollView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0038723c  121 条指令
 // 消息: scrollView, zoomScale, minimumZoomScale, view, bounds, setFrame:, imageView, setContentSize:
@@ -38,7 +38,7 @@
 // 0x003878cc  213 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_new
--(void)setSourceImage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSourceImage:(id)setSourceImage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003878dc  209 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
@@ -48,7 +48,7 @@
 // 0x003878e8  206 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_new
--(void)setCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCompletion:(id /* block */)setCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003878f4  203 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
@@ -58,7 +58,7 @@
 // 0x00387900  200 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_new
--(void)setScrollView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setScrollView:(id)setScrollView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00387910  196 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
@@ -68,7 +68,7 @@
 // 0x0038791c  193 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_new
--(void)setImageView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageView:(id)setImageView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0038792c  189 条指令
 // 消息: hostController, topViewController, presentedViewController, isSourceTypeAvailable:, setSourceType:, setMediaTypes:, setAllowsEditing:, setDelegate:, presenter, presentViewController:animated:completion:, showToast:duration:, objectForKeyedSubscript:, dismissViewControllerAnimated:completion:

@@ -8,7 +8,7 @@
 // 0x004a8378  70 条指令
 // 消息: objectForKeyedSubscript:, length, initWithConversationID:, setOnDidChange:, navigationController, pushViewController:animated:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)openTargetDetail:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)openTargetDetail:(id)openTargetDetail { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a855c  63 条指令
 // 消息: setTitle:, systemBackgroundColor, tableView, setBackgroundColor:, setKeyboardDismissMode:, initWithTitle:style:target:action:, navigationItem, setRightBarButtonItem:
@@ -18,7 +18,7 @@
 // 0x004a8684  44 条指令
 // 消息: tableView, reloadData
 // C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_destroyWeak
--(void)viewWillAppear:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewWillAppear:(BOOL)viewWillAppear { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a87ec  52 条指令
 // 消息: navigationController, presentingViewController, dismissViewControllerAnimated:completion:, popViewControllerAnimated:
@@ -26,37 +26,37 @@
 -(void)closeTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a88b4  2 条指令
--(long long)numberOfSectionsInTableView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a88bc  8 条指令
--(long long)tableView:(id)numberOfRowsInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a88e4  29 条指令
 // 消息: section, row
 // C 调用: _objc_retain, _objc_release
--(double)tableView:(id)heightForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a8974  46 条指令
 // 消息: objectForKey:, count
 // C 调用: _objc_retainAutoreleaseReturnValue, _objc_retainAutoreleasedReturnValue, _objc_release
--(id)tableView:(id)titleForHeaderInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a8990  39 条指令
 // 消息: objectForKey:, count
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(id)tableView:(id)titleForFooterInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView titleForFooterInSection:(long long)titleForFooterInSection { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a8a54  999 条指令
 // 字符串: "sjj.spark.target", "sjj.spark.base", "sjj.spark.empty", "sjj.spark.summary", "captured_at", "sjj_spark_renew_enabled"
 // 消息: section, objectForKey:, count, dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, row, objectAtIndexedSubscript:, stringWithFormat:, setAccessoryView:, setAccessoryType:, detailTextLabel, setNumberOfLines:, textLabel, setText:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_opt_new, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(id)tableView:(id)cellForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a9740  172 条指令
 // 字符串: "sjj_spark_renew_enabled"
 // 消息: isOn, setBool:forKey:, showToast:duration:, tableView, reloadData, setOn:animated:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_initWeak, _objc_retain, _objc_copyWeak, _objc_destroyWeak
--(void)toggleEnabled:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)toggleEnabled:(id)toggleEnabled { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a9884  91 条指令
 // 消息: alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
@@ -91,41 +91,41 @@
 // 0x004aac74  106 条指令
 // 消息: objectForKeyedSubscript:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, _objc_initWeak, _objc_destroyWeak
--(void)promptEditTargetName:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptEditTargetName:(id)promptEditTargetName { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004ab150  107 条指令
 // 消息: objectForKeyedSubscript:, alertControllerWithTitle:message:preferredStyle:, addTextFieldWithConfigurationHandler:, actionWithTitle:style:handler:, addAction:, presentViewController:animated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, _objc_initWeak, _objc_destroyWeak
--(void)promptEditTargetMessage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptEditTargetMessage:(id)promptEditTargetMessage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004ab660  34 条指令
 // C 调用: _objc_initWeak, _objc_release, _objc_destroyWeak
--(void)sendSingleTargetNow:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)sendSingleTargetNow:(id)sendSingleTargetNow { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004ab7ec  77 条指令
 // 消息: objectForKeyedSubscript:, indexesOfObjectsPassingTest:, count, removeObjectsAtIndexes:, tableView, reloadData, showToast:duration:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)removeTarget:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)removeTarget:(id)removeTarget { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004aba64  152 条指令
 // 消息: openTargetDetail:, deselectRowAtIndexPath:animated:, section, objectForKey:, count, row, objectAtIndexedSubscript:, presentTargetActions:, presentTimeEditor, presentRandomDelayEditor, presentDefaultMessageEditor, openConversationPicker, addOrUpdateLatestConversation, runTodayTasksNow
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
--(void)presentTargetActions:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentTargetActions:(id)presentTargetActions { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004aba68  151 条指令
 // 消息: deselectRowAtIndexPath:animated:, section, objectForKey:, count, row, objectAtIndexedSubscript:, presentTargetActions:, presentTimeEditor, presentRandomDelayEditor, presentDefaultMessageEditor, openConversationPicker, addOrUpdateLatestConversation, runTodayTasksNow
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
--(void)tableView:(id)didSelectRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004abc74  20 条指令
 // 消息: section
 // C 调用: _objc_retain, _objc_release
--(BOOL)tableView:(id)canEditRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)tableView:(id)tableView canEditRowAtIndexPath:(id)canEditRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004abcd4  936 条指令
 // 字符串: "ext", "avatarSmallStrUrl", ":", "0:"
 // 消息: section, objectForKey:, row, count, objectAtIndexedSubscript:, removeTarget:, initWithStyle:, countByEnumeratingWithState:objects:count:, valueForKey:, length, objectForKeyedSubscript:, isEqualToString:, containsString:, hasPrefix:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc, _objc_autoreleaseReturnValue, _objc_enumerationMutation, _objc_begin_catch, _objc_end_catch, _objc_opt_class, _objc_opt_isKindOfClass, ___stack_chk_fail
--(void)tableView:(id)commitEditingStyle:(long long)forRowAtIndexPath:(id)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)tableView:(id)tableView commitEditingStyle:(long long)commitEditingStyle forRowAtIndexPath:(id)forRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 @end

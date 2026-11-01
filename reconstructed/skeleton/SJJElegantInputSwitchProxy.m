@@ -9,7 +9,7 @@
 // 字符串: "1"
 // 消息: isOn, setText:, length, isMainThread, isEqualToString:, date, timeIntervalSince1970, objectForKeyedSubscript:, stringForKey:, copy
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, __Unwind_Resume, _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_sync_enter, _objc_sync_exit, _dispatch_async, _CFAbsoluteTimeGetCurrent
--(void)sjjSwitchChanged:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjjSwitchChanged:(id)sjjSwitchChanged { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00004bd4  308 条指令
 // 消息: length, isMainThread, isEqualToString:, date, timeIntervalSince1970, objectForKeyedSubscript:, stringForKey:, copy

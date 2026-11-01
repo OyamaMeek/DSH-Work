@@ -6,254 +6,265 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJInlineCameraController : UIViewController <AVCapturePhotoCaptureDelegate, AVCaptureFileOutputRecordingDelegate, UIGestureRecognizerDelegate>
 {
-    B _sessionConfigured;
-    B _sessionStarting;
-    B _videoMode;
-    B _recordAudio;
-    B _livePhotoEnabled;
-    B _videoRecording;
-    B _dismissAfterRecordingStops;
-    B _closing;
-    B _closeAnimationStarted;
-    B _didRunIslandAnimation;
-    B _islandOpenAnimating;
-    B _modeSwitching;
-    B _livePhotoSwitching;
-    B _printAnimationActive;
-    B _printResultVisible;
-    B _priorStatusBarHidden;
-    B _pendingPhotoCaptureActive;
-    B _pendingLivePhotoFinished;
-    B _pendingPhotoStoreInFlight;
-    B _requestedAudioAccess;
-    UIControl _dimmingControl;
-    UIVisualEffectView _panelBlurView;
-    UIView _cameraShellView;
-    UIVisualEffectView _shellGlassBlurView;
-    UIView _shellGlassTintView;
-    CAGradientLayer _shellShadeLayer;
-    UIView _controlsPlateView;
-    UIView _islandView;
-    UILabel _islandTitleLabel;
-    UILabel _islandMetaLabel;
-    UIView _recordDotView;
-    UIView _panelView;
-    UIView _previewView;
-    UIImageView _previewImageView;
-    UIView _modeBarView;
-    UILabel _titleLabel;
-    UILabel _statusLabel;
-    UIButton _zoomButton;
-    UISlider _zoomSlider;
-    UIView _zoomRailView;
-    UIButton _zoomWideButton;
-    UIButton _zoomOneButton;
-    UIButton _zoomTeleButton;
-    UILabel _zoomMinLabel;
-    UILabel _zoomMaxLabel;
-    UIButton _closeButton;
-    UIButton _photoModeButton;
-    UIButton _videoModeButton;
-    UIButton _resolutionButton;
-    UIButton _fpsButton;
-    UIButton _captureButton;
-    UIButton _saveButton;
-    UIButton _deleteButton;
-    UIButton _historyButton;
-    UIButton _cameraSwitchButton;
-    UIButton _audioButton;
-    UIButton _livePhotoButton;
-    UIButton _themeButton;
-    UIView _filmStripView;
-    UIVisualEffectView _filmBlurView;
-    UIView _filmTintView;
-    UIImageView _filmThumbView;
-    UILabel _filmTitleLabel;
-    UILabel _filmMetaLabel;
-    UIView _printOverlayView;
-    UIView _printSlotView;
-    UIView _printEjectClipView;
-    UIView _printPhotoCardView;
-    UIImageView _printPhotoImageView;
-    UILabel _printCaptionLabel;
-    UIButton _printCloseButton;
-    UIView _printReturnShellView;
-    NSDictionary _printedHistoryItem;
-    AVCaptureSession _session;
-    AVCaptureDevice _captureDevice;
-    AVCaptureDeviceInput _videoInput;
-    AVCaptureDeviceInput _audioInput;
-    AVCapturePhotoOutput _photoOutput;
-    AVCaptureMovieFileOutput _movieOutput;
-    AVCaptureVideoPreviewLayer _previewLayer;
-    UIVisualEffectView _controlsBlurView;
-    UIView _controlsTintView;
-    UITapGestureRecognizer _outsideTapGesture;
-    UIVisualEffectView _switchCoverBlurView;
-    UIImageView _switchCoverImageView;
-    NSURL _pendingLivePhotoVideoURL;
-    NSData _pendingPhotoData;
-    UIImage _pendingPhotoImage;
-    NSObject<OS_dispatch_queue> _sessionQueue;
-    q _pendingLivePhotoWaitAttempts;
-    q _selectedResolutionIndex;
-    q _selectedFPSIndex;
-    q _selectedThemeIndex;
-    q _selectedFilmWatermarkStyle;
-    q _cameraPosition;
-    d _currentZoom;
-    d _maxZoom;
-    d _pinchBaseZoom;
-    d _panBaseZoom;
-    d _controlsYOffset;
-    d _controlsPanStartOffset;
-    d _controlsMinYOffset;
-    d _controlsMaxYOffset;
-    d _lastZoomPersistTime;
+    BOOL _sessionConfigured;
+    BOOL _sessionStarting;
+    BOOL _videoMode;
+    BOOL _recordAudio;
+    BOOL _livePhotoEnabled;
+    BOOL _videoRecording;
+    BOOL _dismissAfterRecordingStops;
+    BOOL _closing;
+    BOOL _closeAnimationStarted;
+    BOOL _didRunIslandAnimation;
+    BOOL _islandOpenAnimating;
+    BOOL _modeSwitching;
+    BOOL _livePhotoSwitching;
+    BOOL _printAnimationActive;
+    BOOL _printResultVisible;
+    BOOL _priorStatusBarHidden;
+    BOOL _pendingPhotoCaptureActive;
+    BOOL _pendingLivePhotoFinished;
+    BOOL _pendingPhotoStoreInFlight;
+    BOOL _requestedAudioAccess;
+    UIControl * _dimmingControl;
+    UIVisualEffectView * _panelBlurView;
+    UIView * _cameraShellView;
+    UIVisualEffectView * _shellGlassBlurView;
+    UIView * _shellGlassTintView;
+    CAGradientLayer * _shellShadeLayer;
+    UIView * _controlsPlateView;
+    UIView * _islandView;
+    UILabel * _islandTitleLabel;
+    UILabel * _islandMetaLabel;
+    UIView * _recordDotView;
+    UIView * _panelView;
+    UIView * _previewView;
+    UIImageView * _previewImageView;
+    UIView * _modeBarView;
+    UILabel * _titleLabel;
+    UILabel * _statusLabel;
+    UIButton * _zoomButton;
+    UISlider * _zoomSlider;
+    UIView * _zoomRailView;
+    UIButton * _zoomWideButton;
+    UIButton * _zoomOneButton;
+    UIButton * _zoomTeleButton;
+    UILabel * _zoomMinLabel;
+    UILabel * _zoomMaxLabel;
+    UIButton * _closeButton;
+    UIButton * _photoModeButton;
+    UIButton * _videoModeButton;
+    UIButton * _resolutionButton;
+    UIButton * _fpsButton;
+    UIButton * _captureButton;
+    UIButton * _saveButton;
+    UIButton * _deleteButton;
+    UIButton * _historyButton;
+    UIButton * _cameraSwitchButton;
+    UIButton * _audioButton;
+    UIButton * _livePhotoButton;
+    UIButton * _themeButton;
+    UIView * _filmStripView;
+    UIVisualEffectView * _filmBlurView;
+    UIView * _filmTintView;
+    UIImageView * _filmThumbView;
+    UILabel * _filmTitleLabel;
+    UILabel * _filmMetaLabel;
+    UIView * _printOverlayView;
+    UIView * _printSlotView;
+    UIView * _printEjectClipView;
+    UIView * _printPhotoCardView;
+    UIImageView * _printPhotoImageView;
+    UILabel * _printCaptionLabel;
+    UIButton * _printCloseButton;
+    UIView * _printReturnShellView;
+    NSDictionary * _printedHistoryItem;
+    AVCaptureSession * _session;
+    AVCaptureDevice * _captureDevice;
+    AVCaptureDeviceInput * _videoInput;
+    AVCaptureDeviceInput * _audioInput;
+    AVCapturePhotoOutput * _photoOutput;
+    AVCaptureMovieFileOutput * _movieOutput;
+    AVCaptureVideoPreviewLayer * _previewLayer;
+    UIVisualEffectView * _controlsBlurView;
+    UIView * _controlsTintView;
+    UITapGestureRecognizer * _outsideTapGesture;
+    UIVisualEffectView * _switchCoverBlurView;
+    UIImageView * _switchCoverImageView;
+    NSURL * _pendingLivePhotoVideoURL;
+    NSData * _pendingPhotoData;
+    UIImage * _pendingPhotoImage;
+    NSObject<OS_dispatch_queue> * _sessionQueue;
+    long long _pendingLivePhotoWaitAttempts;
+    long long _selectedResolutionIndex;
+    long long _selectedFPSIndex;
+    long long _selectedThemeIndex;
+    long long _selectedFilmWatermarkStyle;
+    long long _cameraPosition;
+    double _currentZoom;
+    double _maxZoom;
+    double _pinchBaseZoom;
+    double _panBaseZoom;
+    double _controlsYOffset;
+    double _controlsPanStartOffset;
+    double _controlsMinYOffset;
+    double _controlsMaxYOffset;
+    double _lastZoomPersistTime;
     struct CGPoint _panStartPoint;
     struct CGRect _islandOriginFrame;
 }
 
-@property (strong, nonatomic) UIControl dimmingControl;
+@property (strong, nonatomic) UIControl * dimmingControl;
 
-@property (strong, nonatomic) UIVisualEffectView panelBlurView;
+@property (strong, nonatomic) UIVisualEffectView * panelBlurView;
 
-@property (strong, nonatomic) UIView cameraShellView;
+@property (strong, nonatomic) UIView * cameraShellView;
 
-@property (strong, nonatomic) UIVisualEffectView shellGlassBlurView;
+@property (strong, nonatomic) UIVisualEffectView * shellGlassBlurView;
 
-@property (strong, nonatomic) UIView shellGlassTintView;
+@property (strong, nonatomic) UIView * shellGlassTintView;
 
-@property (strong, nonatomic) CAGradientLayer shellShadeLayer;
+@property (strong, nonatomic) CAGradientLayer * shellShadeLayer;
 
-@property (strong, nonatomic) UIView controlsPlateView;
+@property (strong, nonatomic) UIView * controlsPlateView;
 
-@property (strong, nonatomic) UIView islandView;
+@property (strong, nonatomic) UIView * islandView;
 
-@property (strong, nonatomic) UILabel islandTitleLabel;
+@property (strong, nonatomic) UILabel * islandTitleLabel;
 
-@property (strong, nonatomic) UILabel islandMetaLabel;
+@property (strong, nonatomic) UILabel * islandMetaLabel;
 
-@property (strong, nonatomic) UIView recordDotView;
+@property (strong, nonatomic) UIView * recordDotView;
 
-@property (strong, nonatomic) UIView panelView;
+@property (strong, nonatomic) UIView * panelView;
 
-@property (strong, nonatomic) UIView previewView;
+@property (strong, nonatomic) UIView * previewView;
 
-@property (strong, nonatomic) UIImageView previewImageView;
+@property (strong, nonatomic) UIImageView * previewImageView;
 
-@property (strong, nonatomic) UIView modeBarView;
+@property (strong, nonatomic) UIView * modeBarView;
 
-@property (strong, nonatomic) UILabel titleLabel;
+@property (strong, nonatomic) UILabel * titleLabel;
 
-@property (strong, nonatomic) UILabel statusLabel;
+@property (strong, nonatomic) UILabel * statusLabel;
 
-@property (strong, nonatomic) UIButton zoomButton;
+@property (strong, nonatomic) UIButton * zoomButton;
 
-@property (strong, nonatomic) UISlider zoomSlider;
+@property (strong, nonatomic) UISlider * zoomSlider;
 
-@property (strong, nonatomic) UIView zoomRailView;
+@property (strong, nonatomic) UIView * zoomRailView;
 
-@property (strong, nonatomic) UIButton zoomWideButton;
+@property (strong, nonatomic) UIButton * zoomWideButton;
 
-@property (strong, nonatomic) UIButton zoomOneButton;
+@property (strong, nonatomic) UIButton * zoomOneButton;
 
-@property (strong, nonatomic) UIButton zoomTeleButton;
+@property (strong, nonatomic) UIButton * zoomTeleButton;
 
-@property (strong, nonatomic) UILabel zoomMinLabel;
+@property (strong, nonatomic) UILabel * zoomMinLabel;
 
-@property (strong, nonatomic) UILabel zoomMaxLabel;
+@property (strong, nonatomic) UILabel * zoomMaxLabel;
 
-@property (strong, nonatomic) UIButton closeButton;
+@property (strong, nonatomic) UIButton * closeButton;
 
-@property (strong, nonatomic) UIButton photoModeButton;
+@property (strong, nonatomic) UIButton * photoModeButton;
 
-@property (strong, nonatomic) UIButton videoModeButton;
+@property (strong, nonatomic) UIButton * videoModeButton;
 
-@property (strong, nonatomic) UIButton resolutionButton;
+@property (strong, nonatomic) UIButton * resolutionButton;
 
-@property (strong, nonatomic) UIButton fpsButton;
+@property (strong, nonatomic) UIButton * fpsButton;
 
-@property (strong, nonatomic) UIButton captureButton;
+@property (strong, nonatomic) UIButton * captureButton;
 
-@property (strong, nonatomic) UIButton saveButton;
+@property (strong, nonatomic) UIButton * saveButton;
 
-@property (strong, nonatomic) UIButton deleteButton;
+@property (strong, nonatomic) UIButton * deleteButton;
 
-@property (strong, nonatomic) UIButton historyButton;
+@property (strong, nonatomic) UIButton * historyButton;
 
-@property (strong, nonatomic) UIButton cameraSwitchButton;
+@property (strong, nonatomic) UIButton * cameraSwitchButton;
 
-@property (strong, nonatomic) UIButton audioButton;
+@property (strong, nonatomic) UIButton * audioButton;
 
-@property (strong, nonatomic) UIButton livePhotoButton;
+@property (strong, nonatomic) UIButton * livePhotoButton;
 
-@property (strong, nonatomic) UIButton themeButton;
+@property (strong, nonatomic) UIButton * themeButton;
 
-@property (strong, nonatomic) UIView filmStripView;
+@property (strong, nonatomic) UIView * filmStripView;
 
-@property (strong, nonatomic) UIVisualEffectView filmBlurView;
+@property (strong, nonatomic) UIVisualEffectView * filmBlurView;
 
-@property (strong, nonatomic) UIView filmTintView;
+@property (strong, nonatomic) UIView * filmTintView;
 
-@property (strong, nonatomic) UIImageView filmThumbView;
+@property (strong, nonatomic) UIImageView * filmThumbView;
 
-@property (strong, nonatomic) UILabel filmTitleLabel;
+@property (strong, nonatomic) UILabel * filmTitleLabel;
 
-@property (strong, nonatomic) UILabel filmMetaLabel;
+@property (strong, nonatomic) UILabel * filmMetaLabel;
 
-@property (strong, nonatomic) UIView printOverlayView;
+@property (strong, nonatomic) UIView * printOverlayView;
 
-@property (strong, nonatomic) UIView printSlotView;
+@property (strong, nonatomic) UIView * printSlotView;
 
-@property (strong, nonatomic) UIView printEjectClipView;
+@property (strong, nonatomic) UIView * printEjectClipView;
 
-@property (strong, nonatomic) UIView printPhotoCardView;
+@property (strong, nonatomic) UIView * printPhotoCardView;
 
-@property (strong, nonatomic) UIImageView printPhotoImageView;
+@property (strong, nonatomic) UIImageView * printPhotoImageView;
 
-@property (strong, nonatomic) UILabel printCaptionLabel;
+@property (strong, nonatomic) UILabel * printCaptionLabel;
 
-@property (strong, nonatomic) UIButton printCloseButton;
+@property (strong, nonatomic) UIButton * printCloseButton;
 
-@property (strong, nonatomic) UIView printReturnShellView;
+@property (strong, nonatomic) UIView * printReturnShellView;
 
-@property (copy, nonatomic) NSDictionary printedHistoryItem;
+@property (copy, nonatomic) NSDictionary * printedHistoryItem;
 
-@property (strong, nonatomic) AVCaptureSession session;
+@property (strong, nonatomic) AVCaptureSession * session;
 
-@property (strong, nonatomic) AVCaptureDevice captureDevice;
+@property (strong, nonatomic) AVCaptureDevice * captureDevice;
 
-@property (strong, nonatomic) AVCaptureDeviceInput videoInput;
+@property (strong, nonatomic) AVCaptureDeviceInput * videoInput;
 
-@property (strong, nonatomic) AVCaptureDeviceInput audioInput;
+@property (strong, nonatomic) AVCaptureDeviceInput * audioInput;
 
-@property (strong, nonatomic) AVCapturePhotoOutput photoOutput;
+@property (strong, nonatomic) AVCapturePhotoOutput * photoOutput;
 
-@property (strong, nonatomic) AVCaptureMovieFileOutput movieOutput;
+@property (strong, nonatomic) AVCaptureMovieFileOutput * movieOutput;
 
-@property (strong, nonatomic) AVCaptureVideoPreviewLayer previewLayer;
+@property (strong, nonatomic) AVCaptureVideoPreviewLayer * previewLayer;
 
-@property (strong, nonatomic) UIVisualEffectView controlsBlurView;
+@property (strong, nonatomic) UIVisualEffectView * controlsBlurView;
 
-@property (strong, nonatomic) UIView controlsTintView;
+@property (strong, nonatomic) UIView * controlsTintView;
 
-@property (strong, nonatomic) UITapGestureRecognizer outsideTapGesture;
+@property (strong, nonatomic) UITapGestureRecognizer * outsideTapGesture;
 
-@property (strong, nonatomic) UIVisualEffectView switchCoverBlurView;
+@property (strong, nonatomic) UIVisualEffectView * switchCoverBlurView;
 
-@property (strong, nonatomic) UIImageView switchCoverImageView;
+@property (strong, nonatomic) UIImageView * switchCoverImageView;
 
-@property (strong, nonatomic) NSURL pendingLivePhotoVideoURL;
+@property (strong, nonatomic) NSURL * pendingLivePhotoVideoURL;
 
-@property (strong, nonatomic) NSData pendingPhotoData;
+@property (strong, nonatomic) NSData * pendingPhotoData;
 
-@property (strong, nonatomic) UIImage pendingPhotoImage;
+@property (strong, nonatomic) UIImage * pendingPhotoImage;
 
-@property (strong, nonatomic) NSObject<OS_dispatch_queue> sessionQueue;
+@property (strong, nonatomic) NSObject<OS_dispatch_queue> * sessionQueue;
 
 @property (nonatomic) BOOL sessionConfigured;
 
@@ -329,31 +340,23 @@
 
 @property (nonatomic) double lastZoomPersistTime;
 
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
-
 -(BOOL)prefersStatusBarHidden;
 -(long long)preferredStatusBarUpdateAnimation;
 -(void)loadView;
 -(void)viewDidLoad;
--(void)viewDidAppear:(BOOL)arg1;
+-(void)viewDidAppear:(BOOL)viewDidAppear;
 -(void)viewDidLayoutSubviews;
--(void)viewWillAppear:(BOOL)arg1;
--(void)viewWillDisappear:(BOOL)arg1;
+-(void)viewWillAppear:(BOOL)viewWillAppear;
+-(void)viewWillDisappear:(BOOL)viewWillDisappear;
 -(void)runIslandOpenAnimationIfNeeded;
--(void)runIslandCloseAnimationWithCompletion:(id /* block */)arg1;
--(void)dismissFadeOnlyWithCompletion:(id /* block */)arg1;
+-(void)runIslandCloseAnimationWithCompletion:(id /* block */)runIslandCloseAnimationWithCompletion;
+-(void)dismissFadeOnlyWithCompletion:(id /* block */)dismissFadeOnlyWithCompletion;
 -(id)selectedResolutionOption;
 -(long long)selectedFPS;
 -(void)updateSpecButtons;
 -(void)saveCameraPreferences;
 -(void)updateModeButtons;
--(void)applyThemeAnimated:(BOOL)arg1;
+-(void)applyThemeAnimated:(BOOL)applyThemeAnimated;
 -(void)updateZoomUI;
 -(void)updateHistoryPreview;
 -(void)updateActionButtons;
@@ -362,25 +365,25 @@
 -(void)requestAudioPermissionForVideoIfNeeded;
 -(void)showCameraDeniedState;
 -(void)configureSessionIfNeeded;
--(id)frameRateRangeForFormat:(id)fps:(long long)arg2;
--(id)bestFormatForTargetHeight:(long long)fps:(long long)arg2;
--(void)applyCapturePreferencesWithToast:(BOOL)arg1;
+-(id)frameRateRangeForFormat:(id)frameRateRangeForFormat fps:(long long)fps;
+-(id)bestFormatForTargetHeight:(long long)bestFormatForTargetHeight fps:(long long)fps;
+-(void)applyCapturePreferencesWithToast:(BOOL)applyCapturePreferencesWithToast;
 -(long long)previewImageOrientation;
 -(void)startSessionIfNeeded;
 -(void)stopSession;
 -(void)stopSessionForDismissal;
--(void)setZoomFactor:(double)animated:(BOOL)arg2;
+-(void)setZoomFactor:(double)setZoomFactor animated:(BOOL)animated;
 -(void)rebuildSessionForCurrentZoom;
--(void)applyLivePhotoEnabled:(BOOL)animated:(BOOL)arg2;
+-(void)applyLivePhotoEnabled:(BOOL)applyLivePhotoEnabled animated:(BOOL)animated;
 -(void)ensureAudioInputForVideoIfNeeded;
--(void)previewPinch:(id)arg1;
--(void)previewZoomPan:(id)arg1;
--(void)controlsPlatePan:(id)arg1;
--(BOOL)gestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
--(BOOL)gestureRecognizer:(id)shouldReceiveTouch:(id)arg2;
--(void)outsideBlankTap:(id)arg1;
--(void)zoomSliderChanged:(id)arg1;
--(void)zoomSliderFinished:(id)arg1;
+-(void)previewPinch:(id)previewPinch;
+-(void)previewZoomPan:(id)previewZoomPan;
+-(void)controlsPlatePan:(id)controlsPlatePan;
+-(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
+-(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch;
+-(void)outsideBlankTap:(id)outsideBlankTap;
+-(void)zoomSliderChanged:(id)zoomSliderChanged;
+-(void)zoomSliderFinished:(id)zoomSliderFinished;
 -(void)zoomQuickTap;
 -(void)zoomWideTap;
 -(void)zoomOneTap;
@@ -394,11 +397,11 @@
 -(void)livePhotoTap;
 -(void)themeTap;
 -(void)presentCustomWatermarkEditor;
--(id)printPreviewImageForItem:(id)fallback:(id)arg2;
+-(id)printPreviewImageForItem:(id)printPreviewImageForItem fallback:(id)fallback;
 -(struct CGRect)printCardFinalFrameInClip;
--(struct CGRect)printCardStartFrameInClipFromFinal:(id)arg1;
+-(struct CGRect)printCardStartFrameInClipFromFinal:(id)printCardStartFrameInClipFromFinal;
 -(void)resetPrintStateForNextCapture;
--(void)presentPrintAnimationForHistoryItem:(id)image:(id)arg2;
+-(void)presentPrintAnimationForHistoryItem:(id)presentPrintAnimationForHistoryItem image:(id)image;
 -(void)printCloseTap;
 -(void)printPhotoTap;
 -(void)sjj_inlineCameraMediaPreviewWillPresent;
@@ -407,10 +410,9 @@
 -(void)capturePhoto;
 -(void)finishPendingPhotoCaptureIfReady;
 -(void)toggleVideoRecording;
--(void)captureOutput:(id)didFinishProcessingPhoto:(id)error:(id)arg3;
--(void)captureOutput:(id)didFinishProcessingLivePhotoToMovieFileAtURL:(id)duration:(struct ?)photoDisplayTime:(struct ?)resolvedSettings:(id)error:(id)arg6;
--(void)captureOutput:(id)didStartRecordingToOutputFileAtURL:(id)fromConnections:(id)arg3;
--(void)captureOutput:(id)didFinishRecordingToOutputFileAtURL:(id)fromConnections:(id)error:(id)arg4;
+-(void)captureOutput:(id)captureOutput didFinishProcessingPhoto:(id)didFinishProcessingPhoto error:(id)error;
+-(void)captureOutput:(id)captureOutput didStartRecordingToOutputFileAtURL:(id)didStartRecordingToOutputFileAtURL fromConnections:(id)fromConnections;
+-(void)captureOutput:(id)captureOutput didFinishRecordingToOutputFileAtURL:(id)didFinishRecordingToOutputFileAtURL fromConnections:(id)fromConnections error:(id)error;
 -(void)saveTap;
 -(void)historyTap;
 -(void)filmPreviewTap;
@@ -418,217 +420,216 @@
 -(void)closeTap;
 -(void)dealloc;
 -(id)dimmingControl;
--(void)setDimmingControl:(id)arg1;
+-(void)setDimmingControl:(id)setDimmingControl;
 -(id)panelBlurView;
--(void)setPanelBlurView:(id)arg1;
+-(void)setPanelBlurView:(id)setPanelBlurView;
 -(id)cameraShellView;
--(void)setCameraShellView:(id)arg1;
+-(void)setCameraShellView:(id)setCameraShellView;
 -(id)shellGlassBlurView;
--(void)setShellGlassBlurView:(id)arg1;
+-(void)setShellGlassBlurView:(id)setShellGlassBlurView;
 -(id)shellGlassTintView;
--(void)setShellGlassTintView:(id)arg1;
+-(void)setShellGlassTintView:(id)setShellGlassTintView;
 -(id)shellShadeLayer;
--(void)setShellShadeLayer:(id)arg1;
+-(void)setShellShadeLayer:(id)setShellShadeLayer;
 -(id)controlsPlateView;
--(void)setControlsPlateView:(id)arg1;
+-(void)setControlsPlateView:(id)setControlsPlateView;
 -(id)islandView;
--(void)setIslandView:(id)arg1;
+-(void)setIslandView:(id)setIslandView;
 -(id)islandTitleLabel;
--(void)setIslandTitleLabel:(id)arg1;
+-(void)setIslandTitleLabel:(id)setIslandTitleLabel;
 -(id)islandMetaLabel;
--(void)setIslandMetaLabel:(id)arg1;
+-(void)setIslandMetaLabel:(id)setIslandMetaLabel;
 -(id)recordDotView;
--(void)setRecordDotView:(id)arg1;
+-(void)setRecordDotView:(id)setRecordDotView;
 -(id)panelView;
--(void)setPanelView:(id)arg1;
+-(void)setPanelView:(id)setPanelView;
 -(id)previewView;
--(void)setPreviewView:(id)arg1;
+-(void)setPreviewView:(id)setPreviewView;
 -(id)previewImageView;
--(void)setPreviewImageView:(id)arg1;
+-(void)setPreviewImageView:(id)setPreviewImageView;
 -(id)modeBarView;
--(void)setModeBarView:(id)arg1;
+-(void)setModeBarView:(id)setModeBarView;
 -(id)titleLabel;
--(void)setTitleLabel:(id)arg1;
+-(void)setTitleLabel:(id)setTitleLabel;
 -(id)statusLabel;
--(void)setStatusLabel:(id)arg1;
+-(void)setStatusLabel:(id)setStatusLabel;
 -(id)zoomButton;
--(void)setZoomButton:(id)arg1;
+-(void)setZoomButton:(id)setZoomButton;
 -(id)zoomSlider;
--(void)setZoomSlider:(id)arg1;
+-(void)setZoomSlider:(id)setZoomSlider;
 -(id)zoomRailView;
--(void)setZoomRailView:(id)arg1;
+-(void)setZoomRailView:(id)setZoomRailView;
 -(id)zoomWideButton;
--(void)setZoomWideButton:(id)arg1;
+-(void)setZoomWideButton:(id)setZoomWideButton;
 -(id)zoomOneButton;
--(void)setZoomOneButton:(id)arg1;
+-(void)setZoomOneButton:(id)setZoomOneButton;
 -(id)zoomTeleButton;
--(void)setZoomTeleButton:(id)arg1;
+-(void)setZoomTeleButton:(id)setZoomTeleButton;
 -(id)zoomMinLabel;
--(void)setZoomMinLabel:(id)arg1;
+-(void)setZoomMinLabel:(id)setZoomMinLabel;
 -(id)zoomMaxLabel;
--(void)setZoomMaxLabel:(id)arg1;
+-(void)setZoomMaxLabel:(id)setZoomMaxLabel;
 -(id)closeButton;
--(void)setCloseButton:(id)arg1;
+-(void)setCloseButton:(id)setCloseButton;
 -(id)photoModeButton;
--(void)setPhotoModeButton:(id)arg1;
+-(void)setPhotoModeButton:(id)setPhotoModeButton;
 -(id)videoModeButton;
--(void)setVideoModeButton:(id)arg1;
+-(void)setVideoModeButton:(id)setVideoModeButton;
 -(id)resolutionButton;
--(void)setResolutionButton:(id)arg1;
+-(void)setResolutionButton:(id)setResolutionButton;
 -(id)fpsButton;
--(void)setFpsButton:(id)arg1;
+-(void)setFpsButton:(id)setFpsButton;
 -(id)captureButton;
--(void)setCaptureButton:(id)arg1;
+-(void)setCaptureButton:(id)setCaptureButton;
 -(id)saveButton;
--(void)setSaveButton:(id)arg1;
+-(void)setSaveButton:(id)setSaveButton;
 -(id)deleteButton;
--(void)setDeleteButton:(id)arg1;
+-(void)setDeleteButton:(id)setDeleteButton;
 -(id)historyButton;
--(void)setHistoryButton:(id)arg1;
+-(void)setHistoryButton:(id)setHistoryButton;
 -(id)cameraSwitchButton;
--(void)setCameraSwitchButton:(id)arg1;
+-(void)setCameraSwitchButton:(id)setCameraSwitchButton;
 -(id)audioButton;
--(void)setAudioButton:(id)arg1;
+-(void)setAudioButton:(id)setAudioButton;
 -(id)livePhotoButton;
--(void)setLivePhotoButton:(id)arg1;
+-(void)setLivePhotoButton:(id)setLivePhotoButton;
 -(id)themeButton;
--(void)setThemeButton:(id)arg1;
+-(void)setThemeButton:(id)setThemeButton;
 -(id)filmStripView;
--(void)setFilmStripView:(id)arg1;
+-(void)setFilmStripView:(id)setFilmStripView;
 -(id)filmBlurView;
--(void)setFilmBlurView:(id)arg1;
+-(void)setFilmBlurView:(id)setFilmBlurView;
 -(id)filmTintView;
--(void)setFilmTintView:(id)arg1;
+-(void)setFilmTintView:(id)setFilmTintView;
 -(id)filmThumbView;
--(void)setFilmThumbView:(id)arg1;
+-(void)setFilmThumbView:(id)setFilmThumbView;
 -(id)filmTitleLabel;
--(void)setFilmTitleLabel:(id)arg1;
+-(void)setFilmTitleLabel:(id)setFilmTitleLabel;
 -(id)filmMetaLabel;
--(void)setFilmMetaLabel:(id)arg1;
+-(void)setFilmMetaLabel:(id)setFilmMetaLabel;
 -(id)printOverlayView;
--(void)setPrintOverlayView:(id)arg1;
+-(void)setPrintOverlayView:(id)setPrintOverlayView;
 -(id)printSlotView;
--(void)setPrintSlotView:(id)arg1;
+-(void)setPrintSlotView:(id)setPrintSlotView;
 -(id)printEjectClipView;
--(void)setPrintEjectClipView:(id)arg1;
+-(void)setPrintEjectClipView:(id)setPrintEjectClipView;
 -(id)printPhotoCardView;
--(void)setPrintPhotoCardView:(id)arg1;
+-(void)setPrintPhotoCardView:(id)setPrintPhotoCardView;
 -(id)printPhotoImageView;
--(void)setPrintPhotoImageView:(id)arg1;
+-(void)setPrintPhotoImageView:(id)setPrintPhotoImageView;
 -(id)printCaptionLabel;
--(void)setPrintCaptionLabel:(id)arg1;
+-(void)setPrintCaptionLabel:(id)setPrintCaptionLabel;
 -(id)printCloseButton;
--(void)setPrintCloseButton:(id)arg1;
+-(void)setPrintCloseButton:(id)setPrintCloseButton;
 -(id)printReturnShellView;
--(void)setPrintReturnShellView:(id)arg1;
+-(void)setPrintReturnShellView:(id)setPrintReturnShellView;
 -(id)printedHistoryItem;
--(void)setPrintedHistoryItem:(id)arg1;
+-(void)setPrintedHistoryItem:(id)setPrintedHistoryItem;
 -(id)session;
--(void)setSession:(id)arg1;
+-(void)setSession:(id)setSession;
 -(id)captureDevice;
--(void)setCaptureDevice:(id)arg1;
+-(void)setCaptureDevice:(id)setCaptureDevice;
 -(id)videoInput;
--(void)setVideoInput:(id)arg1;
+-(void)setVideoInput:(id)setVideoInput;
 -(id)audioInput;
--(void)setAudioInput:(id)arg1;
+-(void)setAudioInput:(id)setAudioInput;
 -(id)photoOutput;
--(void)setPhotoOutput:(id)arg1;
+-(void)setPhotoOutput:(id)setPhotoOutput;
 -(id)movieOutput;
--(void)setMovieOutput:(id)arg1;
+-(void)setMovieOutput:(id)setMovieOutput;
 -(id)previewLayer;
--(void)setPreviewLayer:(id)arg1;
+-(void)setPreviewLayer:(id)setPreviewLayer;
 -(id)controlsBlurView;
--(void)setControlsBlurView:(id)arg1;
+-(void)setControlsBlurView:(id)setControlsBlurView;
 -(id)controlsTintView;
--(void)setControlsTintView:(id)arg1;
+-(void)setControlsTintView:(id)setControlsTintView;
 -(id)outsideTapGesture;
--(void)setOutsideTapGesture:(id)arg1;
+-(void)setOutsideTapGesture:(id)setOutsideTapGesture;
 -(id)switchCoverBlurView;
--(void)setSwitchCoverBlurView:(id)arg1;
+-(void)setSwitchCoverBlurView:(id)setSwitchCoverBlurView;
 -(id)switchCoverImageView;
--(void)setSwitchCoverImageView:(id)arg1;
+-(void)setSwitchCoverImageView:(id)setSwitchCoverImageView;
 -(id)pendingLivePhotoVideoURL;
--(void)setPendingLivePhotoVideoURL:(id)arg1;
+-(void)setPendingLivePhotoVideoURL:(id)setPendingLivePhotoVideoURL;
 -(id)pendingPhotoData;
--(void)setPendingPhotoData:(id)arg1;
+-(void)setPendingPhotoData:(id)setPendingPhotoData;
 -(id)pendingPhotoImage;
--(void)setPendingPhotoImage:(id)arg1;
+-(void)setPendingPhotoImage:(id)setPendingPhotoImage;
 -(id)sessionQueue;
--(void)setSessionQueue:(id)arg1;
+-(void)setSessionQueue:(id)setSessionQueue;
 -(BOOL)sessionConfigured;
--(void)setSessionConfigured:(BOOL)arg1;
+-(void)setSessionConfigured:(BOOL)setSessionConfigured;
 -(BOOL)sessionStarting;
--(void)setSessionStarting:(BOOL)arg1;
+-(void)setSessionStarting:(BOOL)setSessionStarting;
 -(BOOL)videoMode;
--(void)setVideoMode:(BOOL)arg1;
+-(void)setVideoMode:(BOOL)setVideoMode;
 -(BOOL)recordAudio;
--(void)setRecordAudio:(BOOL)arg1;
+-(void)setRecordAudio:(BOOL)setRecordAudio;
 -(BOOL)livePhotoEnabled;
--(void)setLivePhotoEnabled:(BOOL)arg1;
+-(void)setLivePhotoEnabled:(BOOL)setLivePhotoEnabled;
 -(BOOL)videoRecording;
--(void)setVideoRecording:(BOOL)arg1;
+-(void)setVideoRecording:(BOOL)setVideoRecording;
 -(BOOL)dismissAfterRecordingStops;
--(void)setDismissAfterRecordingStops:(BOOL)arg1;
+-(void)setDismissAfterRecordingStops:(BOOL)setDismissAfterRecordingStops;
 -(BOOL)closing;
--(void)setClosing:(BOOL)arg1;
+-(void)setClosing:(BOOL)setClosing;
 -(BOOL)closeAnimationStarted;
--(void)setCloseAnimationStarted:(BOOL)arg1;
+-(void)setCloseAnimationStarted:(BOOL)setCloseAnimationStarted;
 -(BOOL)didRunIslandAnimation;
--(void)setDidRunIslandAnimation:(BOOL)arg1;
+-(void)setDidRunIslandAnimation:(BOOL)setDidRunIslandAnimation;
 -(BOOL)islandOpenAnimating;
--(void)setIslandOpenAnimating:(BOOL)arg1;
+-(void)setIslandOpenAnimating:(BOOL)setIslandOpenAnimating;
 -(BOOL)modeSwitching;
--(void)setModeSwitching:(BOOL)arg1;
+-(void)setModeSwitching:(BOOL)setModeSwitching;
 -(BOOL)livePhotoSwitching;
--(void)setLivePhotoSwitching:(BOOL)arg1;
+-(void)setLivePhotoSwitching:(BOOL)setLivePhotoSwitching;
 -(BOOL)printAnimationActive;
--(void)setPrintAnimationActive:(BOOL)arg1;
+-(void)setPrintAnimationActive:(BOOL)setPrintAnimationActive;
 -(BOOL)printResultVisible;
--(void)setPrintResultVisible:(BOOL)arg1;
+-(void)setPrintResultVisible:(BOOL)setPrintResultVisible;
 -(BOOL)priorStatusBarHidden;
--(void)setPriorStatusBarHidden:(BOOL)arg1;
+-(void)setPriorStatusBarHidden:(BOOL)setPriorStatusBarHidden;
 -(BOOL)pendingPhotoCaptureActive;
--(void)setPendingPhotoCaptureActive:(BOOL)arg1;
+-(void)setPendingPhotoCaptureActive:(BOOL)setPendingPhotoCaptureActive;
 -(BOOL)pendingLivePhotoFinished;
--(void)setPendingLivePhotoFinished:(BOOL)arg1;
+-(void)setPendingLivePhotoFinished:(BOOL)setPendingLivePhotoFinished;
 -(BOOL)pendingPhotoStoreInFlight;
--(void)setPendingPhotoStoreInFlight:(BOOL)arg1;
+-(void)setPendingPhotoStoreInFlight:(BOOL)setPendingPhotoStoreInFlight;
 -(long long)pendingLivePhotoWaitAttempts;
--(void)setPendingLivePhotoWaitAttempts:(long long)arg1;
+-(void)setPendingLivePhotoWaitAttempts:(long long)setPendingLivePhotoWaitAttempts;
 -(long long)selectedResolutionIndex;
--(void)setSelectedResolutionIndex:(long long)arg1;
+-(void)setSelectedResolutionIndex:(long long)setSelectedResolutionIndex;
 -(long long)selectedFPSIndex;
--(void)setSelectedFPSIndex:(long long)arg1;
+-(void)setSelectedFPSIndex:(long long)setSelectedFPSIndex;
 -(long long)selectedThemeIndex;
--(void)setSelectedThemeIndex:(long long)arg1;
+-(void)setSelectedThemeIndex:(long long)setSelectedThemeIndex;
 -(long long)selectedFilmWatermarkStyle;
--(void)setSelectedFilmWatermarkStyle:(long long)arg1;
+-(void)setSelectedFilmWatermarkStyle:(long long)setSelectedFilmWatermarkStyle;
 -(long long)cameraPosition;
--(void)setCameraPosition:(long long)arg1;
+-(void)setCameraPosition:(long long)setCameraPosition;
 -(BOOL)requestedAudioAccess;
--(void)setRequestedAudioAccess:(BOOL)arg1;
+-(void)setRequestedAudioAccess:(BOOL)setRequestedAudioAccess;
 -(double)currentZoom;
--(void)setCurrentZoom:(double)arg1;
+-(void)setCurrentZoom:(double)setCurrentZoom;
 -(double)maxZoom;
--(void)setMaxZoom:(double)arg1;
+-(void)setMaxZoom:(double)setMaxZoom;
 -(double)pinchBaseZoom;
--(void)setPinchBaseZoom:(double)arg1;
+-(void)setPinchBaseZoom:(double)setPinchBaseZoom;
 -(double)panBaseZoom;
--(void)setPanBaseZoom:(double)arg1;
+-(void)setPanBaseZoom:(double)setPanBaseZoom;
 -(struct CGPoint)panStartPoint;
--(void)setPanStartPoint:(struct CGPoint)arg1;
+-(void)setPanStartPoint:(struct CGPoint)setPanStartPoint;
 -(double)controlsYOffset;
--(void)setControlsYOffset:(double)arg1;
+-(void)setControlsYOffset:(double)setControlsYOffset;
 -(double)controlsPanStartOffset;
--(void)setControlsPanStartOffset:(double)arg1;
+-(void)setControlsPanStartOffset:(double)setControlsPanStartOffset;
 -(double)controlsMinYOffset;
--(void)setControlsMinYOffset:(double)arg1;
+-(void)setControlsMinYOffset:(double)setControlsMinYOffset;
 -(double)controlsMaxYOffset;
--(void)setControlsMaxYOffset:(double)arg1;
+-(void)setControlsMaxYOffset:(double)setControlsMaxYOffset;
 -(struct CGRect)islandOriginFrame;
--(void)setIslandOriginFrame:(struct CGRect)arg1;
+-(void)setIslandOriginFrame:(struct CGRect)setIslandOriginFrame;
 -(double)lastZoomPersistTime;
--(void)setLastZoomPersistTime:(double)arg1;
--(void).cxx_destruct;
+-(void)setLastZoomPersistTime:(double)setLastZoomPersistTime;
 
 @end

@@ -6,165 +6,167 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SWJManager : NSObject <NSURLSessionDownloadDelegate>
 {
-    AVAssetExportSession session;
-    AVURLAsset asset;
-    AVAssetReader reader;
-    AVAssetWriter writer;
-    NSObject<OS_dispatch_queue> queue;
-    NSObject<OS_dispatch_group> group;
-    NSMutableDictionary _fileLinks;
-    NSMutableDictionary _downloadTasks;
-    NSMutableDictionary _progressViews;
-    NSOperationQueue _downloadQueue;
-    NSMutableDictionary _taskProgressMap;
-    NSMutableDictionary _completionBlocks;
-    NSMutableDictionary _mediaTypeMap;
-    NSMutableDictionary _filePathToDownloadID;
-    NSMutableDictionary _downloadToBatchMap;
-    NSMutableDictionary _batchCompletedCountMap;
-    NSMutableDictionary _batchSuccessCountMap;
-    NSMutableDictionary _batchTotalCountMap;
-    NSMutableDictionary _batchProgressBlocks;
-    NSMutableDictionary _batchCompletionBlocks;
+    AVAssetExportSession * session;
+    AVURLAsset * asset;
+    AVAssetReader * reader;
+    AVAssetWriter * writer;
+    NSObject<OS_dispatch_queue> * queue;
+    NSObject<OS_dispatch_group> * group;
+    NSMutableDictionary * _fileLinks;
+    NSMutableDictionary * _downloadTasks;
+    NSMutableDictionary * _progressViews;
+    NSOperationQueue * _downloadQueue;
+    NSMutableDictionary * _taskProgressMap;
+    NSMutableDictionary * _completionBlocks;
+    NSMutableDictionary * _mediaTypeMap;
+    NSMutableDictionary * _filePathToDownloadID;
+    NSMutableDictionary * _downloadToBatchMap;
+    NSMutableDictionary * _batchCompletedCountMap;
+    NSMutableDictionary * _batchSuccessCountMap;
+    NSMutableDictionary * _batchTotalCountMap;
+    NSMutableDictionary * _batchProgressBlocks;
+    NSMutableDictionary * _batchCompletionBlocks;
 }
 
-@property (strong, nonatomic) NSMutableDictionary downloadTasks;
+@property (strong, nonatomic) NSMutableDictionary * downloadTasks;
 
-@property (strong, nonatomic) NSMutableDictionary progressViews;
+@property (strong, nonatomic) NSMutableDictionary * progressViews;
 
-@property (strong, nonatomic) NSOperationQueue downloadQueue;
+@property (strong, nonatomic) NSOperationQueue * downloadQueue;
 
-@property (strong, nonatomic) NSMutableDictionary taskProgressMap;
+@property (strong, nonatomic) NSMutableDictionary * taskProgressMap;
 
-@property (strong, nonatomic) NSMutableDictionary completionBlocks;
+@property (strong, nonatomic) NSMutableDictionary * completionBlocks;
 
-@property (strong, nonatomic) NSMutableDictionary mediaTypeMap;
+@property (strong, nonatomic) NSMutableDictionary * mediaTypeMap;
 
-@property (strong, nonatomic) NSMutableDictionary filePathToDownloadID;
+@property (strong, nonatomic) NSMutableDictionary * filePathToDownloadID;
 
-@property (strong, nonatomic) NSMutableDictionary downloadToBatchMap;
+@property (strong, nonatomic) NSMutableDictionary * downloadToBatchMap;
 
-@property (strong, nonatomic) NSMutableDictionary batchCompletedCountMap;
+@property (strong, nonatomic) NSMutableDictionary * batchCompletedCountMap;
 
-@property (strong, nonatomic) NSMutableDictionary batchSuccessCountMap;
+@property (strong, nonatomic) NSMutableDictionary * batchSuccessCountMap;
 
-@property (strong, nonatomic) NSMutableDictionary batchTotalCountMap;
+@property (strong, nonatomic) NSMutableDictionary * batchTotalCountMap;
 
-@property (strong, nonatomic) NSMutableDictionary batchProgressBlocks;
+@property (strong, nonatomic) NSMutableDictionary * batchProgressBlocks;
 
-@property (strong, nonatomic) NSMutableDictionary batchCompletionBlocks;
+@property (strong, nonatomic) NSMutableDictionary * batchCompletionBlocks;
 
-@property (strong, nonatomic) NSMutableDictionary fileLinks;
-
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
+@property (strong, nonatomic) NSMutableDictionary * fileLinks;
 
 +(id)shared;
-+(void)saveMedia:(id)mediaType:(long long)completion:(id /* block */)arg3;
-+(id)detectFileFormat:(id)arg1;
-+(void)saveGifToPhotoLibrary:(id)mediaType:(long long)completion:(id /* block */)arg3;
-+(void)convertWebpToGifSafely:(id)completion:(id /* block */)arg2;
-+(void)convertHeicToGif:(id)completion:(id /* block */)arg2;
-+(BOOL)framesFromAnimatedData:(id)scale:(double)images:(id *)totalDuration:(double *)arg4;
-+(void)downloadLivePhoto:(id)videoURL:(id)completion:(id /* block */)arg3;
-+(void)startDownloadLivePhotoProcess:(id)videoURL:(id)uniqueKey:(id)completion:(id /* block */)arg4;
-+(void)downloadMedia:(id)mediaType:(long long)audio:(id)completion:(id /* block */)arg4;
-+(void)downloadMediaWithProgress:(id)mediaType:(long long)audio:(id)progress:(id /* block */)completion:(id /* block */)arg5;
-+(id)getMediaTypeDescription:(long long)arg1;
-+(BOOL)videoHasAudio:(id)arg1;
-+(void)downloadAudioAndMergeWithVideo:(id)audioURL:(id)completion:(id /* block */)arg3;
-+(void)mergeVideo:(id)withAudio:(id)completion:(id /* block */)arg3;
++(void)saveMedia:(id)saveMedia mediaType:(long long)mediaType completion:(id /* block */)completion;
++(id)detectFileFormat:(id)detectFileFormat;
++(void)saveGifToPhotoLibrary:(id)saveGifToPhotoLibrary mediaType:(long long)mediaType completion:(id /* block */)completion;
++(void)convertWebpToGifSafely:(id)convertWebpToGifSafely completion:(id /* block */)completion;
++(void)convertHeicToGif:(id)convertHeicToGif completion:(id /* block */)completion;
++(BOOL)framesFromAnimatedData:(id)framesFromAnimatedData scale:(double)scale images:(id *)images totalDuration:(double *)totalDuration;
++(void)downloadLivePhoto:(id)downloadLivePhoto videoURL:(id)videoURL completion:(id /* block */)completion;
++(void)startDownloadLivePhotoProcess:(id)startDownloadLivePhotoProcess videoURL:(id)videoURL uniqueKey:(id)uniqueKey completion:(id /* block */)completion;
++(void)downloadMedia:(id)downloadMedia mediaType:(long long)mediaType audio:(id)audio completion:(id /* block */)completion;
++(void)downloadMediaWithProgress:(id)downloadMediaWithProgress mediaType:(long long)mediaType audio:(id)audio progress:(id /* block */)progress completion:(id /* block */)completion;
++(id)getMediaTypeDescription:(long long)getMediaTypeDescription;
++(BOOL)videoHasAudio:(id)videoHasAudio;
++(void)downloadAudioAndMergeWithVideo:(id)downloadAudioAndMergeWithVideo audioURL:(id)audioURL completion:(id /* block */)completion;
++(void)mergeVideo:(id)mergeVideo withAudio:(id)withAudio completion:(id /* block */)completion;
 +(void)cancelAllDownloads;
-+(void)downloadAllImages:(id)arg1;
-+(void)batchDownloadResources:(id)images:(id)arg2;
-+(void)downloadAllImagesWithProgress:(id)progress:(id /* block */)completion:(id /* block */)arg3;
-+(void)saveCommentImages:(id)currentIndex:(long long)completion:(id /* block */)arg3;
-+(void)downloadAndShareCommentAudio:(id)userName:(id)createTime:(id)arg3;
-+(void)downloadAndShareCommentAudio:(id)userName:(id)createTime:(id)completion:(id /* block */)arg4;
-+(void)downloadAndShareCommentAudios:(id)completion:(id /* block */)arg2;
-+(void)downloadAllLivePhotos:(id)arg1;
-+(void)downloadAllLivePhotosWithProgress:(id)progress:(id /* block */)completion:(id /* block */)arg3;
-+(void)parseAndDownloadVideoWithShareLink:(id)apiKey:(id)arg2;
-+(void)handleVideoData:(id)arg1;
-+(void)createVideoFromMedia:(id)livePhotos:(id)bgmURL:(id)progress:(id /* block */)completion:(id /* block */)arg5;
-+(void)composeVideo:(id)livePhotos:(id)bgmPath:(id)outputPath:(id)completion:(id /* block */)arg5;
-+(void)createVideoFromImage:(id)duration:(float)outputPath:(id)completion:(id /* block */)arg4;
-+(id)resizeImage:(id)toSize:(struct CGSize)arg2;
-+(struct CGRect)rectForImageAspectFit:(id)inSize:(id)arg2;
-+(struct CGAffineTransform)transformForAssetTrack:(id)targetSize:(struct CGSize)arg2;
-+(struct CGAffineTransform)transformForImage:(id)targetSize:(struct CGSize)arg2;
-+(void)saveAnimatedSticker:(id)arg1;
-+(BOOL)isBDImageWithHeifURL:(id)arg1;
-+(void)saveHeifSticker:(id)arg1;
-+(id)getImagesFromYYAnimatedImageView:(id)arg1;
-+(double)getDurationFromYYAnimatedImageView:(id)arg1;
-+(BOOL)createGIFWithImages:(id)duration:(double)path:(id)progress:(id /* block */)arg4;
-+(void)saveGIFToPhotoLibrary:(id)completion:(id /* block */)arg2;
++(void)downloadAllImages:(id)downloadAllImages;
++(void)batchDownloadResources:(id)batchDownloadResources images:(id)images;
++(void)downloadAllImagesWithProgress:(id)downloadAllImagesWithProgress progress:(id /* block */)progress completion:(id /* block */)completion;
++(void)saveCommentImages:(id)saveCommentImages currentIndex:(long long)currentIndex completion:(id /* block */)completion;
++(void)downloadAndShareCommentAudio:(id)downloadAndShareCommentAudio userName:(id)userName createTime:(id)createTime;
++(void)downloadAndShareCommentAudio:(id)downloadAndShareCommentAudio userName:(id)userName createTime:(id)createTime completion:(id /* block */)completion;
++(void)downloadAndShareCommentAudios:(id)downloadAndShareCommentAudios completion:(id /* block */)completion;
++(void)downloadAllLivePhotos:(id)downloadAllLivePhotos;
++(void)downloadAllLivePhotosWithProgress:(id)downloadAllLivePhotosWithProgress progress:(id /* block */)progress completion:(id /* block */)completion;
++(void)parseAndDownloadVideoWithShareLink:(id)parseAndDownloadVideoWithShareLink apiKey:(id)apiKey;
++(void)handleVideoData:(id)handleVideoData;
++(void)createVideoFromMedia:(id)createVideoFromMedia livePhotos:(id)livePhotos bgmURL:(id)bgmURL progress:(id /* block */)progress completion:(id /* block */)completion;
++(void)composeVideo:(id)composeVideo livePhotos:(id)livePhotos bgmPath:(id)bgmPath outputPath:(id)outputPath completion:(id /* block */)completion;
++(void)createVideoFromImage:(id)createVideoFromImage duration:(float)duration outputPath:(id)outputPath completion:(id /* block */)completion;
++(id)resizeImage:(id)resizeImage toSize:(struct CGSize)toSize;
++(struct CGRect)rectForImageAspectFit:(id)rectForImageAspectFit inSize:(id)inSize;
++(struct CGAffineTransform)transformForAssetTrack:(id)transformForAssetTrack targetSize:(struct CGSize)targetSize;
++(struct CGAffineTransform)transformForImage:(id)transformForImage targetSize:(struct CGSize)targetSize;
++(void)saveAnimatedSticker:(id)saveAnimatedSticker;
++(BOOL)isBDImageWithHeifURL:(id)isBDImageWithHeifURL;
++(void)saveHeifSticker:(id)saveHeifSticker;
++(id)getImagesFromYYAnimatedImageView:(id)getImagesFromYYAnimatedImageView;
++(double)getDurationFromYYAnimatedImageView:(id)getDurationFromYYAnimatedImageView;
++(BOOL)createGIFWithImages:(id)createGIFWithImages duration:(double)duration path:(id)path progress:(id /* block */)progress;
++(void)saveGIFToPhotoLibrary:(id)saveGIFToPhotoLibrary completion:(id /* block */)completion;
 -(id)init;
--(void)observeValueForKeyPath:(id)ofObject:(id)change:(id)context:(void *)arg4;
--(void)setBatchInfo:(id)totalCount:(long long)progressBlock:(id /* block */)completionBlock:(id /* block */)arg4;
--(void)associateDownload:(id)withBatchID:(id)arg2;
--(void)incrementCompletedAndUpdateProgressForBatch:(id)success:(BOOL)arg2;
--(void)setCompletionBlock:(id /* block */)forDownloadID:(id)arg2;
--(void)setMediaType:(long long)forDownloadID:(id)arg2;
--(void)associateFileURL:(id)withDownloadID:(id)arg2;
--(id)downloadIDForFileURL:(id)arg1;
--(void)replaceFileURL:(id)withFileURL:(id)arg2;
--(void)removeMappingsForDownloadID:(id)arg1;
--(void)finalizeDownloadWithFileURL:(id)success:(BOOL)arg2;
--(void)finalizeDownloadWithID:(id)success:(BOOL)fileURL:(id)arg3;
--(void)URLSession:(id)downloadTask:(id)didWriteData:(long long)totalBytesWritten:(long long)totalBytesExpectedToWrite:(long long)arg5;
--(void)URLSession:(id)downloadTask:(id)didFinishDownloadingToURL:(id)arg3;
--(void)URLSession:(id)task:(id)didCompleteWithError:(id)arg3;
--(void)saveLivePhoto:(id)videoUrl:(id)arg2;
--(void)useAssetWriter:(id)video:(id)identifier:(id)complete:(id /* block */)arg4;
--(void)finishWritingTracksWithPhoto:(id)video:(id)complete:(id /* block */)arg3;
--(void)addMetadataToPhoto:(id)outputFile:(id)identifier:(id)arg3;
--(void)addMetadataToVideo:(id)outputFile:(id)identifier:(id)arg3;
--(void)writeTrack:(long long)arg1;
--(id)createContentIdentifierMetadataItem:(id)arg1;
+-(void)observeValueForKeyPath:(id)observeValueForKeyPath ofObject:(id)ofObject change:(id)change context:(void *)context;
+-(void)setBatchInfo:(id)setBatchInfo totalCount:(long long)totalCount progressBlock:(id /* block */)progressBlock completionBlock:(id /* block */)completionBlock;
+-(void)associateDownload:(id)associateDownload withBatchID:(id)withBatchID;
+-(void)incrementCompletedAndUpdateProgressForBatch:(id)incrementCompletedAndUpdateProgressForBatch success:(BOOL)success;
+-(void)setCompletionBlock:(id /* block */)setCompletionBlock forDownloadID:(id)forDownloadID;
+-(void)setMediaType:(long long)setMediaType forDownloadID:(id)forDownloadID;
+-(void)associateFileURL:(id)associateFileURL withDownloadID:(id)withDownloadID;
+-(id)downloadIDForFileURL:(id)downloadIDForFileURL;
+-(void)replaceFileURL:(id)replaceFileURL withFileURL:(id)withFileURL;
+-(void)removeMappingsForDownloadID:(id)removeMappingsForDownloadID;
+-(void)finalizeDownloadWithFileURL:(id)finalizeDownloadWithFileURL success:(BOOL)success;
+-(void)finalizeDownloadWithID:(id)finalizeDownloadWithID success:(BOOL)success fileURL:(id)fileURL;
+-(void)URLSession:(id)URLSession downloadTask:(id)downloadTask didWriteData:(long long)didWriteData totalBytesWritten:(long long)totalBytesWritten totalBytesExpectedToWrite:(long long)totalBytesExpectedToWrite;
+-(void)URLSession:(id)URLSession downloadTask:(id)downloadTask didFinishDownloadingToURL:(id)didFinishDownloadingToURL;
+-(void)URLSession:(id)URLSession task:(id)task didCompleteWithError:(id)didCompleteWithError;
+-(void)saveLivePhoto:(id)saveLivePhoto videoUrl:(id)videoUrl;
+-(void)useAssetWriter:(id)useAssetWriter video:(id)video identifier:(id)identifier complete:(id /* block */)complete;
+-(void)finishWritingTracksWithPhoto:(id)finishWritingTracksWithPhoto video:(id)video complete:(id /* block */)complete;
+-(void)addMetadataToPhoto:(id)addMetadataToPhoto outputFile:(id)outputFile identifier:(id)identifier;
+-(void)addMetadataToVideo:(id)addMetadataToVideo outputFile:(id)outputFile identifier:(id)identifier;
+-(void)writeTrack:(long long)writeTrack;
+-(id)createContentIdentifierMetadataItem:(id)createContentIdentifierMetadataItem;
 -(id)createStillImageTimeAssetWriterInput;
 -(id)createStillImageTimeMetadataItem;
--(id)filePathFromTmp:(id)arg1;
--(void)deleteFile:(id)arg1;
--(void)addMetadataToVideoWithLocalVars:(id)outputFile:(id)identifier:(id)reader:(id *)writer:(id *)queue:(id)group:(id)complete:(id /* block */)arg8;
--(void)writeTrackWithLocalVars:(long long)reader:(id)writer:(id)queue:(id)group:(id)arg5;
+-(id)filePathFromTmp:(id)filePathFromTmp;
+-(void)deleteFile:(id)deleteFile;
+-(void)addMetadataToVideoWithLocalVars:(id)addMetadataToVideoWithLocalVars outputFile:(id)outputFile identifier:(id)identifier reader:(id *)reader writer:(id *)writer queue:(id)queue group:(id)group complete:(id /* block */)complete;
+-(void)writeTrackWithLocalVars:(long long)writeTrackWithLocalVars reader:(id)reader writer:(id)writer queue:(id)queue group:(id)group;
 -(id)fileLinks;
--(void)setFileLinks:(id)arg1;
+-(void)setFileLinks:(id)setFileLinks;
 -(id)downloadTasks;
--(void)setDownloadTasks:(id)arg1;
+-(void)setDownloadTasks:(id)setDownloadTasks;
 -(id)progressViews;
--(void)setProgressViews:(id)arg1;
+-(void)setProgressViews:(id)setProgressViews;
 -(id)downloadQueue;
--(void)setDownloadQueue:(id)arg1;
+-(void)setDownloadQueue:(id)setDownloadQueue;
 -(id)taskProgressMap;
--(void)setTaskProgressMap:(id)arg1;
+-(void)setTaskProgressMap:(id)setTaskProgressMap;
 -(id)completionBlocks;
--(void)setCompletionBlocks:(id)arg1;
+-(void)setCompletionBlocks:(id)setCompletionBlocks;
 -(id)mediaTypeMap;
--(void)setMediaTypeMap:(id)arg1;
+-(void)setMediaTypeMap:(id)setMediaTypeMap;
 -(id)filePathToDownloadID;
--(void)setFilePathToDownloadID:(id)arg1;
+-(void)setFilePathToDownloadID:(id)setFilePathToDownloadID;
 -(id)downloadToBatchMap;
--(void)setDownloadToBatchMap:(id)arg1;
+-(void)setDownloadToBatchMap:(id)setDownloadToBatchMap;
 -(id)batchCompletedCountMap;
--(void)setBatchCompletedCountMap:(id)arg1;
+-(void)setBatchCompletedCountMap:(id)setBatchCompletedCountMap;
 -(id)batchSuccessCountMap;
--(void)setBatchSuccessCountMap:(id)arg1;
+-(void)setBatchSuccessCountMap:(id)setBatchSuccessCountMap;
 -(id)batchTotalCountMap;
--(void)setBatchTotalCountMap:(id)arg1;
+-(void)setBatchTotalCountMap:(id)setBatchTotalCountMap;
 -(id)batchProgressBlocks;
--(void)setBatchProgressBlocks:(id)arg1;
+-(void)setBatchProgressBlocks:(id)setBatchProgressBlocks;
 -(id)batchCompletionBlocks;
--(void)setBatchCompletionBlocks:(id)arg1;
--(void).cxx_destruct;
+-(void)setBatchCompletionBlocks:(id)setBatchCompletionBlocks;
 
 @end

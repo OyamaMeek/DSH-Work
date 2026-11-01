@@ -8,7 +8,7 @@
 // 0x003ea578  421 条指令
 // 消息: buttonWithType:, setFrame:, setTintColor:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, whiteColor, CGColor, setBorderColor:, setShadowColor:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _objc_alloc, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_new
--(id)iconBarButtonWithSymbol:(id)fallback:(id)action:(SEL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)iconBarButtonWithSymbol:(id)iconBarButtonWithSymbol fallback:(id)fallback action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003eaa48  113 条指令
 // 消息: navigationController, navigationBar, setTintColor:, setTranslucent:, systemFontOfSize:weight:, labelColor, dictionaryWithObjects:forKeys:count:, setTitleTextAttributes:, configureWithTransparentBackground, setBackgroundEffect:, clearColor, setBackgroundColor:, setShadowColor:, titleTextAttributes
@@ -39,12 +39,12 @@
 // 0x003f0764  38 条指令
 // 消息: decorativeAnimationsPaused, presentedViewController, resumeDecorativeAnimations, suppressMessageLayoutUntilInitialPass, generating, refreshFromSharedGenerationState
 // C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)viewDidAppear:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewDidAppear:(BOOL)viewDidAppear { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f07fc  35 条指令
 // 消息: generating, presentedViewController
 // C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)viewDidDisappear:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewDidDisappear:(BOOL)viewDidDisappear { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f0888  758 条指令
 // 字符串: "1024x1536", "high", "auto"
@@ -114,49 +114,49 @@
 // 字符串: "%lu"
 // 消息: currentReferenceImageDatas, count, referenceStackImageViews, enumerateObjectsUsingBlock:, referenceCountBadgeLabel, setHidden:, stringWithFormat:, setText:, layer, setZPosition:, referenceChipView, bringSubviewToFront:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)updateReferenceStackPreviewWithImages:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)updateReferenceStackPreviewWithImages:(id)updateReferenceStackPreviewWithImages { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f378c  2048 条指令
 // 字符串: "%.0f|%@|%@|%@|%@|%@|%d|%d", "sjj_ambient_field_shift", "sjj_ambient_field_flow_start", "sjj_ambient_field_flow_end", "sjj_ambient_field_breathe", "sjj_ambient_bloom_move"
 // 消息: provider, outputKind, model, sizeValue, multiReferenceMode, hasReferenceImages, showCoverCard, stringWithFormat:, decorativeAnimationsPaused, backdropOpacity, ambientAuraLayer, animationForKey:, removeAnimationForKey:, ambientBloomLayer
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _CGRectGetWidth, _CGRectGetHeight
--(id)fixedCoverStateKeyForWidth:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)fixedCoverStateKeyForWidth:(double)fixedCoverStateKeyForWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f3984  2048 条指令
 // 字符串: "sjj_ambient_field_shift", "sjj_ambient_field_flow_start", "sjj_ambient_field_flow_end", "sjj_ambient_field_breathe", "sjj_ambient_bloom_move", "sjj_ambient_bloom_scale"
 // 消息: showCoverCard, decorativeAnimationsPaused, backdropOpacity, ambientAuraLayer, animationForKey:, removeAnimationForKey:, ambientBloomLayer, ambientSweepLayer, setOpacity:, animationWithKeyPath:, setValues:, setKeyTimes:, setDuration:, setRepeatCount:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetWidth, _CGRectGetHeight, _CACurrentMediaTime
--(void)updateCoverGenerating:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)updateCoverGenerating:(BOOL)updateCoverGenerating { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f6808  213 条指令
 // 消息: showCoverCard, fixedCoverStateKeyForWidth:, fixedCoverView, fixedCoverStateKey, isEqualToString:, removeFromSuperview, coverViewWithWidth:, setFixedCoverView:, setUserInteractionEnabled:, setFixedCoverStateKey:, setCoverGeneratingVisualActive:, view, addSubview:, bounds
 // C 调用: _CGRectGetWidth, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetHeight
--(void)layoutFixedCoverInBounds:(struct CGRect)safeInsets:(struct CGSize)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)layoutFixedCoverInBounds:(struct CGRect)layoutFixedCoverInBounds safeInsets:(struct CGSize)safeInsets { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f6bdc  508 条指令
 // 消息: fixedCoverView, frame, coverSoftFadeView, setHidden:, setFrame:, layer, setCornerRadius:, bounds, coverSoftFadeBlurView, coverSoftFadeTintLayer, coverSoftFadeMaskLayer, view, safeAreaInsets, hasReferenceImages
 // C 调用: _objc_retainAutoreleasedReturnValue, _CGRectIsEmpty, _objc_release, _CGRectGetMaxY, _CGRectGetHeight, _CGRectGetMinX, _CGRectGetWidth, __Unwind_Resume, _CGRectGetMinY, _objc_retainBlock
--(void)layoutCoverSoftFadeForBounds:(struct CGRect)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)layoutCoverSoftFadeForBounds:(struct CGRect)layoutCoverSoftFadeForBounds { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f6fc0  259 条指令
 // 消息: view, safeAreaInsets, bounds, hasReferenceImages, keyboardInset, layoutFixedCoverInBounds:safeInsets:, layoutCoverSoftFadeForBounds:, fixedCoverView, frame, chatScrollView, contentSize, contentOffset, forceScrollToBottomOnNextLayout, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetHeight, _CGRectGetWidth, _CGRectGetMaxY, _CGRectGetMinY, _objc_retainBlock
--(void)layoutChatViewsAnimated:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)layoutChatViewsAnimated:(BOOL)layoutChatViewsAnimated { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f885c  513 条指令
 // 消息: userInfo, objectForKeyedSubscript:, CGRectValue, view, convertRect:fromView:, bounds, name, isEqualToString:, keyboardInset, setKeyboardInset:, layoutChatViewsAnimated:, composerView, locationInView:, messageInputView
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetHeight, _CGRectGetMinY, __Unwind_Resume, _CGRectContainsPoint, _objc_alloc_init, _objc_alloc, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass
--(void)keyboardChange:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)keyboardChange:(id)keyboardChange { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f8a38  394 条指令
 // 消息: composerView, locationInView:, messageInputView, frame, view, endEditing:, titleForState:, length, setText:, sendTap, pauseDecorativeAnimations, imagesFilter, setFilter:, setSelectionLimit:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectContainsPoint, __Unwind_Resume, _objc_alloc_init, _objc_alloc, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _dispatch_async
--(void)backgroundTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)backgroundTap:(id)backgroundTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f8b1c  337 条指令
 // 消息: titleForState:, length, messageInputView, setText:, sendTap, view, endEditing:, pauseDecorativeAnimations, imagesFilter, setFilter:, setSelectionLimit:, initWithConfiguration:, setDelegate:, setModalPresentationStyle:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_alloc_init, _objc_alloc, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _dispatch_async
--(void)promptSuggestionTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)promptSuggestionTap:(id)promptSuggestionTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f8bf0  284 条指令
 // 消息: view, endEditing:, pauseDecorativeAnimations, imagesFilter, setFilter:, setSelectionLimit:, initWithConfiguration:, setDelegate:, setModalPresentationStyle:, array, countByEnumeratingWithState:objects:count:, addObject:, count, referenceImageToken
@@ -166,12 +166,12 @@
 // 0x003f8cf0  220 条指令
 // 消息: array, countByEnumeratingWithState:objects:count:, addObject:, count, referenceImageToken, setReferenceImageToken:, length, stringWithFormat:, setReferenceImageDatas:, setReferencePreviewImages:, setReferenceImageTitle:, attachIconView, setImage:, layoutChatViewsAnimated:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release, _dispatch_async
--(void)useReferenceImages:(id)title:(id)focusInput:(BOOL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)useReferenceImages:(id)useReferenceImages title:(id)title focusInput:(BOOL)focusInput { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f97bc  46 条指令
 // 消息: arrayWithObjects:count:, useReferenceImages:title:focusInput:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)useReferenceImage:(id)title:(id)focusInput:(BOOL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)useReferenceImage:(id)useReferenceImage title:(id)title focusInput:(BOOL)focusInput { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f98b0  78 条指令
 // 消息: referenceImageToken, setReferenceImageToken:, setReferenceImageDatas:, setReferenceImageTitle:, setReferencePreviewImages:, multiReferenceModeButton, setHidden:, attachIconView, setImage:, layoutChatViewsAnimated:, dismissViewControllerAnimated:completion:
@@ -180,66 +180,66 @@
 
 // 0x003f9994  21 条指令
 // 消息: dismissViewControllerAnimated:completion:
--(void)imagePickerControllerDidCancel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePickerControllerDidCancel:(id)imagePickerControllerDidCancel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f99f0  67 条指令
 // 消息: objectForKeyedSubscript:, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(void)imagePickerController:(id)didFinishPickingMediaWithInfo:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePickerController:(id)imagePickerController didFinishPickingMediaWithInfo:(id)didFinishPickingMediaWithInfo { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003f9b78  435 条指令
 // 字符串: "v8@?0", "jpeg", "heic"
 // 消息: dismissViewControllerAnimated:completion:, count, referenceImageToken, setReferenceImageToken:, array, setReferenceImageDatas:, setReferencePreviewImages:, stringWithFormat:, setReferenceImageTitle:, attachIconView, setImage:, layoutChatViewsAnimated:, objectAtIndexedSubscript:, itemProvider
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_group_create, _objc_enumerationMutation, _dispatch_group_enter, _objc_retainBlock, _objc_unsafeClaimAutoreleasedReturnValue, _dispatch_group_notify
--(void)picker:(id)didFinishPicking:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)picker:(id)picker didFinishPicking:(id)didFinishPicking { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003faf9c  57 条指令
 // 字符串: "text", "role", "user"
 // 消息: messages, dictionaryWithObjects:forKeys:count:, mutableCopy, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addUserText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addUserText:(id)addUserText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb0d0  53 条指令
 // 字符串: "text"
 // 消息: messages, dictionaryWithObjects:forKeys:count:, mutableCopy, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addAssistantText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addAssistantText:(id)addAssistantText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb1f4  79 条指令
 // 字符串: "prompt", "referenceData"
 // 消息: length, dictionaryWithObjects:forKeys:count:, mutableCopy, setObject:forKeyedSubscript:, messages, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addFailureText:(id)prompt:(id)referenceData:(id)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addFailureText:(id)addFailureText prompt:(id)prompt referenceData:(id)referenceData { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb390  99 条指令
 // 字符串: "prompt", "referenceDatas", "referenceData"
 // 消息: length, dictionaryWithObjects:forKeys:count:, mutableCopy, count, setObject:forKeyedSubscript:, firstObject, messages, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addFailureText:(id)prompt:(id)referenceDatas:(id)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addFailureText:(id)addFailureText prompt:(id)prompt referenceDatas:(id)referenceDatas { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb59c  59 条指令
 // 字符串: "system", "text"
 // 消息: messages, dictionaryWithObjects:forKeys:count:, mutableCopy, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addSystemText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addSystemText:(id)addSystemText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb6d8  58 条指令
 // 字符串: "image"
 // 消息: messages, dictionaryWithObjects:forKeys:count:, mutableCopy, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addImage:(id)role:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addImage:(id)addImage role:(id)role { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb818  63 条指令
 // 字符串: "assistant", "video", "videoURL"
 // 消息: addImage:role:, length, messages, dictionaryWithObjects:forKeys:count:, mutableCopy, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addImage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addImage:(id)addImage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb824  60 条指令
 // 字符串: "video", "videoURL"
 // 消息: length, messages, dictionaryWithObjects:forKeys:count:, mutableCopy, addObject:, setForceScrollToBottomOnNextLayout:, layoutMessages
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(void)addVideoURL:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addVideoURL:(id)addVideoURL { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fb974  58 条指令
 // 消息: layoutChatViewsAnimated:, indexSet, messages, enumerateObjectsUsingBlock:, count, removeObjectsAtIndexes:
@@ -255,37 +255,37 @@
 // 字符串: "sjj_cover_shimmer", "sparkles", "1024x1536"
 // 消息: systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, sizeWithAttributes:, initWithFrame:, setText:, setTextAlignment:, setFont:, setTextColor:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _CGRectInset, _CATransform3DMakeRotation, _memcpy, _objc_enumerationMutation
--(id)coverChipWithText:(id)tint:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)coverChipWithText:(id)coverChipWithText tint:(id)tint { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fbf48  2048 条指令
 // 字符串: "sjj_cover_shimmer", "sparkles", "1024x1536"
 // 消息: initWithFrame:, CGColor, layer, setShadowOpacity:, setShadowRadius:, setShadowOffset:, bounds, setAutoresizingMask:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, setCornerRadius:, setCornerCurve:, setBorderWidth:
 // C 调用: _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _objc_release, _CGRectInset, _CATransform3DMakeRotation, _memcpy, _objc_retain, _objc_enumerationMutation, _CGRectGetWidth, _objc_autoreleaseReturnValue, ___stack_chk_fail
--(id)coverViewWithWidth:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)coverViewWithWidth:(double)coverViewWithWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fe2b8  2022 条指令
 // 字符串: "user", "exclamationmark.triangle.fill", "exclamationmark.circle", "arrow.clockwise", "bolt.fill", "arrow.triangle.2.circlepath"
 // 消息: isEqualToString:, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:, initWithFrame:, systemBackgroundColor, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, blackColor, CGColor, setShadowColor:, setShadowOpacity:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _CGRectGetMaxX, _CGRectGetWidth, _CGRectGetHeight, _CATransform3DMakeRotation
--(id)bubbleForText:(id)role:(id)maxWidth:(double)index:(long long)arg4 { /* 重建骨架，语义见 pseudocode */ }
+-(id)bubbleForText:(id)bubbleForText role:(id)role maxWidth:(double)maxWidth index:(long long)index { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003fe7a8  1706 条指令
 // 字符串: "exclamationmark.triangle.fill", "exclamationmark.circle", "arrow.clockwise", "bolt.fill", "arrow.triangle.2.circlepath", "doc.on.doc"
 // 消息: length, systemFontOfSize:weight:, dictionaryWithObjects:forKeys:count:, boundingRectWithSize:options:attributes:context:, initWithFrame:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerCurve:, setBorderWidth:, CGColor, setBorderColor:, blackColor
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease, _CGRectGetMaxX, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _CGRectGetWidth, _CGRectGetHeight, _CATransform3DMakeRotation
--(id)bubbleForFailureText:(id)index:(long long)maxWidth:(double)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)bubbleForFailureText:(id)bubbleForFailureText index:(long long)index maxWidth:(double)maxWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003ffddc  285 条指令
 // 字符串: "sjj_ai_image_soft_beam", "sjj_ai_image_beam_breathe"
 // 消息: bounds, layer, setFrame:, colorWithWhite:alpha:, CGColor, colorWithRed:green:blue:alpha:, arrayWithObjects:count:, setColors:, setLocations:, setStartPoint:, setEndPoint:, setTransform:, addSublayer:, animationWithKeyPath:
 // C 调用: _objc_retain, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutoreleasedReturnValue, _objc_retainAutorelease, _objc_release, _CATransform3DMakeRotation, _memcpy, _CACurrentMediaTime
--(void)addSoftBeamToSurface:(id)angle:(double)widthRatio:(double)duration:(double)delay:(double)alpha:(double)arg6 { /* 重建骨架，语义见 pseudocode */ }
+-(void)addSoftBeamToSurface:(id)addSoftBeamToSurface angle:(double)angle widthRatio:(double)widthRatio duration:(double)duration delay:(double)delay alpha:(double)alpha { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00400370  487 条指令
 // 字符串: "editMode", "outputKind", "mergeMode"
 // 消息: objectForKeyedSubscript:, activeProgressRevealMap, objectForKey:, activeProgressFillMap, activeProgressPercentMap, activeProgressSmallPercentMap, activeProgressStageMap, activeProgressFogMap, activeProgressRevealView, activeProgressFillView, activeProgressPercentLabel, activeProgressSmallPercentLabel, activeProgressStageLabel, activeProgressFogView
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_respondsToSelector, _CGRectGetHeight, _CGRectGetWidth, _objc_retainBlock
--(void)updateProgressBubble:(id)message:(id)animated:(BOOL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)updateProgressBubble:(id)updateProgressBubble message:(id)message animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040106c  164 条指令
 // 字符串: "kind", "progress", "pending"
@@ -297,41 +297,41 @@
 // 字符串: "editMode", "mergeMode", "sjj_ai_progress_paper_flow", "transform.translation", "sjj_ai_progress_ink_float", "sjj_ai_progress_live_beam"
 // 消息: objectForKeyedSubscript:, boolValue, sizeValue, doubleValue, date, timeIntervalSince1970, outputKind, stringWithFormat:, integerValue, initWithFrame:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, layer
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_opt_respondsToSelector, _objc_alloc, _objc_retainAutorelease, _CGRectGetWidth, _CGRectGetHeight, _CATransform3DMakeRotation, _memcpy
--(id)bubbleForProgressMessage:(id)maxWidth:(double)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)bubbleForProgressMessage:(id)bubbleForProgressMessage maxWidth:(double)maxWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00403aec  727 条指令
 // 字符串: "appearFromProgress", "sjj_ai_image_result_reveal", "v8@?0"
 // 消息: size, initWithFrame:, clearColor, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, blackColor, CGColor, setShadowColor:, setShadowOpacity:, setShadowRadius:, setShadowOffset:, bounds
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _CGAffineTransformMakeScale, _CGRectGetWidth, _CGRectGetHeight, _objc_autoreleaseReturnValue, ___stack_chk_fail
--(id)bubbleForImage:(id)index:(long long)maxWidth:(double)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)bubbleForImage:(id)bubbleForImage index:(long long)index maxWidth:(double)maxWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040467c  1510 条指令
 // 字符串: "play.fill", "square.and.arrow.down", "doc.on.doc"
 // 消息: initWithFrame:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerCurve:, setBorderWidth:, whiteColor, CGColor, setBorderColor:, blackColor, setShadowColor:, setShadowOpacity:, setShadowRadius:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, _objc_retainAutorelease, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retain, _CMTimeGetSeconds, _arc4random_uniform, _CMTimeMakeWithSeconds, _CGImageRelease
--(id)bubbleForVideoURL:(id)index:(long long)maxWidth:(double)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)bubbleForVideoURL:(id)bubbleForVideoURL index:(long long)index maxWidth:(double)maxWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00405a24  252 条指令
 // 消息: URLAssetWithURL:options:, initWithAsset:, setAppliesPreferredTrackTransform:, setMaximumSize:, duration, copyCGImageAtTime:actualTime:error:, imageWithCGImage:, length, videoCoverImageMap, objectForKeyedSubscript:, videoPreparingSet, containsObject:, addObject:, prepareLocalVideoForURLString:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_alloc, _CMTimeGetSeconds, _arc4random_uniform, _CMTimeMakeWithSeconds, _objc_release, _CGImageRelease, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_initWeak, _objc_copyWeak
--(id)coverImageForLocalVideoURL:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)coverImageForLocalVideoURL:(id)coverImageForLocalVideoURL { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00405cc8  83 条指令
 // 消息: length, videoCoverImageMap, objectForKeyedSubscript:, videoPreparingSet, containsObject:, addObject:, prepareLocalVideoForURLString:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)prepareVideoCoverForURLString:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)prepareVideoCoverForURLString:(id)prepareVideoCoverForURLString { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040603c  158 条指令
 // 字符串: "invalid video url"
 // 消息: URLWithString:, length, videoLocalFileMap, objectForKeyedSubscript:, defaultManager, path, fileExistsAtPath:, videoCoverImageMap, sharedSession, downloadTaskWithURL:completionHandler:, resume
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)prepareLocalVideoForURLString:(id)completion:(id /* block */)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)prepareLocalVideoForURLString:(id)prepareLocalVideoForURLString completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00406c18  1044 条指令
 // 字符串: "text", "cover", "system", "role", "assistant", "user"
 // 消息: bounds, initWithFrame:, clearColor, setBackgroundColor:, length, imageWithData:, defaultFormat, setOpaque:, initWithSize:format:, imageWithActions:, initWithSize:, setImage:, setContentMode:, setClipsToBounds:
 // C 调用: _objc_retain, _CGRectGetWidth, _CGRectGetHeight, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutorelease, _objc_autoreleaseReturnValue, _dispatch_once, __Unwind_Resume
--(id)messageRowForBubble:(id)outgoing:(BOOL)maxWidth:(double)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)messageRowForBubble:(id)messageRowForBubble outgoing:(BOOL)outgoing maxWidth:(double)maxWidth { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00407230  654 条指令
 // 字符串: "text", "cover", "system", "role", "assistant", "user"
@@ -343,12 +343,12 @@
 // 字符串: "progress", "assistant", "pending", "editMode", "outputKind", "mergeMode"
 // 消息: length, count, multiReferenceMode, isEqualToString:, nextGenerationCountOverride, nextGenerationQualityOverride, copy, quality, outputKind, setNextGenerationCountOverride:, setNextGenerationQualityOverride:, numberWithBool:, sizeValue, date
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_async
--(void)beginGenerationWithPrompt:(id)referenceDatas:(id)retrying:(BOOL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)beginGenerationWithPrompt:(id)beginGenerationWithPrompt referenceDatas:(id)referenceDatas retrying:(BOOL)retrying { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00409948  49 条指令
 // 消息: length, arrayWithObjects:count:, beginGenerationWithPrompt:referenceDatas:retrying:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)beginGenerationWithPrompt:(id)referenceData:(id)retrying:(BOOL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(void)beginGenerationWithPrompt:(id)beginGenerationWithPrompt referenceData:(id)referenceData retrying:(BOOL)retrying { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00409a48  273 条指令
 // 字符串: "kind", "role", "user", "image", "text"
@@ -359,53 +359,53 @@
 // 0x00409fb8  221 条指令
 // 消息: tag, messages, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, isEqualToString:, array, countByEnumeratingWithState:objects:count:, length, addObject:, removeObjectAtIndex:, layoutMessages
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation
--(void)retryFailureTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)retryFailureTap:(id)retryFailureTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040a430  233 条指令
 // 字符串: "medium"
 // 消息: tag, messages, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, isEqualToString:, array, countByEnumeratingWithState:objects:count:, length, addObject:, setNextGenerationCountOverride:, setNextGenerationQualityOverride:, removeObjectAtIndex:, layoutMessages
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation
--(void)quickRetryFailureTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)quickRetryFailureTap:(id)quickRetryFailureTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040a8d8  655 条指令
 // 消息: tag, messages, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, isEqualToString:, length, generalPasteboard, setString:, showToast:duration:, state, view, buttonWithType:, setTag:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _objc_retainAutorelease, _objc_autoreleaseReturnValue, _objc_retainBlock
--(void)copyFailureReasonTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)copyFailureReasonTap:(id)copyFailureReasonTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040ab08  515 条指令
 // 消息: state, view, tag, messages, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, length, generalPasteboard, setString:, showToast:duration:, buttonWithType:, setTag:, secondaryLabelColor
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _objc_retainAutorelease, _objc_autoreleaseReturnValue, _objc_retainBlock
--(void)textBubbleLongPress:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)textBubbleLongPress:(id)textBubbleLongPress { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040acd8  399 条指令
 // 消息: buttonWithType:, setTag:, secondaryLabelColor, setTintColor:, systemBackgroundColor, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setBorderWidth:, whiteColor, CGColor, setBorderColor:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_retainBlock
--(id)imageActionButtonWithTitle:(id)symbol:(id)tag:(long long)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)imageActionButtonWithTitle:(id)imageActionButtonWithTitle symbol:(id)symbol tag:(long long)tag { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040b178  103 条指令
 // 消息: imageActionSheetOverlay, imageActionSheetPanel
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_retainBlock, _objc_release
--(void)dismissImageActionSheetAnimated:(BOOL)completion:(id /* block */)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)dismissImageActionSheetAnimated:(BOOL)dismissImageActionSheetAnimated completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040b440  103 条指令
 // 消息: videoActionSheetOverlay, videoActionSheetPanel
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_retainBlock, _objc_release
--(void)dismissVideoActionSheetAnimated:(BOOL)completion:(id /* block */)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)dismissVideoActionSheetAnimated:(BOOL)dismissVideoActionSheetAnimated completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040b708  103 条指令
 // 消息: imagePreviewOverlay, imagePreviewCard
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_retainBlock, _objc_release
--(void)dismissImagePreviewAnimated:(BOOL)completion:(id /* block */)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)dismissImagePreviewAnimated:(BOOL)dismissImagePreviewAnimated completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040b9dc  62 条指令
 // 消息: dismissImagePreviewAnimated:completion:, imagePreviewImage, imagePreviewSourceView, view
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release
--(void)imagePreviewBackdropTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePreviewBackdropTap:(id)imagePreviewBackdropTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040b9e8  59 条指令
 // 消息: imagePreviewImage, imagePreviewSourceView, view, dismissImagePreviewAnimated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release
--(void)imagePreviewMoreTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imagePreviewMoreTap:(id)imagePreviewMoreTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040bb1c  635 条指令
 // 字符串: "minus", "xmark"
@@ -416,118 +416,118 @@
 // 0x0040c6f0  49 条指令
 // 消息: animateWithDuration:animations:completion:
 // C 调用: _objc_retain, _objc_release
--(void)referencePreviewBackdropTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)referencePreviewBackdropTap:(id)referencePreviewBackdropTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040c7e8  1160 条指令
 // 字符串: "xmark", "ellipsis"
 // 消息: currentReferenceFullImages, view, tag, count, superview, removeFromSuperview, objectAtIndexedSubscript:, showImagePreviewForImage:sourceView:, currentReferenceImageDatas, currentReferencePreviewImages, array, addObject:, referenceImageToken, setReferenceImageToken:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _objc_alloc, _objc_retainAutorelease, _CGRectGetHeight, _CGRectGetWidth, _CGRectGetMidX, _CGRectGetMidY
--(void)referencePreviewImageTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)referencePreviewImageTap:(id)referencePreviewImageTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040c9a4  1049 条指令
 // 字符串: "xmark", "ellipsis"
 // 消息: tag, currentReferenceImageDatas, currentReferencePreviewImages, count, array, objectAtIndexedSubscript:, addObject:, superview, removeFromSuperview, referenceImageToken, setReferenceImageToken:, setReferenceImageDatas:, setReferencePreviewImages:, stringWithFormat:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _objc_alloc, _objc_retainAutorelease, _CGRectGetHeight, _CGRectGetWidth, _CGRectGetMidX, _CGRectGetMidY
--(void)referencePreviewDeleteTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)referencePreviewDeleteTap:(id)referencePreviewDeleteTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040cd38  820 条指令
 // 字符串: "xmark", "ellipsis"
 // 消息: showReferencePreviewGrid, view, endEditing:, dismissImageActionSheetAnimated:completion:, dismissImagePreviewAnimated:completion:, setImagePreviewImage:, setImagePreviewSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, blackColor, colorWithAlphaComponent:, setBackgroundColor:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease, _CGRectGetHeight, _CGRectGetWidth, _CGRectGetMidX, _CGRectGetMidY, _CGRectInset
--(void)referenceChipTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)referenceChipTap:(id)referenceChipTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040cd3c  819 条指令
 // 字符串: "xmark", "ellipsis"
 // 消息: view, endEditing:, dismissImageActionSheetAnimated:completion:, dismissImagePreviewAnimated:completion:, setImagePreviewImage:, setImagePreviewSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, blackColor, colorWithAlphaComponent:, setBackgroundColor:, setAlpha:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retainAutorelease, _CGRectGetHeight, _CGRectGetWidth, _CGRectGetMidX, _CGRectGetMidY, _CGRectInset
--(void)showImagePreviewForImage:(id)sourceView:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)showImagePreviewForImage:(id)showImagePreviewForImage sourceView:(id)sourceView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040de04  793 条指令
 // 字符串: "arrow.up.left.and.arrow.down.right", "sparkles", "doc.on.doc", "square.and.arrow.up", "xmark"
 // 消息: dismissImageActionSheetAnimated:completion:, view, endEditing:, setImageActionSheetImage:, setImageActionSheetSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:, setBackgroundColor:, setAlpha:, addTarget:action:forControlEvents:, addSubview:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease
--(void)imageActionBackdropTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imageActionBackdropTap:(id)imageActionBackdropTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040de10  790 条指令
 // 字符串: "arrow.up.left.and.arrow.down.right", "sparkles", "doc.on.doc", "square.and.arrow.up", "xmark"
 // 消息: view, endEditing:, dismissImageActionSheetAnimated:completion:, setImageActionSheetImage:, setImageActionSheetSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:, setBackgroundColor:, setAlpha:, addTarget:action:forControlEvents:, addSubview:
 // C 调用: _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease
--(void)showImageActionSheetForImage:(id)sourceView:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)showImageActionSheetForImage:(id)showImageActionSheetForImage sourceView:(id)sourceView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040ee00  165 条指令
 // 字符串: "v8@?0"
 // 消息: tag, imageActionSheetImage, imageActionSheetSourceView, view, dismissImageActionSheetAnimated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retain, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass
--(void)imageActionButtonTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imageActionButtonTap:(id)imageActionButtonTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040f3fc  49 条指令
 // 消息: length, showToast:duration:, prepareLocalVideoForURLString:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak, _objc_release
--(void)showVideoPreviewForURLString:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)showVideoPreviewForURLString:(id)showVideoPreviewForURLString { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040f73c  726 条指令
 // 字符串: "play.rectangle", "doc.on.doc"
 // 消息: length, showToast:duration:, prepareLocalVideoForURLString:completion:, path, dismissVideoActionSheetAnimated:completion:, view, endEditing:, setVideoActionSheetURLString:, setVideoActionSheetSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, blackColor
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain, _UIVideoAtPathIsCompatibleWithSavedPhotosAlbum, _dispatch_async, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease
--(void)saveVideoURLStringToAlbum:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)saveVideoURLStringToAlbum:(id)saveVideoURLStringToAlbum { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040f8f0  617 条指令
 // 字符串: "play.rectangle", "doc.on.doc"
 // 消息: dismissVideoActionSheetAnimated:completion:, length, view, endEditing:, setVideoActionSheetURLString:, setVideoActionSheetSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, blackColor, colorWithAlphaComponent:, setBackgroundColor:, setAlpha:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease
--(void)videoActionBackdropTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoActionBackdropTap:(id)videoActionBackdropTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0040f8fc  614 条指令
 // 字符串: "play.rectangle", "doc.on.doc"
 // 消息: length, view, endEditing:, dismissVideoActionSheetAnimated:completion:, setVideoActionSheetURLString:, setVideoActionSheetSourceView:, bounds, safeAreaInsets, initWithFrame:, setAutoresizingMask:, blackColor, colorWithAlphaComponent:, setBackgroundColor:, setAlpha:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _CGRectGetWidth, _CGRectGetHeight, _objc_retainAutorelease
--(void)showVideoActionSheetForURLString:(id)sourceView:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)showVideoActionSheetForURLString:(id)showVideoActionSheetForURLString sourceView:(id)sourceView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410554  111 条指令
 // 字符串: "v8@?0"
 // 消息: tag, videoActionSheetURLString, copy, videoActionSheetSourceView, view, length, dismissVideoActionSheetAnimated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)videoActionButtonTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoActionButtonTap:(id)videoActionButtonTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004107ec  377 条指令
 // 消息: view, tag, messages, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, showImageActionSheetForImage:sourceView:, videoURLForMessageIndex:, showVideoPreviewForURLString:, state, length, showVideoActionSheetForURLString:sourceView:, generalPasteboard, setString:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _objc_autoreleaseReturnValue
--(void)imageTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)imageTap:(id)imageTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041095c  285 条指令
 // 消息: messages, count, objectAtIndexedSubscript:, objectForKeyedSubscript:, view, tag, videoURLForMessageIndex:, showVideoPreviewForURLString:, state, length, showVideoActionSheetForURLString:sourceView:, generalPasteboard, setString:, showToast:duration:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_retain
--(id)videoURLForMessageIndex:(long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)videoURLForMessageIndex:(long long)videoURLForMessageIndex { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410ab0  200 条指令
 // 消息: view, tag, videoURLForMessageIndex:, showVideoPreviewForURLString:, state, length, showVideoActionSheetForURLString:sourceView:, generalPasteboard, setString:, showToast:duration:, saveVideoURLStringToAlbum:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass
--(void)videoBubbleTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoBubbleTap:(id)videoBubbleTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410b3c  165 条指令
 // 消息: state, view, tag, videoURLForMessageIndex:, length, showVideoActionSheetForURLString:sourceView:, generalPasteboard, setString:, showToast:duration:, saveVideoURLStringToAlbum:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass
--(void)videoBubbleLongPress:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoBubbleLongPress:(id)videoBubbleLongPress { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410c30  104 条指令
 // 消息: tag, videoURLForMessageIndex:, length, generalPasteboard, setString:, showToast:duration:, saveVideoURLStringToAlbum:, view
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass
--(void)videoCopyTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoCopyTap:(id)videoCopyTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410cfc  53 条指令
 // 消息: tag, videoURLForMessageIndex:, saveVideoURLStringToAlbum:, view
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass
--(void)videoSaveTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)videoSaveTap:(id)videoSaveTap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410d80  20 条指令
 // 消息: view
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, _objc_release
--(BOOL)gestureRecognizer:(id)shouldReceiveTouch:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410de0  1181 条指令
 // 消息: dismissViewControllerAnimated:completion:, arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)textViewDidChange:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)textViewDidChange:(id)textViewDidChange { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410de4  1180 条指令
 // 消息: dismissViewControllerAnimated:completion:, arrayWithObjects:count:, isEqualToString:
@@ -542,7 +542,7 @@
 // 0x00410e24  1164 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setChatScrollView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setChatScrollView:(id)setChatScrollView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410e34  1160 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -552,7 +552,7 @@
 // 0x00410e40  1157 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setComposerView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setComposerView:(id)setComposerView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410e50  1153 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -562,7 +562,7 @@
 // 0x00410e5c  1150 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setMessageInputView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMessageInputView:(id)setMessageInputView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410e6c  1146 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -572,7 +572,7 @@
 // 0x00410e78  1143 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setAttachImageButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAttachImageButton:(id)setAttachImageButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410e88  1139 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -582,7 +582,7 @@
 // 0x00410e94  1136 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setSendActionButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSendActionButton:(id)setSendActionButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410ea4  1132 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -592,7 +592,7 @@
 // 0x00410eb0  1129 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setMultiReferenceModeButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMultiReferenceModeButton:(id)setMultiReferenceModeButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410ec0  1125 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -602,7 +602,7 @@
 // 0x00410ecc  1122 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setAttachIconView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAttachIconView:(id)setAttachIconView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410edc  1118 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -612,7 +612,7 @@
 // 0x00410ee8  1115 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setSendIconView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSendIconView:(id)setSendIconView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410ef8  1111 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -622,7 +622,7 @@
 // 0x00410f04  1108 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setFixedCoverView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFixedCoverView:(id)setFixedCoverView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410f14  1104 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -632,7 +632,7 @@
 // 0x00410f20  1101 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setFixedCoverStateKey:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFixedCoverStateKey:(id)setFixedCoverStateKey { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410f2c  1098 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -642,7 +642,7 @@
 // 0x00410f38  1095 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverGenerationGlowLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverGenerationGlowLayer:(id)setCoverGenerationGlowLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410f48  1091 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -652,7 +652,7 @@
 // 0x00410f54  1088 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverGenerationAuraLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverGenerationAuraLayer:(id)setCoverGenerationAuraLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410f64  1084 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -662,7 +662,7 @@
 // 0x00410f70  1081 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverGenerationSweepLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverGenerationSweepLayer:(id)setCoverGenerationSweepLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410f80  1077 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -672,7 +672,7 @@
 // 0x00410f8c  1074 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverGenerationTraceLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverGenerationTraceLayer:(id)setCoverGenerationTraceLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410f9c  1070 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -682,7 +682,7 @@
 // 0x00410fa8  1067 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverBadgeView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverBadgeView:(id)setCoverBadgeView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410fb8  1063 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -692,7 +692,7 @@
 // 0x00410fc4  1060 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverBadgeIconView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverBadgeIconView:(id)setCoverBadgeIconView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410fd4  1056 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -702,7 +702,7 @@
 // 0x00410fe0  1053 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverEyebrowLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverEyebrowLabel:(id)setCoverEyebrowLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00410ff0  1049 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -712,7 +712,7 @@
 // 0x00410ffc  1046 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverSubtitleLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverSubtitleLabel:(id)setCoverSubtitleLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041100c  1042 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -722,7 +722,7 @@
 // 0x00411018  1039 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverSoftFadeView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverSoftFadeView:(id)setCoverSoftFadeView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411028  1035 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -732,7 +732,7 @@
 // 0x00411034  1032 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverSoftFadeBlurView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverSoftFadeBlurView:(id)setCoverSoftFadeBlurView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411044  1028 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -742,7 +742,7 @@
 // 0x00411050  1025 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverSoftFadeTintLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverSoftFadeTintLayer:(id)setCoverSoftFadeTintLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411060  1021 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -752,7 +752,7 @@
 // 0x0041106c  1018 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverSoftFadeMaskLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverSoftFadeMaskLayer:(id)setCoverSoftFadeMaskLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041107c  1014 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -762,7 +762,7 @@
 // 0x00411088  1011 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setPromptSuggestionView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPromptSuggestionView:(id)setPromptSuggestionView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411098  1007 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -772,7 +772,7 @@
 // 0x004110a4  1004 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setPromptSuggestionButtons:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPromptSuggestionButtons:(id)setPromptSuggestionButtons { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004110b4  1000 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -782,7 +782,7 @@
 // 0x004110c0  997 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceChipView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceChipView:(id)setReferenceChipView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004110d0  993 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -792,7 +792,7 @@
 // 0x004110dc  990 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceChipLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceChipLabel:(id)setReferenceChipLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004110ec  986 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -802,7 +802,7 @@
 // 0x004110f8  983 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceClearButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceClearButton:(id)setReferenceClearButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411108  979 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -812,7 +812,7 @@
 // 0x00411114  976 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceStackImageViews:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceStackImageViews:(id)setReferenceStackImageViews { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411124  972 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -822,7 +822,7 @@
 // 0x00411130  969 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceCountBadgeLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceCountBadgeLabel:(id)setReferenceCountBadgeLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411140  965 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -832,7 +832,7 @@
 // 0x0041114c  962 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBackgroundSolidView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundSolidView:(id)setBackgroundSolidView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041115c  958 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -842,7 +842,7 @@
 // 0x00411168  955 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBackgroundGradientLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundGradientLayer:(id)setBackgroundGradientLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411178  951 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -852,7 +852,7 @@
 // 0x00411184  948 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setAmbientAuraLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAmbientAuraLayer:(id)setAmbientAuraLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411194  944 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -862,7 +862,7 @@
 // 0x004111a0  941 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setAmbientBloomLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAmbientBloomLayer:(id)setAmbientBloomLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004111b0  937 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -872,7 +872,7 @@
 // 0x004111bc  934 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setAmbientSweepLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAmbientSweepLayer:(id)setAmbientSweepLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004111cc  930 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -882,7 +882,7 @@
 // 0x004111d8  927 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBackgroundBlurView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundBlurView:(id)setBackgroundBlurView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004111e8  923 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -892,7 +892,7 @@
 // 0x004111f4  920 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setComposerBlurView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setComposerBlurView:(id)setComposerBlurView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411204  916 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -902,7 +902,7 @@
 // 0x00411210  913 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setAttachButtonGradientLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAttachButtonGradientLayer:(id)setAttachButtonGradientLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411220  909 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -912,7 +912,7 @@
 // 0x0041122c  906 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setSendButtonGradientLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSendButtonGradientLayer:(id)setSendButtonGradientLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041123c  902 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -922,7 +922,7 @@
 // 0x00411248  899 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImageActionSheetOverlay:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageActionSheetOverlay:(id)setImageActionSheetOverlay { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411258  895 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -932,7 +932,7 @@
 // 0x00411264  892 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImageActionSheetPanel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageActionSheetPanel:(id)setImageActionSheetPanel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411274  888 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -942,7 +942,7 @@
 // 0x00411280  885 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImageActionSheetImage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageActionSheetImage:(id)setImageActionSheetImage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411290  881 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -952,7 +952,7 @@
 // 0x004112c0  869 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImageActionSheetSourceView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageActionSheetSourceView:(id)setImageActionSheetSourceView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004112d0  865 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -962,7 +962,7 @@
 // 0x004112dc  862 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImagePreviewOverlay:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImagePreviewOverlay:(id)setImagePreviewOverlay { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004112ec  858 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -972,7 +972,7 @@
 // 0x004112f8  855 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImagePreviewCard:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImagePreviewCard:(id)setImagePreviewCard { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411308  851 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -982,7 +982,7 @@
 // 0x00411314  848 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImagePreviewImage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImagePreviewImage:(id)setImagePreviewImage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411324  844 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -992,7 +992,7 @@
 // 0x00411354  832 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setImagePreviewSourceView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImagePreviewSourceView:(id)setImagePreviewSourceView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411364  828 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1002,7 +1002,7 @@
 // 0x00411370  825 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoActionSheetOverlay:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoActionSheetOverlay:(id)setVideoActionSheetOverlay { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411380  821 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1012,7 +1012,7 @@
 // 0x0041138c  818 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoActionSheetPanel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoActionSheetPanel:(id)setVideoActionSheetPanel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041139c  814 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1022,7 +1022,7 @@
 // 0x004113a8  811 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoActionSheetURLString:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoActionSheetURLString:(id)setVideoActionSheetURLString { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004113b4  808 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1032,7 +1032,7 @@
 // 0x004113e4  796 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoActionSheetSourceView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoActionSheetSourceView:(id)setVideoActionSheetSourceView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004113f4  792 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1042,7 +1042,7 @@
 // 0x00411400  789 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoLocalFileMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoLocalFileMap:(id)setVideoLocalFileMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411410  785 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1052,7 +1052,7 @@
 // 0x0041141c  782 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoCoverImageMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoCoverImageMap:(id)setVideoCoverImageMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041142c  778 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1062,7 +1062,7 @@
 // 0x00411438  775 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setVideoPreparingSet:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVideoPreparingSet:(id)setVideoPreparingSet { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411448  771 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1072,7 +1072,7 @@
 // 0x00411454  768 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setLastProgressBubbleFrame:(struct CGRect)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLastProgressBubbleFrame:(struct CGRect)setLastProgressBubbleFrame { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411460  765 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1082,7 +1082,7 @@
 // 0x00411490  753 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressBubble:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressBubble:(id)setActiveProgressBubble { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004114a0  749 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1092,7 +1092,7 @@
 // 0x004114d0  737 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressRevealView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressRevealView:(id)setActiveProgressRevealView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004114e0  733 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1102,7 +1102,7 @@
 // 0x00411510  721 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressFillView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressFillView:(id)setActiveProgressFillView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411520  717 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1112,7 +1112,7 @@
 // 0x00411550  705 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressPercentLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressPercentLabel:(id)setActiveProgressPercentLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411560  701 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1122,7 +1122,7 @@
 // 0x00411590  689 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressSmallPercentLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressSmallPercentLabel:(id)setActiveProgressSmallPercentLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004115a0  685 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1132,7 +1132,7 @@
 // 0x004115d0  673 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressStageLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressStageLabel:(id)setActiveProgressStageLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004115e0  669 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1142,7 +1142,7 @@
 // 0x00411610  657 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressFogView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressFogView:(id)setActiveProgressFogView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411620  653 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1152,7 +1152,7 @@
 // 0x0041162c  650 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressBubbleMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressBubbleMap:(id)setActiveProgressBubbleMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041163c  646 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1162,7 +1162,7 @@
 // 0x00411648  643 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressRevealMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressRevealMap:(id)setActiveProgressRevealMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411658  639 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1172,7 +1172,7 @@
 // 0x00411664  636 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressFillMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressFillMap:(id)setActiveProgressFillMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411674  632 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1182,7 +1182,7 @@
 // 0x00411680  629 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressPercentMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressPercentMap:(id)setActiveProgressPercentMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411690  625 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1192,7 +1192,7 @@
 // 0x0041169c  622 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressSmallPercentMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressSmallPercentMap:(id)setActiveProgressSmallPercentMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004116ac  618 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1202,7 +1202,7 @@
 // 0x004116b8  615 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressStageMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressStageMap:(id)setActiveProgressStageMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004116c8  611 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1212,7 +1212,7 @@
 // 0x004116d4  608 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setActiveProgressFogMap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActiveProgressFogMap:(id)setActiveProgressFogMap { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004116e4  604 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1222,7 +1222,7 @@
 // 0x004116f0  601 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setMessages:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMessages:(id)setMessages { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411700  597 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1232,7 +1232,7 @@
 // 0x0041170c  594 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setProvider:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setProvider:(id)setProvider { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411718  591 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1242,7 +1242,7 @@
 // 0x00411724  588 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBaseURL:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBaseURL:(id)setBaseURL { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411730  585 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1252,7 +1252,7 @@
 // 0x0041173c  582 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setApiKey:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setApiKey:(id)setApiKey { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411748  579 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1262,7 +1262,7 @@
 // 0x00411754  576 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setModel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setModel:(id)setModel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411760  573 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1272,7 +1272,7 @@
 // 0x0041176c  570 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCount:(long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCount:(long long)setCount { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411778  567 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1282,7 +1282,7 @@
 // 0x00411784  564 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setSizeValue:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSizeValue:(id)setSizeValue { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411790  561 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1292,7 +1292,7 @@
 // 0x0041179c  558 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setQuality:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setQuality:(id)setQuality { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004117a8  555 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1302,7 +1302,7 @@
 // 0x004117b4  552 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBackground:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackground:(id)setBackground { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004117c0  549 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1312,7 +1312,7 @@
 // 0x004117cc  546 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setFormat:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFormat:(id)setFormat { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004117d8  543 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1322,7 +1322,7 @@
 // 0x004117e4  540 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setOutputKind:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOutputKind:(id)setOutputKind { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004117f0  537 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1332,7 +1332,7 @@
 // 0x004117fc  534 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setMultiReferenceMode:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMultiReferenceMode:(id)setMultiReferenceMode { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411808  531 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1342,7 +1342,7 @@
 // 0x00411814  528 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setShowCoverCard:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setShowCoverCard:(BOOL)setShowCoverCard { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411820  525 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1352,7 +1352,7 @@
 // 0x0041182c  522 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBackdropBlur:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackdropBlur:(double)setBackdropBlur { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411838  519 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1362,7 +1362,7 @@
 // 0x00411844  516 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setBackdropOpacity:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackdropOpacity:(double)setBackdropOpacity { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411850  513 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1372,7 +1372,7 @@
 // 0x0041185c  510 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceImageDatas:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceImageDatas:(id)setReferenceImageDatas { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0041186c  506 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1382,7 +1382,7 @@
 // 0x00411878  503 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceImageTitle:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceImageTitle:(id)setReferenceImageTitle { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411884  500 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1392,7 +1392,7 @@
 // 0x00411890  497 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferencePreviewImages:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferencePreviewImages:(id)setReferencePreviewImages { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004118a0  493 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1402,7 +1402,7 @@
 // 0x004118ac  490 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setReferenceImageToken:(unsigned long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setReferenceImageToken:(unsigned long long)setReferenceImageToken { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004118b8  487 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1412,7 +1412,7 @@
 // 0x004118c4  484 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setGenerating:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setGenerating:(BOOL)setGenerating { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004118d0  481 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1422,7 +1422,7 @@
 // 0x004118dc  478 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setKeyboardInset:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setKeyboardInset:(double)setKeyboardInset { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004118e8  475 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1432,7 +1432,7 @@
 // 0x004118f4  472 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setLastLayoutBounds:(struct CGRect)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLastLayoutBounds:(struct CGRect)setLastLayoutBounds { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411900  469 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1442,7 +1442,7 @@
 // 0x0041190c  466 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setLastLayoutKeyboardInset:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLastLayoutKeyboardInset:(double)setLastLayoutKeyboardInset { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411918  463 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1452,7 +1452,7 @@
 // 0x00411924  460 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setCoverGeneratingVisualActive:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCoverGeneratingVisualActive:(BOOL)setCoverGeneratingVisualActive { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411930  457 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1462,7 +1462,7 @@
 // 0x0041193c  454 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setDecorativeAnimationsPaused:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDecorativeAnimationsPaused:(BOOL)setDecorativeAnimationsPaused { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411948  451 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1472,7 +1472,7 @@
 // 0x00411954  448 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setForceScrollToBottomOnNextLayout:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setForceScrollToBottomOnNextLayout:(BOOL)setForceScrollToBottomOnNextLayout { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411960  445 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1482,7 +1482,7 @@
 // 0x0041196c  442 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setProgressTickerActive:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setProgressTickerActive:(BOOL)setProgressTickerActive { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411978  439 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1492,7 +1492,7 @@
 // 0x00411984  436 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setSuppressMessageLayoutUntilInitialPass:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSuppressMessageLayoutUntilInitialPass:(BOOL)setSuppressMessageLayoutUntilInitialPass { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00411990  433 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1502,7 +1502,7 @@
 // 0x0041199c  430 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setNextGenerationCountOverride:(long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNextGenerationCountOverride:(long long)setNextGenerationCountOverride { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004119a8  427 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
@@ -1512,7 +1512,7 @@
 // 0x004119b4  424 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_destroyWeak, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_retain
--(void)setNextGenerationQualityOverride:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNextGenerationQualityOverride:(id)setNextGenerationQualityOverride { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004119c0  421 条指令
 // 消息: arrayWithObjects:count:, isEqualToString:

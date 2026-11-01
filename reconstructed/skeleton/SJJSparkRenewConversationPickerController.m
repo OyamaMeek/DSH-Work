@@ -17,29 +17,29 @@
 
 // 0x004a7bcc  3 条指令
 // 消息: refreshSearchResults
--(void)updateSearchResultsForSearchController:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)updateSearchResultsForSearchController:(id)updateSearchResultsForSearchController { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a7bd0  2 条指令
--(long long)numberOfSectionsInTableView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a7bd8  28 条指令
 // 消息: count
 // C 调用: _objc_release
--(long long)tableView:(id)numberOfRowsInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a7c58  9 条指令
--(double)tableView:(id)heightForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a7cb8  502 条指令
 // 字符串: "sjj.spark.picker.loading", "sjj.spark.picker.item", "sjj.spark.picker.empty"
 // 消息: dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, textLabel, setText:, detailTextLabel, setSelectionStyle:, setAccessoryType:, count, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, length, configureWithName:subtitle:avatarURL:seed:primaryBadge:secondaryBadge:alreadyAdded:, deselectRowAtIndexPath:animated:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_unsafeClaimAutoreleasedReturnValue, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(id)tableView:(id)cellForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a8178  198 条指令
 // 消息: deselectRowAtIndexPath:animated:, count, row, objectAtIndexedSubscript:, onPick, navigationController, popViewControllerAnimated:, objectForKeyedSubscript:, length, initWithConversationID:, setOnDidChange:, pushViewController:animated:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_unsafeClaimAutoreleasedReturnValue, __Unwind_Resume, _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_alloc, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)tableView:(id)didSelectRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a8300  100 条指令
 // 消息: objectForKeyedSubscript:, length, initWithConversationID:, setOnDidChange:, navigationController, pushViewController:animated:
@@ -49,7 +49,7 @@
 // 0x004a830c  97 条指令
 // 消息: objectForKeyedSubscript:, length, initWithConversationID:, setOnDidChange:, navigationController, pushViewController:animated:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(void)setOnPick:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOnPick:(id /* block */)setOnPick { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x004a8318  94 条指令
 // 消息: objectForKeyedSubscript:, length, initWithConversationID:, setOnDidChange:, navigationController, pushViewController:animated:

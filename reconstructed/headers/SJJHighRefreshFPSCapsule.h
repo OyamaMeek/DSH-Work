@@ -6,64 +6,66 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJHighRefreshFPSCapsule : UIButton <UIGestureRecognizerDelegate>
 {
-    B _cyclingColors;
-    UIVisualEffectView _glassView;
-    UIView _pulseRing;
-    UIView _redMarker;
-    UILabel _label;
-    q _appliedMaterialMode;
+    BOOL _cyclingColors;
+    UIVisualEffectView * _glassView;
+    UIView * _pulseRing;
+    UIView * _redMarker;
+    UILabel * _label;
+    long long _appliedMaterialMode;
 }
 
-@property (strong, nonatomic) UIVisualEffectView glassView;
+@property (strong, nonatomic) UIVisualEffectView * glassView;
 
-@property (strong, nonatomic) UIView pulseRing;
+@property (strong, nonatomic) UIView * pulseRing;
 
-@property (strong, nonatomic) UIView redMarker;
+@property (strong, nonatomic) UIView * redMarker;
 
-@property (strong, nonatomic) UILabel label;
+@property (strong, nonatomic) UILabel * label;
 
 @property (nonatomic) long long appliedMaterialMode;
 
 @property (nonatomic) BOOL cyclingColors;
 
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
-
--(id)initWithFrame:(struct CGRect)arg1;
--(BOOL)pointInside:(struct CGPoint)withEvent:(id)arg2;
--(id)hitTest:(struct CGPoint)withEvent:(id)arg2;
--(BOOL)gestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+-(id)initWithFrame:(struct CGRect)initWithFrame;
+-(BOOL)pointInside:(struct CGPoint)pointInside withEvent:(id)withEvent;
+-(id)hitTest:(struct CGPoint)hitTest withEvent:(id)withEvent;
+-(BOOL)gestureRecognizer:(id)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)shouldRecognizeSimultaneouslyWithGestureRecognizer;
 -(BOOL)accessibilityActivate;
--(void)sjj_configurationTapped:(id)arg1;
--(void)sjj_configurationLongPressed:(id)arg1;
+-(void)sjj_configurationTapped:(id)sjj_configurationTapped;
+-(void)sjj_configurationLongPressed:(id)sjj_configurationLongPressed;
 -(void)sjj_applyTopChannelMaterial;
 -(void)layoutSubviews;
 -(void)sjj_refreshConfigurationState;
--(void)sjj_updateColorsAtTime:(double)arg1;
--(void)sjj_applyAnimationFrameRateRange:(struct CAFrameRateRange)arg1;
+-(void)sjj_updateColorsAtTime:(double)sjj_updateColorsAtTime;
+-(void)sjj_applyAnimationFrameRateRange:(struct CAFrameRateRange)sjj_applyAnimationFrameRateRange;
 -(void)didMoveToWindow;
 -(void)sjj_updateIndicatorAnimation;
--(void)traitCollectionDidChange:(id)arg1;
+-(void)traitCollectionDidChange:(id)traitCollectionDidChange;
 -(id)glassView;
--(void)setGlassView:(id)arg1;
+-(void)setGlassView:(id)setGlassView;
 -(id)pulseRing;
--(void)setPulseRing:(id)arg1;
+-(void)setPulseRing:(id)setPulseRing;
 -(id)redMarker;
--(void)setRedMarker:(id)arg1;
+-(void)setRedMarker:(id)setRedMarker;
 -(id)label;
--(void)setLabel:(id)arg1;
+-(void)setLabel:(id)setLabel;
 -(long long)appliedMaterialMode;
--(void)setAppliedMaterialMode:(long long)arg1;
+-(void)setAppliedMaterialMode:(long long)setAppliedMaterialMode;
 -(BOOL)cyclingColors;
--(void)setCyclingColors:(BOOL)arg1;
--(void).cxx_destruct;
+-(void)setCyclingColors:(BOOL)setCyclingColors;
 
 @end

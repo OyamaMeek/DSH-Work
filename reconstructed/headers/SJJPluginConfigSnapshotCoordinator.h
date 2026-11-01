@@ -6,18 +6,29 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJPluginConfigSnapshotCoordinator : NSObject <UIDocumentPickerDelegate>
 {
-    B _exporting;
-    B _includeDeviceMetadataForExport;
-    B _pickerActive;
-    B _operationInProgress;
-    UIViewController _hostController;
-    NSString _temporaryExportPath;
+    BOOL _exporting;
+    BOOL _includeDeviceMetadataForExport;
+    BOOL _pickerActive;
+    BOOL _operationInProgress;
+    __weak UIViewController * _hostController;
+    NSString * _temporaryExportPath;
 }
 
-@property (weak, nonatomic) UIViewController hostController;
+@property (weak, nonatomic) UIViewController * hostController;
 
 @property (nonatomic) BOOL exporting;
 
@@ -27,15 +38,7 @@
 
 @property (nonatomic) BOOL operationInProgress;
 
-@property (copy, nonatomic) NSString temporaryExportPath;
-
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
+@property (copy, nonatomic) NSString * temporaryExportPath;
 
 -(id)presenter;
 -(void)finishPicker;
@@ -45,23 +48,22 @@
 -(void)confirmClear;
 -(void)clearConfiguration;
 -(void)exportConfiguration;
--(void)exportConfigurationIncludingDeviceMetadata:(BOOL)arg1;
+-(void)exportConfigurationIncludingDeviceMetadata:(BOOL)exportConfigurationIncludingDeviceMetadata;
 -(void)presentImporter;
--(void)documentPicker:(id)didPickDocumentsAtURLs:(id)arg2;
--(void)documentPickerWasCancelled:(id)arg1;
--(void)importData:(id)arg1;
+-(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
+-(void)documentPickerWasCancelled:(id)documentPickerWasCancelled;
+-(void)importData:(id)importData;
 -(id)hostController;
--(void)setHostController:(id)arg1;
+-(void)setHostController:(id)setHostController;
 -(BOOL)exporting;
--(void)setExporting:(BOOL)arg1;
+-(void)setExporting:(BOOL)setExporting;
 -(BOOL)includeDeviceMetadataForExport;
--(void)setIncludeDeviceMetadataForExport:(BOOL)arg1;
+-(void)setIncludeDeviceMetadataForExport:(BOOL)setIncludeDeviceMetadataForExport;
 -(BOOL)pickerActive;
--(void)setPickerActive:(BOOL)arg1;
+-(void)setPickerActive:(BOOL)setPickerActive;
 -(BOOL)operationInProgress;
--(void)setOperationInProgress:(BOOL)arg1;
+-(void)setOperationInProgress:(BOOL)setOperationInProgress;
 -(id)temporaryExportPath;
--(void)setTemporaryExportPath:(id)arg1;
--(void).cxx_destruct;
+-(void)setTemporaryExportPath:(id)setTemporaryExportPath;
 
 @end

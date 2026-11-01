@@ -1,10 +1,10 @@
-# siwenjiajia.dylib 源码重建进度
+# siwenjiajia.dylib 重建与 Theos 工程进度
 
-- [x] 解析 chained fixups 与 ObjC 元数据：137 类、4012 方法、1018 ivar、1077 属性；imp 与函数起始表 100% 匹配。
-- [x] 还原 4093 个选择子 trampoline，把 `bl thunk` 翻译成 `objc_msgSend <selector>`。
-- [x] 生成 137 个头文件、137 个实现骨架、4012 个方法的 radare2 伪代码（129 个类文件 + 关键 C 函数）。
-- [x] 生成索引：methods.csv、classes.csv、selectors.txt、strings.txt、keys.md、endpoints.md。
-- [x] 撰写 5 篇 walkthrough：授权、面板与 SVIP、媒体、AI、注入入口。
-- [x] 头文件 lint 0 异常行。
-- [ ] 不可直接编译：缺编译期常量、Category 归属与被内联辅助函数；如需可移植代码，要按 walkthrough 逐个模块重写。
+- [x] 重建 137 类接口、4012 方法伪代码、索引与 5 篇 walkthrough（上一阶段）。
+- [x] 生成 `sjj-theos` Theos 工程：137 头文件、131 个可编译实现骨架、入口与钩子安装器。
+- [x] 修正类型编码解析、多参数方法声明、weak ivar、C 数组 ivar、跨类前向声明。
+- [x] 逐文件语法检查 133 个源文件 0 错误。
+- [x] `make package` 完整构建通过，产出 406 KB deb（arm64 + arm64e fat dylib）。
+- [ ] 功能实现待填：按 walkthrough 顺序补授权、面板、媒体、AI 四个模块。
+- [ ] 真机安装与运行未验证（无 iPhone 设备）。
 - [x] 记录 CHANGELOG、归档对话、提交推送。

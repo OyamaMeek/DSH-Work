@@ -6,100 +6,111 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJVoicePackageViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIDocumentPickerDelegate, AVAudioPlayerDelegate, UITextFieldDelegate, UISearchBarDelegate>
 {
-    B _selectionMode;
-    B _commentSelectionMode;
-    B _voiceEmojiSelectionMode;
-    B _externalAudioSelectionMode;
-    UITableView _tableView;
-    UITextField _searchField;
-    UIView _searchContainer;
-    UISearchBar _systemSearchBar;
-    UIView _headerView;
-    UIView _bottomBar;
-    UILabel _titleLabel;
-    UILabel _pathLabel;
-    UILabel _emptyLabel;
-    UIButton _selectButton;
-    UIButton _importButton;
-    UIButton _folderButton;
-    UIButton _durationButton;
-    UIView _quickActionsView;
-    UIButton _selectAllButton;
-    UIButton _moveButton;
-    UIButton _removeButton;
-    CAGradientLayer _backgroundGradient;
-    UIBarButtonItem _nativeSelectItem;
-    UIBarButtonItem _nativeSelectAllItem;
-    UIBarButtonItem _nativeMoveItem;
-    UIBarButtonItem _nativeDeleteItem;
-    NSArray _items;
-    NSString _currentDirectory;
-    NSString _query;
-    NSMutableSet _selectedPaths;
+    BOOL _selectionMode;
+    BOOL _commentSelectionMode;
+    BOOL _voiceEmojiSelectionMode;
+    BOOL _externalAudioSelectionMode;
+    UITableView * _tableView;
+    UITextField * _searchField;
+    UIView * _searchContainer;
+    UISearchBar * _systemSearchBar;
+    UIView * _headerView;
+    UIView * _bottomBar;
+    UILabel * _titleLabel;
+    UILabel * _pathLabel;
+    UILabel * _emptyLabel;
+    UIButton * _selectButton;
+    UIButton * _importButton;
+    UIButton * _folderButton;
+    UIButton * _durationButton;
+    UIView * _quickActionsView;
+    UIButton * _selectAllButton;
+    UIButton * _moveButton;
+    UIButton * _removeButton;
+    CAGradientLayer * _backgroundGradient;
+    UIBarButtonItem * _nativeSelectItem;
+    UIBarButtonItem * _nativeSelectAllItem;
+    UIBarButtonItem * _nativeMoveItem;
+    UIBarButtonItem * _nativeDeleteItem;
+    NSArray * _items;
+    NSString * _currentDirectory;
+    NSString * _query;
+    NSMutableSet * _selectedPaths;
     id /* block */ _commentSelectionHandler;
     id /* block */ _voiceEmojiSelectionHandler;
-    NSString _externalAudioSelectionTitle;
+    NSString * _externalAudioSelectionTitle;
     id /* block */ _externalAudioSelectionHandler;
-    NSString _conversationID;
+    NSString * _conversationID;
     id _conversation;
-    AVAudioPlayer _player;
-    NSString _playingPath;
+    AVAudioPlayer * _player;
+    NSString * _playingPath;
 }
 
-@property (strong, nonatomic) UITableView tableView;
+@property (strong, nonatomic) UITableView * tableView;
 
-@property (strong, nonatomic) UITextField searchField;
+@property (strong, nonatomic) UITextField * searchField;
 
-@property (strong, nonatomic) UIView searchContainer;
+@property (strong, nonatomic) UIView * searchContainer;
 
-@property (strong, nonatomic) UISearchBar systemSearchBar;
+@property (strong, nonatomic) UISearchBar * systemSearchBar;
 
-@property (strong, nonatomic) UIView headerView;
+@property (strong, nonatomic) UIView * headerView;
 
-@property (strong, nonatomic) UIView bottomBar;
+@property (strong, nonatomic) UIView * bottomBar;
 
-@property (strong, nonatomic) UILabel titleLabel;
+@property (strong, nonatomic) UILabel * titleLabel;
 
-@property (strong, nonatomic) UILabel pathLabel;
+@property (strong, nonatomic) UILabel * pathLabel;
 
-@property (strong, nonatomic) UILabel emptyLabel;
+@property (strong, nonatomic) UILabel * emptyLabel;
 
-@property (strong, nonatomic) UIButton selectButton;
+@property (strong, nonatomic) UIButton * selectButton;
 
-@property (strong, nonatomic) UIButton importButton;
+@property (strong, nonatomic) UIButton * importButton;
 
-@property (strong, nonatomic) UIButton folderButton;
+@property (strong, nonatomic) UIButton * folderButton;
 
-@property (strong, nonatomic) UIButton durationButton;
+@property (strong, nonatomic) UIButton * durationButton;
 
-@property (strong, nonatomic) UIView quickActionsView;
+@property (strong, nonatomic) UIView * quickActionsView;
 
-@property (strong, nonatomic) UIButton selectAllButton;
+@property (strong, nonatomic) UIButton * selectAllButton;
 
-@property (strong, nonatomic) UIButton moveButton;
+@property (strong, nonatomic) UIButton * moveButton;
 
-@property (strong, nonatomic) UIButton removeButton;
+@property (strong, nonatomic) UIButton * removeButton;
 
-@property (strong, nonatomic) CAGradientLayer backgroundGradient;
+@property (strong, nonatomic) CAGradientLayer * backgroundGradient;
 
-@property (strong, nonatomic) UIBarButtonItem nativeSelectItem;
+@property (strong, nonatomic) UIBarButtonItem * nativeSelectItem;
 
-@property (strong, nonatomic) UIBarButtonItem nativeSelectAllItem;
+@property (strong, nonatomic) UIBarButtonItem * nativeSelectAllItem;
 
-@property (strong, nonatomic) UIBarButtonItem nativeMoveItem;
+@property (strong, nonatomic) UIBarButtonItem * nativeMoveItem;
 
-@property (strong, nonatomic) UIBarButtonItem nativeDeleteItem;
+@property (strong, nonatomic) UIBarButtonItem * nativeDeleteItem;
 
-@property (copy, nonatomic) NSArray items;
+@property (copy, nonatomic) NSArray * items;
 
-@property (copy, nonatomic) NSString currentDirectory;
+@property (copy, nonatomic) NSString * currentDirectory;
 
-@property (copy, nonatomic) NSString query;
+@property (copy, nonatomic) NSString * query;
 
-@property (strong, nonatomic) NSMutableSet selectedPaths;
+@property (strong, nonatomic) NSMutableSet * selectedPaths;
 
 @property (nonatomic) BOOL selectionMode;
 
@@ -113,158 +124,149 @@
 
 @property (nonatomic) BOOL externalAudioSelectionMode;
 
-@property (copy, nonatomic) NSString externalAudioSelectionTitle;
+@property (copy, nonatomic) NSString * externalAudioSelectionTitle;
 
 @property (copy, nonatomic) id /* block */ externalAudioSelectionHandler;
 
-@property (copy, nonatomic) NSString conversationID;
+@property (copy, nonatomic) NSString * conversationID;
 
 @property (strong, nonatomic) id conversation;
 
-@property (strong, nonatomic) AVAudioPlayer player;
+@property (strong, nonatomic) AVAudioPlayer * player;
 
-@property (copy, nonatomic) NSString playingPath;
+@property (copy, nonatomic) NSString * playingPath;
 
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
-
--(id)initForCommentSelectionWithCompletion:(id /* block */)arg1;
--(id)initForVoiceEmojiSelectionWithCompletion:(id /* block */)arg1;
--(id)initForExternalAudioSelectionWithTitle:(id)completion:(id /* block */)arg2;
+-(id)initForCommentSelectionWithCompletion:(id /* block */)initForCommentSelectionWithCompletion;
+-(id)initForVoiceEmojiSelectionWithCompletion:(id /* block */)initForVoiceEmojiSelectionWithCompletion;
+-(id)initForExternalAudioSelectionWithTitle:(id)initForExternalAudioSelectionWithTitle completion:(id /* block */)completion;
 -(void)viewDidLoad;
 -(void)viewDidLayoutSubviews;
 -(void)buildSystemManagerUI;
--(void)viewDidAppear:(BOOL)arg1;
--(void)viewDidDisappear:(BOOL)arg1;
+-(void)viewDidAppear:(BOOL)viewDidAppear;
+-(void)viewDidDisappear:(BOOL)viewDidDisappear;
 -(void)buildManagerUI;
--(id)managerIconButton:(id)action:(SEL)arg2;
--(id)managerCapsuleButton:(id)symbol:(id)action:(SEL)color:(id)arg4;
+-(id)managerIconButton:(id)managerIconButton action:(SEL)action;
+-(id)managerCapsuleButton:(id)managerCapsuleButton symbol:(id)symbol action:(SEL)action color:(id)color;
 -(BOOL)isAtRootDirectory;
 -(void)reloadVoiceFiles;
--(void)searchTextChanged:(id)arg1;
--(void)searchBar:(id)textDidChange:(id)arg2;
--(void)searchBarSearchButtonClicked:(id)arg1;
--(BOOL)textFieldShouldReturn:(id)arg1;
--(long long)numberOfSectionsInTableView:(id)arg1;
--(long long)tableView:(id)numberOfRowsInSection:(long long)arg2;
--(id)tableView:(id)titleForHeaderInSection:(long long)arg2;
--(BOOL)isSystemManagementIndexPath:(id)arg1;
--(id)tableView:(id)cellForRowAtIndexPath:(id)arg2;
--(double)tableView:(id)heightForRowAtIndexPath:(id)arg2;
--(void)tableView:(id)didSelectRowAtIndexPath:(id)arg2;
--(id)voiceActionsViewForPath:(id)arg1;
--(void)previewRowButtonTapped:(id)arg1;
--(void)sendRowButtonTapped:(id)arg1;
--(void)chooseVoiceEmojiPath:(id)arg1;
--(void)chooseCommentVoicePath:(id)arg1;
--(void)presentPromptTitle:(id)message:(id)initial:(id)placeholder:(id)keyboard:(long long)completion:(id /* block */)arg6;
--(void)presentActionCardTitle:(id)actions:(id)arg2;
--(void)showItemActionsForPath:(id)arg1;
--(void)showFolderActionsForPath:(id)arg1;
--(id)tableView:(id)contextMenuConfigurationForRowAtIndexPath:(id)point:(struct CGPoint)arg3;
--(id)tableView:(id)trailingSwipeActionsConfigurationForRowAtIndexPath:(id)arg2;
+-(void)searchTextChanged:(id)searchTextChanged;
+-(void)searchBar:(id)searchBar textDidChange:(id)textDidChange;
+-(void)searchBarSearchButtonClicked:(id)searchBarSearchButtonClicked;
+-(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn;
+-(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView;
+-(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection;
+-(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection;
+-(BOOL)isSystemManagementIndexPath:(id)isSystemManagementIndexPath;
+-(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath;
+-(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath;
+-(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath;
+-(id)voiceActionsViewForPath:(id)voiceActionsViewForPath;
+-(void)previewRowButtonTapped:(id)previewRowButtonTapped;
+-(void)sendRowButtonTapped:(id)sendRowButtonTapped;
+-(void)chooseVoiceEmojiPath:(id)chooseVoiceEmojiPath;
+-(void)chooseCommentVoicePath:(id)chooseCommentVoicePath;
+-(void)presentPromptTitle:(id)presentPromptTitle message:(id)message initial:(id)initial placeholder:(id)placeholder keyboard:(long long)keyboard completion:(id /* block */)completion;
+-(void)presentActionCardTitle:(id)presentActionCardTitle actions:(id)actions;
+-(void)showItemActionsForPath:(id)showItemActionsForPath;
+-(void)showFolderActionsForPath:(id)showFolderActionsForPath;
+-(id)tableView:(id)tableView contextMenuConfigurationForRowAtIndexPath:(id)contextMenuConfigurationForRowAtIndexPath point:(struct CGPoint)point;
+-(id)tableView:(id)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(id)trailingSwipeActionsConfigurationForRowAtIndexPath;
 -(void)showCreateMenu;
--(id)safeName:(id)fallback:(id)arg2;
--(id)uniqueDestinationForName:(id)inDirectory:(id)arg2;
+-(id)safeName:(id)safeName fallback:(id)fallback;
+-(id)uniqueDestinationForName:(id)uniqueDestinationForName inDirectory:(id)inDirectory;
 -(void)createFolder;
--(void)renamePath:(id)arg1;
--(void)confirmSendPath:(id)arg1;
--(void)confirmDeletePaths:(id)arg1;
+-(void)renamePath:(id)renamePath;
+-(void)confirmSendPath:(id)confirmSendPath;
+-(void)confirmDeletePaths:(id)confirmDeletePaths;
 -(void)toggleSelectionMode;
 -(void)refreshBottomBar;
 -(void)selectAllVisible;
 -(void)deleteSelected;
 -(id)availableFolderPaths;
 -(void)moveSelected;
--(void)playPath:(id)arg1;
--(void)audioPlayerDidFinishPlaying:(id)successfully:(BOOL)arg2;
--(void)audioPlayerDecodeErrorDidOccur:(id)error:(id)arg2;
--(void)sendPath:(id)arg1;
+-(void)playPath:(id)playPath;
+-(void)audioPlayerDidFinishPlaying:(id)audioPlayerDidFinishPlaying successfully:(BOOL)successfully;
+-(void)audioPlayerDecodeErrorDidOccur:(id)audioPlayerDecodeErrorDidOccur error:(id)error;
+-(void)sendPath:(id)sendPath;
 -(void)importVoice;
--(void)documentPicker:(id)didPickDocumentsAtURLs:(id)arg2;
+-(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs;
 -(void)setVoiceDuration;
 -(void)closePage;
 -(id)tableView;
--(void)setTableView:(id)arg1;
+-(void)setTableView:(id)setTableView;
 -(id)searchField;
--(void)setSearchField:(id)arg1;
+-(void)setSearchField:(id)setSearchField;
 -(id)searchContainer;
--(void)setSearchContainer:(id)arg1;
+-(void)setSearchContainer:(id)setSearchContainer;
 -(id)systemSearchBar;
--(void)setSystemSearchBar:(id)arg1;
+-(void)setSystemSearchBar:(id)setSystemSearchBar;
 -(id)headerView;
--(void)setHeaderView:(id)arg1;
+-(void)setHeaderView:(id)setHeaderView;
 -(id)bottomBar;
--(void)setBottomBar:(id)arg1;
+-(void)setBottomBar:(id)setBottomBar;
 -(id)titleLabel;
--(void)setTitleLabel:(id)arg1;
+-(void)setTitleLabel:(id)setTitleLabel;
 -(id)pathLabel;
--(void)setPathLabel:(id)arg1;
+-(void)setPathLabel:(id)setPathLabel;
 -(id)emptyLabel;
--(void)setEmptyLabel:(id)arg1;
+-(void)setEmptyLabel:(id)setEmptyLabel;
 -(id)selectButton;
--(void)setSelectButton:(id)arg1;
+-(void)setSelectButton:(id)setSelectButton;
 -(id)importButton;
--(void)setImportButton:(id)arg1;
+-(void)setImportButton:(id)setImportButton;
 -(id)folderButton;
--(void)setFolderButton:(id)arg1;
+-(void)setFolderButton:(id)setFolderButton;
 -(id)durationButton;
--(void)setDurationButton:(id)arg1;
+-(void)setDurationButton:(id)setDurationButton;
 -(id)quickActionsView;
--(void)setQuickActionsView:(id)arg1;
+-(void)setQuickActionsView:(id)setQuickActionsView;
 -(id)selectAllButton;
--(void)setSelectAllButton:(id)arg1;
+-(void)setSelectAllButton:(id)setSelectAllButton;
 -(id)moveButton;
--(void)setMoveButton:(id)arg1;
+-(void)setMoveButton:(id)setMoveButton;
 -(id)removeButton;
--(void)setRemoveButton:(id)arg1;
+-(void)setRemoveButton:(id)setRemoveButton;
 -(id)backgroundGradient;
--(void)setBackgroundGradient:(id)arg1;
+-(void)setBackgroundGradient:(id)setBackgroundGradient;
 -(id)nativeSelectItem;
--(void)setNativeSelectItem:(id)arg1;
+-(void)setNativeSelectItem:(id)setNativeSelectItem;
 -(id)nativeSelectAllItem;
--(void)setNativeSelectAllItem:(id)arg1;
+-(void)setNativeSelectAllItem:(id)setNativeSelectAllItem;
 -(id)nativeMoveItem;
--(void)setNativeMoveItem:(id)arg1;
+-(void)setNativeMoveItem:(id)setNativeMoveItem;
 -(id)nativeDeleteItem;
--(void)setNativeDeleteItem:(id)arg1;
+-(void)setNativeDeleteItem:(id)setNativeDeleteItem;
 -(id)items;
--(void)setItems:(id)arg1;
+-(void)setItems:(id)setItems;
 -(id)currentDirectory;
--(void)setCurrentDirectory:(id)arg1;
+-(void)setCurrentDirectory:(id)setCurrentDirectory;
 -(id)query;
--(void)setQuery:(id)arg1;
+-(void)setQuery:(id)setQuery;
 -(id)selectedPaths;
--(void)setSelectedPaths:(id)arg1;
+-(void)setSelectedPaths:(id)setSelectedPaths;
 -(BOOL)selectionMode;
--(void)setSelectionMode:(BOOL)arg1;
+-(void)setSelectionMode:(BOOL)setSelectionMode;
 -(BOOL)commentSelectionMode;
--(void)setCommentSelectionMode:(BOOL)arg1;
+-(void)setCommentSelectionMode:(BOOL)setCommentSelectionMode;
 -(id /* block */)commentSelectionHandler;
--(void)setCommentSelectionHandler:(id /* block */)arg1;
+-(void)setCommentSelectionHandler:(id /* block */)setCommentSelectionHandler;
 -(BOOL)voiceEmojiSelectionMode;
--(void)setVoiceEmojiSelectionMode:(BOOL)arg1;
+-(void)setVoiceEmojiSelectionMode:(BOOL)setVoiceEmojiSelectionMode;
 -(id /* block */)voiceEmojiSelectionHandler;
--(void)setVoiceEmojiSelectionHandler:(id /* block */)arg1;
+-(void)setVoiceEmojiSelectionHandler:(id /* block */)setVoiceEmojiSelectionHandler;
 -(BOOL)externalAudioSelectionMode;
--(void)setExternalAudioSelectionMode:(BOOL)arg1;
+-(void)setExternalAudioSelectionMode:(BOOL)setExternalAudioSelectionMode;
 -(id)externalAudioSelectionTitle;
--(void)setExternalAudioSelectionTitle:(id)arg1;
+-(void)setExternalAudioSelectionTitle:(id)setExternalAudioSelectionTitle;
 -(id /* block */)externalAudioSelectionHandler;
--(void)setExternalAudioSelectionHandler:(id /* block */)arg1;
+-(void)setExternalAudioSelectionHandler:(id /* block */)setExternalAudioSelectionHandler;
 -(id)conversationID;
--(void)setConversationID:(id)arg1;
+-(void)setConversationID:(id)setConversationID;
 -(id)conversation;
--(void)setConversation:(id)arg1;
+-(void)setConversation:(id)setConversation;
 -(id)player;
--(void)setPlayer:(id)arg1;
+-(void)setPlayer:(id)setPlayer;
 -(id)playingPath;
--(void)setPlayingPath:(id)arg1;
--(void).cxx_destruct;
+-(void)setPlayingPath:(id)setPlayingPath;
 
 @end

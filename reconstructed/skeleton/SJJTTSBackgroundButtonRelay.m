@@ -20,13 +20,13 @@
 // 字符串: "sjj_im_tts_floating_x_v1", "sjj_im_tts_floating_y_v1", "sjj_im_tts_qwen_voice_name_v1", "sjj_im_tts_volcano_voice_name_v1", "Cherry", "BV700_V2_streaming"
 // 消息: button, superview, state, center, setPanStartCenter:, bringSubviewToFront:, translationInView:, panStartCenter, safeAreaInsets, bounds, setCenter:, setFloat:forKey:, owner, setProvider:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _CGRectGetWidth, _CGRectGetHeight, _objc_release, __Unwind_Resume, _objc_opt_new, _objc_alloc
--(void)dragButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)dragButton:(id)dragButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0053c0e0  212 条指令
 // 字符串: "sjj_im_tts_qwen_voice_name_v1", "sjj_im_tts_volcano_voice_name_v1", "Cherry", "BV700_V2_streaming"
 // 消息: state, owner, setProvider:, setSelectedVoiceID:, setOnVoiceSelected:, initWithRootViewController:, setModalPresentationStyle:, initWithBarButtonSystemItem:target:action:, navigationItem, setLeftBarButtonItem:, mediumDetent, largeDetent, arrayWithObjects:count:, sheetPresentationController
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_new, _objc_alloc
--(void)openQuickVoicePicker:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)openQuickVoicePicker:(id)openQuickVoicePicker { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0053c838  28 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeWeak
@@ -34,7 +34,7 @@
 
 // 0x0053c860  18 条指令
 // C 调用: _objc_storeWeak, _objc_loadWeakRetained, _objc_autoreleaseReturnValue
--(void)setOwner:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOwner:(id)setOwner { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0053c86c  15 条指令
 // C 调用: _objc_loadWeakRetained, _objc_autoreleaseReturnValue, _objc_storeWeak
@@ -42,13 +42,13 @@
 
 // 0x0053c894  5 条指令
 // C 调用: _objc_storeWeak
--(void)setButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setButton:(id)setButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0053c8a0  2 条指令
 -(struct CGPoint)panStartCenter { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0053c8a8  2 条指令
--(void)setPanStartCenter:(struct CGPoint)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPanStartCenter:(struct CGPoint)setPanStartCenter { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0053c8b0  472 条指令
 // 字符串: "music.note", "sjj_im_tts_floating_x_v1", "sjj_im_tts_floating_y_v1", "music.note.list"

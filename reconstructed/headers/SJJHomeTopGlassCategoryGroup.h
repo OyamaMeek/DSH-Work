@@ -6,40 +6,51 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJHomeTopGlassCategoryGroup : UIView <UIGestureRecognizerDelegate>
 {
-    B _windowAnimationInFlight;
-    B _userBrowsingWindow;
-    UIButton _backgroundGlass;
-    UIButton _selectionPill;
-    UIButton _moreButton;
-    UIView _moreSeparator;
-    NSArray _definitions;
-    NSArray _buttons;
-    q _selectedIndex;
-    q _windowStart;
-    NSString _menuSignature;
-    NSString _selectionLockedTitle;
-    d _selectionIndicatorXAtCommit;
-    d _selectionCommitTime;
-    UIView _nativeIndicator;
-    CADisplayLink _indicatorDisplayLink;
-    d _indicatorDeadline;
+    BOOL _windowAnimationInFlight;
+    BOOL _userBrowsingWindow;
+    UIButton * _backgroundGlass;
+    UIButton * _selectionPill;
+    UIButton * _moreButton;
+    UIView * _moreSeparator;
+    NSArray * _definitions;
+    NSArray * _buttons;
+    long long _selectedIndex;
+    long long _windowStart;
+    NSString * _menuSignature;
+    NSString * _selectionLockedTitle;
+    double _selectionIndicatorXAtCommit;
+    double _selectionCommitTime;
+    __weak UIView * _nativeIndicator;
+    CADisplayLink * _indicatorDisplayLink;
+    double _indicatorDeadline;
     struct CGRect _lastPresentationFrame;
 }
 
-@property (strong, nonatomic) UIButton backgroundGlass;
+@property (strong, nonatomic) UIButton * backgroundGlass;
 
-@property (strong, nonatomic) UIButton selectionPill;
+@property (strong, nonatomic) UIButton * selectionPill;
 
-@property (strong, nonatomic) UIButton moreButton;
+@property (strong, nonatomic) UIButton * moreButton;
 
-@property (strong, nonatomic) UIView moreSeparator;
+@property (strong, nonatomic) UIView * moreSeparator;
 
-@property (copy, nonatomic) NSArray definitions;
+@property (copy, nonatomic) NSArray * definitions;
 
-@property (strong, nonatomic) NSArray buttons;
+@property (strong, nonatomic) NSArray * buttons;
 
 @property (nonatomic) long long selectedIndex;
 
@@ -49,73 +60,64 @@
 
 @property (nonatomic) BOOL userBrowsingWindow;
 
-@property (copy, nonatomic) NSString menuSignature;
+@property (copy, nonatomic) NSString * menuSignature;
 
-@property (copy, nonatomic) NSString selectionLockedTitle;
+@property (copy, nonatomic) NSString * selectionLockedTitle;
 
 @property (nonatomic) double selectionIndicatorXAtCommit;
 
 @property (nonatomic) double selectionCommitTime;
 
-@property (weak, nonatomic) UIView nativeIndicator;
+@property (weak, nonatomic) UIView * nativeIndicator;
 
-@property (strong, nonatomic) CADisplayLink indicatorDisplayLink;
+@property (strong, nonatomic) CADisplayLink * indicatorDisplayLink;
 
 @property (nonatomic) double indicatorDeadline;
 
 @property (nonatomic) struct CGRect lastPresentationFrame;
 
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
-
 -(long long)sjj_visibleCount;
--(void)sjj_categoryTapped:(id)arg1;
--(void)sjj_selectDefinitionAtIndex:(long long)arg1;
--(void)sjj_panned:(id)arg1;
--(BOOL)gestureRecognizerShouldBegin:(id)arg1;
--(BOOL)gestureRecognizer:(id)shouldReceiveTouch:(id)arg2;
--(void)sjj_indicatorTick:(id)arg1;
+-(void)sjj_categoryTapped:(id)sjj_categoryTapped;
+-(void)sjj_selectDefinitionAtIndex:(long long)sjj_selectDefinitionAtIndex;
+-(void)sjj_panned:(id)sjj_panned;
+-(BOOL)gestureRecognizerShouldBegin:(id)gestureRecognizerShouldBegin;
+-(BOOL)gestureRecognizer:(id)gestureRecognizer shouldReceiveTouch:(id)shouldReceiveTouch;
+-(void)sjj_indicatorTick:(id)sjj_indicatorTick;
 -(id)backgroundGlass;
--(void)setBackgroundGlass:(id)arg1;
+-(void)setBackgroundGlass:(id)setBackgroundGlass;
 -(id)selectionPill;
--(void)setSelectionPill:(id)arg1;
+-(void)setSelectionPill:(id)setSelectionPill;
 -(id)moreButton;
--(void)setMoreButton:(id)arg1;
+-(void)setMoreButton:(id)setMoreButton;
 -(id)moreSeparator;
--(void)setMoreSeparator:(id)arg1;
+-(void)setMoreSeparator:(id)setMoreSeparator;
 -(id)definitions;
--(void)setDefinitions:(id)arg1;
+-(void)setDefinitions:(id)setDefinitions;
 -(id)buttons;
--(void)setButtons:(id)arg1;
+-(void)setButtons:(id)setButtons;
 -(long long)selectedIndex;
--(void)setSelectedIndex:(long long)arg1;
+-(void)setSelectedIndex:(long long)setSelectedIndex;
 -(long long)windowStart;
--(void)setWindowStart:(long long)arg1;
+-(void)setWindowStart:(long long)setWindowStart;
 -(BOOL)windowAnimationInFlight;
--(void)setWindowAnimationInFlight:(BOOL)arg1;
+-(void)setWindowAnimationInFlight:(BOOL)setWindowAnimationInFlight;
 -(BOOL)userBrowsingWindow;
--(void)setUserBrowsingWindow:(BOOL)arg1;
+-(void)setUserBrowsingWindow:(BOOL)setUserBrowsingWindow;
 -(id)menuSignature;
--(void)setMenuSignature:(id)arg1;
+-(void)setMenuSignature:(id)setMenuSignature;
 -(id)selectionLockedTitle;
--(void)setSelectionLockedTitle:(id)arg1;
+-(void)setSelectionLockedTitle:(id)setSelectionLockedTitle;
 -(double)selectionIndicatorXAtCommit;
--(void)setSelectionIndicatorXAtCommit:(double)arg1;
+-(void)setSelectionIndicatorXAtCommit:(double)setSelectionIndicatorXAtCommit;
 -(double)selectionCommitTime;
--(void)setSelectionCommitTime:(double)arg1;
+-(void)setSelectionCommitTime:(double)setSelectionCommitTime;
 -(id)nativeIndicator;
--(void)setNativeIndicator:(id)arg1;
+-(void)setNativeIndicator:(id)setNativeIndicator;
 -(id)indicatorDisplayLink;
--(void)setIndicatorDisplayLink:(id)arg1;
+-(void)setIndicatorDisplayLink:(id)setIndicatorDisplayLink;
 -(double)indicatorDeadline;
--(void)setIndicatorDeadline:(double)arg1;
+-(void)setIndicatorDeadline:(double)setIndicatorDeadline;
 -(struct CGRect)lastPresentationFrame;
--(void)setLastPresentationFrame:(struct CGRect)arg1;
--(void).cxx_destruct;
+-(void)setLastPresentationFrame:(struct CGRect)setLastPresentationFrame;
 
 @end

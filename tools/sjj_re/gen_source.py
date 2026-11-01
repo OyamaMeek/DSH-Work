@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, "tools/sjj_re")
@@ -12,9 +13,40 @@ from typeenc import method_signature, property_decl, clean_type
 OUT = "reconstructed"
 meta = json.load(open("re_meta.json"))
 
+
+SCALAR_NAMES = {"BOOL", "id", "Class", "SEL", "void", "int", "long", "double", "float",
+                 "char", "unsigned", "short", "signed", "instancetype", "NSInteger",
+                 "NSUInteger", "CGFloat", "NSTimeInterval"}
+
+
+def _custom_types():
+    from typeenc import parse
+
+    names = set()
+    for cls in meta:
+        for iv in cls["ivars"]:
+            typ, _ = parse(iv["type"] or "@", 0)
+            base = typ.rstrip(" *").lstrip("__weak ")
+            if base and base[0].isupper() and base.isidentifier() and base not in SCALAR_NAMES:
+                names.add(base)
+        for pr in cls["properties"]:
+            attrs = (pr["attrs"] or "").split(",")
+            if not attrs or not attrs[0].startswith("T"):
+                continue
+            typ, _ = parse(attrs[0][1:], 0)
+            base = typ.rstrip(" *")
+            if base and base[0].isupper() and base.isidentifier() and base not in SCALAR_NAMES:
+                names.add(base)
+    return names
+
+
+ALL_CLASS_NAMES = sorted({c["name"] for c in meta if c["name"]} | _custom_types())
+
 os.makedirs(os.path.join(OUT, "headers"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "skeleton"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "index"), exist_ok=True)
+
+SKIP_PROPERTIES = {"hash", "superclass", "description", "debugDescription"}
 
 HEADER_NOTE = """//
 //  %s
@@ -29,6 +61,17 @@ def write_header(cls):
     lines = [HEADER_NOTE % (name + ".h", cls["address"], cls["superclass"] or "NSObject")]
     lines.append("#import <Foundation/Foundation.h>")
     lines.append("#import <UIKit/UIKit.h>")
+    lines.append("#import <PhotosUI/PhotosUI.h>")
+    lines.append("#import <Photos/Photos.h>")
+    lines.append("#import <AVKit/AVKit.h>")
+    lines.append("#import <AVFoundation/AVFoundation.h>")
+    lines.append("#import <WebKit/WebKit.h>")
+    lines.append("#import <MediaPlayer/MediaPlayer.h>")
+    lines.append("#import <ReplayKit/ReplayKit.h>")
+    lines.append("#import <CoreLocation/CoreLocation.h>")
+    lines.append("#import <LocalAuthentication/LocalAuthentication.h>")
+    lines.append("")
+    lines.append("@class " + ", ".join(ALL_CLASS_NAMES) + ";")
     lines.append("")
     lines.append("@interface %s : %s" % (name, cls["superclass"] or "NSObject"))
     if cls["protocols"]:
@@ -36,20 +79,31 @@ def write_header(cls):
         if protos:
             lines[-1] += " <%s>" % protos
     if cls["ivars"]:
+        weak_names = {p["name"] for p in cls["properties"]
+                      if p["attrs"] and "W" in p["attrs"].split(",") and p["name"]}
         lines.append("{")
         for ivar in cls["ivars"]:
             typ = clean_type(ivar["type"]) if ivar["type"] else "id"
-            lines.append("    %s %s;" % (typ, ivar["name"] or ("_ivar%d" % ivar["size"])))
+            iname = ivar["name"] or ("_ivar%d" % ivar["size"])
+            if iname[1:] in weak_names and (typ.endswith(" *") or typ in ("id", "Class")):
+                typ = "__weak " + typ
+            array_suffix = ""
+            m = re.match(r"^(.*)\[(\d+)\]$", typ)
+            if m:
+                typ, array_suffix = m.group(1), "[%s]" % m.group(2)
+            lines.append("    %s %s%s;" % (typ, iname, array_suffix))
         lines.append("}")
     for prop in cls["properties"]:
+        if prop["name"] in SKIP_PROPERTIES:
+            continue
         lines.append("")
         lines.append("%s %s;" % (property_decl(prop["attrs"]), prop["name"]))
     methods = []
     for m in cls["class_methods"]:
-        if m["name"]:
+        if m["name"] and not m["name"].startswith(".") and "{?" not in (m["types"] or ""):
             methods.append("+" + method_signature(m["name"], m["types"])[1:] + ";")
     for m in cls["methods"]:
-        if m["name"]:
+        if m["name"] and not m["name"].startswith(".") and "{?" not in (m["types"] or ""):
             methods.append(method_signature(m["name"], m["types"]) + ";")
     if methods:
         lines.append("")

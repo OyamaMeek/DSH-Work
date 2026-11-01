@@ -15,42 +15,42 @@
 // 字符串: "%ld Hz"
 // 消息: lastTimestamp, timestamp, targetTimestamp, duration, resetSamples, setLastTimestamp:, sampleIndex, setSampleIndex:, sampleCount, setSampleCount:, presentationTimestamp, displayedFPS, setDisplayedFPS:, setPresentationTimestamp:
 // C 调用: _objc_retain, _memcpy, _objc_release, _exp, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation
--(void)sjj_displayLinkTick:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)sjj_displayLinkTick:(id)sjj_displayLinkTick { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594128  2 条指令
 -(double)lastTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594130  2 条指令
--(void)setLastTimestamp:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLastTimestamp:(double)setLastTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594138  2 条指令
 -(unsigned long long)sampleCount { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594140  2 条指令
--(void)setSampleCount:(unsigned long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSampleCount:(unsigned long long)setSampleCount { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594148  2 条指令
 -(unsigned long long)sampleIndex { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594150  2 条指令
--(void)setSampleIndex:(unsigned long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSampleIndex:(unsigned long long)setSampleIndex { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594158  2 条指令
 -(double)displayedFPS { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594160  2 条指令
--(void)setDisplayedFPS:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDisplayedFPS:(double)setDisplayedFPS { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594168  2 条指令
 -(double)presentationTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594170  2 条指令
--(void)setPresentationTimestamp:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPresentationTimestamp:(double)setPresentationTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594178  2 条指令
 -(double)lastReadoutTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00594180  2 条指令
--(void)setLastReadoutTimestamp:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setLastReadoutTimestamp:(double)setLastReadoutTimestamp { /* 重建骨架，语义见 pseudocode */ }
 
 @end

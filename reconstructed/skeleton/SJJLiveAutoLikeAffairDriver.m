@@ -9,7 +9,7 @@
 -(BOOL)isDoubleDigging { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005b9204  2 条指令
--(void)setIsDoubleDigging:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setIsDoubleDigging:(BOOL)setIsDoubleDigging { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005b920c  13 条指令
 // 消息: isMainThread

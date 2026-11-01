@@ -13,7 +13,7 @@
 // 0x0060d664  104 条指令
 // 消息: synchronizationQueue
 // C 调用: _objc_retain, _dispatch_time, _objc_initWeak, _objc_retainAutoreleasedReturnValue, _objc_copyWeak, _dispatch_async, _objc_release, _objc_destroyWeak
--(void)startWithInterval:(double)leeway:(double)queue:(id)repeats:(BOOL)handler:(id /* block */)arg5 { /* 重建骨架，语义见 pseudocode */ }
+-(void)startWithInterval:(double)startWithInterval leeway:(double)leeway queue:(id)queue repeats:(BOOL)repeats handler:(id /* block */)handler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060da30  35 条指令
 // 消息: synchronizationQueue
@@ -36,27 +36,27 @@
 -(void)dealloc { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd24  2 条指令
--(void)setRunning:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRunning:(BOOL)setRunning { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd2c  2 条指令
 -(id)internalTimer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd34  5 条指令
 // C 调用: _objc_storeStrong
--(void)setInternalTimer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setInternalTimer:(id)setInternalTimer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd40  2 条指令
 -(BOOL)resumed { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd48  2 条指令
--(void)setResumed:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setResumed:(BOOL)setResumed { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd50  2 条指令
 -(id /* block */)internalHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd58  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setInternalHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setInternalHandler:(id /* block */)setInternalHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd60  2 条指令
 -(id)synchronizationQueue { /* 重建骨架，语义见 pseudocode */ }
@@ -65,7 +65,7 @@
 // 字符串: "v8@?0"
 // 消息: view, velocityInView:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_retainAutoreleasedReturnValue
--(void)setSynchronizationQueue:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSynchronizationQueue:(id)setSynchronizationQueue { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0060dd74  91 条指令
 // 字符串: "v8@?0"

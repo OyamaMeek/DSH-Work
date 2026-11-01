@@ -23,7 +23,7 @@
 // 0x00085b60  74 条指令
 // 消息: scrollView, imageView, cancelCompletion, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)viewForZoomingInScrollView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)viewForZoomingInScrollView:(id)viewForZoomingInScrollView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00085c08  32 条指令
 // 消息: cancelCompletion, dismissViewControllerAnimated:completion:
@@ -41,7 +41,7 @@
 
 // 0x000863f8  48 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setSourceImage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSourceImage:(id)setSourceImage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086408  44 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
@@ -49,7 +49,7 @@
 
 // 0x00086414  41 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCompletion:(id /* block */)setCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086420  38 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
@@ -57,7 +57,7 @@
 
 // 0x0008642c  35 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setRectCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRectCompletion:(id /* block */)setRectCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086438  32 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
@@ -65,37 +65,37 @@
 
 // 0x00086444  29 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setCancelCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCancelCompletion:(id /* block */)setCancelCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086450  26 条指令
 -(id)scrollView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008645c  23 条指令
--(void)setScrollView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setScrollView:(id)setScrollView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008646c  19 条指令
 -(id)imageView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086478  16 条指令
--(void)setImageView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImageView:(id)setImageView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086488  12 条指令
 -(id)overlayMaskLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00086494  9 条指令
--(void)setOverlayMaskLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setOverlayMaskLayer:(id)setOverlayMaskLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000864a4  5 条指令
 -(BOOL)didSetupInitialLayout { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000864b8  5 条指令
--(void)setDidSetupInitialLayout:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDidSetupInitialLayout:(BOOL)setDidSetupInitialLayout { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000864cc  5 条指令
 -(double)targetAspectRatio { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000864e0  5 条指令
--(void)setTargetAspectRatio:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTargetAspectRatio:(double)setTargetAspectRatio { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x000864f4  64 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong
@@ -103,7 +103,7 @@
 
 // 0x00086500  61 条指令
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong
--(void)setHintText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHintText:(id)setHintText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0008650c  58 条指令
 // C 调用: _objc_storeStrong

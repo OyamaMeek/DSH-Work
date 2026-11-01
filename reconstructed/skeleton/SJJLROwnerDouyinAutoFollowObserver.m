@@ -7,6 +7,6 @@
 
 // 0x002eede0  19 条指令
 // 消息: isMainThread
--(void)handleAppLifecycleTrigger:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)handleAppLifecycleTrigger:(id)handleAppLifecycleTrigger { /* 重建骨架，语义见 pseudocode */ }
 
 @end

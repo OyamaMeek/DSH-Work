@@ -8,7 +8,7 @@
 // 0x003cfa14  617 条指令
 // 消息: setUserInteractionEnabled:, clearColor, setBackgroundColor:, setAlpha:, setClipsToBounds:, layer, CGColor, setFillColor:, colorWithRed:green:blue:alpha:, setStrokeColor:, setLineCap:, setLineJoin:, setShadowColor:, setShadowOpacity:
 // C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _objc_alloc
--(id)initWithFrame:(struct CGRect)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithFrame:(struct CGRect)initWithFrame { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d064c  15 条指令
 // 消息: stopDecorativeAnimations
@@ -28,7 +28,7 @@
 // 0x003d0784  107 条指令
 // 消息: startDecorativeAnimationsIfNeeded, setHidden:, configureDecorativeLayout, animateWithDuration:delay:options:animations:completion:
 // C 调用: _objc_retainBlock, _objc_release
--(void)setWaveActive:(BOOL)animated:(BOOL)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWaveActive:(BOOL)setWaveActive animated:(BOOL)animated { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d09ac  334 条指令
 // 字符串: "v32@?0@"UIView"8Q16^B24", "AudioQueueStart"
@@ -57,7 +57,7 @@
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
 // 消息: boolForKey:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setBars:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBars:(id)setBars { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d2514  81 条指令
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
@@ -69,7 +69,7 @@
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
 // 消息: boolForKey:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setSparkles:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSparkles:(id)setSparkles { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d2530  74 条指令
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
@@ -81,7 +81,7 @@
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
 // 消息: boolForKey:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setRibbonLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRibbonLayer:(id)setRibbonLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d254c  67 条指令
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
@@ -93,7 +93,7 @@
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
 // 消息: boolForKey:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setRibbonGlowLayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRibbonGlowLayer:(id)setRibbonGlowLayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d2568  60 条指令
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
@@ -105,7 +105,7 @@
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
 // 消息: boolForKey:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setWaveActive:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setWaveActive:(BOOL)setWaveActive { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d2580  54 条指令
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
@@ -117,7 +117,7 @@
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"
 // 消息: boolForKey:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)setDecorativeAnimationsInstalled:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDecorativeAnimationsInstalled:(BOOL)setDecorativeAnimationsInstalled { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x003d2598  48 条指令
 // 字符串: "SJJ_AUDIO_WAVE_ENABLED"

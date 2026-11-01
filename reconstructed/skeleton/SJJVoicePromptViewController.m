@@ -13,11 +13,11 @@
 // 0x00515e08  121 条指令
 // 消息: buttonWithType:, setTranslatesAutoresizingMaskIntoConstraints:, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setTitle:forState:, setTitleColor:forState:, systemFontOfSize:weight:, titleLabel, setFont:, addTarget:action:forControlEvents:, confirmPrompt
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)promptButton:(id)color:(id)selector:(SEL)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)promptButton:(id)promptButton color:(id)color selector:(SEL)selector { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00515fd4  6 条指令
 // 消息: confirmPrompt
--(BOOL)textFieldShouldReturn:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00515fec  94 条指令
 // 消息: dismissalHandler, dismissViewControllerAnimated:completion:, text, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length, keyboardType, completion
@@ -35,7 +35,7 @@
 
 // 0x005161e8  29 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setPromptTitle:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPromptTitle:(id)setPromptTitle { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005161f4  26 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
@@ -43,7 +43,7 @@
 
 // 0x00516200  23 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setPromptMessage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPromptMessage:(id)setPromptMessage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051620c  20 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
@@ -51,7 +51,7 @@
 
 // 0x00516218  17 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setInitialText:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setInitialText:(id)setInitialText { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00516224  14 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
@@ -59,13 +59,13 @@
 
 // 0x00516230  11 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setPlaceholder:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPlaceholder:(id)setPlaceholder { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051623c  8 条指令
 -(long long)keyboardType { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00516248  5 条指令
--(void)setKeyboardType:(long long)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setKeyboardType:(long long)setKeyboardType { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051625c  95 条指令
 // 消息: copy
@@ -75,7 +75,7 @@
 // 0x00516268  92 条指令
 // 消息: copy
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_release, _objc_retain
--(void)setCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCompletion:(id /* block */)setCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00516274  89 条指令
 // 消息: copy
@@ -85,7 +85,7 @@
 // 0x00516280  86 条指令
 // 消息: copy
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_release, _objc_retain
--(void)setDismissalHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDismissalHandler:(id /* block */)setDismissalHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051628c  83 条指令
 // 消息: copy
@@ -95,7 +95,7 @@
 // 0x00516298  80 条指令
 // 消息: copy
 // C 调用: _objc_storeStrong, _objc_msgSendSuper2, _objc_release, _objc_retain
--(void)setSjjOverlayAttached:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSjjOverlayAttached:(BOOL)setSjjOverlayAttached { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005162a4  77 条指令
 // 消息: copy

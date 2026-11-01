@@ -13,7 +13,7 @@
 // 0x0000fdb8  61 条指令
 // 消息: copy
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeWeak, _objc_storeStrong, _objc_release
--(void)setObject:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setObject:(id)setObject { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0000fdbc  60 条指令
 // 消息: copy

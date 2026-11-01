@@ -29,7 +29,7 @@
 
 // 0x00513d2c  13 条指令
 // 消息: commitInlineDownloadRename
--(BOOL)textFieldShouldReturn:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00513d60  104 条指令
 // 消息: dismissalHandler, sjjOverlayAttached, dismissOverlayWithCompletion:, dismissViewControllerAnimated:completion:, setSjjOverlayAttached:, resignFirstResponder, willMoveToParentViewController:, animateWithDuration:animations:completion:
@@ -39,7 +39,7 @@
 // 0x00513dd4  75 条指令
 // 消息: sjjOverlayAttached, setSjjOverlayAttached:, resignFirstResponder, willMoveToParentViewController:, animateWithDuration:animations:completion:
 // C 调用: _objc_loadWeakRetained, _objc_release, _objc_storeWeak, _objc_retain
--(void)dismissOverlayWithCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)dismissOverlayWithCompletion:(id /* block */)dismissOverlayWithCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00513ffc  1404 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -49,7 +49,7 @@
 // 0x00514008  1401 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setCardTitle:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCardTitle:(id)setCardTitle { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00514014  1398 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -59,7 +59,7 @@
 // 0x00514020  1395 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setCardMessage:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCardMessage:(id)setCardMessage { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051402c  1392 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -69,7 +69,7 @@
 // 0x00514038  1389 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setDownloadFileURL:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDownloadFileURL:(id)setDownloadFileURL { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00514048  1385 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -79,7 +79,7 @@
 // 0x00514054  1382 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setDownloadFileRenameHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDownloadFileRenameHandler:(id /* block */)setDownloadFileRenameHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00514060  1379 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -89,7 +89,7 @@
 // 0x0051406c  1376 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setActions:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setActions:(id)setActions { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00514078  1373 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -99,7 +99,7 @@
 // 0x00514084  1370 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setAllowsBackgroundDismiss:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setAllowsBackgroundDismiss:(BOOL)setAllowsBackgroundDismiss { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00514090  1367 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -109,7 +109,7 @@
 // 0x0051409c  1364 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume
--(void)setDismissalHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDismissalHandler:(id /* block */)setDismissalHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005140a8  1361 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
@@ -119,7 +119,7 @@
 // 0x005140b4  1358 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:
 // C 调用: _objc_storeStrong, _objc_retainAutoreleaseReturnValue, _dispatch_once, _objc_opt_new, _objc_release, _objc_retain, _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_class, _objc_opt_isKindOfClass, __Unwind_Resume, _objc_msgSendSuper2
--(void)setSjjOverlayAttached:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSjjOverlayAttached:(BOOL)setSjjOverlayAttached { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005140c0  1355 条指令
 // 消息: sjjOverlayAttached, commitInlineDownloadRenameIfNeeded, dismissOverlayWithCompletion:, window, rootViewController, presentedViewController, dismissViewControllerAnimated:completion:, clearColor, view, setBackgroundColor:, bounds, initWithFrame:, setAutoresizingMask:, colorWithWhite:alpha:

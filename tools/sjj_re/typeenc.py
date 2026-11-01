@@ -19,7 +19,7 @@ def parse(enc, pos=0):
             end = enc.find('"', pos + 2)
             if end < 0:
                 return "id", len(enc)
-            return enc[pos + 2:end], end + 1
+            return enc[pos + 2:end] + " *", end + 1
         if pos + 1 < len(enc) and enc[pos + 1] == "?":
             return "id /* block */", pos + 2
         return "id", pos + 1
@@ -67,10 +67,8 @@ def types_list(enc):
 def clean_type(typ):
     if not typ:
         return "id"
-    if typ[0] in "@^{[":
-        out, _ = parse(typ, 0)
-        return out
-    return typ
+    out, _ = parse(typ, 0)
+    return out
 
 
 def method_signature(name, enc):
@@ -79,11 +77,15 @@ def method_signature(name, enc):
         return "-(void)%s" % name
     if ":" not in name:
         return "-(%s)%s" % (ret, name)
-    parts = name.split(":")
-    out = "-(%s)%s" % (ret, parts[0])
-    for i, part in enumerate(parts[1:]):
-        argtype = clean_type(args[i]) if i < len(args) else "id"
-        out += ":(%s)%s" % (argtype, part or ("arg%d" % (i + 1)))
+    colon_count = name.count(":")
+    segments = name.split(":")[:colon_count]
+    first = segments[0] or "arg1"
+    argtype = args[0] if args else "id"
+    out = "-(%s)%s:(%s)%s" % (ret, first, argtype, first)
+    for i in range(1, colon_count):
+        label = segments[i] if segments[i] else ("arg%d" % (i + 1))
+        argtype = args[i] if i < len(args) else "id"
+        out += " %s:(%s)%s" % (label, argtype, label)
     return out
 
 

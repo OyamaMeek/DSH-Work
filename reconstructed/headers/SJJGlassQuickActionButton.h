@@ -6,66 +6,76 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJGlassQuickActionButton : UIButton
 {
-    B _customEditing;
-    NSString _actionID;
-    UIImageView _actionIconView;
-    UILabel _actionTitleLabel;
-    UILabel _actionSubtitleLabel;
-    UIImageView _chevronView;
-    UIView _resizeHandleView;
-    CAShapeLayer _resizeHandleShapeLayer;
-    d _baseBorderWidth;
-    UIColor _baseBorderColor;
+    BOOL _customEditing;
+    NSString * _actionID;
+    UIImageView * _actionIconView;
+    UILabel * _actionTitleLabel;
+    UILabel * _actionSubtitleLabel;
+    UIImageView * _chevronView;
+    UIView * _resizeHandleView;
+    CAShapeLayer * _resizeHandleShapeLayer;
+    double _baseBorderWidth;
+    UIColor * _baseBorderColor;
 }
 
-@property (copy, nonatomic) NSString actionID;
+@property (copy, nonatomic) NSString * actionID;
 
-@property (strong, nonatomic) UIImageView actionIconView;
+@property (strong, nonatomic) UIImageView * actionIconView;
 
-@property (strong, nonatomic) UILabel actionTitleLabel;
+@property (strong, nonatomic) UILabel * actionTitleLabel;
 
-@property (strong, nonatomic) UILabel actionSubtitleLabel;
+@property (strong, nonatomic) UILabel * actionSubtitleLabel;
 
-@property (strong, nonatomic) UIImageView chevronView;
+@property (strong, nonatomic) UIImageView * chevronView;
 
-@property (strong, nonatomic) UIView resizeHandleView;
+@property (strong, nonatomic) UIView * resizeHandleView;
 
-@property (strong, nonatomic) CAShapeLayer resizeHandleShapeLayer;
+@property (strong, nonatomic) CAShapeLayer * resizeHandleShapeLayer;
 
 @property (nonatomic, getter=isCustomEditing) BOOL customEditing;
 
 @property (nonatomic) double baseBorderWidth;
 
-@property (strong, nonatomic) UIColor baseBorderColor;
+@property (strong, nonatomic) UIColor * baseBorderColor;
 
 -(void)refreshIconStyle;
--(id)initWithActionID:(id)arg1;
+-(id)initWithActionID:(id)initWithActionID;
 -(void)layoutSubviews;
--(void)applyCustomMediaAppearance:(BOOL)prefersDarkForeground:(BOOL)arg2;
--(void)setCustomEditing:(BOOL)foregroundColor:(id)arg2;
+-(void)applyCustomMediaAppearance:(BOOL)applyCustomMediaAppearance prefersDarkForeground:(BOOL)prefersDarkForeground;
+-(void)setCustomEditing:(BOOL)setCustomEditing foregroundColor:(id)foregroundColor;
 -(id)actionID;
--(void)setActionID:(id)arg1;
+-(void)setActionID:(id)setActionID;
 -(id)actionIconView;
--(void)setActionIconView:(id)arg1;
+-(void)setActionIconView:(id)setActionIconView;
 -(id)actionTitleLabel;
--(void)setActionTitleLabel:(id)arg1;
+-(void)setActionTitleLabel:(id)setActionTitleLabel;
 -(id)actionSubtitleLabel;
--(void)setActionSubtitleLabel:(id)arg1;
+-(void)setActionSubtitleLabel:(id)setActionSubtitleLabel;
 -(id)chevronView;
--(void)setChevronView:(id)arg1;
+-(void)setChevronView:(id)setChevronView;
 -(id)resizeHandleView;
--(void)setResizeHandleView:(id)arg1;
+-(void)setResizeHandleView:(id)setResizeHandleView;
 -(id)resizeHandleShapeLayer;
--(void)setResizeHandleShapeLayer:(id)arg1;
+-(void)setResizeHandleShapeLayer:(id)setResizeHandleShapeLayer;
 -(BOOL)isCustomEditing;
--(void)setCustomEditing:(BOOL)arg1;
+-(void)setCustomEditing:(BOOL)setCustomEditing;
 -(double)baseBorderWidth;
--(void)setBaseBorderWidth:(double)arg1;
+-(void)setBaseBorderWidth:(double)setBaseBorderWidth;
 -(id)baseBorderColor;
--(void)setBaseBorderColor:(id)arg1;
--(void).cxx_destruct;
+-(void)setBaseBorderColor:(id)setBaseBorderColor;
 
 @end

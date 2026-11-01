@@ -15,7 +15,7 @@
 // 字符串: "sjj_live_duration_pill", "UIGlassEffect", "sjj_live_duration_position_locked_v1"
 // 消息: setUserInteractionEnabled:, clearColor, setBackgroundColor:, setAccessibilityIdentifier:, blackColor, CGColor, layer, setShadowColor:, setShadowOpacity:, setShadowRadius:, setShadowOffset:, processInfo, isOperatingSystemAtLeastVersion:, colorWithRed:green:blue:alpha:
 // C 调用: _objc_storeWeak, _objc_destroyWeak, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutorelease, _objc_alloc, _NSClassFromString, _objc_opt_respondsToSelector, _objc_msgSend, _objc_opt_class, _objc_opt_isKindOfClass
--(void)setView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setView:(id)setView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005affb8  669 条指令
 // 字符串: "sjj_live_duration_pill", "UIGlassEffect", "sjj_live_duration_position_locked_v1"

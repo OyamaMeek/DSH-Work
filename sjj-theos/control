@@ -1,0 +1,10 @@
+Package: com.siwenjiajia.sjj
+Name: siwenjiajia
+Version: 28.55
+Architecture: iphoneos-arm
+Description: 抖音增强功能集（由二进制重建的工程骨架）
+Homepage: https://github.com/OyamaMeek/DSH-Work
+Maintainer: oyamahappa
+Author: siwenjiajia
+Section: Tweaks
+Depends: mobilesubstrate

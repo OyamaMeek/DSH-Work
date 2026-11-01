@@ -6,52 +6,63 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface AWECAAIReplyController : UIViewController <UITextViewDelegate>
 {
-    B _generating;
-    B _pluginChromeSuppressionActive;
-    NSString _seedCommentText;
-    NSData _seedImageData;
-    NSData _seedUserAvatarData;
-    UIScrollView _scrollView;
-    UIStackView _messagesStack;
-    UIView _composerBar;
-    UIView _inputPlateView;
-    UITextView _commentInputView;
-    UILabel _inputPlaceholderLabel;
-    UIButton _sendButton;
-    UILabel _counterLabel;
-    NSLayoutConstraint _composerBottomConstraint;
-    NSLayoutConstraint _inputHeightConstraint;
-    NSMutableArray _chatMessages;
-    NSString _sessionKey;
-    q _pendingAssistantMessageIndex;
+    BOOL _generating;
+    BOOL _pluginChromeSuppressionActive;
+    NSString * _seedCommentText;
+    NSData * _seedImageData;
+    NSData * _seedUserAvatarData;
+    UIScrollView * _scrollView;
+    UIStackView * _messagesStack;
+    UIView * _composerBar;
+    UIView * _inputPlateView;
+    UITextView * _commentInputView;
+    UILabel * _inputPlaceholderLabel;
+    UIButton * _sendButton;
+    UILabel * _counterLabel;
+    NSLayoutConstraint * _composerBottomConstraint;
+    NSLayoutConstraint * _inputHeightConstraint;
+    NSMutableArray * _chatMessages;
+    NSString * _sessionKey;
+    long long _pendingAssistantMessageIndex;
 }
 
-@property (strong, nonatomic) UIScrollView scrollView;
+@property (strong, nonatomic) UIScrollView * scrollView;
 
-@property (strong, nonatomic) UIStackView messagesStack;
+@property (strong, nonatomic) UIStackView * messagesStack;
 
-@property (strong, nonatomic) UIView composerBar;
+@property (strong, nonatomic) UIView * composerBar;
 
-@property (strong, nonatomic) UIView inputPlateView;
+@property (strong, nonatomic) UIView * inputPlateView;
 
-@property (strong, nonatomic) UITextView commentInputView;
+@property (strong, nonatomic) UITextView * commentInputView;
 
-@property (strong, nonatomic) UILabel inputPlaceholderLabel;
+@property (strong, nonatomic) UILabel * inputPlaceholderLabel;
 
-@property (strong, nonatomic) UIButton sendButton;
+@property (strong, nonatomic) UIButton * sendButton;
 
-@property (strong, nonatomic) UILabel counterLabel;
+@property (strong, nonatomic) UILabel * counterLabel;
 
-@property (strong, nonatomic) NSLayoutConstraint composerBottomConstraint;
+@property (strong, nonatomic) NSLayoutConstraint * composerBottomConstraint;
 
-@property (strong, nonatomic) NSLayoutConstraint inputHeightConstraint;
+@property (strong, nonatomic) NSLayoutConstraint * inputHeightConstraint;
 
-@property (strong, nonatomic) NSMutableArray chatMessages;
+@property (strong, nonatomic) NSMutableArray * chatMessages;
 
-@property (copy, nonatomic) NSString sessionKey;
+@property (copy, nonatomic) NSString * sessionKey;
 
 @property (nonatomic) long long pendingAssistantMessageIndex;
 
@@ -59,83 +70,74 @@
 
 @property (nonatomic) BOOL pluginChromeSuppressionActive;
 
-@property (copy, nonatomic) NSString seedCommentText;
+@property (copy, nonatomic) NSString * seedCommentText;
 
-@property (strong, nonatomic) NSData seedImageData;
+@property (strong, nonatomic) NSData * seedImageData;
 
-@property (strong, nonatomic) NSData seedUserAvatarData;
-
-@property (readonly) unsigned long long hash;
-
-@property (readonly) Class superclass;
-
-@property (readonly, copy) NSString description;
-
-@property (readonly, copy) NSString debugDescription;
+@property (strong, nonatomic) NSData * seedUserAvatarData;
 
 -(id)resolvedUserAvatarImage;
--(id)initWithSeedComment:(id)arg1;
--(id)initWithSeedComment:(id)imageData:(id)arg2;
+-(id)initWithSeedComment:(id)initWithSeedComment;
+-(id)initWithSeedComment:(id)initWithSeedComment imageData:(id)imageData;
 -(void)dealloc;
 -(void)viewDidLoad;
--(void)viewWillAppear:(BOOL)arg1;
--(void)viewWillDisappear:(BOOL)arg1;
+-(void)viewWillAppear:(BOOL)viewWillAppear;
+-(void)viewWillDisappear:(BOOL)viewWillDisappear;
 -(void)buildUI;
 -(void)seedConversationIfNeeded;
--(id)textBubbleForText:(id)user:(BOOL)arg2;
--(id)contextBubbleForImage:(id)caption:(id)arg2;
+-(id)textBubbleForText:(id)textBubbleForText user:(BOOL)user;
+-(id)contextBubbleForImage:(id)contextBubbleForImage caption:(id)caption;
 -(id)heroCardView;
--(id)bubbleViewForMessage:(id)arg1;
--(void)appendMessage:(id)arg1;
+-(id)bubbleViewForMessage:(id)bubbleViewForMessage;
+-(void)appendMessage:(id)appendMessage;
 -(void)removePendingAssistantBubbleIfNeeded;
--(void)scrollToBottomAnimated:(BOOL)arg1;
+-(void)scrollToBottomAnimated:(BOOL)scrollToBottomAnimated;
 -(void)openSettings;
 -(void)showTutorial;
 -(void)closeSelf;
--(void)setPluginChromeSuppressed:(BOOL)arg1;
+-(void)setPluginChromeSuppressed:(BOOL)setPluginChromeSuppressed;
 -(void)dismissKeyboard;
--(void)handleKeyboardWillHide:(id)arg1;
--(void)handleKeyboardFrameChange:(id)arg1;
--(void)textViewDidChange:(id)arg1;
--(void)textViewDidBeginEditing:(id)arg1;
--(BOOL)textView:(id)shouldChangeTextInRange:(struct _NSRange)replacementText:(id)arg3;
--(void)setGenerating:(BOOL)arg1;
+-(void)handleKeyboardWillHide:(id)handleKeyboardWillHide;
+-(void)handleKeyboardFrameChange:(id)handleKeyboardFrameChange;
+-(void)textViewDidChange:(id)textViewDidChange;
+-(void)textViewDidBeginEditing:(id)textViewDidBeginEditing;
+-(BOOL)textView:(id)textView shouldChangeTextInRange:(struct _NSRange)shouldChangeTextInRange replacementText:(id)replacementText;
+-(void)setGenerating:(BOOL)setGenerating;
 -(void)handleSendTap;
 -(id)seedCommentText;
--(void)setSeedCommentText:(id)arg1;
+-(void)setSeedCommentText:(id)setSeedCommentText;
 -(id)seedImageData;
--(void)setSeedImageData:(id)arg1;
+-(void)setSeedImageData:(id)setSeedImageData;
 -(id)seedUserAvatarData;
--(void)setSeedUserAvatarData:(id)arg1;
+-(void)setSeedUserAvatarData:(id)setSeedUserAvatarData;
 -(id)scrollView;
--(void)setScrollView:(id)arg1;
+-(void)setScrollView:(id)setScrollView;
 -(id)messagesStack;
--(void)setMessagesStack:(id)arg1;
+-(void)setMessagesStack:(id)setMessagesStack;
 -(id)composerBar;
--(void)setComposerBar:(id)arg1;
+-(void)setComposerBar:(id)setComposerBar;
 -(id)inputPlateView;
--(void)setInputPlateView:(id)arg1;
+-(void)setInputPlateView:(id)setInputPlateView;
 -(id)commentInputView;
--(void)setCommentInputView:(id)arg1;
+-(void)setCommentInputView:(id)setCommentInputView;
 -(id)inputPlaceholderLabel;
--(void)setInputPlaceholderLabel:(id)arg1;
+-(void)setInputPlaceholderLabel:(id)setInputPlaceholderLabel;
 -(id)sendButton;
--(void)setSendButton:(id)arg1;
+-(void)setSendButton:(id)setSendButton;
 -(id)counterLabel;
--(void)setCounterLabel:(id)arg1;
+-(void)setCounterLabel:(id)setCounterLabel;
 -(id)composerBottomConstraint;
--(void)setComposerBottomConstraint:(id)arg1;
+-(void)setComposerBottomConstraint:(id)setComposerBottomConstraint;
 -(id)inputHeightConstraint;
--(void)setInputHeightConstraint:(id)arg1;
+-(void)setInputHeightConstraint:(id)setInputHeightConstraint;
 -(id)chatMessages;
--(void)setChatMessages:(id)arg1;
+-(void)setChatMessages:(id)setChatMessages;
 -(id)sessionKey;
--(void)setSessionKey:(id)arg1;
+-(void)setSessionKey:(id)setSessionKey;
 -(long long)pendingAssistantMessageIndex;
--(void)setPendingAssistantMessageIndex:(long long)arg1;
+-(void)setPendingAssistantMessageIndex:(long long)setPendingAssistantMessageIndex;
 -(BOOL)generating;
 -(BOOL)pluginChromeSuppressionActive;
--(void)setPluginChromeSuppressionActive:(BOOL)arg1;
--(void).cxx_destruct;
+-(void)setPluginChromeSuppressionActive:(BOOL)setPluginChromeSuppressionActive;
 
 @end

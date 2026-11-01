@@ -8,6 +8,6 @@
 // 0x00344750  79 条指令
 // 消息: timestamp, setPaused:, layer, removeAllAnimations, setAlpha:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)tick:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)tick:(id)tick { /* 重建骨架，语义见 pseudocode */ }
 
 @end

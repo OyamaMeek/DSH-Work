@@ -17,3 +17,6 @@
 - class_ro.name 与 property/ivar 的字符串指针在 __DATA 中走 chained fixup 编码（高位含 next/auth 位），必须查 fixups 或用低 51 位掩码，直接读 8 字节会拿到无效地址。
 - radare2 的 pdc 输出里选择子 trampoline 显示成 `0x666bc0 ()` 或 `fcn.0065cde0 ()`，两种写法都要匹配；thunk 区 0x659880-0x679820 每个 16 字节对应一个固定 selref。
 - 用 bash heredoc 跑 Python 时，TS 模板字符串会把 \n 提前变成真换行，导致 Python 语法错误；分析脚本一律写成文件再执行。
+- ObjC 方法声明的 label 之间不能加冒号：`-(void)a:(id)x b:(id)y` 正确，`a:(id)x:(id)y` 会被解析成空标签并产生 `a:::` 这类重复 selector。
+- Theos 工程里自定义头文件目录要同时加到 CFLAGS 的 -I，Tweak.xm 才能 #import 到 src/Hooks 下的头。
+- Theos 可用 Xcode 自带 SDK：把 `$(xcrun --sdk iphoneos --show-sdk-path)` 软链到 $THEOS/sdks/iPhoneOS18.5.sdk，无需另外下载 SDK。

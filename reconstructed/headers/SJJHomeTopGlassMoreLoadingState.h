@@ -6,30 +6,41 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <WebKit/WebKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <ReplayKit/ReplayKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+
+@class AVAssetExportSession, AVAssetReader, AVAssetWriter, AVAudioPlayer, AVAudioRecorder, AVCaptureDevice, AVCaptureDeviceInput, AVCaptureMovieFileOutput, AVCapturePhotoOutput, AVCaptureSession, AVCaptureVideoPreviewLayer, AVPlayer, AVPlayerLayer, AVPlayerLooper, AVPlayerViewController, AVQueuePlayer, AVURLAsset, AWECAAIReplyController, AWECAAIReplyService, AWECAAIReplySettingsController, AWECAIMQuickActionDismissProxy, AWECAIMSwipeReplyProxy, AWECAUtils, AWECommentInputBackgroundView, AWMSafeDispatchTimer, AwemeXConfigManager, CADisplayLink, CAGradientLayer, CALayer, CAShapeLayer, CityManager, MemUi, NSArray, NSCache, NSData, NSDictionary, NSHashTable, NSLayoutConstraint, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableIndexSet, NSMutableSet, NSNumber, NSOperationQueue, NSString, NSTimer, NSURL, NSURLSessionDataTask, PHLivePhotoView, SJJAIImageSettingsController, SJJAIImageToolController, SJJAccountQuickSwitchProxy, SJJAudioWaveSettingsController, SJJAudioWaveView, SJJCommentMediaSelectionCell, SJJCommentMediaSelectionView, SJJCommentSortAIURLSessionDelegate, SJJCommentSortButtonTarget, SJJCommentSortPopupView, SJJCommentSortWeakObjectBox, SJJControlFriendlyScrollView, SJJElegantInputSwitchProxy, SJJExpandedHitContainerView, SJJFeedSmoothSwipePanDriver, SJJFeedSmoothSwipeWeakScrollViewBox, SJJFileEditorController, SJJFileManagerController, SJJFloatingAudioVisualizerDriver, SJJFloatingAudioVisualizerHostView, SJJGlassAccessoryKeyButton, SJJGlassExperienceListState, SJJGlassExperienceScrollTopButton, SJJGlassNativeLongPressShieldState, SJJGlassQuickActionButton, SJJGlassQuickActionsDrawerView, SJJGlassQuickActionsProxy, SJJGlassQuickPaletteController, SJJGlassQuickResizeHandleView, SJJGlassRoundKeyHitButton, SJJGlassTabBarProxy, SJJHiFloatingButton, SJJHiFloatingControlsManager, SJJHiddenFriendOptionsViewController, SJJHiddenFriendPersonCell, SJJHiddenFriendSelectionViewController, SJJHighRefreshConfigurationOverlay, SJJHighRefreshConfigurationWindow, SJJHighRefreshDriverTarget, SJJHighRefreshFPSCapsule, SJJHighRefreshFPSLinkTarget, SJJHighRefreshScrollInputTarget, SJJHighRefreshScrollMotion, SJJHomeActionGlassInteractionTarget, SJJHomeActionGlassPressTarget, SJJHomeTopGlassActionSlot, SJJHomeTopGlassCategoryGroup, SJJHomeTopGlassCategoryTouchShield, SJJHomeTopGlassMoreButton, SJJHomeTopGlassMoreLoadingState, SJJIdleAutoCloseActionRelay, SJJInAppVideoPlayerController, SJJInAppWebController, SJJInlineCameraController, SJJInlineCameraHistoryController, SJJInlineCameraMediaPreviewController, SJJInlineCameraPassthroughView, SJJInlineCameraQuickCapture, SJJLROwnerDouyinAutoFollowObserver, SJJLegacyShareAvatarOverlayProxy, SJJLegacyShareButtonLongPressProxy, SJJLiquidGlassFlexView, SJJLiveAutoLikeAffairDriver, SJJLiveAutoLikeBanner, SJJLiveDurationPillView, SJJLiveDurationTicker, SJJLiveDurationWeakViewBox, SJJMediaManager, SJJNativeLongPressGIFAnimator, SJJNativeLongPressGIFDisplayLinkProxy, SJJOptimizeHomeActionGlassMusicSlotView, SJJOptimizeHomeActionGlassProfileSlotView, SJJOptimizeHomeActionGlassSlotView, SJJPanelBackgroundCropController, SJJPanelButtonConfigController, SJJPluginConfigSnapshotCoordinator, SJJPluginIconCoordinator, SJJPluginIconCropController, SJJPopupAvatarPickerProxy, SJJPrivacyRecordUploadGuard, SJJSaveOtherAvatarPreviewHandler, SJJSecureTransport, SJJSideDockMemoController, SJJSideDockWakeSlideSelectSession, SJJSparkRenewBadgeLabel, SJJSparkRenewContactCell, SJJSparkRenewController, SJJSparkRenewConversationPickerController, SJJSparkRenewOverviewCell, SJJSparkRenewTargetDetailController, SJJSparkRenewTextEditorController, SJJTTSAudioToolsController, SJJTTSBackgroundButtonRelay, SJJTTSBackgroundController, SJJTTSSettingsController, SJJTTSVoiceComposerController, SJJTTSVoiceListController, SJJVideoFullScreenExtraBarBackgroundState, SJJVideoLongPressGlassState, SJJVideoLongPressLabelState, SJJVideoLongPressPanelState, SJJVideoProgressGIFAnimator, SJJVideoProgressSyntheticGesture, SJJVideoProgressTimeTapProxy, SJJVideoProgressWeakObjectBox, SJJVideoSaveFallbackHandler, SJJVideoStatsFakeBootstrap, SJJVoiceActionCardController, SJJVoiceActionRelay, SJJVoiceManagerCell, SJJVoiceMessageSender, SJJVoicePackageViewController, SJJVoicePromptViewController, SJJWakeSlideGlyphView, SJJWarmthSettingsController, SJJWeakDisplayLinkProxy, SJJWorkDataAppearanceController, SJJWorkDataCardController, SJJWorkDataEmbeddedContentView, SWJJCommentPanelFrameState, SWJJCommentPanelLayoutState, SWJLabelColorState, SWJManager, SWJToast, SWJUtils, UIBarButtonItem, UIButton, UICollectionView, UIColor, UIControl, UIGestureRecognizer, UIImage, UIImageView, UILabel, UIScrollView, UISearchBar, UISearchController, UISegmentedControl, UISlider, UIStackView, UISwitch, UITableView, UITapGestureRecognizer, UITextField, UITextView, UIView, UIViewController, UIVisualEffect, UIVisualEffectView, UIWindow, WKWebView, siwenjiajiaEntryHandler, siwenjiajiaPanel;
 
 @interface SJJHomeTopGlassMoreLoadingState : NSObject
 {
-    B _originallyAnimating;
-    B _usesAvatar;
-    UIImageView _imageView;
-    UIImage _sourceImage;
-    NSArray _originalAnimationImages;
-    NSArray _originalHighlightedAnimationImages;
-    NSArray _frames;
-    d _originalAnimationDuration;
-    q _originalAnimationRepeatCount;
-    Q _avatarGeneration;
+    BOOL _originallyAnimating;
+    BOOL _usesAvatar;
+    __weak UIImageView * _imageView;
+    UIImage * _sourceImage;
+    NSArray * _originalAnimationImages;
+    NSArray * _originalHighlightedAnimationImages;
+    NSArray * _frames;
+    double _originalAnimationDuration;
+    long long _originalAnimationRepeatCount;
+    unsigned long long _avatarGeneration;
 }
 
-@property (weak, nonatomic) UIImageView imageView;
+@property (weak, nonatomic) UIImageView * imageView;
 
-@property (strong, nonatomic) UIImage sourceImage;
+@property (strong, nonatomic) UIImage * sourceImage;
 
-@property (copy, nonatomic) NSArray originalAnimationImages;
+@property (copy, nonatomic) NSArray * originalAnimationImages;
 
-@property (copy, nonatomic) NSArray originalHighlightedAnimationImages;
+@property (copy, nonatomic) NSArray * originalHighlightedAnimationImages;
 
-@property (copy, nonatomic) NSArray frames;
+@property (copy, nonatomic) NSArray * frames;
 
 @property (nonatomic) double originalAnimationDuration;
 
@@ -42,25 +53,24 @@
 @property (nonatomic) unsigned long long avatarGeneration;
 
 -(id)imageView;
--(void)setImageView:(id)arg1;
+-(void)setImageView:(id)setImageView;
 -(id)sourceImage;
--(void)setSourceImage:(id)arg1;
+-(void)setSourceImage:(id)setSourceImage;
 -(id)originalAnimationImages;
--(void)setOriginalAnimationImages:(id)arg1;
+-(void)setOriginalAnimationImages:(id)setOriginalAnimationImages;
 -(id)originalHighlightedAnimationImages;
--(void)setOriginalHighlightedAnimationImages:(id)arg1;
+-(void)setOriginalHighlightedAnimationImages:(id)setOriginalHighlightedAnimationImages;
 -(id)frames;
--(void)setFrames:(id)arg1;
+-(void)setFrames:(id)setFrames;
 -(double)originalAnimationDuration;
--(void)setOriginalAnimationDuration:(double)arg1;
+-(void)setOriginalAnimationDuration:(double)setOriginalAnimationDuration;
 -(long long)originalAnimationRepeatCount;
--(void)setOriginalAnimationRepeatCount:(long long)arg1;
+-(void)setOriginalAnimationRepeatCount:(long long)setOriginalAnimationRepeatCount;
 -(BOOL)originallyAnimating;
--(void)setOriginallyAnimating:(BOOL)arg1;
+-(void)setOriginallyAnimating:(BOOL)setOriginallyAnimating;
 -(BOOL)usesAvatar;
--(void)setUsesAvatar:(BOOL)arg1;
+-(void)setUsesAvatar:(BOOL)setUsesAvatar;
 -(unsigned long long)avatarGeneration;
--(void)setAvatarGeneration:(unsigned long long)arg1;
--(void).cxx_destruct;
+-(void)setAvatarGeneration:(unsigned long long)setAvatarGeneration;
 
 @end

@@ -10,27 +10,27 @@
 
 // 0x006079b4  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setTextSignature:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTextSignature:(id)setTextSignature { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079bc  2 条指令
 -(id)colorKey { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079c4  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setColorKey:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setColorKey:(id)setColorKey { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079cc  2 条指令
 -(id)fontName { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079d4  4 条指令
 // C 调用: _objc_setProperty_nonatomic_copy
--(void)setFontName:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFontName:(id)setFontName { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079dc  2 条指令
 -(double)fontSize { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079e4  2 条指令
--(void)setFontSize:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFontSize:(double)setFontSize { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x006079ec  487 条指令
 // 字符串: "11", "12", "31", "%@ %@", "SWJGeoNamesCache", "%@.plist"

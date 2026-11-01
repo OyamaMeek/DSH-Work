@@ -8,17 +8,17 @@
 // 0x00516338  40 条指令
 // 消息: copy
 // C 调用: _objc_msgSendSuper2, _objc_release, _objc_retain
--(id)initForCommentSelectionWithCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)initForCommentSelectionWithCompletion:(id /* block */)initForCommentSelectionWithCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005163f0  40 条指令
 // 消息: copy
 // C 调用: _objc_msgSendSuper2, _objc_release, _objc_retain
--(id)initForVoiceEmojiSelectionWithCompletion:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)initForVoiceEmojiSelectionWithCompletion:(id /* block */)initForVoiceEmojiSelectionWithCompletion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005164a8  56 条指令
 // 消息: copy
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_release
--(id)initForExternalAudioSelectionWithTitle:(id)completion:(id /* block */)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)initForExternalAudioSelectionWithTitle:(id)initForExternalAudioSelectionWithTitle completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005165a8  119 条指令
 // 消息: navigationController, setNavigationBarHidden:, navigationItem, setLargeTitleDisplayMode:, commentSelectionMode, voiceEmojiSelectionMode, externalAudioSelectionMode, externalAudioSelectionTitle, length, setTitle:, systemGroupedBackgroundColor, view, setBackgroundColor:, set
@@ -39,12 +39,12 @@
 // 0x005180a8  16 条指令
 // 消息: reloadVoiceFiles
 // C 调用: _objc_msgSendSuper2
--(void)viewDidAppear:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewDidAppear:(BOOL)viewDidAppear { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005180e8  21 条指令
 // 消息: commentSelectionMode
 // C 调用: _objc_msgSendSuper2
--(void)viewDidDisappear:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)viewDidDisappear:(BOOL)viewDidDisappear { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051813c  2048 条指令
 // 字符串: "xmark", "plus", "checkmark.circle", "magnifyingglass", "square.and.arrow.down", "folder.badge.plus"
@@ -55,12 +55,12 @@
 // 0x0051da18  269 条指令
 // 消息: buttonWithType:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, configurationWithPointSize:weight:, systemImageNamed:withConfiguration:, setImage:forState:, setTintColor:, addTarget:action:forControlEvents:, colorWithAlphaComponent:, setTitle:forState:, systemImageNamed:, setTitleColor:forState:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)managerIconButton:(id)action:(SEL)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)managerIconButton:(id)managerIconButton action:(SEL)action { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051dbcc  160 条指令
 // 消息: buttonWithType:, colorWithAlphaComponent:, setBackgroundColor:, layer, setCornerRadius:, setCornerCurve:, setTitle:forState:, systemImageNamed:, setImage:forState:, setTitleColor:forState:, setTintColor:, systemFontOfSize:weight:, titleLabel, setFont:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume
--(id)managerCapsuleButton:(id)symbol:(id)action:(SEL)color:(id)arg4 { /* 重建骨架，语义见 pseudocode */ }
+-(id)managerCapsuleButton:(id)managerCapsuleButton symbol:(id)symbol action:(SEL)action color:(id)color { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051ddf8  21 条指令
 // 消息: currentDirectory, isEqualToString:
@@ -76,114 +76,114 @@
 // 0x0051eeb0  69 条指令
 // 消息: text, setQuery:, reloadVoiceFiles, resignFirstResponder
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain
--(void)searchTextChanged:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)searchTextChanged:(id)searchTextChanged { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051ef3c  34 条指令
 // 消息: setQuery:, reloadVoiceFiles, resignFirstResponder
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)searchBar:(id)textDidChange:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)searchBar:(id)searchBar textDidChange:(id)textDidChange { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051efa0  9 条指令
 // 消息: resignFirstResponder
--(void)searchBarSearchButtonClicked:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)searchBarSearchButtonClicked:(id)searchBarSearchButtonClicked { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051efa8  7 条指令
 // 消息: resignFirstResponder
--(BOOL)textFieldShouldReturn:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)textFieldShouldReturn:(id)textFieldShouldReturn { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051efc4  2 条指令
--(long long)numberOfSectionsInTableView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(long long)numberOfSectionsInTableView:(id)numberOfSectionsInTableView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051efcc  14 条指令
 // 消息: items, count
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(long long)tableView:(id)numberOfRowsInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(long long)tableView:(id)tableView numberOfRowsInSection:(long long)numberOfRowsInSection { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051f014  20 条指令
 // 消息: items, count
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_retainAutoreleaseReturnValue, _objc_release
--(id)tableView:(id)titleForHeaderInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView titleForHeaderInSection:(long long)titleForHeaderInSection { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051f074  2 条指令
--(BOOL)isSystemManagementIndexPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(BOOL)isSystemManagementIndexPath:(id)isSystemManagementIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051f07c  510 条指令
 // 字符串: "voice.system.manager", "folder", "up", "voice.manager", "relative", "."
 // 消息: systemSearchBar, dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, items, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, lastPathComponent, defaultManager, contentsOfDirectoryAtPath:error:, stringByDeletingPathExtension, fileURLWithPath:, URLAssetWithURL:options:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _CMTimeGetSeconds, _objc_retainAutoreleaseReturnValue
--(id)tableView:(id)cellForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView cellForRowAtIndexPath:(id)cellForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051f9f0  17 条指令
 // 消息: systemSearchBar
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
--(double)tableView:(id)heightForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(double)tableView:(id)tableView heightForRowAtIndexPath:(id)heightForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051fa34  131 条指令
 // 消息: deselectRowAtIndexPath:animated:, items, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, setCurrentDirectory:, searchField, setText:, systemSearchBar, setQuery:, selectionMode, selectedPaths, containsObject:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)tableView:(id)didSelectRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)tableView:(id)tableView didSelectRowAtIndexPath:(id)didSelectRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0051fe18  519 条指令
 // 字符串: "play.fill", "pause.fill", "paperplane.fill", "checkmark", "UIButtonConfiguration"
 // 消息: initWithFrame:, buttonWithType:, setFrame:, playingPath, isEqualToString:, player, isPlaying, setAccessibilityLabel:, addTarget:action:forControlEvents:, addSubview:, commentSelectionMode, voiceEmojiSelectionMode, externalAudioSelectionMode, configurationWithPointSize:weight:
 // C 调用: _objc_retain, _objc_alloc, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_setAssociatedObject, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_opt_respondsToSelector, _NSClassFromString, _objc_msgSend, _objc_getAssociatedObject
--(id)voiceActionsViewForPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)voiceActionsViewForPath:(id)voiceActionsViewForPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052043c  126 条指令
 // 消息: length, playPath:, commentSelectionMode, chooseCommentVoicePath:, voiceEmojiSelectionMode, chooseVoiceEmojiPath:, externalAudioSelectionMode, defaultManager, fileExistsAtPath:, player, stop, setPlayer:, setPlayingPath:, externalAudioSelectionHandler
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain
--(void)previewRowButtonTapped:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)previewRowButtonTapped:(id)previewRowButtonTapped { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005204a8  99 条指令
 // 消息: length, commentSelectionMode, chooseCommentVoicePath:, voiceEmojiSelectionMode, chooseVoiceEmojiPath:, externalAudioSelectionMode, defaultManager, fileExistsAtPath:, player, stop, setPlayer:, setPlayingPath:, externalAudioSelectionHandler, dismissViewControllerAnimated:completion:
 // C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)sendRowButtonTapped:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)sendRowButtonTapped:(id)sendRowButtonTapped { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005206a0  67 条指令
 // 消息: defaultManager, fileExistsAtPath:, player, stop, setPlayer:, setPlayingPath:, voiceEmojiSelectionHandler, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)chooseVoiceEmojiPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)chooseVoiceEmojiPath:(id)chooseVoiceEmojiPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00520808  234 条指令
 // 字符串: "selected.m4a"
 // 消息: defaultManager, fileExistsAtPath:, player, stop, setPlayer:, setPlayingPath:, showToast:duration:, stringByAppendingPathComponent:, removeItemAtPath:error:, fileURLWithPath:, URLAssetWithURL:options:, initWithAsset:presetName:, setOutputURL:, setOutputFileType:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain, _objc_alloc, _CMTimeGetSeconds, _CMTimeMakeWithSeconds, _CMTimeRangeMake
--(void)chooseCommentVoicePath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)chooseCommentVoicePath:(id)chooseCommentVoicePath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005212d8  417 条指令
 // 字符串: "title", "symbol", "play.fill", "block", "4", "transparent"
 // 消息: setModalPresentationStyle:, setModalTransitionStyle:, setPromptTitle:, setPromptMessage:, setInitialText:, setPlaceholder:, setKeyboardType:, setCompletion:, presentViewController:animated:completion:, setCardTitle:, setActions:, setAllowsBackgroundDismiss:, lastPathComponent, dictionaryWithObjects:forKeys:count:
 // C 调用: _objc_retain, _objc_opt_new, _objc_release, __Unwind_Resume, _objc_initWeak, _objc_retainAutoreleasedReturnValue, _objc_copyWeak, _objc_retainBlock, _objc_destroyWeak
--(void)presentPromptTitle:(id)message:(id)initial:(id)placeholder:(id)keyboard:(long long)completion:(id /* block */)arg6 { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentPromptTitle:(id)presentPromptTitle message:(id)message initial:(id)initial placeholder:(id)placeholder keyboard:(long long)keyboard completion:(id /* block */)completion { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00521430  331 条指令
 // 字符串: "title", "symbol", "play.fill", "block", "4", "transparent"
 // 消息: setModalPresentationStyle:, setModalTransitionStyle:, setCardTitle:, setActions:, setAllowsBackgroundDismiss:, presentViewController:animated:completion:, lastPathComponent, dictionaryWithObjects:forKeys:count:, colorWithRed:green:blue:alpha:, arrayWithObjects:count:, presentActionCardTitle:actions:
 // C 调用: _objc_retain, _objc_opt_new, _objc_release, __Unwind_Resume, _objc_initWeak, _objc_retainAutoreleasedReturnValue, _objc_copyWeak, _objc_retainBlock, _objc_destroyWeak
--(void)presentActionCardTitle:(id)actions:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)presentActionCardTitle:(id)presentActionCardTitle actions:(id)actions { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00521508  277 条指令
 // 字符串: "title", "symbol", "play.fill", "block", "4", "transparent"
 // 消息: lastPathComponent, dictionaryWithObjects:forKeys:count:, colorWithRed:green:blue:alpha:, arrayWithObjects:count:, presentActionCardTitle:actions:
 // C 调用: _objc_retain, _objc_initWeak, _objc_retainAutoreleasedReturnValue, _objc_copyWeak, _objc_retainBlock, _objc_release, _objc_destroyWeak
--(void)showItemActionsForPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)showItemActionsForPath:(id)showItemActionsForPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00521be0  226 条指令
 // 字符串: "title", "symbol", "folder.fill", "block", "sjj.side.avatar.rain.ringBreath", "center"
 // 消息: lastPathComponent, dictionaryWithObjects:forKeys:count:, colorWithRed:green:blue:alpha:, arrayWithObjects:count:, presentActionCardTitle:actions:
 // C 调用: _objc_retain, _objc_initWeak, _objc_retainAutoreleasedReturnValue, _objc_copyWeak, _objc_retainBlock, _objc_release, _objc_destroyWeak
--(void)showFolderActionsForPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)showFolderActionsForPath:(id)showFolderActionsForPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00522250  660 条指令
 // 字符串: "folder.fill", "play.fill", "paperplane.fill", "pencil", "trash"
 // 消息: isSystemManagementIndexPath:, items, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, selectionMode, configurationWithIdentifier:previewProvider:actionProvider:, array, systemImageNamed:, actionWithTitle:image:identifier:handler:, addObject:, setAttributes:, lastPathComponent
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_loadWeakRetained
--(id)tableView:(id)contextMenuConfigurationForRowAtIndexPath:(id)point:(struct CGPoint)arg3 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView contextMenuConfigurationForRowAtIndexPath:(id)contextMenuConfigurationForRowAtIndexPath point:(struct CGPoint)point { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00522cd0  322 条指令
 // 消息: isSystemManagementIndexPath:, items, row, objectAtIndexedSubscript:, objectForKeyedSubscript:, boolValue, selectionMode, contextualActionWithStyle:title:handler:, setBackgroundColor:, arrayWithObjects:count:, configurationWithActions:, setPerformsFirstActionWithFullSwipe:, renamePath:, confirmDeletePaths:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained
--(id)tableView:(id)trailingSwipeActionsConfigurationForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)tableView:(id)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(id)trailingSwipeActionsConfigurationForRowAtIndexPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00523218  140 条指令
 // 字符串: "title", "symbol", "square.and.arrow.down", "block", "folder.badge.plus"
@@ -194,13 +194,13 @@
 // 0x00523550  44 条指令
 // 消息: sanitizeFilename:maxLength:, whitespaceAndNewlineCharacterSet, stringByTrimmingCharactersInSet:, length
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retainAutoreleaseReturnValue
--(id)safeName:(id)fallback:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)safeName:(id)safeName fallback:(id)fallback { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00523630  164 条指令
 // 字符串: "%@-%lu.%@", "%@-%lu"
 // 消息: stringByAppendingPathComponent:, stringByDeletingPathExtension, pathExtension, defaultManager, fileExistsAtPath:, length, stringWithFormat:, presentPromptTitle:message:initial:placeholder:keyboard:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_autoreleaseReturnValue, __Unwind_Resume, _objc_initWeak, _objc_copyWeak, _objc_destroyWeak
--(id)uniqueDestinationForName:(id)inDirectory:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)uniqueDestinationForName:(id)uniqueDestinationForName inDirectory:(id)inDirectory { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00523804  47 条指令
 // 消息: presentPromptTitle:message:initial:placeholder:keyboard:completion:
@@ -210,19 +210,19 @@
 // 0x00523a50  106 条指令
 // 消息: isEqualToString:, defaultManager, fileExistsAtPath:isDirectory:, lastPathComponent, stringByDeletingPathExtension, presentPromptTitle:message:initial:placeholder:keyboard:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_retain, _objc_destroyWeak
--(void)renamePath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)renamePath:(id)renamePath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00523f34  154 条指令
 // 字符串: "title", "symbol", "play.fill", "block", "4", "transparent"
 // 消息: dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, presentActionCardTitle:actions:
 // C 调用: _objc_retain, _objc_initWeak, _objc_copyWeak, _objc_retainBlock, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_destroyWeak
--(void)confirmSendPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)confirmSendPath:(id)confirmSendPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005242b8  190 条指令
 // 字符串: "title", "symbol", "trash.fill", "color", "block"
 // 消息: array, countByEnumeratingWithState:objects:count:, isEqualToString:, addObject:, count, stringWithFormat:, colorWithRed:green:blue:alpha:, dictionaryWithObjects:forKeys:count:, arrayWithObjects:count:, presentActionCardTitle:actions:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_enumerationMutation, _objc_release, _objc_initWeak, _objc_copyWeak, _objc_retainBlock, _objc_destroyWeak
--(void)confirmDeletePaths:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)confirmDeletePaths:(id)confirmDeletePaths { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005247f8  416 条指令
 // 字符串: "personViewModel", "up", "checkmark.circle", "xmark"
@@ -262,22 +262,22 @@
 // 0x00525d04  173 条指令
 // 消息: playingPath, isEqualToString:, player, isPlaying, pause, stop, fileURLWithPath:, initWithContentsOfURL:error:, setPlayer:, setPlayingPath:, setDelegate:, prepareToPlay, play, tableView
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc, _objc_retain
--(void)playPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)playPath:(id)playPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052603c  146 条指令
 // 消息: setPlayingPath:, tableView, reloadData, localizedDescription, showToast:duration:, player, stop, setPlayer:, conversationID, conversation, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_retain
--(void)audioPlayerDidFinishPlaying:(id)successfully:(BOOL)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)audioPlayerDidFinishPlaying:(id)audioPlayerDidFinishPlaying successfully:(BOOL)successfully { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052609c  122 条指令
 // 消息: setPlayingPath:, localizedDescription, showToast:duration:, tableView, reloadData, player, stop, setPlayer:, conversationID, conversation, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
--(void)audioPlayerDecodeErrorDidOccur:(id)error:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)audioPlayerDecodeErrorDidOccur:(id)audioPlayerDecodeErrorDidOccur error:(id)error { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00526168  71 条指令
 // 消息: player, stop, setPlayer:, setPlayingPath:, conversationID, conversation, dismissViewControllerAnimated:completion:
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, _objc_retain
--(void)sendPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)sendPath:(id)sendPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00526450  140 条指令
 // 字符串: "public.zip-archive"
@@ -288,7 +288,7 @@
 // 0x0052655c  73 条指令
 // 消息: count, currentDirectory, copy, showLoadingHUD:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, _dispatch_get_global_queue, _dispatch_async
--(void)documentPicker:(id)didPickDocumentsAtURLs:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)documentPicker:(id)documentPicker didPickDocumentsAtURLs:(id)didPickDocumentsAtURLs { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00526f88  79 条指令
 // 字符串: "sjj_voice_assistant_duration", "%.1f"
@@ -309,7 +309,7 @@
 // 0x005272b8  502 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setTableView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTableView:(id)setTableView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005272c8  498 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -319,7 +319,7 @@
 // 0x005272d4  495 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSearchField:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSearchField:(id)setSearchField { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005272e4  491 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -329,7 +329,7 @@
 // 0x005272f0  488 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSearchContainer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSearchContainer:(id)setSearchContainer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527300  484 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -339,7 +339,7 @@
 // 0x0052730c  481 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSystemSearchBar:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSystemSearchBar:(id)setSystemSearchBar { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052731c  477 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -349,7 +349,7 @@
 // 0x00527328  474 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setHeaderView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setHeaderView:(id)setHeaderView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527338  470 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -359,7 +359,7 @@
 // 0x00527344  467 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setBottomBar:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBottomBar:(id)setBottomBar { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527354  463 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -369,7 +369,7 @@
 // 0x00527360  460 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setTitleLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setTitleLabel:(id)setTitleLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527370  456 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -379,7 +379,7 @@
 // 0x0052737c  453 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setPathLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPathLabel:(id)setPathLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052738c  449 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -389,7 +389,7 @@
 // 0x00527398  446 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setEmptyLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setEmptyLabel:(id)setEmptyLabel { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005273a8  442 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -399,7 +399,7 @@
 // 0x005273b4  439 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSelectButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelectButton:(id)setSelectButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005273c4  435 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -409,7 +409,7 @@
 // 0x005273d0  432 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setImportButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setImportButton:(id)setImportButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005273e0  428 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -419,7 +419,7 @@
 // 0x005273ec  425 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setFolderButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setFolderButton:(id)setFolderButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005273fc  421 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -429,7 +429,7 @@
 // 0x00527408  418 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setDurationButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setDurationButton:(id)setDurationButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527418  414 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -439,7 +439,7 @@
 // 0x00527424  411 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setQuickActionsView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setQuickActionsView:(id)setQuickActionsView { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527434  407 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -449,7 +449,7 @@
 // 0x00527440  404 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSelectAllButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelectAllButton:(id)setSelectAllButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527450  400 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -459,7 +459,7 @@
 // 0x0052745c  397 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setMoveButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setMoveButton:(id)setMoveButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052746c  393 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -469,7 +469,7 @@
 // 0x00527478  390 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setRemoveButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setRemoveButton:(id)setRemoveButton { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527488  386 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -479,7 +479,7 @@
 // 0x00527494  383 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setBackgroundGradient:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setBackgroundGradient:(id)setBackgroundGradient { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005274a4  379 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -489,7 +489,7 @@
 // 0x005274b0  376 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setNativeSelectItem:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNativeSelectItem:(id)setNativeSelectItem { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005274c0  372 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -499,7 +499,7 @@
 // 0x005274cc  369 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setNativeSelectAllItem:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNativeSelectAllItem:(id)setNativeSelectAllItem { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005274dc  365 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -509,7 +509,7 @@
 // 0x005274e8  362 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setNativeMoveItem:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNativeMoveItem:(id)setNativeMoveItem { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005274f8  358 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -519,7 +519,7 @@
 // 0x00527504  355 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setNativeDeleteItem:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setNativeDeleteItem:(id)setNativeDeleteItem { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527514  351 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -529,7 +529,7 @@
 // 0x00527520  348 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setItems:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setItems:(id)setItems { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052752c  345 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -539,7 +539,7 @@
 // 0x00527538  342 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setCurrentDirectory:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCurrentDirectory:(id)setCurrentDirectory { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527544  339 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -549,7 +549,7 @@
 // 0x00527550  336 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setQuery:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setQuery:(id)setQuery { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052755c  333 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -559,7 +559,7 @@
 // 0x00527568  330 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSelectedPaths:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelectedPaths:(id)setSelectedPaths { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527578  326 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -569,7 +569,7 @@
 // 0x00527584  323 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setSelectionMode:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setSelectionMode:(BOOL)setSelectionMode { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527590  320 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -579,7 +579,7 @@
 // 0x0052759c  317 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setCommentSelectionMode:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCommentSelectionMode:(BOOL)setCommentSelectionMode { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005275a8  314 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -589,7 +589,7 @@
 // 0x005275b4  311 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setCommentSelectionHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setCommentSelectionHandler:(id /* block */)setCommentSelectionHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005275c0  308 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -599,7 +599,7 @@
 // 0x005275cc  305 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setVoiceEmojiSelectionMode:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVoiceEmojiSelectionMode:(BOOL)setVoiceEmojiSelectionMode { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005275d8  302 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -609,7 +609,7 @@
 // 0x005275e4  299 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setVoiceEmojiSelectionHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setVoiceEmojiSelectionHandler:(id /* block */)setVoiceEmojiSelectionHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005275f0  296 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -619,7 +619,7 @@
 // 0x005275fc  293 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setExternalAudioSelectionMode:(BOOL)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setExternalAudioSelectionMode:(BOOL)setExternalAudioSelectionMode { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527608  290 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -629,7 +629,7 @@
 // 0x00527614  287 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setExternalAudioSelectionTitle:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setExternalAudioSelectionTitle:(id)setExternalAudioSelectionTitle { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527620  284 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -639,7 +639,7 @@
 // 0x0052762c  281 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setExternalAudioSelectionHandler:(id /* block */)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setExternalAudioSelectionHandler:(id /* block */)setExternalAudioSelectionHandler { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527638  278 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -649,7 +649,7 @@
 // 0x00527644  275 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setConversationID:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setConversationID:(id)setConversationID { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527650  272 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -659,7 +659,7 @@
 // 0x0052765c  269 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setConversation:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setConversation:(id)setConversation { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0052766c  265 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -669,7 +669,7 @@
 // 0x00527678  262 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setPlayer:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPlayer:(id)setPlayer { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x00527688  258 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
@@ -679,7 +679,7 @@
 // 0x00527694  255 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:
 // C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc
--(void)setPlayingPath:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)setPlayingPath:(id)setPlayingPath { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x005276a0  252 条指令
 // 消息: initForExternalAudioSelectionWithTitle:completion:, initWithRootViewController:, setNavigationBarHidden:, setModalPresentationStyle:, sheetPresentationController, mediumDetent, largeDetent, arrayWithObjects:count:, setDetents:, setSelectedDetentIdentifier:, setPrefersGrabberVisible:, presentViewController:animated:completion:

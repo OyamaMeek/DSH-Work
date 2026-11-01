@@ -8,12 +8,12 @@
 // 0x0001aa80  55 条指令
 // 消息: initWithURLString:startSeconds:, copy, setModalPresentationStyle:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeStrong, _objc_release
--(id)initWithURLString:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithURLString:(id)initWithURLString { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001aa88  53 条指令
 // 消息: copy, setModalPresentationStyle:
 // C 调用: _objc_retain, _objc_msgSendSuper2, _objc_storeStrong, _objc_release
--(id)initWithURLString:(id)startSeconds:(double)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(id)initWithURLString:(id)initWithURLString startSeconds:(double)startSeconds { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001ab74  519 条指令
 // 字符串: "-10s", "+10s", "1.0x", "00:00 / 00:00", "v32@?0{?=qiIq}8"
@@ -60,7 +60,7 @@
 // 字符串: "sjj_nowm_%@.mp4", "photo-auth"
 // 消息: state, rate, setRate:, play, setTitle:forState:, pause, stringWithFormat:, currentItem, asset, URL, currentPlayableURL, showToast:duration:, length, numberWithLongLong:
 // C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_opt_class, _objc_opt_isKindOfClass, _objc_begin_catch, _objc_end_catch, _objc_autoreleaseReturnValue, _CFAbsoluteTimeGetCurrent
--(void)speedHold:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)speedHold:(id)speedHold { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001be34  283 条指令
 // 字符串: "sjj_nowm_%@.mp4", "photo-auth"
@@ -87,16 +87,16 @@
 // 0x0001c3a0  61 条指令
 // 消息: state, scale, applyZoomScale:, setScale:, setTransform:
 // C 调用: _objc_retain, _objc_release, __Unwind_Resume
--(void)handlePinch:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)handlePinch:(id)handlePinch { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001c444  20 条指令
 // 消息: setTransform:
--(void)applyZoomScale:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)applyZoomScale:(double)applyZoomScale { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001c494  80 条指令
 // 消息: currentTime, currentItem, duration, seekToTime:toleranceBefore:toleranceAfter:
 // C 调用: _CMTimeGetSeconds, _objc_retainAutoreleasedReturnValue, _objc_release
--(void)seekByDelta:(double)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)seekByDelta:(double)seekByDelta { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001c5e4  9 条指令
 -(void)progressTouchDown { /* 重建骨架，语义见 pseudocode */ }
@@ -113,13 +113,13 @@
 // 0x0001c720  119 条指令
 // 消息: currentItem, duration, setMinimumValue:, setMaximumValue:, maximumValue, setValue:, refreshTimeLabelForSecond:total:, currentPlayableURL, absoluteString, length, showToast:duration:
 // C 调用: _CMTimeGetSeconds, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_opt_class, _objc_opt_isKindOfClass
--(void)refreshProgressWithCurrent:(struct ?)arg1 { /* 重建骨架，语义见 pseudocode */ }
+-(void)refreshProgressWithCurrent:(struct ?)refreshProgressWithCurrent { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001c920  103 条指令
 // 字符串: "%02d:%02d", "%@ / %@"
 // 消息: stringWithFormat:, setText:, removeTimeObserver:, pause
 // C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
--(void)refreshTimeLabelForSecond:(double)total:(double)arg2 { /* 重建骨架，语义见 pseudocode */ }
+-(void)refreshTimeLabelForSecond:(double)refreshTimeLabelForSecond total:(double)total { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001ca40  31 条指令
 // 消息: removeTimeObserver:, pause
@@ -134,11 +134,11 @@
 // 0x0001cafc  134 条指令
 // 消息: presentFromHost:urlString:startSeconds:, initWithURLString:startSeconds:, presentViewController:animated:completion:, copy, setModalPresentationStyle:
 // C 调用: _objc_retain, _objc_alloc, _objc_release, __Unwind_Resume, _objc_storeStrong, _objc_msgSendSuper2
-+(void)presentFromHost:(id)urlString:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
++(void)presentFromHost:(id)presentFromHost urlString:(id)urlString { /* 重建骨架，语义见 pseudocode */ }
 
 // 0x0001cb04  132 条指令
 // 消息: initWithURLString:startSeconds:, presentViewController:animated:completion:, copy, setModalPresentationStyle:
 // C 调用: _objc_retain, _objc_alloc, _objc_release, __Unwind_Resume, _objc_storeStrong, _objc_msgSendSuper2
-+(void)presentFromHost:(id)urlString:(id)startSeconds:(double)arg3 { /* 重建骨架，语义见 pseudocode */ }
++(void)presentFromHost:(id)presentFromHost urlString:(id)urlString startSeconds:(double)startSeconds { /* 重建骨架，语义见 pseudocode */ }
 
 @end
