@@ -1,0 +1,30 @@
+# 网络端点与请求字段
+
+- http
+- http %ld
+- http %ld: %@
+- http://
+- http://%u.%u.%u.%u/api/%@
+- http://about:
+- httpRequest
+- https
+- https%3A%2F%2Fv.douyin.com%2Ftest%2F
+- https:
+- https://
+- https://1817699006.share.123pan.cn/123pan/5WzTjv-IjaEd
+- https://about:
+- https://api.tikhub.io/api/v1/douyin/app/v3/fetch_video_statistics
+- https://aweme.snssdk.com/aweme/v1/upload/file/
+- https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
+- https://openspeech.bytedance.com/api/v1/tts
+- https://t.me/+8WaJhQ3se4k0YTk9
+- https://t.me/+tC8ArM3sOKAzMmNl
+- https://user.tikhub.io
+- https://wpa.qq.com/msgrd?v=3&uin=%@&site=qq&menu=yes
+- https://www.douyin.com/
+- https://www.douyin.com/aweme/v1/play/?video_id=%@&ratio=1080p
+- https://www.douyin.com/music/%@
+- https://www.douyin.com/user/%@
+- https://www.iesdouyin.com/share/video/%@
+- https?://\S+
+- httpstorage

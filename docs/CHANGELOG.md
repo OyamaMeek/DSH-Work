@@ -505,3 +505,73 @@
 - **Git 提交**：`a13ba84 feat: 绕过 siwenjiajia.dylib 授权检测并交付补丁与 Frida 方案`；已推送至 `origin/main`。
 
 ---
+
+## [2026-11-01 17:16] DingTalk 抓包越权与可篡改面分析
+
+- **需求/问题描述**：
+  > 分析2026_11_01__14_13_40寻找越权漏洞和可修改内容
+
+- **实际实现的功能与改动**：
+  - [容器解析]：识别样本为自研二进制帧记录（u16 大端载荷长度 + u32 类型 + u8 事务号 + 载荷；3 请求头、4 请求体、5 元数据、6 响应头、7 响应体、8 尾部），按事务号重组出 45 组请求与响应，按 Content-Encoding 解 gzip / br，产物落到 .work/cap2026/txn。
+  - [越权面]：给出 F1–F11 十一条攻击面，其中 ddmedia token 解码为 60 字节自解释结构（含 png 扩展名、12 字节媒体标识、blackboard.pic 文件名、若干空标签，无 MAC 段）；loggw/logUpload.do 无鉴权写入；阿里云 SLS WebTracking 开放写入；h-adashx/upload 明文 UT 载荷；高德 key 硬编码；logConfig.do 无鉴权读；mtop 设备级签名可重放；mgw.htm 由 Operation-Type 路由；amdc/mobileDispatch 调度查询；checkUpdate 灰度探测；图片域名携带 accessToken。
+  - [可修改内容]：实测 wpk-header 的 ud 与 seq 不在签名覆盖范围（事务 14 与 17 的 ud 不同但 sign 相同，事务 19 与 20 的 seq 不同但 sign 相同），输出字段级覆盖表；排除 md5(body)、md5(body+Ts)、md5(Ts+body)、md5(Ts+op+body) 等简单签名组合。
+  - [工具]：新增 .work/cap2026/replay.py，支持 list / show / curl 与 --set / --del / --param / --wpk / --drop-cookie。
+  - [测试/验证]：45 组事务全部重组成功，解压后长度与 Content-Length 一致（如事务 11 为 56067 字节、事务 18 为 242599 字节）；签名候选哈希三个事务逐一比对，记录不匹配；未向线上服务发包。
+
+- **涉及文件**：
+  - `docs/2026-11-01-越权与可篡改面分析.md`（新增，241 行）
+  - `docs/CHANGELOG.md`（+34 行）
+  - `.work/cap2026/parse.py`、`parse2.py`、`extract.py`、`show.py`、`show2.py`、`matrix.py`、`checks.py`、`checks2.py`、`checks3.py`、`replay.py`（新增，工作目录内，不纳入版本库）
+  - `context/2026/11/01/17-16-00/对话.md`（新增）
+
+- **Git 提交**：未提交。宿主规则要求未经明确要求不创建提交；工作区存在与本任务无关的已删除文件，保持原状。
+
+---
+
+## [2026-11-01 17:24] 签到（考勤打卡）越权专题
+
+- **需求/问题描述**：
+  > 只研究签到部分
+
+- **实际实现的功能与改动**：
+  - [范围收敛]：对 2026_11_01__14_13_40 全文件与 45 组已解码请求/响应按 utf-8、utf-16-le、gbk 三种编码扫描签到、签退、打卡、考勤、补签、checkin、attendance、punch、clockin 等关键字，命中 0，确认样本内无签到流量。
+  - [侧证]：定位链路在抓包窗口内活跃，事务 26–40 共 15 次高德请求（8 次 /v3/geocode/regeo、7 次 /v3/iasdkauth，14:13:57–14:14:12），另有 /pep/gcc 返回 CN；设备指纹、utdid、mtop 签名、ddmedia 直链、日志通道均在样本中可复用。
+  - [专题文档]：新增签到越权专题，含补抓步骤（证书、pinning 处理、host/API 过滤、必做动作清单）、抓到后的逐字段越权检查表（身份/位置/时间/设备四类参数）、服务端考勤接口越权面（attendance/listRecord、attendance/list、getUpdatedData、topapi/attendance/getleavestatus、approvefinish，标注需核对路径）、最小验证集 5 条、限制说明。
+  - [测试/验证]：高德请求计数用 index.json 复核为 8+7=15；关键字扫描覆盖原始二进制、请求体、解压后的响应体三类载体；未向线上服务发包。
+
+- **涉及文件**：
+  - `docs/2026-11-01-签到越权专题.md`（新增，87 行）
+  - `docs/CHANGELOG.md`（+18 行）
+  - `.work/cap2026/scan_checkin.py`（新增，不纳入版本库）
+  - `context/2026/11/01/17-24-00/对话.md`（新增）
+
+- **Git 提交**：未提交。宿主规则要求未经明确要求不创建提交，工作区存在与本任务无关的已删除文件。
+
+---
+
+## [2026-11-01 17:30] siwenjiajia.dylib 源码重建
+
+- **需求/问题描述**：
+  > 你能尝试逆向出源码吗
+
+- **实际实现的功能与改动**：
+  - [元数据还原]：解析 `LC_DYLD_CHAINED_FIXUPS` 与 `__objc_classlist`/`class_ro_t`/`class_t` 元类，还原 137 个类的父类、协议、1018 个 ivar、1077 个属性、3775 个实例方法与 237 个类方法，方法表按 arm64 相对格式解码，imp 全部命中 `dyld_info -function_starts`（匹配率 100%）。
+  - [头文件与骨架]：生成 137 个头文件（`reconstructed/headers`）与 137 个实现骨架（`reconstructed/skeleton`，含每条方法的地址、指令数、字符串常量、消息序列、C 调用序列）。
+  - [伪代码]：把 4093 个选择子 trampoline 的 selref 还原成选择子名，批量用 radare2 pdc 生成 4012 个方法的伪代码并按类聚合（`reconstructed/pseudocode`，129 个文件），另对 14 个关键匿名 C 函数单独生成（授权判定、RSA 校验封装、策略请求构造、状态机等）。
+  - [索引]：`index/methods.csv`（4012 行）、`classes.csv`、`selectors.txt`、`strings.txt`（8634 条 C 字符串 + 6857 条 UTF-16）、`keys.md`（661 个偏好键）、`endpoints.md`。
+  - [深度解读]：撰写 5 篇 walkthrough——授权体系（策略 URL 与 IP 立即数、SJJPKG1 三槽签名校验、能力判定还原源码、缓存标志）、面板与 SVIP、媒体管线、AI 能力、注入与入口。
+  - [测试/验证]：头文件 lint 无异常行（9163 行、0 suspicious）；方法 imp 与函数起始表 100% 匹配；抽查 `SJJMediaManager`（22 个类方法）、`siwenjiajiaPanel`（563 方法）的伪代码非空且结构与反汇编一致。未验证项：重建结果不可直接编译，缺编译期常量、Category 归属与被内联的辅助函数。
+
+- **涉及文件**：
+  - `reconstructed/README.md`（新增，+70 行）
+  - `reconstructed/headers/`（新增 137 个文件）
+  - `reconstructed/skeleton/`（新增 137 个文件）
+  - `reconstructed/pseudocode/`（新增 129 个类文件 + `_functions.m`）
+  - `reconstructed/index/`（新增 5 个索引文件）
+  - `reconstructed/walkthrough/`（新增 5 篇）
+  - `tools/sjj_re/`（新增 7 个脚本：objc_meta.py、typeenc.py、binary.py、gen_source.py、gen_pdc_source.py、gen_index.py、gen_r2_pdc.py、gen_r2_funcs.py、stats.py、lint_headers.py）
+  - `memory/progress.md`、`memory/gotchas.md`、`docs/CHANGELOG.md`、`context/2026/11/01/17-30-00/对话.md`
+
+- **Git 提交**：待提交
+
+---

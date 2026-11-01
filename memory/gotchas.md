@@ -13,3 +13,7 @@
 - 用 bash printf 追加含反引号的 Markdown 会被命令替换吞掉内容，长文本一律先写入文件再用 Python 拼接，或用 edit 工具改文档。
 - 反汇编 iOS arm64e dylib 优先用 `dyld_info -disassemble` / `-function_starts`，符号名与函数边界都带标签；`otool -s` 的十六进制输出按列拼接会打乱节内容，直接读文件字节更可靠。
 - 混淆二进制的选择子（SEL）在多处 thunk 里硬编码，解析 `adrp+ldr` 到的 selref 表并解码 chained fixup，即可把 4093 个 thunk 还原成选择子名，大幅降低阅读成本。
+- ObjC 相对方法表的偏移基准是各字段自身地址：name 相对 &name 且指向 selref 槽，imp 相对 &imp，写成 entry+rel 会整体偏 8 字节，导致全部 imp 错位。
+- class_ro.name 与 property/ivar 的字符串指针在 __DATA 中走 chained fixup 编码（高位含 next/auth 位），必须查 fixups 或用低 51 位掩码，直接读 8 字节会拿到无效地址。
+- radare2 的 pdc 输出里选择子 trampoline 显示成 `0x666bc0 ()` 或 `fcn.0065cde0 ()`，两种写法都要匹配；thunk 区 0x659880-0x679820 每个 16 字节对应一个固定 selref。
+- 用 bash heredoc 跑 Python 时，TS 模板字符串会把 \n 提前变成真换行，导致 Python 语法错误；分析脚本一律写成文件再执行。

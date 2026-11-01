@@ -1,0 +1,183 @@
+// SJJInlineCameraHistoryController.m
+// 实现骨架：方法体由反汇编重建，完整伪代码见 pseudocode/SJJInlineCameraHistoryController.m
+
+#import "SJJInlineCameraHistoryController.h"
+
+@implementation SJJInlineCameraHistoryController
+
+// 0x00427720  675 条指令
+// 字符串: "SJJInlineCameraHistoryDidChangeNotification"
+// 消息: clearColor, view, setBackgroundColor:, setItems:, setThumbnailCache:, thumbnailCache, setCountLimit:, initWithFrame:, setDimmingControl:, colorWithWhite:alpha:, dimmingControl, addTarget:action:forControlEvents:, addSubview:, setPanelView:
+// C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_alloc_init, _objc_alloc, _objc_retainAutorelease
+-(void)viewDidLoad { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x00428698  231 条指令
+// 消息: view, bounds, dimmingControl, setFrame:, sendSubviewToBack:, safeAreaInsets, panelView, blurView, titleLabel, subtitleLabel, closeButton, layer, setCornerRadius:, tableView
+// C 调用: _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _CGRectGetWidth, _CGRectGetHeight
+-(void)viewDidLayoutSubviews { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x00428a9c  49 条指令
+// 消息: items, count, stringWithFormat:, subtitleLabel, setText:
+// C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
+-(void)refreshSubtitle { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x00428b8c  70 条指令
+// 消息: setItems:, thumbnailCache, removeAllObjects, refreshSubtitle, tableView, reloadData, items, count
+// C 调用: _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
+-(void)historyDidChange { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x00428c34  28 条指令
+// 消息: items, count
+// C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
+-(long long)tableView:(id)numberOfRowsInSection:(long long)arg2 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x00428cc4  1238 条指令
+// 字符串: "SJJInlineCameraHistoryCell", "photo", "play.fill", "camera.fill", "livephoto", "%ld"
+// 消息: dequeueReusableCellWithIdentifier:, initWithStyle:reuseIdentifier:, clearColor, setBackgroundColor:, setSelectionStyle:, initWithFrame:, colorWithWhite:alpha:, layer, setCornerRadius:, setCornerCurve:, setSelectedBackgroundView:, setTag:, setMasksToBounds:, contentView
+// C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_alloc, _objc_release, _CGRectGetWidth, _CGRectGetMinX, _objc_opt_class, _objc_opt_isKindOfClass, _objc_setAssociatedObject, _dispatch_get_global_queue, _dispatch_async, _objc_autoreleaseReturnValue
+-(id)tableView:(id)cellForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042ab50  150 条指令
+// 消息: deselectRowAtIndexPath:animated:, row, items, count, objectAtIndexedSubscript:, presentItem:from:, integerValue, setEnabled:, setAlpha:
+// C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_getAssociatedObject, _objc_opt_respondsToSelector
+-(void)tableView:(id)willDisplayCell:(id)forRowAtIndexPath:(id)arg3 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042ab54  149 条指令
+// 消息: deselectRowAtIndexPath:animated:, row, items, count, objectAtIndexedSubscript:, presentItem:from:, integerValue, setEnabled:, setAlpha:
+// C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume, _objc_getAssociatedObject, _objc_opt_respondsToSelector
+-(void)tableView:(id)didSelectRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042ac84  73 条指令
+// 消息: integerValue, items, count, objectAtIndexedSubscript:, setEnabled:, setAlpha:
+// C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_respondsToSelector, _objc_release, _objc_retain
+-(void)saveHistoryButtonTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042ae50  320 条指令
+// 字符串: "id", "path"
+// 消息: integerValue, items, count, objectAtIndexedSubscript:, setItems:, thumbnailCache, removeAllObjects, refreshSubtitle, tableView, reloadData, objectForKeyedSubscript:, array, countByEnumeratingWithState:objects:count:, length
+// C 调用: _objc_getAssociatedObject, _objc_retainAutoreleasedReturnValue, _objc_opt_respondsToSelector, _objc_release, __Unwind_Resume, _objc_retain, _objc_opt_class, _objc_opt_isKindOfClass, _objc_enumerationMutation
+-(void)deleteHistoryButtonTap:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b42c  38 条指令
+// 消息: items, count, row
+// C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release
+-(BOOL)tableView:(id)canEditRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b4f4  95 条指令
+// 消息: row, items, count, objectAtIndexedSubscript:, setItems:, thumbnailCache, removeAllObjects, refreshSubtitle, reloadData
+// C 调用: _objc_retain, _objc_retainAutoreleasedReturnValue, _objc_release, __Unwind_Resume
+-(void)tableView:(id)commitEditingStyle:(long long)forRowAtIndexPath:(id)arg3 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b664  3 条指令
+-(id)tableView:(id)titleForDeleteConfirmationButtonForRowAtIndexPath:(id)arg2 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b670  21 条指令
+// 消息: defaultCenter, removeObserver:
+// C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
+-(void)closeTap { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b678  19 条指令
+// 消息: defaultCenter, removeObserver:
+// C 调用: _objc_retainAutoreleasedReturnValue, _objc_release
+-(void)dealloc { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b6f0  272 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)dimmingControl { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b6fc  269 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setDimmingControl:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b70c  265 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)blurView { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b718  262 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setBlurView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b728  258 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)panelView { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b734  255 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setPanelView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b744  251 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)titleLabel { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b750  248 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setTitleLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b760  244 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)subtitleLabel { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b76c  241 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setSubtitleLabel:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b77c  237 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)closeButton { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b788  234 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setCloseButton:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b798  230 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)tableView { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b7a4  227 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setTableView:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b7b4  223 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)items { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b7c0  220 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_setProperty_nonatomic_copy, _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setItems:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b7cc  217 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(id)thumbnailCache { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b7d8  214 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void)setThumbnailCache:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x0042b7e8  210 条指令
+// 消息: passthroughContainerView, passthroughViews, countByEnumeratingWithState:objects:count:
+// C 调用: _objc_storeStrong, _objc_msgSendSuper2, _objc_retainAutoreleasedReturnValue, _objc_release, _objc_enumerationMutation, _objc_retain, _objc_autoreleaseReturnValue, ___stack_chk_fail, __Unwind_Resume, _objc_loadWeakRetained, _objc_destroyWeak
+-(void).cxx_destruct { /* 重建骨架，语义见 pseudocode */ }
+
+// 0x00427510  29 条指令
+// C 调用: _objc_retain, _dispatch_async, _objc_release
++(void)presentFrom:(id)arg1 { /* 重建骨架，语义见 pseudocode */ }
+
+@end
