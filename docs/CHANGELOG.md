@@ -706,6 +706,6 @@
   - `tools/siwenjiajia.plist`（新增，+7 行）
   - `docs/CHANGELOG.md`（+20 行）
 
-- **Git 提交**：待提交
+- **Git 提交**：`068ce53 feat: 增加注入诊断脚本与过滤器模板，排查插件不显示`；已推送至 `origin/main`。
 
 ---
