@@ -663,7 +663,7 @@
   - `yuki-theos/docs/REVERSE_NOTES.md`（+170）
   - `docs/CHANGELOG.md`（+26）
 
-- **Git 提交**：待提交
+- **Git 提交**：`b5a28c7 feat: 逆向抖音 Yuki 防撤回 dylib 并重建 Theos 工程`；已推送至 `origin/main`。
 
 ---
 
