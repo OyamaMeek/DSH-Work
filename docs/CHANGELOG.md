@@ -667,3 +667,27 @@
 
 ---
 
+## [2026-11-02 10:21] 安装 REA（morluto/rea）6.8.0 并刷新客户端 MCP 注册
+
+- **需求/问题描述**：
+  > 安装https://github.com/morluto/rea
+
+- **实际实现的功能与改动**：
+  - [工具链修复]：Homebrew 的 node 26.5.1 因依赖 simdjson 升级到 5.1.1 而丢失 `libsimdjson.33.dylib`，任何 `node` 调用直接 abort；执行 `brew upgrade node` 升到 26.13.0 修复，同时满足 REA 的引擎要求 `^22.23.4 || ^24.22.1 || >=26.12.1`；另安装 keg-only `node@24`（24.22.2）作为备用解释器；
+  - [全局安装]：`npm install -g rea-agents@latest`，版本由 6.3.0 升到 6.8.0，launcher 位于 `/opt/homebrew/bin/rea`；
+  - [客户端注册]：`rea setup --yes --all-detected` 为 claude_code、claude_desktop、codex、cursor、gemini_cli、opencode、copilot_cli、vscode、pi、dsh 十个客户端写入 `rea mcp` 注册，保留 `HOPPER_LAUNCHER_PATH=/Applications/Hopper Disassembler v4.app/Contents/MacOS/hopper`，Codex 侧补上 `startup_timeout_sec = 30` 与 `tool_timeout_sec = 450`；每份被改写的配置都生成了 `.rea.backup` 备份；
+  - [技能安装]：`reverse-engineer-anything` 由 v34（139 个工具）更新到 v49（229 个工具），写入 `~/.agents/skills/` 与 `~/.claude/skills/`；
+  - [测试/验证]：`rea doctor --json` 返回 `healthy: true`、`environment_healthy: true`；MCP stdio 握手返回 `serverInfo: rea 6.8.0`，`tools/call binary_session` 正常返回 provider capabilities；`frida.getLocalDevice()` 可枚举本地设备；`rea --version` 输出 6.8.0；
+  - [范围说明]：Ghidra、IDA、JADX、Kuna 四项 doctor 检查未通过属于引擎自带（bring-your-own）范围，本机以 Hopper v4 作为分析引擎，不影响安装结果；
+  - [仓库处理]：用于查阅文档的浅克隆放在 `tools/rea/`，通过 `.git/info/exclude` 排除，不进入提交。
+
+- **涉及文件**：
+  - `memory/agents.md`（+2 / -2）
+  - `docs/CHANGELOG.md`（+21 / -0）
+  - 全局安装：`/opt/homebrew/lib/node_modules/rea-agents`、`/opt/homebrew/bin/rea`、十个客户端的 MCP 配置与 skill 目录
+
+- **Git 提交**：待提交
+
+---
+
+
