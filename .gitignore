@@ -4,3 +4,7 @@
 .work_video/
 .npm_cache/
 .work/
+
+# 抖音逆向样本与提取产物，不推送远端仓库
+抖音_40.6.0_Plus@巨魔商店.ipa
+抖音_40.6.0_Plus@巨魔商店_plugins/

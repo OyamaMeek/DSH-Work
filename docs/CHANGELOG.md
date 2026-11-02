@@ -622,3 +622,48 @@
 - **Git 提交**：`6f1c76e docs: 为 Theos 工程补详细注释并新增插件开发教程`；已推送至 `origin/main`。
 
 ---
+## [2026-11-02 09:57] 从抖音巨魔商店 IPA 提取插件并排除 IPA 与产物出仓库
+
+- **需求/问题描述**：
+  > 把抖音_40.6.0_Plus@巨魔商店.ipa里的插件提取出来 ipa不要push到远端仓库
+
+- **实际实现的功能与改动**：
+  - [插件提取]：解析 `Payload/Aweme.app/Frameworks/`，按 GBK 还原 zip 内的中文文件名，导出 14 个 `.dylib` 到 `抖音_40.6.0_Plus@巨魔商店_plugins/Frameworks/`，总计 17 MB；
+  - [插件识别]：逐包读取架构、`LC_ID_DYLIB`、`minos`、链接依赖、Objective-C 类表与字符串，确认 LoadControl 是唯一的注入入口（主程序只有 `@executable_path/Frameworks/LoadControl.dylib` 一条 `LC_LOAD_DYLIB`），其余插件由它扫描加载；DYYY、DYKiller、自动消息续火花、评论区语音、Yuki 防撤回、SJJ 登录修复、去广告、120hz、键盘按钮、顶部药丸、触摸轨迹、请别暂停音乐、libsubstrate 各自的作用写入清单；
+  - [索引文档]：生成 `INDEX.md`，含体积、架构、最低系统版本、内部 install name、功能说明、注入方式、依赖关系与 14 个文件的 SHA-256；
+  - [仓库排除]：在 `.gitignore` 加入 `抖音_40.6.0_Plus@巨魔商店.ipa` 与 `抖音_40.6.0_Plus@巨魔商店_plugins/`，两者不再出现在 `git status` 的待提交列表；
+  - [测试/验证]：`git check-ignore -v` 命中两条规则；`lipo -archs`、`otool -L`、`nm -gU`、`strings` 对每个 dylib 均正常返回；`du -sh` 确认产物 17 MB，文件数与 IPA 内 `.dylib` 条目数一致（14/14）。
+
+- **涉及文件**：
+  - `抖音_40.6.0_Plus@巨魔商店_plugins/Frameworks/`（14 个 dylib，二进制产物）
+  - `抖音_40.6.0_Plus@巨魔商店_plugins/INDEX.md` (+78)
+  - `.gitignore` (+4)
+  - `docs/CHANGELOG.md` (+22)
+
+- **Git 提交**：待提交（用户要求 IPA 与提取产物不推送远端仓库，产物目录与 IPA 已加入 `.gitignore`）
+
+## [2026-11-02 10:14] 逆向抖音Yuki防撤回 dylib 并重建 Theos 工程
+
+- **需求/问题描述**：
+  > 抖音Yuki防撤回_0.1-0.dylib逆向出theos源码
+
+- **实际实现的功能与改动**：
+  - [二进制分析]：定位 `__init_offsets` 的两个构造函数（`0x4bc4`、`0x113d0`），用 r2 反汇编出 100 个 hook 安装点（85 个带替换实现），解析出自建的 `hookFn(Class, SEL, IMP, IMP *slot)` 安装机制、12 个自带类、15 组功能开关与 `YukiRecallMessageNotification`/`YukiAccountChangedNotification` 两个通知名；
+  - [元数据还原]：用 `otool -arch arm64e -oV` 提取 12 个类的实例方法、类方法、属性与实例变量，与 rabin2 的 298 个选择子名对齐，按 Objective-C 类型编码生成带参数类型的方法签名；
+  - [工程搭建]：新建 `yuki-theos/`，含 `Makefile`（arm64 + arm64e，iOS 14.0）、`control`、`Yuki.plist`（4 个抖音 bundle id）、`Tweak.xm`、`src/Yuki/`（12 个类的接口与实现骨架）、`src/Aweme/`（29 个被 hook 类的声明）、`src/YukiUtils.{h,m}`、`src/YukiSettingsUtils.{h,m}`、`src/YukiReadReceipt.{h,m}`；
+  - [hook 层重建]：按原始安装顺序重写防撤回（`TIMXOMessage.setRecalled:`/`content`）、撤回提示刷新、已读回执抑制（`TIMXMessageMarkAsReadOperator`）、阅后即焚保留（`AWEIMWatchOnce*`）、语音分享与自动翻译检查、左滑引用、TabBar 长按一键已读/快速切号、在线状态、气泡主题、设置页卡片样式，共 20 个 `%hook` 块；
+  - [文档]：写 `docs/REVERSE_NOTES.md`（段布局、hook 机制、15 组开关表、主要语义、覆盖度）与 `README.md`；
+  - [测试/验证]：`make` 通过，产出 `.theos/obj/debug/Yuki.dylib`（arm64 + arm64e fat，424 KB，ldid 签名），`strings` 校验 8 个开关键全部进入二进制；`otool -oV` 解析出的 12 个类与 rabin2 的类清单一致。
+
+- **涉及文件**：
+  - `yuki-theos/`（Makefile、control、Yuki.plist、Tweak.xm、README.md、.gitignore）
+  - `yuki-theos/src/Yuki/`（12 个类的 .h 与 .m）
+  - `yuki-theos/src/Aweme/`（29 个头文件）
+  - `yuki-theos/src/YukiUtils.{h,m}`、`YukiSettingsUtils.{h,m}`、`YukiReadReceipt.{h,m}`、`YukiPrefs.h`
+  - `yuki-theos/docs/REVERSE_NOTES.md`（+170）
+  - `docs/CHANGELOG.md`（+26）
+
+- **Git 提交**：待提交
+
+---
+

@@ -1,0 +1,10 @@
+Package: com.vita.yuki
+Name: Yuki
+Version: 0.1-0
+Architecture: iphoneos-arm
+Description: 抖音私信增强（防撤回、已读回执抑制、语音翻译、拍同款手势等），由二进制逆向重建的 Theos 工程。
+Homepage: https://t.me/vita_app
+Maintainer: Vita
+Author: Vita
+Section: Tweaks
+Depends: mobilesubstrate
