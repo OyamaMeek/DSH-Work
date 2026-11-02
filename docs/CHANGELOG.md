@@ -651,7 +651,7 @@
   - [二进制分析]：定位 `__init_offsets` 的两个构造函数（`0x4bc4`、`0x113d0`），用 r2 反汇编出 100 个 hook 安装点（85 个带替换实现），解析出自建的 `hookFn(Class, SEL, IMP, IMP *slot)` 安装机制、12 个自带类、15 组功能开关与 `YukiRecallMessageNotification`/`YukiAccountChangedNotification` 两个通知名；
   - [元数据还原]：用 `otool -arch arm64e -oV` 提取 12 个类的实例方法、类方法、属性与实例变量，与 rabin2 的 298 个选择子名对齐，按 Objective-C 类型编码生成带参数类型的方法签名；
   - [工程搭建]：新建 `yuki-theos/`，含 `Makefile`（arm64 + arm64e，iOS 14.0）、`control`、`Yuki.plist`（4 个抖音 bundle id）、`Tweak.xm`、`src/Yuki/`（12 个类的接口与实现骨架）、`src/Aweme/`（29 个被 hook 类的声明）、`src/YukiUtils.{h,m}`、`src/YukiSettingsUtils.{h,m}`、`src/YukiReadReceipt.{h,m}`；
-  - [hook 层重建]：按原始安装顺序重写防撤回（`TIMXOMessage.setRecalled:`/`content`）、撤回提示刷新、已读回执抑制（`TIMXMessageMarkAsReadOperator`）、阅后即焚保留（`AWEIMWatchOnce*`）、语音分享与自动翻译检查、左滑引用、TabBar 长按一键已读/快速切号、在线状态、气泡主题、设置页卡片样式，共 20 个 `%hook` 块；
+  - [hook 层重建]：按原始安装顺序重写防撤回（`TIMXOMessage.setRecalled:`/`content`）、撤回提示刷新、已读回执抑制（`TIMXMessageMarkAsReadOperator`）、阅后即焚保留（`AWEIMWatchOnce*`）、语音分享与自动翻译检查、左滑引用、TabBar 长按一键已读/快速切号、在线状态、气泡主题、设置页卡片样式，共 18 个 `%hook` 块；
   - [文档]：写 `docs/REVERSE_NOTES.md`（段布局、hook 机制、15 组开关表、主要语义、覆盖度）与 `README.md`；
   - [测试/验证]：`make` 通过，产出 `.theos/obj/debug/Yuki.dylib`（arm64 + arm64e fat，424 KB，ldid 签名），`strings` 校验 8 个开关键全部进入二进制；`otool -oV` 解析出的 12 个类与 rabin2 的类清单一致。
 
