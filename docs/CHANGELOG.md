@@ -686,7 +686,7 @@
   - `docs/CHANGELOG.md`（+21 / -0）
   - 全局安装：`/opt/homebrew/lib/node_modules/rea-agents`、`/opt/homebrew/bin/rea`、十个客户端的 MCP 配置与 skill 目录
 
-- **Git 提交**：待提交
+- **Git 提交**：`eba837f chore: 安装 REA 6.8.0 并刷新十个客户端的 MCP 注册`，已推送至 `origin/main`。
 
 ---
 
