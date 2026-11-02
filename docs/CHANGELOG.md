@@ -690,4 +690,22 @@
 
 ---
 
+## [2026-10-31 20:26] 排查注入后插件不显示并补充诊断工具
 
+- **需求/问题描述**：
+  > 注入后不显示插件是不是你没有绕过成功
+
+- **实际实现的功能与改动**：
+  - [机制核对]：确认授权补丁只作用于能力判定 `0x3797f4`，与 dylib 加载、hook 装配是两条独立链路；插件不出现通常说明 dylib 未加载或注入配置缺失，而不是授权判定未放开。
+  - [加载链路]：`0x5b986c` 先 `dlsym` `MSHookMessageEx`，未命中时按 `0x955898` 表逐个 `dlopen` CydiaSubstrate / libellekit 路径，全部失败则回退到内置实现 `0x2ecdc0`，因此缺少 ElleKit 也能挂钩，缺的是把 dylib 注入目标 App 的过滤器。
+  - [新增工具]：`tools/frida/siwenjiajia_diag.js`（报告模块是否加载、基址、ElleKit/Substrate 状态、策略状态字节、每次能力判定调用与返回值）；`tools/siwenjiajia.plist`（Bundles 过滤器模板，包名 com.ss.iphone.ugc.Aweme）。
+  - [测试/验证]：核对产物未变（`siwenjiajia.patched.dylib` SHA-256 `187d9a8a…c2d`，`0x37993c` 处仍为 `d2800020`）；诊断脚本与 plist 为新增文本文件，无运行环境可执行验证。
+
+- **涉及文件**：
+  - `tools/frida/siwenjiajia_diag.js`（新增，+86 行）
+  - `tools/siwenjiajia.plist`（新增，+7 行）
+  - `docs/CHANGELOG.md`（+20 行）
+
+- **Git 提交**：待提交
+
+---
