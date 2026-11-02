@@ -709,3 +709,20 @@
 - **Git 提交**：`068ce53 feat: 增加注入诊断脚本与过滤器模板，排查插件不显示`；已推送至 `origin/main`。
 
 ---
+
+## [2026-11-02 17:08] 修复桌宠同时显示两只
+
+- **需求/问题描述**：
+  > 我现在会同时显示两个你修复一下
+
+- **实际实现的功能与改动**：
+  - [定位]：桌面宠物由 `dsh-pet` 0.3.7（`~/.dsh/profiles/desktop/node_modules/dsh-pet`）提供，宿主路由 `/dsh-pet-7340`；运行中只有一个宠物实例 `main`，其 `display` 为内置默认 `both`，于是浏览器 overlay 与 Electron 桌面透明窗（`dsh-pet-electron-helper`）各渲染一份，屏幕上同时出现两只；
+  - [修复]：向宿主写入用户层主配置 `~/.dsh/dsh-pet/main-config.jsonc`，把 `pets[0].display` 由 `both` 改为 `desktop`，保留桌面透明窗那一只，页面 overlay 不再叠加；
+  - [自动应用]：PUT `/dsh-pet-7340/config` 返回 200，宿主按 `syncDesktop` 停旧 helper 起新 helper（PID 26971 → 27712），旧窗口随进程退出。
+
+- **涉及文件**：
+  - `~/.dsh/dsh-pet/main-config.jsonc`（新建，+16 行）
+  - `docs/CHANGELOG.md`（+17 行）
+
+- **Git 提交**：待提交
+
