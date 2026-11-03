@@ -748,3 +748,24 @@
 
 - **Git 提交**：`d26dc96 docs: 记录 humanizer Skill 安装结果`；已推送至 `origin/main`。
 
+---
+
+## [2026-11-03 23:17] 为 web profile 安装 dshmarket 插件
+
+- **需求/问题描述**：
+  > dsh plugin --profile web add dshmarket
+
+- **实际实现的功能与改动**：
+  - [CLI 定位]：`dsh` 没有进 PATH，实际入口是应用包内的 `/Applications/DeepSeek Harness.app/Contents/Resources/app/dsh/node_modules/@deepseek-ai/dsh/lib/bin.js`，用系统 `node` 调用；
+  - [补 pnpm]：`dsh plugin` 只是把参数透传给 profile 目录下的 pnpm，宿主只随包发 `runtime/pnpm/bin/pnpm.mjs`（11.7.0），首次执行报 `spawn pnpm ENOENT`，日志落在 `~/.dsh/profiles/web/.plugin-manager/logs/operation-GH1AJh/pnpm.log`；在 `.work/pnpm-shim/pnpm` 放一个转发到该 mjs 的 sh 脚本并前置到 PATH 后可用；
+  - [安装]：命令把 `dshmarket ^1.73.8` 写入 `~/.dsh/profiles/web/package.json` 的 dependencies，同时把 `dshmarket` 追加到 `dsh.profile.bundles`，新增 4 个包，用时 8s；
+  - [peer 依赖]：dshmarket 要求 `@deepseek-ai/cordis`、`@deepseek-ai/dsh-settings`、`@deepseek-ai/schemastery`，三者已在上层 `~/.dsh/profiles/node_modules` 中，按 Node 解析规则命中，pnpm 的 peer 警告不影响加载；
+  - [测试/验证]：`dsh --profile web --dump-config` 输出中出现 `id: dsh-market` 与 `name: dshmarket`；在临时端口 49298 实启动 web profile，首屏 HTML 注册了客户端模块 `dshmarket`（`url=plugins/??dshmarket/client.js&rev=8764b649098b`），该地址返回 200、963311 字节；验证结束已终止临时进程。
+
+- **涉及文件**：
+  - `~/.dsh/profiles/web/package.json`（+1 依赖，+1 bundles 条目）
+  - `.work/pnpm-shim/pnpm`（新建，+2 行，已被 `.gitignore` 覆盖）
+  - `docs/CHANGELOG.md`（+20 行）
+  - `context/2026/11/03/23-17-55/对话.md`（新增）
+
+- **Git 提交**：待提交
