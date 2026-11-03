@@ -726,3 +726,25 @@
 
 - **Git 提交**：待提交
 
+---
+
+## [2026-11-03 14:48] 安装 humanizer 写作 Skill
+
+- **需求/问题描述**：
+  > 安装https://github.com/blader/humanizer
+
+- **实际实现的功能与改动**：
+  - [安装]：执行 `npx -y skills add blader/humanizer --global --agent claude-code`，上游版本 3.1.0，技能目录落到 `~/.claude/skills/humanizer`，同时写入 `~/.agents/.skill-lock.json` 的 humanizer 条目（source `blader/humanizer`，skillPath `SKILL.md`）。
+  - [补齐 DSH 读取路径]：skills CLI 只把目录复制到 Claude Code 目标，`~/.agents/skills/humanizer` 未生成；复制同一份内容到该目录后，DSH 会话的技能目录随即出现 `humanizer`。
+  - [包自检]：在上游克隆目录执行 `python3 scripts/validate-package.py`，输出 `Humanizer package v3.1.0 is valid`；临时克隆目录已删除，更新走 skills CLI 的 lock 记录。
+  - [测试/验证]：`skill` 工具加载 `humanizer` 返回 31878 字符正文；`~/.claude/skills/humanizer/SKILL.md` 与上游 HEAD 内容一致，SHA-256 均为 `0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad`。
+
+- **涉及文件**：
+  - `~/.claude/skills/humanizer/`（新增，SKILL.md 32348 字节）
+  - `~/.agents/skills/humanizer/`（新增，内容同上）
+  - `~/.agents/.skill-lock.json`（新增 humanizer 注册条目）
+  - `docs/CHANGELOG.md`（+20 行）
+  - `context/2026/11/03/14-48-12/对话.md`（新增）
+
+- **Git 提交**：待提交
+
