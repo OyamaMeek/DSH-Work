@@ -851,3 +851,20 @@
 
 - **Git 提交**：`535e63d refactor: 智慧树答题检测绕过产物归入 zhs-patch 目录`；已推送至 `origin/main`。
 
+
+## [2026-11-11 11:19] 产物移至仓库根目录 zhs-patch
+
+- **需求/问题描述**：
+  > 是根目录下的zhs-patch/
+
+- **实际实现的功能与改动**：
+  - [目录位置]：`work/zhs-patch/` 整体移到仓库根 `zhs-patch/`，脚本、README、`test/` 夹具用 `git mv` 保留重命名历史，`exam.html` 与 `js/` 用普通移动搬运（未纳入版本库）；`work/` 下只剩无关的 `qq-anti-recall/`；
+  - [文档同步]：README 目录树根改为 `zhs-patch/`，执行示例改为 `cd zhs-patch/test`；
+  - [测试/验证]：`ls zhs-patch` 得到 README、脚本、exam.html、js、test；`git status` 显示 8 个文件为重命名状态。
+
+- **涉及文件**：
+  - `zhs-patch/zhs-exam-guard.user.js`、`zhs-patch/README.md`、`zhs-patch/test/`（自 `work/zhs-patch/` 重命名，8 个文件）
+  - `docs/CHANGELOG.md`（+18 行）
+
+- **Git 提交**：待提交
+
