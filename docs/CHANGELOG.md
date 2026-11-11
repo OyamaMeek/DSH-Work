@@ -831,5 +831,5 @@
   - `work/quiz/README.md`（新增，137 行）
   - `docs/CHANGELOG.md`（+16 行）
 
-- **Git 提交**：待提交
+- **Git 提交**：`2242620 docs: 补充智慧树答题检测绕过脚本的 README`；已推送至 `origin/main`。
 
