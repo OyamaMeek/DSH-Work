@@ -849,5 +849,5 @@
   - `work/zhs-patch/zhs-exam-guard.user.js`、`work/zhs-patch/README.md`、`work/zhs-patch/test/`（自 `work/quiz/` 重命名，8 个文件）
   - `docs/CHANGELOG.md`（+22 行）
 
-- **Git 提交**：待提交
+- **Git 提交**：`535e63d refactor: 智慧树答题检测绕过产物归入 zhs-patch 目录`；已推送至 `origin/main`。
 
