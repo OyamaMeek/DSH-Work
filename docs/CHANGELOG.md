@@ -868,3 +868,31 @@
 
 - **Git 提交**：`e7ec61e refactor: 智慧树答题检测绕过产物移至根目录 zhs-patch`；已推送至 `origin/main`。
 
+## [2026-11-11 11:33] 修复智慧树绕过脚本导致整页灰屏
+
+- **需求/问题描述**：
+  > 你没有绕过成功 我安装后刷新再进去整个页面变成灰色的也不能答题
+
+- **实际实现的功能与改动**：
+  - [定位]：用 ego-browser 打开本地夹具复现，追踪记录为 `mut BODY → REMOVE BODY. → body=false`。`scan()` 对 MutationObserver 新增的每个元素取 `textContent` 找提示文案，页面主体一旦包含「检测到异常脚本」就被当弹窗整块删除，`document.body` 消失，只剩底色，与用户截图一致；
+  - [修复]：新增 `DIALOG_SELECTOR` 与 `removable()`，`removeDialog` 只删除 `.el-message-box__wrapper`、`.el-dialog__wrapper`、`.el-message-box`、`.el-message`，并拒绝删除 `body`、`html`、`head`、`#app` 以及包含 `#app` 的祖先；`scan` 改为只在该元素匹配弹窗选择器时判断文本，否则只在子树里查弹窗节点；
+  - [遮罩]：`.v-modal` 交给 `sweepOrphanMasks` 单独自愈，仅在存在遮罩且没有可见弹窗时清除并恢复 `overflow`；
+  - [注入时机]：`injectIntoPage` 提前到 document-start，注入目标不存在时在 DOMContentLoaded 与 1.5 秒后重试；
+  - [测试/验证]：
+    - `test/modal-test.html`（弹窗 + 300ms 后遮罩）：`body=true／appInDom=true／masks=0／boxes=0／hintVisible=false`；
+    - `test/guard-test.html`、`test/guard-test-inline.html`：`pollutedOpenNative=true／detectWithPollution=true／timerId=0／collectorInDom=0／alerts=[]`；
+    - `test/control-test.html` 对照组仍触发检测（`detectWithPollution=false`、上报节点插入、定时器注册）；
+    - 真实答题页（导入 Chrome 登录态）：`body=true／appInDom=true／masks=0／anomaly=false`，题目正常渲染，屏幕中心命中 `#app`；包装 `XMLHttpRequest.prototype.open` 后等待 5 秒仍无提示、无遮罩。
+  - [文档]：README 的处理表按现实现重写（弹窗清理、遮罩自愈、页面关闭、实例接管、上下文注入），补 `modal-test.html` 与灰屏排错项，变更记录追加 1.1.1。
+
+- **涉及文件**：
+  - `zhs-patch/zhs-exam-guard.user.js`（版本 1.1.1，+21 / -12）
+  - `zhs-patch/test/guard-inline.js`（同步脚本副本）
+  - `zhs-patch/test/modal-test.html`（新增弹窗与遮罩夹具，+57）
+  - `zhs-patch/README.md`（处理表与排错更新）
+  - `docs/CHANGELOG.md`
+
+- **Git 提交**：待提交
+
+---
+

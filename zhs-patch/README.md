@@ -67,10 +67,13 @@ Object.freeze(JSON);
 | 环境标记 | `clearOcs` | `window.OCS` 存在时置为 undefined |
 | 定时任务 | `setTimeout` / `setInterval` 包装 | 方法体含 `$alert` 的调用直接返回 0，1 秒一次的检测与 60 秒轮询都不会注册 |
 | 上报拦截 | `Node.prototype.appendChild` / `insertBefore`、`fetch`、`sendBeacon` | 目标地址含 `collector2c.zhihuishu.com` 的请求直接丢弃，`appendChild` 返回节点本身以模拟成功 |
-| 弹窗与关闭 | `MutationObserver` + `window.close` 包装 | 节点文本命中「检测到异常脚本 / 请您关闭插件 / 为保证您正常答题」就移除最近的 `.el-message-box__wrapper`、`.el-dialog__wrapper`、`.v-modal`、`.el-overlay` 并恢复滚动；命中后 6 秒内屏蔽 `window.close` |
-| 实例兜底 | `sweepVue` | `load` 后 1.5 秒遍历 `#app.__vue__` 的实例树，清 `checkTimer`，覆盖 `$options.methods.checkout` |
+| 弹窗清理 | `removeDialog` + `MutationObserver` | 只处理 `.el-message-box__wrapper`、`.el-dialog__wrapper`、`.el-message-box`、`.el-message` 且文本命中「检测到异常脚本 / 请您关闭插件 / 为保证您正常答题」的节点；`removable` 拒绝删除 `body`、`html`、`head`、`#app` 以及包含 `#app` 的祖先节点 |
+| 遮罩自愈 | `sweepOrphanMasks` | 存在 `.v-modal` 且没有可见的弹窗时才清除遮罩并恢复 `overflow`，避免弹窗先插入、遮罩后插入造成整页灰色 |
+| 页面关闭 | `window.close` 包装 | 命中提示后 6 秒内屏蔽关闭动作 |
+| 实例接管 | `patchVueAlert` + `walkVue` | 每 200 毫秒最多 150 次遍历 `#app.__vue__`：覆盖原型上的 `$alert`（提示类消息直接返回 `Promise.resolve('dismiss')`）、清除 `checkTimer`、覆盖方法体含 `$alert` 的 `checkout` |
+| 上下文注入 | `injectIntoPage` | 扩展若把脚本放在隔离环境执行，window 层改动对页面无效；把 `guardMain` 序列化后以 script 标签注入页面上下文，重复执行由 `__zhsExamGuard` 拦住 |
 
-前四层让检测返回 true，后三层保证即使判定失败也不会弹窗、不会上报、不会关页面。
+前四层让检测返回 true，其余各层保证即使判定失败也不会弹窗、不会上报、不会关页面，也不会误删页面容器。
 
 ## 目录结构
 
@@ -90,6 +93,7 @@ zhs-patch/
     ├── guard-test-inline.html   把 detect-sample.js 内联，避免 file:// 跨源报错
     ├── control-test.html        不加载脚本的对照组
     ├── late-test2.html          脚本晚于检测模块注入的场景，附弹窗模拟
+    ├── modal-test.html          弹窗加遮罩后插入的场景，检查页面容器与遮罩
     └── guard-inline.js          脚本副本，供 file:// 测试页引用
 ```
 
@@ -103,6 +107,7 @@ cd zhs-patch/test
 open guard-test-inline.html   # 装脚本：应全部为 true / 0 / 空
 open control-test.html        # 对照组：detectWithPollution=false，定时器与上报节点存在
 open late-test2.html          # 晚注入：弹窗与遮罩被移除，dialogCount=0
+open modal-test.html          # 弹窗加遮罩：body 与 #app 保留，masks=0、boxes=0、hintVisible=false
 ```
 
 对照页的判定逻辑与线上一致：页面自己用 `fetch` 取到脚本、包装 `XMLHttpRequest.prototype.open`，再调用 `window.__detect()`。
@@ -128,10 +133,11 @@ document.body.innerText.includes("检测到异常脚本")      // false 表示�
 | --- | --- |
 | 控制台没有 `[zhs-guard] 已加载` | 扩展未在 `document-start` 注入，或 `@match` 与当前域名不符 |
 | 有「已加载」但仍弹提示 | 注入晚于组件 `created` 里 1 秒那次检测；弹窗会被兜底层移除，但状态标记是 false，检查扩展的注入时机设置 |
-| 页面白屏或答题界面不渲染 | 逐一注释脚本中 `Node.prototype.appendChild` 与 `fetch` 的包装，确认是否有库依赖它们的返回值 |
-| 弹窗没被移除 | 页面改版换了弹窗结构，更新 `removeDialog` 里的选择器与 `hints` 文案 |
-| `sweepVue` 无效果 | 组件树不在 `#app.__vue__` 下，改为按 `checkTimer` 特征遍历 `document.querySelectorAll('*')` 上的 `__vue__` |
+| 整页变灰且不能答题 | 旧版把含提示文案的容器节点当弹窗删除，`body` 被移除后只剩底色。现版 `removable` 拒绝删除 `body`、`html`、`#app` 及其祖先 |
+| 弹窗没被移除 | 页面改版换了弹窗结构，更新 `DIALOG_SELECTOR` 与 `hints` 文案 |
+| `walkVue` 无效果 | 组件树不在 `#app.__vue__` 下，改为按 `checkTimer` 特征遍历 `document.querySelectorAll('*')` 上的 `__vue__` |
 
 ## 变更
 
 - 2026-11-11：首版。定位模块 939 / 模块 29 的检测链，完成五层绕过与三层兜底，本地对照与真实页面验证通过。
+- 2026-11-11 1.1.1：修复整页变灰。原因是 `scan` 对新增节点取 `textContent`，命中提示文案后把 `body` 整块删除；改为只处理明确的弹窗元素，遮罩单独自愈。同时把上下文注入提前到 document-start，注入失败时在 DOMContentLoaded 重试。

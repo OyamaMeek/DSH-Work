@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>guard 遮罩残留测试</title>
+<style>
+  body { margin: 0; font: 14px/1.6 sans-serif; }
+  #result { padding: 16px; white-space: pre-wrap; }
+</style>
+<script src="guard-inline.js"></script>
+</head>
+<body>
+<div id="app"><div id="result">running</div></div>
+<script>
+var HINT = '检测到异常脚本，为保证您正常答题，请您关闭插件，刷新页面后重新答题！';
+
+setTimeout(function () {
+  document.body.insertAdjacentHTML('beforeend',
+    '<div class="el-message-box__wrapper" style="position:fixed;left:0;top:0;right:0;bottom:0;z-index:2001"><div class="el-message-box__message">' + HINT + '</div></div>');
+  var box = document.createElement('div');
+  box.className = 'el-message-box__wrapper';
+  box.style.cssText = 'position:fixed;left:20px;top:20px;z-index:2001';
+  box.textContent = HINT;
+  document.body.appendChild(box);
+
+  setTimeout(function () {
+    var modal = document.createElement('div');
+    modal.className = 'v-modal';
+    modal.style.cssText = 'position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:2000';
+    document.body.appendChild(modal);
+  }, 300);
+}, 500);
+
+setTimeout(function () {
+  var center = document.elementFromPoint(Math.floor(innerWidth / 2), Math.floor(innerHeight / 2));
+  var text = document.body.innerText || '';
+  document.getElementById('result').textContent = [
+    'body=' + !!document.body,
+    'appInDom=' + !!document.getElementById('app').isConnected,
+    'masks=' + document.querySelectorAll('.v-modal').length,
+    'boxes=' + document.querySelectorAll('.el-message-box__wrapper').length,
+    'hintVisible=' + (text.indexOf('检测到异常脚本') !== -1),
+    'centerEl=' + (center ? center.tagName + '.' + (center.className || '') : 'null'),
+    'bodyOverflow=' + JSON.stringify(document.body.style.overflow),
+    'htmlOverflow=' + JSON.stringify(document.documentElement.style.overflow),
+    'guard=' + !!window.__zhsExamGuard
+  ].join('\n');
+}, 2500);
+</script>
+</body>
+</html>

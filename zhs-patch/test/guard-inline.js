@@ -1,7 +1,6 @@
-// ==UserScript==
 // @name         智慧树答题异常脚本检测绕过
 // @namespace    zhs-exam-guard
-// @version      1.0.0
+// @version      1.1.1
 // @description  让答题页的原生函数检测始终通过，并拦截异常提示、窗口关闭与异常日志上报
 // @match        https://onlineexamh5new.zhihuishu.com/*
 // @match        https://onlineexamh5.zhihuishu.com/*
@@ -9,21 +8,35 @@
 // @grant        none
 // @noframes
 // ==/UserScript==
-(function () {
+
+function guardMain() {
   'use strict';
   if (window.__zhsExamGuard) return;
   window.__zhsExamGuard = true;
+  window.__zhsExamGuardVersion = '1.1.1';
 
-  var log = function () {
+  var ALERT = '$' + 'alert';
+  var hints = ['检测到异常脚本', '请您关闭插件', '为保证您正常答题'];
+  var rawSetTimeout = window.setTimeout;
+  var rawSetInterval = window.setInterval;
+  var rawClearInterval = window.clearInterval;
+
+  function log() {
     var args = Array.prototype.slice.call(arguments);
     args.unshift('[zhs-guard]');
     console.log.apply(console, args);
-  };
+  }
 
-  // 检测函数 isNative 通过 window.originFunction 里冻结的原生 toString 取证。
-  // 这里把该对象换成恒真替身，同时让页面自己的 var originFunction = {...} 赋值失效。
-  // 返回串必须保持原生 toString 的形态，检测方会用 hasOwnProperty 的取证结果
-  // 构造 reNative 正则，形态不合法会在正则构造处抛 SyntaxError。
+  function hasHint(text) {
+    if (!text) return false;
+    for (var i = 0; i < hints.length; i++) {
+      if (text.indexOf(hints[i]) !== -1) return true;
+    }
+    return false;
+  }
+
+  // 一、取证链替换。检测函数 isNative 通过 window.originFunction 里冻结的原生 toString
+  // 判断函数是否被改写，替换成恒真替身即可让 isAllNative 始终为 true。
   var fakeOrigin = {
     RegExpTest: function () { return true; },
     FunctionToString: function () {
@@ -53,8 +66,8 @@
     }
   }
 
-  // isAllNative 里还有 isNative(window.prototype.call)，标准浏览器中 window.prototype 是 undefined，
-  // 取属性会抛 TypeError，检测因此中断。这里补一个占位对象让该分支可以求值。
+  // isAllNative 末尾会取 isNative(window.prototype.call)，标准浏览器中该属性为 undefined，
+  // 取属性会抛 TypeError，这里补一个占位对象让分支可以求值。
   function installWindowPrototype() {
     if (typeof window.prototype !== 'undefined') return;
     try {
@@ -81,34 +94,114 @@
   installWindowPrototype();
   clearOcs();
 
-  // 兜底一：拦截检测分支自己的定时器注册。检测方法体里必然出现 $alert，用它识别。
-  var rawSetTimeout = window.setTimeout;
-  var rawSetInterval = window.setInterval;
+  var blockCloseUntil = 0;
+
+  // 二、检测分支自己的定时任务。方法体里必然出现 this.$alert，用它识别。
   window.setTimeout = function (fn, delay) {
-    if (typeof fn === 'function' && Number(delay) <= 2000 && String(fn).indexOf('$alert') !== -1) {
+    if (typeof fn === 'function' && Number(delay) <= 2000 && String(fn).indexOf(ALERT) !== -1) {
       log('拦截检测定时任务', delay);
       return 0;
     }
     return rawSetTimeout.apply(window, arguments);
   };
   window.setInterval = function (fn, delay) {
-    if (typeof fn === 'function' && String(fn).indexOf('$alert') !== -1) {
+    if (typeof fn === 'function' && String(fn).indexOf(ALERT) !== -1) {
       log('拦截检测轮询', delay);
       return 0;
     }
     return rawSetInterval.apply(window, arguments);
   };
 
-  // 兜底二：异常上报走 collector2c 的 JSONP script。
-  var rawAppend = window.Node.prototype.appendChild;
-  var rawInsert = window.Node.prototype.insertBefore;
+  // 三、遮罩自愈。Element UI 的 alert 先插入 .el-message-box__wrapper，
+  // 遮罩 .v-modal 常在后一个 tick 才插入，单独删除前者会留下整页灰色遮罩。
+  function removeMasks() {
+    var masks = document.querySelectorAll('.v-modal');
+    for (var i = 0; i < masks.length; i++) {
+      if (masks[i].parentNode) masks[i].parentNode.removeChild(masks[i]);
+    }
+    if (document.documentElement) document.documentElement.style.overflow = '';
+    if (document.body) document.body.style.overflow = '';
+  }
+
+  function visibleBoxCount() {
+    var boxes = document.querySelectorAll('.el-message-box__wrapper, .el-dialog__wrapper');
+    var count = 0;
+    for (var i = 0; i < boxes.length; i++) {
+      var el = boxes[i];
+      if (!el.isConnected) continue;
+      var rect = el.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) count++;
+    }
+    return count;
+  }
+
+  function sweepOrphanMasks() {
+    if (!document.body) return;
+    if (!document.querySelector('.v-modal')) return;
+    if (visibleBoxCount() > 0) return;
+    log('清除残留遮罩');
+    removeMasks();
+  }
+
+  // 四、异常提示节点。只删明确的弹窗元素，页面容器（body/html/#app）一律不动。
+  var DIALOG_SELECTOR = '.el-message-box__wrapper, .el-dialog__wrapper, .el-message-box, .el-message';
+
+  function removable(el) {
+    if (!el || el.nodeType !== 1) return false;
+    var tag = String(el.tagName).toUpperCase();
+    if (tag === 'BODY' || tag === 'HTML' || tag === 'HEAD') return false;
+    if (el.id === 'app') return false;
+    if (el.querySelector && el.querySelector('#app')) return false;
+    if (el === document.body || el === document.documentElement) return false;
+    return true;
+  }
+
+  function removeDialog(node) {
+    if (!removable(node)) return;
+    if (node.parentNode) node.parentNode.removeChild(node);
+    removeMasks();
+    blockCloseUntil = Date.now() + 6000;
+    rawSetTimeout(sweepOrphanMasks, 0);
+    rawSetTimeout(sweepOrphanMasks, 300);
+    log('已清除异常提示');
+  }
+
+  function scan(root) {
+    if (!root || root.nodeType !== 1) return;
+    if (root.matches && root.matches(DIALOG_SELECTOR)) {
+      if (hasHint(root.textContent || '')) removeDialog(root);
+      return;
+    }
+    if (!root.querySelectorAll) return;
+    var found = root.querySelectorAll(DIALOG_SELECTOR);
+    for (var i = 0; i < found.length; i++) {
+      if (hasHint(found[i].textContent || '')) removeDialog(found[i]);
+    }
+  }
+
+  // 五、异常上报走 collector2c 的 JSONP script。
   function isCollectorRequest(node) {
-    return node && node.nodeType === 1 && String(node.tagName).toUpperCase() === 'SCRIPT' &&
+    return !!node && node.nodeType === 1 && String(node.tagName).toUpperCase() === 'SCRIPT' &&
       typeof node.src === 'string' && node.src.indexOf('collector2c.zhihuishu.com') !== -1;
   }
+
+  function isAnomalyBox(node) {
+    return !!node && node.nodeType === 1 && node.classList &&
+      node.classList.contains('el-message-box__wrapper') && hasHint(node.textContent || '');
+  }
+
+  var rawAppend = window.Node.prototype.appendChild;
+  var rawInsert = window.Node.prototype.insertBefore;
   window.Node.prototype.appendChild = function (node) {
     if (isCollectorRequest(node)) {
       log('拦截异常日志上报', node.src);
+      return node;
+    }
+    if (isAnomalyBox(node)) {
+      log('拦截异常提示插入');
+      blockCloseUntil = Date.now() + 6000;
+      rawSetTimeout(sweepOrphanMasks, 0);
+      rawSetTimeout(sweepOrphanMasks, 300);
       return node;
     }
     return rawAppend.apply(this, arguments);
@@ -118,8 +211,14 @@
       log('拦截异常日志上报', node.src);
       return node;
     }
+    if (isAnomalyBox(node)) {
+      log('拦截异常提示插入');
+      blockCloseUntil = Date.now() + 6000;
+      return node;
+    }
     return rawInsert.apply(this, arguments);
   };
+
   var rawFetch = window.fetch;
   if (typeof rawFetch === 'function') {
     window.fetch = function (input) {
@@ -142,9 +241,8 @@
     };
   }
 
-  // 兜底三：window.close 只在拦截到异常弹窗后的短时间内被屏蔽。
+  // 六、window.close 只在拦截到异常提示后的短时间内屏蔽。
   var rawClose = window.close;
-  var blockCloseUntil = 0;
   try {
     Object.defineProperty(window, 'close', {
       configurable: true,
@@ -159,41 +257,87 @@
     });
   } catch (e) {}
 
-  // 兜底四：异常提示出现就整块移除，并恢复页面滚动与遮罩。
-  var hints = ['检测到异常脚本', '请您关闭插件', '为保证您正常答题'];
-  function hasHint(text) {
-    for (var i = 0; i < hints.length; i++) {
-      if (text.indexOf(hints[i]) !== -1) return true;
+  // 七、Vue 实例层。检测在 created 里注册 1 秒后的一次性定时器，
+  // 这里尽早接管组件的 $alert 与 checkout，避免依赖定时器识别。
+  function patchVueAlert(vm) {
+    try {
+      var proto = vm.constructor && vm.constructor.prototype;
+      if (!proto || typeof proto[ALERT] !== 'function' || proto.__zhsAlertPatched) return false;
+      var rawAlert = proto[ALERT];
+      proto[ALERT] = function (message) {
+        if (typeof message === 'string' && hasHint(message)) {
+          log('拦截异常提示调用');
+          blockCloseUntil = Date.now() + 6000;
+          rawSetTimeout(sweepOrphanMasks, 0);
+          rawSetTimeout(sweepOrphanMasks, 300);
+          return Promise.resolve('dismiss');
+        }
+        return rawAlert.apply(this, arguments);
+      };
+      proto.__zhsAlertPatched = true;
+      return true;
+    } catch (e) {
+      return false;
     }
-    return false;
   }
-  function removeDialog(node) {
-    var target = node.closest ?
-      node.closest('.el-message-box__wrapper, .el-dialog__wrapper, .el-message, .el-message-box, .v-modal, .el-overlay, .el-dialog') :
-      null;
-    var victim = target || node;
-    if (victim && victim.parentNode) victim.parentNode.removeChild(victim);
-    var mask = document.querySelector('.v-modal, .el-overlay');
-    if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-    blockCloseUntil = Date.now() + 6000;
-    log('已清除异常提示');
+
+  function walkVue(root) {
+    var stack = [root];
+    var seen = [];
+    while (stack.length) {
+      var vm = stack.pop();
+      if (!vm || seen.indexOf(vm) !== -1) continue;
+      seen.push(vm);
+      if (vm.checkTimer) {
+        try { rawClearInterval.call(window, vm.checkTimer); } catch (e) {}
+        vm.checkTimer = null;
+      }
+      if (typeof vm.checkout === 'function' && String(vm.checkout).indexOf(ALERT) !== -1) {
+        vm.checkout = function () {};
+        if (vm.$options && vm.$options.methods) vm.$options.methods.checkout = vm.checkout;
+        log('覆盖组件 checkout');
+      }
+      if (Array.isArray(vm.$children)) {
+        for (var i = 0; i < vm.$children.length; i++) stack.push(vm.$children[i]);
+      }
+    }
   }
-  function scan(root) {
-    if (!root || root.nodeType !== 1) return;
-    var text = root.textContent || '';
-    if (text && hasHint(text)) removeDialog(root);
-  }
+
+  var sweepCount = 0;
+  var sweepHandle = rawSetInterval(function () {
+    sweepCount++;
+    var rootEl = document.getElementById('app');
+    var root = rootEl && rootEl.__vue__;
+    var patched = false;
+    if (root) {
+      patched = patchVueAlert(root);
+      walkVue(root);
+    }
+    if (patched || sweepCount > 150) rawClearInterval.call(window, sweepHandle);
+  }, 200);
+
+  // 八、DOM 观察。新增节点含提示文字时立即清理；新插入的 .v-modal 延迟确认是否孤立。
   function startObserver() {
+    if (!document.documentElement) return;
     var observer = new MutationObserver(function (records) {
       for (var i = 0; i < records.length; i++) {
         var added = records[i].addedNodes;
-        for (var j = 0; j < added.length; j++) scan(added[j]);
+        for (var j = 0; j < added.length; j++) {
+          var node = added[j];
+          if (node.nodeType !== 1) continue;
+          if (node.classList && node.classList.contains('v-modal')) {
+            rawSetTimeout(sweepOrphanMasks, 300);
+            continue;
+          }
+          if (!node.className || String(node.className).indexOf('el-') === -1) continue;
+          scan(node);
+        }
       }
     });
     observer.observe(document.documentElement, { childList: true, subtree: true });
+    rawSetInterval(sweepOrphanMasks, 2000);
   }
+
   if (document.documentElement) {
     startObserver();
   } else {
@@ -206,34 +350,48 @@
   }
   document.addEventListener('DOMContentLoaded', function () {
     scan(document.body);
+    sweepOrphanMasks();
   });
 
-  // 兜底五：组件实例上的检测轮询直接清掉。
-  function sweepVue() {
-    var rootEl = document.getElementById('app');
-    if (!rootEl || !rootEl.__vue__) return;
-    var stack = [rootEl.__vue__];
-    var seen = new Set();
-    while (stack.length) {
-      var vm = stack.pop();
-      if (!vm || seen.has(vm)) continue;
-      seen.add(vm);
-      if (vm.checkTimer) {
-        clearInterval(vm.checkTimer);
-        vm.checkTimer = null;
-        log('清除检测轮询 ID', vm.checkTimer);
-      }
-      if (typeof vm.checkout === 'function' && vm.$options && vm.$options.methods && vm.$options.methods.checkout) {
-        vm.$options.methods.checkout = function () {};
-      }
-      if (Array.isArray(vm.$children)) {
-        for (var i = 0; i < vm.$children.length; i++) stack.push(vm.$children[i]);
-      }
-    }
-  }
-  window.addEventListener('load', function () {
-    setTimeout(sweepVue, 1500);
-  });
+  window.__zhsExamGuardInfo = function () {
+    return {
+      version: window.__zhsExamGuardVersion,
+      originFunctionFaked: String(window.originFunction && window.originFunction.RegExpTest).indexOf('return true') !== -1,
+      windowPrototype: typeof window.prototype,
+      masks: document.querySelectorAll('.v-modal').length,
+      anomalyText: hasHint(document.body ? document.body.innerText : '')
+    };
+  };
 
   log('已加载');
-})();
+}
+
+// 页面若在隔离环境执行（脚本沙箱），window 上的改动不会影响页面自身的检测，
+// 把主逻辑再注入一次到页面上下文，重复执行由 __zhsExamGuard 拦住。
+function injectIntoPage() {
+  try {
+    var target = document.head || document.documentElement;
+    if (!target) return false;
+    var script = document.createElement('script');
+    script.textContent = '(' + guardMain.toString() + ')();';
+    target.appendChild(script);
+    if (script.parentNode) script.parentNode.removeChild(script);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+var injectDone = false;
+function injectOnce() {
+  if (injectDone) return true;
+  if (!injectIntoPage()) return false;
+  injectDone = true;
+  return true;
+}
+
+guardMain();
+if (!injectOnce()) {
+  document.addEventListener('DOMContentLoaded', injectOnce);
+  window.setTimeout(injectOnce, 1500);
+}
