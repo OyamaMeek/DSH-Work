@@ -866,5 +866,5 @@
   - `zhs-patch/zhs-exam-guard.user.js`、`zhs-patch/README.md`、`zhs-patch/test/`（自 `work/zhs-patch/` 重命名，8 个文件）
   - `docs/CHANGELOG.md`（+18 行）
 
-- **Git 提交**：待提交
+- **Git 提交**：`e7ec61e refactor: 智慧树答题检测绕过产物移至根目录 zhs-patch`；已推送至 `origin/main`。
 
