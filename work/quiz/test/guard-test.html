@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>zhs-guard test</title>
+<script src="../zhs-exam-guard.user.js?v=10"></script>
+<script>
+var originFunction = {
+  RegExpTest: window.RegExp.prototype.test,
+  FunctionToString: window.Function.prototype.toString,
+  AttachShadow: window.Element.prototype.attachShadow
+};
+Object.freeze(originFunction);
+Object.freeze(JSON);
+</script>
+</head>
+<body>
+<div id="app"></div>
+<pre id="result"></pre>
+<script src="detect-sample.js?v=10"></script>
+<script>
+(function () {
+  var out = [];
+  window.__errors = [];
+  window.addEventListener('error', function (e) { window.__errors.push(String(e.message) + ' @' + e.lineno); });
+  function report(k, v) { out.push(k + '=' + v); }
+  window.__alerts = [];
+
+  var rawOpen = window.XMLHttpRequest.prototype.open;
+  window.XMLHttpRequest.prototype.open = function () { return rawOpen.apply(this, arguments); };
+  report('pollutedOpenNative', window.__isNative(window.XMLHttpRequest.prototype.open));
+  report('detectWithPollution', window.__detect());
+
+  var comp = {
+    checkTimer: null,
+    checkout: function () { if (window.__detect() !== true) { window.__alerts.push('异常脚本'); } }
+  };
+  comp.checkTimer = window.setInterval(function () {
+    var tag = '$alert';
+    if (window.__detect() !== true) window.__alerts.push(tag);
+  }, 60000);
+  window.setTimeout(function () {
+    var tag = '$alert';
+    if (window.__detect() !== true) window.__alerts.push(tag);
+  }, 1000);
+  report('timerId', String(comp.checkTimer));
+
+  var s = document.createElement('script');
+  s.src = 'https://collector2c.zhihuishu.com/public/jsonp/collect?jsonp=cb';
+  document.head.appendChild(s);
+  report('collectorInDom', document.querySelectorAll('script[src*="collector2c"]').length);
+
+  setTimeout(function () {
+    report('alerts', JSON.stringify(window.__alerts));
+    report('detectAfter1s', window.__detect());
+    report('errors', JSON.stringify(window.__errors));
+    document.getElementById('result').textContent = out.join('\n');
+    console.log('TEST-RESULT ' + JSON.stringify(out));
+  }, 1500);
+})();
+</script>
+</body>
+</html>

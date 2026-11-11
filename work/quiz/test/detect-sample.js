@@ -1,0 +1,92 @@
+var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_typeof___default = function () {
+  return function (v) { return typeof v; };
+};
+// 取自 stuExamWeb.3577f5621cd754d97d2e.js 模块 29 的检测实现（原样复制，supportShadom 常量化为 false）
+var _window$originFunctio = window.originFunction,
+    RegExpTest = _window$originFunctio.RegExpTest,
+    FunctionToString = _window$originFunctio.FunctionToString;
+
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+var funcToString = FunctionToString;
+
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+var reNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+function isNative(value) {
+  var type = typeof value === 'undefined' ? 'undefined' : __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_typeof___default()(value);
+  return type == 'function' ? RegExpTest.call(reNative, funcToString.call(value)) : value && type == 'object' && RegExpTest.call(reIsHostCtor, toString.call(value)) || false;
+}
+
+function getBrowserNameVersion() {
+  var Sys = {};
+  var ua = navigator.userAgent.toLowerCase();
+  var s;
+  (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] : (s = ua.match(/msie ([\d\.]+)/)) ? Sys.ie = s[1] : (s = ua.match(/edge\/([\d\.]+)/)) ? Sys.edge = s[1] : (s = ua.match(/firefox\/([\d\.]+)/)) ? Sys.firefox = s[1] : (s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? Sys.opera = s[1] : (s = ua.match(/chrome\/([\d\.]+)/)) ? Sys.chrome = s[1] : (s = ua.match(/version\/([\d\.]+).*safari/)) ? Sys.safari = s[1] : 0;
+
+  if (Sys.ie) return ['PC_ie', Sys.ie];
+  if (Sys.edge) return ['PC_edge', Sys.edge];
+  if (Sys.firefox) return ['PC_firefox', Sys.firefox];
+  if (Sys.chrome) return ['PC_chrome', Sys.chrome];
+  if (Sys.opera) return ['PC_opera', Sys.opera];
+  if (Sys.safari) return ['PC_safari', Sys.safari];
+  return ['PC_other'];
+}
+
+function getBrowserNameVersion2() {
+  var Sys = {};
+  var ua = navigator.userAgent.toLowerCase();
+  var s;
+  (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] : (s = ua.match(/msie ([\d\.]+)/)) ? Sys.ie = s[1] : (s = ua.match(/(ubrowser|ucbrowser)\/([\d\.]+)/)) ? Sys.UCBrowser = s[1] : (s = ua.match(/qqBrowser\/([\d\.]+)/)) ? Sys.QQBrowser = s[1] : (s = ua.match(/qihu/)) ? Sys.QIHU = 360 : (s = ua.match(/edge\/([\d\.]+)/)) ? Sys.edge = s[1] : (s = ua.match(/firefox\/([\d\.]+)/)) ? Sys.firefox = s[1] : (s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? Sys.opera = s[1] : (s = ua.match(/chrome\/([\d\.]+)/)) ? Sys.chrome = s[1] : (s = ua.match(/version\/([\d\.]+).*safari/)) ? Sys.safari = s[1] : 0;
+
+  if (Sys.ie) return ['ie', Sys.ie];
+  if (Sys.edge) return ['edge', Sys.edge];
+  if (Sys.firefox) return ['firefox', Sys.firefox];
+  if (Sys.chrome) return ['chrome', Sys.chrome];
+  if (Sys.opera) return ['opera', Sys.opera];
+  if (Sys.safari) return ['safari', Sys.safari];
+  if (Sys.UCBrowser) return ['UCBrowser', Sys.UCBrowser];
+  if (Sys.QQBrowser) return ['QQBrowser', Sys.QQBrowser];
+  if (Sys.QIHU) return ['360', Sys.QIHU];
+  return ['unknown'];
+}
+
+function isSupportShadomByBrowserNameVersion() {
+  var MIN_SUPPORT_VERSIOIN = {
+    "PC_edge": 79,
+    "PC_firefox": 63,
+    "PC_chrome": 53,
+    "PC_safari": 10,
+    "PC_opera": 40
+  };
+
+  var _getBrowserNameVersio = getBrowserNameVersion(),
+      _getBrowserNameVersio2 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default()(_getBrowserNameVersio, 2),
+      browser = _getBrowserNameVersio2[0],
+      version = _getBrowserNameVersio2[1];
+
+  if (browser in MIN_SUPPORT_VERSIOIN) {
+    var num_version = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_number_parse_int___default()(version);
+    if (!__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_number_is_nan___default()(num_version) && num_version > MIN_SUPPORT_VERSIOIN[browser]) {
+      return true;
+    }
+  }
+}
+
+function isSupportShadom() {
+  return typeof document.body.attachShadow == 'function' || isSupportShadomByBrowserNameVersion();
+}
+
+function isAllNative() {
+  return isNative(window.XMLHttpRequest) && isNative(window.XMLHttpRequest.prototype.open) && (true || isNative(document.body.attachShadow)) && !window.OCS && isNative(JSON.parse) && isNative(document.getSelection) && isNative(window.getSelection) && isNative(window.prototype.call) && isNative(window.prototype.apply) && isNative(window.prototype.bind);
+}
+window.__detect = function () {
+  try { return isAllNative(); } catch (e) { return 'throw:' + e.message; }
+};
+window.__isNative = isNative;

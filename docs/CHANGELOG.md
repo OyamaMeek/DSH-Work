@@ -769,3 +769,50 @@
   - `context/2026/11/03/23-17-55/对话.md`（新增）
 
 - **Git 提交**：`0aad617 docs: 记录 dshmarket 插件安装到 web profile`；已推送至 `origin/main`。
+
+
+## [2026-11-08 21:43] QQ.app 撤回拦截插件（macOS QQNT 6.9.81）
+
+- **需求/问题描述**：
+  > 你研究一下我电脑上的QQ.app 帮我做一个拦截撤回的插件
+
+- **实际实现的功能与改动**：
+  - [注入路线]：`/Applications/QQ.app` 受 App Management TCC 保护不可写、`NODE_OPTIONS`/`--inspect`/DYLD 注入均被 Electron 打包配置拒绝，改为 `ditto` 复制到 `~/Applications/QQ-patched.app`，把 `Contents/Resources/app/package.json` 的 `main` 改成 `./plugin-entry.js`，插件执行完再 `require` 原始加密主进程；
+  - [签名]：保留 `app-sandbox` 重签会崩在 Chromium `MachPortRendezvousServer`（Permission denied 1100），最终方案是去掉 `app-sandbox` 并用 `codesign --force --deep --sign - --entitlements` 深签，userData 软链到原 container；
+  - [拦截点]：`WebContents.prototype.send(channel, envelope, payload)` 业务数据在第三个参数，主进程把 `nodeIKernelMsgListener/onMsgInfoListUpdate` 等推送里的 grayTip 撤回提示（`elementType: 8`）替换成缓存的原消息，缓存未命中时把提示改写成“（已拦截，原文：…”；
+  - [登录不再重启]：实测 QQ 在登录成功时自己调用 `app.quit/exit/relaunch`（`application.asar/42.background.js:1:1369225`），插件在 `blockrelaunch.on` 存在时把三者变成 no-op，并自动在登录页点一次“登录”；
+  - [更新压制]：把当前版本写入 `versions/config.json` 的 `onErrorVersions` 并 `chmod 444`，启动器不再因“未公证”触发全量更新重启；
+  - [测试/验证]：`node --check` 三个 JS、`bash -n` 三个脚本通过；实机登录后主窗口 `#/main` 建立且无重启；进程内注入同 msgId 的正常消息与 grayTip 撤回事件，`anti-recall.log` 记录 `RESTORE_MSG … text=ORIGINAL-TEXT-TO-KEEP`，缓存未命中场景记录 `REWRITE_TIP`；真实好友会话撤回尚待实测（文件传输助手为自聊会话，无撤回入口）。
+
+- **涉及文件**：
+  - `work/qq-anti-recall/src/plugin-entry.js`（新增，44 行）
+  - `work/qq-anti-recall/src/devtools.js`（新增，184 行）
+  - `work/qq-anti-recall/src/anti-recall.js`（新增，220 行）
+  - `work/qq-anti-recall/install.sh` `run.sh` `uninstall.sh`（新增，66 / 10 / 7 行）
+  - `work/qq-anti-recall/README.md`（新增，49 行）
+  - `work/qq-anti-recall/memory/{plan,progress,verify,gotchas}.md`（新增，16 / 23 / 14 / 27 行）
+  - `docs/CHANGELOG.md`（+22 行）
+
+- **Git 提交**：待提交
+
+
+## [2026-11-11 11:11] 智慧树答题页异常脚本检测绕过油猴脚本
+
+- **需求/问题描述**：
+  > 你在我Chrome这个页面研究一下它进入答题检测异常脚本如何绕过 写成一个暴力猴/油猴插件
+
+- **实际实现的功能与改动**：
+  - [检测点定位]：答题组件位于 `chunks/1.184ad30c22bdba34ce6c.js` 模块 939，created 钩子调用 `checkoutNotTrustScript`，1 秒后执行一次 `checkout` 并建立 60 秒轮询；`checkout` 调 `isAllNative()`（主包 webpack 模块 29 的导出 `n`），判定失败即 `$alert("检测到异常脚本，为保证您正常答题，请您关闭插件，刷新页面后重新答题！")`，同时 `collectLog` 以 JSONP 上报 `https://collector2c.zhihuishu.com/public/jsonp/collect`，2.5 秒后 `window.close()`；
+  - [取证链]：`isNative` 取 `exam.html` 冻结的 `window.originFunction.{RegExpTest,FunctionToString}` 构造 reNative 正则判定 `[native code]`；`isAllNative` 末尾还有 `isNative(window.prototype.call/apply/bind)`，标准浏览器 `window.prototype` 为 undefined，全原生时该分支抛 TypeError；
+  - [绕过脚本]：`work/quiz/zhs-exam-guard.user.js`（239 行，@run-at document-start、@grant none），五层防护——伪造 `window.originFunction` 令 RegExpTest 恒真且 FunctionToString 产出原生形态串、补 `window.prototype` 占位、清 `window.OCS`、拦截方法体含 `$alert` 的 setTimeout/setInterval、拦截 collector2c 上报（appendChild / insertBefore / fetch / sendBeacon）、MutationObserver 移除异常弹窗并屏蔽 6 秒内 window.close、load 后遍历 Vue 实例树清 checkTimer 并覆盖 `$options.methods.checkout`；
+  - [测试/验证]：
+    - 从模块 29 原样抽出检测代码得到 `detect-sample.js`，本地对照页结果：不加载脚本时包装 `XMLHttpRequest.prototype.open` 后 `detectWithPollution=false / timerId=1 / collectorInDom=1 / alerts=["$alert"]`；加载脚本后 `detectWithPollution=true / timerId=0 / collectorInDom=0 / alerts=[]`；脚本晚于检测模块注入时弹窗与遮罩仍被移除（`dialogCount=0 / modalCount=0`）；
+    - 真实站点（ego-browser，导入 Chrome 默认 profile 的登录态）：只包装 `XMLHttpRequest.prototype.open` 进入答题页，页面出现「检测到异常脚本，为保证您正常答题，请您关闭插件，刷新页面后重新答题！」；注入脚本后同一页面 `guard=true`、`originFunction` 为替身、`window.prototype` 已补、页面无异常提示，军事理论-综合版 5 题答题界面正常渲染。
+
+- **涉及文件**：
+  - `work/quiz/zhs-exam-guard.user.js`（新增，239 行）
+  - `work/quiz/test/detect-sample.js`、`guard-test.html`、`guard-test-inline.html`、`control-test.html`、`late-test2.html`、`guard-inline.js`（测试夹具）
+  - `docs/CHANGELOG.md`（+36 行）
+
+- **Git 提交**：待提交
+
