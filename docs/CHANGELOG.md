@@ -814,5 +814,5 @@
   - `work/quiz/test/detect-sample.js`、`guard-test.html`、`guard-test-inline.html`、`control-test.html`、`late-test2.html`、`guard-inline.js`（测试夹具）
   - `docs/CHANGELOG.md`（+36 行）
 
-- **Git 提交**：待提交
+- **Git 提交**：`eb02230 feat: 智慧树答题页异常脚本检测绕过油猴脚本`；已推送至 `origin/main`。
 
