@@ -892,7 +892,7 @@
   - `zhs-patch/README.md`（处理表与排错更新）
   - `docs/CHANGELOG.md`
 
-- **Git 提交**：待提交
+- **Git 提交**：`47dc709 fix: 修复智慧树绕过脚本误删页面主体导致的整页灰屏`；已推送至 `origin/main`。
 
 ---
 
