@@ -833,3 +833,21 @@
 
 - **Git 提交**：`2242620 docs: 补充智慧树答题检测绕过脚本的 README`；已推送至 `origin/main`。
 
+
+## [2026-11-11 11:18] 智慧树答题检测绕过产物归入 zhs-patch
+
+- **需求/问题描述**：
+  > 都放到zhs-patch里
+
+- **实际实现的功能与改动**：
+  - [目录归并]：`work/quiz/` 整体迁到 `work/zhs-patch/`，脚本、README、`test/` 夹具用 `git mv` 保留重命名历史，未纳入版本库的 `exam.html` 与 `js/`（主包、vendor、chunks 共 21M）用普通移动同步搬运；
+  - [清理]：删除 `work/quiz/ChromeHistory`（20M 浏览历史副本，原始文件仍在 Chrome profile 内）、`test/guard-early.html`、`test/guard-early2.html`、`test/late-test.html` 三个早期排错夹具，`test/` 只保留 README 目录树列出的六个文件；
+  - [文档同步]：README 内两处路径改为 `work/zhs-patch/`（目录树根与 `cd work/zhs-patch/test`）；
+  - [测试/验证]：`ls work/zhs-patch` 确认目录只剩 README、脚本、exam.html、js、test；`git status` 显示 8 个文件为重命名状态，无内容改动。
+
+- **涉及文件**：
+  - `work/zhs-patch/zhs-exam-guard.user.js`、`work/zhs-patch/README.md`、`work/zhs-patch/test/`（自 `work/quiz/` 重命名，8 个文件）
+  - `docs/CHANGELOG.md`（+22 行）
+
+- **Git 提交**：待提交
+

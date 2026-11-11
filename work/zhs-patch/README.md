@@ -75,7 +75,7 @@ Object.freeze(JSON);
 ## 目录结构
 
 ```
-work/quiz/
+work/zhs-patch/
 ├── README.md                     本文
 ├── zhs-exam-guard.user.js       用户脚本
 ├── exam.html                    答题页入口（含 originFunction 冻结逻辑）
@@ -98,7 +98,7 @@ work/quiz/
 ### 本地夹具
 
 ```bash
-cd work/quiz/test
+cd work/zhs-patch/test
 # 用任意浏览器打开以下页面，查看 #result 区块
 open guard-test-inline.html   # 装脚本：应全部为 true / 0 / 空
 open control-test.html        # 对照组：detectWithPollution=false，定时器与上报节点存在
